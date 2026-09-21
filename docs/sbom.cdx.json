@@ -1,0 +1,55 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:7f8f1e80-0b71-4a9c-9f80-202609210001",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-21T20:36:00Z",
+    "component": {
+      "type": "application",
+      "bom-ref": "index80-site@0.4.0",
+      "name": "index80",
+      "version": "0.4.0",
+      "description": "Public static-first INDEX:80 website/source package.",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/index80/site"
+        },
+        {
+          "type": "website",
+          "url": "https://index80.com"
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "index80:scope",
+        "value": "public-open-source-site"
+      },
+      {
+        "name": "index80:npm-runtime-dependencies",
+        "value": "0"
+      },
+      {
+        "name": "index80:npm-development-dependencies",
+        "value": "0"
+      }
+    ]
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "index80-site@0.4.0",
+      "dependsOn": []
+    }
+  ]
+}
