@@ -1,0 +1,86 @@
+{
+  "confirmed_count": 2,
+  "latest_release_id": "INDEX80-0002",
+  "release_count": 2,
+  "releases": [
+    {
+      "network": "mainnet",
+      "previous": {
+        "release_id": "INDEX80-0001",
+        "transaction_id": "bd2f95598b963430435e893c9896f481cc8c0299edb2ee9356f6918c37219563"
+      },
+      "proof": {
+        "block": 13949083,
+        "confirmation_observed": {
+          "date": "2026-09-16",
+          "assurance": "High assurance",
+          "confirmations_at_review": 37,
+          "source": "Koios Mainnet independent verification; CardanoScan Mainnet visual review"
+        },
+        "epoch": 655,
+        "explorer_url": "https://cardanoscan.io/transaction/9e6a2f3c6e51e6dc9f9bae8498dd8bb68ca3693e1cd1edaa68f4d03ca83dabb1",
+        "fee_lovelace": "172893",
+        "local_signed_size_bytes": 394,
+        "metadata_hash": null,
+        "metadata_label": 309,
+        "onchain_size_bytes": 393,
+        "proof_standard": "CIP-190",
+        "publisher_address": "addr1qxljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhqjnqcrz",
+        "transaction_id": "9e6a2f3c6e51e6dc9f9bae8498dd8bb68ca3693e1cd1edaa68f4d03ca83dabb1",
+        "timestamp_display": "Sep 16, 2026 5:14:56 PM"
+      },
+      "release_id": "INDEX80-0002",
+      "release_manifest_url": "/registry/releases/index80-0002.json",
+      "sequence": 2,
+      "snapshot": {
+        "bytes": 171388,
+        "hash": "c6fe33631f95ebf8d36e50caa9aa18051891e670ce9e89607ac03e28e4def3bc",
+        "hash_algorithm": "sha256",
+        "path": "/registry/snapshots/index80-0002.json",
+        "project_count": 155,
+        "url": "https://index80.com/registry/snapshots/index80-0002.json"
+      },
+      "status": "CONFIRMED"
+    },
+    {
+      "network": "preprod",
+      "previous": {
+        "release_id": "GENESIS",
+        "transaction_id": null
+      },
+      "proof": {
+        "block": 5183254,
+        "confirmation_observed": {
+          "date": "2026-09-16",
+          "assurance": "High assurance",
+          "confirmations_at_review": 322,
+          "source": "CardanoScan Preprod"
+        },
+        "epoch": 313,
+        "explorer_url": "https://preprod.cardanoscan.io/transaction/bd2f95598b963430435e893c9896f481cc8c0299edb2ee9356f6918c37219563",
+        "fee_lovelace": "173069",
+        "local_signed_size_bytes": 398,
+        "metadata_hash": "8ab9b5425ed3a466dddbaa4c2fa00f6c7220630091dc9c95e51baf91dba10ec6",
+        "metadata_label": 309,
+        "onchain_size_bytes": 397,
+        "proof_standard": "CIP-190",
+        "publisher_address": "addr_test1qzljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhq39ac0a",
+        "transaction_id": "bd2f95598b963430435e893c9896f481cc8c0299edb2ee9356f6918c37219563",
+        "timestamp_display": "Sep 16, 2026 10:20:56 AM"
+      },
+      "release_id": "INDEX80-0001",
+      "release_manifest_url": "/registry/releases/index80-0001.json",
+      "sequence": 1,
+      "snapshot": {
+        "bytes": 149564,
+        "hash": "14546a96f15632eeedba12464adc17531597a5f40181e0b72cf7a060933375d2",
+        "hash_algorithm": "sha256",
+        "path": "/registry/snapshots/index80-0001.json",
+        "project_count": 138,
+        "url": "https://index80.com/registry/snapshots/index80-0001.json"
+      },
+      "status": "CONFIRMED"
+    }
+  ],
+  "schema": "INDEX80 Registry History v1"
+}

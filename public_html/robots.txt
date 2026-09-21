@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://index80.com/sitemap.xml

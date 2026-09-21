@@ -1,0 +1,25 @@
+{
+  "name": "index80",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Adam Winstanley",
+  "version": "0.4.0",
+  "description": "Static-first website source for https://index80.com — no dependencies, plain Node generators.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/index80/site.git"
+  },
+  "scripts": {
+    "build": "node scripts/generate-project-pages.mjs && node scripts/generate-home-directory.mjs && node scripts/generate-site-schema.mjs && node scripts/test-home-directory.mjs && node scripts/test-site-schema.mjs && node scripts/test-treasury-rule.mjs && node scripts/apply-established-dates.mjs && node scripts/apply-project-relations.mjs && node scripts/apply-primary-links.mjs && node scripts/generate-registry-history.mjs && node scripts/test-registry-integrity.mjs && node scripts/generate-sitemap.mjs && node scripts/test-cardano-snapshot.mjs && node scripts/generate-site-version.mjs",
+    "test:generated-output": "node scripts/check-generated-output.mjs",
+    "test:theme": "node scripts/test-theme-system.mjs",
+    "test:registry-history": "node scripts/test-registry-history.mjs",
+    "test:registry-integrity": "node scripts/test-registry-integrity.mjs",
+    "test:home-directory": "node scripts/test-home-directory.mjs",
+    "test:site-schema": "node scripts/test-site-schema.mjs",
+    "test:treasury": "node scripts/test-treasury-rule.mjs",
+    "test:data": "node scripts/test-cardano-snapshot.mjs",
+    "verify:registry-onchain": "node scripts/verify-registry-onchain.mjs",
+    "registry:history": "node scripts/generate-registry-history.mjs"
+  }
+}

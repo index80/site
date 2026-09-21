@@ -1,0 +1,38 @@
+{
+  "source": "INDEX80 Editorial Registry — PROJECTS Team / Entity + Founder / Lead + Related Projects",
+  "captured_at": "2026-09-12",
+  "note": "Derived public relationship metadata. The Editorial Registry remains canonical.",
+  "records": {
+    "titans": {
+      "team_entity": "Titans Core Team",
+      "founder_lead": "Apex (@Apex_333) — CEO & Founder",
+      "related_projects": ["atlas"],
+      "relationship_note": "Atlas is led by the same Titans Core Team; FIWORK is contracted for Atlas engineering delivery.",
+      "public_editorial_note": "Titans is led publicly by Apex (@Apex_333), CEO & Founder. Atlas is a related project led by the same Titans Core Team, with FIWORK contracted for Atlas engineering delivery."
+    },
+    "atlas": {
+      "team_entity": "Titans Core Team + FIWORK (engineering contractor)",
+      "founder_lead": "Apex (@Apex_333) — CEO & Founder; Carlos Rene — FIWORK Founder & Technical Lead",
+      "related_projects": ["titans"],
+      "relationship_note": "Atlas is a Titans ecosystem project led by the Titans Core Team, with FIWORK as engineering contractor.",
+      "public_editorial_note": "Atlas is led publicly by Apex (@Apex_333), CEO & Founder of the Titans / Atlas Team. It is a related Titans ecosystem project; the Titans Core Team leads product direction and FIWORK provides contracted engineering delivery."
+    },
+    "book-io": {
+      "team_entity": "BOOK/STUFF team",
+      "founder_lead": "Joshua Stone — CEO & Co-founder; Ben Illian — Chief Growth Officer & Co-founder",
+      "related_projects": ["stuff-io"],
+      "relationship_note": "Book.io and Stuff.io are operated by the same BOOK/STUFF team and share a unified digital library."
+    },
+    "stuff-io": {
+      "team_entity": "BOOK/STUFF team",
+      "founder_lead": "Joshua Stone — CEO & Co-founder; Ben Illian — Chief Growth Officer & Co-founder",
+      "related_projects": ["book-io"],
+      "relationship_note": "Stuff.io and Book.io are operated by the same BOOK/STUFF team and share a unified digital library."
+    },
+    "infinity-rising": {
+      "team_entity": "Infinity Rising team (formerly Cornucopias)",
+      "founder_lead": "Rob Greig — Co-founder & Co-CEO; Josh Jones — Co-founder & Co-CEO; Geoff Hewett — Co-founder & COO; Ant Renicks — Co-founder & CQO",
+      "related_projects": []
+    }
+  }
+}

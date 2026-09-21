@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.2",
+  "generated_at": "2026-09-13T09:55:00Z",
+  "refresh_interval_hours": 6,
+  "status": "seeded_public_snapshot",
+  "market": {
+    "ada_price_usd": 0.21,
+    "ada_change_24h_pct": null,
+    "ada_market_cap_usd": 7838000000,
+    "defi_tvl_usd": 59930000,
+    "dex_volume_24h_usd": 1660000,
+    "stablecoin_mcap_usd": 68190000,
+    "active_addresses_24h": 12204,
+    "transactions_24h": 19735
+  },
+  "network": {
+    "epoch": null,
+    "block_height": null,
+    "active_stake_ada": null,
+    "epoch_tx_count": null,
+    "latest_block_time": null
+  },
+  "minswap": {
+    "as_of": "2026-09-13",
+    "assets": [
+      { "name": "NIGHT", "ticker": "NIGHT", "price_ada": 0.101, "price_change_24h_pct": -1.64, "volume_24h_ada": 1171492, "liquidity_ada": 4607613.5, "market_cap_ada": null },
+      { "name": "FLDT", "ticker": "FLDT", "price_ada": 0.193, "price_change_24h_pct": -13.33, "volume_24h_ada": 167309, "liquidity_ada": 1594550.5, "market_cap_ada": 8258558 },
+      { "name": "Ascend", "ticker": "ASCEND", "price_ada": 0.985, "price_change_24h_pct": 4.2, "volume_24h_ada": 80111, "liquidity_ada": 922825.5, "market_cap_ada": null },
+      { "name": "SURF", "ticker": "SURF", "price_ada": 0.369, "price_change_24h_pct": 6.28, "volume_24h_ada": 66844, "liquidity_ada": 1112442.5, "market_cap_ada": null },
+      { "name": "IAGON", "ticker": "IAG", "price_ada": 0.1, "price_change_24h_pct": 4.25, "volume_24h_ada": 58523, "liquidity_ada": 1005055.5, "market_cap_ada": 47429728 },
+      { "name": "STRIKE", "ticker": "STRIKE", "price_ada": 2.422, "price_change_24h_pct": -0.05, "volume_24h_ada": 54558, "liquidity_ada": 2057701, "market_cap_ada": 58285062 },
+      { "name": "BODEGA", "ticker": "BODEGA", "price_ada": 0.0625, "price_change_24h_pct": 13.44, "volume_24h_ada": 42789, "liquidity_ada": 163818.5, "market_cap_ada": 1562389 },
+      { "name": "CRAWJU", "ticker": "CRAWJU", "price_ada": 0.0006, "price_change_24h_pct": 56.2, "volume_24h_ada": 20094, "liquidity_ada": 94075, "market_cap_ada": null },
+      { "name": "TITAN", "ticker": "TITAN", "price_ada": 0.0626, "price_change_24h_pct": 15.04, "volume_24h_ada": 18740.68, "liquidity_ada": 252778.5, "market_cap_ada": null },
+      { "name": "Lump", "ticker": "LUMP", "price_ada": 0.0002, "price_change_24h_pct": 130.23, "volume_24h_ada": 5241.26, "liquidity_ada": 34843.5, "market_cap_ada": null }
+    ]
+  },
+  "sources": [
+    {
+      "name": "DefiLlama",
+      "url": "https://defillama.com/chain/cardano",
+      "purpose": "Seeded Cardano DeFi TVL, DEX volume, stablecoin market cap, active addresses and transaction snapshot.",
+      "status": "SEEDED",
+      "last_success_at": "2026-09-12T12:00:00Z"
+    },
+    {
+      "name": "Minswap",
+      "url": "https://minswap.org/",
+      "purpose": "Verified Cardano-native asset price, volume and liquidity metrics. Seeded from the existing public Minswap collector; no holdings exported.",
+      "status": "SEEDED",
+      "last_success_at": "2026-09-13T08:26:00Z"
+    },
+    {
+      "name": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/cardano",
+      "purpose": "ADA USD price, market cap and 24h change for the scheduled collector.",
+      "status": "UNAVAILABLE",
+      "last_success_at": null
+    },
+    {
+      "name": "Koios",
+      "url": "https://koios.rest/",
+      "purpose": "Cardano chain tip, epoch number and active-stake snapshot for the scheduled collector.",
+      "status": "UNAVAILABLE",
+      "last_success_at": null
+    }
+  ]
+}

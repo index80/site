@@ -1,0 +1,1051 @@
+{
+  "generated_at": "2026-09-21T18:10:29.096Z",
+  "source": "IANA RDAP bootstrap + authoritative registry RDAP registration event",
+  "note": "Domain registration is evidence of web-domain age, not necessarily the project founding date.",
+  "count": 168,
+  "records": {
+    "wojaks": {
+      "status": "no_current_official_domain",
+      "domain": null
+    },
+    "titans": {
+      "status": "no_rdap_service",
+      "domain": "houseoftitans.io"
+    },
+    "atlas": {
+      "status": "ok",
+      "domain": "atlasdefi.org",
+      "registration_date": "2026-04-07",
+      "registration_timestamp": "2026-04-07T08:21:44.389Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/atlasdefi.org",
+      "checked_at": "2026-09-11T18:45:22.290Z"
+    },
+    "eternl": {
+      "status": "no_rdap_service",
+      "domain": "eternl.io"
+    },
+    "minswap": {
+      "status": "ok",
+      "domain": "minswap.org",
+      "registration_date": "2021-03-15",
+      "registration_timestamp": "2021-03-15T13:46:20.883Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/minswap.org",
+      "checked_at": "2026-09-11T18:45:12.815Z"
+    },
+    "cswap": {
+      "status": "ok",
+      "domain": "cswap.fi",
+      "registration_date": "2022-12-28",
+      "registration_timestamp": "2022-12-28T18:52:21+02:00",
+      "rdap_url": "https://rdap.fi/rdap/rdap/domain/cswap.fi",
+      "checked_at": "2026-09-11T18:45:13.676Z"
+    },
+    "dexhunter": {
+      "status": "no_rdap_service",
+      "domain": "dexhunter.io"
+    },
+    "wayup": {
+      "status": "no_rdap_service",
+      "domain": "wayup.io"
+    },
+    "iagon": {
+      "status": "ok",
+      "domain": "iagon.com",
+      "registration_date": "2017-09-26",
+      "registration_timestamp": "2017-09-26T21:48:37Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/iagon.com",
+      "checked_at": "2026-09-11T18:45:13.884Z"
+    },
+    "world-mobile": {
+      "status": "no_rdap_service",
+      "domain": "worldmobile.io"
+    },
+    "ada-handle": {
+      "status": "no_rdap_service",
+      "domain": "handle.me"
+    },
+    "bending-ai": {
+      "status": "ok",
+      "domain": "bending.ai",
+      "registration_date": "2025-02-17",
+      "registration_timestamp": "2025-02-17T10:51:48.416Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/bending.ai",
+      "checked_at": "2026-09-11T18:45:14.341Z"
+    },
+    "snek": {
+      "status": "ok",
+      "domain": "snek.com",
+      "registration_date": "2001-11-18",
+      "registration_timestamp": "2001-11-18T19:56:07Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/snek.com",
+      "checked_at": "2026-09-11T18:45:14.475Z"
+    },
+    "lace": {
+      "status": "no_rdap_service",
+      "domain": "lace.io"
+    },
+    "input-output": {
+      "status": "no_rdap_service",
+      "domain": "iog.io"
+    },
+    "midnight": {
+      "status": "ok",
+      "domain": "midnight.network",
+      "registration_date": "2020-01-29",
+      "registration_timestamp": "2020-01-29T01:32:37.523Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/midnight.network",
+      "checked_at": "2026-09-14T17:14:04.313Z"
+    },
+    "vespr": {
+      "status": "ok",
+      "domain": "vespr.xyz",
+      "registration_date": "2022-09-29",
+      "registration_timestamp": "2022-09-29T16:46:09.0Z",
+      "rdap_url": "https://rdap.centralnic.com/xyz/domain/vespr.xyz",
+      "checked_at": "2026-09-11T18:45:15.232Z"
+    },
+    "begin": {
+      "status": "ok",
+      "domain": "begin.is",
+      "registration_date": "2022-07-07",
+      "registration_timestamp": "2022-07-07T20:55:01+00:00",
+      "rdap_url": "https://rdap.isnic.is/rdap/domain/begin.is",
+      "checked_at": "2026-09-11T18:45:15.842Z"
+    },
+    "gerowallet": {
+      "status": "no_rdap_service",
+      "domain": "gerowallet.io"
+    },
+    "wingriders": {
+      "status": "ok",
+      "domain": "wingriders.com",
+      "registration_date": "2013-07-29",
+      "registration_timestamp": "2013-07-29T18:31:09Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/wingriders.com",
+      "checked_at": "2026-09-11T18:45:16.033Z"
+    },
+    "sundaeswap": {
+      "status": "ok",
+      "domain": "sundae.fi",
+      "registration_date": "2021-11-05",
+      "registration_timestamp": "2021-11-05T05:47:13+02:00",
+      "rdap_url": "https://rdap.fi/rdap/rdap/domain/sundae.fi",
+      "checked_at": "2026-09-14T11:10:33.772Z"
+    },
+    "splash": {
+      "status": "ok",
+      "domain": "splash.trade",
+      "registration_date": "2023-12-10",
+      "registration_timestamp": "2023-12-10T20:21:19Z",
+      "rdap_url": "https://rdap.nic.trade/domain/splash.trade",
+      "checked_at": "2026-09-11T18:45:16.766Z"
+    },
+    "liqwid": {
+      "status": "ok",
+      "domain": "liqwid.finance",
+      "registration_date": "2020-09-30",
+      "registration_timestamp": "2020-09-30T19:35:56.174Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/liqwid.finance",
+      "checked_at": "2026-09-11T18:45:16.991Z"
+    },
+    "optim-finance": {
+      "status": "ok",
+      "domain": "optim.finance",
+      "registration_date": "2021-09-22",
+      "registration_timestamp": "2021-09-22T03:17:54.436Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/optim.finance",
+      "checked_at": "2026-09-11T18:45:17.192Z"
+    },
+    "fluidtokens": {
+      "status": "ok",
+      "domain": "fluidtokens.com",
+      "registration_date": "2022-02-24",
+      "registration_timestamp": "2022-02-24T22:23:10Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/fluidtokens.com",
+      "checked_at": "2026-09-11T18:45:17.327Z"
+    },
+    "strike-finance": {
+      "status": "ok",
+      "domain": "strikefinance.org",
+      "registration_date": "2024-05-31",
+      "registration_timestamp": "2024-05-31T04:51:28.684Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/strikefinance.org",
+      "checked_at": "2026-09-11T18:45:17.562Z"
+    },
+    "indigo": {
+      "status": "no_rdap_service",
+      "domain": "indigoprotocol.io"
+    },
+    "vyfinance": {
+      "status": "no_rdap_service",
+      "domain": "vyfi.io"
+    },
+    "metera": {
+      "status": "no_rdap_service",
+      "domain": "metera.io"
+    },
+    "muesliswap": {
+      "status": "ok",
+      "domain": "muesliswap.com",
+      "registration_date": "2021-09-14",
+      "registration_timestamp": "2021-09-14T03:53:58Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/muesliswap.com",
+      "checked_at": "2026-09-11T18:45:17.697Z"
+    },
+    "govtool": {
+      "status": "ok",
+      "domain": "gov.tools",
+      "registration_date": "2024-04-08",
+      "registration_timestamp": "2024-04-08T11:55:08.494Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/gov.tools",
+      "checked_at": "2026-09-11T18:45:17.900Z"
+    },
+    "cgov": {
+      "status": "no_rdap_service",
+      "domain": "nomos.cgov.io"
+    },
+    "dreptalk": {
+      "status": "ok",
+      "domain": "dreptalk.com",
+      "registration_date": "2026-06-05",
+      "registration_timestamp": "2026-06-05T17:32:49Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/dreptalk.com",
+      "checked_at": "2026-09-11T18:45:18.036Z"
+    },
+    "project-catalyst": {
+      "status": "no_rdap_service",
+      "domain": "projectcatalyst.io"
+    },
+    "intersect": {
+      "status": "ok",
+      "domain": "intersectmbo.org",
+      "registration_date": "2023-06-27",
+      "registration_timestamp": "2023-06-27T12:24:24.524Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/intersectmbo.org",
+      "checked_at": "2026-09-11T18:45:18.257Z"
+    },
+    "1694-io": {
+      "status": "no_rdap_service",
+      "domain": "1694.io"
+    },
+    "cardanoscan": {
+      "status": "no_rdap_service",
+      "domain": "cardanoscan.io"
+    },
+    "cexplorer": {
+      "status": "no_rdap_service",
+      "domain": "cexplorer.io"
+    },
+    "pool-pm": {
+      "status": "ok",
+      "domain": "pool.pm",
+      "registration_date": "2020-06-26",
+      "registration_timestamp": "2020-06-26T09:58:04Z",
+      "rdap_url": "https://rdap.nic.pm/domain/pool.pm",
+      "checked_at": "2026-09-11T18:45:18.803Z"
+    },
+    "pooltool": {
+      "status": "no_rdap_service",
+      "domain": "pooltool.io"
+    },
+    "defillama": {
+      "status": "ok",
+      "domain": "defillama.com",
+      "registration_date": "2020-10-26",
+      "registration_timestamp": "2020-10-26T23:33:26Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/defillama.com",
+      "checked_at": "2026-09-11T18:45:18.937Z"
+    },
+    "dune": {
+      "status": "ok",
+      "domain": "dune.com",
+      "registration_date": "1997-11-14",
+      "registration_timestamp": "1997-11-14T05:00:00Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/dune.com",
+      "checked_at": "2026-09-11T18:45:19.072Z"
+    },
+    "nmkr": {
+      "status": "no_rdap_service",
+      "domain": "nmkr.io"
+    },
+    "clay-nation": {
+      "status": "no_rdap_service",
+      "domain": "clayhaus.co"
+    },
+    "book-io": {
+      "status": "no_rdap_service",
+      "domain": "book.io"
+    },
+    "stuff-io": {
+      "status": "no_rdap_service",
+      "domain": "stuff.io"
+    },
+    "dripdropz": {
+      "status": "no_rdap_service",
+      "domain": "dripdropz.io"
+    },
+    "unfrackit": {
+      "status": "no_rdap_service",
+      "domain": "unfrack.it"
+    },
+    "blockfrost": {
+      "status": "no_rdap_service",
+      "domain": "blockfrost.io"
+    },
+    "koios": {
+      "status": "ok",
+      "domain": "koios.rest",
+      "registration_date": "2021-08-25",
+      "registration_timestamp": "2021-08-25T11:31:47.000Z",
+      "rdap_url": "https://rdap.registry.bar/rdap/domain/koios.rest",
+      "checked_at": "2026-09-11T18:45:19.429Z"
+    },
+    "maestro": {
+      "status": "fetch_error",
+      "domain": "docs.gomaestro.org",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.gomaestro.org",
+      "error": "HTTP 400",
+      "checked_at": "2026-09-21T18:10:25.113Z"
+    },
+    "txpipe": {
+      "status": "no_rdap_service",
+      "domain": "txpipe.io"
+    },
+    "dolos": {
+      "status": "ok",
+      "domain": "github.com",
+      "registration_date": "2007-10-09",
+      "registration_timestamp": "2007-10-09T18:20:50Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/github.com",
+      "checked_at": "2026-09-11T18:45:19.762Z"
+    },
+    "kupo": {
+      "status": "no_rdap_service",
+      "domain": "cardanosolutions.github.io"
+    },
+    "ogmios": {
+      "status": "ok",
+      "domain": "ogmios.dev",
+      "registration_date": "2020-04-04",
+      "registration_timestamp": "2020-04-04T16:04:26.814Z",
+      "rdap_url": "https://pubapi.registry.google/rdap/domain/ogmios.dev",
+      "checked_at": "2026-09-11T18:45:20.041Z"
+    },
+    "zkfold": {
+      "status": "no_rdap_service",
+      "domain": "zkfold.io"
+    },
+    "charli3": {
+      "status": "no_rdap_service",
+      "domain": "charli3.io"
+    },
+    "orcfax": {
+      "status": "no_rdap_service",
+      "domain": "orcfax.io"
+    },
+    "nunet": {
+      "status": "no_rdap_service",
+      "domain": "nunet.io"
+    },
+    "aiken": {
+      "status": "ok",
+      "domain": "aiken-lang.org",
+      "registration_date": "2022-12-15",
+      "registration_timestamp": "2022-12-15T00:03:57.964Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/aiken-lang.org",
+      "checked_at": "2026-09-11T18:45:20.261Z"
+    },
+    "gimbalabs": {
+      "status": "ok",
+      "domain": "gimbalabs.com",
+      "registration_date": "2020-10-14",
+      "registration_timestamp": "2020-10-14T16:55:37Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/gimbalabs.com",
+      "checked_at": "2026-09-11T18:45:20.435Z"
+    },
+    "meshjs": {
+      "status": "ok",
+      "domain": "meshjs.dev",
+      "registration_date": "2022-12-02",
+      "registration_timestamp": "2022-12-02T16:05:12.261Z",
+      "rdap_url": "https://pubapi.registry.google/rdap/domain/meshjs.dev",
+      "checked_at": "2026-09-11T18:45:20.616Z"
+    },
+    "lucid-evolution": {
+      "status": "no_rdap_service",
+      "domain": "anastasia-labs.github.io"
+    },
+    "cardano-docs": {
+      "status": "fetch_error",
+      "domain": "docs.cardano.org",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.cardano.org",
+      "error": "HTTP 400",
+      "checked_at": "2026-09-21T18:10:25.322Z"
+    },
+    "plutus": {
+      "status": "fetch_error",
+      "domain": "docs.cardano.org",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.cardano.org",
+      "error": "HTTP 400",
+      "checked_at": "2026-09-21T18:10:25.536Z"
+    },
+    "marlowe": {
+      "status": "no_rdap_service",
+      "domain": "marlowe.iohk.io"
+    },
+    "mithril": {
+      "status": "ok",
+      "domain": "mithril.network",
+      "registration_date": "2022-04-04",
+      "registration_timestamp": "2022-04-04T08:54:41.286Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/mithril.network",
+      "checked_at": "2026-09-11T18:45:21.326Z"
+    },
+    "hydra": {
+      "status": "ok",
+      "domain": "hydra.family",
+      "registration_date": "2022-03-17",
+      "registration_timestamp": "2022-03-17T18:55:58.668Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/hydra.family",
+      "checked_at": "2026-09-11T18:45:21.526Z"
+    },
+    "demeter": {
+      "status": "ok",
+      "domain": "demeter.run",
+      "registration_date": "2022-05-16",
+      "registration_timestamp": "2022-05-16T14:03:13.76Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/demeter.run",
+      "checked_at": "2026-09-11T18:45:21.732Z"
+    },
+    "masumi": {
+      "status": "ok",
+      "domain": "masumi.network",
+      "registration_date": "2024-09-21",
+      "registration_timestamp": "2024-09-21T14:36:52.084Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/masumi.network",
+      "checked_at": "2026-09-11T18:45:21.933Z"
+    },
+    "sokosumi": {
+      "status": "ok",
+      "domain": "sokosumi.com",
+      "registration_date": "2024-10-25",
+      "registration_timestamp": "2024-10-25T06:56:56Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/sokosumi.com",
+      "checked_at": "2026-09-11T18:45:22.069Z"
+    },
+    "hizz": {
+      "status": "no_rdap_service",
+      "domain": "hizz.io"
+    },
+    "marsbirds": {
+      "status": "ok",
+      "domain": "marsbirds.com",
+      "registration_date": "2024-08-08",
+      "registration_timestamp": "2024-08-08T01:49:30Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/marsbirds.com",
+      "checked_at": "2026-09-11T18:45:22.424Z"
+    },
+    "bitcoin-os": {
+      "status": "ok",
+      "domain": "bitcoinos.build",
+      "registration_date": "2024-04-16",
+      "registration_timestamp": "2024-04-16T16:52:40.0Z",
+      "rdap_url": "https://rdap.centralnic.com/build/domain/bitcoinos.build",
+      "checked_at": "2026-09-11T18:45:22.947Z"
+    },
+    "cardano-token-vault": {
+      "status": "fetch_error",
+      "domain": "vault.adatokenvault.com",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/vault.adatokenvault.com",
+      "error": "HTTP 404",
+      "checked_at": "2026-09-21T18:10:25.749Z"
+    },
+    "farmbot": {
+      "status": "ok",
+      "domain": "thefarmbots.org",
+      "registration_date": "2025-09-29",
+      "registration_timestamp": "2025-09-29T23:23:57.052Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/thefarmbots.org",
+      "checked_at": "2026-09-11T18:45:23.324Z"
+    },
+    "squeak": {
+      "status": "ok",
+      "domain": "squeak.world",
+      "registration_date": "2024-12-02",
+      "registration_timestamp": "2024-12-02T19:25:14.055Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/squeak.world",
+      "checked_at": "2026-09-13T21:56:20.332Z"
+    },
+    "happy-hoppers-club": {
+      "status": "ok",
+      "domain": "happyhoppers.club",
+      "registration_date": "2021-09-23",
+      "registration_timestamp": "2021-09-23T05:09:18Z",
+      "rdap_url": "https://rdap.nic.club/domain/happyhoppers.club",
+      "checked_at": "2026-09-15T14:04:46.881Z"
+    },
+    "l4va": {
+      "status": "ok",
+      "domain": "l4va.com",
+      "registration_date": "2022-09-16",
+      "registration_timestamp": "2022-09-16T23:58:37Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/l4va.com",
+      "checked_at": "2026-09-15T14:04:47.078Z"
+    },
+    "bitbird": {
+      "status": "ok",
+      "domain": "bitbird.ai",
+      "registration_date": "2025-08-28",
+      "registration_timestamp": "2025-08-28T20:58:19.906Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/bitbird.ai",
+      "checked_at": "2026-09-15T14:04:47.337Z"
+    },
+    "frogs-on-cardano": {
+      "status": "no_current_official_domain",
+      "domain": null
+    },
+    "disco-solaris": {
+      "status": "no_rdap_service",
+      "domain": "discosolaris.io"
+    },
+    "stag-alliance": {
+      "status": "no_rdap_service",
+      "domain": "elderworld.io"
+    },
+    "hops-on-cardano": {
+      "status": "no_rdap_service",
+      "domain": "hopsoncardano.io"
+    },
+    "snekkies": {
+      "status": "ok",
+      "domain": "snekkies.com",
+      "registration_date": "2023-12-22",
+      "registration_timestamp": "2023-12-22T15:31:04Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/snekkies.com",
+      "checked_at": "2026-09-15T14:04:47.534Z"
+    },
+    "cnft-tools": {
+      "status": "ok",
+      "domain": "cnft.tools",
+      "registration_date": "2021-08-09",
+      "registration_timestamp": "2021-08-09T10:08:17.441Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/cnft.tools",
+      "checked_at": "2026-09-15T14:04:47.692Z"
+    },
+    "danzo": {
+      "status": "ok",
+      "domain": "cardanzoada.com",
+      "registration_date": "2024-06-22",
+      "registration_timestamp": "2024-06-22T18:35:16Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/cardanzoada.com",
+      "checked_at": "2026-09-15T14:04:47.886Z"
+    },
+    "infinity-rising": {
+      "status": "ok",
+      "domain": "infinityrising.com",
+      "registration_date": "2011-12-17",
+      "registration_timestamp": "2011-12-17T19:30:28Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/infinityrising.com",
+      "checked_at": "2026-09-12T11:35:25.640Z"
+    },
+    "asteria": {
+      "status": "no_rdap_service",
+      "domain": "asteria.txpipe.io"
+    },
+    "claimpaign": {
+      "status": "ok",
+      "domain": "claimpaign.com",
+      "registration_date": "2026-03-11",
+      "registration_timestamp": "2026-03-11T20:55:22Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/claimpaign.com",
+      "checked_at": "2026-09-12T11:35:25.791Z"
+    },
+    "onboard-ninja": {
+      "status": "ok",
+      "domain": "onboard.ninja",
+      "registration_date": "2024-07-26",
+      "registration_timestamp": "2024-07-26T16:16:33.58Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/onboard.ninja",
+      "checked_at": "2026-09-12T11:35:26.160Z"
+    },
+    "farmroll": {
+      "status": "no_rdap_service",
+      "domain": "farmroll.io"
+    },
+    "uverify": {
+      "status": "no_rdap_service",
+      "domain": "uverify.io"
+    },
+    "echoforge": {
+      "status": "ok",
+      "domain": "echoforgeef.com",
+      "registration_date": "2026-08-19",
+      "registration_timestamp": "2026-08-19T05:57:22Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/echoforgeef.com",
+      "checked_at": "2026-09-14T11:10:34.821Z"
+    },
+    "continuity-token": {
+      "status": "ok",
+      "domain": "continuity.to",
+      "registration_date": "2023-01-15",
+      "registration_timestamp": "2023-01-15T05:11:09.000Z",
+      "rdap_url": "https://rdap.tonicregistry.to/rdap/domain/continuity.to",
+      "checked_at": "2026-09-12T11:35:26.833Z"
+    },
+    "commitproof": {
+      "status": "ok",
+      "domain": "commitproof.com",
+      "registration_date": "2026-02-17",
+      "registration_timestamp": "2026-02-17T22:38:45Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/commitproof.com",
+      "checked_at": "2026-09-12T11:35:26.978Z"
+    },
+    "cardano-wall": {
+      "status": "ok",
+      "domain": "cardanowall.com",
+      "registration_date": "2021-02-15",
+      "registration_timestamp": "2021-02-15T08:53:10Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/cardanowall.com",
+      "checked_at": "2026-09-12T11:35:27.124Z"
+    },
+    "tapdano": {
+      "status": "ok",
+      "domain": "tapdano.com",
+      "registration_date": "2023-12-04",
+      "registration_timestamp": "2023-12-04T12:59:56Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/tapdano.com",
+      "checked_at": "2026-09-12T11:35:27.266Z"
+    },
+    "andamio": {
+      "status": "no_rdap_service",
+      "domain": "andamio.io"
+    },
+    "extended-utxo": {
+      "status": "ok",
+      "domain": "extendedutxo.com",
+      "registration_date": "2026-03-19",
+      "registration_timestamp": "2026-03-19T22:06:37Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/extendedutxo.com",
+      "checked_at": "2026-09-12T11:35:27.411Z"
+    },
+    "token-nft-builder": {
+      "status": "ok",
+      "domain": "cardano-native-token.com",
+      "registration_date": "2021-04-16",
+      "registration_timestamp": "2021-04-16T20:53:15Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/cardano-native-token.com",
+      "checked_at": "2026-09-12T11:35:27.602Z"
+    },
+    "cnftlab-party": {
+      "status": "ok",
+      "domain": "cnftlab.party",
+      "registration_date": "2022-03-29",
+      "registration_timestamp": "2022-03-29T12:10:25Z",
+      "rdap_url": "https://rdap.nic.party/domain/cnftlab.party",
+      "checked_at": "2026-09-12T11:35:27.967Z"
+    },
+    "cardano-studio": {
+      "status": "ok",
+      "domain": "cardano-studio.app",
+      "registration_date": "2022-12-21",
+      "registration_timestamp": "2022-12-21T21:16:04.014Z",
+      "rdap_url": "https://pubapi.registry.google/rdap/domain/cardano-studio.app",
+      "checked_at": "2026-09-12T11:35:28.160Z"
+    },
+    "cardano-tools-io": {
+      "status": "no_rdap_service",
+      "domain": "cardano-tools.io"
+    },
+    "wargrum": {
+      "status": "no_rdap_service",
+      "domain": "wargrum.io"
+    },
+    "yummi-universe": {
+      "status": "no_rdap_service",
+      "domain": "yummiuniverse.io"
+    },
+    "cyberverse": {
+      "status": "ok",
+      "domain": "playcyberverse.com",
+      "registration_date": "2022-12-11",
+      "registration_timestamp": "2022-12-11T20:31:18Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/playcyberverse.com",
+      "checked_at": "2026-09-12T11:35:28.353Z"
+    },
+    "the-mallard-order": {
+      "status": "no_rdap_service",
+      "domain": "mallardorder.io"
+    },
+    "chains-of-war": {
+      "status": "no_rdap_service",
+      "domain": "wiki.chainsofwar.io"
+    },
+    "clumsy-ghosts": {
+      "status": "ok",
+      "domain": "clumsyghosts.com",
+      "registration_date": "2021-09-08",
+      "registration_timestamp": "2021-09-08T01:43:56Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/clumsyghosts.com",
+      "checked_at": "2026-09-12T11:35:28.542Z"
+    },
+    "ale-axes": {
+      "status": "ok",
+      "domain": "aleaxes.com",
+      "registration_date": "2023-08-04",
+      "registration_timestamp": "2023-08-04T09:36:26Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/aleaxes.com",
+      "checked_at": "2026-09-12T18:55:18.015Z"
+    },
+    "plutus-quiz-v1000": {
+      "status": "fetch_error",
+      "domain": "server-tools.grahamsnumberplus1.com",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/server-tools.grahamsnumberplus1.com",
+      "error": "HTTP 404",
+      "checked_at": "2026-09-21T18:10:25.980Z"
+    },
+    "deadpxlz": {
+      "status": "ok",
+      "domain": "pxlz.org",
+      "registration_date": "2021-03-01",
+      "registration_timestamp": "2021-03-01T22:33:13.245Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/pxlz.org",
+      "checked_at": "2026-09-12T18:55:18.684Z"
+    },
+    "cardanotrees": {
+      "status": "ok",
+      "domain": "cardanotrees.com",
+      "registration_date": "2021-08-16",
+      "registration_timestamp": "2021-08-16T23:17:52Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/cardanotrees.com",
+      "checked_at": "2026-09-12T18:55:18.840Z"
+    },
+    "cardanobits": {
+      "status": "ok",
+      "domain": "cardanobits.art",
+      "registration_date": "2021-03-22",
+      "registration_timestamp": "2021-03-22T03:24:23.0Z",
+      "rdap_url": "https://rdap.centralnic.com/art/domain/cardanobits.art",
+      "checked_at": "2026-09-12T18:55:19.557Z"
+    },
+    "goofy-gophers-mining-club": {
+      "status": "no_rdap_service",
+      "domain": "ggmc.io"
+    },
+    "aeoniumsky": {
+      "status": "no_rdap_service",
+      "domain": "aeoniumsky.io"
+    },
+    "mlabs": {
+      "status": "ok",
+      "domain": "mlabs.city",
+      "registration_date": "2018-10-01",
+      "registration_timestamp": "2018-10-01T18:32:44.133Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/mlabs.city",
+      "checked_at": "2026-09-13T20:58:26.685Z"
+    },
+    "anastasia-labs": {
+      "status": "ok",
+      "domain": "anastasialabs.com",
+      "registration_date": "2023-03-03",
+      "registration_timestamp": "2023-03-03T03:31:19Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/anastasialabs.com",
+      "checked_at": "2026-09-13T20:58:26.851Z"
+    },
+    "xerberus": {
+      "status": "no_rdap_service",
+      "domain": "xerberus.io"
+    },
+    "sidan-lab": {
+      "status": "no_rdap_service",
+      "domain": "sidan.io"
+    },
+    "wada": {
+      "status": "ok",
+      "domain": "wada.org",
+      "registration_date": "1998-07-24",
+      "registration_timestamp": "1998-07-24T04:00:00.375Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/wada.org",
+      "checked_at": "2026-09-13T20:58:27.060Z"
+    },
+    "blink-labs": {
+      "status": "no_rdap_service",
+      "domain": "blinklabs.io"
+    },
+    "lido-nation": {
+      "status": "ok",
+      "domain": "lidonation.com",
+      "registration_date": "2021-02-25",
+      "registration_timestamp": "2021-02-25T19:40:03Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/lidonation.com",
+      "checked_at": "2026-09-13T20:58:27.246Z"
+    },
+    "sustainable-ada": {
+      "status": "ok",
+      "domain": "sustainableada.com",
+      "registration_date": "2020-12-03",
+      "registration_timestamp": "2020-12-03T18:21:09Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/sustainableada.com",
+      "checked_at": "2026-09-13T20:58:27.450Z"
+    },
+    "five-binaries": {
+      "status": "ok",
+      "domain": "fivebinaries.com",
+      "registration_date": "2020-01-06",
+      "registration_timestamp": "2020-01-06T21:25:08Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/fivebinaries.com",
+      "checked_at": "2026-09-13T20:58:27.625Z"
+    },
+    "kwic": {
+      "status": "no_rdap_service",
+      "domain": "keyboardwarriorsinternetcafe.io"
+    },
+    "european-cardano-community": {
+      "status": "no_current_official_domain",
+      "domain": null
+    },
+    "tweag": {
+      "status": "no_rdap_service",
+      "domain": "tweag.io"
+    },
+    "perps": {
+      "status": "ok",
+      "domain": "perpsquad.com",
+      "registration_date": "2025-01-09",
+      "registration_timestamp": "2025-01-09T18:02:48Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/perpsquad.com",
+      "checked_at": "2026-09-14T11:10:35.182Z"
+    },
+    "cardano-foundation": {
+      "status": "ok",
+      "domain": "cardanofoundation.org",
+      "registration_date": "2015-10-29",
+      "registration_timestamp": "2015-10-29T09:41:31.261Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/cardanofoundation.org",
+      "checked_at": "2026-09-14T17:14:04.755Z"
+    },
+    "emurgo": {
+      "status": "no_rdap_service",
+      "domain": "emurgo.io"
+    },
+    "neo-vikings": {
+      "status": "no_rdap_service",
+      "domain": "linktr.ee"
+    },
+    "libertum": {
+      "status": "no_rdap_service",
+      "domain": "libertum.io"
+    },
+    "butane": {
+      "status": "ok",
+      "domain": "butane.dev",
+      "registration_date": "2023-08-03",
+      "registration_timestamp": "2023-08-03T10:32:52.963Z",
+      "rdap_url": "https://pubapi.registry.google/rdap/domain/butane.dev",
+      "checked_at": "2026-09-15T14:04:48.314Z"
+    },
+    "anvil-dev-agency": {
+      "status": "no_rdap_service",
+      "domain": "ada-anvil.io"
+    },
+    "granada-pool": {
+      "status": "ok",
+      "domain": "granadapool.com",
+      "registration_date": "2021-09-09",
+      "registration_timestamp": "2021-09-09T14:49:36Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/granadapool.com",
+      "checked_at": "2026-09-15T18:30:51.834Z"
+    },
+    "digital-fortress": {
+      "status": "ok",
+      "domain": "digi.pro",
+      "registration_date": "2010-03-02",
+      "registration_timestamp": "2010-03-02T23:08:22.789Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/digi.pro",
+      "checked_at": "2026-09-15T18:30:52.055Z"
+    },
+    "ikigai-technologies": {
+      "status": "ok",
+      "domain": "ikigaitech.org",
+      "registration_date": "2021-06-15",
+      "registration_timestamp": "2021-06-15T22:00:46.017Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/ikigaitech.org",
+      "checked_at": "2026-09-15T22:51:09.841Z"
+    },
+    "dotare": {
+      "status": "no_rdap_service",
+      "domain": "dotare.io"
+    },
+    "adastack-io": {
+      "status": "no_rdap_service",
+      "domain": "adastack.io"
+    },
+    "adalite": {
+      "status": "no_rdap_service",
+      "domain": "adalite.io"
+    },
+    "chibidango-heroes": {
+      "status": "ok",
+      "domain": "chibidangoheroes.com",
+      "registration_date": "2021-05-22",
+      "registration_timestamp": "2021-05-22T01:06:19Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/chibidangoheroes.com",
+      "checked_at": "2026-09-15T23:18:45.840Z"
+    },
+    "empowa": {
+      "status": "no_rdap_service",
+      "domain": "empowa.io"
+    },
+    "genius-yield": {
+      "status": "no_rdap_service",
+      "domain": "geniusyield.co"
+    },
+    "spectrum-finance": {
+      "status": "ok",
+      "domain": "spectrum.fi",
+      "registration_date": "2018-02-20",
+      "registration_timestamp": "2018-02-20T08:29:16+02:00",
+      "rdap_url": "https://rdap.fi/rdap/rdap/domain/spectrum.fi",
+      "checked_at": "2026-09-15T23:18:46.386Z"
+    },
+    "daedalus": {
+      "status": "no_rdap_service",
+      "domain": "daedaluswallet.io"
+    },
+    "rosen-bridge": {
+      "status": "ok",
+      "domain": "rosen.tech",
+      "registration_date": "2022-10-08",
+      "registration_timestamp": "2022-10-08T13:28:40.000Z",
+      "rdap_url": "https://rdap.radix.host/rdap/domain/rosen.tech",
+      "checked_at": "2026-09-15T23:18:46.619Z"
+    },
+    "typhon-wallet": {
+      "status": "no_rdap_service",
+      "domain": "typhonwallet.io"
+    },
+    "nufi": {
+      "status": "ok",
+      "domain": "nu.fi",
+      "registration_date": "2016-09-12",
+      "registration_timestamp": "2016-09-12T10:04:28+03:00",
+      "rdap_url": "https://rdap.fi/rdap/rdap/domain/nu.fi",
+      "checked_at": "2026-09-15T23:18:46.883Z"
+    },
+    "oura": {
+      "status": "no_rdap_service",
+      "domain": "oura.txpipe.io"
+    },
+    "palmyra": {
+      "status": "ok",
+      "domain": "palmyra.app",
+      "registration_date": "2023-05-09",
+      "registration_timestamp": "2023-05-09T08:12:30.138Z",
+      "rdap_url": "https://pubapi.registry.google/rdap/domain/palmyra.app",
+      "checked_at": "2026-09-15T23:18:47.160Z"
+    },
+    "directed": {
+      "status": "ok",
+      "domain": "directed.dev",
+      "registration_date": "2021-10-21",
+      "registration_timestamp": "2021-10-21T18:35:44.613Z",
+      "rdap_url": "https://pubapi.registry.google/rdap/domain/directed.dev",
+      "checked_at": "2026-09-15T23:18:47.408Z"
+    },
+    "spacebudz": {
+      "status": "no_rdap_service",
+      "domain": "spacebudz.io"
+    },
+    "hosky": {
+      "status": "no_rdap_service",
+      "domain": "hosky.io"
+    },
+    "grahamsnumberplus1": {
+      "status": "ok",
+      "domain": "grahamsnumberplus1.com",
+      "registration_date": "2020-10-21",
+      "registration_timestamp": "2020-10-21T18:01:10Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/grahamsnumberplus1.com",
+      "checked_at": "2026-09-21T18:10:26.210Z"
+    },
+    "strica": {
+      "status": "no_rdap_service",
+      "domain": "strica.io"
+    },
+    "zkdid": {
+      "status": "ok",
+      "domain": "zkd.id",
+      "registration_date": "2023-07-04",
+      "registration_timestamp": "2023-07-04T10:30:35Z",
+      "rdap_url": "https://rdap.pandi.id/rdap/domain/zkd.id",
+      "checked_at": "2026-09-21T18:10:27.296Z"
+    },
+    "stakada-io": {
+      "status": "no_rdap_service",
+      "domain": "stakada.io"
+    },
+    "larissa-health": {
+      "status": "ok",
+      "domain": "larissa.health",
+      "registration_date": "2020-10-16",
+      "registration_timestamp": "2020-10-16T10:33:22Z",
+      "rdap_url": "https://rdap.nic.health/domain/larissa.health",
+      "checked_at": "2026-09-21T18:10:27.542Z"
+    },
+    "adria-stake-pool": {
+      "status": "ok",
+      "domain": "dappsoncardano.com",
+      "registration_date": "2022-06-08",
+      "registration_timestamp": "2022-06-08T14:18:25Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/dappsoncardano.com",
+      "checked_at": "2026-09-21T18:10:27.740Z"
+    },
+    "poolflow": {
+      "status": "ok",
+      "domain": "poolflow.net",
+      "registration_date": "2026-06-27",
+      "registration_timestamp": "2026-06-27T19:52:15Z",
+      "rdap_url": "https://rdap.verisign.com/net/v1/domain/poolflow.net",
+      "checked_at": "2026-09-21T18:10:27.947Z"
+    },
+    "cardano-prime": {
+      "status": "no_rdap_service",
+      "domain": "alphagrowth.io"
+    },
+    "trivolve-tech": {
+      "status": "ok",
+      "domain": "trivolvetech.com",
+      "registration_date": "2024-01-10",
+      "registration_timestamp": "2024-01-10T14:19:00Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/trivolvetech.com",
+      "checked_at": "2026-09-21T18:10:28.178Z"
+    },
+    "ascend-market": {
+      "status": "ok",
+      "domain": "ascend.market",
+      "registration_date": "2026-01-20",
+      "registration_timestamp": "2026-01-20T06:58:42.206Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/ascend.market",
+      "checked_at": "2026-09-21T18:10:28.537Z"
+    },
+    "sundial-protocol": {
+      "status": "ok",
+      "domain": "sundialprotocol.com",
+      "registration_date": "2024-11-20",
+      "registration_timestamp": "2024-11-20T06:17:24Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/sundialprotocol.com",
+      "checked_at": "2026-09-21T18:10:28.742Z"
+    },
+    "songmarketcap": {
+      "status": "ok",
+      "domain": "songmarketcap.com",
+      "registration_date": "2025-01-26",
+      "registration_timestamp": "2025-01-26T19:02:03Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/songmarketcap.com",
+      "checked_at": "2026-09-21T18:10:28.975Z"
+    },
+    "alphagrowth": {
+      "status": "no_rdap_service",
+      "domain": "alphagrowth.io"
+    }
+  }
+}

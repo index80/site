@@ -1,0 +1,27 @@
+{
+  "schema": "INDEX80 Registry Anchor Receipt v1",
+  "release_id": "INDEX80-0001",
+  "network": "preprod",
+  "publisher_address": "addr_test1qzljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhq39ac0a",
+  "snapshot_hash": "14546a96f15632eeedba12464adc17531597a5f40181e0b72cf7a060933375d2",
+  "metadata_label": 309,
+  "proof_standard": "CIP-190",
+  "proof_cbor_hex": "a2617601656974656d7381a166686173686573a168736861322d323536582014546a96f15632eeedba12464adc17531597a5f40181e0b72cf7a060933375d2",
+  "metadata_hash": "8ab9b5425ed3a466dddbaa4c2fa00f6c7220630091dc9c95e51baf91dba10ec6",
+  "transaction_id": "bd2f95598b963430435e893c9896f481cc8c0299edb2ee9356f6918c37219563",
+  "fee_lovelace": "173069",
+  "local_signed_size_bytes": 398,
+  "onchain_size_bytes": 397,
+  "block": 5183254,
+  "epoch": 313,
+  "slot": 292856,
+  "absolute_slot": 133867256,
+  "cardanoscan_timestamp_display": "Sep 16, 2026 10:20:56 AM",
+  "confirmation_observed": {
+    "date": "2026-09-16",
+    "assurance": "High assurance",
+    "confirmations_at_review": 322,
+    "source": "CardanoScan Preprod"
+  },
+  "status": "CONFIRMED"
+}

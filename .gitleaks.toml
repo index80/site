@@ -1,0 +1,8 @@
+title = "INDEX:80 public source"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Public Cardano stake-credential key hashes in registry receipts are not secrets"
+paths = ['''public_html/registry/receipts/.*\.json''']

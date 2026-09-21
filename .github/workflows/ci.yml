@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # Runs `npm run build` twice and checks the output is deterministic.
+      - name: Build twice and verify deterministic generated output
+        run: npm run test:generated-output
+      - name: Theme tests
+        run: npm run test:theme
+      - name: Registry history and integrity
+        run: |
+          npm run test:registry-history
+          npm run test:registry-integrity
+      - name: Site schema, home directory and treasury rule tests
+        run: |
+          npm run test:site-schema
+          npm run test:home-directory
+          npm run test:treasury
+      - name: Cardano snapshot validation
+        run: npm run test:data
