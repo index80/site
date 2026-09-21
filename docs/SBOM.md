@@ -7,7 +7,7 @@ Repository: `https://github.com/index80/site`
 
 This record covers the **public open-source website/source package** used for the INDEX:80 Tooling Sustainability funding application.
 
-It does not claim that separately governed private operational tooling is public source. The production/editorial operational repository `index80/index80` remains outside this SBOM scope.
+It does not claim that separately governed private operational tooling is public source. The private production/editorial operational repository remains outside this SBOM scope.
 
 ## Public package
 
@@ -36,7 +36,7 @@ These are CI service dependencies and are not software shipped to website visito
 
 ## Excluded private operational tooling
 
-The private operational repository contains additional tooling that is **not exported as part of `index80/site`**.
+The private operational repository contains additional tooling that is **not exported as part of this public repository**.
 
 For boundary transparency, `tools/registry-anchor-publisher` in the private repository has its own committed `package-lock.json` and directly declares:
 

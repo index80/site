@@ -26,7 +26,7 @@ These are CI service dependencies, not JavaScript packages shipped to website vi
 
 ## Public/private boundary
 
-INDEX:80 production and editorial operations are maintained separately in the private operational repository `index80/index80`.
+INDEX:80 production and editorial operations are maintained separately in a private operational repository.
 
 That private repository contains tooling that is intentionally **not part of the public `index80/site` source package**, including the isolated registry-anchor publisher. Its package dependencies must not be presented as dependencies of the public funding package.
 
