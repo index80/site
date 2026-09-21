@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="/assets/js/analytics.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Human-readable INDEX:80 registry snapshot table.">
+  <title>Registry Snapshot — INDEX:80 / CARDANO</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
+  <script src="/assets/js/theme.js"></script>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/registry-page.css">
+</head>
+<body data-mode="data" data-page="registry-snapshot">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="system-bar">
+    <span class="system-slogan">A MORE OPEN INTERNET, A BRIGHTER TOMORROW.</span>
+    <span class="system-status"><span class="status-dot"></span> INDEX:80 ONLINE</span>
+  </div>
+
+  <header class="site-header">
+    <div class="brand-row">
+      <a class="wordmark" href="/" aria-label="INDEX:80 home"><span>INDEX:</span><b>80</b></a>
+      <span class="network-label">/CARDANO</span>
+    </div>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/">⌂ Home</a>
+      <a href="/submit/">✎ Submit</a>
+      <a href="/data/">▥ Data</a>
+      <a href="/learn/">▤ Learn</a>
+      <a href="/governance/">⌂ Governance</a>
+      <a href="/about/">◇ About</a>
+      <a aria-current="page" href="/registry/">▣ Registry</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page-grid single-column">
+    <section class="panel dark registry-snapshot-header">
+      <div class="registry-kicker">IMMUTABLE REGISTRY SNAPSHOT</div>
+      <h1 id="snapshot-title">LOADING SNAPSHOT…</h1>
+      <p id="snapshot-intro">Loading the public snapshot and release manifest.</p>
+      <div class="registry-snapshot-meta" id="snapshot-meta"></div>
+    </section>
+
+    <section class="panel dark registry-snapshot-toolbar">
+      <label class="registry-snapshot-search">Search snapshot
+        <input id="snapshot-search" type="search" placeholder="Project, category, status, summary…" autocomplete="off">
+      </label>
+      <span id="snapshot-count" class="registry-snapshot-count">— RECORDS</span>
+      <a id="raw-json-link" class="button" href="#">RAW JSON</a>
+      <a class="button" href="/registry/">← REGISTRY HISTORY</a>
+    </section>
+
+    <section class="panel dark registry-snapshot-table-wrap" role="region" aria-label="Registry snapshot table" tabindex="0">
+      <table class="registry-snapshot-table">
+        <thead>
+          <tr>
+            <th>PROJECT</th>
+            <th>FAMILY / CATEGORY</th>
+            <th>STATUS</th>
+            <th>SUMMARY</th>
+            <th>SITE</th>
+          </tr>
+        </thead>
+        <tbody id="snapshot-table-body">
+          <tr><td colspan="5" class="registry-snapshot-empty">Loading snapshot…</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Secondary">
+      <a href="/">⌂ Home</a>
+      <a href="/submit/">✎ Submit</a>
+      <a href="/data/">▥ Data</a>
+      <a href="/learn/">▤ Learn</a>
+      <a href="/governance/">⌂ Governance</a>
+      <a href="/about/">◇ About</a>
+      <a aria-current="page" href="/registry/">▣ Registry</a>
+    </nav>
+    <div class="footer-meta">
+      <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>
+      <span>OPEN LINKS · OPEN DATA · SOURCED INFORMATION</span>
+      <button type="button" class="footer-consent-toggle" data-consent-toggle>Cookie preferences</button>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/registry-view.js" defer></script>
+</body>
+</html>

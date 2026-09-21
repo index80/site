@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="/assets/js/analytics.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="INDEX:80 /CARDANO — sourced, timestamped Cardano network, market, ecosystem and Treasury-funding data.">
+  <title>Data — INDEX:80 / CARDANO</title>
+  <link rel="canonical" href="https://index80.com/data/">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
+  <script src="../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/data-page.css">
+</head>
+<body data-mode="data">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="system-bar">
+    <span class="system-slogan">A MORE OPEN INTERNET, A BRIGHTER TOMORROW.</span>
+    <span class="system-status"><span class="status-dot"></span> INDEX:80 ONLINE</span>
+  </div>
+
+  <header class="site-header">
+    <div class="brand-row">
+      <a class="wordmark" href="/" aria-label="INDEX:80 home"><span>INDEX:</span><b>80</b></a>
+      <span class="network-label">/CARDANO</span>
+    </div>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/">⌂ Home</a>
+      <a href="/submit/">✎ Submit</a>
+      <a aria-current="page" href="/data/">▥ Data</a>
+      <a href="/learn/">▤ Learn</a>
+      <a href="/governance/">⌂ Governance</a>
+      <a href="/about/">◇ About</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page-grid single-column">
+    <section class="panel hero-panel section-hero compact-hero dark-hero">
+      <div class="hero-copy">
+        <div class="eyebrow on-dark">NETWORK + MARKETS + ECOSYSTEM</div>
+        <h1>DATA<small>/CARDANO</small></h1>
+        <p class="strap">PUBLIC DATA. SOURCED. TIMESTAMPED.</p>
+        <p>Cardano data published through one small public JSON endpoint. Chain facts come from Cardano via Koios; market and ecosystem metrics come from their named public sources. Missing data stays missing rather than being silently converted to zero.</p>
+        <div id="cardano-data-status" class="data-status-strip" aria-live="polite"><strong>LOADING PUBLIC DATA…</strong></div>
+      </div>
+      <div class="hero-art hero-art-right">
+        <img src="../assets/images/index80-hero-data.webp" alt="Pixel-art illustration of a dark data-observatory control room with an astronaut, a black cat and a satellite watching a glowing global data network over the Earth." width="2172" height="724" loading="lazy">
+      </div>
+    </section>
+
+    <section class="data-grid" aria-label="Cardano public data snapshot">
+      <article class="panel dark data-card">
+        <div class="panel-title"><h2>MARKETS</h2><span class="badge badge-live">PUBLIC DATA</span></div>
+        <div id="cardano-market-metrics" class="data-metrics"><div class="data-metric"><span>LOADING</span><strong>—</strong></div></div>
+        <p class="source-line">ADA: CoinGecko / ecosystem market metrics: DefiLlama.</p>
+      </article>
+
+      <article class="panel dark data-card">
+        <div class="panel-title"><h2>NETWORK</h2><span class="badge badge-live">CHAIN DATA</span></div>
+        <div id="cardano-network-metrics" class="data-metrics"><div class="data-metric"><span>LOADING</span><strong>—</strong></div></div>
+        <p class="source-line">CHAIN: Koios — distributed Cardano query infrastructure.</p>
+      </article>
+
+      <article class="panel dark data-card">
+        <div class="panel-title"><h2>INDEX:80 ECOSYSTEM</h2><span class="badge badge-live">DERIVED</span></div>
+        <div id="cardano-ecosystem-metrics" class="data-metrics"><div class="data-metric"><span>LOADING</span><strong>—</strong></div></div>
+        <p class="source-line">Derived from the current INDEX:80 Registry export and linked Catalyst funding records.</p>
+      </article>
+
+      <article class="panel dark data-card data-wide">
+        <div class="panel-title"><h2>CARDANO TOKEN MARKET</h2><span class="badge badge-live">MINSWAP</span></div>
+        <div class="market-table-wrap" role="region" aria-label="Cardano token market table; scroll horizontally on narrow screens" tabindex="0">
+          <table class="market-table">
+            <thead><tr><th>ASSET</th><th class="num">PRICE</th><th class="num">24H</th><th class="num">VOLUME 24H</th><th class="num">LIQUIDITY</th><th class="num">MARKET CAP</th></tr></thead>
+            <tbody id="cardano-market-table-body"><tr><td colspan="6">Loading market data…</td></tr></tbody>
+          </table>
+        </div>
+        <p class="mobile-table-hint" aria-hidden="true">← SWIPE TABLE →</p>
+        <p id="cardano-market-caption" class="source-line">Public Minswap metrics only. No portfolio data or trading signals.</p>
+      </article>
+    </section>
+
+    <section class="panel shell-panel">
+      <h2>SOURCES + DATA QUALITY</h2>
+      <p class="data-note">INDEX:80 keeps acquisition separate from the static website. This page reads one plain public JSON endpoint at <code>data.index80.com/cardano.json</code>, cached for roughly 15 minutes. GitHub is source control only and is not part of live data delivery. A failed source is marked unavailable or stale, and a missing value is never presented as zero.</p>
+      <ul id="cardano-data-sources" class="data-source-list"><li><strong>Loading source register…</strong></li></ul>
+    </section>
+
+    <section class="panel shell-panel">
+      <h2>REGISTRY PROVENANCE</h2>
+      <p>INDEX:80 also publishes immutable snapshots of its public project registry. Each snapshot remains available as plain JSON, while its SHA-256 fingerprint is anchored to Cardano transaction metadata so the published file can be independently checked later.</p>
+      <div class="actions">
+        <a class="button primary" href="/registry/">View registry history →</a>
+        <a class="button" href="/registry/index.json">Machine-readable JSON →</a>
+      </div>
+    </section>
+
+    <section class="panel shell-panel">
+      <h2>WHAT THIS IS — AND ISN'T</h2>
+      <p>This is a public ecosystem observatory, not a trading terminal. The public data contains no wallet addresses, balances, holdings, private signals or account data. Market figures are informational snapshots and should be checked against their linked source before being relied on.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Secondary">
+      <a href="/">⌂ Home</a>
+      <a href="/submit/">✎ Submit</a>
+      <a aria-current="page" href="/data/">▥ Data</a>
+      <a href="/learn/">▤ Learn</a>
+      <a href="/governance/">⌂ Governance</a>
+      <a href="/about/">◇ About</a>
+    </nav>
+    <div class="footer-meta">
+      <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>
+      <span>OPEN LINKS · OPEN DATA · SOURCED INFORMATION</span>
+      <button type="button" class="footer-consent-toggle" data-consent-toggle>Cookie preferences</button>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=20260914-1110" defer></script>
+</body>
+</html>

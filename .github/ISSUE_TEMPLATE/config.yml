@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Project correction or submission
+    url: https://index80.com/submit/
+    about: Use the governed INDEX:80 intake route for project additions and ordinary record corrections.
+  - name: Email INDEX:80
+    url: mailto:hello@index80.com
+    about: Contact INDEX:80 directly about a project record or correction.

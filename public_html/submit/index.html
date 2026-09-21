@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="/assets/js/analytics.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Submit a Cardano ecosystem project to INDEX:80 for editorial review.">
+  <title>Submit a project — INDEX:80 / CARDANO</title>
+  <link rel="canonical" href="https://index80.com/submit/">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
+  <script src="../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>
+    window.onloadTurnstileCallback = function () {
+      window.turnstileWidgetId = turnstile.render('#turnstile-widget', {
+        sitekey: '0x4AAAAAAEuOH5Vil_dW0Pwz'
+      });
+    };
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit" async defer></script>
+</head>
+<body data-mode="learn">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="system-bar">
+    <span class="system-slogan">A MORE OPEN INTERNET, A BRIGHTER TOMORROW.</span>
+    <span class="system-status"><span class="status-dot"></span> INDEX:80 ONLINE</span>
+  </div>
+
+  <header class="site-header">
+    <div class="brand-row">
+      <a class="wordmark" href="/" aria-label="INDEX:80 home"><span>INDEX:</span><b>80</b></a>
+      <span class="network-label">/CARDANO</span>
+    </div>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="/">⌂ Home</a>
+      <a aria-current="page" href="/submit/">✎ Submit</a>
+      <a href="/data/">▥ Data</a>
+      <a href="/learn/">▤ Learn</a>
+      <a href="/governance/">⌂ Governance</a>
+      <a href="/about/">◇ About</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page-grid single-column">
+    <p class="source-line" style="margin:.6rem .8rem 0;"><a href="/">INDEX:80</a> / Submit</p>
+
+    <section class="panel submit-panel" id="submit" aria-labelledby="submit-title">
+      <div class="clip" aria-hidden="true"><span></span><span></span></div>
+
+      <div class="submit-panel__grid">
+        <figure class="submit-art">
+          <img src="../assets/images/index80-clipboard-robot.webp" alt="Pixel-art illustration of the INDEX:80 CRT-monitor robot mascot, smiling and taking notes with a pencil while holding a clipboard checklist, next to a stack of BUILD, LEARN, SHARE, INDEX books and an OPEN WEB mug." width="480" height="600" loading="lazy">
+        </figure>
+
+        <div class="submit-panel__body">
+          <div class="submit-panel__head">
+            <img class="head-globe" src="../assets/images/index80-globe.webp" alt="" width="64" height="64" loading="lazy">
+            <div>
+              <h2 id="submit-title">Submit to <span class="brand-inline">INDEX:<b>80</b></span></h2>
+              <p class="submit-sub">A canonical project submission record.</p>
+            </div>
+          </div>
+
+          <p class="submit-explainer">Submit the project's primary URL and basic facts. INDEX:80 will review it and, if it clears editorial review, publish one canonical public record.</p>
+
+          <form id="submit-form" class="submit-form" autocomplete="off">
+            <div class="form-field">
+              <label for="f-name">Project Name <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" placeholder="e.g. Awesome DApp" required>
+            </div>
+
+            <div class="form-field">
+              <label for="f-url">Primary / Canonical Link <span class="req" aria-hidden="true">*</span></label>
+              <p class="field-help">Main public home for the project — website, app, X profile or other official destination.</p>
+              <input id="f-url" name="url" type="url" value="https://" placeholder="https://yourproject.org" required>
+            </div>
+
+            <div class="form-field">
+              <label for="f-desc">Short Description <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-desc" name="description" rows="2" placeholder="A brief description of the project, what it does, and why it matters…" required></textarea>
+            </div>
+
+            <div class="form-field">
+              <label for="f-category">Category <span class="req" aria-hidden="true">*</span></label>
+              <select id="f-category" name="category" required>
+                <option value="" selected disabled>Select a category…</option>
+                <option value="wallet">Wallet</option>
+                <option value="dex">DEX</option>
+                <option value="defi">DeFi</option>
+                <option value="lending">Lending</option>
+                <option value="derivatives">Derivatives</option>
+                <option value="nft">NFT</option>
+                <option value="infrastructure">Infrastructure</option>
+                <option value="explorer">Explorer</option>
+                <option value="analytics">Analytics</option>
+                <option value="developer-tool">Developer Tool</option>
+                <option value="governance">Governance</option>
+                <option value="education">Education</option>
+                <option value="ai">AI</option>
+                <option value="token-project">Token Project</option>
+                <option value="utility">Utility</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="f-social">X / Social <span class="optional">(optional)</span></label>
+              <input id="f-social" name="social_url" type="url" placeholder="https://x.com/yourproject">
+            </div>
+
+            <div class="form-field">
+              <label for="f-discord">Discord <span class="optional">(optional)</span></label>
+              <input id="f-discord" name="discord_url" type="url" placeholder="https://discord.com/invite/…">
+            </div>
+
+            <div class="form-field">
+              <label for="f-github">GitHub <span class="optional">(optional)</span></label>
+              <input id="f-github" name="github_url" type="url" placeholder="https://github.com/yourproject">
+            </div>
+
+            <div class="form-field">
+              <label for="f-established">Established / Founded <span class="optional">(optional)</span></label>
+              <p class="field-help">Year, or as precise as you can: YYYY, YYYY-MM or YYYY-MM-DD.</p>
+              <input id="f-established" name="established" type="text" inputmode="numeric" placeholder="2021 or 2021-06 or 2021-06-15" pattern="\d{4}(-\d{2}(-\d{2})?)?">
+            </div>
+
+            <div class="form-field">
+              <label for="f-submitter-name">Submitter Name <span class="optional">(optional, kept private)</span></label>
+              <input id="f-submitter-name" name="submitter_name" type="text" placeholder="Your name">
+            </div>
+
+            <div class="form-field">
+              <label for="f-email">Submitter Email <span class="optional">(optional, kept private)</span></label>
+              <input id="f-email" name="submitter_email" type="email" placeholder="you@example.com">
+            </div>
+
+            <div class="form-field">
+              <label for="f-notes">Notes <span class="optional">(optional)</span></label>
+              <textarea id="f-notes" name="notes" rows="2" placeholder="Additional context, links, or relevance to the Cardano ecosystem…"></textarea>
+            </div>
+
+            <div id="turnstile-widget"></div>
+
+            <div class="form-actions">
+              <button type="submit" class="button cta-primary">Submit for review →</button>
+              <p class="form-note">Help us keep the index open, accurate and human-reviewed.</p>
+            </div>
+
+            <p id="submit-result" class="form-result" role="status" hidden></p>
+          </form>
+        </div>
+      </div>
+
+      <p class="submit-footnote">Good projects belong here.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Secondary">
+      <a href="/">⌂ Home</a>
+      <a aria-current="page" href="/submit/">✎ Submit</a>
+      <a href="/data/">▥ Data</a>
+      <a href="/learn/">▤ Learn</a>
+      <a href="/governance/">⌂ Governance</a>
+      <a href="/about/">◇ About</a>
+    </nav>
+    <div class="footer-meta">
+      <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>
+      <span>OPEN LINKS · OPEN DATA · SOURCED INFORMATION</span>
+      <button type="button" class="footer-consent-toggle" data-consent-toggle>Cookie preferences</button>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    document.getElementById('submit-form').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      var form = event.target;
+      var resultEl = document.getElementById('submit-result');
+      var submitBtn = form.querySelector('button[type="submit"]');
+
+      function showResult(message, isError) {
+        resultEl.textContent = '';
+        var strong = document.createElement('strong');
+        strong.textContent = isError ? 'Something went wrong.' : 'Thanks!';
+        resultEl.appendChild(strong);
+        resultEl.appendChild(document.createTextNode(' ' + message));
+        resultEl.classList.toggle('is-error', !!isError);
+        resultEl.classList.toggle('is-success', !isError);
+        resultEl.hidden = false;
+        resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      var hasTurnstile = window.turnstile && window.turnstileWidgetId !== undefined && window.turnstileWidgetId !== null;
+      var turnstileToken = hasTurnstile ? turnstile.getResponse(window.turnstileWidgetId) : '';
+
+      if (!turnstileToken) {
+        showResult('Please complete the verification check above, then try again.', true);
+        return;
+      }
+
+      var payload = {
+        name: document.getElementById('f-name').value,
+        url: document.getElementById('f-url').value,
+        description: document.getElementById('f-desc').value,
+        category: document.getElementById('f-category').value,
+        social_url: document.getElementById('f-social').value,
+        discord_url: document.getElementById('f-discord').value,
+        github_url: document.getElementById('f-github').value,
+        established: document.getElementById('f-established').value,
+        submitter_name: document.getElementById('f-submitter-name').value,
+        submitter_email: document.getElementById('f-email').value,
+        notes: document.getElementById('f-notes').value,
+        turnstileToken: turnstileToken
+      };
+
+      submitBtn.disabled = true;
+
+      try {
+        var res = await fetch('/api/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        var data = await res.json().catch(function () { return {}; });
+
+        if (res.ok && data.ok) {
+          showResult(data.message || 'Your submission has been received.', false);
+          form.reset();
+          document.getElementById('f-url').value = 'https://';
+        } else {
+          showResult(data.error || 'Please try again.', true);
+        }
+      } catch (err) {
+        showResult('Network error — please check your connection and try again.', true);
+      } finally {
+        submitBtn.disabled = false;
+        if (hasTurnstile) {
+          turnstile.reset(window.turnstileWidgetId);
+        }
+      }
+    });
+
+    document.getElementById('f-url').addEventListener('focus', function () {
+      var field = this;
+      if (field.value === 'https://') {
+        setTimeout(function () {
+          var pos = field.value.length;
+          field.setSelectionRange(pos, pos);
+        }, 0);
+      }
+    });
+  </script>
+</body>
+</html>

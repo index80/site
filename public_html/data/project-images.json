@@ -1,0 +1,3827 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-09-20T21:47:54.547Z",
+  "images": {
+    "eternl": {
+      "icon": {
+        "path": "/assets/project-images/eternl/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://eternl.io/icons/favicon-128x128.png",
+        "content_type": "image/png",
+        "width": 128,
+        "height": 128,
+        "bytes": 21236,
+        "fetched_at": "2026-09-10T02:46:13.336Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/eternl/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://pbs.twimg.com/profile_banners/1411286394253754370/1668270478/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 133480,
+        "fetched_at": "2026-09-14T09:38:29.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "eternl.io declares no og:image/twitter:image and its landing-page hero is an inline SVG illustration, not a downloadable raster asset (confirmed via live DOM inspection). This is the official verified X account’s (@eternlwallet) own profile banner — the \"Eternl\" wordmark next to the app icon on a branded dark texture, distinct wide (1500x500) official artwork, not the icon blown up."
+      }
+    },
+    "lace": {
+      "icon": {
+        "path": "/assets/project-images/lace/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://www.lace.io/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15086,
+        "fetched_at": "2026-09-10T02:46:13.945Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/lace/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://cdn.sanity.io/images/tnb8oobx/production/434b20b0ce779725521c1890bd857b5b2dac6c65-1201x628.jpg",
+        "content_type": "image/jpeg",
+        "width": 1201,
+        "height": 628,
+        "bytes": 63183,
+        "fetched_at": "2026-09-10T02:46:13.945Z",
+        "status": "ok"
+      }
+    },
+    "vespr": {
+      "icon": {
+        "path": "/assets/project-images/vespr/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://vespr.xyz/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 48525,
+        "fetched_at": "2026-09-10T02:46:14.482Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/vespr/hero.png",
+        "kind": "og_image",
+        "source_url": "https://vespr.xyz/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 575678,
+        "fetched_at": "2026-09-10T02:46:14.482Z",
+        "status": "ok"
+      }
+    },
+    "begin": {
+      "icon": {
+        "path": "/assets/project-images/begin/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://begin.is/favicon/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 8603,
+        "fetched_at": "2026-09-10T02:46:17.852Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/begin/hero.png",
+        "kind": "og_image",
+        "source_url": "https://begin.is/images/begin_cover.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 6396,
+        "fetched_at": "2026-09-10T02:46:17.852Z",
+        "status": "ok"
+      }
+    },
+    "gerowallet": {
+      "icon": {
+        "path": "/assets/project-images/gerowallet/icon.ico",
+        "kind": "apple_touch_icon",
+        "source_url": "https://gerowallet.io/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15086,
+        "fetched_at": "2026-09-10T02:46:18.569Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/gerowallet/hero.png",
+        "kind": "og_image",
+        "source_url": "https://gerowallet.io/images/og-image-v3.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 125327,
+        "fetched_at": "2026-09-10T02:46:18.570Z",
+        "status": "ok"
+      }
+    },
+    "minswap": {
+      "icon": {
+        "path": "/assets/project-images/minswap/icon.svg",
+        "kind": "official_brand_kit_logomark",
+        "source_url": "https://minswap.org/",
+        "content_type": "image/svg+xml",
+        "width": 164,
+        "height": 164,
+        "bytes": 1503,
+        "fetched_at": "2026-09-10T15:41:12.498Z",
+        "status": "ok",
+        "note": "From the official Minswap brand kit provided directly by the team (handoff-supplied file, not a live fetch); replaces the previous tiny favicon.ico-derived icon. The supplied brand kit was originally referenced by a shared file link, which has been replaced here with the project's official site; the logomark remains the property of Minswap."
+      },
+      "hero": {
+        "path": "/assets/project-images/minswap/hero.webp",
+        "kind": "product_screenshot",
+        "source_url": "https://minswap.org/_next/static/media/iphone.092~y-nnvgbod.webp",
+        "content_type": "image/webp",
+        "width": 1080,
+        "height": 1230,
+        "bytes": 35602,
+        "fetched_at": "2026-09-10T15:41:12.498Z",
+        "status": "ok",
+        "note": "MinWallet (Minswap's wallet product) mobile app screenshot from the official homepage."
+      }
+    },
+    "wingriders": {
+      "icon": {
+        "path": "/assets/project-images/wingriders/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://www.wingriders.com/favicon.svg",
+        "content_type": "image/svg+xml",
+        "width": 348,
+        "height": 349,
+        "bytes": 1925,
+        "fetched_at": "2026-09-10T02:46:19.620Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/wingriders/hero.png",
+        "kind": "og_image",
+        "source_url": "https://assets.wingriders.com/wingriders_logo_1200_630.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 87400,
+        "fetched_at": "2026-09-10T02:46:19.620Z",
+        "status": "ok"
+      }
+    },
+    "sundaeswap": {
+      "icon": {
+        "path": "/assets/project-images/sundaeswap/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://sundae.fi/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-10T02:46:20.539Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/sundaeswap/hero.png",
+        "kind": "og_image",
+        "source_url": "https://sundae.fi/assets/Homepage_OG.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 935657,
+        "fetched_at": "2026-09-10T02:46:20.539Z",
+        "status": "ok"
+      }
+    },
+    "splash": {
+      "icon": {
+        "path": "/assets/project-images/splash/icon.ico",
+        "kind": "favicon_guess",
+        "source_url": "https://www.splash.trade/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-10T02:46:21.232Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/splash/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://splash.trade/_next/static/media/bg_experience_profits.d4fc5d04.svg",
+        "content_type": "image/svg+xml",
+        "width": 503,
+        "height": 503,
+        "bytes": 1187,
+        "fetched_at": "2026-09-14T21:51:44.622Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T21:01:41.926Z, candidate kind \"body_img\")."
+      }
+    },
+    "cswap": {
+      "icon": {
+        "path": "/assets/project-images/cswap/icon.jpg",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.cswap.info/cswap-logo.jpg",
+        "content_type": "image/jpeg",
+        "width": 378,
+        "height": 378,
+        "bytes": 19773,
+        "fetched_at": "2026-09-10T02:46:21.587Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/cswap/hero.png",
+        "kind": "manual_screenshot",
+        "source_url": "https://www.cswap.fi/",
+        "content_type": "image/png",
+        "width": 1280,
+        "height": 732,
+        "bytes": 152703,
+        "fetched_at": "2026-09-14T21:51:44.622Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:11.465Z). Manually captured official-site screenshot (homepage hero) — https://www.cswap.fi/, captured 2026-09-14. Browser nav bar cropped out."
+      }
+    },
+    "dexhunter": {
+      "icon": {
+        "path": "/assets/project-images/dexhunter/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://app.dexhunter.io/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 9460,
+        "fetched_at": "2026-09-10T02:46:22.934Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/dexhunter/hero.png",
+        "kind": "og_image",
+        "source_url": "https://storage.googleapis.com/dexhunter-images/public/nightseoupdated.png",
+        "content_type": "image/png",
+        "width": 1462,
+        "height": 823,
+        "bytes": 587049,
+        "fetched_at": "2026-09-10T02:46:22.934Z",
+        "status": "ok"
+      }
+    },
+    "liqwid": {
+      "icon": {
+        "path": "/assets/project-images/liqwid/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://liqwid.finance/favicon.png",
+        "content_type": "image/png",
+        "width": 55,
+        "height": 55,
+        "bytes": 2190,
+        "fetched_at": "2026-09-10T02:46:23.707Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/liqwid/hero.webp",
+        "kind": "og_image",
+        "source_url": "https://liqwid.finance/website-preview.webp",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 19200,
+        "fetched_at": "2026-09-10T02:46:23.707Z",
+        "status": "ok"
+      }
+    },
+    "optim-finance": {
+      "icon": {
+        "path": "/assets/project-images/optim-finance/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://www.optim.finance/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 16,
+        "height": 16,
+        "bytes": 1150,
+        "fetched_at": "2026-09-10T02:46:25.006Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/optim-finance/hero.png",
+        "kind": "og_image",
+        "source_url": "https://landing-page-ht5qen6g0-optim-finance.vercel.app/assets/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 800,
+        "bytes": 72878,
+        "fetched_at": "2026-09-10T02:46:25.006Z",
+        "status": "ok"
+      }
+    },
+    "fluidtokens": {
+      "icon": {
+        "path": "/assets/project-images/fluidtokens/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://fluidtokens.com/assets/images/logos/logo.svg",
+        "content_type": "image/svg+xml",
+        "width": 187,
+        "height": 230,
+        "bytes": 571,
+        "fetched_at": "2026-09-10T02:46:25.641Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/fluidtokens/hero.jpg",
+        "kind": "twitter_image",
+        "source_url": "https://fluidtokens.com/assets/images/banner.jpeg",
+        "content_type": "image/jpeg",
+        "width": 1080,
+        "height": 360,
+        "bytes": 25116,
+        "fetched_at": "2026-09-10T02:46:25.641Z",
+        "status": "ok"
+      }
+    },
+    "strike-finance": {
+      "icon": {
+        "path": "/assets/project-images/strike-finance/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.strikefinance.org/apple-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 14641,
+        "fetched_at": "2026-09-10T02:46:26.807Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/strike-finance/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.strikefinance.org/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 618872,
+        "fetched_at": "2026-09-10T02:46:26.807Z",
+        "status": "ok"
+      }
+    },
+    "indigo": {
+      "icon": {
+        "path": "/assets/project-images/indigo/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://indigoprotocol.io/images/webclip.png",
+        "content_type": "image/png",
+        "width": 256,
+        "height": 256,
+        "bytes": 37774,
+        "fetched_at": "2026-09-10T02:46:27.172Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/indigo/hero.png",
+        "kind": "body_img",
+        "source_url": "https://indigoprotocol.io/images/indigo-logo-light.png",
+        "content_type": "image/png",
+        "width": 1500,
+        "height": 500,
+        "bytes": 98945,
+        "fetched_at": "2026-09-14T21:51:44.607Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:57:42.509Z, candidate kind \"body_img\")."
+      }
+    },
+    "lenfi": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:28.418Z",
+        "status": "no_image_found",
+        "error": "no usable favicon/apple-touch-icon/logo link found on official site"
+      },
+      "hero": {
+        "path": "/assets/project-images/lenfi/hero.webp",
+        "kind": "og_image",
+        "source_url": "https://finishingtouchescarspa.com/wp-content/uploads/2026/07/BK8.webp",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 566,
+        "bytes": 65938,
+        "fetched_at": "2026-09-10T02:46:28.418Z",
+        "status": "ok"
+      }
+    },
+    "vyfinance": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:31.355Z",
+        "status": "no_image_found",
+        "error": "no usable favicon/apple-touch-icon/logo link found on official site"
+      },
+      "hero": {
+        "path": "/assets/project-images/vyfinance/hero.png",
+        "kind": "og_image",
+        "source_url": "https://app.vyfi.io/logo.png",
+        "content_type": "image/png",
+        "width": 512,
+        "height": 512,
+        "bytes": 62280,
+        "fetched_at": "2026-09-10T02:46:31.355Z",
+        "status": "ok"
+      }
+    },
+    "levvy": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:31.686Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: fetch failed"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:31.686Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: fetch failed"
+      }
+    },
+    "metera": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:32.039Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: HTTP 403"
+      },
+      "hero": {
+        "path": "/assets/project-images/metera/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1513243165754474500/1737022301/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 90802,
+        "fetched_at": "2026-09-14T21:51:44.623Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:19.268Z). Official X (@MeteraProtocol) profile banner, captured 2026-09-14."
+      }
+    },
+    "muesliswap": {
+      "icon": {
+        "path": "/assets/project-images/muesliswap/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://muesliswap.com/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15086,
+        "fetched_at": "2026-09-13T16:46:44.286Z",
+        "status": "ok"
+      },
+      "hero": {
+        "kind": "manual_official_logo",
+        "source_url": "https://muesliswap.com/assets/logowtext-dark-BixL0xPJ.svg",
+        "content_type": "image/svg+xml",
+        "width": 167,
+        "height": 38,
+        "bytes": 28930,
+        "fetched_at": "2026-09-13T17:02:41.314Z",
+        "status": "ok",
+        "error": null,
+        "note": "muesliswap.com declares no og:image/twitter:image. This is the live wordmark+icon SVG used in the app's own header (dark-on-light variant), linked directly from the site.",
+        "path": "/assets/project-images/muesliswap/hero.svg"
+      }
+    },
+    "govtool": {
+      "icon": {
+        "path": "/assets/project-images/govtool/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://gov.tools/icons/AppLogo.svg",
+        "content_type": "image/svg+xml",
+        "width": 38,
+        "height": 34,
+        "bytes": 5043,
+        "fetched_at": "2026-09-14T17:21:13.734Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/govtool/hero.png",
+        "kind": "manual_official_brand_hero",
+        "source_url": "https://gov.tools/",
+        "content_type": "image/png",
+        "width": 1400,
+        "height": 500,
+        "bytes": 585730,
+        "fetched_at": "2026-09-14T17:32:49.559Z",
+        "status": "ok",
+        "note": "Automatic enrichment found no og:image/twitter:image on gov.tools. The site's own hero graphic (images/HeroImage.webp) is a near-square 680x740 crop that this site's documented wide/short hero box would render unrecognisable, so it was not used directly. Manually captured instead: a same-origin, in-browser render (html2canvas) of the official gov.tools landing page nav + \"Cardano Governance Tool\" headline + official branded artwork, at a landscape 1400x500 crop chosen to survive the cover-crop hero box. SHA-256 verified end-to-end during transfer (f0bc7dd38bd8eeda8bf15db4c40d8fd845157349f10b00486323ac363b67a5d9)."
+      }
+    },
+    "cgov": {
+      "icon": {
+        "path": "/assets/project-images/cgov/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://app.cgov.io/nomos.png",
+        "content_type": "image/png",
+        "width": 400,
+        "height": 400,
+        "bytes": 8391,
+        "fetched_at": "2026-09-10T02:46:33.962Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/cgov/hero.png",
+        "kind": "og_image",
+        "source_url": "https://app.cgov.io/nomos.png",
+        "content_type": "image/png",
+        "width": 400,
+        "height": 400,
+        "bytes": 8391,
+        "fetched_at": "2026-09-10T02:46:33.962Z",
+        "status": "ok"
+      }
+    },
+    "dreptalk": {
+      "icon": {
+        "path": "/assets/project-images/dreptalk/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://dreptalk.com/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 3859,
+        "fetched_at": "2026-09-10T02:46:34.740Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/dreptalk/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://dreptalk.com/og.jpg",
+        "content_type": "image/jpeg",
+        "width": 2400,
+        "height": 1260,
+        "bytes": 247113,
+        "fetched_at": "2026-09-10T02:46:34.740Z",
+        "status": "ok"
+      }
+    },
+    "project-catalyst": {
+      "icon": {
+        "path": "/assets/project-images/project-catalyst/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://projectcatalyst.io/favicon.svg",
+        "content_type": "image/svg+xml",
+        "width": 70,
+        "height": 70,
+        "bytes": 9876,
+        "fetched_at": "2026-09-10T02:46:35.412Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/project-catalyst/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://projectcatalyst.io/default-og-image.jpg",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 630,
+        "bytes": 317850,
+        "fetched_at": "2026-09-10T02:46:35.412Z",
+        "status": "ok"
+      }
+    },
+    "intersect": {
+      "icon": {
+        "path": "/assets/project-images/intersect/icon.jpg",
+        "kind": "favicon_link",
+        "source_url": "https://www.intersectmbo.org/favicon-32x32.jpg",
+        "content_type": "image/jpeg",
+        "width": 32,
+        "height": 32,
+        "bytes": 4154,
+        "fetched_at": "2026-09-14T17:32:49.559Z",
+        "status": "ok",
+        "note": "Prior automatic enrichment run recorded fetch_error (official site HTML exceeded the script's 2MB streaming cap) rather than a genuine access block. Re-checked manually: the site and its declared icon/image assets are directly fetchable with no bot protection."
+      },
+      "hero": {
+        "path": "/assets/project-images/intersect/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://www.intersectmbo.org/meta-image.jpg",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 628,
+        "bytes": 187344,
+        "fetched_at": "2026-09-14T17:32:49.559Z",
+        "status": "ok",
+        "note": "Prior automatic enrichment run recorded fetch_error (official site HTML exceeded the script's 2MB streaming cap) rather than a genuine access block. Re-checked manually: the declared og:image/twitter:image (branded \"Building Together to Drive Cardano Forward\" banner) is directly fetchable."
+      }
+    },
+    "1694-io": {
+      "icon": {
+        "path": "/assets/project-images/1694-io/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://www.1694.io/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 256,
+        "height": 256,
+        "bytes": 25931,
+        "fetched_at": "2026-09-10T02:46:36.955Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/1694-io/hero.png",
+        "kind": "body_img",
+        "source_url": "https://1694.io/img/logos/voltaire-black.png",
+        "content_type": "image/png",
+        "width": 475,
+        "height": 115,
+        "bytes": 8229,
+        "fetched_at": "2026-09-14T21:51:44.611Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:37.558Z, candidate kind \"body_img\")."
+      }
+    },
+    "taptools": {
+      "icon": {
+        "path": "/assets/project-images/taptools/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://taptools.io/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 64,
+        "height": 64,
+        "bytes": 14048,
+        "fetched_at": "2026-09-10T02:46:37.556Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/taptools/hero.png",
+        "kind": "og_image",
+        "source_url": "https://taptools.io/images/taptools-og-1200x630.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 383353,
+        "fetched_at": "2026-09-10T02:46:37.556Z",
+        "status": "ok"
+      }
+    },
+    "cardanoscan": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:37.904Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: HTTP 403"
+      },
+      "hero": {
+        "path": "/assets/project-images/cardanoscan/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/995377683482664960/1742114688/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 47455,
+        "fetched_at": "2026-09-14T21:51:44.623Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:22.094Z). Official X (@cardanoscanio) profile banner (shows the live explorer UI), captured 2026-09-14. Direct screenshot of cardanoscan.io was not attempted — the site presents a Cloudflare bot-verification challenge, and per this project's policy that is never bypassed."
+      }
+    },
+    "cexplorer": {
+      "icon": {
+        "path": "/assets/project-images/cexplorer/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://cexplorer.io/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 6941,
+        "fetched_at": "2026-09-14T17:21:14.683Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/cexplorer/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cexplorer.io/resources/preview.png",
+        "content_type": "image/png",
+        "width": 1498,
+        "height": 787,
+        "bytes": 480991,
+        "fetched_at": "2026-09-14T17:32:49.559Z",
+        "status": "ok",
+        "note": "Prior automatic enrichment run (2026-09-10) found no og:image; the site now declares one at /resources/preview.png, directly fetchable, re-checked manually."
+      }
+    },
+    "pool-pm": {
+      "icon": {
+        "path": "/assets/project-images/pool-pm/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://pool.pm/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 6625,
+        "fetched_at": "2026-09-10T02:46:39.148Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/pool-pm/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://pool.pm/logo.jpg",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 630,
+        "bytes": 196302,
+        "fetched_at": "2026-09-10T02:46:39.148Z",
+        "status": "ok"
+      }
+    },
+    "pooltool": {
+      "icon": {
+        "path": "/assets/project-images/pooltool/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://pooltool.io/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 256,
+        "height": 256,
+        "bytes": 616,
+        "fetched_at": "2026-09-10T02:46:39.605Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/pooltool/hero.png",
+        "kind": "og_image",
+        "source_url": "https://pooltool.io/pooltool.png",
+        "content_type": "image/png",
+        "width": 1545,
+        "height": 987,
+        "bytes": 133916,
+        "fetched_at": "2026-09-10T02:46:39.605Z",
+        "status": "ok"
+      }
+    },
+    "adapools": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:40.334Z",
+        "status": "no_image_found",
+        "error": "no usable favicon/apple-touch-icon/logo link found on official site"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:40.334Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "poolpeek": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:41.037Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: fetch failed"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:41.037Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: fetch failed"
+      }
+    },
+    "defillama": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:41.392Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: HTTP 403"
+      },
+      "hero": {
+        "path": "/assets/project-images/defillama/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1321585610654687241/1745393440/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 74975,
+        "fetched_at": "2026-09-14T21:51:44.623Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:24.946Z). Official X (@DefiLlama) profile banner. defillama.com itself presents a Cloudflare bot-verification challenge to automated requests (confirmed via both the discovery crawler and a headless-Chrome screenshot attempt); the interactive browser session rendered it fine but had no downloadable og:image/asset and no reliable way to persist that live render, so this banner is the sourced candidate. Captured 2026-09-14."
+      }
+    },
+    "dune": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:41.748Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: HTTP 403"
+      },
+      "hero": {
+        "path": "/assets/project-images/dune/hero.png",
+        "kind": "manual_official_image",
+        "source_url": "https://dune.com/assets/Dune-Opengraph.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 675,
+        "bytes": 449922,
+        "fetched_at": "2026-09-14T21:51:44.624Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:29.503Z). Official dune.com og:image (the automated crawler's HTML fetch was blocked with HTTP 403, but the interactive browser rendered the real page and this asset was found there and downloaded directly). Captured 2026-09-14."
+      }
+    },
+    "wayup": {
+      "icon": {
+        "path": "/assets/project-images/wayup/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.wayup.io/apple-icon.png?c1a674264faf2f9f",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 1999,
+        "fetched_at": "2026-09-10T02:46:43.007Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/wayup/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://www.wayup.io/opengraph-image.jpg?9999e9317f804eac",
+        "content_type": "image/jpeg",
+        "width": null,
+        "height": null,
+        "bytes": 1232586,
+        "fetched_at": "2026-09-10T02:46:43.007Z",
+        "status": "ok"
+      }
+    },
+    "nmkr": {
+      "icon": {
+        "path": "/assets/project-images/nmkr/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://cdn.prod.website-files.com/627424a55a80c8659c58943a/62ab442cff6ad54237cc81e4_nmkr-webclip.png",
+        "content_type": "image/png",
+        "width": 256,
+        "height": 256,
+        "bytes": 40489,
+        "fetched_at": "2026-09-10T02:46:43.786Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/nmkr/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cdn.prod.website-files.com/627424a55a80c8659c58943a/66e458136c02b6b59487c21a_multiple-chains.png",
+        "content_type": "image/png",
+        "width": 1921,
+        "height": 1080,
+        "bytes": 210867,
+        "fetched_at": "2026-09-10T02:46:43.786Z",
+        "status": "ok"
+      }
+    },
+    "clay-nation": {
+      "icon": {
+        "path": "/assets/project-images/clay-nation/icon.jpg",
+        "kind": "x_profile_avatar",
+        "source_url": "https://pbs.twimg.com/profile_images/1905355198144405504/3PSXVlHg_400x400.jpg",
+        "content_type": "image/jpeg",
+        "width": 400,
+        "height": 400,
+        "bytes": 17306,
+        "fetched_at": "2026-09-10T15:41:12.498Z",
+        "status": "ok",
+        "note": "Official verified X account (@claymates) profile avatar — the confirmed current primary public home; claynation.io is expired/parked (confirmed, not an intermittent fetch issue). On-chain evidence: Wayup collection, policy 40fa2aa67258b4ce7b5782f74831d46a84c59a0ff0c28262fab21728."
+      },
+      "hero": {
+        "path": "/assets/project-images/clay-nation/hero.jpg",
+        "kind": "x_profile_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1379815778225115142/1705516887/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 99305,
+        "fetched_at": "2026-09-10T15:41:12.498Z",
+        "status": "ok",
+        "note": "Official verified X account (@claymates) profile banner — the confirmed current primary public home; claynation.io is expired/parked (confirmed, not an intermittent fetch issue). On-chain evidence: Wayup collection, policy 40fa2aa67258b4ce7b5782f74831d46a84c59a0ff0c28262fab21728."
+      }
+    },
+    "book-io": {
+      "icon": {
+        "path": "/assets/project-images/book-io/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://book.io/wp-content/uploads/fbrfg/apple-touch-icon.png?v=20220310",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 10892,
+        "fetched_at": "2026-09-10T02:46:46.186Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/book-io/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://book.io/wp-content/uploads/2023/09/FacebookOGImages-Future-of-Books.jpg",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 627,
+        "bytes": 36511,
+        "fetched_at": "2026-09-10T02:46:46.186Z",
+        "status": "ok"
+      }
+    },
+    "xforge": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:46.905Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: fetch failed"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:46.905Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: fetch failed"
+      }
+    },
+    "jpg-store": {
+      "icon": {
+        "path": "/assets/project-images/jpg-store/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://www.jpg.store/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-10T02:46:47.353Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:47.353Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "iagon": {
+      "icon": {
+        "path": "/assets/project-images/iagon/icon.svg",
+        "kind": "site_logo_svg",
+        "source_url": "https://iagon.com/imgs/logos/iagon-logo-vertical-blk.svg",
+        "content_type": "image/svg+xml",
+        "width": 50,
+        "height": 47,
+        "bytes": 8748,
+        "fetched_at": "2026-09-10T15:41:12.498Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/iagon/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://iagon.com/imgs/meta-image.jpg",
+        "content_type": "image/jpeg",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 106751,
+        "fetched_at": "2026-09-10T02:46:48.013Z",
+        "status": "ok"
+      }
+    },
+    "world-mobile": {
+      "icon": {
+        "path": "/assets/project-images/world-mobile/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://cdn.prod.website-files.com/678e6a9b7814db33d263ad8e/678e6c14411dbbab1f5b6f5f_Webclip.png",
+        "content_type": "image/png",
+        "width": 256,
+        "height": 256,
+        "bytes": 4937,
+        "fetched_at": "2026-09-10T02:46:48.480Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/world-mobile/hero.avif",
+        "kind": "body_img",
+        "source_url": "https://cdn.prod.website-files.com/678e6a9b7814db33d263ad8e/6a96dd92ac3b024e22fe4a9d_phone-plan-hero-img-2.avif",
+        "content_type": "image/avif",
+        "width": null,
+        "height": null,
+        "bytes": 42446,
+        "fetched_at": "2026-09-14T21:51:44.622Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T21:01:13.097Z, candidate kind \"body_img\", hosted on cdn.prod.website-files.com)."
+      }
+    },
+    "ada-handle": {
+      "icon": {
+        "path": "/assets/project-images/ada-handle/icon.ico",
+        "kind": "apple_touch_icon",
+        "source_url": "https://handle.me/assets/5107ce64326c7138b5be662fdb0239/images/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 256,
+        "height": 256,
+        "bytes": 23968,
+        "fetched_at": "2026-09-10T02:46:50.305Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/ada-handle/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://handle.me/assets/5107ce64326c7138b5be662fdb0239/images/og-handle.jpg",
+        "content_type": "image/jpeg",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 609705,
+        "fetched_at": "2026-09-10T02:46:50.305Z",
+        "status": "ok"
+      }
+    },
+    "dripdropz": {
+      "icon": {
+        "path": "/assets/project-images/dripdropz/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://dripdropz.io/images/apple-touch-icon.png?v=1.0.2",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 8173,
+        "fetched_at": "2026-09-10T02:46:52.043Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/dripdropz/hero.png",
+        "kind": "og_image",
+        "source_url": "https://dripdropz.io/images/DDz-OpenGraph-600x315.png",
+        "content_type": "image/png",
+        "width": 600,
+        "height": 315,
+        "bytes": 40223,
+        "fetched_at": "2026-09-10T02:46:52.043Z",
+        "status": "ok"
+      }
+    },
+    "unfrackit": {
+      "icon": {
+        "path": "/assets/project-images/unfrackit/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://unfrack.it/favicon.png",
+        "content_type": "image/png",
+        "width": 1663,
+        "height": 1668,
+        "bytes": 119596,
+        "fetched_at": "2026-09-10T02:46:52.975Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/unfrackit/hero.png",
+        "kind": "og_image",
+        "source_url": "https://unfrack.it/og.png",
+        "content_type": "image/png",
+        "width": 1201,
+        "height": 631,
+        "bytes": 28142,
+        "fetched_at": "2026-09-10T02:46:52.975Z",
+        "status": "ok"
+      }
+    },
+    "blockfrost": {
+      "icon": {
+        "path": "/assets/project-images/blockfrost/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://blockfrost.io/images/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 57,
+        "height": 57,
+        "bytes": 2510,
+        "fetched_at": "2026-09-10T02:46:53.819Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/blockfrost/hero.png",
+        "kind": "og_image",
+        "source_url": "https://blockfrost.io/images/og.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 240155,
+        "fetched_at": "2026-09-10T02:46:53.819Z",
+        "status": "ok"
+      }
+    },
+    "koios": {
+      "icon": {
+        "path": "/assets/project-images/koios/icon.webp",
+        "kind": "favicon_link",
+        "source_url": "https://www.koios.rest/favicon.webp",
+        "content_type": "image/webp",
+        "width": 270,
+        "height": 244,
+        "bytes": 8112,
+        "fetched_at": "2026-09-10T02:46:54.439Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/koios/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://www.koios.rest/assets/Koios_smalllogo.svg",
+        "content_type": "image/svg+xml",
+        "width": 270,
+        "height": 244,
+        "bytes": 6089,
+        "fetched_at": "2026-09-14T21:51:44.624Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T21:02:05.447Z, candidate kind \"body_img\")."
+      }
+    },
+    "maestro": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-13T16:46:44.664Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: HTTP 429"
+      },
+      "hero": {
+        "path": "/assets/project-images/maestro/hero.png",
+        "kind": "body_img",
+        "source_url": "https://mintcdn.com/gomaestroinc/0RKT4xO6f3RlXJvb/logo/dark.png?fit=max&auto=format&n=0RKT4xO6f3RlXJvb&q=85&s=cb46cd571a932af9bae233082ec35897",
+        "content_type": "image/png",
+        "width": 1499,
+        "height": 348,
+        "bytes": 17706,
+        "fetched_at": "2026-09-14T21:51:44.611Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:39.155Z, candidate kind \"body_img\", hosted on mintcdn.com)."
+      }
+    },
+    "txpipe": {
+      "icon": {
+        "path": "/assets/project-images/txpipe/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://txpipe.io/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15086,
+        "fetched_at": "2026-09-10T02:46:55.949Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/txpipe/hero.png",
+        "kind": "body_img",
+        "source_url": "https://txpipe.io/images/hero-2.png",
+        "content_type": "image/png",
+        "width": 1226,
+        "height": 1040,
+        "bytes": 303800,
+        "fetched_at": "2026-09-14T21:51:44.606Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:57:38.094Z, candidate kind \"body_img\")."
+      }
+    },
+    "dolos": {
+      "icon": {
+        "path": "/assets/project-images/dolos/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://github.githubassets.com/favicons/favicon.svg",
+        "content_type": "image/svg+xml",
+        "width": 32,
+        "height": 32,
+        "bytes": 959,
+        "fetched_at": "2026-09-10T02:46:57.977Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/dolos/hero.png",
+        "kind": "og_image",
+        "source_url": "https://repository-images.githubusercontent.com/569444139/121548c7-765e-4a29-9931-e4edfb4b9f9d",
+        "content_type": "image/png",
+        "width": 1280,
+        "height": 640,
+        "bytes": 507717,
+        "fetched_at": "2026-09-10T02:46:57.977Z",
+        "status": "ok"
+      }
+    },
+    "kupo": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:46:58.557Z",
+        "status": "no_image_found",
+        "error": "no usable favicon/apple-touch-icon/logo link found on official site"
+      },
+      "hero": {
+        "path": "/assets/project-images/kupo/hero.png",
+        "kind": "manual_official_image",
+        "source_url": "https://cardanosolutions.github.io/kupo/kupo.png",
+        "content_type": "image/png",
+        "width": 456,
+        "height": 300,
+        "bytes": 92037,
+        "fetched_at": "2026-09-15T19:14:31.200Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-15T19:13:14.093Z). Official Kupo mascot image from the project's own docs site (cardanosolutions.github.io/kupo), captured 2026-09-15. Automated discovery reported no_candidates_found for this project even though the image is present in the page; found by direct inspection."
+      }
+    },
+    "ogmios": {
+      "icon": {
+        "path": "/assets/project-images/ogmios/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://ogmios.dev/images/favicon.png",
+        "content_type": "image/png",
+        "width": 64,
+        "height": 64,
+        "bytes": 2160,
+        "fetched_at": "2026-09-10T02:46:59.100Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/ogmios/hero.png",
+        "kind": "manual_official_image",
+        "source_url": "https://ogmios.dev/ogmios__light.png",
+        "content_type": "image/png",
+        "width": 895,
+        "height": 964,
+        "bytes": 28613,
+        "fetched_at": "2026-09-15T19:14:31.200Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-15T19:13:16.664Z). Official Ogmios logo from the project's own docs site (ogmios.dev), captured 2026-09-15 — a higher-resolution version of the same mark already used as this project's icon.png. Automated discovery reported no_candidates_found; found by direct inspection."
+      }
+    },
+    "zkfold": {
+      "icon": {
+        "path": "/assets/project-images/zkfold/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://zkfold.io/apple-icon.png?apple-icon.12etrbgapkd7v.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 13755,
+        "fetched_at": "2026-09-13T16:46:45.631Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/zkfold/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://zkfold.io/images/logo/logo-nav.svg",
+        "content_type": "image/svg+xml",
+        "width": 1500,
+        "height": 1000,
+        "bytes": 3545,
+        "fetched_at": "2026-09-14T21:51:44.612Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:46.802Z, candidate kind \"body_img\")."
+      }
+    },
+    "charli3": {
+      "icon": {
+        "path": "/assets/project-images/charli3/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://charli3.io/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 256,
+        "height": 256,
+        "bytes": 107086,
+        "fetched_at": "2026-09-13T16:46:46.645Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/charli3/hero.png",
+        "kind": "body_img",
+        "source_url": "https://charli3.io/c3.png",
+        "content_type": "image/png",
+        "width": 200,
+        "height": 200,
+        "bytes": 19787,
+        "fetched_at": "2026-09-14T21:51:44.624Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T21:28:56.362Z, candidate kind \"body_img\")."
+      }
+    },
+    "orcfax": {
+      "icon": {
+        "path": "/assets/project-images/orcfax/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://orcfax.io/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-10T02:47:01.422Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/orcfax/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://orcfax.io/logo.svg",
+        "content_type": "image/svg+xml",
+        "width": 447,
+        "height": 407,
+        "bytes": 2489,
+        "fetched_at": "2026-09-14T21:51:44.607Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:57:50.988Z, candidate kind \"body_img\")."
+      }
+    },
+    "nunet": {
+      "icon": {
+        "path": "/assets/project-images/nunet/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://www.nunet.io/icon.svg?23edab2fbf4a97d6",
+        "content_type": "image/svg+xml",
+        "width": 572,
+        "height": 572,
+        "bytes": 19922,
+        "fetched_at": "2026-09-10T02:47:02.286Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/nunet/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://nunet.io/logos/nunet.svg",
+        "content_type": "image/svg+xml",
+        "width": 2111,
+        "height": 572,
+        "bytes": 23875,
+        "fetched_at": "2026-09-14T21:51:44.612Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:49.118Z, candidate kind \"body_img\")."
+      }
+    },
+    "aiken": {
+      "icon": {
+        "path": "/assets/project-images/aiken/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://aiken-lang.org/icon.png",
+        "content_type": "image/png",
+        "width": 96,
+        "height": 96,
+        "bytes": 6668,
+        "fetched_at": "2026-09-10T02:47:02.903Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/aiken/hero.png",
+        "kind": "og_image",
+        "source_url": "https://aiken-lang.org/open-graph.png",
+        "content_type": "image/png",
+        "width": 800,
+        "height": 418,
+        "bytes": 165590,
+        "fetched_at": "2026-09-10T02:47:02.903Z",
+        "status": "ok"
+      }
+    },
+    "gimbalabs": {
+      "icon": {
+        "path": "/assets/project-images/gimbalabs/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://www.gimbalabs.com/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15086,
+        "fetched_at": "2026-09-10T02:47:03.852Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/gimbalabs/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.gimbalabs.com/gimbalabs_og.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 778295,
+        "fetched_at": "2026-09-10T02:47:03.852Z",
+        "status": "ok"
+      }
+    },
+    "meshjs": {
+      "icon": {
+        "path": "/assets/project-images/meshjs/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://meshjs.dev/favicon/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 3438,
+        "fetched_at": "2026-09-10T02:47:04.668Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/meshjs/hero.png",
+        "kind": "og_image",
+        "source_url": "https://meshjs.dev/logo-mesh/mesh.png",
+        "content_type": "image/png",
+        "width": 1000,
+        "height": 500,
+        "bytes": 572483,
+        "fetched_at": "2026-09-10T02:47:04.668Z",
+        "status": "ok"
+      }
+    },
+    "lucid-evolution": {
+      "icon": {
+        "path": "/assets/project-images/lucid-evolution/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://github.githubassets.com/favicons/favicon.svg",
+        "content_type": "image/svg+xml",
+        "width": 32,
+        "height": 32,
+        "bytes": 959,
+        "fetched_at": "2026-09-10T02:47:05.921Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/lucid-evolution/hero.png",
+        "kind": "og_image",
+        "source_url": "https://opengraph.githubassets.com/e9fe6d466b87656ed0efb5a7830d286f709317dad4c8555c070c2298c27a9164/Anastasia-Labs/lucid-evolution",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 600,
+        "bytes": 57749,
+        "fetched_at": "2026-09-10T02:47:05.921Z",
+        "status": "ok"
+      }
+    },
+    "cardano-docs": {
+      "icon": {
+        "path": "/assets/project-images/cardano-docs/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://docs.cardano.org/assets/cardano-favicon.png",
+        "content_type": "image/png",
+        "width": 512,
+        "height": 512,
+        "bytes": 21059,
+        "fetched_at": "2026-09-10T02:47:07.049Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/cardano-docs/hero.png",
+        "kind": "manual_screenshot",
+        "source_url": "https://docs.cardano.org/",
+        "content_type": "image/png",
+        "width": 1280,
+        "height": 344,
+        "bytes": 38173,
+        "fetched_at": "2026-09-14T21:51:44.624Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:35.119Z). Manually captured official-site screenshot (homepage hero, \"Cardano ecosystem / Documentation\") — https://docs.cardano.org/, captured 2026-09-14. Browser chrome/nav and a cookie-consent banner cropped out."
+      }
+    },
+    "plutus": {
+      "icon": {
+        "path": "/assets/project-images/plutus/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://github.githubassets.com/favicons/favicon.svg",
+        "content_type": "image/svg+xml",
+        "width": 32,
+        "height": 32,
+        "bytes": 959,
+        "fetched_at": "2026-09-10T02:47:07.949Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/plutus/hero.png",
+        "kind": "og_image",
+        "source_url": "https://opengraph.githubassets.com/1213912281d736500207da2fbdae4dc92255e7990d4e15cae91d0844ab8d71a2/IntersectMBO/plutus",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 600,
+        "bytes": 43685,
+        "fetched_at": "2026-09-10T02:47:07.949Z",
+        "status": "ok"
+      }
+    },
+    "marlowe": {
+      "icon": {
+        "path": "/assets/project-images/marlowe/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://marlowe.iohk.io/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-10T02:47:09.128Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/marlowe/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cdn.sanity.io/images/cogl778i/production/9dd40d29a69f64cd7584ed35d5de901475e97fd3-1200x630.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 287135,
+        "fetched_at": "2026-09-10T02:47:09.128Z",
+        "status": "ok"
+      }
+    },
+    "mithril": {
+      "icon": {
+        "path": "/assets/project-images/mithril/icon.svg",
+        "kind": "manual_official_logo",
+        "source_url": "https://mithril.network/doc/img/mithril-logo.svg",
+        "content_type": "image/svg+xml",
+        "width": 1036,
+        "height": 1036,
+        "bytes": 1257,
+        "fetched_at": "2026-09-14T17:32:49.559Z",
+        "status": "ok",
+        "note": "Automatic enrichment found no usable favicon/hero on mithril.network. Manually sourced: the site's own declared favicon SVG (shield logomark)."
+      },
+      "hero": {
+        "path": "/assets/project-images/mithril/hero.png",
+        "kind": "product_screenshot",
+        "source_url": "https://mithril.network/explorer/",
+        "content_type": "image/png",
+        "width": 1400,
+        "height": 500,
+        "bytes": 112435,
+        "fetched_at": "2026-09-14T17:32:49.559Z",
+        "status": "ok",
+        "note": "No usable og:image exists (the site's declared og:image is the same square 1037x1037 shield mark used as the icon, which this site's documented wide/short hero crop would render unrecognisable -- see docs/IMAGE_ENRICHMENT.md object-fit:cover note -- so it was rejected as a hero candidate). Manually captured instead: a same-origin, in-browser render (html2canvas) of the official live Mithril Explorer at mithril.network/explorer/ -- a genuine first-party product screenshot showing real aggregator/epoch/SPO/stake/protocol-parameter data, captured at a landscape 1400x500 crop chosen to survive this site's cover-crop hero box. SHA-256 verified end-to-end during transfer (774b2e3492427ddc6aa64384af6f105a12ff67d83d8aeb100ca20047fa6fcdac). Because it reflects live network state, the exact numbers shown will drift over time -- this is expected for a dashboard product screenshot, same as any other point-in-time UI capture."
+      }
+    },
+    "hydra": {
+      "icon": {
+        "path": "/assets/project-images/hydra/icon.png",
+        "kind": "manual_official_logo",
+        "source_url": "https://hydra.family/head-protocol/img/hydra.png",
+        "content_type": "image/png",
+        "width": 1037,
+        "height": 1037,
+        "bytes": 32197,
+        "fetched_at": "2026-09-14T17:32:49.559Z",
+        "status": "ok",
+        "note": "Automatic enrichment found no usable favicon/hero on hydra.family. Manually sourced: this is the site's own <link rel=icon>/logo image (alt=\"Hydra Head logo\"), directly fetchable (no bot protection on this domain)."
+      },
+      "hero": {
+        "path": "/assets/project-images/hydra/hero.png",
+        "kind": "manual_official_asset",
+        "source_url": "https://hydra.family/head-protocol/hydra-docs-landing-graphic.png",
+        "content_type": "image/png",
+        "width": 1152,
+        "height": 874,
+        "bytes": 165003,
+        "fetched_at": "2026-09-14T17:32:49.559Z",
+        "status": "ok",
+        "note": "Automatic enrichment found no og:image/twitter:image on hydra.family. Manually sourced: the official Hydra Head architecture diagram (alt=\"Hydra Head blockchain flowchart\") embedded on the site's own landing page, showing Layer 1/Layer 2 node topology and client/DApp/wallet relationships -- content is spread evenly across the full frame so it survives this site's wide/short hero crop without losing meaning. A page-capture alternative (nav+headline) was tried and rejected: html2canvas mis-rendered the custom webfont on this specific page (overlapping/missing heading text), so this direct official asset was used instead."
+      }
+    },
+    "demeter": {
+      "icon": {
+        "path": "/assets/project-images/demeter/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://demeter.run/assets/logos/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-10T02:47:12.193Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/demeter/hero.png",
+        "kind": "og_image",
+        "source_url": "https://demeter.run/assets/logos/demeter-imagotype-og.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 16698,
+        "fetched_at": "2026-09-10T02:47:12.193Z",
+        "status": "ok"
+      }
+    },
+    "masumi": {
+      "icon": {
+        "path": "/assets/project-images/masumi/icon.svg",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.masumi.network/images/masumi-favicon.svg",
+        "content_type": "image/svg+xml",
+        "width": 1080,
+        "height": 1080,
+        "bytes": 767,
+        "fetched_at": "2026-09-10T02:47:14.961Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/masumi/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://c-ipfs-gw.nmkr.io/ipfs/QmYuqD4ZxtqydTNvh6kxPSub5hzEH2Y21ahr3YpohR9rMt",
+        "content_type": "image/jpeg",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 95676,
+        "fetched_at": "2026-09-10T02:47:14.961Z",
+        "status": "ok"
+      }
+    },
+    "bending-ai": {
+      "icon": {
+        "path": "/assets/project-images/bending-ai/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://bending.ai/og-image.png",
+        "content_type": "image/png",
+        "width": 100,
+        "height": 100,
+        "bytes": 4415,
+        "fetched_at": "2026-09-10T02:47:15.756Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/bending-ai/hero.png",
+        "kind": "og_image",
+        "source_url": "https://bending.ai/og-image.png",
+        "content_type": "image/png",
+        "width": 100,
+        "height": 100,
+        "bytes": 4415,
+        "fetched_at": "2026-09-10T02:47:15.756Z",
+        "status": "ok"
+      }
+    },
+    "sokosumi": {
+      "icon": {
+        "path": "/assets/project-images/sokosumi/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.sokosumi.com/assets/apple-touch-icon.png?v=ba842039",
+        "content_type": "image/png",
+        "width": 256,
+        "height": 256,
+        "bytes": 6722,
+        "fetched_at": "2026-09-10T02:47:17.041Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/sokosumi/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.sokosumi.com/og/dHlwZT1wYWdlJnRpdGxlPUFJK0Nvd29ya2Vycytmb3IrTWFya2V0aW5nLiZzdWI9SGlyZStBSStjb3dvcmtlcnMrdGhhdCt3b3JrK2FzK3BhcnQrb2YreW91cit0ZWFtLiZleWVicm93PVNva29zdW1p.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 46041,
+        "fetched_at": "2026-09-10T02:47:17.041Z",
+        "status": "ok"
+      }
+    },
+    "hizz": {
+      "icon": {
+        "path": "/assets/project-images/hizz/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.hizz.io/favicon.png",
+        "content_type": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 1118969,
+        "fetched_at": "2026-09-10T02:47:24.718Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/hizz/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.hizz.io/hizz-social-card.png",
+        "content_type": "image/png",
+        "width": 1728,
+        "height": 910,
+        "bytes": 1216720,
+        "fetched_at": "2026-09-10T02:47:24.718Z",
+        "status": "ok"
+      }
+    },
+    "atlas": {
+      "icon": {
+        "path": "/assets/project-images/atlas/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.atlasdefi.org/logo-token.png",
+        "content_type": "image/png",
+        "width": 155,
+        "height": 156,
+        "bytes": 2133,
+        "fetched_at": "2026-09-10T02:47:25.289Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/atlas/hero.jpg",
+        "kind": "video_frame_capture",
+        "source_url": "https://www.atlasdefi.org/hero-rings.mp4",
+        "content_type": "image/jpeg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 48366,
+        "fetched_at": "2026-09-10T15:41:12.498Z",
+        "status": "ok",
+        "note": "Static frame captured from the official homepage hero background video (no static og:image exists on site)."
+      }
+    },
+    "snek": {
+      "icon": {
+        "path": "/assets/project-images/snek/icon.svg",
+        "kind": "site_logo_svg",
+        "source_url": "https://www.snek.com/_next/static/media/logo.1dc54d79.svg",
+        "content_type": "image/svg+xml",
+        "width": 3000,
+        "height": 3000,
+        "bytes": 14309,
+        "fetched_at": "2026-09-10T15:41:12.498Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/snek/hero.webp",
+        "kind": "og_image",
+        "source_url": "https://www.snek.com/snek-thumbnail.webp",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 21288,
+        "fetched_at": "2026-09-10T02:47:26.089Z",
+        "status": "ok"
+      }
+    },
+    "titans": {
+      "icon": {
+        "path": "/assets/project-images/titans/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://houseoftitans.io/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 23902,
+        "fetched_at": "2026-09-10T02:47:26.991Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/titans/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://houseoftitans.io/images/titans-banner.jpg",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 630,
+        "bytes": 90642,
+        "fetched_at": "2026-09-10T02:47:26.991Z",
+        "status": "ok"
+      }
+    },
+    "wojaks": {
+      "icon": {
+        "path": "/assets/project-images/wojaks/icon.png",
+        "kind": "founder_supplied",
+        "source_url": null,
+        "content_type": "image/png",
+        "width": 512,
+        "height": 512,
+        "bytes": 200115,
+        "fetched_at": "2026-09-10T15:58:32.078Z",
+        "status": "ok",
+        "note": "Founder/project-supplied for this INDEX:80 review (supplied directly by the project, 2026-09-10) — 512x512 transparent PNG derived from the project's own blue circular Wojak avatar. No conventional canonical website exists for this project; supersedes an earlier X-profile-avatar-sourced version."
+      },
+      "hero": {
+        "path": "/assets/project-images/wojaks/hero.webp",
+        "kind": "founder_supplied",
+        "source_url": null,
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 398,
+        "bytes": 103412,
+        "fetched_at": "2026-09-10T15:58:32.078Z",
+        "status": "ok",
+        "note": "Founder/project-supplied for this INDEX:80 review (supplied directly by the project, 2026-09-10) — web-optimised version of \"The Wojaks! Season 2\" banner, full composition preserved. Supersedes an earlier X-profile-banner-sourced version."
+      }
+    },
+    "marsbirds": {
+      "icon": {
+        "path": "/assets/project-images/marsbirds/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://www.marsbirds.com/logo.png",
+        "content_type": "image/png",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 101592,
+        "fetched_at": "2026-09-10T02:47:28.205Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/marsbirds/hero.png",
+        "kind": "og_image",
+        "source_url": "https://marsbirds.com/og-card.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 190351,
+        "fetched_at": "2026-09-10T02:47:28.205Z",
+        "status": "ok"
+      }
+    },
+    "bitcoin-os": {
+      "icon": {
+        "path": "/assets/project-images/bitcoin-os/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://www.bitcoinos.build/images/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 32,
+        "height": 32,
+        "bytes": 4286,
+        "fetched_at": "2026-09-14T15:33:55.799Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/bitcoin-os/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://pbs.twimg.com/profile_banners/1728053499999444992/1754572673/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 28774,
+        "fetched_at": "2026-09-14T15:35:13.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "bitcoinos.build declares no og:image/twitter:image (confirmed via live DOM inspection — the homepage only shows the site’s own square logo and a wall of unrelated partner-chain logos, none usable as a BitcoinOS-specific hero). This is the official verified X account’s (@BTC_OS) own profile banner: distinctive wide (1500x500) brand key art, genuinely their own chosen official image, not the icon blown up."
+      }
+    },
+    "cardano-token-vault": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:47:29.702Z",
+        "status": "skipped_x_needs_token",
+        "error": "INDEX80_X_BEARER_TOKEN not set — X avatar harvest is not enabled"
+      },
+      "hero": {
+        "path": "/assets/project-images/cardano-token-vault/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1610034387797659649/1688824001/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 167851,
+        "fetched_at": "2026-09-14T21:51:44.624Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:39.515Z). Official X (@ADATOKENVAULT) profile banner (\"Investing. Together.\"), captured 2026-09-14."
+      }
+    },
+    "farmbot": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-10T02:47:30.601Z",
+        "status": "skipped_x_needs_token",
+        "error": "INDEX80_X_BEARER_TOKEN not set — X avatar harvest is not enabled"
+      },
+      "hero": {
+        "path": "/assets/project-images/farmbot/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1594811938541903889/1669324624/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 192009,
+        "fetched_at": "2026-09-14T21:51:44.625Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:43.315Z). Official X (@TheFarmBots) profile banner, captured 2026-09-14."
+      }
+    },
+    "squeak": {
+      "icon": {
+        "path": "/assets/project-images/squeak/icon.webp",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.squeak.world/wp-content/uploads/2024/12/cropped-PFP_3_rund-small-300x300.webp",
+        "content_type": "image/webp",
+        "width": 300,
+        "height": 300,
+        "bytes": 13856,
+        "fetched_at": "2026-09-13T22:00:46.687Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/squeak/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.squeak.world/wp-content/uploads/2025/02/PFP_3_rund.png",
+        "content_type": "image/png",
+        "width": 1600,
+        "height": 1600,
+        "bytes": 462100,
+        "fetched_at": "2026-09-13T22:00:46.687Z",
+        "status": "ok"
+      }
+    },
+    "mlabs": {
+      "icon": {
+        "path": "/assets/project-images/mlabs/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://images.squarespace-cdn.com/content/v1/66ff9a7cc5765a03be6dfa39/2bf0c744-a5e7-4966-9759-9eeffb2846cc/favicon.ico?format=100w",
+        "content_type": "image/png",
+        "width": 100,
+        "height": 100,
+        "bytes": 1859,
+        "fetched_at": "2026-09-13T15:19:11.635Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/mlabs/hero.png",
+        "kind": "og_image",
+        "source_url": "https://images.squarespace-cdn.com/content/66ff9a7cc5765a03be6dfa39/7afb1838-4156-4810-91bd-80698c600012/mlabs-logo.png?format=1500w&content-type=image%2Fpng",
+        "content_type": "image/png",
+        "width": 1500,
+        "height": 210,
+        "bytes": 18035,
+        "fetched_at": "2026-09-13T15:19:11.635Z",
+        "status": "ok"
+      }
+    },
+    "anastasia-labs": {
+      "icon": {
+        "path": "/assets/project-images/anastasia-labs/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://www.anastasialabs.com/icons/anastasia-labs/al-icons/al-icons/al-icon-red.png",
+        "content_type": "image/png",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 32118,
+        "fetched_at": "2026-09-13T15:19:12.627Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/anastasia-labs/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.anastasialabs.com/icons/anastasia-labs/al-icons/al-icons/al-icon-red.png",
+        "content_type": "image/png",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 32118,
+        "fetched_at": "2026-09-13T15:19:12.627Z",
+        "status": "ok"
+      }
+    },
+    "xerberus": {
+      "icon": {
+        "path": "/assets/project-images/xerberus/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://xerberus.io/xerberus-logo.png",
+        "content_type": "image/png",
+        "width": 56,
+        "height": 56,
+        "bytes": 3652,
+        "fetched_at": "2026-09-13T15:19:13.210Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/xerberus/hero.png",
+        "kind": "og_image",
+        "source_url": "https://xerberus.io/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 21654,
+        "fetched_at": "2026-09-13T15:19:13.210Z",
+        "status": "ok"
+      }
+    },
+    "sidan-lab": {
+      "icon": {
+        "path": "/assets/project-images/sidan-lab/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://sidan.io/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 13326,
+        "fetched_at": "2026-09-13T16:46:58.137Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/sidan-lab/hero.png",
+        "kind": "manual_screenshot",
+        "source_url": "https://sidan.io/",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 280,
+        "bytes": 322191,
+        "fetched_at": "2026-09-14T21:51:44.626Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:56.123Z). Manually captured official-site screenshot (homepage hero, \"SIDAN LAB\" wordmark) — https://sidan.io/, captured 2026-09-14. Nav bar cropped out."
+      }
+    },
+    "wada": {
+      "icon": {
+        "kind": "apple_touch_icon",
+        "source_url": "https://wada.org/wp-content/uploads/2021/11/cropped-Wada-RGB_Icon-Color-180x180.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 13229,
+        "fetched_at": "2026-09-13T15:22:54.805Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automated harvest failed (HTTP 403, Cloudflare bot-mitigation challenge on the page fetch); the linked media asset itself was directly reachable and was verified manually.",
+        "path": "/assets/project-images/wada/icon.png"
+      },
+      "hero": {
+        "kind": "og_image",
+        "source_url": "https://wada.org/wp-content/uploads/2025/02/Home-Page-down.png",
+        "content_type": "image/png",
+        "width": 1024,
+        "height": 964,
+        "bytes": 350843,
+        "fetched_at": "2026-09-13T15:22:54.805Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automated harvest failed (HTTP 403, Cloudflare bot-mitigation challenge on the page fetch); the linked media asset itself was directly reachable and was verified manually.",
+        "path": "/assets/project-images/wada/hero.png"
+      }
+    },
+    "blink-labs": {
+      "icon": {
+        "path": "/assets/project-images/blink-labs/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://blinklabs.io/logo192.png",
+        "content_type": "image/png",
+        "width": 192,
+        "height": 192,
+        "bytes": 5617,
+        "fetched_at": "2026-09-13T15:19:15.028Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/blink-labs/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://blinklabs.io/images/blinklabs-twitter-share-image.jpg",
+        "content_type": "image/jpeg",
+        "width": 768,
+        "height": 420,
+        "bytes": 23508,
+        "fetched_at": "2026-09-13T15:19:15.029Z",
+        "status": "ok"
+      }
+    },
+    "lido-nation": {
+      "icon": {
+        "path": "/assets/project-images/lido-nation/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.lidonation.com/build/assets/apple-touch-icon-B6zbKJep.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 11362,
+        "fetched_at": "2026-09-13T16:46:58.745Z",
+        "status": "ok"
+      },
+      "hero": {
+        "kind": "manual_official_logo",
+        "source_url": "https://www.lidonation.com/img/llogo-transparent.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 674,
+        "bytes": 114291,
+        "fetched_at": "2026-09-13T17:02:41.314Z",
+        "status": "ok",
+        "error": null,
+        "note": "lidonation.com declares no og:image/twitter:image. This is the exact live header-logo file the site itself currently serves (confirmed via the rendered page DOM), at a larger, landscape-oriented resolution than the favicon.",
+        "path": "/assets/project-images/lido-nation/hero.png"
+      }
+    },
+    "sustainable-ada": {
+      "icon": {
+        "path": "/assets/project-images/sustainable-ada/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_auto/sustainableada.com/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 2877,
+        "fetched_at": "2026-09-13T15:19:16.547Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/sustainable-ada/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://sustainableada.com/wp-content/uploads/2025/01/Main-1024x512.jpg",
+        "content_type": "image/jpeg",
+        "width": 1024,
+        "height": 512,
+        "bytes": 25205,
+        "fetched_at": "2026-09-13T15:19:16.547Z",
+        "status": "ok"
+      }
+    },
+    "five-binaries": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-13T15:19:17.013Z",
+        "status": "no_image_found",
+        "error": "no usable favicon/apple-touch-icon/logo link found on official site"
+      },
+      "hero": {
+        "kind": "manual_body_logo",
+        "source_url": "https://fivebinaries.com/assets/img/logo.png",
+        "content_type": "image/png",
+        "width": 1707,
+        "height": 480,
+        "bytes": 21453,
+        "fetched_at": "2026-09-13T15:22:54.805Z",
+        "status": "ok",
+        "error": null,
+        "note": "No <head> icon/apple-touch-icon/og:image/twitter:image on the official site (single-page site, no favicon declared) — this is the only official logo asset on the page, referenced inline in <body>, not eligible for the icon role given its wide banner shape. Icon left unset; falls back to the category glyph.",
+        "path": "/assets/project-images/five-binaries/hero.png"
+      }
+    },
+    "andamio": {
+      "icon": {
+        "path": "/assets/project-images/andamio/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://www.andamio.io/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-13T16:46:47.580Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/andamio/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.andamio.io/andamio.png",
+        "content_type": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 998962,
+        "fetched_at": "2026-09-13T16:46:47.580Z",
+        "status": "ok"
+      }
+    },
+    "infinity-rising": {
+      "icon": {
+        "path": "/assets/project-images/infinity-rising/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://cdn.filestackcontent.com/zOCICSISm6cabIqtYI3M",
+        "content_type": "image/png",
+        "width": 360,
+        "height": 360,
+        "bytes": 21040,
+        "fetched_at": "2026-09-13T19:44:44.244Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/infinity-rising/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cdn.filestackcontent.com/resize=width:1280,height:720/x6ldL21hRHWjYMqn1EUG",
+        "content_type": "image/png",
+        "width": 1280,
+        "height": 720,
+        "bytes": 1152131,
+        "fetched_at": "2026-09-13T19:44:44.244Z",
+        "status": "ok"
+      }
+    },
+    "kwic": {
+      "hero": {
+        "path": "/assets/project-images/kwic/hero.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.keyboardwarriorsinternetcafe.io/",
+        "content_type": "image/webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 218602,
+        "fetched_at": "2026-09-13T21:35:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Supplied directly by Adam (not auto-harvested). Verified as genuine long-standing official KWIC promotional artwork: the logo, headline and body text match keyboardwarriorsinternetcafe.io verbatim, and the identical four-character \"OG Collection\" grid appears in an independent, dated (2023-08-01) third-party interview (medium.com/@patryk_karter/cardano-nfts-047-kwic-bb07b2c77774), predating this specific recomposited file. Not stock or invented artwork."
+      }
+    },
+    "stag-alliance": {
+      "icon": {
+        "path": "/assets/project-images/stag-alliance/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://cdn.prod.website-files.com/65c0b35f1b67fbfec98c4108/65c0ebc8fc8b90e05ab8fdb0_E-256.png",
+        "content_type": "image/png",
+        "width": 256,
+        "height": 256,
+        "bytes": 67112,
+        "fetched_at": "2026-09-13T22:19:41.666Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/stag-alliance/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://cdn.prod.website-files.com/65c0b35f1b67fbfec98c4108/6808b5da177c5d0e7c8e0b4a_Moonstone-mines-animated-web-low-poster-00001.jpg",
+        "content_type": "image/jpeg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 76002,
+        "fetched_at": "2026-09-13T22:30:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "No og:image/twitter:image declared on the official page (confirmed via live DOM inspection). This is the poster frame of the site's own background video (the circular \"Moonstone Mines\" game-world scene shown on elderworld.io/stag-alliance/home) — genuine official Elderworld/Stag Alliance artwork, not a distinct branded banner but a real wide (16:9) scene from their own CDN."
+      }
+    },
+    "ascent-rivals": {
+      "icon": {
+        "path": "/assets/project-images/ascent-rivals/icon.png",
+        "kind": "manual_official_logomark",
+        "source_url": "https://www.ascentrivals.com/downloads/brand/3d.png",
+        "content_type": "image/png",
+        "width": 97,
+        "height": 87,
+        "bytes": 10125,
+        "fetched_at": "2026-09-14T07:59:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Official standalone \"3D Logomark\" from the brand page (ascentrivals.com/brand) — not auto-harvested, since the site declares no favicon/apple-touch-icon link; downloaded directly from the brand kit's own download link. Native resolution is small (97x87), which is the largest size the brand kit provides for the standalone mark (their own usage guidance sets a 25px minimum width for this mark, so this comfortably exceeds their own legibility floor)."
+      },
+      "hero": {
+        "path": "/assets/project-images/ascent-rivals/hero.png",
+        "kind": "manual_official_brand_hero",
+        "source_url": "https://www.ascentrivals.com/_next/static/media/brandkit-banner.1a2_0q7xho_yx.png",
+        "content_type": "image/png",
+        "width": 1920,
+        "height": 807,
+        "bytes": 673665,
+        "fetched_at": "2026-09-14T07:59:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Official \"Brand Reference\" hero image from ascentrivals.com/brand (alt text: \"Reflective Ascent Rivals logomark\") — a 3D render of the logomark with in-game HUD/track textures visible in its reflective facets. Distinct wide (1920x807) official brand asset, not the icon blown up."
+      }
+    },
+    "disco-solaris": {
+      "icon": {
+        "path": "/assets/project-images/disco-solaris/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://discosolaris.io/favicon.svg",
+        "content_type": "image/svg+xml",
+        "width": 64,
+        "height": 64,
+        "bytes": 29469,
+        "fetched_at": "2026-09-14T07:02:31.577Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/disco-solaris/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://discosolaris.io/landing/hero-solaris.jpg",
+        "content_type": "image/jpeg",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 100191,
+        "fetched_at": "2026-09-14T07:05:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Not declared as og:image/twitter:image on the official site (auto-harvest correctly reported no_image_found), so sourced directly — the current landing-page hero image, verified via HTTP headers (200, image/jpeg, ~98KB, well under the pipeline cap) and visual inspection before use. Genuine official Neo Miami/cyberpunk key art matching the site's own brand palette."
+      }
+    },
+    "hops-on-cardano": {
+      "icon": {
+        "path": "/assets/project-images/hops-on-cardano/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://hopsoncardano.io/favicon.png",
+        "content_type": "image/png",
+        "width": 446,
+        "height": 442,
+        "bytes": 78618,
+        "fetched_at": "2026-09-14T07:36:46.998Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/hops-on-cardano/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://hopsoncardano.io/img/hero-cover.jpg",
+        "content_type": "image/jpeg",
+        "width": 1600,
+        "height": 810,
+        "bytes": 131438,
+        "fetched_at": "2026-09-14T07:40:14.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Not declared as og:image/twitter:image on the official site (auto-harvest correctly reported no_image_found). This is the site's own hero background image (CSS background-image on the .hero section, confirmed via live DOM inspection) — a distinct, custom-illustrated brewery interior scene with HOPS ON CARDANO branded barrels bearing the Cardano ADA symbol and fermentation tanks. Wide (1600x810), genuinely on-brand official artwork, not the icon blown up."
+      }
+    },
+    "tweag": {
+      "icon": {
+        "path": "/assets/project-images/tweag/icon.png",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.tweag.io/icons/icon-512x512.png?v=24f8ea31818259c4506bd1dd71f09cf3",
+        "content_type": "image/png",
+        "width": 512,
+        "height": 512,
+        "bytes": 9140,
+        "fetched_at": "2026-09-14T07:55:45.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Auto-harvest picked the first declared apple-touch-icon link (48x48, too small for clean display). The site declares the same Tweag \"t\" logomark at multiple sizes up to 512x512 (confirmed via live DOM inspection of <link rel=apple-touch-icon> tags); this is the largest available, same genuine official icon just at full resolution."
+      },
+      "hero": {
+        "path": "/assets/project-images/tweag/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.tweag.io/assets/images/tweag-social.png",
+        "content_type": "image/png",
+        "width": 1730,
+        "height": 909,
+        "bytes": 899007,
+        "fetched_at": "2026-09-14T07:55:01.367Z",
+        "status": "ok"
+      }
+    },
+    "european-cardano-community": {
+      "icon": {
+        "path": "/assets/project-images/european-cardano-community/icon.png",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/eucardano/brandassets/main/Logos/ECC-logo.png",
+        "content_type": "image/png",
+        "width": 1080,
+        "height": 1080,
+        "bytes": 109673,
+        "fetched_at": "2026-09-14T07:57:01.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "No official_url is set on this record (canonical Registry field), so auto-harvest had no site to crawl and the X-avatar path needs an API token this pipeline does not have. Sourced instead from the project’s own official GitHub organisation (github.com/eucardano) brand-assets repository (eucardano/brandassets/Logos/ECC-logo.png, 2024 version) — this exact image is also the live avatar shown on the eucardano GitHub org page, confirmed via live inspection. Genuine official mark (star-constellation motif evoking the EU flag), not fabricated."
+      },
+      "hero": {
+        "path": "/assets/project-images/european-cardano-community/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/eucardano/brandassets/main/backgrounds/european_town_hall_wallpaper.JPG",
+        "content_type": "image/jpeg",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 85350,
+        "fetched_at": "2026-09-14T07:57:01.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Distinct wide (1920x1080) official brand asset from the same eucardano/brandassets GitHub repository — a branded “EUROPEAN TOWN HALL” wallpaper using the project’s own star-constellation motif, directly matching the editorial note’s description of biweekly EU Town Halls. Not a duplicate of the icon; genuine official artwork, not fabricated."
+      }
+    },
+    "perps": {
+      "icon": {
+        "path": "/assets/project-images/perps/icon.png",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.perpsquad.com/logo/mainLogo.png",
+        "content_type": "image/png",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 103218,
+        "fetched_at": "2026-09-14T09:37:08.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Auto-harvest could not resolve an icon (skipped_x_needs_token) or hero (fetch_error) automatically. Sourced directly from the official site's own logo asset (linked from the live homepage <img> as \"Main logo for perps\") — genuine official PERPS graffiti-style wordmark, not fabricated."
+      },
+      "hero": {
+        "path": "/assets/project-images/perps/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.perpsquad.com/home/parallax/background.png",
+        "content_type": "image/jpeg",
+        "width": 4000,
+        "height": 2250,
+        "bytes": 894618,
+        "fetched_at": "2026-09-14T09:37:08.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Genuine official homepage illustration (the site's own parallax hero background layer, confirmed via live DOM inspection) showing the PERPs character cast, matching the record’s \"Into The Factions comic universe\" description. Re-encoded from the original 5.8MB PNG to JPEG (quality 85, same 4000x2250 dimensions, no content alteration) solely to fit the pipeline’s 3MB asset cap — not fabricated or substitute artwork."
+      }
+    },
+    "neo-vikings": {
+      "icon": {
+        "path": "/assets/project-images/neo-vikings/icon.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://pbs.twimg.com/profile_images/1781367546244902912/goJvnnIl_400x400.jpg",
+        "content_type": "image/jpeg",
+        "width": 400,
+        "height": 400,
+        "bytes": 27083,
+        "fetched_at": "2026-09-14T15:33:42.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Auto-harvest resolved an icon from linktr.ee (the record’s official_url, since Neo Vikings has no single dedicated project site), but that asset turned out to be Linktree’s own generic platform icon, not Neo Vikings branding — discarded after visual inspection. This is the official verified X account’s (@NeoVikingsADA) own profile avatar instead: a distinctive \"NV\" logomark matching the ship-emblem branding seen elsewhere (e.g. the Linktree OG card), genuinely official."
+      },
+      "hero": {
+        "path": "/assets/project-images/neo-vikings/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://pbs.twimg.com/profile_banners/1600871963236376576/1702991465/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 191846,
+        "fetched_at": "2026-09-14T15:33:42.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Auto-harvest’s linktr.ee og:image (a generic Linktree OG card with the Neo Vikings ship logo centered) was usable but generic. This official X profile banner is a stronger choice: genuine official character artwork depicting the Neo Vikings NFT cast alongside Bitcoin-mining rig hardware, directly matching the record’s current mining-plus-NFT-community framing. Wide (1500x500), not the icon blown up."
+      }
+    },
+    "midnight": {
+      "icon": {
+        "path": "/assets/project-images/midnight/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://midnight.network/favicon-32x32.png",
+        "content_type": "image/png",
+        "width": 32,
+        "height": 32,
+        "bytes": 1063,
+        "fetched_at": "2026-09-14T17:07:01.707Z",
+        "status": "ok",
+        "note": "Automatic enrichment blocked by site bot-protection (HTTP 429 on scripted fetch, including a plain browser User-Agent via curl); confirmed genuine by loading the live official page in a real browser session and reading the <link rel=icon> href directly from the rendered DOM, then fetching the exact same URL from within that authenticated browser context (SHA-256 verified end-to-end: 82ee58f990a0bbf7e8f3f34086d5c61431cb8bfcf6308299dab68bf6db3aa97a). Manually sourced per task instruction fallback (official site: https://midnight.network/)."
+      },
+      "hero": {
+        "path": "/assets/project-images/midnight/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cdn.sanity.io/images/330xhmya/production/5cf74785fd2da369860e8a03bf01023393b08750-1200x630.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 74697,
+        "fetched_at": "2026-09-14T17:07:01.707Z",
+        "status": "ok",
+        "note": "og:image read from the live official page (https://midnight.network/) DOM; hosted on the site's own Sanity CDN, fetchable directly (not subject to the same-origin bot-protection blocking the favicon paths)."
+      }
+    },
+    "cardano-foundation": {
+      "icon": {
+        "path": "/assets/project-images/cardano-foundation/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://cardanofoundation.org/favicons/icon-light.png",
+        "content_type": "image/png",
+        "width": 32,
+        "height": 32,
+        "bytes": 754,
+        "fetched_at": "2026-09-14T17:07:01.707Z",
+        "status": "ok",
+        "note": "Automatic enrichment blocked by site bot-protection (HTTP 429 on scripted fetch, including a plain browser User-Agent via curl); confirmed genuine by loading the live official page in a real browser session and reading the <link rel=icon> href directly from the rendered DOM, then fetching the exact same URL from within that authenticated browser context. Manually sourced per task instruction fallback (official site: https://cardanofoundation.org/)."
+      },
+      "hero": {
+        "path": "/assets/project-images/cardano-foundation/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://ucarecdn.com/428057f7-3385-45cb-be3a-8c81006f0dcf/",
+        "content_type": "image/jpeg",
+        "width": 2400,
+        "height": 1350,
+        "bytes": 787468,
+        "fetched_at": "2026-09-14T17:07:01.707Z",
+        "status": "ok",
+        "note": "og:image read from the live official page (https://cardanofoundation.org/) DOM; hosted on the site's own uploadcare CDN, fetchable directly (not subject to the same-origin bot-protection blocking the favicon path)."
+      }
+    },
+    "input-output": {
+      "icon": {
+        "path": "/assets/project-images/input-output/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://www.iog.io/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15086,
+        "fetched_at": "2026-09-14T16:59:01.606Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/input-output/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cdn.sanity.io/images/5ro2r81m/production/693678114ec09a21e708c0bfbc91787ba2e5479f-2400x1260.png?w=1200",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 371527,
+        "fetched_at": "2026-09-14T16:59:01.606Z",
+        "status": "ok"
+      }
+    },
+    "extended-utxo": {
+      "icon": {
+        "path": "/assets/project-images/extended-utxo/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://extendedutxo.com/icons/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 6307,
+        "fetched_at": "2026-09-14T17:21:16.533Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/extended-utxo/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://extendedutxo.com/og/index.jpg",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 630,
+        "bytes": 87384,
+        "fetched_at": "2026-09-14T17:21:16.533Z",
+        "status": "ok"
+      }
+    },
+    "asteria": {
+      "hero": {
+        "path": "/assets/project-images/asteria/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://asteria.txpipe.io/images/ship-vertical.svg",
+        "content_type": "image/svg+xml",
+        "width": 324,
+        "height": 343,
+        "bytes": 8502,
+        "fetched_at": "2026-09-14T21:51:44.607Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:57:52.755Z, candidate kind \"body_img\")."
+      }
+    },
+    "token-nft-builder": {
+      "hero": {
+        "path": "/assets/project-images/token-nft-builder/hero.png",
+        "kind": "twitter_image",
+        "source_url": "https://cardano-native-token.com/images/banner-cardano-native-token.png",
+        "content_type": "image/png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2167697,
+        "fetched_at": "2026-09-14T21:51:44.609Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:57:55.022Z, candidate kind \"twitter_image\")."
+      }
+    },
+    "yummi-universe": {
+      "hero": {
+        "path": "/assets/project-images/yummi-universe/hero.png",
+        "kind": "body_img",
+        "source_url": "https://yummiuniverse.io/wp-content/uploads/2022/12/message-3-1024x1018.png",
+        "content_type": "image/png",
+        "width": 1024,
+        "height": 1018,
+        "bytes": 310856,
+        "fetched_at": "2026-09-14T21:51:44.610Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:00.698Z, candidate kind \"body_img\")."
+      }
+    },
+    "the-mallard-order": {
+      "hero": {
+        "path": "/assets/project-images/the-mallard-order/hero.png",
+        "kind": "body_img",
+        "source_url": "https://cdn.prod.website-files.com/63e3d433e42fdf812a9af5cd/642a9c686b19ef15ec89aed6_TMO-Logo.png",
+        "content_type": "image/png",
+        "width": 2000,
+        "height": 2000,
+        "bytes": 429877,
+        "fetched_at": "2026-09-14T21:51:44.610Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:13.469Z, candidate kind \"body_img\", hosted on cdn.prod.website-files.com)."
+      }
+    },
+    "cardanotrees": {
+      "hero": {
+        "path": "/assets/project-images/cardanotrees/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://cardanotrees.com/assets/img/navbar-logo.svg",
+        "content_type": "image/svg+xml",
+        "width": 80,
+        "height": 80,
+        "bytes": 320,
+        "fetched_at": "2026-09-14T21:51:44.611Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:24.092Z, candidate kind \"body_img\")."
+      }
+    },
+    "goofy-gophers-mining-club": {
+      "hero": {
+        "path": "/assets/project-images/goofy-gophers-mining-club/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://ullzeahbemgwatyaacor.supabase.co/storage/v1/object/public/images/media/ggmc-meta.jpeg",
+        "content_type": "image/jpeg",
+        "width": 1060,
+        "height": 706,
+        "bytes": 232396,
+        "fetched_at": "2026-09-14T21:51:44.611Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:28.543Z, candidate kind \"og_image\", hosted on ullzeahbemgwatyaacor.supabase.co)."
+      }
+    },
+    "stuff-io": {
+      "hero": {
+        "path": "/assets/project-images/stuff-io/hero.png",
+        "kind": "og_image",
+        "source_url": "http://stuff.io/wp-content/uploads/2024/06/OG-Image-Stuff.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 627,
+        "bytes": 30160,
+        "fetched_at": "2026-09-14T21:51:44.612Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:58:53.643Z, candidate kind \"og_image\")."
+      }
+    },
+    "claimpaign": {
+      "hero": {
+        "path": "/assets/project-images/claimpaign/hero.png",
+        "kind": "og_image",
+        "source_url": "https://claimpaign.com/og/open-graph.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 174530,
+        "fetched_at": "2026-09-14T21:51:44.612Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:00.638Z, candidate kind \"og_image\")."
+      }
+    },
+    "onboard-ninja": {
+      "hero": {
+        "path": "/assets/project-images/onboard-ninja/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cdn.prod.website-files.com/66bbc50469722eb630490536/66bc9dd9b3dc869f22154977_og.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 697950,
+        "fetched_at": "2026-09-14T21:51:44.613Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:01.910Z, candidate kind \"og_image\", hosted on cdn.prod.website-files.com)."
+      }
+    },
+    "farmroll": {
+      "hero": {
+        "path": "/assets/project-images/farmroll/hero.png",
+        "kind": "og_image",
+        "source_url": "https://farmroll.io/assets/img/generic/og-thumbnail.png",
+        "content_type": "image/png",
+        "width": 3771,
+        "height": 2566,
+        "bytes": 3016098,
+        "fetched_at": "2026-09-14T21:51:44.616Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:03.346Z, candidate kind \"og_image\")."
+      }
+    },
+    "uverify": {
+      "hero": {
+        "path": "/assets/project-images/uverify/hero.png",
+        "kind": "og_image",
+        "source_url": "https://uverify.io/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 734262,
+        "fetched_at": "2026-09-14T21:51:44.616Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:05.433Z, candidate kind \"og_image\")."
+      }
+    },
+    "echoforge": {
+      "hero": {
+        "path": "/assets/project-images/echoforge/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.echoforgeef.com/og.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 48729,
+        "fetched_at": "2026-09-14T21:51:44.617Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:06.666Z, candidate kind \"og_image\")."
+      }
+    },
+    "continuity-token": {
+      "hero": {
+        "path": "/assets/project-images/continuity-token/hero.png",
+        "kind": "og_image",
+        "source_url": "https://continuity.to/images/logo/og2.png",
+        "content_type": "image/png",
+        "width": 600,
+        "height": 315,
+        "bytes": 19649,
+        "fetched_at": "2026-09-14T21:51:44.617Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:16.763Z, candidate kind \"og_image\")."
+      }
+    },
+    "commitproof": {
+      "hero": {
+        "path": "/assets/project-images/commitproof/hero.png",
+        "kind": "og_image",
+        "source_url": "https://commitproof.com/og/home.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 43623,
+        "fetched_at": "2026-09-14T21:51:44.617Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:21.213Z, candidate kind \"og_image\")."
+      }
+    },
+    "cardano-wall": {
+      "hero": {
+        "path": "/assets/project-images/cardano-wall/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cardanowall.com/opengraph-image",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 52088,
+        "fetched_at": "2026-09-14T21:51:44.617Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:22.326Z, candidate kind \"og_image\")."
+      }
+    },
+    "cnftlab-party": {
+      "hero": {
+        "path": "/assets/project-images/cnftlab-party/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://www.cnftlab.party/ogImage2.jpg",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 630,
+        "bytes": 37443,
+        "fetched_at": "2026-09-14T21:51:44.618Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:23.626Z, candidate kind \"og_image\")."
+      }
+    },
+    "wargrum": {
+      "hero": {
+        "path": "/assets/project-images/wargrum/hero.png",
+        "kind": "og_image",
+        "source_url": "https://wargrum.io/assets/og-card.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 70152,
+        "fetched_at": "2026-09-14T21:51:44.618Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:24.887Z, candidate kind \"og_image\")."
+      }
+    },
+    "cyberverse": {
+      "hero": {
+        "path": "/assets/project-images/cyberverse/hero.png",
+        "kind": "og_image",
+        "source_url": "https://playcyberverse.com/cybercitizens_data/UI/cyberverse.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 57769,
+        "fetched_at": "2026-09-14T21:51:44.618Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:29.526Z, candidate kind \"og_image\")."
+      }
+    },
+    "clumsy-ghosts": {
+      "hero": {
+        "path": "/assets/project-images/clumsy-ghosts/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.clumsyghosts.com/assets/images/clumsy-ghosts-banner.png",
+        "content_type": "image/png",
+        "width": 1500,
+        "height": 792,
+        "bytes": 140141,
+        "fetched_at": "2026-09-14T21:51:44.618Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:30.701Z, candidate kind \"og_image\", hosted on www.clumsyghosts.com)."
+      }
+    },
+    "ale-axes": {
+      "hero": {
+        "path": "/assets/project-images/ale-axes/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://aleaxes.com/brunthar-bg.jpg",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 630,
+        "bytes": 198431,
+        "fetched_at": "2026-09-14T21:51:44.619Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:35.143Z, candidate kind \"og_image\")."
+      }
+    },
+    "deadpxlz": {
+      "hero": {
+        "path": "/assets/project-images/deadpxlz/hero.png",
+        "kind": "og_image",
+        "source_url": "https://pxlz.org/pxlz.png",
+        "content_type": "image/png",
+        "width": 2527,
+        "height": 1263,
+        "bytes": 673131,
+        "fetched_at": "2026-09-14T21:51:44.620Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:37.147Z, candidate kind \"og_image\")."
+      }
+    },
+    "cardanobits": {
+      "hero": {
+        "path": "/assets/project-images/cardanobits/hero.png",
+        "kind": "twitter_image",
+        "source_url": "https://cardanobits.art/logo.png",
+        "content_type": "image/png",
+        "width": 800,
+        "height": 800,
+        "bytes": 5287,
+        "fetched_at": "2026-09-14T21:51:44.620Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:38.489Z, candidate kind \"twitter_image\")."
+      }
+    },
+    "aeoniumsky": {
+      "hero": {
+        "path": "/assets/project-images/aeoniumsky/hero.gif",
+        "kind": "body_img",
+        "source_url": "https://images.squarespace-cdn.com/content/v1/608a3fe4a4fc7856db3b9a98/6f3185c3-64fd-4326-a9da-121412c69dad/aeoniumsky_logo02.gif?format=1500w",
+        "content_type": "image/gif",
+        "width": 694,
+        "height": 211,
+        "bytes": 1964010,
+        "fetched_at": "2026-09-14T21:51:44.621Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:42.118Z, candidate kind \"body_img\", hosted on images.squarespace-cdn.com)."
+      }
+    },
+    "emurgo": {
+      "hero": {
+        "path": "/assets/project-images/emurgo/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://emurgo.wpengine.com/wp-content/uploads/2023/06/Frame-427320165.jpg",
+        "content_type": "image/jpeg",
+        "width": 2400,
+        "height": 1260,
+        "bytes": 122240,
+        "fetched_at": "2026-09-14T21:51:44.622Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-14T20:59:43.275Z, candidate kind \"og_image\", hosted on emurgo.wpengine.com)."
+      }
+    },
+    "cardano-studio": {
+      "hero": {
+        "path": "/assets/project-images/cardano-studio/hero.png",
+        "kind": "manual_screenshot",
+        "source_url": "https://cardano-studio.app",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 340,
+        "bytes": 54833,
+        "fetched_at": "2026-09-14T21:51:44.625Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:44.696Z). Manually captured official-site screenshot (homepage hero, \"Create and Mint NFTs on Cardano\") — https://cardano-studio.app, captured 2026-09-14. Nav bar cropped out."
+      }
+    },
+    "cardano-tools-io": {
+      "hero": {
+        "path": "/assets/project-images/cardano-tools-io/hero.png",
+        "kind": "manual_screenshot",
+        "source_url": "https://cardano-tools.io",
+        "content_type": "image/png",
+        "width": 1000,
+        "height": 68,
+        "bytes": 8595,
+        "fetched_at": "2026-09-14T21:51:44.625Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:49.247Z). Manually captured official-site screenshot (site header/wordmark bar) — https://cardano-tools.io, captured 2026-09-14. The rest of the page's content is other projects' NFT listings (third-party, excluded per this pass's rules), so only the thin brand header remained usable; note its extreme ~14.7:1 aspect ratio will letterbox heavily in the 3:1 hero box."
+      }
+    },
+    "chains-of-war": {
+      "hero": {
+        "path": "/assets/project-images/chains-of-war/hero.jpg",
+        "kind": "manual_official_image",
+        "source_url": "https://1953799463-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fr8urpsVAq8NZbuovfteP%2Fuploads%2F3pdhNxJJZsWH0XfwAFK5%2FCover-Wiki.jpg",
+        "content_type": "image/jpeg",
+        "width": 2400,
+        "height": 579,
+        "bytes": 429202,
+        "fetched_at": "2026-09-14T21:51:44.626Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:54.318Z). Official wiki cover/key art from wiki.chainsofwar.io (GitBook-hosted), captured 2026-09-14."
+      }
+    },
+    "plutus-quiz-v1000": {
+      "hero": {
+        "path": "/assets/project-images/plutus-quiz-v1000/hero.png",
+        "kind": "manual_screenshot",
+        "source_url": "https://server-tools.grahamsnumberplus1.com/quiz_V1000/quiz-V1000.html",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 330,
+        "bytes": 109867,
+        "fetched_at": "2026-09-14T21:51:44.626Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-14T21:39:55.218Z). Manually captured official-site screenshot (\"Cardano Smart Contract Quiz\" product hero) — https://server-tools.grahamsnumberplus1.com/quiz_V1000/quiz-V1000.html, captured 2026-09-14."
+      }
+    },
+    "granada-pool": {
+      "hero": {
+        "path": "/assets/project-images/granada-pool/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://granadapool.com/logo/logo.svg",
+        "content_type": "image/svg+xml",
+        "width": 500,
+        "height": 500,
+        "bytes": 195196,
+        "fetched_at": "2026-09-15T18:56:19.975Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-15T18:54:57.651Z, candidate kind \"body_img\")."
+      }
+    },
+    "digital-fortress": {
+      "hero": {
+        "path": "/assets/project-images/digital-fortress/hero.png",
+        "kind": "body_img",
+        "source_url": "https://digi.pro/_next/image?url=%2Fgriffin.png&w=256&q=75",
+        "content_type": "image/png",
+        "width": 256,
+        "height": 122,
+        "bytes": 4604,
+        "fetched_at": "2026-09-15T18:56:19.977Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-15T18:55:01.666Z, candidate kind \"body_img\")."
+      }
+    },
+    "butane": {
+      "hero": {
+        "path": "/assets/project-images/butane/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1686971626112569344/1722429021/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 101498,
+        "fetched_at": "2026-09-15T19:14:31.199Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-15T19:13:25.314Z). Official X (@butaneprotocol) profile banner, captured 2026-09-15. butane.dev (the Website on record) returns HTTP 403 to automated discovery; not bypassed per policy. The same header image is also served as the official social-preview image on docs.butane.dev, confirming it's Butane's current official brand banner."
+      }
+    },
+    "happy-hoppers-club": {
+      "hero": {
+        "path": "/assets/project-images/happy-hoppers-club/hero.png",
+        "kind": "og_image",
+        "source_url": "https://happyhoppers.club/wp-content/uploads/2021/10/Happy-Hoppers-Club-Cardano-NFT-Frog.png",
+        "content_type": "image/png",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 275375,
+        "fetched_at": "2026-09-15T19:14:31.201Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-15T19:12:32.215Z, candidate kind \"og_image\")."
+      }
+    },
+    "l4va": {
+      "hero": {
+        "path": "/assets/project-images/l4va/hero.png",
+        "kind": "og_image",
+        "source_url": "https://media.base44.com/images/public/68e700cd37ec60728c948648/4caef7fc9_Frame51.png/v1/fill/w_1200,h_630/4caef7fc9_Frame51.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 73581,
+        "fetched_at": "2026-09-15T19:14:31.201Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-15T19:12:33.611Z, candidate kind \"og_image\", hosted on media.base44.com)."
+      }
+    },
+    "bitbird": {
+      "hero": {
+        "path": "/assets/project-images/bitbird/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1577024869698482176/1781516950/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 30552,
+        "fetched_at": "2026-09-15T19:14:31.201Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-15T19:13:18.881Z). Official X (@BitBirdAI) profile banner, captured 2026-09-15. bitbird.ai is a heavy client-rendered dashboard app with no clean first-party hero asset (only small wallet-icon SVGs and UI chrome); the X banner is the cleanest official brand image available."
+      }
+    },
+    "frogs-on-cardano": {
+      "hero": {
+        "path": "/assets/project-images/frogs-on-cardano/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1748012344536408064/1724245845/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 175147,
+        "fetched_at": "2026-09-15T19:14:31.202Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-15T19:13:06.611Z). Official X (@FrogsOnCardano) profile banner, captured 2026-09-15. This project has no official_url on record (only X and a GitBook doc site), so its X banner is the primary official brand image."
+      }
+    },
+    "snekkies": {
+      "hero": {
+        "path": "/assets/project-images/snekkies/hero.jpg",
+        "kind": "body_srcset",
+        "source_url": "https://snekkies.com/_next/image?url=%2Fimages%2Fbranding%2Fsnekkies-icon.webp&w=256&q=75",
+        "content_type": "image/jpeg",
+        "width": 256,
+        "height": 404,
+        "bytes": 18192,
+        "fetched_at": "2026-09-15T19:14:31.202Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-15T19:12:40.573Z, candidate kind \"body_srcset\")."
+      }
+    },
+    "cnft-tools": {
+      "hero": {
+        "path": "/assets/project-images/cnft-tools/hero.png",
+        "kind": "body_img",
+        "source_url": "https://cnft.tools/_next/image?url=%2Fimages%2Fdesk_logo_lightt.png&w=256&q=75",
+        "content_type": "image/png",
+        "width": 256,
+        "height": 132,
+        "bytes": 3317,
+        "fetched_at": "2026-09-15T19:14:31.202Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-15T19:12:43.213Z, candidate kind \"body_img\")."
+      }
+    },
+    "danzo": {
+      "hero": {
+        "path": "/assets/project-images/danzo/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1773393622152425482/1759858512/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 173086,
+        "fetched_at": "2026-09-15T19:14:31.203Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-15T19:13:08.124Z). Official X (@DanZoADA) profile banner, captured 2026-09-15. cardanzoada.com (the Website on record) returns HTTP 403 to automated discovery; not bypassed per policy."
+      }
+    },
+    "tapdano": {
+      "hero": {
+        "path": "/assets/project-images/tapdano/hero.svg",
+        "kind": "manual_official_image",
+        "source_url": "https://tapdano.com/assets/logo-D1NxPSKM.svg",
+        "content_type": "image/svg+xml",
+        "width": 204,
+        "height": 180,
+        "bytes": 890,
+        "fetched_at": "2026-09-15T19:14:31.203Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-15T19:13:22.348Z). Official TapDano logo mark from the project's own site (tapdano.com), captured 2026-09-15. The homepage's actual visual hero is an autoplaying product video (VaultPro card animation), not a static image, so the logo mark is the cleanest static first-party asset; no social/docs URL on record for this project."
+      }
+    },
+    "libertum": {
+      "hero": {
+        "path": "/assets/project-images/libertum/hero.png",
+        "kind": "body_img",
+        "source_url": "https://www.libertum.io/_astro/header-image.Byu1gg6y.png",
+        "content_type": "image/png",
+        "width": 1440,
+        "height": 1026,
+        "bytes": 285459,
+        "fetched_at": "2026-09-15T19:14:31.203Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-15T19:12:53.752Z, candidate kind \"body_img\")."
+      }
+    },
+    "anvil-dev-agency": {
+      "hero": {
+        "path": "/assets/project-images/anvil-dev-agency/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://ada-anvil.io/opengraph-image.jpg?fa85058bf5d1c7ec",
+        "content_type": "image/jpeg",
+        "width": null,
+        "height": null,
+        "bytes": 444134,
+        "fetched_at": "2026-09-15T19:14:31.204Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-15T19:13:01.267Z, candidate kind \"og_image\")."
+      }
+    },
+    "ikigai-technologies": {
+      "icon": {
+        "path": "/assets/project-images/ikigai-technologies/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://ikigaitech.org/wp-content/uploads/2022/02/cropped-Ikigai_favicon-180x180.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 11836,
+        "fetched_at": "2026-09-15T22:28:02.605Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/ikigai-technologies/hero.png",
+        "kind": "manual_editorial_illustration",
+        "source_url": "editorial-upload:adam-2026-09-16",
+        "content_type": "image/png",
+        "width": 1661,
+        "height": 1106,
+        "bytes": 177787,
+        "fetched_at": "2026-09-15T23:20:35.064Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-16T00:00:00.000Z). NOT official Ikigai Technologies branding/logo. Generic \"Ikigai\" life-purpose concept Venn diagram (Passion/Mission/Vocation/Profession), supplied directly by Adam via chat on 2026-09-16 and explicitly approved by him as the page's editorial hero after being told it is not the company's own artwork. Treat as a user-supplied/editorially approved illustration only."
+      }
+    },
+    "adalite": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-15T23:04:35.825Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: HTTP 403"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-15T23:04:35.825Z",
+        "status": "fetch_error",
+        "error": "official site fetch failed: HTTP 403"
+      }
+    },
+    "chibidango-heroes": {
+      "icon": {
+        "path": "/assets/project-images/chibidango-heroes/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://chibidangoheroes.com/favicon.png",
+        "content_type": "image/png",
+        "width": 150,
+        "height": 150,
+        "bytes": 29920,
+        "fetched_at": "2026-09-15T23:04:02.831Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/chibidango-heroes/hero.jpg",
+        "kind": "manual_official_image",
+        "source_url": "https://chibidangoheroes.com/images/landing/backgrounds/connect-background.png",
+        "content_type": "image/jpeg",
+        "width": 1317,
+        "height": 1400,
+        "bytes": 579185,
+        "fetched_at": "2026-09-16T00:33:00.634Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-16T00:32:57.091Z). Official character-roster artwork from chibidangoheroes.com's own wallet-connect screen background (same-origin static asset, not found by automated og:image/twitter:image discovery since the site is a client-rendered SPA with no social meta tags). Downscaled from the 1920x2040 original and re-encoded as JPEG for file size; original transparency rendered as white background, captured 2026-09-16."
+      }
+    },
+    "empowa": {
+      "icon": {
+        "path": "/assets/project-images/empowa/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://www.empowa.io/brand/empowa-logo-2023.svg",
+        "content_type": "image/svg+xml",
+        "width": 233,
+        "height": 60,
+        "bytes": 21967,
+        "fetched_at": "2026-09-15T23:04:03.657Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/empowa/hero.jpg",
+        "kind": "body_img",
+        "source_url": "https://www.empowa.io/images/family-home.jpg",
+        "content_type": "image/jpeg",
+        "width": 2000,
+        "height": 1307,
+        "bytes": 327822,
+        "fetched_at": "2026-09-16T00:33:00.631Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-16T00:27:00.517Z, candidate kind \"body_img\")."
+      }
+    },
+    "genius-yield": {
+      "icon": {
+        "path": "/assets/project-images/genius-yield/icon.png",
+        "kind": "favicon_link",
+        "source_url": "data:image/png;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD9aACw/WYDr/5tJa//b2av/3GmsP9z1LD/de2x/3f4sv9597L/e+yy/3zTs/99pLP/fmS0/n4ktv10A7X9eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK/9aACw/WgCrv9pMq7/a5Gu/23brv9w+q//cv+w/3T/sP92/7H/eP+y/3r/sv98/7L/fv+z/3//tP+B+rX/gtu1/4OPtf+CMLb9eQK2/X0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALP8awCt/2YArv5mFq3/aIKt/2nnrf9r/67/bf+u/2//r/9x/6//c/+w/3b/sf94/7L/ev+y/3z/sv9+/7P/gP+0/4L/tf+E/7X/hv+2/4fltv+HgLb+gxW2/4oAsvxlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/WcAq/9iAK3+YzCs/2W8rf9n/a3/af+t/2r/rf9s/67/bv+w/3H/sP9z/7D/df+x/3j/sv96/7L/fP+z/37/s/+B/7T/g/+1/4X/tf+H/7b/if+2/4z9tv+Lurb+hy62/5MAs/54AAAAAAAAAAAAAAAAAAAAAAAAAAAAsfxnAKj/XgCs/2E7rP9h1Kz/Y/+s/2b/rf9o/63/af+u/2z/p/Rp/53iZP+h6Gn/r/t0/7L/ef+y/3v/s/99/7D7ff+z/YH/tf+E/7X/hv+2/4j/tv+L/7b/jf+2/47/tv+M0rb/hjm3/5EAs/55AAAAAAAAAAAAAAAAALT7YACq/10ArP5eMKv/X9Sr/2D/q/9i/6z/Y/+s/2b/rv9p/47LVv9niz3/bZRD/2qPQv9xmkj/p+1w/7T/fP+Uz2b/T2Iz/26RS/+x+YH/tv+H/7b/iv+2/43/tv+O/7b/jv+2/43/t/+J0bf+gy63/ocAsf1rAAAAAAAAAAAAq/5bAKz+Wxeq/1u8qv9c/6v/Xv+r/2D/q/9i/67/Zf+f5l7/ZYg7/5zjYP+u/27/rfxw/4S5Vf91nkz/s/98/2OCQf8ZDgz/Li4b/6HfdP+4/4r/tv+M/7b/jv+2/47/tv+N/7f/iv+4/of/uP6Et7j9exS4/X0AAAAAAK39WwC1+mIBqv9Yg6r/WP6q/1r/qv9c/6v/Xv+q+1//kNFS/2OGOP98rkr/sP9s/63/bP+q+G3/qvRv/2qNQ/+p8XT/jsVh/zc7If9eeED/sPaC/7f/i/+2/43/tv+O/7b/jf+3/4r/uP6H/7j+hP+5/YH+ufx9fbLzIAC5+3QAqv9WAKv/VzOp/1bmqf9X/6n/WP+q/1n/qfxb/3enQf9tlzz/Z405/4O6Tf+v/2r/q/xq/3ilSv+j6Wr/bZJF/6TpcP+0/3//cZZN/53Zcv+4/4v/t/+N/7f/j/+2/43/t/+J/7j+hv+4/oP/uv2A/7r8fv+7/Hziuvt3Lrv7eAC1+VcBqf9Tkan/VP+p/1X/qf9W/6r/WP+P0Uv/a5Q5/6r8Xf+Ny07/daJD/67/aP+u/2r/cp5F/4a8Vv9rj0P/ouVv/7H8fv9vlEz/oN12/7j/jv+v9Ij/qeqB/7b9iP+4/oX/uf2C/7r8f/+7/Hz/vPt7/737ef+8+naLh/kAAKn+USWo/1DaqP9R/6j/U/+p/1T/q/9W/3mtPf+GwEX/rf9c/6HvWP9liTj/oexd/6//af+f5mH/a5BC/1RqM/9pi0T/bI9I/3KWTv+w9oX/rfGF/1VpO/84PSP/i7ph/7v/gf+7/H3/vPt7/737ef+++nf/vvp1/775c9e9+W8iqP9PZaf/Tvqn/0//p/9Q/6j/UP+q/1P/fbQ+/3+2QP+s/1j/q/9a/4G6Rf9vmj7/qPdi/7D/a/+s+W3/pu5u/6brc/+n63j/sviF/7n/j/+h3nr/Ly4c/xsQDf9sh0T/vv58/736ef+++nb/vvl0/7/5cv+/+XH/wPhw+L/4bl+n/02lpv9M/6f/Tf+n/03/p/9O/6n/T/+W4Ej/W3ot/5bgS/+q/1X/qfxX/3qtQf9pkDv/kNBV/6LsZf+n8G//qfB2/6vwff+s74P/rO+E/6vqfP9ngkP/SVQr/6bZaP+/+3b/v/lz/7/5cf/A+G//wPhu/8H4bf/B92z/wPdqnqb/StKm/0r/pv9K/6b/S/+n/0v/nvBI/22bM/9cfiv/Yocu/2yZNf+Q1Uf/pPVT/5DTS/9wnT3/aY89/2qPRP9sj0r/bpBP/3CSUf9wkEz/cI5I/3CMRP+fzV//wfxy/8H5b//D+27/wvhs/8H3av/C92j/wvZn/8L2Zv/C9mbNpf9H7KX/Rv+l/0b/pf9H/6X/R/9xozL/erM2/6X9Sf+g9Ef/k95D/4zQQP9zpDf/q/5T/6z/WP+q/V7/rPxt/7L8gf+t74D/jrxh/6LUZf+99W//wPds/8T7bP/F+2r/tONg/5e7T/+0417/xPdk/8P2Y//D9mP/w/Zj/8P2Yuel/0P3pf9D/6X/Q/+l/0P/nvJB/2SMKv+f8kH/pf9E/6X/Rf+m/0b/ofdE/2aQLP9zpTT/hcQ9/4XDQv+Jw1D/kcVk/2iCQ/8lIBT/QEUi/5GyS/+ZvU7/mbxN/5i7TP9VYCv/IhsS/19uL//B8F7/xPRf/8T0Xv/E9F7/xPRe86b/Qval/0H/pf9B/6b/Qf+f8z7/ZIwp/5/xPf+m/0D/p/8//6j/P/+n/j7/bpsr/2SEI/9/rSn/g6ok/5CjF/+YoRz/Y2kg/yAYEf84Nxn/h5w3/4+oPP+Opzz/jaU8/0pPIv8dFBD/WGEo/8LuVv/G81j/xvJZ/8byWf/G8ljzp/4+66f+Pf+n/j3/qP48/6n+PP92pSv/eawt/6f4Of+j7jb/lNYy/5bUMP9vkSP/s/Qu/7z4Kf/A6x7/z+AN/9bfEv/A0Sf/i5gm/6G4NP/G6EX/yO1J/830Tv/M9VD/stRH/4qhOP+x00j/yfJT/8jxU//I8VT/x/FU/8fyVeer/DvRqvw6/6v8Of+r+zj/rPw4/6bwNf90nif/W3Yh/2SBIv90lyP/ms0o/6ziJ/+cxSL/eo8Z/3iDFP9+gQ//f4AQ/36DGP9+hx//fIcj/3qFJv92gyj/p8A5/87yR//M8Un/zfNM/8vxTf/J8E3/yfBP/8nxT//J8VD/x/FRy637OKKs+zf/rfo2/676Nf+v+TT/svsz/5/bLv9ieh//pNsp/7n3Kv+58Sf/g6Ee/3iJGP+rwxX/xdgO/9DXB//S1gj/z9kU/8zbH//J3Cj/w9ku/293Iv9KTBz/scs4/87vQv/M7kT/y+9H/8vvSP/L70n/yvBL/8rwTP/J8U2dr/o3Yq/5NPmw+TP/sfgy/7P3MP+3+i//ha0k/4qxI/+9+Cn/vvQl/46tHf9/kxj/xecZ/9HsEv/Q3wz/y88H/8nMB//IzxD/0t4a/9jqI/+5ySb/MCsU/xkQEP91fyX/0e88/87tPv/N7kH/zO5D/8zuRf/L70b/y+9H+MrvSF2y+DYjsvgy2LP3L/+19i7/tvYs/7r4K/+CpSH/krki/8H2Jf+03yD/cYEY/7zdGv/O7BX/u88Q/3t/D/5fXQ/+fX0M/oGCD/6ChRX/z90d/8vbI/9iZRn/QD4W/6CvKf/S7Tb/z+w5/87tPP/O7T7/ze5A/83uQv/M7kPVy+5EILH8jAG29i+NtvUs/7j1K/+59Sn/vPYo/57IIv90ixv/v+4g/5++HP+GmRf/zO0X/8/pEv+FjhD/pKoL/36ADv/JzAf/2uAL/4KEEv+9xxn/2ekg/87fI//G2Cj/0ugu/9LqMv/R6jX/0Os3/8/sOv/O7Tz/zu0+/83uPoj/04wAuPUtALj1LjC59SrjuvQo/7vzJ/+98iX/vu8i/4egG/95ixj/cYEX/5isFv/Q7BT/zuQQ/5CYD//J0Qn/gIIO/8vNBv/d4wn/g4QR/7rDFv/a6Bz/1uch/9XoJf/T6Cr/0uku/9LpMf/R6jP/0Os2/9DsOP/O7DrhzO07LM3tOwC79DEAtvdhAbvzKH688yb+vfIk/7/wIv/C8CD/wuwe/6fFGv9yfxb/kKAU/9LsEv/S5g3/0d8K/9LZB/9+fQ3/0tUF/6mrCv85NBH/aWkT/9DcGP/Y5h7/1uYi/9TnJv/T6Cv/0+gt/9LpMP/R6jL/0eo1/c/rNXpL7Q4AzOozAAAAAAC98icAvfIoFb7xJLjA8CH/wu8g/8PuHv/F7Rz/yu8a/7vXFv90fRP/uMsR/9LkDP/S3wn/naEL/46OC//f4gT/dnQM/xgPEf8xLBL/v8kW/9nnG//X5h//1eci/9TnJv/T6Cr/0+gt/9LpL//R6TG0zekyE87pMgAAAAAAAAAAAMPuLgDC7yAAwu8iLcLvINDD7h7/xe0c/8fsGv/J6hj/zeoU/6m8Ev94fxH/f4QP/3x/Dv+KjAz/0NMF/9/iBP+3uQj/YF4Q/4WHEv/V3xT/2eUY/9fmHf/W5iD/1ecj/9TnJ//T6Cv/0ugtztDoLivS6C4AyewnAAAAAAAAAAAAAAAAAMjsHwDC7h4AxO4gOMXtHdHG7Bv/yesY/8zpFf/O6RP/0ekQ/8zeDf/BzQv/yNEJ/9rgBv/e4QT/3eAE/97hBf/a3wv/2+MP/9rkE//Z5Bb/2OUa/9fmHv/W5iH/1eck/9PnJ87S6Cs11ugpAMnnLQAAAAAAAAAAAAAAAAAAAAAAAAAAAMnsIADF6xgAxesdLcjrGrnK6hb9zekT/8/oEf/R5w//1OUM/9flCf/Z4wf/3OEF/93gBP/d4AT/3eAF/9zhCf/b4g7/2uMR/9nkFf/Y5Rj/1+Yc/9fmH/zV5iK10uYjKtfjHgDO6isAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMfsJgDJ6RkAyekbFMzoFn3O6BPk0OcQ/9LmDf/U5Av/1uMJ/9niB//c4QX/3eAE/93gBP/d4AX/3OEI/9viDf/a4xD/2uMT/9nkFv/Y5Rri1uUeetPlIBPV5R4AzOsnAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADM5hgAyuUbAs3nFS7Q5xGL0+UN19XkC/nX4wj/2uIG/9zgBf/d4AT/3eAE/93gBP/c4Qf/2+IM/9riD/jZ4xPW2OQWiNblGSzN4yIB0OMeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzeYZAMvmGwLR5BIg1OQNXtfjCp7a4QfM3OAG593gBfLd4AXy3OAF59zhB8za4Qyd2eIQXdbiFB/J4yIC0OMcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/4AB//4AAH/8AAA/+AAAH/AAAA/gAAAHwAAAA4AAAAOAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABgAAAA8AAAAPgAAAH8AAAD/gAAB/8AAA//gAAf/+AAf8=",
+        "content_type": "image/png",
+        "width": null,
+        "height": null,
+        "bytes": 4286,
+        "fetched_at": "2026-09-15T23:04:04.155Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/genius-yield/hero.png",
+        "kind": "manual_official_image",
+        "source_url": "https://docs.geniusyield.co/~gitbook/ogimage/-MZMWg920_2Vyk6WgSSX",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 100918,
+        "fetched_at": "2026-09-16T00:33:00.634Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-16T00:32:57.091Z). Official GitBook-generated Open Graph card from docs.geniusyield.co (Genius Yield's own documentation site), captured 2026-09-16. The marketing site (geniusyield.co) redirects straight into the trading app with no static hero image or meta tags; the docs site's own OG card is the cleanest official brand asset available."
+      }
+    },
+    "spectrum-finance": {
+      "icon": {
+        "path": "/assets/project-images/spectrum-finance/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://spectrum.fi/favicons/apple-touch-icon-57x57.png",
+        "content_type": "image/png",
+        "width": 57,
+        "height": 57,
+        "bytes": 616,
+        "fetched_at": "2026-09-15T23:04:04.968Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/spectrum-finance/hero.png",
+        "kind": "body_img",
+        "source_url": "https://spectrum.fi/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage.b473c7de.png&w=1920&q=100",
+        "content_type": "image/png",
+        "width": 1356,
+        "height": 1113,
+        "bytes": 898211,
+        "fetched_at": "2026-09-16T00:33:00.630Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-16T00:26:53.099Z, candidate kind \"body_img\")."
+      }
+    },
+    "daedalus": {
+      "icon": {
+        "path": "/assets/project-images/daedalus/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://daedaluswallet.io/images/icon.png",
+        "content_type": "image/png",
+        "width": 447,
+        "height": 447,
+        "bytes": 37321,
+        "fetched_at": "2026-09-15T23:04:06.186Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/daedalus/hero.jpg",
+        "kind": "body_img",
+        "source_url": "https://daedaluswallet.io/images/static-medusa.jpg",
+        "content_type": "image/jpeg",
+        "width": 2546,
+        "height": 1208,
+        "bytes": 64885,
+        "fetched_at": "2026-09-16T00:33:00.632Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-16T00:27:23.295Z, candidate kind \"body_img\")."
+      }
+    },
+    "rosen-bridge": {
+      "icon": {
+        "path": "/assets/project-images/rosen-bridge/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://rosen.tech/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 16,
+        "height": 16,
+        "bytes": 1150,
+        "fetched_at": "2026-09-15T23:04:06.649Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/rosen-bridge/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://rosen.tech/assets/hero/hero.svg",
+        "content_type": "image/svg+xml",
+        "width": 1428,
+        "height": 974,
+        "bytes": 280535,
+        "fetched_at": "2026-09-16T00:33:00.632Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-16T00:27:24.745Z, candidate kind \"body_img\")."
+      }
+    },
+    "typhon-wallet": {
+      "icon": {
+        "path": "/assets/project-images/typhon-wallet/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://typhonwallet.io/apple-icon-57x57.png",
+        "content_type": "image/png",
+        "width": 57,
+        "height": 57,
+        "bytes": 4395,
+        "fetched_at": "2026-09-15T23:04:07.793Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/typhon-wallet/hero.png",
+        "kind": "og_image",
+        "source_url": "https://typhonwallet.io/tog.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 628,
+        "bytes": 54316,
+        "fetched_at": "2026-09-15T23:04:07.793Z",
+        "status": "ok"
+      }
+    },
+    "nufi": {
+      "icon": {
+        "path": "/assets/project-images/nufi/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://nu.fi/apple-icon.png?d8cdb21d199daf58",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 4194,
+        "fetched_at": "2026-09-15T23:04:09.432Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/nufi/hero.jpg",
+        "kind": "body_img",
+        "source_url": "https://nu.fi/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdemo.e3cd8ac2.jpeg&w=3840&q=75",
+        "content_type": "image/jpeg",
+        "width": 2546,
+        "height": 1420,
+        "bytes": 136716,
+        "fetched_at": "2026-09-16T00:33:00.633Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-16T00:27:34.335Z, candidate kind \"body_img\")."
+      }
+    },
+    "oura": {
+      "icon": {
+        "path": "/assets/project-images/oura/icon.ico",
+        "kind": "favicon_guess",
+        "source_url": "https://oura.txpipe.io/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 9662,
+        "fetched_at": "2026-09-15T23:04:10.598Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/oura/hero.svg",
+        "kind": "og_image",
+        "source_url": "https://oura.txpipe.io/logo.svg",
+        "content_type": "image/svg+xml",
+        "width": 732,
+        "height": 287,
+        "bytes": 17436,
+        "fetched_at": "2026-09-15T23:04:10.598Z",
+        "status": "ok"
+      }
+    },
+    "palmyra": {
+      "icon": {
+        "path": "/assets/project-images/palmyra/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://palmyra.app/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 255,
+        "height": 252,
+        "bytes": 64666,
+        "fetched_at": "2026-09-15T23:04:14.569Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/palmyra/hero.png",
+        "kind": "og_image",
+        "source_url": "https://palmyra.app/palmyra.png",
+        "content_type": "image/png",
+        "width": 1536,
+        "height": 507,
+        "bytes": 612980,
+        "fetched_at": "2026-09-15T23:04:14.569Z",
+        "status": "ok"
+      }
+    },
+    "directed": {
+      "icon": {
+        "path": "/assets/project-images/directed/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://directed.dev/icon.svg",
+        "content_type": "image/svg+xml",
+        "width": 1015,
+        "height": 1015,
+        "bytes": 115937,
+        "fetched_at": "2026-09-15T23:04:16.932Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-15T23:04:16.932Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "spacebudz": {
+      "icon": {
+        "path": "/assets/project-images/spacebudz/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://spacebudz.io/web/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 4329,
+        "fetched_at": "2026-09-15T23:04:17.533Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/spacebudz/hero.webp",
+        "kind": "og_image",
+        "source_url": "https://spacebudz.on-forge.com/images/spacebudz-share.webp",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 17562,
+        "fetched_at": "2026-09-15T23:04:17.533Z",
+        "status": "ok"
+      }
+    },
+    "hosky": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-15T23:04:36.156Z",
+        "status": "skipped_x_needs_token",
+        "error": "INDEX80_X_BEARER_TOKEN not set — X avatar harvest is not enabled"
+      },
+      "hero": {
+        "path": "/assets/project-images/hosky/hero.jpg",
+        "kind": "manual_social_banner",
+        "source_url": "https://pbs.twimg.com/profile_banners/1453689655300329472/1738508513/1500x500",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 64162,
+        "fetched_at": "2026-09-16T00:33:00.634Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-16T00:32:57.091Z). Official X (@hoskytoken) profile banner, captured 2026-09-16. hosky.io (the Website on record) returned HTTP 429 to both the automated harvester and a direct fetch; not retried further / not bypassed per policy."
+      }
+    },
+    "grahamsnumberplus1": {
+      "hero": {
+        "path": "/assets/project-images/grahamsnumberplus1/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://grahamsnumberplus1.com/",
+        "content_type": "image/jpeg",
+        "width": 2418,
+        "height": 1616,
+        "bytes": 336913,
+        "fetched_at": "2026-09-17T00:20:37.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "This is the project homepage screenshot supplied manually for the INDEX:80 GNP1 profile."
+      }
+    },
+    "poolflow": {
+      "icon": {
+        "path": "/assets/project-images/poolflow/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://poolflow.net/apple-icon.png?apple-icon.0syx44r3r1m.x.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 34663,
+        "fetched_at": "2026-09-20T21:47:50.430Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/poolflow/hero.png",
+        "kind": "manual_screenshot",
+        "source_url": "https://poolflow.net",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 633,
+        "bytes": 299996,
+        "fetched_at": "2026-09-20T22:52:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "poolflow.net declares no og:image/twitter:image (automated enrichment: no_image_found), so this is a manually captured screenshot of the official PoolFlow interface (home dashboard, logo and header visible), captured 2026-09-20 from https://poolflow.net at 1440x900 and cropped to 1440x760 then scaled to 1200x633. Point-in-time capture of live market data; no third-party imagery added."
+      }
+    },
+    "cardano-prime": {
+      "icon": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-20T21:47:50.751Z",
+        "status": "skipped_x_needs_token",
+        "error": "INDEX80_X_BEARER_TOKEN not set — X avatar harvest is not enabled"
+      },
+      "hero": {
+        "path": "/assets/project-images/cardano-prime/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://i.ytimg.com/vi/6UfEPvFxQGQ/maxresdefault.jpg",
+        "content_type": "image/jpeg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 151323,
+        "fetched_at": "2026-09-21T00:10:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "alphagrowth.io serves a Cloudflare bot challenge (cf-mitigated: challenge) to automated fetches, so no og:image could be harvested from the official page (automated enrichment: fetch_error HTTP 403); the challenge was not bypassed. Per Adam's direction (2026-09-21) this is the thumbnail of AlphaGrowth's official YouTube video \"Cardano PRIME Live, w/Charles Hoskinson & AlphaGrowth\" (https://www.youtube.com/watch?v=6UfEPvFxQGQ; channel @alphagrowth, verified via YouTube oEmbed) — PRIME-specific first-party artwork (\"Cardano PRIME Livestream\"). Thumbnail image shows the episode participants."
+      }
+    },
+    "trivolve-tech": {
+      "icon": {
+        "path": "/assets/project-images/trivolve-tech/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://trivolvetech.com/favicon_io/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 5777,
+        "fetched_at": "2026-09-20T21:47:52.048Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/trivolve-tech/hero.png",
+        "kind": "og_image",
+        "source_url": "https://server.nucast.io/storage/v1/object/public/web-assets/Group%204842.png",
+        "content_type": "image/png",
+        "width": 3840,
+        "height": 2160,
+        "bytes": 534779,
+        "fetched_at": "2026-09-20T21:47:52.048Z",
+        "status": "ok"
+      }
+    },
+    "ascend-market": {
+      "icon": {
+        "path": "/assets/project-images/ascend-market/icon.svg",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.ascend.market/logo.svg",
+        "content_type": "image/svg+xml",
+        "width": 32,
+        "height": 32,
+        "bytes": 460,
+        "fetched_at": "2026-09-20T21:47:52.554Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/ascend-market/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.ascend.market/open-graph.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 455894,
+        "fetched_at": "2026-09-20T21:47:52.554Z",
+        "status": "ok"
+      }
+    },
+    "sundial-protocol": {
+      "icon": {
+        "path": "/assets/project-images/sundial-protocol/icon.ico",
+        "kind": "favicon_guess",
+        "source_url": "https://www.sundialprotocol.com/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-20T21:47:53.327Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/sundial-protocol/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.sundialprotocol.com/SocialDefaultLogo.png",
+        "content_type": "image/png",
+        "width": 1182,
+        "height": 600,
+        "bytes": 15995,
+        "fetched_at": "2026-09-20T21:47:53.327Z",
+        "status": "ok"
+      }
+    },
+    "songmarketcap": {
+      "icon": {
+        "path": "/assets/project-images/songmarketcap/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://songmarketcap.com/favicon.png",
+        "content_type": "image/png",
+        "width": 64,
+        "height": 64,
+        "bytes": 11714,
+        "fetched_at": "2026-09-20T21:47:54.292Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/songmarketcap/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://songmarketcap.com/images/og-share.jpg?v=7",
+        "content_type": "image/jpeg",
+        "width": 1200,
+        "height": 675,
+        "bytes": 125514,
+        "fetched_at": "2026-09-20T21:47:54.292Z",
+        "status": "ok"
+      }
+    },
+    "alphagrowth": {
+      "icon": {
+        "path": "/assets/project-images/alphagrowth/icon.jpg",
+        "kind": "manual_official_logo",
+        "source_url": null,
+        "content_type": "image/jpeg",
+        "width": 400,
+        "height": 400,
+        "bytes": 9105,
+        "fetched_at": "2026-09-21T06:40:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Official AlphaGrowth 'α' logo mark, 400x400 JPEG (sha256 9e03d1afa7ae9256…), supplied by Adam on 2026-09-21 (saved as JMUg_PVs_400x400.jpg; the filename pattern matches an X profile image, presumably the official @alphagrowth1 avatar — exact source URL not recorded). alphagrowth.io serves a Cloudflare bot challenge to automated fetches, so it could not be harvested by the enrichment script. Used unmodified."
+      },
+      "hero": {
+        "path": "/assets/project-images/alphagrowth/hero.jpg",
+        "kind": "manual_official_asset",
+        "source_url": "https://alphagrowth.io/static/branding/v2/black-bg-primary.png",
+        "content_type": "image/jpeg",
+        "width": 1600,
+        "height": 869,
+        "bytes": 124964,
+        "fetched_at": "2026-09-21T06:15:00.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Official AlphaGrowth press-kit artwork (https://alphagrowth.io/static/branding/v2/black-bg-primary.png, 2930x1592 RGBA PNG, sha256 0f5ba2f0304368d4…). alphagrowth.io serves a Cloudflare bot challenge to automated fetches (not bypassed); the file was downloaded by Adam in a normal browser and supplied on 2026-09-21. Flattened on black and downscaled to 1600px wide JPEG for web weight; composition unchanged."
+      }
+    }
+  }
+}
