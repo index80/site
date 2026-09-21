@@ -34,6 +34,10 @@ No contributor or sponsor can purchase inclusion, ranking, Featured status, veri
 
 One clear purpose; no unrelated refactors; preserve the static-first architecture; do not bypass editorial governance; add or update tests when behaviour changes.
 
+## Getting help
+
+See [SUPPORT.md](SUPPORT.md) for where to ask questions, and [CHANGELOG.md](CHANGELOG.md) for notable changes.
+
 ## Licence of contributions
 
 By contributing you agree your contribution is licensed under the licence that covers the file you change (Apache-2.0 for code, CC BY 4.0 for original data and editorial content). Third-party assets are not relicensed by contributing them; see [docs/ASSET_PROVENANCE.md](docs/ASSET_PROVENANCE.md).

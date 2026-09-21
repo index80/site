@@ -9,7 +9,7 @@ This roadmap describes the maintenance and sustainability priorities of INDEX:80
 - maintain source-of-truth and publication guardrails;
 - improve automated regression checks;
 - document contribution, security and maintainer processes;
-- complete repository security/IP review before public release;
+- keep the public repository's privacy, licence and security review current as it changes;
 - maintain the software (Apache-2.0) and data (CC BY 4.0) licensing position recorded in `LICENSE`, `LICENSE-DATA.md` and `NOTICE`.
 
 ## Near-term maintenance priorities
