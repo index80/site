@@ -37,7 +37,7 @@ https://index80.com/registry/snapshots/<release>.json
 
 Each release also has a manifest under `/registry/releases/` and, after independent Cardano confirmation, a verified receipt under `/registry/receipts/`.
 
-`https://index80.com/registry/index.json` is the machine-readable release history. It exposes release ID, project count, snapshot SHA-256, source Git provenance, Cardano network/status and confirmed proof transaction details where available.
+`https://index80.com/registry/index.json` is the machine-readable release history. It exposes release ID, project count, snapshot SHA-256, release provenance, Cardano network/status and confirmed proof transaction details where available.
 
 The full registry snapshot is not stored on Cardano. Cardano transaction metadata stores a compact CIP-190 / label-309 proof containing the SHA-256 digest of the exact snapshot bytes. Recompute SHA-256 over the downloaded snapshot to verify it against the recorded proof.
 
