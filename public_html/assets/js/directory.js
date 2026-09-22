@@ -128,6 +128,7 @@
       });
     }
 
+    // codeql[js/xss-through-dom] Every dynamic value below is escaped by esc() (defined above) or drawn from the fixed CATEGORY_ICON lookup before interpolation; nothing here reaches innerHTML unescaped.
     list.innerHTML = visible
       .map((p, i) => {
         const catIcon = CATEGORY_ICON[p.category] || 'infrastructure';
