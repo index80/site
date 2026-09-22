@@ -40,3 +40,5 @@ jobs:
           npm run test:treasury
       - name: Cardano snapshot validation
         run: npm run test:data
+      - name: Submission notification tests
+        run: npm run test:submission-notification
