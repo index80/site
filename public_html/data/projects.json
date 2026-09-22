@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-20T22:59:57.008Z",
+  "generated_at": "2026-09-22T17:20:25.798Z",
   "status": "discovery",
   "warning": "Records vary in editorial maturity - DISCOVERED and REVIEW records have not yet passed independent verification. Check a record's own status before treating it as current.",
-  "count": 168,
+  "count": 191,
   "skipped_invalid_count": 0,
   "projects": [
     {
@@ -4899,8 +4899,8 @@
       "summary": "High-assurance software engineering company that maintains widely used Cardano developer tooling including Plutarch, LambdaBuffers and Cardano Transaction Lib.",
       "official_url": "https://www.mlabs.city/",
       "docs_url": null,
-      "github_url": null,
-      "social_url": null,
+      "github_url": "https://github.com/mlabs-haskell",
+      "social_url": "https://x.com/MLabs10",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -4929,7 +4929,7 @@
         },
         {
           "type": "source",
-          "url": "https://www.mlabs.city/verification"
+          "url": "https://github.com/mlabs-haskell"
         }
       ],
       "featured": false,
@@ -5142,7 +5142,7 @@
       "official_url": "https://blinklabs.io/",
       "docs_url": null,
       "github_url": null,
-      "social_url": null,
+      "social_url": "https://x.com/blinklabs_io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6190,7 +6190,7 @@
       "name": "Genius Yield",
       "category": "dex",
       "public_family": "DeFi & Markets",
-      "summary": "Cardano DeFi platform combining the Genius DEX with programmable Smart Swaps, concentrated liquidity and automated liquidity-management tools.",
+      "summary": "Cardano DeFi platform that combined the Genius DEX with programmable Smart Swaps, concentrated liquidity and automated liquidity-management tools. Genius Yield announced that operations will cease on 15 October 2026; INDEX:80 retains the project as an archived historical record.",
       "official_url": "https://www.geniusyield.co/",
       "docs_url": "https://docs.geniusyield.co/",
       "github_url": "https://github.com/geniusyield",
@@ -6198,7 +6198,7 @@
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
-      "status": "review",
+      "status": "archived",
       "established": null,
       "treasury_funding_ref": null,
       "treasury_funding_value_usd": null,
@@ -6226,7 +6226,7 @@
         }
       ],
       "featured": false,
-      "editorial_note": "Genius Yield is a Cardano DeFi project built around the Genius DEX, programmable Smart Swaps, concentrated liquidity and automated liquidity-management tooling.",
+      "editorial_note": "Genius Yield combined the Genius DEX with programmable Smart Swaps, concentrated liquidity and automated liquidity-management tooling. Genius Yield announced that operations will cease on 15 October 2026, and its X/social presence is no longer available. INDEX:80 retains this page as an archived historical Cardano DeFi record.",
       "team_entity": "Genius Yield",
       "primary_link_type": "website",
       "primary_link_url": "https://www.geniusyield.co/"
@@ -7355,6 +7355,1024 @@
       ],
       "primary_link_type": "website",
       "primary_link_url": "https://alphagrowth.io/"
+    },
+    {
+      "slug": "bbhmm",
+      "name": "BBHMM",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Independent single Cardano stake pool operating since 2020, with current delegation tooling and documented participation in wider ecosystem infrastructure.",
+      "official_url": "https://bbhmm.net/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/BBHMM_Stake",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": "2020",
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "stake-pool",
+        "spo",
+        "single-pool",
+        "decentralization",
+        "community",
+        "nunet",
+        "world-mobile"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://bbhmm.net/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "BBHMM is an independent Cardano stake-pool operator with a current public delegation surface. Its site also documents participation in projects including TosiDrop, NuNet and World Mobile; those contribution claims should be rechecked at future editorial reviews.",
+      "team_entity": "BBHMM",
+      "primary_link_type": "website",
+      "primary_link_url": "https://bbhmm.net/"
+    },
+    {
+      "slug": "oli-tutor",
+      "name": "OLi / Oli Tutor",
+      "category": "ai",
+      "public_family": "Real-World & Utility",
+      "summary": "Live AI tutoring platform by Olympus Insights; Cardano wallet, credential and reward integration is currently proposed through a Project Catalyst Fund15 application.",
+      "official_url": "https://oli-tutor.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/OlympusInsights",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": "https://projectcatalyst.io/funds/15/cardano-use-cases-prototype-and-launch/oli-for-cardano-100k-on-chain-wallets-and-credentials",
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "ai",
+        "education",
+        "tutoring",
+        "cardano",
+        "credentials",
+        "wallets",
+        "catalyst",
+        "olympus-insights"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://oli-tutor.com/"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/funds/15/cardano-use-cases-prototype-and-launch/oli-for-cardano-100k-on-chain-wallets-and-credentials"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "OLi is a live AI tutoring product. Its Cardano integration is proposed in Fund15 and should not be described as deployed or funded unless the proposal status and delivered integration are later verified.",
+      "team_entity": "Olympus Insights",
+      "primary_link_type": "website",
+      "primary_link_url": "https://oli-tutor.com/"
+    },
+    {
+      "slug": "open-djed",
+      "name": "Open DJED / Artifi Labs",
+      "category": "stablecoin",
+      "public_family": "DeFi & Markets",
+      "summary": "Open-source community interface and off-chain tooling for interacting with the existing DJED protocol on Cardano, maintained by Artifi Labs.",
+      "official_url": "https://djed.artifi.finance/",
+      "docs_url": "https://docs.djed.artifi.finance/",
+      "github_url": "https://github.com/artifi-labs/open-djed",
+      "social_url": "https://x.com/artifi_labs",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": "https://projectcatalyst.io/funds/14/cardano-open-developers/open-djed-maintenance-development-and-infrastructure",
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": 1,
+      "tags": [
+        "cardano",
+        "djed",
+        "stablecoin",
+        "open-source",
+        "defi",
+        "interface",
+        "artifi-labs"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://djed.artifi.finance/"
+        },
+        {
+          "type": "source",
+          "url": "https://github.com/artifi-labs/open-djed"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/funds/14/cardano-open-developers/open-djed-maintenance-development-and-infrastructure"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Open DJED is an interface and tooling layer for the existing DJED protocol; it is not a separate stablecoin. Fund14 records its current maintenance/development work as in progress.",
+      "treasury_funding_value_ada": 100000,
+      "team_entity": "Artifi Labs",
+      "primary_link_type": "website",
+      "primary_link_url": "https://djed.artifi.finance/"
+    },
+    {
+      "slug": "plastiks",
+      "name": "Plastiks",
+      "category": "utility",
+      "public_family": "Real-World & Utility",
+      "summary": "Circular-economy verification platform developing Cardano-based plastic-recovery and recycling evidence, traceability and plastic-credit infrastructure.",
+      "official_url": "https://plastiks.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/Plastiks_io",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": "https://projectcatalyst.io/funds/13/cardano-partners-enterprise-randd/plastiks-and-csa-powering-plastic-waste-recovery-for-danone-and-other-leading-brands-with-cardano-built-plastic-credit-marketplace",
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": 1,
+      "tags": [
+        "cardano",
+        "sustainability",
+        "recycling",
+        "circular-economy",
+        "plastic-credits",
+        "verification",
+        "real-world"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://plastiks.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/funds/13/cardano-partners-enterprise-randd/plastiks-and-csa-powering-plastic-waste-recovery-for-danone-and-other-leading-brands-with-cardano-built-plastic-credit-marketplace"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Plastiks is moving plastic-recovery verification and credit infrastructure onto Cardano. Its Fund13 Cardano Partners proposal is currently in progress; INDEX:80 records confirmed funded value from that proposal only.",
+      "treasury_funding_value_ada": 500000,
+      "team_entity": "Plastiks / Nozama Tech Ltd.",
+      "primary_link_type": "website",
+      "primary_link_url": "https://plastiks.io/"
+    },
+    {
+      "slug": "epoch-pool",
+      "name": "EPOCH Pool / No Stress dRep",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Independent Cardano stake pool with a connected governance and education presence through the No Stress dRep and Cardano Over Coffee community activity.",
+      "official_url": "https://epochstakepool.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/EPOCHpool",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "stake-pool",
+        "spo",
+        "drep",
+        "governance",
+        "education",
+        "community"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://epochstakepool.com/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/EPOCHpool"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "This record represents the EPOCH stake-pool project. The operator's No Stress dRep and education/community activity are related context rather than a separate INDEX:80 person record.",
+      "team_entity": "EPOCH Pool",
+      "primary_link_type": "website",
+      "primary_link_url": "https://epochstakepool.com/"
+    },
+    {
+      "slug": "preeb-stake-pool",
+      "name": "PREEB Stake Pool",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Small independent Cardano stake pool focused on decentralization, with a public delegation site and community/NFT reward activity.",
+      "official_url": "https://preeb.cloud/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/PREEB_Pool",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": "https://discord.gg/qKuzE8uDE5",
+      "status": "review",
+      "established": "2022",
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "stake-pool",
+        "spo",
+        "single-pool",
+        "decentralization",
+        "community"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://preeb.cloud/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/PREEB_Pool"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "PREEB's official site identifies the pool ticker as PREEB and records its Cardano mainnet launch on 31 May 2022. INDEX:80 does not rank stake pools by rewards or return.",
+      "team_entity": "PREEB",
+      "primary_link_type": "website",
+      "primary_link_url": "https://preeb.cloud/"
+    },
+    {
+      "slug": "bikes-stake-pool",
+      "name": "BIKES Stake Pool",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Community Cardano stake-pool operator with long-running mainnet activity and public involvement in Cardano testnet and infrastructure work.",
+      "official_url": "https://cardanobikes.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/cardanobikes",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "stake-pool",
+        "spo",
+        "community",
+        "musashinet",
+        "mithril",
+        "decentralization"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://x.com/cardanobikes"
+        },
+        {
+          "type": "source",
+          "url": "https://cardanobikes.com/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "The current official X profile states BIKES has been online since epoch 242 and references MusashiNet and Mithril. Those technical-contribution details remain under editorial review.",
+      "team_entity": "BIKES",
+      "primary_link_type": "website",
+      "primary_link_url": "https://cardanobikes.com/"
+    },
+    {
+      "slug": "saturn-swap",
+      "name": "Saturn Swap",
+      "category": "dex",
+      "public_family": "DeFi & Markets",
+      "summary": "Cardano-focused decentralized exchange developing order-book and cross-chain trading infrastructure with Cardano-native settlement.",
+      "official_url": "https://saturnswap.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/SaturnSwapIO",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "dex",
+        "trading",
+        "orderbook",
+        "cross-chain",
+        "agent"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://saturnswap.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/SaturnSwapIO"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Saturn Swap's current first-party material presents its V3 exchange and Cardano-native settlement model. Token and liquidity details should be treated as time-sensitive and checked before any spotlight copy.",
+      "team_entity": "Saturn Swap",
+      "primary_link_type": "website",
+      "primary_link_url": "https://saturnswap.io/"
+    },
+    {
+      "slug": "deltadefi",
+      "name": "DeltaDeFi",
+      "category": "dex",
+      "public_family": "DeFi & Markets",
+      "summary": "Cardano decentralized exchange using Hydra Layer 2 for low-latency order confirmation and API-based trading.",
+      "official_url": "https://deltadefi.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/DeltaDeFi_",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "dex",
+        "hydra",
+        "layer-2",
+        "api",
+        "trading",
+        "orderbook"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://deltadefi.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/DeltaDeFi_"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "DeltaDeFi's current first-party site describes the exchange as live on mainnet and powered by Hydra L2. Performance and fee claims remain first-party product claims rather than INDEX:80 endorsements.",
+      "team_entity": "DeltaDeFi",
+      "primary_link_type": "website",
+      "primary_link_url": "https://deltadefi.io/"
+    },
+    {
+      "slug": "steelswap",
+      "name": "SteelSwap DEX Aggregator",
+      "category": "dex",
+      "public_family": "DeFi & Markets",
+      "summary": "Cardano DEX aggregator that compares and routes swaps across multiple exchanges to improve execution output.",
+      "official_url": "https://steelswap.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/SteelSwap",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "dex",
+        "aggregator",
+        "swap",
+        "routing",
+        "defi"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://steelswap.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/SteelSwap"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "SteelSwap's current product presents itself as a Cardano DEX aggregator using smart routing across available venues. INDEX:80 does not endorse quoted rates or execution outcomes.",
+      "team_entity": "SteelSwap",
+      "primary_link_type": "website",
+      "primary_link_url": "https://steelswap.io/"
+    },
+    {
+      "slug": "flow",
+      "name": "Flow",
+      "category": "lending",
+      "public_family": "DeFi & Markets",
+      "summary": "Open-source pooled lending protocol on Cardano designed for shared liquidity and capital-efficient lending markets.",
+      "official_url": "https://flowlending.org/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/flowdefi",
+      "marketplace_url": "https://flowlending.org/app",
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "defi",
+        "lending",
+        "borrowing",
+        "pooled-liquidity",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://flowlending.org/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/flowdefi"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Flow's current site presents a pooled lending protocol on Cardano. Live market metrics and protocol usage are time-sensitive, so INDEX:80 does not reproduce them as fixed editorial facts.",
+      "team_entity": "Flow",
+      "primary_link_type": "website",
+      "primary_link_url": "https://flowlending.org/"
+    },
+    {
+      "slug": "surf",
+      "name": "Surf",
+      "category": "lending",
+      "public_family": "DeFi & Markets",
+      "summary": "Open-source Cardano lending and borrowing protocol offering pooled markets and leveraged lending tools.",
+      "official_url": "https://surflending.org/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/surfcardano",
+      "marketplace_url": "https://v2.surflending.org/",
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "defi",
+        "lending",
+        "borrowing",
+        "leverage",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://surflending.org/"
+        },
+        {
+          "type": "source",
+          "url": "https://v2.surflending.org/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/surfcardano"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Surf's current V2 product exposes live lending and borrowing functionality. Rates, liquidity and protocol metrics change continuously and are not editorial endorsements.",
+      "team_entity": "Surf",
+      "primary_link_type": "website",
+      "primary_link_url": "https://surflending.org/"
+    },
+    {
+      "slug": "no-witness-labs",
+      "name": "No.Witness Labs",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Blockchain security and smart-contract engineering studio providing audits and development services, with current Cardano and Hydra expertise.",
+      "official_url": "https://nowitnesslabs.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/nowitnesslabs",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "security",
+        "audit",
+        "smart-contracts",
+        "plutus",
+        "haskell",
+        "rust",
+        "hydra",
+        "developer-tool"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://nowitnesslabs.com/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/nowitnesslabs"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "No.Witness Labs works across multiple chains. INDEX:80 includes it for current Cardano-facing security and engineering work; individual audit outcomes should be checked against the relevant project reports.",
+      "team_entity": "No.Witness Labs",
+      "primary_link_type": "website",
+      "primary_link_url": "https://nowitnesslabs.com/"
+    },
+    {
+      "slug": "anzens-usda",
+      "name": "Anzens / USDA",
+      "category": "stablecoin",
+      "public_family": "DeFi & Markets",
+      "summary": "Issuer and access platform for USDA, a US-dollar-backed stablecoin designed initially for the Cardano ecosystem.",
+      "official_url": "https://anzens.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/AnzensOfficial",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "stablecoin",
+        "usda",
+        "fiat",
+        "payments",
+        "anzens"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://anzens.com/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/AnzensOfficial"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Anzens' current material describes USDA as designed for 1:1 US-dollar backing and initially for Cardano. Current availability, reserve attestations and token identifiers must be verified before INDEX:80 presents USDA as live.",
+      "team_entity": "Anzens Inc.",
+      "primary_link_type": "website",
+      "primary_link_url": "https://anzens.com/"
+    },
+    {
+      "slug": "gamechanger-wallet",
+      "name": "GameChanger Wallet",
+      "category": "wallet",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Non-custodial Cardano metawallet and web-app platform designed for desktop and mobile access to wallets and Cardano dApps.",
+      "official_url": "https://gamechanger.finance/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/GameChangerOk",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "wallet",
+        "non-custodial",
+        "dapps",
+        "mobile",
+        "web-app"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://gamechanger.finance/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/GameChangerOk"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "GameChanger's current site presents its V2 wallet and dApp tooling as production-ready. Specific supported integrations remain subject to product updates.",
+      "team_entity": "GameChanger",
+      "primary_link_type": "website",
+      "primary_link_url": "https://gamechanger.finance/"
+    },
+    {
+      "slug": "syncai-network",
+      "name": "SyncAI Network",
+      "category": "ai",
+      "public_family": "Real-World & Utility",
+      "summary": "AI and DePIN network developing on-chain agent and communications infrastructure with an explicit Cardano implementation path.",
+      "official_url": "https://syncgovhub.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/SyncAI_Network",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "ai",
+        "agents",
+        "depin",
+        "communications",
+        "infrastructure"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://x.com/SyncAI_Network"
+        },
+        {
+          "type": "source",
+          "url": "https://staging.syncai.network/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Current SyncAI material explicitly references an AI-powered DePIN network on Cardano. Its public-site routing is still being checked, so the X account remains the primary current identity link during REVIEW.",
+      "team_entity": "SyncAI Network",
+      "primary_link_type": "website",
+      "primary_link_url": "https://syncgovhub.com/"
+    },
+    {
+      "slug": "midgard",
+      "name": "Midgard",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Optimistic-rollup Layer 2 for Cardano being developed by Anastasia Labs to increase throughput while settling back to Cardano.",
+      "official_url": "https://midgardprotocol.com/",
+      "docs_url": null,
+      "github_url": "https://github.com/Anastasia-Labs/Midgard",
+      "social_url": "https://x.com/midgardprotocol",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "layer-2",
+        "optimistic-rollup",
+        "scaling",
+        "infrastructure",
+        "anastasia-labs"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://midgardprotocol.com/"
+        },
+        {
+          "type": "source",
+          "url": "https://github.com/Anastasia-Labs/Midgard"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/midgardprotocol"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Midgard is currently a pre-alpha/testnet Cardano scaling project, not a mature production network. It is indexed separately from Anastasia Labs because it has its own protocol identity and public surface.",
+      "team_entity": "Anastasia Labs",
+      "related_projects": [
+        "anastasia-labs"
+      ],
+      "primary_link_type": "website",
+      "primary_link_url": "https://midgardprotocol.com/"
+    },
+    {
+      "slug": "apex-fusion",
+      "name": "Apex Fusion",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Modular UTxO-and-EVM blockchain ecosystem using Ouroboros and Cardano-derived technology to bridge development across UTxO and account-based environments.",
+      "official_url": "https://apexfusion.org/",
+      "docs_url": "https://developers.apexfusion.org/",
+      "github_url": null,
+      "social_url": "https://x.com/ApexFusion",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "utxo",
+        "evm",
+        "ouroboros",
+        "interoperability",
+        "infrastructure",
+        "cardano-derived",
+        "layer-1",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://apexfusion.org/"
+        },
+        {
+          "type": "source",
+          "url": "https://developers.apexfusion.org/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/ApexFusion"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Apex Fusion is its own blockchain ecosystem, not a Cardano L2 or Cardano-native dApp. INDEX:80 includes it because its current architecture explicitly uses Ouroboros, references Cardano's UTxO ecosystem and derives parts of its stack from Cardano technology.",
+      "team_entity": "Apex Fusion",
+      "primary_link_type": "website",
+      "primary_link_url": "https://apexfusion.org/"
+    },
+    {
+      "slug": "flux-point-studios",
+      "name": "Flux Point Studios",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano-focused software studio developing gaming, AI-agent and developer tooling, including Cardano SDK and on-chain integration work.",
+      "official_url": "https://fluxpointstudios.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/fluxpointstudio",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "developer-tool",
+        "gaming",
+        "ai",
+        "agents",
+        "sdk",
+        "software",
+        "shards"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://fluxpointstudios.com/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/fluxpointstudio"
+        },
+        {
+          "type": "source",
+          "url": "https://docs.fluxpointstudios.com/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Flux Point Studios works across competitive gaming and AI tooling. INDEX:80 includes it for current Cardano-facing development work; individual products and token references remain separate claims to verify at product level.",
+      "team_entity": "Flux Point Studios",
+      "primary_link_type": "website",
+      "primary_link_url": "https://fluxpointstudios.com/"
+    },
+    {
+      "slug": "powered-by-cardano",
+      "name": "Powered by Cardano",
+      "category": "media",
+      "public_family": "Culture & Creators",
+      "summary": "Cardano ecosystem media platform publishing interviews, project coverage, live-event reporting and news updates.",
+      "official_url": "https://poweredbycardano.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/Cardano_Power",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "media",
+        "news",
+        "interviews",
+        "community",
+        "events"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://poweredbycardano.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/Cardano_Power"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Powered by Cardano is indexed as ecosystem media rather than as a protocol or financial product. Its stake-pool and Midnight community roles are related operator context.",
+      "team_entity": "Powered by Cardano",
+      "primary_link_type": "website",
+      "primary_link_url": "https://poweredbycardano.io/"
+    },
+    {
+      "slug": "poki-portfolio",
+      "name": "Poki Portfolio",
+      "category": "analytics",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano mobile portfolio application for tracking ADA, NFTs and collection holdings across a user's Cardano portfolio.",
+      "official_url": "https://getpoki.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/PokiPortfolio",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "portfolio",
+        "analytics",
+        "mobile",
+        "nft",
+        "ada",
+        "tracking"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://getpoki.com/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/PokiPortfolio"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Poki is a portfolio-tracking application rather than a custody wallet. App-store availability and feature coverage can change and should be checked at future reviews.",
+      "team_entity": "Poki Portfolio",
+      "primary_link_type": "website",
+      "primary_link_url": "https://getpoki.com/"
+    },
+    {
+      "slug": "clarity-protocol",
+      "name": "Clarity Protocol",
+      "category": "governance",
+      "public_family": "Governance & Identity",
+      "summary": "Governance platform for Cardano communities providing proposals, voting, treasury workflows, contributor rewards and community operations.",
+      "official_url": "https://www.clarity.community/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/clarity_dao",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "governance",
+        "dao",
+        "voting",
+        "treasury",
+        "community",
+        "drep"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://www.clarity.community/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/clarity_dao"
+        },
+        {
+          "type": "source",
+          "url": "https://cardano.org/governance/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Clarity provides governance infrastructure for Cardano communities and is listed in Cardano's current governance-tools directory. The account's dRep activity is related governance participation, not a separate project identity.",
+      "team_entity": "Clarity Protocol",
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.clarity.community/",
+      "linkedin_url": "https://www.linkedin.com/company/clarityprotocol"
+    },
+    {
+      "slug": "index80",
+      "name": "INDEX:80",
+      "category": "analytics",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Open-source, independently maintained directory and structured dataset of active projects building on or materially connected to Cardano.",
+      "official_url": "https://index80.com",
+      "docs_url": null,
+      "github_url": "https://github.com/index80/site",
+      "social_url": "https://x.com/index80web",
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": "2026",
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "ecosystem-directory",
+        "open-data",
+        "structured-data",
+        "open-source",
+        "research",
+        "ai",
+        "discovery"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://index80.com"
+        },
+        {
+          "type": "source",
+          "url": "https://github.com/index80/site"
+        },
+        {
+          "type": "source",
+          "url": "https://www.linkedin.com/company/index80"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "INDEX:80 is an open-source, independently maintained directory and structured dataset for the active Cardano ecosystem. It connects evidence across project websites, X, LinkedIn, GitHub, Catalyst and on-chain sources. Inclusion is based on activity and evidence, not payment.",
+      "team_entity": "Sharedculture",
+      "founder_lead": "Sharedculture",
+      "primary_link_type": "website",
+      "primary_link_url": "https://index80.com",
+      "linkedin_url": "https://www.linkedin.com/company/index80"
     }
   ]
 }

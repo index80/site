@@ -106,9 +106,13 @@ for (const project of data.projects || []) {
     blocks.push(`<div data-editorial-relation="founder">${metricLabel('FOUNDER / LEAD', 'person')}<strong>${linkifyXHandles(meta.founder_lead)}</strong></div>`);
   }
 
+  // Archived records are a human editorial decision to retire from active
+  // discovery, so they're never surfaced as a "direct connection" on another
+  // project's page even when an editor left the related_projects link in
+  // place — mirrors isListable() in generate-home-directory.mjs.
   const related = (meta.related_projects || [])
     .map((slug) => bySlug.get(slug))
-    .filter(Boolean);
+    .filter((p) => p && p.status !== 'archived');
   if (related.length) {
     const links = related
       .map((p) => `<a href="/projects/${encodeURIComponent(p.slug)}/">${esc(p.name)} →</a>`)

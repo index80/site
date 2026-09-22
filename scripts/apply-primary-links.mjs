@@ -21,14 +21,18 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({
 const safeUrl = (u) => typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null;
 const BAD = new Set(['DEAD', 'SUNSET', 'PARKED']);
 
-const FIELDS = ['official_url','marketplace_url','docs_url','github_url','social_url','discord_url','explorer_url'];
+// linkedin_url is intentionally absent from TYPE_TO_FIELD below: LinkedIn is
+// always a secondary social link and must never be selectable as the primary
+// CTA, however primary_link_type is set.
+const FIELDS = ['official_url','marketplace_url','docs_url','github_url','social_url','linkedin_url','discord_url','explorer_url'];
 const LABELS = {
   official_url:'Official site', marketplace_url:'Marketplace / App', docs_url:'Documentation',
-  github_url:'GitHub', social_url:'Social / X', discord_url:'Discord / Community', explorer_url:'Explorer'
+  github_url:'GitHub', social_url:'Social / X', linkedin_url:'LinkedIn', discord_url:'Discord / Community', explorer_url:'Explorer'
 };
 const CTA = {
   official_url:'VISIT OFFICIAL SITE ↗', marketplace_url:'OPEN THE APP ↗', docs_url:'READ THE DOCUMENTATION ↗',
-  github_url:'VIEW ON GITHUB ↗', social_url:'VISIT ON X / SOCIAL ↗', discord_url:'JOIN THE COMMUNITY ↗', explorer_url:'VIEW ON EXPLORER ↗'
+  github_url:'VIEW ON GITHUB ↗', social_url:'VISIT ON X / SOCIAL ↗', linkedin_url:'VISIT ON LINKEDIN ↗',
+  discord_url:'JOIN THE COMMUNITY ↗', explorer_url:'VIEW ON EXPLORER ↗'
 };
 const TYPE_TO_FIELD = {
   website:'official_url', site:'official_url', official:'official_url',
