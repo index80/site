@@ -20,6 +20,7 @@
     "test:treasury": "node scripts/test-treasury-rule.mjs",
     "test:data": "node scripts/test-cardano-snapshot.mjs",
     "verify:registry-onchain": "node scripts/verify-registry-onchain.mjs",
-    "registry:history": "node scripts/generate-registry-history.mjs"
+    "registry:history": "node scripts/generate-registry-history.mjs",
+    "test:submission-notification": "node scripts/test-submission-notification.mjs"
   }
 }
