@@ -2,7 +2,7 @@
    Existing site behaviour lives in main-core.js; page-specific enhancements
    are loaded separately so the static site stays small and framework-free. */
 (() => {
-  const VERSION = '20260922-1848';
+  const VERSION = '20260922-1921';
   const load = (src) => new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = `${src}?v=${VERSION}`;
@@ -64,6 +64,25 @@
       link.textContent = '𝕏 @index80web ↗';
       const consent = meta.querySelector('[data-consent-toggle]');
       if (consent) consent.insertAdjacentElement('beforebegin', link);
+      else meta.appendChild(link);
+    });
+  }
+
+  function ensureOfficialLinkedInLink() {
+    document.querySelectorAll('.footer-meta').forEach((meta) => {
+      if (meta.querySelector('a[data-index80-linkedin]')) return;
+      const link = document.createElement('a');
+      link.href = 'https://www.linkedin.com/company/index80';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.className = 'footer-social';
+      link.dataset.index80Linkedin = 'true';
+      link.setAttribute('aria-label', 'INDEX:80 on LinkedIn');
+      link.textContent = 'in LinkedIn ↗';
+      const xLink = meta.querySelector('a[data-index80-x]');
+      const consent = meta.querySelector('[data-consent-toggle]');
+      if (xLink) xLink.insertAdjacentElement('afterend', link);
+      else if (consent) consent.insertAdjacentElement('beforebegin', link);
       else meta.appendChild(link);
     });
   }
@@ -183,6 +202,7 @@
     ensureRegistryLink();
     ensurePrivacyLink();
     ensureOfficialXLink();
+    ensureOfficialLinkedInLink();
     ensureLicenceLine();
     enhanceRegistryPage();
   }
