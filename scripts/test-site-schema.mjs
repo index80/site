@@ -153,6 +153,7 @@ for (const parsed of extractJsonLdBlocks(homeHtml, 'homepage')) assertNoForbidde
 const homeWebsites = nodesOfType(homeNodes, 'WebSite');
 if (!homeWebsites.length) fail('homepage: WebSite node missing.');
 const homeSameAs = Array.isArray(homeWebsites[0].sameAs) ? homeWebsites[0].sameAs : [homeWebsites[0].sameAs].filter(Boolean);
+// codeql[js/incomplete-url-substring-sanitization] homeSameAs is an array (Array.prototype.includes = exact-element match, not a substring check), and this only asserts the site's own static JSON-LD lists the official link — no attacker-controlled input is involved.
 if (!homeSameAs.includes('https://x.com/index80web')) fail('homepage: official INDEX:80 X account missing from WebSite sameAs.');
 if (!nodesOfType(homeNodes, 'CollectionPage').length) fail('homepage: CollectionPage node missing.');
 const homeList = collectItemListEntries(homeNodes);
