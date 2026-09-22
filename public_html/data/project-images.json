@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-20T21:47:54.547Z",
+  "generated_at": "2026-09-22T18:03:34.882Z",
   "images": {
     "eternl": {
       "icon": {
@@ -3821,6 +3821,566 @@
         "status": "ok",
         "error": null,
         "note": "Official AlphaGrowth press-kit artwork (https://alphagrowth.io/static/branding/v2/black-bg-primary.png, 2930x1592 RGBA PNG, sha256 0f5ba2f0304368d4…). alphagrowth.io serves a Cloudflare bot challenge to automated fetches (not bypassed); the file was downloaded by Adam in a normal browser and supplied on 2026-09-21. Flattened on black and downscaled to 1600px wide JPEG for web weight; composition unchanged."
+      }
+    },
+    "bbhmm": {
+      "icon": {
+        "path": "/assets/project-images/bbhmm/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://bbhmm.net/wp-content/themes/bbhmm/img/favicon/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 9167,
+        "fetched_at": "2026-09-22T18:03:01.367Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-22T18:03:01.367Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "oli-tutor": {
+      "icon": {
+        "path": "/assets/project-images/oli-tutor/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://cdn.prod.website-files.com/69e5d1f1ddd5f014219d75b5/6a44d7c65395959574413eda_Oli-Logo---Colour-trans%20(1).png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 17636,
+        "fetched_at": "2026-09-22T18:03:02.392Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-22T18:03:02.392Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "open-djed": {
+      "icon": {
+        "path": "/assets/project-images/open-djed/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://djed.artifi.finance/logos/opendjed-icon.svg",
+        "content_type": "image/svg+xml",
+        "width": 684,
+        "height": 684,
+        "bytes": 2879,
+        "fetched_at": "2026-09-22T18:03:03.114Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/open-djed/hero.png",
+        "kind": "og_image",
+        "source_url": "https://djed.artifi.finance/logos/opendjed-banner.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 853,
+        "bytes": 119448,
+        "fetched_at": "2026-09-22T18:03:03.114Z",
+        "status": "ok"
+      }
+    },
+    "plastiks": {
+      "icon": {
+        "path": "/assets/project-images/plastiks/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://plastiks.io/assets/logo/plastiks-symbol-blue.png",
+        "content_type": "image/png",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 34741,
+        "fetched_at": "2026-09-22T18:03:04.000Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/plastiks/hero.png",
+        "kind": "og_image",
+        "source_url": "https://plastiks.io/og/og-default.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 164208,
+        "fetched_at": "2026-09-22T18:03:04.000Z",
+        "status": "ok"
+      }
+    },
+    "epoch-pool": {
+      "icon": {
+        "path": "/assets/project-images/epoch-pool/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://epochstakepool.com/assets/apple-touch-icon-BuMzQHpZ.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 13050,
+        "fetched_at": "2026-09-22T18:03:05.330Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/epoch-pool/hero.png",
+        "kind": "og_image",
+        "source_url": "https://epochstakepool.com/Epoch-logo.png",
+        "content_type": "image/png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 191072,
+        "fetched_at": "2026-09-22T18:03:05.330Z",
+        "status": "ok"
+      }
+    },
+    "preeb-stake-pool": {
+      "icon": {
+        "path": "/assets/project-images/preeb-stake-pool/icon.svg",
+        "kind": "favicon_link",
+        "source_url": "https://www.preeb.cloud/favicon.svg",
+        "content_type": "image/svg+xml",
+        "width": 64,
+        "height": 64,
+        "bytes": 1592,
+        "fetched_at": "2026-09-22T18:03:06.325Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/preeb-stake-pool/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.preeb.cloud/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 794572,
+        "fetched_at": "2026-09-22T18:03:06.325Z",
+        "status": "ok"
+      }
+    },
+    "bikes-stake-pool": {
+      "icon": {
+        "path": "/assets/project-images/bikes-stake-pool/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.cardanobikes.com/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 2513,
+        "fetched_at": "2026-09-22T18:03:08.099Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/bikes-stake-pool/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.cardanobikes.com/og.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 29833,
+        "fetched_at": "2026-09-22T18:03:08.099Z",
+        "status": "ok"
+      }
+    },
+    "saturn-swap": {
+      "icon": {
+        "path": "/assets/project-images/saturn-swap/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://saturnswap.io/saturn-favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 48,
+        "height": 48,
+        "bytes": 15406,
+        "fetched_at": "2026-09-22T18:03:10.965Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-22T18:03:10.965Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "deltadefi": {
+      "icon": {
+        "path": "/assets/project-images/deltadefi/icon.ico",
+        "kind": "favicon_guess",
+        "source_url": "https://www.deltadefi.io/favicon.ico",
+        "content_type": "image/vnd.microsoft.icon",
+        "width": 32,
+        "height": 32,
+        "bytes": 1151,
+        "fetched_at": "2026-09-22T18:03:11.684Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-22T18:03:11.684Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "steelswap": {
+      "icon": {
+        "path": "/assets/project-images/steelswap/icon.ico",
+        "kind": "favicon_guess",
+        "source_url": "https://steelswap.io/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 256,
+        "height": 256,
+        "bytes": 6490,
+        "fetched_at": "2026-09-22T18:03:12.277Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-22T18:03:12.277Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "flow": {
+      "icon": {
+        "path": "/assets/project-images/flow/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://surflending.org/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 33881,
+        "fetched_at": "2026-09-22T18:03:13.225Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/flow/hero.png",
+        "kind": "og_image",
+        "source_url": "https://surflending.org/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 629,
+        "bytes": 17271,
+        "fetched_at": "2026-09-22T18:03:13.225Z",
+        "status": "ok"
+      }
+    },
+    "surf": {
+      "icon": {
+        "path": "/assets/project-images/surf/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://surflending.org/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 33881,
+        "fetched_at": "2026-09-22T18:03:13.567Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/surf/hero.png",
+        "kind": "og_image",
+        "source_url": "https://surflending.org/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 629,
+        "bytes": 17271,
+        "fetched_at": "2026-09-22T18:03:13.567Z",
+        "status": "ok"
+      }
+    },
+    "no-witness-labs": {
+      "icon": {
+        "path": "/assets/project-images/no-witness-labs/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://framerusercontent.com/images/JUb0le7Ku4Mcy9g0MmuZEQgApRc.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 1052,
+        "fetched_at": "2026-09-22T18:03:15.150Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/no-witness-labs/hero.png",
+        "kind": "og_image",
+        "source_url": "https://framerusercontent.com/images/zaoJINykz6qIKCd3xck8OYxxrxg.png",
+        "content_type": "image/png",
+        "width": 3600,
+        "height": 1890,
+        "bytes": 52922,
+        "fetched_at": "2026-09-22T18:03:15.150Z",
+        "status": "ok"
+      }
+    },
+    "anzens-usda": {
+      "icon": {
+        "path": "/assets/project-images/anzens-usda/icon.ico",
+        "kind": "favicon_link",
+        "source_url": "https://anzens.com/favicon.ico",
+        "content_type": "image/x-icon",
+        "width": 254,
+        "height": 251,
+        "bytes": 56477,
+        "fetched_at": "2026-09-22T18:03:16.060Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-22T18:03:16.060Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "gamechanger-wallet": {
+      "icon": {
+        "path": "/assets/project-images/gamechanger-wallet/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://gamechanger.finance/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 18766,
+        "fetched_at": "2026-09-22T18:03:21.997Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/gamechanger-wallet/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://gamechanger.finance/images/Banner1500x500.jpeg",
+        "content_type": "image/jpeg",
+        "width": 1500,
+        "height": 500,
+        "bytes": 83728,
+        "fetched_at": "2026-09-22T18:03:21.997Z",
+        "status": "ok"
+      }
+    },
+    "syncai-network": {
+      "icon": {
+        "path": "/assets/project-images/syncai-network/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.syncgovhub.com/favicon_io/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 13656,
+        "fetched_at": "2026-09-22T18:03:23.200Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/syncai-network/hero.png",
+        "kind": "og_image",
+        "source_url": "https://opengraph.b-cdn.net/production/images/714bb2c3-ad7d-46ef-8007-2b1d0674c23c.png?token=NVIUqFDdt_3GCiHNScMBVy15QBXpyyPNzV7bmFvItUc&height=630&width=1200&expires=33280287181",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 348016,
+        "fetched_at": "2026-09-22T18:03:23.200Z",
+        "status": "ok"
+      }
+    },
+    "midgard": {
+      "icon": {
+        "path": "/assets/project-images/midgard/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://midgardprotocol.com/assets/favicon.png",
+        "content_type": "image/png",
+        "width": 673,
+        "height": 456,
+        "bytes": 20417,
+        "fetched_at": "2026-09-22T18:03:23.668Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-22T18:03:23.668Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "apex-fusion": {
+      "icon": {
+        "path": "/assets/project-images/apex-fusion/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://apexfusion.org/build/assets/favicon-BZnCTxLO.png",
+        "content_type": "image/png",
+        "width": 100,
+        "height": 100,
+        "bytes": 987,
+        "fetched_at": "2026-09-22T18:03:24.638Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/apex-fusion/hero.png",
+        "kind": "og_image",
+        "source_url": "https://apexfusion.org/build/assets/apexfusion-og-CPqc6IVP.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 792762,
+        "fetched_at": "2026-09-22T18:03:24.638Z",
+        "status": "ok"
+      }
+    },
+    "flux-point-studios": {
+      "icon": {
+        "path": "/assets/project-images/flux-point-studios/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://fluxpointstudios.com/images/FPS_Logo_Color_only_250px.png",
+        "content_type": "image/png",
+        "width": 250,
+        "height": 274,
+        "bytes": 34484,
+        "fetched_at": "2026-09-22T18:03:25.734Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/flux-point-studios/hero.png",
+        "kind": "og_image",
+        "source_url": "https://fluxpointstudios.com/images/fps-og.png",
+        "content_type": "image/png",
+        "width": 1536,
+        "height": 1536,
+        "bytes": 455445,
+        "fetched_at": "2026-09-22T18:03:25.734Z",
+        "status": "ok"
+      }
+    },
+    "powered-by-cardano": {
+      "icon": {
+        "path": "/assets/project-images/powered-by-cardano/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://www.poweredbycardano.io/wp-content/uploads/2025/11/Untitled-design-11-scaled.png",
+        "content_type": "image/png",
+        "width": 2560,
+        "height": 2560,
+        "bytes": 185583,
+        "fetched_at": "2026-09-22T18:03:32.626Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/powered-by-cardano/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.poweredbycardano.io/wp-content/uploads/2025/12/cardano-ada-logo.png",
+        "content_type": "image/png",
+        "width": 2000,
+        "height": 2000,
+        "bytes": 91295,
+        "fetched_at": "2026-09-22T18:03:32.626Z",
+        "status": "ok"
+      }
+    },
+    "poki-portfolio": {
+      "icon": {
+        "path": "/assets/project-images/poki-portfolio/icon.svg",
+        "kind": "apple_touch_icon",
+        "source_url": "https://getpoki.com/images/PokiLogoShort.svg",
+        "content_type": "image/svg+xml",
+        "width": 20,
+        "height": 30,
+        "bytes": 220,
+        "fetched_at": "2026-09-22T18:03:33.475Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/poki-portfolio/hero.png",
+        "kind": "og_image",
+        "source_url": "https://getpoki.com/opengraph-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 675,
+        "bytes": 65122,
+        "fetched_at": "2026-09-22T18:03:33.475Z",
+        "status": "ok"
+      }
+    },
+    "clarity-protocol": {
+      "icon": {
+        "path": "/assets/project-images/clarity-protocol/icon.png",
+        "kind": "favicon_link",
+        "source_url": "https://www.clarity.community/favicon-32x32.png",
+        "content_type": "image/png",
+        "width": 32,
+        "height": 32,
+        "bytes": 1079,
+        "fetched_at": "2026-09-22T18:03:33.887Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": null,
+        "kind": null,
+        "source_url": null,
+        "content_type": null,
+        "width": null,
+        "height": null,
+        "bytes": null,
+        "fetched_at": "2026-09-22T18:03:33.887Z",
+        "status": "no_image_found",
+        "error": "no usable og:image/twitter:image found on official site"
+      }
+    },
+    "index80": {
+      "icon": {
+        "path": "/assets/project-images/index80/icon.png",
+        "kind": "apple_touch_icon",
+        "source_url": "https://index80.com/assets/icons/apple-touch-icon.png",
+        "content_type": "image/png",
+        "width": 180,
+        "height": 180,
+        "bytes": 649,
+        "fetched_at": "2026-09-22T18:03:34.627Z",
+        "status": "ok"
+      },
+      "hero": {
+        "path": "/assets/project-images/index80/hero.webp",
+        "kind": "og_image",
+        "source_url": "https://index80.com/assets/images/index80-hero-home.webp",
+        "content_type": "image/webp",
+        "width": 1760,
+        "height": 831,
+        "bytes": 327718,
+        "fetched_at": "2026-09-22T18:03:34.627Z",
+        "status": "ok"
       }
     }
   }

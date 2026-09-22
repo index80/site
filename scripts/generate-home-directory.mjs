@@ -68,6 +68,16 @@ function validProject(p) {
   );
 }
 
+// Archived records keep their own static page (generate-project-pages.mjs
+// still builds it) but are a human editorial decision to retire from active
+// discovery — never list them in the homepage directory. Applied wherever
+// validProject() gates an *active listing* surface (this file,
+// generate-site-schema.mjs's ItemList, directory.js's client search); never
+// applied in generate-project-pages.mjs, which must keep building the page.
+function isListable(p) {
+  return validProject(p) && p.status !== 'archived';
+}
+
 function loadFallbackRelations() {
   if (!existsSync(RELATIONS_FILE)) return {};
   try {
@@ -164,7 +174,7 @@ function updateStaticCount(html, count) {
 
 function main() {
   const data = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
-  const projects = (data.projects || []).filter(validProject);
+  const projects = (data.projects || []).filter(isListable);
   const fallbackRelations = loadFallbackRelations();
   const relations = effectiveRelations(projects, fallbackRelations);
   const ordered = orderByRelations(projects, relations);

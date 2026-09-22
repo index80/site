@@ -56,6 +56,13 @@ function validProject(p) {
   );
 }
 
+// Archived records keep their static page but are excluded from the
+// homepage/governance ItemList schema — mirrors isListable() in
+// generate-home-directory.mjs.
+function isListable(p) {
+  return validProject(p) && p.status !== 'archived';
+}
+
 function loadFallbackRelations() {
   if (!existsSync(RELATIONS_FILE)) return {};
   try {
@@ -143,7 +150,7 @@ function homeGraph(ordered) {
         url: `${SITE_URL}/`,
         name: 'INDEX:80 / CARDANO',
         description: HOME_META_DESCRIPTION,
-        sameAs: ['https://x.com/index80web'],
+        sameAs: ['https://x.com/index80web', 'https://www.linkedin.com/company/index80'],
         inLanguage: 'en',
       },
       {
@@ -232,7 +239,7 @@ function writePage(file, startMarker, endMarker, graph, label) {
 
 function main() {
   const data = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
-  const valid = (data.projects || []).filter(validProject);
+  const valid = (data.projects || []).filter(isListable);
   const slugSet = new Set(valid.map((p) => p.slug));
   if (slugSet.size !== valid.length) {
     throw new Error('projects.json contains duplicate valid slugs.');

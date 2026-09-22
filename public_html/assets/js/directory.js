@@ -240,7 +240,11 @@
   ])
     .then(([data, relationData]) => {
       const fallbackRelations = relationData.records || {};
-      const projectRows = data.projects || [];
+      // Archived records keep their own static /projects/<slug>/ page but are
+      // a human editorial decision to retire from active discovery — never
+      // surface them in the homepage directory/search. Mirrors isListable()
+      // in scripts/generate-home-directory.mjs and generate-site-schema.mjs.
+      const projectRows = (data.projects || []).filter((p) => p.status !== 'archived');
       const nameBySlug = new Map(projectRows.map((p) => [p.slug, p.name]));
       const effectiveRelations = {};
 

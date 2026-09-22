@@ -633,7 +633,9 @@ body[data-page="about"] .method-flow div { background:color-mix(in srgb, var(--a
 .badge-pending { color:#9cb7cd; }
 .badge-review { color:var(--amber); }
 .badge-live { color:var(--green); }
+.badge-archived { color:#8a8f98; }
 .dark .badge-pending { color:#9cb7cd; }
+.dark .badge-archived { color:#9aa0aa; }
 
 /* Simple hero/lede used at the top of shell pages (data/learn/governance/news/projects) */
 .section-hero { min-height:auto; background:linear-gradient(180deg,#92dbff 0,#59bff0 100%); }

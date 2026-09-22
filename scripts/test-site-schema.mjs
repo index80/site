@@ -30,6 +30,12 @@ function validProject(p) {
   );
 }
 
+// Mirrors isListable() in generate-site-schema.mjs: archived records are
+// excluded from the ItemList schema even though they keep a static page.
+function isListable(p) {
+  return validProject(p) && p.status !== 'archived';
+}
+
 function fail(message) {
   console.error(`[test-site-schema] FAIL: ${message}`);
   process.exit(1);
@@ -139,7 +145,7 @@ function readHtmlOrFail(file, label) {
 
 // ---- Expected records (same validity rule as the static generators) ----
 const data = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
-const valid = (data.projects || []).filter(validProject);
+const valid = (data.projects || []).filter(isListable);
 const validSet = new Set(valid.map((p) => p.slug));
 if (validSet.size !== valid.length) fail('projects.json contains duplicate valid slugs.');
 const validBySlug = new Map(valid.map((p) => [p.slug, p]));

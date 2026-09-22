@@ -30,13 +30,19 @@ function validProject(p) {
   );
 }
 
+// Mirrors isListable() in generate-home-directory.mjs: archived records keep
+// their own static page but are excluded from the active homepage directory.
+function isListable(p) {
+  return validProject(p) && p.status !== 'archived';
+}
+
 function fail(message) {
   console.error(`[test-home-directory] FAIL: ${message}`);
   process.exit(1);
 }
 
 const data = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
-const expected = (data.projects || []).filter(validProject).map((p) => p.slug);
+const expected = (data.projects || []).filter(isListable).map((p) => p.slug);
 const expectedSet = new Set(expected);
 if (expectedSet.size !== expected.length) fail('projects.json contains duplicate valid slugs.');
 

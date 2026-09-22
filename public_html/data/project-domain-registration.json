@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-21T18:10:29.096Z",
+  "generated_at": "2026-09-22T18:10:45.840Z",
   "source": "IANA RDAP bootstrap + authoritative registry RDAP registration event",
   "note": "Domain registration is evidence of web-domain age, not necessarily the project founding date.",
-  "count": 168,
+  "count": 191,
   "records": {
     "wojaks": {
       "status": "no_current_official_domain",
@@ -305,7 +305,7 @@
       "domain": "docs.gomaestro.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.gomaestro.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-21T18:10:25.113Z"
+      "checked_at": "2026-09-22T18:10:44.745Z"
     },
     "txpipe": {
       "status": "no_rdap_service",
@@ -380,14 +380,14 @@
       "domain": "docs.cardano.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.cardano.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-21T18:10:25.322Z"
+      "checked_at": "2026-09-22T18:10:44.953Z"
     },
     "plutus": {
       "status": "fetch_error",
       "domain": "docs.cardano.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.cardano.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-21T18:10:25.536Z"
+      "checked_at": "2026-09-22T18:10:45.185Z"
     },
     "marlowe": {
       "status": "no_rdap_service",
@@ -458,7 +458,7 @@
       "domain": "vault.adatokenvault.com",
       "rdap_url": "https://rdap.verisign.com/com/v1/domain/vault.adatokenvault.com",
       "error": "HTTP 404",
-      "checked_at": "2026-09-21T18:10:25.749Z"
+      "checked_at": "2026-09-22T18:10:45.351Z"
     },
     "farmbot": {
       "status": "ok",
@@ -701,7 +701,7 @@
       "domain": "server-tools.grahamsnumberplus1.com",
       "rdap_url": "https://rdap.verisign.com/com/v1/domain/server-tools.grahamsnumberplus1.com",
       "error": "HTTP 404",
-      "checked_at": "2026-09-21T18:10:25.980Z"
+      "checked_at": "2026-09-22T18:10:45.486Z"
     },
     "deadpxlz": {
       "status": "ok",
@@ -1046,6 +1046,169 @@
     "alphagrowth": {
       "status": "no_rdap_service",
       "domain": "alphagrowth.io"
+    },
+    "bbhmm": {
+      "status": "ok",
+      "domain": "bbhmm.net",
+      "registration_date": "2020-07-31",
+      "registration_timestamp": "2020-07-31T13:54:23Z",
+      "rdap_url": "https://rdap.verisign.com/net/v1/domain/bbhmm.net",
+      "checked_at": "2026-09-22T11:05:22.927Z"
+    },
+    "oli-tutor": {
+      "status": "ok",
+      "domain": "oli-tutor.com",
+      "registration_date": "2025-08-02",
+      "registration_timestamp": "2025-08-02T09:47:07Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/oli-tutor.com",
+      "checked_at": "2026-09-22T11:05:23.081Z"
+    },
+    "open-djed": {
+      "status": "fetch_error",
+      "domain": "djed.artifi.finance",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/djed.artifi.finance",
+      "error": "HTTP 400",
+      "checked_at": "2026-09-22T18:10:45.719Z"
+    },
+    "plastiks": {
+      "status": "no_rdap_service",
+      "domain": "plastiks.io"
+    },
+    "epoch-pool": {
+      "status": "ok",
+      "domain": "epochstakepool.com",
+      "registration_date": "2021-07-02",
+      "registration_timestamp": "2021-07-02T20:15:35Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/epochstakepool.com",
+      "checked_at": "2026-09-22T11:05:23.432Z"
+    },
+    "preeb-stake-pool": {
+      "status": "ok",
+      "domain": "preeb.cloud",
+      "registration_date": "2022-05-23",
+      "registration_timestamp": "2022-05-23T21:52:01.363Z",
+      "rdap_url": "https://rdap.registry.cloud/rdap/domain/preeb.cloud",
+      "checked_at": "2026-09-22T11:05:23.846Z"
+    },
+    "bikes-stake-pool": {
+      "status": "ok",
+      "domain": "cardanobikes.com",
+      "registration_date": "2024-12-21",
+      "registration_timestamp": "2024-12-21T18:47:58Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/cardanobikes.com",
+      "checked_at": "2026-09-22T11:05:24.001Z"
+    },
+    "saturn-swap": {
+      "status": "no_rdap_service",
+      "domain": "saturnswap.io"
+    },
+    "deltadefi": {
+      "status": "no_rdap_service",
+      "domain": "deltadefi.io"
+    },
+    "steelswap": {
+      "status": "no_rdap_service",
+      "domain": "steelswap.io"
+    },
+    "flow": {
+      "status": "ok",
+      "domain": "flowlending.org",
+      "registration_date": "2025-08-22",
+      "registration_timestamp": "2025-08-22T20:50:35.805Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/flowlending.org",
+      "checked_at": "2026-09-22T11:05:24.189Z"
+    },
+    "surf": {
+      "status": "ok",
+      "domain": "surflending.org",
+      "registration_date": "2025-09-04",
+      "registration_timestamp": "2025-09-04T17:32:56.437Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/surflending.org",
+      "checked_at": "2026-09-22T11:05:24.372Z"
+    },
+    "no-witness-labs": {
+      "status": "ok",
+      "domain": "nowitnesslabs.com",
+      "registration_date": "2025-06-20",
+      "registration_timestamp": "2025-06-20T16:35:09Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/nowitnesslabs.com",
+      "checked_at": "2026-09-22T11:05:24.527Z"
+    },
+    "anzens-usda": {
+      "status": "ok",
+      "domain": "anzens.com",
+      "registration_date": "2022-09-13",
+      "registration_timestamp": "2022-09-13T15:07:18Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/anzens.com",
+      "checked_at": "2026-09-22T11:05:24.680Z"
+    },
+    "gamechanger-wallet": {
+      "status": "ok",
+      "domain": "gamechanger.finance",
+      "registration_date": "2021-07-13",
+      "registration_timestamp": "2021-07-13T23:44:46.077Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/gamechanger.finance",
+      "checked_at": "2026-09-22T11:05:24.863Z"
+    },
+    "syncai-network": {
+      "status": "ok",
+      "domain": "syncgovhub.com",
+      "registration_date": "2025-04-10",
+      "registration_timestamp": "2025-04-10T12:17:36Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/syncgovhub.com",
+      "checked_at": "2026-09-22T11:05:25.092Z"
+    },
+    "midgard": {
+      "status": "ok",
+      "domain": "midgardprotocol.com",
+      "registration_date": "2024-07-17",
+      "registration_timestamp": "2024-07-17T10:44:45Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/midgardprotocol.com",
+      "checked_at": "2026-09-22T11:05:25.245Z"
+    },
+    "apex-fusion": {
+      "status": "ok",
+      "domain": "apexfusion.org",
+      "registration_date": "2023-05-02",
+      "registration_timestamp": "2023-05-02T14:45:12.838Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/apexfusion.org",
+      "checked_at": "2026-09-22T11:05:25.428Z"
+    },
+    "flux-point-studios": {
+      "status": "ok",
+      "domain": "fluxpointstudios.com",
+      "registration_date": "2023-11-07",
+      "registration_timestamp": "2023-11-07T17:57:58Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/fluxpointstudios.com",
+      "checked_at": "2026-09-22T11:05:25.580Z"
+    },
+    "powered-by-cardano": {
+      "status": "no_rdap_service",
+      "domain": "poweredbycardano.io"
+    },
+    "poki-portfolio": {
+      "status": "ok",
+      "domain": "getpoki.com",
+      "registration_date": "2022-11-01",
+      "registration_timestamp": "2022-11-01T10:44:06Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/getpoki.com",
+      "checked_at": "2026-09-22T11:05:25.807Z"
+    },
+    "clarity-protocol": {
+      "status": "ok",
+      "domain": "clarity.community",
+      "registration_date": "2022-05-20",
+      "registration_timestamp": "2022-05-20T18:47:43.325Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/clarity.community",
+      "checked_at": "2026-09-22T11:05:26.002Z"
+    },
+    "index80": {
+      "status": "ok",
+      "domain": "index80.com",
+      "registration_date": "2026-09-08",
+      "registration_timestamp": "2026-09-08T05:47:15Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/index80.com",
+      "checked_at": "2026-09-22T17:26:51.463Z"
     }
   }
 }

@@ -112,11 +112,14 @@ function metaDescription(p) {
 // chat server isn't a "destination" in the same sense as a site/app/X
 // profile, so it never becomes the primary CTA even when it's the only
 // link populated.
+// linkedin_url is deliberately absent from LINK_PRIORITY: LinkedIn is always
+// a secondary social link and must never be selected as the primary CTA.
 const LINK_PRIORITY = ['official_url', 'marketplace_url', 'github_url', 'docs_url', 'social_url'];
-const LINK_DISPLAY_ORDER = ['official_url', 'marketplace_url', 'docs_url', 'github_url', 'social_url', 'discord_url'];
+const LINK_DISPLAY_ORDER = ['official_url', 'marketplace_url', 'docs_url', 'github_url', 'social_url', 'linkedin_url', 'discord_url'];
 const LINK_LABELS = {
   official_url: 'Official site', docs_url: 'Documentation', github_url: 'GitHub',
   social_url: 'Social / X', marketplace_url: 'Marketplace / App', discord_url: 'Discord / Community',
+  linkedin_url: 'LinkedIn',
 };
 const PRIMARY_CTA_LABEL = {
   official_url: 'VISIT OFFICIAL SITE ↗',
@@ -124,6 +127,7 @@ const PRIMARY_CTA_LABEL = {
   github_url: 'VIEW ON GITHUB ↗',
   docs_url: 'READ THE DOCUMENTATION ↗',
   social_url: 'VISIT ON X / SOCIAL ↗',
+  linkedin_url: 'VISIT ON LINKEDIN ↗',
 };
 
 // A link the verification engine has classified DEAD/SUNSET/PARKED must
@@ -220,6 +224,19 @@ function treasuryBadge(p) {
   return `<span class="badge-treasury" title="Confirmed Cardano Treasury funding on record${ref ? ` (${esc(ref)})` : ''}"><span class="ada-glyph" aria-hidden="true">₳</span>TREASURY FUNDED</span>`;
 }
 
+// Archived is a human editorial decision (status === 'archived'), never
+// inferred by the generator. The page keeps rendering in full — this is a
+// clear marker, not a takedown — while generate-home-directory.mjs,
+// generate-site-schema.mjs and directory.js separately keep archived
+// records out of the active directory, JSON-LD ItemList and client search.
+function archivedBadge(p) {
+  if (p.status !== 'archived') return '';
+  // "CLOSURE ANNOUNCED" rather than "OPERATIONS CEASED": true whether the
+  // announced closure date is already past or still upcoming (e.g. Genius
+  // Yield's 15 October 2026) — never states a future event as already done.
+  return `<span class="badge badge-archived" title="Historical record — retained for context and provenance">ARCHIVED · CLOSURE ANNOUNCED</span>`;
+}
+
 // Compact profile-page metadata entry: the confirmed funded-proposal count and
 // any award value (USD and ADA kept separate, never converted), plus a link to
 // the Catalyst record. For a single-proposal reference the scope note makes
@@ -277,11 +294,13 @@ function evidenceLabel(s, p) {
   if (p.marketplace_url && url === p.marketplace_url) return 'Official app';
   if (p.docs_url && url === p.docs_url) return 'Official documentation';
   if (p.social_url && url === p.social_url) return 'Official X';
+  if (p.linkedin_url && url === p.linkedin_url) return 'Official LinkedIn';
   if (p.discord_url && url === p.discord_url) return 'Community / Discord';
   const host = hostnameOf(url);
   if (hostMatches(host, 'wayup.io')) return 'Wayup collection';
   if (hostMatches(host, 'discord.gg', 'discord.com')) return 'Community / Discord';
   if (hostMatches(host, 'twitter.com', 'x.com')) return 'Official X';
+  if (hostMatches(host, 'linkedin.com')) return 'Official LinkedIn';
   if (hostMatches(host, 'github.com')) return 'GitHub';
   if (hostMatches(host, 'web.archive.org')) return 'Web archive';
   if (hostMatches(host, 'cardanoscan.io', 'cexplorer.io', 'pool.pm', 'adastat.net')) return 'Cardano on-chain record';
@@ -361,7 +380,7 @@ function jsonLd(p, canonicalUrl, linkHistoryRecord) {
   // "no known-dead destination presented as current" rule.
   const effectivePrimary = effectivePrimaryLink(p, linkHistoryRecord);
   if (effectivePrimary && !effectivePrimary.suppressed) about.url = effectivePrimary.url;
-  const sameAs = [p.docs_url, p.github_url, p.social_url, p.discord_url].filter(Boolean);
+  const sameAs = [p.docs_url, p.github_url, p.social_url, p.linkedin_url, p.discord_url].filter(Boolean);
   if (sameAs.length) about.sameAs = sameAs;
 
   const webPage = {
@@ -491,7 +510,7 @@ function renderProjectPage(p, images, linkHistoryRecord) {
     <section class="panel profile-header">
       <div class="profile-heading">
         <span class="profile-icon">${profileIcon(p, images)}</span>
-        <h1>${esc(p.name)}</h1>${Treasury.isConfirmedFunded(p) ? `\n        ${treasuryBadge(p)}` : ''}
+        <h1>${esc(p.name)}</h1>${Treasury.isConfirmedFunded(p) ? `\n        ${treasuryBadge(p)}` : ''}${p.status === 'archived' ? `\n        ${archivedBadge(p)}` : ''}
       </div>
     </section>
 
@@ -522,6 +541,8 @@ function renderProjectPage(p, images, linkHistoryRecord) {
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
       <a href="/about/">◇ About</a>
+      <a href="https://x.com/index80web" target="_blank" rel="noopener noreferrer">𝕏 X</a>
+      <a href="https://www.linkedin.com/company/index80" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
     </nav>
     <div class="footer-meta">
       <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>
