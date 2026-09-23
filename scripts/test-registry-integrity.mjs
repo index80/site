@@ -15,6 +15,7 @@ const PRIV = path.join(ROOT, 'registry-private/releases');
 const PINNED = {
   '0001': { hash: '14546a96f15632eeedba12464adc17531597a5f40181e0b72cf7a060933375d2', tx: 'bd2f95598b963430435e893c9896f481cc8c0299edb2ee9356f6918c37219563', network: 'preprod' },
   '0002': { hash: 'c6fe33631f95ebf8d36e50caa9aa18051891e670ce9e89607ac03e28e4def3bc', tx: '9e6a2f3c6e51e6dc9f9bae8498dd8bb68ca3693e1cd1edaa68f4d03ca83dabb1', network: 'mainnet' },
+  '0003': { hash: '51146bc27168293fc0262f606f05bea1bc72562407ad7df2cb62e417731965a8', tx: '4e49332fafb2a94d8660da75b16cc0cbd2ef8e79320896148e15bdce7fa72067', network: 'mainnet' },
 };
 const readJson = (f) => JSON.parse(fs.readFileSync(f, 'utf8'));
 // The public source repository ships without the private originals (marker written by the export).

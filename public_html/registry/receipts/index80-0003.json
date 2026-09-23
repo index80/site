@@ -1,0 +1,28 @@
+{
+  "schema": "INDEX80 Registry Anchor Receipt v1",
+  "release_id": "INDEX80-0003",
+  "network": "mainnet",
+  "publisher_address": "addr1qxljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhqjnqcrz",
+  "publisher_stake_credential": "fdcd66d6ac0f965f2c886a0a4b6068cbb84b30fbb0fe67cdaa2f802e",
+  "snapshot_hash": "51146bc27168293fc0262f606f05bea1bc72562407ad7df2cb62e417731965a8",
+  "metadata_label": 309,
+  "proof_standard": "CIP-190",
+  "proof_cbor_hex": "a2617601656974656d7381a166686173686573a168736861322d323536582051146bc27168293fc0262f606f05bea1bc72562407ad7df2cb62e417731965a8",
+  "transaction_id": "4e49332fafb2a94d8660da75b16cc0cbd2ef8e79320896148e15bdce7fa72067",
+  "fee_lovelace": "172893",
+  "local_signed_size_bytes": 394,
+  "onchain_size_bytes": 393,
+  "submitted_at": "2026-09-23T09:39:26.648Z",
+  "block": 13977470,
+  "block_hash": "7f48cfccfddb14ff623516d947bddb76a7150605d43a8445c675c61e858c87eb",
+  "epoch": 657,
+  "slot": 129303,
+  "absolute_slot": 198590103,
+  "cardanoscan_timestamp_display": "Sep 23, 2026 10:39:54 AM",
+  "confirmation_observed": {
+    "date": "2026-09-23",
+    "assurance": "High assurance",
+    "source": "Koios Mainnet independent verification; CardanoScan Mainnet visual review"
+  },
+  "status": "CONFIRMED"
+}
