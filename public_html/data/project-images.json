@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-22T18:03:34.882Z",
+  "generated_at": "2026-09-24T15:17:33.827Z",
   "images": {
     "eternl": {
       "icon": {
@@ -2050,6 +2050,19 @@
         "bytes": 18035,
         "fetched_at": "2026-09-13T15:19:11.635Z",
         "status": "ok"
+      },
+      "hero_light": {
+        "path": "/assets/project-images/mlabs/hero-light.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.mlabs.city/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 224,
+        "bytes": 12602,
+        "fetched_at": "2026-09-24T10:49:56.000Z",
+        "status": "ok",
+        "error": null,
+        "note": "Official MLabs light-background logo (black wordmark) supplied directly by the MLabs team (handoff-supplied file, not a live fetch; originally shared via a file link, replaced here with the project's official site). Used as the LIGHT colour-mode artwork; the existing hero remains the default and DARK artwork. The logo remains the property of MLabs."
       }
     },
     "anastasia-labs": {
@@ -3289,16 +3302,17 @@
         "error": "official site fetch failed: HTTP 403"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-15T23:04:35.825Z",
-        "status": "fetch_error",
-        "error": "official site fetch failed: HTTP 403"
+        "path": "/assets/project-images/adalite/hero.webp",
+        "kind": "manual_editorial_upload",
+        "source_url": "editorial-upload:adam-2026-09-23",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1161,
+        "bytes": 99032,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website homepage"
       }
     },
     "chibidango-heroes": {
@@ -3568,16 +3582,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-15T23:04:16.932Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/directed/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://directed.dev/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1318,
+        "bytes": 50186,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website homepage"
       }
     },
     "spacebudz": {
@@ -3836,16 +3851,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-22T18:03:01.367Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/bbhmm/hero.png",
+        "kind": "body_img",
+        "source_url": "https://bbhmm.net/wp-content/themes/bbhmm/img/logo/mobile-logo.png",
+        "content_type": "image/png",
+        "width": 401,
+        "height": 101,
+        "bytes": 2622,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
       }
     },
     "oli-tutor": {
@@ -3861,16 +3877,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-22T18:03:02.392Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/oli-tutor/hero.png",
+        "kind": "body_img",
+        "source_url": "https://cdn.prod.website-files.com/69e5d1f1ddd5f014219d75b5/69e9a1dd045ff7fa3bed0cbf_Oli-Logo-Colour-800x800.png",
+        "content_type": "image/png",
+        "width": 800,
+        "height": 800,
+        "bytes": 34668,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\", hosted on cdn.prod.website-files.com)."
       }
     },
     "open-djed": {
@@ -4006,16 +4023,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-22T18:03:10.965Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/saturn-swap/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://saturnswap.io/v3",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1640,
+        "bytes": 128572,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website image"
       }
     },
     "deltadefi": {
@@ -4031,16 +4049,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-22T18:03:11.684Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/deltadefi/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://www.deltadefi.io/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1415,
+        "bytes": 63518,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website image"
       }
     },
     "steelswap": {
@@ -4056,16 +4075,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-22T18:03:12.277Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/steelswap/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://steelswap.io/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1221,
+        "bytes": 42072,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home"
       }
     },
     "flow": {
@@ -4153,16 +4173,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-22T18:03:16.060Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/anzens-usda/hero.png",
+        "kind": "body_img",
+        "source_url": "https://anzens.com/landing/unlock/buy_and_sell.png",
+        "content_type": "image/png",
+        "width": 272,
+        "height": 550,
+        "bytes": 51185,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
       }
     },
     "gamechanger-wallet": {
@@ -4226,16 +4247,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-22T18:03:23.668Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/midgard/hero.png",
+        "kind": "body_img",
+        "source_url": "https://midgardprotocol.com/assets/logo-dark.png",
+        "content_type": "image/png",
+        "width": 1092,
+        "height": 251,
+        "bytes": 34229,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
       }
     },
     "apex-fusion": {
@@ -4347,16 +4369,17 @@
         "status": "ok"
       },
       "hero": {
-        "path": null,
-        "kind": null,
-        "source_url": null,
-        "content_type": null,
-        "width": null,
-        "height": null,
-        "bytes": null,
-        "fetched_at": "2026-09-22T18:03:33.887Z",
-        "status": "no_image_found",
-        "error": "no usable og:image/twitter:image found on official site"
+        "path": "/assets/project-images/clarity-protocol/hero.png",
+        "kind": "body_img",
+        "source_url": "https://www.clarity.community/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FClarityLogo.b39cc756.png&w=256&q=75",
+        "content_type": "image/png",
+        "width": 256,
+        "height": 66,
+        "bytes": 2921,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
       }
     },
     "index80": {
@@ -4381,6 +4404,366 @@
         "bytes": 327718,
         "fetched_at": "2026-09-22T18:03:34.627Z",
         "status": "ok"
+      }
+    },
+    "dotare": {
+      "hero": {
+        "path": "/assets/project-images/dotare/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.dotare.io/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 31993,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.987Z, candidate kind \"og_image\")."
+      }
+    },
+    "strica": {
+      "hero": {
+        "path": "/assets/project-images/strica/hero.png",
+        "kind": "body_img",
+        "source_url": "https://strica.io/_nuxt/strica-logo.DIr0CKbc.png",
+        "content_type": "image/png",
+        "width": 350,
+        "height": 100,
+        "bytes": 18179,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.987Z, candidate kind \"body_img\")."
+      }
+    },
+    "zkdid": {
+      "hero": {
+        "path": "/assets/project-images/zkdid/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://www.zkd.id/assets/zkdid-brain-logo.jpg",
+        "content_type": "image/jpeg",
+        "width": 400,
+        "height": 400,
+        "bytes": 38727,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.987Z, candidate kind \"og_image\")."
+      }
+    },
+    "larissa-health": {
+      "hero": {
+        "path": "/assets/project-images/larissa-health/hero.png",
+        "kind": "og_image",
+        "source_url": "https://larissa.health/images/larissa.world-transparent-1590997403.png",
+        "content_type": "image/png",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 175572,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.987Z, candidate kind \"og_image\")."
+      }
+    },
+    "adria-stake-pool": {
+      "hero": {
+        "path": "/assets/project-images/adria-stake-pool/hero.png",
+        "kind": "og_image",
+        "source_url": "https://dappsoncardano.com/opengraph-image?7a81b2162c3386a4",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 197005,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+      }
+    },
+    "dia": {
+      "hero": {
+        "path": "/assets/project-images/dia/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://cms3.diadata.org/wp-content/uploads/2026/02/App-meta.jpg",
+        "content_type": "image/jpeg",
+        "width": 2349,
+        "height": 1321,
+        "bytes": 1068109,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\", hosted on cms3.diadata.org)."
+      }
+    },
+    "paima-studios": {
+      "hero": {
+        "path": "/assets/project-images/paima-studios/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.paimastudios.com/images/paima-studios-og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 52695,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+      }
+    },
+    "blaze-cardano": {
+      "hero": {
+        "path": "/assets/project-images/blaze-cardano/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://blaze.butane.dev/logo.svg",
+        "content_type": "image/svg+xml",
+        "width": 100,
+        "height": 100,
+        "bytes": 83559,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+      }
+    },
+    "toto-finance": {
+      "hero": {
+        "path": "/assets/project-images/toto-finance/hero.webp",
+        "kind": "og_image",
+        "source_url": "https://res.cloudinary.com/dusinlidl/image/upload/v1778234309/OG_image_2_mcoaco.webp",
+        "content_type": "image/webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 223488,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\", hosted on res.cloudinary.com)."
+      }
+    },
+    "adaswap": {
+      "hero": {
+        "path": "/assets/project-images/adaswap/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://cdn.prod.website-files.com/62da4442cd3fea42f268e9db/62da494818f65cff21b3da5c_jumping%20astronaout.svg",
+        "content_type": "image/svg+xml",
+        "width": 100,
+        "height": 100,
+        "bytes": 30541,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\", hosted on cdn.prod.website-files.com)."
+      }
+    },
+    "realfi": {
+      "hero": {
+        "path": "/assets/project-images/realfi/hero.jpg",
+        "kind": "body_img",
+        "source_url": "https://realfi.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fyyy4usl2%2Fproduction%2F8804a34a816ea065cbdd6edc611f87f835f2bfd4-2068x908.png%3Fw%3D1034%26h%3D454%26q%3D85%26auto%3Dformat%26dpr%3D2&w=3840&q=75",
+        "content_type": "image/jpeg",
+        "width": 2068,
+        "height": 908,
+        "bytes": 64815,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+      }
+    },
+    "cardano-feed": {
+      "hero": {
+        "path": "/assets/project-images/cardano-feed/hero.png",
+        "kind": "og_image",
+        "source_url": "https://cardanofeed.com/og-image.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 630073,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+      }
+    },
+    "latam-cardano-community": {
+      "hero": {
+        "path": "/assets/project-images/latam-cardano-community/hero.jpg",
+        "kind": "og_image",
+        "source_url": "https://linktr.ee/og/image/latamcardano.jpg",
+        "content_type": "image/jpg",
+        "width": 1200,
+        "height": 630,
+        "bytes": 62208,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+      }
+    },
+    "the-mint-gnrc": {
+      "hero": {
+        "path": "/assets/project-images/the-mint-gnrc/hero.png",
+        "kind": "og_image",
+        "source_url": "http://static1.squarespace.com/static/67f78ae49b4b2d4d44fe0390/t/68e7c4c31c451b0e5a87cfc2/1760019651521/Logo_Primary.png?format=1500w",
+        "content_type": "image/png",
+        "width": 846,
+        "height": 277,
+        "bytes": 9346,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\", hosted on static1.squarespace.com)."
+      }
+    },
+    "preciousai": {
+      "hero": {
+        "path": "/assets/project-images/preciousai/hero.png",
+        "kind": "og_image",
+        "source_url": "https://www.myprecious.io/images/og/og-default.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 27754,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+      }
+    },
+    "slash-vision-labs": {
+      "hero": {
+        "path": "/assets/project-images/slash-vision-labs/hero.png",
+        "kind": "og_image",
+        "source_url": "https://slash.vision/wp-content/uploads/ogp.png",
+        "content_type": "image/png",
+        "width": 1200,
+        "height": 630,
+        "bytes": 240222,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+      }
+    },
+    "lantr": {
+      "hero": {
+        "path": "/assets/project-images/lantr/hero.png",
+        "kind": "body_img",
+        "source_url": "https://lantr.io/lantr-logo-dark.png",
+        "content_type": "image/png",
+        "width": 1224,
+        "height": 400,
+        "bytes": 17256,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+      }
+    },
+    "bodega-market": {
+      "hero": {
+        "path": "/assets/project-images/bodega-market/hero.svg",
+        "kind": "body_img",
+        "source_url": "https://www.bodegamarket.xyz/assets/img/logo/logo-main.svg",
+        "content_type": "image/svg+xml",
+        "width": 1151,
+        "height": 140,
+        "bytes": 35350,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+      }
+    },
+    "apollo-cardano": {
+      "hero": {
+        "path": "/assets/project-images/apollo-cardano/hero.webp",
+        "kind": "manual_editorial_upload",
+        "source_url": "editorial-upload:adam-2026-09-23",
+        "content_type": "image/webp",
+        "width": 696,
+        "height": 498,
+        "bytes": 15130,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Apollo logo image from Cardano.org"
+      }
+    },
+    "veridian": {
+      "hero": {
+        "path": "/assets/project-images/veridian/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://veridian.id/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1165,
+        "bytes": 87650,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home"
+      }
+    },
+    "adastack-io": {
+      "hero": {
+        "path": "/assets/project-images/adastack-io/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://www.adastack.io",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 928,
+        "bytes": 35454,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home page"
+      }
+    },
+    "stakada-io": {
+      "hero": {
+        "path": "/assets/project-images/stakada-io/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://stakada.io/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1715,
+        "bytes": 95980,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website homepage"
+      }
+    },
+    "cardanians": {
+      "hero": {
+        "path": "/assets/project-images/cardanians/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://cardanians.io/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1656,
+        "bytes": 70652,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home page"
+      }
+    },
+    "eryx": {
+      "hero": {
+        "path": "/assets/project-images/eryx/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://eryx.co/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1235,
+        "bytes": 79330,
+        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-22T18:31:51.977Z",
+  "generated_at": "2026-09-23T13:51:29.629Z",
   "source": "IANA RDAP bootstrap + authoritative registry RDAP registration event",
   "note": "Domain registration is evidence of web-domain age, not necessarily the project founding date.",
-  "count": 191,
+  "count": 208,
   "records": {
     "wojaks": {
       "status": "no_current_official_domain",
@@ -305,7 +305,7 @@
       "domain": "docs.gomaestro.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.gomaestro.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-22T18:31:50.833Z"
+      "checked_at": "2026-09-23T13:51:24.055Z"
     },
     "txpipe": {
       "status": "no_rdap_service",
@@ -380,14 +380,14 @@
       "domain": "docs.cardano.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.cardano.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-22T18:31:51.042Z"
+      "checked_at": "2026-09-23T13:51:24.309Z"
     },
     "plutus": {
       "status": "fetch_error",
       "domain": "docs.cardano.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.cardano.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-22T18:31:51.235Z"
+      "checked_at": "2026-09-23T13:51:24.536Z"
     },
     "marlowe": {
       "status": "no_rdap_service",
@@ -458,7 +458,7 @@
       "domain": "vault.adatokenvault.com",
       "rdap_url": "https://rdap.verisign.com/com/v1/domain/vault.adatokenvault.com",
       "error": "HTTP 404",
-      "checked_at": "2026-09-22T18:31:51.446Z"
+      "checked_at": "2026-09-23T13:51:24.871Z"
     },
     "farmbot": {
       "status": "ok",
@@ -701,7 +701,7 @@
       "domain": "server-tools.grahamsnumberplus1.com",
       "rdap_url": "https://rdap.verisign.com/com/v1/domain/server-tools.grahamsnumberplus1.com",
       "error": "HTTP 404",
-      "checked_at": "2026-09-22T18:31:51.648Z"
+      "checked_at": "2026-09-23T13:51:25.036Z"
     },
     "deadpxlz": {
       "status": "ok",
@@ -1068,7 +1068,7 @@
       "domain": "djed.artifi.finance",
       "rdap_url": "https://rdap.identitydigital.services/rdap/domain/djed.artifi.finance",
       "error": "HTTP 400",
-      "checked_at": "2026-09-22T18:31:51.857Z"
+      "checked_at": "2026-09-23T13:51:25.507Z"
     },
     "plastiks": {
       "status": "no_rdap_service",
@@ -1209,6 +1209,109 @@
       "registration_timestamp": "2026-09-08T05:47:15Z",
       "rdap_url": "https://rdap.verisign.com/com/v1/domain/index80.com",
       "checked_at": "2026-09-22T17:26:51.463Z"
+    },
+    "dia": {
+      "status": "ok",
+      "domain": "diadata.org",
+      "registration_date": "2018-05-15",
+      "registration_timestamp": "2018-05-15T23:01:23.225Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/diadata.org",
+      "checked_at": "2026-09-23T13:51:25.742Z"
+    },
+    "paima-studios": {
+      "status": "ok",
+      "domain": "paimastudios.com",
+      "registration_date": "2022-04-14",
+      "registration_timestamp": "2022-04-14T14:06:52Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/paimastudios.com",
+      "checked_at": "2026-09-23T13:51:26.013Z"
+    },
+    "blaze-cardano": {
+      "status": "fetch_error",
+      "domain": "blaze.butane.dev",
+      "rdap_url": "https://pubapi.registry.google/rdap/domain/blaze.butane.dev",
+      "error": "HTTP 400",
+      "checked_at": "2026-09-23T13:51:26.399Z"
+    },
+    "apollo-cardano": {
+      "status": "no_current_official_domain",
+      "domain": null
+    },
+    "cardanians": {
+      "status": "no_rdap_service",
+      "domain": "cardanians.io"
+    },
+    "toto-finance": {
+      "status": "no_rdap_service",
+      "domain": "totofinance.co"
+    },
+    "adaswap": {
+      "status": "ok",
+      "domain": "adaswap.com",
+      "registration_date": "2020-08-18",
+      "registration_timestamp": "2020-08-18T00:11:05Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/adaswap.com",
+      "checked_at": "2026-09-23T13:51:26.571Z"
+    },
+    "bodega-market": {
+      "status": "ok",
+      "domain": "bodegamarket.xyz",
+      "registration_date": "2024-09-17",
+      "registration_timestamp": "2024-09-17T21:03:26.0Z",
+      "rdap_url": "https://rdap.centralnic.com/xyz/domain/bodegamarket.xyz",
+      "checked_at": "2026-09-23T13:51:27.318Z"
+    },
+    "realfi": {
+      "status": "no_rdap_service",
+      "domain": "realfi.co"
+    },
+    "cardano-feed": {
+      "status": "ok",
+      "domain": "cardanofeed.com",
+      "registration_date": "2021-03-20",
+      "registration_timestamp": "2021-03-20T18:27:17Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/cardanofeed.com",
+      "checked_at": "2026-09-23T13:51:27.475Z"
+    },
+    "latam-cardano-community": {
+      "status": "no_rdap_service",
+      "domain": "linktr.ee"
+    },
+    "the-mint-gnrc": {
+      "status": "ok",
+      "domain": "the-mint.com",
+      "registration_date": "2016-08-15",
+      "registration_timestamp": "2016-08-15T18:18:54Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/the-mint.com",
+      "checked_at": "2026-09-23T13:51:27.748Z"
+    },
+    "veridian": {
+      "status": "ok",
+      "domain": "veridian.id",
+      "registration_date": "2025-02-11",
+      "registration_timestamp": "2025-02-11T12:12:27Z",
+      "rdap_url": "https://rdap.pandi.id/rdap/domain/veridian.id",
+      "checked_at": "2026-09-23T13:51:29.285Z"
+    },
+    "preciousai": {
+      "status": "no_rdap_service",
+      "domain": "myprecious.io"
+    },
+    "slash-vision-labs": {
+      "status": "ok",
+      "domain": "slash.vision",
+      "registration_date": "2021-11-14",
+      "registration_timestamp": "2021-11-14T06:39:10.497Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/slash.vision",
+      "checked_at": "2026-09-23T13:51:29.508Z"
+    },
+    "lantr": {
+      "status": "no_rdap_service",
+      "domain": "lantr.io"
+    },
+    "eryx": {
+      "status": "no_rdap_service",
+      "domain": "eryx.co"
     }
   }
 }
