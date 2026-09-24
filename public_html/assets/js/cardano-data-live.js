@@ -14,6 +14,9 @@
   const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
   }[c]));
+  // Source links come from a separate origin (data.index80.com): only
+  // http(s) may become a clickable link. Same rule as directory.js.
+  const safeUrl = (u) => (typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null);
   const n = (value) => {
     if (value === null || value === undefined || value === '') return null;
     const parsed = Number(value);
@@ -248,7 +251,7 @@
     if (sourcesEl) {
       sourcesEl.innerHTML = (snapshot.sources || []).map((source) => {
         const observed = source.observed_at || source.last_success_at;
-        return `<li><strong>${esc(source.name)}</strong><span>${esc(source.purpose || '')}<br><small>${esc(sourceStatus(source))}${source.coverage ? ` · ${esc(source.coverage)}` : ''}${observed ? ` · ${esc(fmtAge(observed))}` : ''}</small></span>${source.url ? `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">SOURCE ↗</a>` : ''}</li>`;
+        return `<li><strong>${esc(source.name)}</strong><span>${esc(source.purpose || '')}<br><small>${esc(sourceStatus(source))}${source.coverage ? ` · ${esc(source.coverage)}` : ''}${observed ? ` · ${esc(fmtAge(observed))}` : ''}</small></span>${safeUrl(source.url) ? `<a href="${esc(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">SOURCE ↗</a>` : ''}</li>`;
       }).join('');
     }
   }).catch((error) => {
