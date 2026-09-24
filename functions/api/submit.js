@@ -57,7 +57,15 @@ function optionalString(value, maxLength) {
   return typeof value === "string" ? value.trim().slice(0, maxLength) : "";
 }
 
-async function verifyTurnstile(token, secret, remoteIp) {
+// Must match the `action` the /submit/ page passes to turnstile.render()
+// (assets/js/submit.js). A token minted for another action, or for a page
+// on another hostname, is refused even though Siteverify calls it valid.
+export const TURNSTILE_ACTION = "submit-project";
+
+// The widget and this Function are same-origin, so the hostname the token
+// was solved on must be the hostname this request arrived on (index80.com,
+// www.index80.com or a Pages preview host — each only ever accepts its own).
+export async function verifyTurnstile(token, secret, remoteIp, expectedHostname) {
   if (!token || typeof token !== "string") return false;
   try {
     const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
@@ -67,7 +75,10 @@ async function verifyTurnstile(token, secret, remoteIp) {
     });
     if (!res.ok) return false;
     const data = await res.json();
-    return data.success === true;
+    return data.success === true &&
+      data.action === TURNSTILE_ACTION &&
+      typeof data.hostname === "string" &&
+      data.hostname.toLowerCase() === String(expectedHostname || "").toLowerCase();
   } catch {
     return false;
   }
@@ -278,7 +289,7 @@ export async function onRequestPost(context) {
   }
 
   const clientIp = request.headers.get("CF-Connecting-IP") || "";
-  const verified = await verifyTurnstile(body.turnstileToken, env.TURNSTILE_SECRET_KEY, clientIp);
+  const verified = await verifyTurnstile(body.turnstileToken, env.TURNSTILE_SECRET_KEY, clientIp, new URL(request.url).hostname);
   if (!verified) {
     return jsonResponse({ ok: false, error: "Bot check failed. Please try again." }, 403);
   }
