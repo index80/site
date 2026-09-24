@@ -12,6 +12,10 @@
   const rawLink = document.getElementById('raw-json-link');
 
   const escapeText = (value) => String(value ?? '');
+  // Only allow http(s) links out — blocks a `javascript:`/`data:` etc. URL
+  // from becoming a clickable link even if it slipped past Registry
+  // validation. Same rule as safeUrl() in directory.js.
+  const safeUrl = (u) => (typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null);
   let rows = [];
 
   function render(filter = '') {
@@ -83,6 +87,9 @@
 
       const snapshotPath = manifest.snapshot?.path;
       if (!snapshotPath) throw new Error('Release manifest has no snapshot path.');
+      // The path is used as both a fetch target and the raw-JSON link, so it
+      // must stay a same-origin registry snapshot file.
+      if (!/^\/registry\/snapshots\/[a-z0-9-]+\.json$/.test(snapshotPath)) throw new Error('Release manifest has an invalid snapshot path.');
       const snapshotRes = await fetch(snapshotPath, { cache: 'no-store' });
       if (!snapshotRes.ok) throw new Error('Snapshot JSON could not be loaded.');
       const snapshot = await snapshotRes.json();
@@ -110,7 +117,7 @@
         category: escapeText(project.category),
         status: escapeText(project.status),
         summary: escapeText(project.summary),
-        officialUrl: escapeText(project.official_url || project.primary_link_url || ''),
+        officialUrl: safeUrl(project.official_url) || safeUrl(project.primary_link_url) || '',
         searchText: [
           project.slug,
           project.name,

@@ -15,6 +15,11 @@
     return `≈$${Math.round(n).toLocaleString('en-US')}`;
   };
 
+  // Project names are Registry-edited text and must never reach innerHTML
+  // unescaped — same esc() as directory.js and cardano-data-live.js.
+  const esc = (s) =>
+    String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
   const addStyles = () => {
     if (document.getElementById('treasury-summary-styles')) return;
     const style = document.createElement('style');
@@ -70,7 +75,7 @@
         <div class="metric-grid">
           <div><span>FUNDED PROJECTS</span><strong>${count}</strong><small>CONFIRMED INDEX:80 RECORDS</small></div>
           <div><span>LINKED AWARD VALUE</span><strong>${formatUsd(total, 1)}</strong><small>USD HISTORICAL ESTIMATE</small></div>
-          <div><span>LARGEST LINKED RECORD</span><strong>${largest ? largest.name : '—'}</strong><small>${largest ? formatUsd(largest.value, 2) : '—'}</small></div>
+          <div><span>LARGEST LINKED RECORD</span><strong>${largest ? esc(largest.name) : '—'}</strong><small>${largest ? formatUsd(largest.value, 2) : '—'}</small></div>
           <div><span>USD VALUES AVAILABLE</span><strong>${withValue.length} / ${count}</strong><small>ONE OR MORE RECORDS MAY LACK USD TOTALS</small></div>
           ${adaRows.length ? `<div><span>ADA-NATIVE LINKED VALUE</span><strong>${T.formatAda(adaTotal)}</strong><small>${adaRows.length} RECORD${adaRows.length === 1 ? '' : 'S'} · NOT CONVERTED TO USD</small></div>` : ''}
         </div>

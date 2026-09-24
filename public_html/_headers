@@ -1,0 +1,21 @@
+# Cloudflare Pages static response headers — see docs/SECURITY_HARDENING.md.
+# Applies to static assets only; Pages Functions (/api/*) set their own.
+#
+# Enforced: clickjacking protection (frame-ancestors + X-Frame-Options),
+# HSTS (no includeSubDomains/preload yet), Permissions-Policy, and the
+# nosniff / Referrer-Policy values the site already served.
+#
+# Report-Only: the full Content-Security-Policy. It blocks nothing; browsers
+# log what it would block. Promote it to an enforced
+# Content-Security-Policy only after DEV/production show no violations.
+# scripts/test-security-headers.mjs checks every external origin the site
+# loads from is listed here.
+
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' https://challenges.cloudflare.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://data.index80.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
