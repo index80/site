@@ -6,7 +6,7 @@
 // submission. No network calls are made.
 
 import assert from "node:assert/strict";
-import { onRequestPost, buildNotificationEmail } from "../functions/api/submit.js";
+import { onRequestPost, buildNotificationEmail, TURNSTILE_ACTION } from "../functions/api/submit.js";
 
 const TOKEN = "test-token-DO-NOT-LEAK";
 const ACCOUNT = "acct123";
@@ -48,12 +48,16 @@ function makeDb({ insertThrows = false, updateThrows = false } = {}) {
   };
 }
 
+// Host the current test submits from; the Turnstile mock reports the token
+// as solved there (a genuine success, per submit.js's hostname/action check).
+let currentHost = "index80.com";
+
 // emailMode: "ok" | "http500" | "throw" | "bounce"
 function installFetch(emailMode) {
   const sent = [];
   globalThis.fetch = async (url, init) => {
     if (String(url).includes("turnstile")) {
-      return new Response(JSON.stringify({ success: true }), { status: 200 });
+      return new Response(JSON.stringify({ success: true, hostname: currentHost, action: TURNSTILE_ACTION }), { status: 200 });
     }
     sent.push({ url: String(url), init, payload: JSON.parse(init.body) });
     if (emailMode === "throw") throw new TypeError("network down");
@@ -69,6 +73,7 @@ function installFetch(emailMode) {
 }
 
 async function submit({ body = fullBody, env = {}, host = "index80.com", useWaitUntil = true } = {}) {
+  currentHost = host;
   const pending = [];
   const context = {
     request: new Request(`https://${host}/api/submit`, {
