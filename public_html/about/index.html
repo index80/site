@@ -218,39 +218,6 @@
   </footer>
 
   <script src="../assets/js/main.js" defer></script>
-  <script>
-    (function () {
-      var btn = document.getElementById('copy-address-btn');
-      var addrEl = document.getElementById('donation-address');
-      if (!btn || !addrEl) return;
-      btn.addEventListener('click', function () {
-        var address = addrEl.textContent.trim();
-        var original = btn.textContent;
-        var done = function (label) {
-          btn.textContent = label;
-          setTimeout(function () { btn.textContent = original; }, 1500);
-        };
-        var fallbackSelectCopy = function () {
-          try {
-            var range = document.createRange();
-            range.selectNodeContents(addrEl);
-            var sel = window.getSelection();
-            sel.removeAllRanges();
-            sel.addRange(range);
-            var ok = document.execCommand('copy');
-            sel.removeAllRanges();
-            done(ok ? 'COPIED ✓' : 'SELECTED — PRESS ⌘/CTRL+C');
-          } catch (e) {
-            done('SELECTED — PRESS ⌘/CTRL+C');
-          }
-        };
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(address).then(function () { done('COPIED ✓'); }).catch(fallbackSelectCopy);
-        } else {
-          fallbackSelectCopy();
-        }
-      });
-    })();
-  </script>
+  <script src="../assets/js/about.js"></script>
 </body>
 </html>
