@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-24T15:16:13.721Z",
+  "generated_at": "2026-09-26T10:53:21.423Z",
   "status": "discovery",
   "warning": "Records vary in editorial maturity - DISCOVERED and REVIEW records have not yet passed independent verification. Check a record's own status before treating it as current.",
-  "count": 208,
+  "count": 214,
   "skipped_invalid_count": 0,
   "projects": [
     {
@@ -118,16 +118,17 @@
       "discord_url": "https://discord.gg/Tk4tTMujD",
       "status": "review",
       "established": null,
-      "treasury_funding_ref": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/d73d4c5e-db48-4ea7-b679-264c7f31ab6f",
       "treasury_funding_value_usd": null,
-      "treasury_funded_proposals": null,
+      "treasury_funded_proposals": 1,
       "tags": [
         "derivatives",
         "perpetuals",
         "dex",
         "stablecoins",
         "staking",
-        "aiken"
+        "aiken",
+        "catalyst-pilot-2026"
       ],
       "sources": [
         {
@@ -145,6 +146,7 @@
       ],
       "featured": false,
       "editorial_note": "Atlas is led publicly by Apex (@Apex_333), CEO & Founder of the Titans / Atlas Team. It is a related Titans ecosystem project; the Titans Core Team leads product direction and FIWORK provides contracted engineering delivery.",
+      "treasury_funding_value_ada": 150000,
       "team_entity": "Titans Core Team + FIWORK (engineering contractor)",
       "founder_lead": "Apex (@Apex_333) — CEO & Founder; Carlos Rene — FIWORK Founder & Technical Lead",
       "related_projects": [
@@ -1026,7 +1028,8 @@
       "treasury_funded_proposals": 10,
       "tags": [
         "lending",
-        "money-market"
+        "money-market",
+        "catalyst-pilot-2026"
       ],
       "sources": [
         {
@@ -1633,9 +1636,9 @@
       "discord_url": "https://discord.com/invite/zTaSd8wfEV",
       "status": "discovered",
       "established": "2022-09",
-      "treasury_funding_ref": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/f0ea1b4c-12c1-42b9-8fde-cc80bf9942dd",
       "treasury_funding_value_usd": null,
-      "treasury_funded_proposals": null,
+      "treasury_funded_proposals": 4,
       "tags": [
         "explorer",
         "stake-pools",
@@ -1645,7 +1648,8 @@
         "governance",
         "analytics",
         "defi",
-        "api"
+        "api",
+        "catalyst-pilot-2026"
       ],
       "sources": [
         {
@@ -1663,6 +1667,7 @@
       ],
       "featured": true,
       "editorial_note": "CExplorer is the current identity of the former ADApools.org explorer. The project team describes it as a long-running Cardano explorer covering blocks, transactions, wallets, stake pools, tokens, smart contracts and governance data, with staking insights, ecosystem analytics, token and DeFi tracking, and developer APIs.",
+      "treasury_funding_value_ada": 726600,
       "primary_link_type": "website",
       "primary_link_url": "https://cexplorer.io/"
     },
@@ -3313,7 +3318,7 @@
       "discord_url": null,
       "status": "review",
       "established": "2022",
-      "treasury_funding_ref": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/964fc201-ffb9-4ec8-b62d-c5510db1493f",
       "treasury_funding_value_usd": null,
       "treasury_funded_proposals": null,
       "tags": [
@@ -3323,7 +3328,8 @@
         "cardano",
         "robinhood-chain",
         "multichain",
-        "smart-contracts"
+        "smart-contracts",
+        "catalyst-pilot-2026"
       ],
       "sources": [
         {
@@ -5013,7 +5019,7 @@
       "name": "MLabs",
       "category": "developer-tool",
       "public_family": "Infrastructure & Tools",
-      "summary": "High-assurance software engineering company that maintains widely used Cardano developer tooling including Plutarch, LambdaBuffers and Cardano Transaction Lib.",
+      "summary": "MLabs is a high-assurance engineering firm that builds Cardano smart contracts in Aiken, Plutarch and Plinth, along with the developer tooling around them. It maintains Plutarch, LambdaBuffers and Cardano Transaction Lib (CTL), and writes the specifications and test suites that show a protocol permits what it should and forbids what it shouldn't.",
       "official_url": "https://www.mlabs.city/",
       "docs_url": null,
       "github_url": "https://github.com/mlabs-haskell",
@@ -5034,7 +5040,10 @@
         "plutarch",
         "ctl",
         "open-source",
-        "cardano"
+        "cardano",
+        "aiken",
+        "smart-contracts",
+        "audits"
       ],
       "sources": [
         {
@@ -5047,11 +5056,11 @@
         },
         {
           "type": "source",
-          "url": "https://github.com/mlabs-haskell"
+          "url": "https://www.mlabs.city/blog/prooftap-cardano-smart-contracts"
         }
       ],
       "featured": false,
-      "editorial_note": "MLabs is an active high-assurance engineering company and maintainer of Cardano developer infrastructure including Plutarch, LambdaBuffers and CTL.",
+      "editorial_note": "Alongside its open-source tooling, MLabs works as the on-chain engineering team for Cardano projects, from contract design through audits and support after launch. Recent public work includes the on-chain contracts behind ProofTap, an NFC verification app.",
       "team_entity": "MLabs Ltd",
       "primary_link_type": "website",
       "primary_link_url": "https://www.mlabs.city/"
@@ -5904,9 +5913,9 @@
       "discord_url": null,
       "status": "review",
       "established": "2021",
-      "treasury_funding_ref": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/86fe3d78-e40f-4b03-877d-b3bcf3729280",
       "treasury_funding_value_usd": null,
-      "treasury_funded_proposals": null,
+      "treasury_funded_proposals": 6,
       "tags": [
         "developer-tool",
         "api",
@@ -5915,7 +5924,8 @@
         "infrastructure",
         "wayup",
         "cardano",
-        "web3"
+        "web3",
+        "catalyst-pilot-2026"
       ],
       "sources": [
         {
@@ -5933,6 +5943,7 @@
       ],
       "featured": false,
       "editorial_note": "Anvil Development Agency builds Cardano developer infrastructure and project services spanning APIs, transaction and minting tooling, SDKs and custom Web3 development. Anvil is also the team behind the Wayup marketplace.",
+      "treasury_funding_value_ada": 1137000,
       "team_entity": "Anvil Development Agency",
       "founder_lead": "David Desjardins (Tqueri) — CTO/Founder; Patrick Bernard (PB) — COO/Founder; Zack Soesbee (Cash) — CEO/Founder",
       "related_projects": [
@@ -8203,7 +8214,7 @@
       "discord_url": null,
       "status": "review",
       "established": null,
-      "treasury_funding_ref": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/32f4c59b-1e0c-45d4-ab93-acddf6c0758a",
       "treasury_funding_value_usd": null,
       "treasury_funded_proposals": null,
       "tags": [
@@ -8212,7 +8223,8 @@
         "agents",
         "depin",
         "communications",
-        "infrastructure"
+        "infrastructure",
+        "catalyst-pilot-2026"
       ],
       "sources": [
         {
@@ -8222,6 +8234,10 @@
         {
           "type": "source",
           "url": "https://staging.syncai.network/"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/blog/meet-the-12-teams-selected-for-the-catalyst-pilot-2026"
         }
       ],
       "featured": false,
@@ -9333,6 +9349,300 @@
       "team_entity": "Bodega Market",
       "primary_link_type": "website",
       "primary_link_url": "https://www.bodegamarket.xyz/"
+    },
+    {
+      "slug": "via-labs",
+      "name": "VIA Labs",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cross-chain messaging and interoperability infrastructure connecting Cardano with other networks; selected for Catalyst Pilot 2026 to build simplified bridge, swap and routing paths into Cardano tokens.",
+      "official_url": "https://vialabs.io/",
+      "docs_url": "https://developer.vialabs.tech/",
+      "github_url": "https://github.com/VIALabs-io",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/224ce4c8-fd0f-4cb1-a08c-9d04908c4f88",
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "cross-chain",
+        "interoperability",
+        "bridge",
+        "usdc",
+        "developer-tool",
+        "catalyst-pilot-2026"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://vialabs.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://developer.vialabs.tech/"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/blog/meet-the-12-teams-selected-for-the-catalyst-pilot-2026"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "VIA Labs provides cross-chain messaging infrastructure. Catalyst selected its AnyToAny proposal to simplify routes between Cardano and other networks, including exchange-held USDC into Cardano tokens.",
+      "team_entity": "VIA Labs",
+      "primary_link_type": "website",
+      "primary_link_url": "https://vialabs.io/"
+    },
+    {
+      "slug": "dano-finance",
+      "name": "Dano Finance",
+      "category": "lending",
+      "public_family": "DeFi & Markets",
+      "summary": "All-in-one DeFi platform on Cardano combining lending, borrowing and trading with cross-pool collateral and unified interest-rate markets.",
+      "official_url": "https://dano.finance/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/d265a090-7a8f-4f6f-b5b9-085bb93eb29b",
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": 3,
+      "tags": [
+        "cardano",
+        "defi",
+        "lending",
+        "borrowing",
+        "trading",
+        "collateral",
+        "catalyst-pilot-2026"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://cardano.org/apps/dano-finance/"
+        },
+        {
+          "type": "source",
+          "url": "https://dano.finance/"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/blog/meet-the-12-teams-selected-for-the-catalyst-pilot-2026"
+        }
+      ],
+      "featured": true,
+      "editorial_note": "Dano Finance is an active Cardano lending, borrowing and trading platform. Catalyst selected its 2026 Pilot proposal to add in-place collateral swaps for Cardano lending.",
+      "treasury_funding_value_ada": 417000,
+      "team_entity": "Dano Finance",
+      "primary_link_type": "website",
+      "primary_link_url": "https://dano.finance/"
+    },
+    {
+      "slug": "nucast",
+      "name": "Nucast",
+      "category": "media",
+      "public_family": "Culture & Creators",
+      "summary": "Digital-IP and media infrastructure project in the Cardano ecosystem, with products spanning decentralized media ownership, authentication, ticketing, subscriptions, AI and open-source tooling.",
+      "official_url": "https://www.nucast.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/2a025ec1-554d-415c-9245-2121dcc59956",
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": 8,
+      "tags": [
+        "cardano",
+        "media",
+        "digital-ip",
+        "identity",
+        "traceability",
+        "robot-did",
+        "open-source",
+        "catalyst-pilot-2026"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://www.nucast.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/proposers/nucast"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/blog/meet-the-12-teams-selected-for-the-catalyst-pilot-2026"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Nucast's current product suite spans digital IP, media and identity tooling. Catalyst selected its nuhuman Pilot proposal to use verifiable identities for processing robots and shrimp batches in export traceability.",
+      "treasury_funding_value_ada": 270000,
+      "team_entity": "Nucast",
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.nucast.io/"
+    },
+    {
+      "slug": "pagfinance",
+      "name": "PagFinance",
+      "category": "utility",
+      "public_family": "Real-World & Utility",
+      "summary": "Brazilian crypto-to-fiat payments platform for PIX and boleto settlement, selected for Catalyst Pilot 2026 to add regulated BRL settlement routes for ADA and USDCx on Cardano.",
+      "official_url": "https://pag.finance/en",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": "https://app.projectcatalyst.io/proposals/d20f8dba-44b4-430c-a49f-928d5a8284ea",
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "payments",
+        "stablecoins",
+        "pix",
+        "brazil",
+        "cardano",
+        "usdcx",
+        "brl",
+        "catalyst-pilot-2026"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://pag.finance/en"
+        },
+        {
+          "type": "source",
+          "url": "https://pag.finance/en/about"
+        },
+        {
+          "type": "source",
+          "url": "https://projectcatalyst.io/blog/meet-the-12-teams-selected-for-the-catalyst-pilot-2026"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "PagFinance already operates crypto-to-fiat PIX and boleto payments in Brazil. Catalyst selected its Pilot proposal to add conversion between ADA or USDCx and Brazilian reais over PIX, with tools for businesses.",
+      "team_entity": "PagFinance",
+      "primary_link_type": "website",
+      "primary_link_url": "https://pag.finance/en"
+    },
+    {
+      "slug": "adalink",
+      "name": "AdaLink",
+      "category": "utility",
+      "public_family": "Real-World & Utility",
+      "summary": "Cardano-based performance marketing platform connecting projects and creators, tracking campaign results on-chain and rewarding verified outcomes in ADA.",
+      "official_url": "https://www.adalink.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/AdaLink_io",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "marketing",
+        "affiliate-marketing",
+        "creators",
+        "ada",
+        "campaigns",
+        "growth",
+        "on-chain"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://www.adalink.io/"
+        },
+        {
+          "type": "About",
+          "url": "https://www.adalink.io/about"
+        },
+        {
+          "type": "Official X",
+          "url": "https://x.com/AdaLink_io"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "AdaLink connects Cardano projects with creators through performance-based campaigns, using on-chain activity to verify results and reward creators in ADA.",
+      "team_entity": "AdaLink",
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.adalink.io/"
+    },
+    {
+      "slug": "scatdao",
+      "name": "Smart Contract Audit Token / SCAT DAO",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano-focused DAO and security project designed to fund and coordinate decentralized smart-contract audits, research and community due-diligence tooling.",
+      "official_url": "https://www.scatdao.com/",
+      "docs_url": null,
+      "github_url": "https://github.com/SCATDAO",
+      "social_url": "https://x.com/SCATDAO",
+      "linkedin_url": null,
+      "marketplace_url": "https://dyortool.io/",
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": "2021",
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "audits",
+        "dao",
+        "security",
+        "research",
+        "smart-contracts",
+        "dyor",
+        "catalyst"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://www.scatdao.com/"
+        },
+        {
+          "type": "GitHub",
+          "url": "https://github.com/SCATDAO"
+        },
+        {
+          "type": "DYOR Tool",
+          "url": "https://dyortool.io/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "SCAT DAO describes a DAO-funded model for smart-contract auditing and maintains related Cardano research and due-diligence tooling, including DYOR Tool.",
+      "team_entity": "Smart Contract Audit Token DAO LLC",
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.scatdao.com/"
     }
   ]
 }

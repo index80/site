@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-24T15:17:33.827Z",
+  "generated_at": "2026-09-26T11:00:38.871Z",
   "images": {
     "eternl": {
       "icon": {
@@ -3309,10 +3309,10 @@
         "width": 1600,
         "height": 1161,
         "bytes": 99032,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website homepage"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website homepage"
       }
     },
     "chibidango-heroes": {
@@ -3589,10 +3589,10 @@
         "width": 1600,
         "height": 1318,
         "bytes": 50186,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website homepage"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website homepage"
       }
     },
     "spacebudz": {
@@ -3858,10 +3858,10 @@
         "width": 401,
         "height": 101,
         "bytes": 2622,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\")."
       }
     },
     "oli-tutor": {
@@ -3884,10 +3884,10 @@
         "width": 800,
         "height": 800,
         "bytes": 34668,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\", hosted on cdn.prod.website-files.com)."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\", hosted on cdn.prod.website-files.com)."
       }
     },
     "open-djed": {
@@ -4030,10 +4030,10 @@
         "width": 1600,
         "height": 1640,
         "bytes": 128572,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website image"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website image"
       }
     },
     "deltadefi": {
@@ -4056,10 +4056,10 @@
         "width": 1600,
         "height": 1415,
         "bytes": 63518,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website image"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website image"
       }
     },
     "steelswap": {
@@ -4082,10 +4082,10 @@
         "width": 1600,
         "height": 1221,
         "bytes": 42072,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website home"
       }
     },
     "flow": {
@@ -4180,10 +4180,10 @@
         "width": 272,
         "height": 550,
         "bytes": 51185,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\")."
       }
     },
     "gamechanger-wallet": {
@@ -4254,10 +4254,10 @@
         "width": 1092,
         "height": 251,
         "bytes": 34229,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\")."
       }
     },
     "apex-fusion": {
@@ -4376,10 +4376,10 @@
         "width": 256,
         "height": 66,
         "bytes": 2921,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\")."
       }
     },
     "index80": {
@@ -4415,10 +4415,10 @@
         "width": 1200,
         "height": 630,
         "bytes": 31993,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.987Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"og_image\")."
       }
     },
     "strica": {
@@ -4430,10 +4430,10 @@
         "width": 350,
         "height": 100,
         "bytes": 18179,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.987Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\")."
       }
     },
     "zkdid": {
@@ -4445,10 +4445,10 @@
         "width": 400,
         "height": 400,
         "bytes": 38727,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.987Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"og_image\")."
       }
     },
     "larissa-health": {
@@ -4460,10 +4460,10 @@
         "width": 1920,
         "height": 1920,
         "bytes": 175572,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.987Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"og_image\")."
       }
     },
     "adria-stake-pool": {
@@ -4475,10 +4475,10 @@
         "width": 1200,
         "height": 630,
         "bytes": 197005,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"og_image\")."
       }
     },
     "dia": {
@@ -4490,10 +4490,10 @@
         "width": 2349,
         "height": 1321,
         "bytes": 1068109,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\", hosted on cms3.diadata.org)."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"og_image\", hosted on cms3.diadata.org)."
       }
     },
     "paima-studios": {
@@ -4505,10 +4505,10 @@
         "width": 1200,
         "height": 630,
         "bytes": 52695,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"og_image\")."
       }
     },
     "blaze-cardano": {
@@ -4520,10 +4520,10 @@
         "width": 100,
         "height": 100,
         "bytes": 83559,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\")."
       }
     },
     "toto-finance": {
@@ -4535,10 +4535,10 @@
         "width": 1920,
         "height": 1080,
         "bytes": 223488,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\", hosted on res.cloudinary.com)."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"og_image\", hosted on res.cloudinary.com)."
       }
     },
     "adaswap": {
@@ -4550,10 +4550,10 @@
         "width": 100,
         "height": 100,
         "bytes": 30541,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\", hosted on cdn.prod.website-files.com)."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\", hosted on cdn.prod.website-files.com)."
       }
     },
     "realfi": {
@@ -4565,10 +4565,10 @@
         "width": 2068,
         "height": 908,
         "bytes": 64815,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"body_img\")."
       }
     },
     "cardano-feed": {
@@ -4580,10 +4580,10 @@
         "width": 1200,
         "height": 630,
         "bytes": 630073,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.297Z, candidate kind \"og_image\")."
       }
     },
     "latam-cardano-community": {
@@ -4595,10 +4595,10 @@
         "width": 1200,
         "height": 630,
         "bytes": 62208,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z, candidate kind \"og_image\")."
       }
     },
     "the-mint-gnrc": {
@@ -4610,10 +4610,10 @@
         "width": 846,
         "height": 277,
         "bytes": 9346,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\", hosted on static1.squarespace.com)."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z, candidate kind \"og_image\", hosted on static1.squarespace.com)."
       }
     },
     "preciousai": {
@@ -4625,10 +4625,10 @@
         "width": 1200,
         "height": 630,
         "bytes": 27754,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z, candidate kind \"og_image\")."
       }
     },
     "slash-vision-labs": {
@@ -4640,10 +4640,10 @@
         "width": 1200,
         "height": 630,
         "bytes": 240222,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"og_image\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z, candidate kind \"og_image\")."
       }
     },
     "lantr": {
@@ -4655,10 +4655,10 @@
         "width": 1224,
         "height": 400,
         "bytes": 17256,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z, candidate kind \"body_img\")."
       }
     },
     "bodega-market": {
@@ -4670,10 +4670,10 @@
         "width": 1151,
         "height": 140,
         "bytes": 35350,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z, candidate kind \"body_img\")."
+        "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z, candidate kind \"body_img\")."
       }
     },
     "apollo-cardano": {
@@ -4685,10 +4685,10 @@
         "width": 696,
         "height": 498,
         "bytes": 15130,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Apollo logo image from Cardano.org"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Apollo logo image from Cardano.org"
       }
     },
     "veridian": {
@@ -4700,10 +4700,10 @@
         "width": 1600,
         "height": 1165,
         "bytes": 87650,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website home"
       }
     },
     "adastack-io": {
@@ -4715,10 +4715,10 @@
         "width": 1600,
         "height": 928,
         "bytes": 35454,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home page"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website home page"
       }
     },
     "stakada-io": {
@@ -4730,10 +4730,10 @@
         "width": 1600,
         "height": 1715,
         "bytes": 95980,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website homepage"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website homepage"
       }
     },
     "cardanians": {
@@ -4745,10 +4745,10 @@
         "width": 1600,
         "height": 1656,
         "bytes": 70652,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home page"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website home page"
       }
     },
     "eryx": {
@@ -4760,10 +4760,100 @@
         "width": 1600,
         "height": 1235,
         "bytes": 79330,
-        "fetched_at": "2026-09-24T15:17:33.827Z",
+        "fetched_at": "2026-09-26T11:00:38.871Z",
         "status": "ok",
         "error": null,
-        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-24T15:17:31.988Z). Main website home"
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website home"
+      }
+    },
+    "via-labs": {
+      "hero": {
+        "path": "/assets/project-images/via-labs/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://vialabs.io",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1175,
+        "bytes": 106794,
+        "fetched_at": "2026-09-26T11:00:38.871Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website image home"
+      }
+    },
+    "dano-finance": {
+      "hero": {
+        "path": "/assets/project-images/dano-finance/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://v2.dano.finance/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1059,
+        "bytes": 32160,
+        "fetched_at": "2026-09-26T11:00:38.871Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Website home main image"
+      }
+    },
+    "nucast": {
+      "hero": {
+        "path": "/assets/project-images/nucast/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://www.nucast.io/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 864,
+        "bytes": 47436,
+        "fetched_at": "2026-09-26T11:00:38.871Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website image home"
+      }
+    },
+    "pagfinance": {
+      "hero": {
+        "path": "/assets/project-images/pagfinance/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://pag.finance/en",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1500,
+        "bytes": 103622,
+        "fetched_at": "2026-09-26T11:00:38.871Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website home image"
+      }
+    },
+    "adalink": {
+      "hero": {
+        "path": "/assets/project-images/adalink/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://www.adalink.io/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1261,
+        "bytes": 67162,
+        "fetched_at": "2026-09-26T11:00:38.871Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). Main website image home"
+      }
+    },
+    "scatdao": {
+      "hero": {
+        "path": "/assets/project-images/scatdao/hero.webp",
+        "kind": "manual_official_image",
+        "source_url": "https://www.scatdao.com/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1296,
+        "bytes": 65372,
+        "fetched_at": "2026-09-26T11:00:38.871Z",
+        "status": "ok",
+        "error": null,
+        "note": "Manually sourced and approved via the image QA review pass (decided_at 2026-09-26T10:59:30.298Z). main website image"
       }
     }
   }
