@@ -14,10 +14,16 @@
  *
  * Usage: node scripts/generate-project-pages.mjs
  */
-import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, statSync, existsSync, realpathSync } from 'node:fs';
 import { join, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
+import { isResolvedImage, resolveThemedImage } from './lib/project-image-variants.mjs';
+import { esc, safeUrl } from './lib/html-safety.mjs';
+import { renderNavLinks } from './lib/site-nav.mjs';
+
+// Canonical editorial methodology (About → Methodology), Projects section.
+export const PROJECT_METHODOLOGY_URL = '/about/methodology/#projects';
 
 // Single shared definition of "confirmed Treasury-funded" (also used by the
 // browser scripts and the homepage generator) — see assets/js/treasury-rule.js.
@@ -72,8 +78,6 @@ const CATEGORY_ICON = {
   infrastructure: 'infrastructure', 'developer-tool': 'developer', education: 'education',
   ai: 'ai', game: 'nft', utility: 'infrastructure', 'token-project': 'nft',
 };
-const esc = (s) =>
-  String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const catLabel = (cat) => cat.replace(/-/g, ' ').toUpperCase();
 
 // V0.05 PROTOTYPE (colour/depth polish branch): a deterministic slug of
@@ -406,7 +410,7 @@ function jsonLd(p, canonicalUrl, linkHistoryRecord) {
   return JSON.stringify(graph, null, 2).replace(/<\/script/gi, '<\\/script');
 }
 
-const isResolved = (entry) => entry && entry.status === 'ok' && entry.path;
+const isResolved = isResolvedImage;
 
 // The title icon only ever renders from the "icon" role (favicon /
 // apple-touch-icon / logo-or-wordmark link) — a "hero" role image (an OG/
@@ -431,11 +435,30 @@ function profileIcon(p, images) {
 // the full width rather than reserving a blank image slot — images are
 // never required for a record. Metadata is limited to public-safe
 // fields only (no internal editorial-workflow status).
+//
+// Theme-aware artwork (scripts/lib/project-image-variants.mjs): when a
+// project supplies hero_light / hero_dark and the two colour modes resolve
+// to different images, both are emitted and site.css shows only the one
+// for html[data-color-mode] — instant on switch, no reload, no flash (the
+// attribute is set by theme.js before first paint). Otherwise the markup is
+// exactly the single <img> it has always been.
+function heroImg(entry, extra = '') {
+  const w = entry.width || '';
+  const h = entry.height || '';
+  return `<img src="${esc(entry.path)}" alt=""${w ? ` width="${w}"` : ''}${h ? ` height="${h}"` : ''}${extra}>`;
+}
+
+function heroMedia(images) {
+  const r = resolveThemedImage(images, 'hero');
+  if (!r.themed) return r.base ? `<div class="profile-media">${heroImg(r.base, ' loading="lazy" decoding="async"')}</div>` : '';
+  // Both variants load eagerly (not lazy) so switching mode never shows an empty slot.
+  const variant = (entry, mode) => (entry ? heroImg(entry, ` data-theme-variant="${mode}" decoding="async"`) : '');
+  return `<div class="profile-media">${variant(r.light, 'light')}${variant(r.dark, 'dark')}</div>`;
+}
+
 function mediaMetaBlock(p, images) {
-  const hero = images?.hero;
-  const hasImage = isResolved(hero);
-  const w = hero?.width || '';
-  const h = hero?.height || '';
+  const media = heroMedia(images);
+  const hasImage = Boolean(media);
   const metrics = [
     `<div><span>PUBLIC FAMILY</span><strong>${esc(p.public_family || '—')}</strong></div>`,
     `<div><span>DETAILED CATEGORY</span><strong>${esc(catLabel(p.category))}</strong></div>`,
@@ -448,12 +471,25 @@ function mediaMetaBlock(p, images) {
   const treasuryCell = treasuryMetric(p);
   if (treasuryCell) metrics.push(treasuryCell);
   return `<section class="panel dark profile-media-meta${hasImage ? '' : ' no-image'}">
-      ${hasImage ? `<div class="profile-media"><img src="${esc(hero.path)}" alt=""${w ? ` width="${w}"` : ''}${h ? ` height="${h}"` : ''} loading="lazy" decoding="async"></div>` : ''}
+      ${media}
       <div class="metric-grid">${metrics.join('')}</div>
     </section>`;
 }
 
-function renderProjectPage(p, images, linkHistoryRecord) {
+// Every outbound link on a profile (CTA buttons, JSON-LD url/sameAs) is
+// read from a `*_url` field. Drop any value that is not http(s) before
+// rendering, so a javascript:/data: URL that slipped past Registry
+// validation is never rendered as a clickable link or advertised in schema.
+function withSafeLinks(p) {
+  const out = { ...p };
+  for (const [key, value] of Object.entries(out)) {
+    if (key.endsWith('_url') && value && !safeUrl(value)) out[key] = null;
+  }
+  return out;
+}
+
+export function renderProjectPage(record, images, linkHistoryRecord) {
+  const p = withSafeLinks(record);
   const canonicalUrl = `${SITE_URL}/projects/${p.slug}/`;
   const pageTitle = `${p.name} — INDEX:80 / CARDANO`;
   const description = metaDescription(p);
@@ -495,12 +531,7 @@ function renderProjectPage(p, images, linkHistoryRecord) {
       <span class="network-label">/CARDANO</span>
     </div>
     <nav class="main-nav" aria-label="Primary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
-      <a href="/data/">▥ Data</a>
-      <a href="/learn/">▤ Learn</a>
-      <a href="/governance/">⌂ Governance</a>
-      <a href="/about/">◇ About</a>
+${renderNavLinks(null, '      ')}
     </nav>
   </header>
 
@@ -529,18 +560,14 @@ function renderProjectPage(p, images, linkHistoryRecord) {
     ${sourceList(p)}
   </main>
 
+  <p class="record-editorial-line"><a href="${PROJECT_METHODOLOGY_URL}">How we verify records</a> · <a href="/submit/">Suggest a correction</a></p>
   <p style="max-width:1600px;margin:0 auto;padding:0 .8rem 1rem;">
     <a class="back-to-directory" href="/">← Back to the index</a>
   </p>
 
   <footer class="site-footer">
     <nav class="footer-nav" aria-label="Secondary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
-      <a href="/data/">▥ Data</a>
-      <a href="/learn/">▤ Learn</a>
-      <a href="/governance/">⌂ Governance</a>
-      <a href="/about/">◇ About</a>
+${renderNavLinks(null, '      ')}
     </nav>
     <div class="footer-meta">
       <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>
@@ -611,4 +638,6 @@ function main() {
   }
 }
 
-main();
+// Run only when invoked as a script, so tests can import renderProjectPage.
+// Compare real paths: import.meta.url is symlink-resolved, argv[1] is not.
+if (process.argv[1] && import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href) main();

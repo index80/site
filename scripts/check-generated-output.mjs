@@ -31,6 +31,7 @@ const GENERATED_FILES = new Set([
   'public_html/registry/index.json', // generate-registry-history
   'public_html/registry/index.html', // generate-registry-history
   'public_html/sitemap.xml', // generate-sitemap
+  'public_html/data/search-index.json', // generate-search-index
   'public_html/site-version.json', // generate-site-version (build stamp)
   'public_html/assets/js/main.js', // generate-site-version (build stamp)
 ]);

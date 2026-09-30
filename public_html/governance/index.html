@@ -121,14 +121,30 @@
       <span class="network-label">/CARDANO</span>
     </div>
     <nav class="main-nav" aria-label="Primary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
       <a href="/learn/">▤ Learn</a>
-      <a aria-current="page" href="/governance/">⌂ Governance</a>
+      <a href="/governance/" aria-current="page">⌂ Governance</a>
       <a href="/about/">◇ About</a>
+      <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
   </header>
+
+  <!-- INDEX80_GLOBAL_SEARCH_START -->
+  <div class="global-search" data-global-search>
+    <form class="search-box global-search-box" role="search" action="/search/" method="get" aria-label="Search INDEX:80">
+      <label class="global-search-label" for="global-search-input"><span aria-hidden="true">&gt;</span><span class="global-search-label-text"> SEARCH INDEX:80</span></label>
+      <input id="global-search-input" name="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Projects, people, organisations, tags, governance…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="global-search-results" aria-describedby="global-search-hint">
+    </form>
+    <div id="global-search-results" class="gs-results" role="listbox" aria-label="Search suggestions" hidden></div>
+    <p id="global-search-hint" class="visually-hidden">Type at least two characters for suggestions. Use the arrow keys to choose one, or press Enter to see all results.</p>
+    <p class="gs-status visually-hidden" aria-live="polite"></p>
+  </div>
+  <script src="/assets/js/site-search.js" defer></script>
+<!-- INDEX80_GLOBAL_SEARCH_END -->
+
 
   <main id="main" class="page-grid single-column">
     <section class="panel hero-panel section-hero compact-hero">
@@ -144,37 +160,37 @@
     </section>
 
     <section class="topic-grid" aria-labelledby="roles-title">
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="gov-ada-holders">
         <h3 id="roles-title">ADA holders</h3>
         <p>ADA holders provide the voting power behind delegated governance. Start here to understand how governance works before delegating to a DRep — without transferring custody of your ADA.</p>
         <div><a href="https://cardano.org/governance/" target="_blank" rel="noopener noreferrer">Start with governance ↗</a></div>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="gov-dreps">
         <h3>DReps</h3>
         <p>Delegated representatives receive voting power from ADA holders and vote on governance actions. An ADA holder can also register as a DRep and represent themselves or others.</p>
         <div><a href="/projects/govtool/">GovTool</a> · <a href="/projects/dreptalk/">DRepTalk</a></div>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="gov-stake-pool-operators">
         <h3>Stake pool operators</h3>
         <p>SPOs operate the infrastructure that validates transactions and produces blocks. Under Cardano governance they also vote on specified governance actions, alongside their network-operating role.</p>
         <div><a href="/projects/cexplorer/">CExplorer</a> · <a href="/projects/pooltool/">PoolTool</a></div>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="gov-constitutional-committee">
         <h3>Constitutional Committee</h3>
         <p>The Constitutional Committee assesses whether governance actions are consistent with the Cardano Constitution. Its role is constitutional oversight rather than simply representing delegated stake.</p>
         <div><a href="https://cardano.org/constitution/" target="_blank" rel="noopener noreferrer">Read the Constitution ↗</a> · <a href="/projects/intersect/">Intersect</a></div>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="gov-governance-actions">
         <h3>Governance actions</h3>
         <p>Governance actions are on-chain proposals concerning the network. Different action types have different ratification requirements, so the relevant voting bodies depend on what is being proposed.</p>
         <div><a href="https://cardano.org/insights/governance-actions/" target="_blank" rel="noopener noreferrer">Action Charts ↗</a> · <a href="/projects/cgov/">CGOV</a></div>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="gov-how-to-participate">
         <h3>How to participate</h3>
         <p>Cardano.org's own guided pathway walks through the three governance roles in order — understand how governance works, delegate your voting power, or stand for a governance role yourself.</p>
         <div><a href="https://cardano.org/governance/#paths" target="_blank" rel="noopener noreferrer">Understand · Delegate · Lead ↗</a> · <a href="#directory">Browse governance-category records ↓</a></div>
@@ -216,12 +232,14 @@
 
   <footer class="site-footer">
     <nav class="footer-nav" aria-label="Secondary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
       <a href="/learn/">▤ Learn</a>
-      <a aria-current="page" href="/governance/">⌂ Governance</a>
+      <a href="/governance/" aria-current="page">⌂ Governance</a>
       <a href="/about/">◇ About</a>
+      <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
     <div class="footer-meta">
       <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>

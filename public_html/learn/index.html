@@ -69,14 +69,30 @@
       <span class="network-label">/CARDANO</span>
     </div>
     <nav class="main-nav" aria-label="Primary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
-      <a aria-current="page" href="/learn/">▤ Learn</a>
+      <a href="/learn/" aria-current="page">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
       <a href="/about/">◇ About</a>
+      <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
   </header>
+
+  <!-- INDEX80_GLOBAL_SEARCH_START -->
+  <div class="global-search" data-global-search>
+    <form class="search-box global-search-box" role="search" action="/search/" method="get" aria-label="Search INDEX:80">
+      <label class="global-search-label" for="global-search-input"><span aria-hidden="true">&gt;</span><span class="global-search-label-text"> SEARCH INDEX:80</span></label>
+      <input id="global-search-input" name="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Projects, people, organisations, tags, governance…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="global-search-results" aria-describedby="global-search-hint">
+    </form>
+    <div id="global-search-results" class="gs-results" role="listbox" aria-label="Search suggestions" hidden></div>
+    <p id="global-search-hint" class="visually-hidden">Type at least two characters for suggestions. Use the arrow keys to choose one, or press Enter to see all results.</p>
+    <p class="gs-status visually-hidden" aria-live="polite"></p>
+  </div>
+  <script src="/assets/js/site-search.js" defer></script>
+<!-- INDEX80_GLOBAL_SEARCH_END -->
+
 
   <main id="main" class="page-grid single-column">
     <section class="panel hero-panel section-hero compact-hero">
@@ -95,22 +111,22 @@
       <h2 id="start-here-title">NEW TO CARDANO? START HERE</h2>
       <p>Four places to begin, in plain terms — then use the rest of this page and the <a href="/">directory</a> to find real, current tools.</p>
       <div class="topic-grid">
-        <article class="panel topic-card">
+        <article class="panel topic-card" id="learn-what-is-cardano">
           <h3>What is Cardano?</h3>
           <p>A proof-of-stake blockchain: a public ledger for transactions, native assets, smart contracts and on-chain governance.</p>
           <div><a href="https://cardano.org/what-is-cardano/" target="_blank" rel="noopener noreferrer">Official overview ↗</a></div>
         </article>
-        <article class="panel topic-card">
+        <article class="panel topic-card" id="learn-cardano-s-origins">
           <h3>Cardano's origins</h3>
           <p>How Charles Hoskinson, Jeremy Wood and the three founding entities fit into Cardano's beginning — and how the network evolved toward community governance.</p>
           <div><a href="/people/charles-hoskinson/">Charles Hoskinson + Cardano history →</a></div>
         </article>
-        <article class="panel topic-card">
+        <article class="panel topic-card" id="learn-cardano-foundation">
           <h3>Cardano Foundation</h3>
           <p>An independent entity supporting Cardano's growth, including education through Cardano Academy.</p>
           <div><a href="/projects/cardano-foundation/">INDEX:80 record →</a></div>
         </article>
-        <article class="panel topic-card">
+        <article class="panel topic-card" id="learn-cardano-docs">
           <h3>Cardano Docs</h3>
           <p>Official technical documentation for building on and using Cardano.</p>
           <div><a href="/projects/cardano-docs/">INDEX:80 record →</a></div>
@@ -119,56 +135,56 @@
     </section>
 
     <section class="topic-grid" id="topics">
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="learn-cardano-ada">
         <h3>Cardano + ADA</h3>
         <p>Cardano is a proof-of-stake blockchain. ADA is its native currency: it pays transaction fees, participates in staking and governance, and is the base asset used across much of the ecosystem.</p>
         <div><a href="/data/">View Cardano data →</a> · <a href="/">Browse the ecosystem →</a> · <a href="/?category=education">Education & fundamentals →</a></div>
         <span class="badge badge-live">START HERE</span>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="learn-wallets-custody">
         <h3>Wallets + custody</h3>
         <p>A wallet manages the keys that authorise transactions; your ADA and native assets remain recorded on-chain. The important distinction is who controls the signing keys and how safely recovery credentials are stored.</p>
         <div><a href="/projects/eternl/">Eternl</a> · <a href="/projects/lace/">Lace</a> · <a href="/projects/vespr/">VESPR</a> · <a href="/projects/begin/">Begin</a> · <a href="/?category=wallet">All wallets →</a></div>
         <span class="badge badge-live">LIVE PROJECT LINKS</span>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="learn-staking">
         <h3>Staking</h3>
         <p>Cardano holders can delegate stake to a stake pool while keeping custody of their ADA. Delegation helps determine block-producing stake and can earn protocol rewards; it is not the same as transferring coins to the pool operator.</p>
         <div><a href="/projects/cexplorer/">CExplorer</a> · <a href="/projects/cardanoscan/">CardanoScan</a></div>
         <span class="badge badge-live">ON-CHAIN CONCEPT</span>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="learn-native-assets-policy-ids">
         <h3>Native assets + policy IDs</h3>
         <p>Tokens and NFTs can exist directly on Cardano's ledger. A policy ID identifies the minting policy; combined with the asset name it lets users distinguish the intended asset from lookalikes with the same ticker or display name.</p>
         <div><a href="/projects/cardanoscan/">Inspect with CardanoScan</a> · <a href="/projects/cexplorer/">Inspect with CExplorer</a> · <a href="/?category=explorer">All explorers →</a></div>
         <span class="badge badge-live">VERIFY IDENTIFIERS</span>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="learn-dex-defi">
         <h3>DEX + DeFi</h3>
         <p>Cardano DeFi includes decentralised exchanges, aggregators, lending and other financial protocols. The eUTXO model changes how transactions and liquidity interactions are constructed, but users still need to verify the protocol and asset they are interacting with.</p>
         <div><a href="/projects/minswap/">Minswap</a> · <a href="/projects/dexhunter/">DexHunter</a> · <a href="/projects/liqwid/">Liqwid</a> · <a href="/?category=dex">All DEXs →</a> · <a href="/?category=defi">All DeFi →</a></div>
         <span class="badge badge-live">ACTIVE TOOLS</span>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="learn-governance-dreps">
         <h3>Governance + DReps</h3>
         <p>Cardano's on-chain governance allows governance actions to be proposed and voted on. ADA holders can delegate voting power to a DRep or participate through the governance mechanisms available to them.</p>
         <div><a href="/governance/">Governance guide</a> · <a href="/projects/govtool/">GovTool</a> · <a href="/projects/cgov/">CGOV</a> · <a href="/projects/dreptalk/">DRepTalk</a> · <a href="/?category=governance">All governance tools →</a></div>
         <span class="badge badge-live">PARTICIPATION</span>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="learn-building-on-cardano">
         <h3>Building on Cardano</h3>
         <p>Developers can work at several layers: smart contracts, transaction construction, APIs, indexers and application frameworks. Aiken is a smart-contract language, while tools such as MeshJS and Blockfrost support application development and data access.</p>
         <div><a href="/projects/aiken/">Aiken</a> · <a href="/projects/meshjs/">MeshJS</a> · <a href="/projects/blockfrost/">Blockfrost</a> · <a href="/?category=developer-tool">All developer tools →</a> · <a href="/?category=infrastructure">All infrastructure →</a></div>
         <span class="badge badge-live">DEVELOPER PATH</span>
       </article>
 
-      <article class="panel topic-card">
+      <article class="panel topic-card" id="learn-eutxo-hydra-mithril">
         <h3>eUTXO, Hydra + Mithril</h3>
         <p>Extended UTXO is Cardano's transaction model for programmable state. Hydra explores high-throughput off-chain execution for specific use cases, while Mithril uses stake-based multi-signatures to create compact, verifiable certificates of Cardano state.</p>
         <div><a href="/projects/extended-utxo/">eUTXO</a> · <a href="/projects/hydra/">Hydra</a> · <a href="/projects/mithril/">Mithril</a></div>
@@ -185,12 +201,14 @@
 
   <footer class="site-footer">
     <nav class="footer-nav" aria-label="Secondary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
-      <a aria-current="page" href="/learn/">▤ Learn</a>
+      <a href="/learn/" aria-current="page">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
       <a href="/about/">◇ About</a>
+      <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
     <div class="footer-meta">
       <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>

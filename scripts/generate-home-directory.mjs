@@ -12,6 +12,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
+import { esc, safeUrl } from './lib/html-safety.mjs';
 
 // Shared "confirmed Treasury-funded" rule — see assets/js/treasury-rule.js.
 const Treasury = createRequire(import.meta.url)('../public_html/assets/js/treasury-rule.js');
@@ -46,13 +47,8 @@ const CATEGORY_ICON = {
   'token-project': 'nft',
 };
 
-const esc = (s) =>
-  String(s).replace(/[&<>"']/g, (c) => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  }[c]));
 
 const catLabel = (cat) => String(cat).replace(/-/g, ' ').toUpperCase();
-const safeUrl = (u) => (typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null);
 const bestExternalLink = (p) =>
   safeUrl(p.official_url) || safeUrl(p.github_url) || safeUrl(p.docs_url) || safeUrl(p.social_url) || null;
 

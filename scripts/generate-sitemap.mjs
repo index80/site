@@ -15,10 +15,12 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validatePublicPerson } from './lib/people-public.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC_HTML = join(ROOT, 'public_html');
 const DATA_FILE = join(PUBLIC_HTML, 'data', 'projects.json');
+const PEOPLE_DATA_FILE = join(PUBLIC_HTML, 'data', 'people.json');
 const OUT_PATH = join(PUBLIC_HTML, 'sitemap.xml');
 const SITE_URL = 'https://index80.com';
 
@@ -29,13 +31,16 @@ const SLUG_RE = /^[a-z0-9-]+$/;
 // /cardano/ is retired (obsolete duplicate "Discover" directory — the
 // homepage is now the canonical directory) and permanently redirects to /
 // via public_html/_redirects; it must never appear here again.
+// /people/methodology/ is likewise retired: it 301-redirects to the canonical
+// /about/methodology/#people and must not be listed.
 const CORE_PAGES = [
   '/',
   '/about/',
   '/about/charter/',
+  '/about/methodology/',
   '/data/',
   '/learn/',
-  '/people/charles-hoskinson/',
+  '/people/',
   '/governance/',
   '/submit/',
   '/news/',
@@ -57,7 +62,12 @@ function main() {
     .filter((p) => p.slug && SLUG_RE.test(p.slug) && p.name && p.summary && p.category && p.status)
     .map((p) => `/projects/${p.slug}/`);
 
-  const urls = [...CORE_PAGES, ...projectPaths];
+  const peopleData = JSON.parse(readFileSync(PEOPLE_DATA_FILE, 'utf8'));
+  const peoplePaths = (peopleData.people || [])
+    .map((p) => validatePublicPerson(p, {publicRoot:PUBLIC_HTML}))
+    .map((p) => `/people/${p.slug}/`);
+
+  const urls = [...CORE_PAGES, ...peoplePaths, ...projectPaths];
 
   const body = urls
     .map((path) => `  <url><loc>${esc(SITE_URL + path)}</loc></url>`)
@@ -70,7 +80,7 @@ ${body}
 `;
 
   writeFileSync(OUT_PATH, xml, 'utf8');
-  console.log(`[generate-sitemap] wrote ${urls.length} url(s) (${CORE_PAGES.length} core page(s) + ${projectPaths.length} project page(s)) to public_html/sitemap.xml`);
+  console.log(`[generate-sitemap] wrote ${urls.length} url(s) (${CORE_PAGES.length} core + ${peoplePaths.length} People + ${projectPaths.length} project page(s)) to public_html/sitemap.xml`);
 }
 
 main();

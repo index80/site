@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { renderNavLinks } from './lib/site-nav.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const REGISTRY_DIR = path.join(ROOT, 'public_html/registry');
@@ -224,13 +225,7 @@ function renderPage(history) {
       <span class="network-label">/CARDANO</span>
     </div>
     <nav class="main-nav" aria-label="Primary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
-      <a href="/data/">▥ Data</a>
-      <a href="/learn/">▤ Learn</a>
-      <a href="/governance/">⌂ Governance</a>
-      <a href="/about/">◇ About</a>
-      <a aria-current="page" href="/registry/">▣ Registry</a>
+${renderNavLinks('/registry/', '      ')}
     </nav>
   </header>
 
@@ -311,13 +306,7 @@ function renderPage(history) {
 
   <footer class="site-footer">
     <nav class="footer-nav" aria-label="Secondary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
-      <a href="/data/">▥ Data</a>
-      <a href="/learn/">▤ Learn</a>
-      <a href="/governance/">⌂ Governance</a>
-      <a href="/about/">◇ About</a>
-      <a aria-current="page" href="/registry/">▣ Registry</a>
+${renderNavLinks('/registry/', '      ')}
     </nav>
     <div class="footer-meta">
       <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>

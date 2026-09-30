@@ -1584,17 +1584,49 @@
       <span class="network-label">/CARDANO</span>
     </div>
     <nav class="main-nav" aria-label="Primary">
-      <a aria-current="page" href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/" aria-current="page">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
       <a href="/about/">◇ About</a>
       <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
   </header>
 
+  <!-- INDEX80_GLOBAL_SEARCH_START -->
+  <div class="global-search" data-global-search>
+    <form class="search-box global-search-box" role="search" action="/search/" method="get" aria-label="Search INDEX:80">
+      <label class="global-search-label" for="global-search-input"><span aria-hidden="true">&gt;</span><span class="global-search-label-text"> SEARCH INDEX:80</span></label>
+      <input id="global-search-input" name="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Projects, people, organisations, tags, governance…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="global-search-results" aria-describedby="global-search-hint">
+    </form>
+    <div id="global-search-results" class="gs-results" role="listbox" aria-label="Search suggestions" hidden></div>
+    <p id="global-search-hint" class="visually-hidden">Type at least two characters for suggestions. Use the arrow keys to choose one, or press Enter to see all results.</p>
+    <p class="gs-status visually-hidden" aria-live="polite"></p>
+  </div>
+  <script src="/assets/js/site-search.js" defer></script>
+<!-- INDEX80_GLOBAL_SEARCH_END -->
+
+
   <main id="main" class="page-grid">
+    <section class="hero panel hero-panel compact-hero home-hero" style="grid-column:1/-1;">
+      <div class="hero-copy">
+        <div class="eyebrow">WELCOME TO</div>
+        <h1>INDEX:<span>80</span><small>/CARDANO</small></h1>
+        <p class="strap">DISCOVER. VERIFY. TRACK. LEARN.</p>
+        <p>An independent index of the Cardano ecosystem. INDEX:80 maps projects, the people building them, public data, education and governance, and is built to be useful to people, search engines, developers and AI systems alike. This page is the projects directory; browse and filter below.</p>
+        <div class="actions">
+          <a class="button" href="#directory">Browse projects ↓</a>
+          <a class="button" href="/about/">How the index works</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/images/index80-hero-home.webp" alt="Pixel-art illustration of an astronaut and a black cat sitting on a vine-covered stone wall, looking out over a coastal bay toward a futuristic city and a moon, representing the Cardano ecosystem INDEX:80 maps." width="1760" height="831" loading="eager">
+        <div class="terminal">OPEN<br>LINKS<br>REAL<br>DATA</div>
+      </div>
+    </section>
+
     <section class="panel directory" id="directory" data-directory data-source="data/projects.json" data-icons="assets/icons/icons.svg" aria-labelledby="directory-title">
       <div class="panel-title">
         <h2 id="directory-title">DIRECTORY</h2>
@@ -1602,7 +1634,6 @@
       </div>
       <div class="directory-toolbar">
         <div id="category-bar" class="category-bar" role="tablist" aria-label="Filter by category"></div>
-        <label class="search-box directory-search">&gt;<input type="search" id="directory-search" placeholder="Search name, category, tags…" aria-label="Search directory"></label>
       </div>
       <div class="dir-head">
         <span aria-hidden="true"></span><span aria-hidden="true"></span><button type="button" class="dir-sort" data-sort="name">PROJECT</button><span class="dir-desc" aria-hidden="true">DESCRIPTION</span><button type="button" class="dir-sort dir-cat" data-sort="category">CATEGORY</button><span aria-hidden="true">SITE</span>
@@ -3325,22 +3356,6 @@
       </ol>
     </section>
 
-    <section class="hero panel hero-panel compact-hero" style="grid-column:1/-1;">
-      <div class="hero-copy">
-        <div class="eyebrow">WELCOME TO</div>
-        <h1>INDEX:<span>80</span><small>/CARDANO</small></h1>
-        <p class="strap">DISCOVER. VERIFY. TRACK. LEARN.</p>
-        <p>An independent index of the Cardano ecosystem — projects, data, education and governance — built to be useful to people, search engines, developers and AI systems alike.</p>
-        <div class="actions">
-          <a class="button" href="/about/">How the index works</a>
-        </div>
-      </div>
-      <div class="hero-art">
-        <img src="assets/images/index80-hero-home.webp" alt="Pixel-art illustration of an astronaut and a black cat sitting on a vine-covered stone wall, looking out over a coastal bay toward a futuristic city and a moon, representing the Cardano ecosystem INDEX:80 maps." width="1760" height="831" loading="eager">
-        <div class="terminal">OPEN<br>LINKS<br>REAL<br>DATA</div>
-      </div>
-    </section>
-
     <section class="feature-grid">
       <article class="panel feature"><div class="icon">▥</div><h2>DATA</h2><p>Live Cardano network, market and ecosystem data from public sources, with timestamps and provenance.</p><a href="/data/">View the data page →</a></article>
       <article class="panel feature"><div class="icon">▤</div><h2>LEARN</h2><p>Clear explanations linked directly to real Cardano tools and projects.</p><a href="/learn/">Start learning →</a></article>
@@ -3351,13 +3366,14 @@
 
   <footer class="site-footer">
     <nav class="footer-nav" aria-label="Secondary">
-      <a aria-current="page" href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/" aria-current="page">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
       <a href="/about/">◇ About</a>
       <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
     <div class="footer-meta">
       <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>
