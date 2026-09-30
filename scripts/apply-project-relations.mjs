@@ -10,13 +10,21 @@
  * This pass also adds small semantic record icons and linkifies explicit
  * public X handles in Founder / Lead fields. The icons are presentation only;
  * no editorial facts are inferred from them.
+ *
+ * People links (scripts/lib/people-project-links.mjs): a Founder / Lead name
+ * links to an approved People profile only on an exact public-name match with
+ * a person whose profile lists this project; every other person whose profile
+ * lists the project appears under CONNECTED PEOPLE, which states a connection,
+ * not a role.
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { connectedPeopleByProject, personUrl, renderFounderLead } from './lib/people-project-links.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PROJECTS_PATH = join(ROOT, 'public_html', 'data', 'projects.json');
+const PEOPLE_PATH = join(ROOT, 'public_html', 'data', 'people.json');
 const RELATIONS_PATH = join(ROOT, 'public_html', 'data', 'project-relations.json');
 const PROJECTS_DIR = join(ROOT, 'public_html', 'projects');
 
@@ -72,8 +80,9 @@ const RECORD_ICON_STYLE = `<style data-record-icons>
 const data = loadJson(PROJECTS_PATH, { projects: [] });
 const relations = loadJson(RELATIONS_PATH, { records: {} });
 const bySlug = new Map((data.projects || []).map((p) => [p.slug, p]));
+const peopleByProject = connectedPeopleByProject(data.projects || [], loadJson(PEOPLE_PATH, { people: [] }).people || []);
 
-const RELATION_BLOCK_RE = /\s*<div data-editorial-relation="(?:team|founder|related)">[\s\S]*?<\/div>/g;
+const RELATION_BLOCK_RE = /\s*<div data-editorial-relation="(?:team|founder|people|related)">[\s\S]*?<\/div>/g;
 const CATEGORY_METRIC_RE = /(<div><span>DETAILED CATEGORY<\/span><strong>[^<]*<\/strong><\/div>)/;
 const PROFILE_CAT_RE = /<p class="profile-cat">([^<]*)<\/p>/;
 const EDITORIAL_NOTE_RE = /(<section class="panel profile-note">[\s\S]*?<p class="profile-summary"[^>]*>)[\s\S]*?(<\/p>[\s\S]*?<\/section>)/;
@@ -102,8 +111,19 @@ for (const project of data.projects || []) {
   if (meta.team_entity) {
     blocks.push(`<div data-editorial-relation="team">${metricLabel('TEAM / ENTITY', 'team')}<strong>${esc(meta.team_entity)}</strong></div>`);
   }
+  const connected = peopleByProject.get(project.slug) || [];
+  let founderLinked = new Set();
   if (meta.founder_lead) {
-    blocks.push(`<div data-editorial-relation="founder">${metricLabel('FOUNDER / LEAD', 'person')}<strong>${linkifyXHandles(meta.founder_lead)}</strong></div>`);
+    const founder = renderFounderLead(meta.founder_lead, connected, { esc, renderText: linkifyXHandles });
+    founderLinked = founder.linked;
+    blocks.push(`<div data-editorial-relation="founder">${metricLabel('FOUNDER / LEAD', 'person')}<strong>${founder.html}</strong></div>`);
+  }
+  const otherPeople = connected.filter((p) => !founderLinked.has(p.slug));
+  if (otherPeople.length) {
+    const links = otherPeople
+      .map((p) => `<a class="person-link" href="${esc(personUrl(p))}">${esc(p.name)} →</a>`)
+      .join(' · ');
+    blocks.push(`<div data-editorial-relation="people">${metricLabel('CONNECTED PEOPLE', 'person')}<strong>${links}</strong><small>Listed on their INDEX:80 People profile</small></div>`);
   }
 
   // Archived records are a human editorial decision to retire from active
