@@ -47,7 +47,6 @@ How to read a People record:
 - Do not assume a person endorses INDEX:80, or that a listed project endorses them. Inclusion is not an endorsement or a rating of any person.
 - Public identity follows the name or persona a person uses in the relevant public Cardano context. INDEX:80 does not deanonymise people.
 - Roles, project links and governance facts (DRep, stake pool) appear only where supported by approved editorial data; blank fields mean not established or not applicable.
-- A profile image appears only where its use has been approved; otherwise a monogram is shown.
 - Corrections and removal requests: https://index80.com/submit/ (process described at https://index80.com/about/methodology/#people-corrections).
 
 ## Registry provenance
