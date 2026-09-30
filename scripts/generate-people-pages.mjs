@@ -9,9 +9,7 @@
  * governance facts in compact cards; one short record line linking to the
  * shared methodology page instead of repeating it on every profile.
  *
- * On the protected DEV preview only, candidate PFPs staged by
- * stage-people-pfp-review.mjs are shown with a visible review label; otherwise
- * (and always on dev/main) the production-approved avatar or the monogram is used.
+ * Each profile shows its production-approved avatar, else the monogram.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -23,7 +21,6 @@ import {
   safeExternalUrl,
   validatePublicPerson,
 } from './lib/people-public.mjs';
-import { loadReviewMap } from './lib/people-pfp-review.mjs';
 import { hasVerifiedDrep, hasVerifiedSpo, inferredRole, initials, profileStrap } from './lib/people-display.mjs';
 import { renderNavLinks } from './lib/site-nav.mjs';
 
@@ -93,7 +90,7 @@ function relationChip(label, projectMap) {
     : `<span class="tag-chip">${esc(label)}</span>`;
 }
 
-export function renderAvatar(p, review) {
+export function renderAvatar(p) {
   const avatar = safeAvatarPath(p.avatar_url);
   if (avatar) {
     const alt = p.avatar_alt || `${p.name} profile image`;
@@ -106,13 +103,6 @@ export function renderAvatar(p, review) {
     return `<figure class="people-avatar">
           <img class="people-avatar-img" src="${esc(avatar)}" alt="${esc(alt)}" loading="eager" referrerpolicy="no-referrer">
           ${credit}
-        </figure>`;
-  }
-  const candidate = review?.images?.[p.slug];
-  if (candidate) {
-    return `<figure class="people-avatar people-avatar-review" data-pfp-review="candidate">
-          <img class="people-avatar-img" src="${esc(candidate.path)}" alt="${esc(p.name)} public profile image (candidate for review)" loading="eager" referrerpolicy="no-referrer">
-          <figcaption class="people-review-label">${esc(review.label)}</figcaption>
         </figure>`;
   }
   return `<div class="people-avatar people-avatar-fallback" role="img" aria-label="Profile image not yet published for ${esc(p.name)}"><span>${esc(initials(p.name))}</span></div>`;
@@ -178,7 +168,7 @@ function jsonLd(p) {
   }, null, 2).replace(/</g,'\\u003c');
 }
 
-export function render(p, projectMap, review = null) {
+export function render(p, projectMap) {
   const pageTitle = `${p.name} — INDEX:80 / CARDANO`;
   const pageUrl = `https://index80.com/people/${p.slug}/`;
   const description = metaDescription(p);
@@ -251,7 +241,7 @@ ${renderNavLinks('/people/', '      ')}
 
     <section class="panel people-profile-hero people-record-header" aria-labelledby="person-name">
       <div class="people-profile-media">
-        ${renderAvatar(p, review)}
+        ${renderAvatar(p)}
       </div>
       <div class="people-profile-copy">
         <p class="people-record-cat">${esc(p.primary_category)}</p>
@@ -294,11 +284,9 @@ function main() {
   const peopleData = JSON.parse(readFileSync(PEOPLE_FILE, 'utf8'));
   const projectsData = JSON.parse(readFileSync(PROJECTS_FILE, 'utf8'));
   const projectMap = new Map((projectsData.projects || []).map((p)=>[normalize(p.name),p.slug]));
-  const review = loadReviewMap(PUBLIC);
 
   let generated = 0;
   let custom = 0;
-  let candidates = 0;
   const people = peopleData.people || [];
   const activeSlugs = new Set();
   for (const p of people) {
@@ -315,13 +303,12 @@ function main() {
     }
 
     mkdirSync(dir, {recursive:true});
-    writeFileSync(out, render(p, projectMap, review), 'utf8');
+    writeFileSync(out, render(p, projectMap), 'utf8');
     generated += 1;
-    if (!p.avatar_url && review?.images?.[p.slug]) candidates += 1;
   }
 
   const pruned = pruneStaleGeneratedProfiles(PEOPLE_DIR, activeSlugs);
-  console.log(`[generate-people-pages] wrote ${generated} generated profile(s); preserved ${custom} custom profile(s); pruned ${pruned} stale generated profile(s)${review ? `; DEV review: ${candidates} candidate PFP(s)` : ''}`);
+  console.log(`[generate-people-pages] wrote ${generated} generated profile(s); preserved ${custom} custom profile(s); pruned ${pruned} stale generated profile(s)`);
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();

@@ -37,16 +37,11 @@
     if (!parts.length) return '?';
     return parts.length === 1 ? parts[0].slice(0, 2).toUpperCase() : (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
   };
-  // DEV-only candidate PFP map; present only on the protected review preview.
-  const reviewSource = root.getAttribute('data-pfp-review');
-  let reviewImages = {};
-  const safeAvatar = (u) => (typeof u === 'string' && /^\/assets\/people(?:-review)?\/[a-z0-9][a-z0-9/_.-]*\.(?:avif|gif|jpe?g|png|webp)$/i.test(u) && !u.includes('..') ? u : null);
+  const safeAvatar = (u) => (typeof u === 'string' && /^\/assets\/people\/[a-z0-9][a-z0-9/_.-]*\.(?:avif|gif|jpe?g|png|webp)$/i.test(u) && !u.includes('..') ? u : null);
   const thumb = (p) => {
-    const approved = safeAvatar(p.avatar_url);
-    const candidate = !approved && safeAvatar(reviewImages[p.slug]?.path);
-    const src = approved || candidate;
+    const src = safeAvatar(p.avatar_url);
     return src
-      ? `<img class="dir-thumb${candidate ? ' dir-thumb-review' : ''}" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`
+      ? `<img class="dir-thumb" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`
       : `<span class="dir-thumb dir-thumb-fallback" aria-hidden="true">${esc(initials(p.name))}</span>`;
   };
   const badges = (p) => (hasVerifiedDrep(p) ? '<span class="dir-badge" title="Verified active DRep">DREP</span>' : '')
@@ -177,12 +172,8 @@
     });
   });
 
-  const reviewReady = reviewSource
-    ? fetch(reviewSource).then((r) => (r.ok ? r.json() : null)).then((m) => { reviewImages = (m && m.mode === 'dev-review' && m.images) || {}; }).catch(() => {})
-    : Promise.resolve();
-
-  Promise.all([fetch(source), reviewReady])
-    .then(([r]) => {
+  fetch(source)
+    .then((r) => {
       if (!r.ok) throw new Error(`${source} responded ${r.status}`);
       return r.json();
     })

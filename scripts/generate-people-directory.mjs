@@ -11,7 +11,6 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { safeAvatarPath, validatePublicPerson } from './lib/people-public.mjs';
 import { hasVerifiedDrep, hasVerifiedSpo, initials } from './lib/people-display.mjs';
-import { loadReviewMap, REVIEW_MAP_FILE } from './lib/people-pfp-review.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILE = join(ROOT, 'public_html', 'data', 'people.json');
@@ -40,14 +39,10 @@ function external(p) {
   return p.x_url || p.linkedin_url || null;
 }
 
-const review = loadReviewMap(join(ROOT, 'public_html'));
-
-// Small avatar: approved avatar, else the DEV-only review candidate, else a monogram.
+// Small avatar: approved avatar, else a monogram.
 function thumb(p) {
-  const approved = safeAvatarPath(p.avatar_url);
-  const candidate = !approved && review?.images?.[p.slug]?.path;
-  const src = approved || candidate;
-  if (src) return `<img class="dir-thumb${candidate ? ' dir-thumb-review' : ''}" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`;
+  const src = safeAvatarPath(p.avatar_url);
+  if (src) return `<img class="dir-thumb" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`;
   return `<span class="dir-thumb dir-thumb-fallback" aria-hidden="true">${esc(initials(p.name))}</span>`;
 }
 
@@ -91,9 +86,7 @@ if (html.indexOf(START, start + START.length) !== -1 || html.indexOf(END, end + 
   throw new Error('People directory generation markers must occur exactly once.');
 }
 html = html.slice(0, start + START.length) + '\n' + rows + '\n        ' + html.slice(end);
-// The DEV review map is referenced only when review mode staged it for this build.
 html = html.replace(/ data-pfp-review="[^"]*"/, '');
-if (review) html = html.replace('data-people-directory ', `data-people-directory data-pfp-review="/${REVIEW_MAP_FILE}" `);
 html = html.replace(
   /(<span id="people-directory-count" class="directory-count">)[^<]*(<\/span>)/,
   `$1${people.length} RECORDS$2`
