@@ -24,10 +24,13 @@ export const SEARCH_TYPES = ['project', 'person', 'learn', 'governance', 'data',
 
 const readJson = (rel) => JSON.parse(readFileSync(join(PUBLIC, rel), 'utf8'));
 const readHtml = (rel) => readFileSync(join(PUBLIC, rel), 'utf8');
-const decode = (s) => String(s ?? '')
+// `&amp;` is decoded last so each entity is decoded exactly once
+// (`&amp;lt;` → `&lt;`, not `<`); the catch-all skips `&amp;` for the same reason.
+export const decode = (s) => String(s ?? '')
   .replace(/<[^>]+>/g, ' ')
-  .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;|&rsquo;|&lsquo;/g, "'")
-  .replace(/&nbsp;/g, ' ').replace(/&[a-z]+;/g, ' ')
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;|&rsquo;|&lsquo;/g, "'")
+  .replace(/&nbsp;/g, ' ').replace(/&(?!amp;)[a-z]+;/g, ' ')
+  .replace(/&amp;/g, '&')
   .replace(/\s+/g, ' ').trim();
 
 /** Same normalisation as site-search.js: lower-case, strip accents, punctuation → space. */
