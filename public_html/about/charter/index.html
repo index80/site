@@ -4,7 +4,7 @@
   <script src="/assets/js/analytics.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="INDEX:80 — Editorial &amp; Open Web Charter v1.1. The approved governing document for editorial independence, human review, evidence and open-web principles.">
+  <meta name="description" content="INDEX:80 — Editorial &amp; Open Web Charter v1.2. The approved governing document for editorial independence, human review, evidence and open-web principles.">
   <title>Editorial &amp; Open Web Charter — INDEX:80 / CARDANO</title>
   <link rel="canonical" href="https://index80.com/about/charter/">
   <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
@@ -30,22 +30,38 @@
       <span class="network-label">/CARDANO</span>
     </div>
     <nav class="main-nav" aria-label="Primary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
-      <a aria-current="page" href="/about/">◇ About</a>
+      <a href="/about/" aria-current="page">◇ About</a>
+      <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
   </header>
+
+  <!-- INDEX80_GLOBAL_SEARCH_START -->
+  <div class="global-search" data-global-search>
+    <form class="search-box global-search-box" role="search" action="/search/" method="get" aria-label="Search INDEX:80">
+      <label class="global-search-label" for="global-search-input"><span aria-hidden="true">&gt;</span><span class="global-search-label-text"> SEARCH INDEX:80</span></label>
+      <input id="global-search-input" name="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Projects, people, organisations, tags, governance…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="global-search-results" aria-describedby="global-search-hint">
+    </form>
+    <div id="global-search-results" class="gs-results" role="listbox" aria-label="Search suggestions" hidden></div>
+    <p id="global-search-hint" class="visually-hidden">Type at least two characters for suggestions. Use the arrow keys to choose one, or press Enter to see all results.</p>
+    <p class="gs-status visually-hidden" aria-live="polite"></p>
+  </div>
+  <script src="/assets/js/site-search.js" defer></script>
+<!-- INDEX80_GLOBAL_SEARCH_END -->
+
 
   <main id="main" class="page-grid single-column">
     <p class="source-line" style="margin:.6rem .8rem 0;"><a href="/">INDEX:80</a> / <a href="/about/">About</a> / Charter</p>
 
     <section class="panel">
-      <div class="panel-title"><h2>EDITORIAL &amp; OPEN WEB CHARTER</h2><span>/ v1.1</span></div>
+      <div class="panel-title"><h2>EDITORIAL &amp; OPEN WEB CHARTER</h2><span>/ v1.2</span></div>
       <div class="charter-doc">
-        <p class="charter-meta">Version 1.1 — 21 September 2026 — APPROVED</p>
+        <p class="charter-meta">Version 1.2 — 30 September 2026 — APPROVED</p>
 
         <h2>Purpose</h2>
         <p>INDEX:80 exists to make the Cardano ecosystem easier to find, understand and navigate.</p>
@@ -78,7 +94,7 @@
         <p>A record being present in INDEX:80 therefore means that we have checked its identity, relevant public links and current public presence sufficiently to include it in the index. This is what "verified by INDEX:80" means.</p>
         <p>It does not mean that INDEX:80 endorses the project, guarantees its security, audits its code, certifies its token, recommends an investment or guarantees that statements made by the project are true.</p>
 
-        <h2>3. Human judgement remains final</h2>
+        <h2 id="human-judgement">3. Human judgement remains final</h2>
         <p>INDEX:80 uses a structured governance approach for how AI tools contribute to research, development and publication.</p>
         <p>Different AI systems have different strengths, so we deliberately use more than one. Current tools may include ChatGPT for research, evidence synthesis, data architecture and editorial reasoning; Gemini for independent research and comparison; Claude for repository implementation, structured review and technical work; and Muse or other specialist tools for additional analysis or alternative perspectives.</p>
         <p>The specific tools may change. INDEX:80 is model-agnostic: no AI model or vendor has privileged editorial authority. We choose tools according to the task and cross-check important findings where appropriate.</p>
@@ -87,7 +103,7 @@
         <p>We also apply the KISS principle to both software and AI workflows. We prefer the simplest system that solves the problem. Complexity must justify itself. Human-readable interfaces and human visual judgement remain the final test.</p>
         <p>Automated systems should support an explainable and accountable process, not replace editorial responsibility.</p>
 
-        <h2>4. Evidence before judgement</h2>
+        <h2 id="evidence-before-judgement">4. Evidence before judgement</h2>
         <p>INDEX:80 should be able to explain why a record was published.</p>
         <p>We will publish the evidence, reference classes and methods needed to understand our editorial decisions, and we will open-source publishable development wherever practical. Credentials, private submission data, security-sensitive configuration and material that must remain private for legal, privacy or security reasons are excluded.</p>
         <p>Research begins with the project's own public presence where available: its canonical website, documentation, official social accounts and source-code repositories.</p>
@@ -137,7 +153,7 @@
 
         <h2>9. Privacy and restraint</h2>
         <p>INDEX:80 should collect as little personal information as is reasonably necessary.</p>
-        <p>Our subject is primarily public projects and public web resources, not private individuals.</p>
+        <p>Our subject is public projects, organisations and people whose public work is materially relevant to the Cardano ecosystem. We do not index private lives. Personal information is limited to what is public, relevant and proportionate to that role.</p>
         <p>We should avoid unnecessary profiling, invasive tracking or accumulation of personal information simply because it is technically obtainable.</p>
         <p>Analytics should remain proportionate, transparent and subject to applicable consent requirements.</p>
 
@@ -204,8 +220,9 @@
         </ul>
 
         <h2>Status</h2>
-        <p>Approved v1.1 — 21 September 2026. This version adds the section on independence, ownership and licensing; the existing editorial principles are unchanged. It is the approved governing Charter for INDEX:80.</p>
-        <p>Previous version: v1.0 — 10 September 2026. That version consolidated the v0.1 Charter, the human review notes and the subsequent editorial discussion.</p>
+        <p>Approved v1.2 — 30 September 2026. Section 9 updated for the People directory; the editorial principles are otherwise unchanged. It is the approved governing Charter for INDEX:80.</p>
+        <p>Previous version: v1.1 — 21 September 2026. Added the section on independence, ownership and licensing; the existing editorial principles were unchanged.</p>
+        <p>Earlier version: v1.0 — 10 September 2026. That version consolidated the v0.1 Charter, the human review notes and the subsequent editorial discussion.</p>
       </div>
     </section>
   </main>
@@ -216,12 +233,14 @@
 
   <footer class="site-footer">
     <nav class="footer-nav" aria-label="Secondary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
-      <a aria-current="page" href="/about/">◇ About</a>
+      <a href="/about/" aria-current="page">◇ About</a>
+      <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
     <div class="footer-meta">
       <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>

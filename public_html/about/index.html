@@ -4,7 +4,7 @@
   <script src="/assets/js/analytics.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="INDEX:80 /CARDANO — how the index discovers, verifies and publishes Cardano project records, and what INDEX:80 verification does and does not mean.">
+  <meta name="description" content="INDEX:80 /CARDANO — an independent, human-reviewed index of the Cardano ecosystem: who builds it, how it is funded, and its editorial system — Charter, Methodology and Corrections.">
   <title>About — INDEX:80 / CARDANO</title>
   <link rel="canonical" href="https://index80.com/about/">
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
@@ -30,14 +30,30 @@
       <span class="network-label">/CARDANO</span>
     </div>
     <nav class="main-nav" aria-label="Primary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
-      <a aria-current="page" href="/about/">◇ About</a>
+      <a href="/about/" aria-current="page">◇ About</a>
+      <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
   </header>
+
+  <!-- INDEX80_GLOBAL_SEARCH_START -->
+  <div class="global-search" data-global-search>
+    <form class="search-box global-search-box" role="search" action="/search/" method="get" aria-label="Search INDEX:80">
+      <label class="global-search-label" for="global-search-input"><span aria-hidden="true">&gt;</span><span class="global-search-label-text"> SEARCH INDEX:80</span></label>
+      <input id="global-search-input" name="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Projects, people, organisations, tags, governance…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="global-search-results" aria-describedby="global-search-hint">
+    </form>
+    <div id="global-search-results" class="gs-results" role="listbox" aria-label="Search suggestions" hidden></div>
+    <p id="global-search-hint" class="visually-hidden">Type at least two characters for suggestions. Use the arrow keys to choose one, or press Enter to see all results.</p>
+    <p class="gs-status visually-hidden" aria-live="polite"></p>
+  </div>
+  <script src="/assets/js/site-search.js" defer></script>
+<!-- INDEX80_GLOBAL_SEARCH_END -->
+
 
   <main id="main" class="page-grid single-column">
     <section class="panel hero-panel section-hero compact-hero">
@@ -79,69 +95,32 @@
       </div>
     </section>
 
-    <section class="panel shell-panel">
-      <h2>EDITORIAL &amp; OPEN WEB CHARTER</h2>
-      <p>The Charter is INDEX:80's approved governing document. It sets out editorial independence, the requirement that a human reviews every record before publication, how evidence is gathered and labelled, and a firm rule: payment never buys inclusion, ranking, Featured status or editorial influence.</p>
-      <div class="charter-summary">
-        <span class="tag-chip">HUMAN REVIEW REQUIRED</span>
-        <span class="tag-chip">EVIDENCE BEFORE JUDGEMENT</span>
-        <span class="tag-chip">NO PAY-TO-RANK</span>
-        <span class="tag-chip">OPEN WEB PRINCIPLES</span>
+    <section class="panel shell-panel editorial-system" id="editorial-system" aria-labelledby="editorial-system-title">
+      <h2 id="editorial-system-title">EDITORIAL SYSTEM</h2>
+      <p>Every record on INDEX:80 is reviewed by a human before it is published. Payment never buys inclusion, ranking, Featured status or editorial influence, and verification is never an endorsement. The Charter sets the principles; the Methodology explains how they are applied.</p>
+      <div class="editorial-system-grid">
+        <a class="editorial-card" href="/about/charter/">
+          <span class="editorial-card-kicker">01 / PRINCIPLES</span>
+          <strong>Editorial &amp; Open Web Charter</strong>
+          <span>The principles governing INDEX:80.</span>
+        </a>
+        <a class="editorial-card" href="/about/methodology/">
+          <span class="editorial-card-kicker">02 / PRACTICE</span>
+          <strong>Editorial Methodology</strong>
+          <span>How records are discovered, researched, verified, reviewed and maintained.</span>
+        </a>
+        <a class="editorial-card" href="/about/methodology/#people">
+          <span class="editorial-card-kicker">03 / PEOPLE</span>
+          <strong>People</strong>
+          <span>Additional identity, privacy and image rules for People records.</span>
+        </a>
+        <a class="editorial-card" href="/about/methodology/#corrections">
+          <span class="editorial-card-kicker">04 / CORRECTIONS</span>
+          <strong>Corrections</strong>
+          <span>How projects and people can challenge, correct or update a record.</span>
+        </a>
       </div>
-      <p style="margin-top:.9rem;"><a class="button" href="/about/charter/">Read the full Charter →</a></p>
-    </section>
-
-    <section class="panel shell-panel">
-      <h2>WHAT “VERIFIED BY INDEX:80” MEANS</h2>
-      <p>A verified record means an editor has checked the project's identity, relevant public links and current public presence sufficiently to include it in the index. The aim is to give people a defensible route to the genuine project and explain the evidence behind that decision.</p>
-      <p><strong>Verification is not an endorsement.</strong> It does not mean INDEX:80 has audited the project's code, guarantees its security, certifies its token, confirms every claim made by its team, or recommends an investment.</p>
-      <div class="charter-summary">
-        <span class="tag-chip">IDENTITY CHECKED</span>
-        <span class="tag-chip">PRIMARY LINK REVIEWED</span>
-        <span class="tag-chip">CURRENT EVIDENCE</span>
-        <span class="tag-chip">NOT INVESTMENT ADVICE</span>
-      </div>
-    </section>
-
-    <section class="panel shell-panel">
-      <h2>THE FIVE-QUESTION PUBLICATION TEST</h2>
-      <p>Before a project is published, the editor should be able to answer five simple questions:</p>
-      <ol style="line-height:1.6; max-width:780px; font-family:var(--font-body);">
-        <li><strong>Identity</strong> — Are we confident this is the project it claims to be?</li>
-        <li><strong>Destination</strong> — Have we identified the best current canonical destination?</li>
-        <li><strong>Currency</strong> — Is there reasonable evidence that the project or resource currently exists in the state we describe?</li>
-        <li><strong>Evidence</strong> — Could we explain which sources led us to that conclusion?</li>
-        <li><strong>Human review</strong> — Has an editor actually looked at the record and its primary link?</li>
-      </ol>
-      <p>If those questions cannot be answered adequately, the record stays in review rather than being published automatically.</p>
-    </section>
-
-    <section class="panel shell-panel">
-      <h2>WHAT WE MEAN BY A “QUALITY BAR”</h2>
-      <p>INDEX:80 does not rank projects, score investment merit or tell people what to buy. When we say a project has passed our quality bar, we mean that it has passed the publication test above and there is enough current, explainable evidence to justify including it in the index.</p>
-      <p>For project spotlights, we may also explain the particular evidence that stood out — for example active building, useful tools, open-source work, community contribution, clear project identity or other verifiable signals. That is editorial judgement, not a guarantee of security, token value, future success or investment performance.</p>
-      <div class="charter-summary">
-        <span class="tag-chip">NO NUMERICAL SCORE</span>
-        <span class="tag-chip">EVIDENCE-BASED</span>
-        <span class="tag-chip">EXPLAINABLE</span>
-        <span class="tag-chip">NOT AN ENDORSEMENT</span>
-      </div>
-    </section>
-
-    <section class="panel shell-panel">
-      <h2>COMMUNITY STAKE POOL STANDARD</h2>
-      <p>Cardano has thousands of stake pools. INDEX:80 does not try to list them all. The <strong>Community Stake Pools</strong> category is a deliberately selective group of operators whose contribution to Cardano goes beyond routine block production.</p>
-      <p>To qualify, we look for:</p>
-      <ul style="line-height:1.6; max-width:820px; font-family:var(--font-body);">
-        <li><strong>Current operation</strong> — an active on-chain pool and a current official public presence.</li>
-        <li><strong>Clear identity</strong> — a verifiable operator or team, pool identity and canonical links.</li>
-        <li><strong>Independent/community-led operation</strong> — smaller and single-pool operators are preferred; large exchange or institutional pool farms are outside the purpose of this category.</li>
-        <li><strong>Contribution beyond running a pool</strong> — for example tools, education, governance participation, open-source work, community support, events, content, charitable work or other useful ecosystem activity.</li>
-        <li><strong>Recent activity</strong> — reasonable evidence that the operator is still contributing to Cardano, not simply maintaining an old website or pool registration.</li>
-        <li><strong>No unresolved material concerns</strong> — if identity, activity or public claims cannot be supported well enough, the record stays in review.</li>
-      </ul>
-      <p>Independent multi-pool operators can still appear where they are clearly community-led, but they are lower priority for spotlighting than smaller pools. Selection is <strong>not based on advertised APR, pool size, token incentives or payment to INDEX:80</strong>.</p>
-      <p>This category is curated rather than comprehensive and is reviewed over time. Inclusion means the operator passed this editorial standard at the time of review; it is not a recommendation to delegate and does not guarantee future pool performance.</p>
+      <p class="editorial-system-note">Found something wrong? <a href="/submit/">Send a correction</a> or email <a href="mailto:hello@index80.com">hello@index80.com</a>.</p>
     </section>
 
     <section class="panel support-panel">
@@ -181,11 +160,6 @@
       </div>
     </section>
 
-    <section class="panel shell-panel">
-      <h2>CORRECTIONS ARE PART OF THE SYSTEM</h2>
-      <p>An open index has to be correctable. If a project link, classification, description, identifier or status is wrong, <a href="/submit/">send a correction or project submission</a> or email <a href="mailto:hello@index80.com">hello@index80.com</a>. Changes are reviewed rather than silently accepted, and material history is preserved where it helps explain what changed.</p>
-    </section>
-
     <section class="panel shell-panel" aria-labelledby="looking-ahead-title">
       <h2 id="looking-ahead-title">LOOKING AHEAD</h2>
       <p>I remain strongly optimistic about Cardano.</p>
@@ -203,12 +177,14 @@
 
   <footer class="site-footer">
     <nav class="footer-nav" aria-label="Secondary">
-      <a href="/">⌂ Home</a>
-      <a href="/submit/">✎ Submit</a>
+      <a href="/">▦ Projects</a>
+      <a href="/people/">◎ People</a>
       <a href="/data/">▥ Data</a>
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
-      <a aria-current="page" href="/about/">◇ About</a>
+      <a href="/about/" aria-current="page">◇ About</a>
+      <a href="/registry/">▣ Registry</a>
+      <a href="/submit/">✎ Submit</a>
     </nav>
     <div class="footer-meta">
       <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>

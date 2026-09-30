@@ -9,16 +9,13 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { esc, safeUrl } from './lib/html-safety.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_PATH = join(ROOT, 'public_html', 'data', 'projects.json');
 const HISTORY_PATH = join(ROOT, 'public_html', 'data', 'project-link-history.json');
 const PROJECTS_DIR = join(ROOT, 'public_html', 'projects');
 
-const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({
-  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-}[c]));
-const safeUrl = (u) => typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null;
 const BAD = new Set(['DEAD', 'SUNSET', 'PARKED']);
 
 // linkedin_url is intentionally absent from TYPE_TO_FIELD below: LinkedIn is
