@@ -6,7 +6,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
-import { SEARCH_ITEM_KEYS, SEARCH_TYPES, normalise as buildNormalise } from './generate-search-index.mjs';
+import { SEARCH_ITEM_KEYS, SEARCH_TYPES, decode, normalise as buildNormalise } from './generate-search-index.mjs';
 import { START, END, EXCLUDED_PREFIXES } from './apply-global-search.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -135,6 +135,12 @@ const dirJs = read('assets', 'js', 'directory.js');
 const peopleJs = read('assets', 'js', 'people-directory.js');
 ok(/activeCategory/.test(dirJs) && /buildCategoryBar/.test(dirJs) && /if \(searchInput\)/.test(dirJs), 'Projects category filtering intact; text search optional');
 ok(/activeCategory/.test(peopleJs) && /if \(searchInput\)/.test(peopleJs), 'People category filtering intact; text search optional');
+
+// Entities are decoded exactly once (CodeQL js/double-escaping).
+ok(decode('Tom &amp; Jerry') === 'Tom & Jerry', 'decode: &amp; → &');
+ok(decode('a &amp;lt;b&amp;gt; c') === 'a &lt;b&gt; c', 'decode: &amp;lt; is not double-decoded');
+ok(decode('x &amp;nbsp; y &amp;amp; z') === 'x &nbsp; y &amp; z', 'decode: &amp;nbsp; / &amp;amp; decoded once');
+ok(decode('<b>A</b>&nbsp;&lt;B&gt; &quot;C&quot; &rsquo;D&#39; &hellip;') === 'A <B> "C" \'D\'', 'decode: tags, named entities and catch-all');
 
 if (failures.length) {
   console.error(`[test-global-search] ${failures.length} failure(s):\n  ${failures.slice(0, 40).join('\n  ')}`);
