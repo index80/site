@@ -1,8 +1,48 @@
 {
-  "confirmed_count": 3,
-  "latest_release_id": "INDEX80-0003",
-  "release_count": 3,
+  "confirmed_count": 4,
+  "latest_release_id": "INDEX80-0004",
+  "release_count": 4,
   "releases": [
+    {
+      "network": "mainnet",
+      "previous": {
+        "release_id": "INDEX80-0003",
+        "transaction_id": "4e49332fafb2a94d8660da75b16cc0cbd2ef8e79320896148e15bdce7fa72067"
+      },
+      "proof": {
+        "block": 14008243,
+        "confirmation_observed": {
+          "date": "2026-09-30",
+          "assurance": "Koios Mainnet: 21 block confirmations at observation",
+          "source": "Koios Mainnet independent verification"
+        },
+        "epoch": 658,
+        "explorer_url": "https://cardanoscan.io/transaction/4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d",
+        "fee_lovelace": "172893",
+        "local_signed_size_bytes": 394,
+        "metadata_hash": null,
+        "metadata_label": 309,
+        "onchain_size_bytes": 393,
+        "proof_standard": "CIP-190",
+        "publisher_address": "addr1qxljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhqjnqcrz",
+        "transaction_id": "4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d",
+        "timestamp_display": null
+      },
+      "release_id": "INDEX80-0004",
+      "release_manifest_url": "/registry/releases/index80-0004.json",
+      "sequence": 4,
+      "snapshot": {
+        "bytes": 422560,
+        "hash": "d4d316bf8961ce7fe3253c9d613bc1adf02c8071c1094c11fa82e31fdcc9bb2b",
+        "hash_algorithm": "sha256",
+        "path": "/registry/snapshots/index80-0004.json",
+        "people_count": 155,
+        "project_count": 216,
+        "schema": "INDEX80 Registry Snapshot v2",
+        "url": "https://index80.com/registry/snapshots/index80-0004.json"
+      },
+      "status": "CONFIRMED"
+    },
     {
       "network": "mainnet",
       "previous": {

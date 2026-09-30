@@ -16,7 +16,43 @@
   // from becoming a clickable link even if it slipped past Registry
   // validation. Same rule as safeUrl() in directory.js.
   const safeUrl = (u) => (typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null);
+  const peopleSection = document.getElementById('people-section');
+  const peopleBody = document.getElementById('people-table-body');
   let rows = [];
+  let peopleRows = [];
+
+  function renderPeople(q) {
+    if (!peopleSection) return 0;
+    peopleSection.hidden = !peopleRows.length;
+    const shown = q ? peopleRows.filter((row) => row.searchText.includes(q)) : peopleRows;
+    peopleBody.innerHTML = '';
+    for (const row of shown) {
+      const tr = document.createElement('tr');
+      const person = document.createElement('td');
+      person.className = 'project-name';
+      const link = document.createElement('a');
+      link.href = `/people/${encodeURIComponent(row.slug)}/`;
+      link.textContent = row.name;
+      person.appendChild(link);
+      const category = document.createElement('td');
+      category.textContent = row.category || '—';
+      const roles = document.createElement('td');
+      roles.className = 'project-summary';
+      roles.textContent = row.roles || '—';
+      const verification = document.createElement('td');
+      verification.className = 'project-status';
+      verification.textContent = row.verification || '—';
+      const profile = document.createElement('td');
+      profile.className = 'project-link';
+      const a = document.createElement('a');
+      a.href = `/people/${encodeURIComponent(row.slug)}/`;
+      a.textContent = 'Open';
+      profile.appendChild(a);
+      tr.append(person, category, roles, verification, profile);
+      peopleBody.appendChild(tr);
+    }
+    return shown.length;
+  }
 
   function render(filter = '') {
     const q = filter.trim().toLowerCase();
@@ -24,7 +60,8 @@
       ? rows.filter((row) => row.searchText.includes(q))
       : rows;
 
-    count.textContent = `${shown.length} / ${rows.length} RECORDS`;
+    const peopleShown = renderPeople(q);
+    count.textContent = `${shown.length + peopleShown} / ${rows.length + peopleRows.length} RECORDS`;
     if (!shown.length) {
       body.innerHTML = '<tr><td colspan="5" class="registry-snapshot-empty">No matching projects.</td></tr>';
       return;
@@ -100,6 +137,7 @@
       meta.innerHTML = '';
       const details = [
         `${snapshot.project_count ?? manifest.snapshot?.project_count ?? 0} projects`,
+        ...(Array.isArray(snapshot.people) ? [`${snapshot.people_count ?? snapshot.people.length} people`] : []),
         `${String(manifest.cardano?.network || '').toUpperCase()} proof target`,
         `SHA-256 ${manifest.snapshot?.hash || '—'}`,
       ];
@@ -126,6 +164,21 @@
           project.status,
           project.summary,
           ...(Array.isArray(project.tags) ? project.tags : []),
+        ].filter(Boolean).join(' ').toLowerCase(),
+      }));
+
+      peopleRows = (Array.isArray(snapshot.people) ? snapshot.people : []).map((person) => ({
+        slug: escapeText(person.slug),
+        name: escapeText(person.name),
+        category: escapeText(person.primary_category),
+        roles: Array.isArray(person.role_tags) ? person.role_tags.map(escapeText).join(', ') : '',
+        verification: escapeText(person.verification_status),
+        searchText: [
+          person.slug,
+          person.name,
+          person.primary_category,
+          person.verification_status,
+          ...(Array.isArray(person.role_tags) ? person.role_tags : []),
         ].filter(Boolean).join(' ').toLowerCase(),
       }));
 

@@ -16,6 +16,7 @@ const PINNED = {
   '0001': { hash: '14546a96f15632eeedba12464adc17531597a5f40181e0b72cf7a060933375d2', tx: 'bd2f95598b963430435e893c9896f481cc8c0299edb2ee9356f6918c37219563', network: 'preprod' },
   '0002': { hash: 'c6fe33631f95ebf8d36e50caa9aa18051891e670ce9e89607ac03e28e4def3bc', tx: '9e6a2f3c6e51e6dc9f9bae8498dd8bb68ca3693e1cd1edaa68f4d03ca83dabb1', network: 'mainnet' },
   '0003': { hash: '51146bc27168293fc0262f606f05bea1bc72562407ad7df2cb62e417731965a8', tx: '4e49332fafb2a94d8660da75b16cc0cbd2ef8e79320896148e15bdce7fa72067', network: 'mainnet' },
+  '0004': { hash: 'd4d316bf8961ce7fe3253c9d613bc1adf02c8071c1094c11fa82e31fdcc9bb2b', tx: '4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d', network: 'mainnet' },
 };
 const readJson = (f) => JSON.parse(fs.readFileSync(f, 'utf8'));
 // The public source repository ships without the private originals (marker written by the export).
@@ -55,4 +56,19 @@ for (const [n, pin] of Object.entries(PINNED)) {
   assert(!('source' in entry), `${n}: history entry still carries source`);
 }
 assert(readJson(path.join(REG, 'releases/index80-0002.json')).previous.transaction_id === PINNED['0001'].tx, 'INDEX80-0002 no longer chains to INDEX80-0001');
+// Any release whose manifest declares People (snapshot v2, INDEX80-0004 onward) must agree with its snapshot bytes.
+for (const name of fs.readdirSync(path.join(REG, 'releases')).filter((n) => /^index80-\d+\.json$/i.test(n))) {
+  const rel = readJson(path.join(REG, 'releases', name));
+  const seq = Number(name.match(/-(\d+)\.json$/i)[1]);
+  assert(seq < 4 || rel.snapshot.people_count !== undefined, `${name}: releases from INDEX80-0004 must be Projects + People (snapshot v2)`);
+  assert(seq >= 4 || rel.snapshot.people_count === undefined, `${name}: historic release must remain snapshot v1`);
+  if (rel.snapshot.people_count === undefined) continue;
+  const snap = readJson(path.join(REG, 'snapshots', name));
+  assert(rel.snapshot.schema === 'INDEX80 Registry Snapshot v2' && snap.schema === rel.snapshot.schema, `${name}: snapshot schema mismatch`);
+  assert(Array.isArray(snap.people) && snap.people.length === rel.snapshot.people_count && snap.people_count === rel.snapshot.people_count, `${name}: people count mismatch`);
+  assert(Array.isArray(snap.projects) && snap.projects.length === rel.snapshot.project_count && snap.project_count === rel.snapshot.project_count, `${name}: project count mismatch`);
+  const slugs = snap.people.map((p) => p.slug);
+  assert(new Set(slugs).size === slugs.length && JSON.stringify(slugs) === JSON.stringify([...slugs].sort()), `${name}: people not unique/sorted`);
+  assert(!('source' in rel), `${name}: public manifest carries source`);
+}
 console.log(`[test-registry-integrity] PASS: snapshot hashes, receipts, proof CBOR, transaction IDs and chaining verified${PUBLIC_REPO ? '' : '; public manifests differ from private originals only by the removed source object'}.`);

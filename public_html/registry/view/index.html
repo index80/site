@@ -65,7 +65,7 @@
 
     <section class="panel dark registry-snapshot-toolbar">
       <label class="registry-snapshot-search">Search snapshot
-        <input id="snapshot-search" type="search" placeholder="Project, category, status, summary…" autocomplete="off">
+        <input id="snapshot-search" type="search" placeholder="Project, person, category, status, summary…" autocomplete="off">
       </label>
       <span id="snapshot-count" class="registry-snapshot-count">— RECORDS</span>
       <a id="raw-json-link" class="button" href="#">RAW JSON</a>
@@ -86,6 +86,21 @@
         <tbody id="snapshot-table-body">
           <tr><td colspan="5" class="registry-snapshot-empty">Loading snapshot…</td></tr>
         </tbody>
+      </table>
+    </section>
+
+    <section class="panel dark registry-snapshot-table-wrap" id="people-section" role="region" aria-label="Registry snapshot people table" tabindex="0" hidden>
+      <table class="registry-snapshot-table">
+        <thead>
+          <tr>
+            <th>PERSON</th>
+            <th>CATEGORY</th>
+            <th>ROLES</th>
+            <th>VERIFICATION</th>
+            <th>PROFILE</th>
+          </tr>
+        </thead>
+        <tbody id="people-table-body"></tbody>
       </table>
     </section>
   </main>
