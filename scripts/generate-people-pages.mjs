@@ -23,6 +23,7 @@ import {
 } from './lib/people-public.mjs';
 import { hasVerifiedDrep, hasVerifiedSpo, inferredRole, initials, profileStrap } from './lib/people-display.mjs';
 import { renderNavLinks } from './lib/site-nav.mjs';
+import { personMetaDescription, personTitle } from './lib/people-seo.mjs';
 
 export { hasVerifiedDrep, hasVerifiedSpo };
 
@@ -60,12 +61,7 @@ const EVIDENCE_LINE = {
 /** @deprecated migration fallback — see profileStrap(); kept for callers/tests. */
 export const principalRole = inferredRole;
 
-function metaDescription(p) {
-  const raw = p.bio
-    ? `${p.name} — ${p.bio}`
-    : `${p.name} — INDEX:80 Cardano people profile. ${profileStrap(p).text}`;
-  return raw.length <= 160 ? raw : raw.slice(0, 157).replace(/\s+\S*$/, '') + '…';
-}
+const metaDescription = personMetaDescription;
 
 export function linkButtons(p) {
   const links = [
@@ -142,8 +138,12 @@ function governanceCards(p) {
   return cards.join('\n      ');
 }
 
-function jsonLd(p) {
+function jsonLd(p, projectMap = new Map()) {
   const sameAs = [p.x_url, p.linkedin_url, p.website_url, p.github_url, p.instagram_url, p.youtube_url].map(safeExternalUrl).filter(Boolean);
+  // Only projects named in the approved linked_projects list AND present in the
+  // published project dataset become schema relationships.
+  const mentions = (p.linked_projects || []).map((label) => projectMap.get(normalize(label))).filter(Boolean)
+    .map((slug) => ({'@type':'WebPage','@id':`https://index80.com/projects/${slug}/`,url:`https://index80.com/projects/${slug}/`}));
   return JSON.stringify({
     '@context':'https://schema.org',
     '@graph':[
@@ -151,25 +151,48 @@ function jsonLd(p) {
         '@type':'WebPage',
         '@id':`https://index80.com/people/${p.slug}/`,
         url:`https://index80.com/people/${p.slug}/`,
-        name:`${p.name} — INDEX:80 / CARDANO`,
+        name:personTitle(p),
         description:metaDescription(p),
         isPartOf:{'@type':'WebSite',name:'INDEX:80 / CARDANO',url:'https://index80.com/'},
-        about:{'@id':`https://index80.com/people/${p.slug}/#person`}
+        about:{'@id':`https://index80.com/people/${p.slug}/#person`},
+        mainEntity:{'@id':`https://index80.com/people/${p.slug}/#person`},
+        breadcrumb:{'@id':`https://index80.com/people/${p.slug}/#breadcrumb`},
+        ...(p.last_verified ? {dateModified:p.last_verified} : {}),
+        ...(mentions.length ? {mentions} : {})
       },
       {
         '@type':'Person',
         '@id':`https://index80.com/people/${p.slug}/#person`,
         name:p.name,
+        url:`https://index80.com/people/${p.slug}/`,
+        mainEntityOfPage:{'@id':`https://index80.com/people/${p.slug}/`},
         ...(p.bio ? {description:p.bio} : {}),
         sameAs,
         ...(safeAvatarPath(p.avatar_url) ? {image:`https://index80.com${safeAvatarPath(p.avatar_url)}`} : {})
+      },
+      {
+        '@type':'BreadcrumbList',
+        '@id':`https://index80.com/people/${p.slug}/#breadcrumb`,
+        itemListElement:[
+          {'@type':'ListItem',position:1,name:'INDEX:80',item:'https://index80.com/'},
+          {'@type':'ListItem',position:2,name:'People',item:'https://index80.com/people/'},
+          {'@type':'ListItem',position:3,name:p.name,item:`https://index80.com/people/${p.slug}/`}
+        ]
       }
     ]
   }, null, 2).replace(/</g,'\\u003c');
 }
 
+// Educational context only where the profile already shows a verified DRep / SPO card.
+function learnLinks(p) {
+  const links = [];
+  if (hasVerifiedDrep(p)) links.push('<a href="/learn/#learn-governance-dreps">What is a DRep?</a>');
+  if (hasVerifiedSpo(p)) links.push('<a href="/learn/#learn-staking">What is staking?</a>');
+  return links.length ? ` ${links.join(' · ')} ·` : '';
+}
+
 export function render(p, projectMap) {
-  const pageTitle = `${p.name} — INDEX:80 / CARDANO`;
+  const pageTitle = personTitle(p);
   const pageUrl = `https://index80.com/people/${p.slug}/`;
   const description = metaDescription(p);
   const checked = formatDate(p.last_verified);
@@ -214,7 +237,7 @@ export function render(p, projectMap) {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
   <script src="/assets/js/theme.js"></script>
   <link rel="stylesheet" href="/assets/css/site.css">
-  <script type="application/ld+json">${jsonLd(p)}</script>
+  <script type="application/ld+json">${jsonLd(p, projectMap)}</script>
 </head>
 <body data-mode="people">
   <!-- ${GENERATED_PROFILE_MARKER} -->
@@ -260,7 +283,7 @@ ${facts ? `
       ${facts}
     </section>
 ` : ''}
-    <p class="people-record-line">${recordLine} · <a href="${METHODOLOGY_URL}">How People records are built</a> · <a href="${CORRECTIONS_URL}">Corrections &amp; objections</a> · <a href="/people/">← All people</a></p>
+    <p class="people-record-line">${recordLine} ·${learnLinks(p)} <a href="${METHODOLOGY_URL}">How People records are built</a> · <a href="${CORRECTIONS_URL}">Corrections &amp; objections</a> · <a href="/people/">← All people</a></p>
   </main>
 
   <footer class="site-footer">
