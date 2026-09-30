@@ -7,6 +7,17 @@ All notable changes to the INDEX:80 public source are recorded here. The format 
 ### Added
 - `SUPPORT.md` (where to get help, and what support does and does not cover).
 - `CHANGELOG.md` (this file).
+- People directory v0.1 (public beta): `/people/` with 155 public profiles generated from `public_html/data/people.json`, credited profile images where cleared and an initials fallback otherwise, and a correction route on every profile.
+- Site-wide search across projects, people and site pages (`/search/`, `public_html/data/search-index.json`).
+- Canonical editorial methodology page at `/about/methodology/`; `/people/methodology/` redirects to it.
+- Generators and tests for People pages, the People directory, search, navigation and methodology links.
+
+### Changed
+- Site navigation is shared across all pages: Projects · People · Data · Learn · Governance · About · Registry · Submit.
+- Project pages link to the editorial methodology and the correction route. Project data and imagery are unchanged.
+- Privacy Policy, Editorial Charter (v1.2) and About cover the People directory.
+- Sitemap includes People profiles.
+- Public generators now match the code that builds the live pages (shared HTML-safety helpers and theme-aware project artwork).
 
 ## 2026-09-21 — Public source launch
 

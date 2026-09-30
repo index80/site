@@ -103,7 +103,7 @@ for (const p of data.people || []) {
     if (!html.includes('href="/about/methodology/#people">How People records are built</a>')) throw new Error(`Generated People profile missing methodology link: ${p.slug}`);
     if (html.includes('href="/people/methodology/"')) throw new Error(`Generated People profile links to the retired /people/methodology/: ${p.slug}`);
     if (!html.includes('<p class="people-beta-status" role="note"><strong>PUBLIC BETA · FACTUAL REVIEW OPEN</strong> <span>This profile is based on public sources and may not yet have been confirmed by the person listed.</span> <a href="/submit/">Suggest a correction →</a></p>')) throw new Error(`Generated People profile missing PUBLIC BETA status: ${p.slug}`);
-    if (!p.avatar_url && /<img[^>]+class="people-avatar-img"/.test(html) && !html.includes('people-review-label')) throw new Error(`Portrait shown without a cleared avatar: ${p.slug}`);
+    if (!p.avatar_url && /<img[^>]+class="people-avatar-img"/.test(html)) throw new Error(`Portrait shown without a cleared avatar: ${p.slug}`);
     if (!html.includes('class="people-meta"')) throw new Error(`Generated People profile missing metadata strip: ${p.slug}`);
     if (!/class="button people-link people-link-primary"[^>]*>(?:X|LinkedIn) ↗/.test(html)) throw new Error(`Generated People profile missing X/LinkedIn link: ${p.slug}`);
     if (Boolean(p.bio) !== html.includes('class="people-bio"')) throw new Error(`Generated People profile bio rendering mismatch: ${p.slug}`);
