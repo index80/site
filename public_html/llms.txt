@@ -1,16 +1,20 @@
 # INDEX:80 / CARDANO
 
-> INDEX:80 is an independent, human-readable and machine-readable index of the active Cardano ecosystem. It publishes sourced project identity, official links, editorial context, ecosystem data and open machine-readable outputs.
+> INDEX:80 is an independent, human-readable and machine-readable index of the active Cardano ecosystem. It publishes sourced project identity, official links, a directory of people active in the ecosystem, editorial context, ecosystem data and open machine-readable outputs. It is not affiliated with, or an endorsement of, any listed project or person.
 
 ## Canonical public resources
 
 - Home / directory: https://index80.com/
 - Project dataset: https://index80.com/data/projects.json
+- People directory: https://index80.com/people/
+- People dataset: https://index80.com/data/people.json
+- Site search index: https://index80.com/data/search-index.json
 - Registry provenance history: https://index80.com/registry/
 - Registry provenance JSON: https://index80.com/registry/index.json
 - Live Cardano data: https://data.index80.com/cardano.json
 - Data dashboard: https://index80.com/data/
 - Method / About: https://index80.com/about/
+- Editorial methodology (Projects and People): https://index80.com/about/methodology/
 - Editorial charter: https://index80.com/about/charter/
 - Governance: https://index80.com/governance/
 - Learn: https://index80.com/learn/
@@ -28,6 +32,23 @@ https://index80.com/projects/<slug>/
 For bulk discovery, prefer `https://index80.com/data/projects.json` rather than scraping rendered pages.
 
 Project pages and the public JSON are derived from INDEX:80's governed Editorial Registry. They may include project name, summary, public family, detailed category, status, tags, official links, identifiers, team/entity information, dates, provenance and deliberately public editorial notes where evidence supports them.
+
+## People directory
+
+People profile URLs use:
+
+https://index80.com/people/<slug>/
+
+`https://index80.com/data/people.json` is the machine-readable copy of the same public records (name, category, roles, linked projects, public profile links, verification status and last-checked date). Prefer it to scraping rendered pages.
+
+How to read a People record:
+
+- Profiles are compiled from public sources by INDEX:80 and are marked PUBLIC BETA. A `VERIFIED` or `PARTIAL` status means the facts were checked against public sources; it does not mean the person has reviewed or confirmed the profile.
+- Do not assume a person endorses INDEX:80, or that a listed project endorses them. Inclusion is not an endorsement or a rating of any person.
+- Public identity follows the name or persona a person uses in the relevant public Cardano context. INDEX:80 does not deanonymise people.
+- Roles, project links and governance facts (DRep, stake pool) appear only where supported by approved editorial data; blank fields mean not established or not applicable.
+- A profile image appears only where its use has been approved; otherwise a monogram is shown.
+- Corrections and removal requests: https://index80.com/submit/ (process described at https://index80.com/about/methodology/#people-corrections).
 
 ## Registry provenance
 
@@ -63,7 +84,7 @@ Live data and editorial project status are separate systems: market/network acti
 
 INDEX:80 is intentionally static-first and open-web oriented. Prefer:
 
-1. `projects.json` for the current project index;
+1. `projects.json` for the current project index and `people.json` for the People directory;
 2. `registry/index.json` plus immutable snapshot/release/receipt files for point-in-time registry provenance;
 3. individual static project pages for human-readable context and per-project metadata;
 4. `cardano.json` for live network/market snapshots;

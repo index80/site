@@ -41,6 +41,7 @@ const CORE_PAGES = [
   '/data/',
   '/learn/',
   '/people/',
+  '/registry/',
   '/governance/',
   '/submit/',
   '/news/',

@@ -104,6 +104,9 @@ function familySlug(publicFamily) {
 function metaDescription(p) {
   const raw = `${p.name} — ${p.summary}`;
   if (raw.length <= 160) return raw;
+  // Prefer ending on a whole sentence over a mid-clause ellipsis.
+  const sentence = raw.split(/(?<=[.!?])\s+(?=[A-Z0-9])/)[0];
+  if (sentence.length >= 60 && sentence.length <= 160 && /[.!?]$/.test(sentence)) return sentence;
   const cut = raw.slice(0, 157);
   return `${cut.slice(0, cut.lastIndexOf(' '))}…`;
 }
@@ -507,6 +510,14 @@ export function renderProjectPage(record, images, linkHistoryRecord) {
   <meta name="description" content="${esc(description)}">
   <title>${esc(pageTitle)}</title>
   <link rel="canonical" href="${canonicalUrl}">
+  <meta property="og:title" content="${esc(pageTitle)}">
+  <meta property="og:description" content="${esc(description)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="INDEX:80">
+  <meta name="twitter:card" content="${socialImage ? 'summary_large_image' : 'summary'}">
+  <meta name="twitter:title" content="${esc(pageTitle)}">
+  <meta name="twitter:description" content="${esc(description)}">
   <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">

@@ -38,7 +38,7 @@ const GOV_START = '<!-- INDEX80_GOVERNANCE_SCHEMA_START -->';
 const GOV_END = '<!-- INDEX80_GOVERNANCE_SCHEMA_END -->';
 
 const HOME_META_DESCRIPTION =
-  'INDEX:80 — an independent human- and machine-readable index of the Cardano ecosystem: projects, data, governance and education.';
+  'INDEX:80 — an independent human- and machine-readable index of the Cardano ecosystem: projects, people, data, governance and education.';
 const LEARN_META_DESCRIPTION =
   'INDEX:80 /CARDANO — plain-language explanations of Cardano concepts linked directly to current wallets, DeFi, governance and developer tools in the index.';
 const GOV_META_DESCRIPTION =
@@ -152,6 +152,10 @@ function homeGraph(ordered) {
         description: HOME_META_DESCRIPTION,
         sameAs: ['https://x.com/index80web', 'https://www.linkedin.com/company/index80'],
         inLanguage: 'en',
+        hasPart: [
+          { '@type': 'CollectionPage', '@id': `${SITE_URL}/#directory` },
+          { '@type': 'CollectionPage', '@id': `${SITE_URL}/people/#directory`, url: `${SITE_URL}/people/`, name: 'INDEX:80 People' },
+        ],
       },
       {
         '@type': 'CollectionPage',
