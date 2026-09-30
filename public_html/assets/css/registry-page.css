@@ -228,3 +228,15 @@
   .registry-facts > div { border-right:0; }
   .registry-actions-primary .button { width:100%; text-align:center; }
 }
+
+/* Registry wallet: separate from the About donation cards. */
+.registry-wallet { grid-column:1 / -1; }
+.registry-wallet-body { display:grid; grid-template-columns:auto minmax(0,1fr); gap:1.2rem; align-items:start; margin-top:.8rem; }
+.registry-wallet-qr { margin:0; }
+.registry-wallet-qr img { display:block; width:180px; max-width:100%; height:auto; aspect-ratio:1; background:#fff; padding:6px; border:2px solid #36526e; image-rendering:pixelated; }
+.registry-wallet-copy { display:flex; flex-direction:column; gap:.7rem; min-width:0; }
+.registry-wallet-copy p { margin:0; line-height:1.5; }
+.registry-wallet-warning { padding:.6rem .8rem; border:2px solid var(--amber); background:#231a08; }
+.registry-wallet-address { display:block; max-width:64ch; padding:.65rem .75rem; border:1px solid #36526e; background:#071829; color:#dff6ff; overflow-wrap:anywhere; word-break:break-all; user-select:all; font:600 .75rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; }
+.registry-wallet a { color:#8fd6ec; }
+@media (max-width: 720px) { .registry-wallet-body { grid-template-columns:1fr; } }
