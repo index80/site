@@ -151,6 +151,23 @@
       <p class="registry-note">The whole INDEX:80 database is not written on-chain. Cardano carries the compact proof; the readable registry stays on the open web.</p>
     </section>
 
+    <section class="panel dark shell-panel registry-wallet" id="registry-wallet" aria-labelledby="registry-wallet-title">
+      <div class="registry-section-head compact">
+        <span>PUBLIC TRANSPARENCY</span>
+        <h2 id="registry-wallet-title">REGISTRY WALLET</h2>
+      </div>
+      <div class="registry-wallet-body">
+        <figure class="registry-wallet-qr"><img src="../assets/images/qr-registry-wallet-cardano.png" alt="QR code for the INDEX:80 Cardano Registry wallet address" width="180" height="180" loading="lazy"></figure>
+        <div class="registry-wallet-copy">
+          <p><strong>Cardano mainnet.</strong> This is the dedicated INDEX:80 Registry wallet, published for transparency.</p>
+          <p class="registry-wallet-warning"><strong>Separate from the donations wallet.</strong> It is not a donation address. To support INDEX:80, use the addresses on the <a href="../about/#donate">About page</a>.</p>
+          <code class="registry-wallet-address" id="registry-wallet-address">addr1qxljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhqjnqcrz</code>
+          <div class="registry-actions"><button type="button" class="button" data-copy-target="registry-wallet-address">COPY ADDRESS</button></div>
+          <p class="registry-note">Publishing this address does not by itself show which wallet signed any past Registry transaction. Verify each release from its own Cardano transaction, as described above.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="panel dark shell-panel">
       <div class="registry-section-head compact">
         <span>ARCHIVE</span>
@@ -233,5 +250,6 @@
   </footer>
 
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/wallet-copy.js" defer></script>
 </body>
 </html>

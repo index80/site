@@ -131,18 +131,38 @@
         <p><strong>If you can’t donate, following INDEX:80 on <a href="https://x.com/index80web" target="_blank" rel="noopener noreferrer">X</a> or <a href="https://www.linkedin.com/company/index80" target="_blank" rel="noopener noreferrer">LinkedIn</a> and sharing our content really helps too.</strong> It is one of the simplest ways to support the project and help more people discover what is being built on Cardano.</p>
         <p><strong>If you choose to support INDEX:80, thank you. Every donation goes directly back into the resources needed to research, maintain and develop the project.</strong></p>
         <div class="support-note">Donations do not buy inclusion, ranking, Featured status, verification or editorial influence.</div>
-        <div class="support-address-block">
-          <span class="support-handle">ADA: $index80web</span>
-          <code class="support-address" id="donation-address">addr1q8lk4p3p8436ng24x6gkglrrsrhhnn4kc0v6sff4plj2h6fgze77r90ayy3ufsusdzwj8g7j28hw68dgwy4dm5tnamhqax3ezt</code>
-          <div class="support-actions">
-            <button type="button" class="button" id="copy-address-btn">COPY ADDRESS</button>
-          </div>
-        </div>
       </div>
-      <figure class="support-qr">
-        <img src="../assets/images/index80-donation-qr.png" alt="QR code encoding the INDEX:80 ADA receive address" width="140" height="140">
-        <figcaption>SCAN TO SEND ADA</figcaption>
-      </figure>
+    </section>
+
+    <section class="panel shell-panel donation-options" id="donate" aria-labelledby="donate-title">
+      <div class="wallet-head">
+        <h2 id="donate-title">WAYS TO DONATE</h2>
+        <p>Choose one network, then check that your wallet is set to the same network before sending. Crypto transfers cannot be reversed, and sending an asset to the wrong network can lose it permanently. Test with a small amount first if you are unsure.</p>
+      </div>
+      <div class="wallet-grid">
+        <article class="wallet-card" data-wallet="cardano">
+          <header><h3>CARDANO</h3><span class="wallet-net">Cardano mainnet</span></header>
+          <p class="wallet-accepts">ADA and Cardano native tokens. Handle: <strong>$index80web</strong></p>
+          <figure class="wallet-qr"><img src="../assets/images/qr-donate-cardano.png" alt="QR code for the INDEX:80 Cardano donation address" width="180" height="180" loading="lazy"></figure>
+          <code class="wallet-address" id="wallet-cardano">addr1q8lk4p3p8436ng24x6gkglrrsrhhnn4kc0v6sff4plj2h6fgze77r90ayy3ufsusdzwj8g7j28hw68dgwy4dm5tnamhqax3ezt</code>
+          <button type="button" class="button" data-copy-target="wallet-cardano">COPY ADDRESS</button>
+        </article>
+        <article class="wallet-card" data-wallet="bitcoin">
+          <header><h3>BITCOIN</h3><span class="wallet-net">Bitcoin mainnet</span></header>
+          <p class="wallet-accepts">BTC on the Bitcoin network only. Do not send other coins or tokens.</p>
+          <figure class="wallet-qr"><img src="../assets/images/qr-donate-bitcoin.png" alt="QR code for the INDEX:80 Bitcoin donation address" width="180" height="180" loading="lazy"></figure>
+          <code class="wallet-address" id="wallet-bitcoin">bc1qmrpky5eh6cc87p3ue6uleh38zure6n8dz5t0fm</code>
+          <button type="button" class="button" data-copy-target="wallet-bitcoin">COPY ADDRESS</button>
+        </article>
+        <article class="wallet-card" data-wallet="midnight">
+          <header><h3>MIDNIGHT</h3><span class="wallet-net">Midnight mainnet</span></header>
+          <p class="wallet-accepts">NIGHT to this unshielded Midnight address only. This is not Cardano-network NIGHT.</p>
+          <figure class="wallet-qr"><img src="../assets/images/qr-donate-midnight-night.png" alt="QR code for the INDEX:80 Midnight unshielded NIGHT donation address" width="180" height="180" loading="lazy"></figure>
+          <code class="wallet-address" id="wallet-midnight">mn_addr13e7g2g4kzyyf2j0hp0w76ruqp2pgvgfzq4m2afdh6zjmvq4aalgs34wda0</code>
+          <button type="button" class="button" data-copy-target="wallet-midnight">COPY ADDRESS</button>
+        </article>
+      </div>
+      <p class="wallet-foot">The separate <a href="../registry/#registry-wallet">Registry wallet</a> is not a donation address. Please do not send donations to it.</p>
     </section>
 
     <section class="panel founder-panel">
@@ -194,6 +214,6 @@
   </footer>
 
   <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/about.js"></script>
+  <script src="../assets/js/wallet-copy.js"></script>
 </body>
 </html>
