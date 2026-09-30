@@ -121,6 +121,16 @@ function releaseType(entry) {
   return entry.network === 'mainnet' ? 'PUBLIC MAINNET PROOF' : 'PREPROD TEST PROOF';
 }
 
+function hasPeople(entry) {
+  return Number.isInteger(entry.snapshot.people_count);
+}
+
+function countsPhrase(entry) {
+  return hasPeople(entry)
+    ? `${entry.snapshot.project_count} projects and ${entry.snapshot.people_count} people`
+    : `${entry.snapshot.project_count} projects`;
+}
+
 function renderRelease(entry, latest = false) {
   const receiptUrl = `/registry/receipts/${entry.release_id.toLowerCase()}.json`;
   const proof = entry.proof;
@@ -138,7 +148,7 @@ function renderRelease(entry, latest = false) {
       <div class="registry-release-summary">
         <div class="registry-release-number"><span>SNAPSHOT</span><strong>${String(entry.sequence).padStart(4, '0')}</strong></div>
         <div class="registry-release-copy">
-          <p><strong>${html(entry.snapshot.project_count)} public project records</strong> frozen into one immutable JSON snapshot.</p>
+          <p><strong>${hasPeople(entry) ? `${html(entry.snapshot.project_count)} public project records and ${html(entry.snapshot.people_count)} public people records` : `${html(entry.snapshot.project_count)} public project records`}</strong> frozen into one immutable JSON snapshot.</p>
           <p>Cardano stores the SHA-256 proof; the full registry stays readable here on the open web.</p>
         </div>
       </div>
@@ -146,6 +156,7 @@ function renderRelease(entry, latest = false) {
       <div class="registry-facts">
         <div><span>PROOF DATE</span><strong>${html(dateLabel(entry))}</strong></div>
         <div><span>PROJECTS</span><strong>${html(entry.snapshot.project_count)}</strong></div>
+        ${hasPeople(entry) ? `<div><span>PEOPLE</span><strong>${html(entry.snapshot.people_count)}</strong></div>` : ''}
         <div><span>NETWORK</span><strong>${html(entry.network.toUpperCase())}</strong></div>
         <div><span>BLOCK</span><strong>${html(proof?.block ?? '—')}</strong></div>
         <div><span>FEE</span><strong>${html(adaFromLovelace(proof?.fee_lovelace))}</strong></div>
@@ -177,7 +188,7 @@ function renderHistoryRow(entry) {
         <li class="registry-history-row">
           <div>
             <strong>${html(entry.release_id)}</strong>
-            <span>${html(dateLabel(entry))} · ${html(entry.snapshot.project_count)} projects · ${html(entry.network.toUpperCase())}</span>
+            <span>${html(dateLabel(entry))} · ${html(countsPhrase(entry))} · ${html(entry.network.toUpperCase())}</span>
           </div>
           <code title="${html(entry.snapshot.hash)}">${html(shorten(entry.snapshot.hash))}</code>
           <span class="registry-mini-status ${entry.status === 'CONFIRMED' ? 'is-confirmed' : 'is-pending'}">${entry.status === 'CONFIRMED' ? 'VERIFIED' : 'PENDING'}</span>
@@ -235,7 +246,7 @@ ${renderNavLinks('/registry/', '      ')}
         <div class="eyebrow on-dark">PUBLIC REGISTRY + CARDANO PROOF</div>
         <h1><span class="registry-hero-title">REGISTRY</span><small>/HISTORY</small></h1>
         <p class="strap">A PUBLIC RECORD OF WHAT INDEX:80 PUBLISHED.</p>
-        <p>INDEX:80 freezes a copy of its public project registry on a regular schedule. Each snapshot stays available as ordinary JSON, while its SHA-256 fingerprint is published to Cardano so the record can be checked independently.</p>
+        <p>INDEX:80 freezes a copy of its public Projects and People registries on a regular schedule. Each snapshot stays available as ordinary JSON, while its SHA-256 fingerprint is published to Cardano so the record can be checked independently.</p>
         <div class="registry-hero-art"><img src="/assets/images/index80-registry-astronaut-cat.webp" alt="Pixel-art illustration of an astronaut sitting at a desk working on a glowing computer terminal, with a black cat perched beside a coffee mug, representing INDEX:80's public Cardano registry proof." width="600" height="450" loading="lazy"></div>
       </div>
       <div class="registry-hero-status">
