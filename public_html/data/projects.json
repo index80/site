@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-27T12:57:32.843Z",
+  "generated_at": "2026-10-02T18:21:32.315Z",
   "status": "discovery",
   "warning": "Records vary in editorial maturity - DISCOVERED and REVIEW records have not yet passed independent verification. Check a record's own status before treating it as current.",
-  "count": 216,
+  "count": 218,
   "skipped_invalid_count": 0,
   "projects": [
     {
@@ -47,6 +47,7 @@
       "featured": true,
       "editorial_note": "Founder-confirmed project categories: NFT, DeFi and Utility. The project was formed on 6 May 2023. Primary public home remains @WojakBlueADA on X; the stored policy ID is the Wojaks PFP collection policy, not the WJB token policy.",
       "team_entity": "Founder: @Coti_Hodler",
+      "founder_lead": "@Coti_Hodler — Founder",
       "primary_link_type": "x",
       "primary_link_url": "https://x.com/WojakBlueADA"
     },
@@ -198,6 +199,7 @@
         }
       ],
       "featured": true,
+      "founder_lead": "Marcel Baumberg — CEO / Managing Director, Tastenkunst GmbH",
       "primary_link_type": "website",
       "primary_link_url": "https://eternl.io/"
     },
@@ -211,7 +213,7 @@
       "docs_url": "https://docs.minswap.org/",
       "github_url": "https://github.com/minswap",
       "social_url": "https://x.com/MinswapDEX",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/minswap",
       "marketplace_url": null,
       "policy_id": "29d222ce763455e3d7a09a665ce554f00ac89d2e99a1a83d267170c6",
       "discord_url": "https://discord.gg/minswap",
@@ -247,6 +249,7 @@
         }
       ],
       "featured": true,
+      "founder_lead": "Long Nguyen — Founder / Co-founder",
       "primary_link_type": "website",
       "primary_link_url": "https://minswap.org/"
     },
@@ -260,7 +263,7 @@
       "docs_url": "https://docs.cswap.fi/",
       "github_url": "https://github.com/cswapsystems",
       "social_url": "https://x.com/CswapDEX",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/cswap-systems-cardano",
       "marketplace_url": null,
       "policy_id": "c863ceaa796d5429b526c336ab45016abd636859f331758e67204e5c",
       "discord_url": "https://discord.com/invite/JNFDH8ENd5",
@@ -293,6 +296,7 @@
         }
       ],
       "featured": true,
+      "founder_lead": "Jon Kravetz — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://www.cswap.fi/"
     },
@@ -306,7 +310,7 @@
       "docs_url": "https://docs.dexhunter.io/",
       "github_url": "https://github.com/dexhunterio",
       "social_url": "https://x.com/dexhunterio",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/dexhunter",
       "marketplace_url": null,
       "policy_id": "95a427e384527065f2f8946f5e86320d0117839a5e98ea2c0b55fb00",
       "discord_url": "https://discord.gg/TjS72s84tV",
@@ -336,6 +340,7 @@
         }
       ],
       "featured": true,
+      "founder_lead": "melon — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://www.dexhunter.io/"
     },
@@ -377,6 +382,7 @@
         }
       ],
       "featured": true,
+      "founder_lead": "David Desjardins (Tqueri) — Anvil CTO/Founder; Patrick Bernard (PB) — Anvil COO/Founder; Zack Soesbee (Cash) — Anvil CEO/Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.wayup.io/"
     },
@@ -390,7 +396,7 @@
       "docs_url": "https://docs.iagon.com/",
       "github_url": "https://github.com/iagonorg",
       "social_url": "https://x.com/IagonOfficial",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/iagon",
       "marketplace_url": "https://app.iagon.com/",
       "policy_id": "5d16cc1a177b5d9ba9cfa9793b07e60f1fb70fea1f8aef064415d114",
       "discord_url": "https://discord.gg/TCS23VWuWm",
@@ -425,6 +431,7 @@
       ],
       "featured": true,
       "team_entity": "Iagon Worldwide / Iagon DAO",
+      "founder_lead": "Dr Navjit Dhaliwal — CEO; Dr Elad Harison — Co-Founder; Dr Claudio Lima — Co-Founder; Dr Rohit Gupta — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://iagon.com/"
     },
@@ -438,7 +445,7 @@
       "docs_url": "https://docs.worldmobile.io/",
       "github_url": "https://github.com/worldmobilegroup",
       "social_url": "https://x.com/WorldMobileTeam",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/worldmobilegroup",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.gg/worldmobile",
@@ -471,6 +478,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Micky Watkins — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://worldmobile.io/"
     },
@@ -513,6 +521,7 @@
         }
       ],
       "featured": true,
+      "founder_lead": "$goose — CEO & Co-Founder; Conrad — COO & Co-Founder; PapaGoose — CIO & Co-Founder; Big Irish Lion — CTO & Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://handle.me/"
     },
@@ -555,6 +564,7 @@
         }
       ],
       "featured": true,
+      "founder_lead": "Neil — Tech Lead; Ocean / Quoc Hung Nham — Software Engineer; Marcus — Software Engineer",
       "primary_link_type": "website",
       "primary_link_url": "https://bending.ai/"
     },
@@ -568,7 +578,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/snek",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/snek-foundation",
       "marketplace_url": null,
       "policy_id": "279c909f348e533da5808898f87f9a14bb2c3dfbbacccd631d927a3f",
       "discord_url": "https://discord.gg/snekcoin",
@@ -613,7 +623,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/lace_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/lace_io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.gg/lace-1073034511664824360",
@@ -643,6 +653,7 @@
       "featured": false,
       "editorial_note": "Lace is built by Input Output, the team behind Cardano and Midnight.",
       "team_entity": "Input Output",
+      "founder_lead": "Ian Cross — Head of Product, Lace; Rhys Bartels-Waller — Head of Software Engineering, Lace",
       "related_projects": [
         "input-output"
       ],
@@ -659,7 +670,7 @@
       "docs_url": null,
       "github_url": "https://github.com/input-output-hk",
       "social_url": "https://x.com/IOGroup",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/input-output-group",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -712,7 +723,7 @@
       "docs_url": "https://docs.midnight.network/",
       "github_url": "https://github.com/midnightntwrk",
       "social_url": "https://x.com/MidnightNtwrk",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/midnight-ntwrk",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -728,7 +739,8 @@
         "data-protection",
         "interoperability",
         "input-output",
-        "midnight"
+        "midnight",
+        "infrastructure"
       ],
       "sources": [
         {
@@ -747,6 +759,7 @@
       "featured": true,
       "editorial_note": "Midnight is a privacy-focused Layer 1 with deep Cardano and Input Output roots. It should not be described simply as a Cardano privacy layer: its current model is a standalone network designed for programmable data protection and interoperability across ecosystems.",
       "team_entity": "Midnight Foundation / Shielded; incubated by Input Output",
+      "founder_lead": "Fahmi Syed — President, Midnight Foundation; Jenna Peterson — COO, Midnight Foundation; Sebastien Guillemot — CTO, Midnight Foundation; Dr Benjamin Beckmann — Chief Technology Advisor, Midnight Foundation; Mike Ward — CEO, Shielded Technologies; Bob Blessing-Hartley — CTO, Shielded Technologies; Anthony Day — Head of Strategy & Marketing",
       "related_projects": [
         "input-output"
       ],
@@ -763,7 +776,7 @@
       "docs_url": "https://docs.vespr.xyz/",
       "github_url": "https://github.com/vespr-wallet",
       "social_url": "https://x.com/VesprWallet",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/vesprwallet",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.gg/DrjZzDXKbz",
@@ -784,6 +797,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Alexandru Dochioiu (Alex) — Founder & CEO / Head of Development; Andy Belichkov — Co-Founder / Business Operations & Strategy; Derek — Co-Founder / Product, UI/UX & Marketing",
       "primary_link_type": "website",
       "primary_link_url": "https://vespr.xyz/"
     },
@@ -808,7 +822,7 @@
       "treasury_funded_proposals": null,
       "tags": [
         "wallet",
-        "multi-chain"
+        "multichain"
       ],
       "sources": [
         {
@@ -825,6 +839,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Francis Luz — CEO & Founder / Product Owner",
       "primary_link_type": "website",
       "primary_link_url": "https://begin.is/"
     },
@@ -838,7 +853,7 @@
       "docs_url": null,
       "github_url": "https://github.com/Gero-Labs",
       "social_url": "https://x.com/GeroWallet",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/gerowallet",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.com/invite/CK9RADpAcZ",
@@ -875,6 +890,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Adam Cazes — CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://gerowallet.io/"
     },
@@ -888,7 +904,7 @@
       "docs_url": "https://docs.wingriders.com/",
       "github_url": null,
       "social_url": "https://x.com/wingriderscom",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/wingriders",
       "marketplace_url": "https://app.wingriders.com/",
       "policy_id": "c0ee29a85b13209423b10447d3c2e6a50641a15c57770e27cb9d5073",
       "discord_url": "https://discord.gg/wingriders",
@@ -933,7 +949,7 @@
       "docs_url": "https://docs.sundaeswap.finance/",
       "github_url": "https://github.com/SundaeSwap-finance",
       "social_url": "https://x.com/SundaeSwap",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/sundaeswap-labs",
       "marketplace_url": null,
       "policy_id": "9a9693a9a37912a5097918f97918d15240c92ab729a0b7c4aa144d77",
       "discord_url": "https://discord.gg/sundaeswap",
@@ -964,6 +980,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Pi Lanningham (Quantumplation) — CTO / current technical lead",
       "primary_link_type": "website",
       "primary_link_url": "https://sundae.fi/"
     },
@@ -1017,7 +1034,7 @@
       "docs_url": "https://docs.liqwid.finance",
       "github_url": null,
       "social_url": "https://x.com/liqwidfinance",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/liqwid-labs",
       "marketplace_url": "https://app.liqwid.finance",
       "policy_id": "da8c30857834c6ae7203935b89278c532b3995245295456f993e1d24",
       "discord_url": "https://discord.gg/PZ3GUWamY8",
@@ -1046,6 +1063,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Dewayne Cameron — Co-Founder; Florian Volery — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://liqwid.finance/"
     },
@@ -1059,7 +1077,7 @@
       "docs_url": "https://optim-finance.gitbook.io/optim-finance/",
       "github_url": null,
       "social_url": "https://x.com/OptimFi",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/optimfinance",
       "marketplace_url": "https://app.optim.finance/",
       "policy_id": "2852268cf6e2db42e20f2fd3125f541e5d6c5a3d70b4dda17c2daa82",
       "discord_url": "https://discord.gg/VZ329q7x69",
@@ -1091,6 +1109,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Ethan Protas — Product Lead; Maksymilian Brodowicz (Zygomeb) — Tech Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://optim.finance/"
     },
@@ -1104,7 +1123,7 @@
       "docs_url": "https://docs.fluidtokens.com/",
       "github_url": null,
       "social_url": "https://x.com/FluidTokens",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/fluidtokens",
       "marketplace_url": null,
       "policy_id": "577f0b1342f8f8f4aed3388b80a8535812950c7a892495c0ecdf0f1e",
       "discord_url": "https://discord.gg/s8q4kG48Mg",
@@ -1136,6 +1155,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Matteo Coppola — CEO & Co-Founder; Raul Antonio Rosa Padilla (ElRaulito) — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://fluidtokens.com/"
     },
@@ -1149,7 +1169,7 @@
       "docs_url": "https://docs.strikefinance.org/",
       "github_url": "https://github.com/strike-finance",
       "social_url": "https://x.com/strikeperps",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/strike-finance-cardano",
       "marketplace_url": null,
       "policy_id": "f13ac4d66b3ee19a6aa0f2a22298737bd907cc95121662fc971b5275",
       "discord_url": "https://discord.gg/PuWbEmrEee",
@@ -1181,6 +1201,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Shan Yu Zhang — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.strikefinance.org/"
     },
@@ -1194,7 +1215,7 @@
       "docs_url": "https://docs.indigoprotocol.io/",
       "github_url": "https://github.com/IndigoProtocol",
       "social_url": "https://x.com/Indigo_Protocol",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/indigolabsinc",
       "marketplace_url": null,
       "policy_id": "533bb94a8850ee3ccbe483106489399112b74c905342cb1792a797a0",
       "discord_url": "https://discord.gg/indigoprotocol",
@@ -1225,6 +1246,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Cody Butz — CTO / protocol development lead",
       "primary_link_type": "website",
       "primary_link_url": "https://indigoprotocol.io/"
     },
@@ -1238,7 +1260,7 @@
       "docs_url": "https://docs.vyfi.io/",
       "github_url": "https://github.com/vyfi",
       "social_url": "https://x.com/VyFiOfficial",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/vyfinance",
       "marketplace_url": null,
       "policy_id": "804f5544c1962a40546827cab750a88404dc7108c0f588b72964754f",
       "discord_url": "https://discord.com/invite/xGAD3hSXbu",
@@ -1266,6 +1288,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Steven Ward — CEO; Dylan McCoy — COO; Deann Zois — CMO; Ryan Felt — CTO; Jon Hendrickson — CRO; Nick Cappiello — CCO",
       "primary_link_type": "website",
       "primary_link_url": "https://vyfi.io/"
     },
@@ -1279,7 +1302,7 @@
       "docs_url": null,
       "github_url": "https://github.com/MeteraProtocol",
       "social_url": "https://x.com/meteraprotocol",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/metera-protocol",
       "marketplace_url": null,
       "policy_id": "8ebb4f0eb39543cdab83eb35f5f194798817eaaa3061872b4101efdb",
       "discord_url": null,
@@ -1311,6 +1334,7 @@
       ],
       "featured": false,
       "editorial_note": "Metera builds blockchain-powered financial products on Cardano. Its current product set includes tokenized Cardano indexes and Minute Markets, a five-minute on-chain prediction market. INDEX:80 uses the current metera.io site as the canonical project home.",
+      "founder_lead": "Daniel Sampson — Co-Founder & CEO; Ernesto Sampson — Founding Team & COO; Florian Bohnert — Operations Lead; Paulo Diaz — Engineering Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://metera.io/"
     },
@@ -1352,6 +1376,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Chris — Co-Founder; Matt — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://muesliswap.com/"
     },
@@ -1424,6 +1449,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Hinson Wong — SIDAN Lab Co-Founder & CEO; Hong Jing / Jingles — MeshJS Co-Founder / Technical Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://nomos.cgov.io"
     },
@@ -1462,6 +1488,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Tommy Kammerer / ADAtainment — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://dreptalk.com/"
     },
@@ -1475,7 +1502,7 @@
       "docs_url": "https://docs.projectcatalyst.io",
       "github_url": null,
       "social_url": "https://x.com/Catalyst_onX",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/catalystvoting",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -1506,6 +1533,7 @@
       "featured": false,
       "editorial_note": "Project Catalyst remains Cardano's community innovation funding programme using Cardano Treasury funds. In 2026 administration transferred from Input Output Group to the Cardano Foundation, while Cardano also uses direct on-chain treasury-withdrawal governance and an Intersect-facilitated budget process.",
       "team_entity": "Administered by Cardano Foundation from 2026; previously operated by Input Output Group",
+      "founder_lead": "Danny Ribar — Head of Community Operations / Catalyst Team",
       "primary_link_type": "website",
       "primary_link_url": "https://projectcatalyst.io/"
     },
@@ -1519,7 +1547,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/IntersectMBO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/intersectmbo",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -1539,6 +1567,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Jack Briggs — Executive Director",
       "primary_link_type": "website",
       "primary_link_url": "https://www.intersectmbo.org/"
     },
@@ -1572,6 +1601,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Darlington Wleh — builder / 1694.io",
       "primary_link_type": "website",
       "primary_link_url": "https://1694.io/"
     },
@@ -1613,6 +1643,7 @@
       ],
       "featured": false,
       "team_entity": "Strica",
+      "founder_lead": "Ashish Prajapati — Strica Co-Founder; Mehul Prajapati — Core Team; Pavan Vora — Core Team; Prashanth Soordelu — Core Team",
       "related_projects": [
         "strica",
         "typhon-wallet"
@@ -1630,7 +1661,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/cexplorer_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/cexplorer-io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.com/invite/zTaSd8wfEV",
@@ -1668,6 +1699,7 @@
       "featured": true,
       "editorial_note": "CExplorer is the current identity of the former ADApools.org explorer. The project team describes it as a long-running Cardano explorer covering blocks, transactions, wallets, stake pools, tokens, smart contracts and governance data, with staking insights, ecosystem analytics, token and DeFi tracking, and developer APIs.",
       "treasury_funding_value_ada": 726600,
+      "founder_lead": "Josef Taborsky — CTO / founding member; Michal Urbanek — CEO / founding member",
       "primary_link_type": "website",
       "primary_link_url": "https://cexplorer.io/"
     },
@@ -1740,6 +1772,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Mike Fullman — Co-Creator / operator",
       "primary_link_type": "website",
       "primary_link_url": "https://pooltool.io/"
     },
@@ -1753,7 +1786,7 @@
       "docs_url": null,
       "github_url": "https://github.com/DefiLlama",
       "social_url": "https://x.com/DefiLlama",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/defillama",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -1765,7 +1798,7 @@
       "tags": [
         "analytics",
         "defi",
-        "multi-chain"
+        "multichain"
       ],
       "sources": [
         {
@@ -1782,6 +1815,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "0xngmi — Co-Founder; Charlie — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://defillama.com/chain/Cardano"
     },
@@ -1795,7 +1829,7 @@
       "docs_url": "https://docs.dune.com",
       "github_url": "https://github.com/duneanalytics",
       "social_url": "https://x.com/Dune",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/dune-analytics",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -1807,7 +1841,7 @@
       "tags": [
         "analytics",
         "dashboards",
-        "multi-chain"
+        "multichain"
       ],
       "sources": [
         {
@@ -1816,6 +1850,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Fredrik Haga — Co-Founder & CEO; Mats Olsen — Co-Founder & CTO",
       "primary_link_type": "website",
       "primary_link_url": "https://dune.com/"
     },
@@ -1829,7 +1864,7 @@
       "docs_url": "https://docs.nmkr.io",
       "github_url": null,
       "social_url": "https://x.com/nmkr_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/utxoag",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -1855,6 +1890,7 @@
       ],
       "featured": false,
       "team_entity": "utxo AG",
+      "founder_lead": "Patrick Tobler — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://www.nmkr.io/"
     },
@@ -1868,7 +1904,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/claymates",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/claynation",
       "marketplace_url": "https://www.wayup.io/collection/40fa2aa67258b4ce7b5782f74831d46a84c59a0ff0c28262fab21728",
       "policy_id": "40fa2aa67258b4ce7b5782f74831d46a84c59a0ff0c28262fab21728",
       "discord_url": "https://discord.gg/claymates",
@@ -1902,6 +1938,7 @@
       "featured": true,
       "editorial_note": "Clay Nation is a Cardano creative and NFT project. Current public discovery should use the project-controlled X account and verified Cardano collection evidence. Clay Haus is the independent creative studio associated with the Clay Nation team and its ongoing creative and production work.",
       "team_entity": "Clay Haus / Clay Nation",
+      "founder_lead": "Lenna Onto — Co-Founder; Isobel Robson — Co-Founder",
       "primary_link_type": "x",
       "primary_link_url": "https://x.com/claymates"
     },
@@ -1915,7 +1952,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/book_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/book-io",
       "marketplace_url": "https://app.book.io",
       "policy_id": null,
       "discord_url": "https://discord.gg/rNyn99WwYZ",
@@ -1933,7 +1970,8 @@
         "dea",
         "multichain",
         "cardano",
-        "book"
+        "book",
+        "media"
       ],
       "sources": [
         {
@@ -1969,7 +2007,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/stuff-io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -2026,7 +2064,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/DripDropz_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/dripdropz",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.gg/BfFCgQyhRU",
@@ -2050,6 +2088,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Kyle Solomon — Co-Founder, DripDropz",
       "related_projects": [
         "unfrackit"
       ],
@@ -2088,6 +2127,7 @@
       "featured": false,
       "editorial_note": "UnFrack.It is a Cardano wallet clean-up utility made by the DripDropz team.",
       "team_entity": "DripDropz team",
+      "founder_lead": "Kyle Solomon — DripDropz Co-Founder / affiliated project lead",
       "primary_link_type": "website",
       "primary_link_url": "https://unfrack.it/"
     },
@@ -2101,7 +2141,7 @@
       "docs_url": "https://docs.blockfrost.io/",
       "github_url": "https://github.com/blockfrost",
       "social_url": "https://x.com/blockfrost_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/blockfrost",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -2123,6 +2163,7 @@
       ],
       "featured": false,
       "team_entity": "Five Binaries OÜ",
+      "founder_lead": "Marek Mahut — Founder / CEO, Five Binaries (original Blockfrost builder)",
       "related_projects": [
         "five-binaries"
       ],
@@ -2167,6 +2208,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Initial core contributors: Damjan; Homer; Markus; Michael; Ola; RdLrT",
       "primary_link_type": "website",
       "primary_link_url": "https://www.koios.rest/"
     },
@@ -2180,7 +2222,7 @@
       "docs_url": "https://docs.gomaestro.org/cardano/sdks",
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/gomaestro",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -2210,6 +2252,7 @@
       ],
       "featured": false,
       "editorial_note": "Maestro now serves multiple UTXO chains. INDEX:80 links this Cardano record to Maestro's active Cardano developer documentation rather than its broader corporate homepage.",
+      "founder_lead": "Marvin Bertin — Co-Founder & CEO; Varderes Barsegyan — Co-Founder & CTO",
       "primary_link_type": "docs",
       "primary_link_url": "https://docs.gomaestro.org/cardano/sdks"
     },
@@ -2223,7 +2266,7 @@
       "docs_url": null,
       "github_url": "https://github.com/txpipe",
       "social_url": "https://x.com/txpipe_tools",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/txpipe",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -2252,6 +2295,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Santiago Carmuega — Founder & CEO; Fede Weill — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://txpipe.io/"
     },
@@ -2286,6 +2330,7 @@
       ],
       "featured": false,
       "team_entity": "TxPipe",
+      "founder_lead": "Santiago Carmuega — TxPipe Founder & CEO / project lead",
       "related_projects": [
         "txpipe"
       ],
@@ -2326,6 +2371,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Matthias Benkort (KtorZ) — Creator / Maintainer",
       "primary_link_type": "website",
       "primary_link_url": "https://cardanosolutions.github.io/kupo/"
     },
@@ -2363,6 +2409,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Matthias Benkort (KtorZ) — Creator / Maintainer",
       "primary_link_type": "website",
       "primary_link_url": "https://ogmios.dev/"
     },
@@ -2376,7 +2423,7 @@
       "docs_url": "https://docs.zkfold.io",
       "github_url": "https://github.com/zkFold/zkfold-base",
       "social_url": "https://x.com/zkFold",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/zkfold",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -2401,6 +2448,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Vladimir Sinyakov — Founder & Solution Architect",
       "primary_link_type": "website",
       "primary_link_url": "https://zkfold.io/"
     },
@@ -2414,7 +2462,7 @@
       "docs_url": null,
       "github_url": "https://github.com/Charli3-Official",
       "social_url": "https://x.com/Oraclecharli3",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/charli3-oracle",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.gg/Tnsc3HCA3A",
@@ -2442,6 +2490,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Robert Hever — COO & Co-Founder; Damon Zwarich — CMO & Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://charli3.io/"
     },
@@ -2455,7 +2504,7 @@
       "docs_url": "https://docs.orcfax.io",
       "github_url": "https://github.com/orcfax",
       "social_url": "https://x.com/orcfax",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/orcfax-l-l-c",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.com/invite/UbAeRuNzDu",
@@ -2483,6 +2532,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Peter Van Garderen — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://orcfax.io/"
     },
@@ -2496,7 +2546,7 @@
       "docs_url": "https://docs.nunet.io/",
       "github_url": null,
       "social_url": "https://x.com/nunet_global",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/nunet-global",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.com/invite/nunet",
@@ -2526,6 +2576,7 @@
       ],
       "featured": false,
       "editorial_note": "NuNet is a decentralized compute orchestration protocol connecting distributed CPUs, GPUs and edge devices to run AI/ML and other workloads.",
+      "founder_lead": "Dr Kabir Veitas — CEO/CTO & Co-Founder; Dr Weaver D.R. Weinbaum — Co-Founder; Dr Ben Goertzel — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://nunet.io/"
     },
@@ -2564,6 +2615,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Matthias Benkort (KtorZ) — core creator / maintainer",
       "primary_link_type": "website",
       "primary_link_url": "https://aiken-lang.org/"
     },
@@ -2577,7 +2629,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/gimbalabs",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/gimbalabs",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.gg/XTvJBj7kzq",
@@ -2605,6 +2657,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "James Dunseith — Co-Founder; Juliane Montag — Co-Founder; Roberto C. Morano — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://gimbalabs.com/"
     },
@@ -2618,7 +2671,7 @@
       "docs_url": null,
       "github_url": "https://github.com/MeshJS/mesh",
       "social_url": "https://x.com/meshsdk",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/meshjs",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.com/invite/dH48jH3BKa",
@@ -2642,6 +2695,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Hong Jing (Jingles) — Co-Founder / Technical Lead; Abdel — Co-Founder / Developer",
       "primary_link_type": "website",
       "primary_link_url": "https://meshjs.dev/"
     },
@@ -2686,6 +2740,7 @@
       "featured": false,
       "editorial_note": "Lucid Evolution is an off-chain Cardano development framework maintained by Anastasia Labs. Its documentation site is the main public reference; the GitHub repository remains the canonical code source.",
       "team_entity": "Anastasia Labs",
+      "founder_lead": "Philip DiSarro — Anastasia Labs Founder & CEO / maintainer team lead",
       "related_projects": [
         "anastasia-labs"
       ],
@@ -2763,6 +2818,7 @@
       ],
       "featured": false,
       "editorial_note": "Plutus is core Cardano developer infrastructure rather than a standalone web application. The official Cardano documentation is the primary public reference; GitHub hosts the implementation and specifications.",
+      "founder_lead": "Philip DiSarro — CEO, Midgard Labs / current Plutus maintenance lead",
       "primary_link_type": "docs",
       "primary_link_url": "https://docs.cardano.org/developer-resources/smart-contracts/plutus"
     },
@@ -2776,7 +2832,7 @@
       "docs_url": null,
       "github_url": "https://github.com/marlowe-lang/marlowe-cardano",
       "social_url": "https://x.com/marlowe_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/marlowe-lang",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -2797,6 +2853,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Simon Thompson — Transition/Core Team; Nicolas Henin — Full Stack Engineer / Transition Team; Tomasz Rybarczyk — Full Stack Engineer / Transition Team",
       "primary_link_type": "website",
       "primary_link_url": "https://marlowe.iohk.io/"
     },
@@ -2838,6 +2895,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Jean-Philippe Raynaud — Mithril Tech Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://mithril.network/"
     },
@@ -2880,6 +2938,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Sebastian Nagel — Software Engineering Lead / Hydra Team Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://hydra.family/"
     },
@@ -2916,6 +2975,7 @@
       "featured": false,
       "editorial_note": "Demeter is run jointly by TxPipe and Blink Labs, which operate independent copies of the Cardano infrastructure stack behind a shared service layer.",
       "team_entity": "TxPipe / Blink Labs",
+      "founder_lead": "Santiago Carmuega — TxPipe Founder & CEO / project lead",
       "related_projects": [
         "txpipe",
         "blink-labs"
@@ -2933,7 +2993,7 @@
       "docs_url": "https://docs.masumi.network/",
       "github_url": "https://github.com/masumi-network",
       "social_url": "https://x.com/MasumiNetwork",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/masumi-network",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -2964,6 +3024,7 @@
       "featured": false,
       "editorial_note": "Masumi Network was launched through a collaboration between NMKR and Serviceplan Group.",
       "team_entity": "NMKR × Serviceplan Group",
+      "founder_lead": "Patrick Tobler — Founder, Masumi Network",
       "primary_link_type": "website",
       "primary_link_url": "https://www.masumi.network/"
     },
@@ -3006,6 +3067,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Patrick Tobler — current builder / founder-linked lead",
       "primary_link_type": "website",
       "primary_link_url": "https://www.sokosumi.com/"
     },
@@ -3088,6 +3150,7 @@
       ],
       "featured": false,
       "team_entity": "Founder & Developer: Cybird; Unreal Developer: Roberto Ferreira; Animator: Mayank",
+      "founder_lead": "Cybird — Founder & Developer; Roberto Ferreira — Unreal Developer; Mayank — Animator",
       "primary_link_type": "website",
       "primary_link_url": "https://www.marsbirds.com"
     },
@@ -3101,7 +3164,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/BTC_OS",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/bitcoinos",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -3129,6 +3192,7 @@
         }
       ],
       "featured": false,
+      "founder_lead": "Edan Yago — Founder; Elan Nahari — Co-Founder & COO; Hillary Adler — Co-Founder; Gadi Guy — Co-Founder & CTO; Israel Levin — Chief Engineer & Technical Lead; Calvin Ferreira — Head of Ecosystems & BD",
       "primary_link_type": "website",
       "primary_link_url": "https://www.bitcoinos.build"
     },
@@ -3251,6 +3315,7 @@
       ],
       "featured": false,
       "editorial_note": "Squeak presents itself as a community-led marmot ecosystem built around the $Squeak token, 4,444 Squeaky Squeakers NFTs, a Liquid NFT Swapper, holder rewards and community participation through Discord. The project also describes a broader brand ambition including merchandise and children's books. Established May 2025 from project-provided Discord information.",
+      "founder_lead": "Modemaster DK (@modemasteren) — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.squeak.world/"
     },
@@ -3299,6 +3364,7 @@
       "featured": false,
       "editorial_note": "Happy Hoppers Club is a long-running Cardano frog NFT collection and community. Its official site remains online and documents an 11,111-piece collection; INDEX:80 treats it primarily as a Cardano heritage/community collectible project rather than making claims about current trading activity.",
       "team_entity": "Happy Hoppers Club",
+      "founder_lead": "Prajwal Jagtap (OutOfTheWorld) — Co-Founder & Lead Coordinator; Jake Geoghean (Jub) — Co-Founder & Community Manager",
       "primary_link_type": "website",
       "primary_link_url": "https://happyhoppers.club/"
     },
@@ -3699,6 +3765,7 @@
       "featured": true,
       "editorial_note": "CNFT Tools is a long-running Cardano NFT utility platform offering project and community tooling including collection listings, rankings, APIs, bots, minting and staking-related services.",
       "team_entity": "CNFT Tools",
+      "founder_lead": "LegionofBrad — Lead Architect & Blockchain Engineering; JPB — Lead Developer / Frontend & AI Logic; Mangobush — Strategy, Education & Adoption",
       "primary_link_type": "website",
       "primary_link_url": "https://cnft.tools/"
     },
@@ -3760,7 +3827,7 @@
       "docs_url": "https://wiki.infinityrising.com/",
       "github_url": null,
       "social_url": "https://x.com/InfinityRisingX",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/infinity-rising-game",
       "marketplace_url": "https://infinityrising.com/store",
       "policy_id": "31bdb2d8ed6e2623e121b6db134a1491f4252b9ea87d928eb5290026",
       "discord_url": "https://discord.com/invite/InfinityRising",
@@ -3839,6 +3906,7 @@
       "featured": false,
       "editorial_note": "Cardano.org lists Asteria as a fully on-chain Cardano strategy game.",
       "team_entity": "TxPipe",
+      "founder_lead": "Santiago Carmuega — TxPipe Founder & CEO / project lead",
       "primary_link_type": "website",
       "primary_link_url": "https://asteria.txpipe.io"
     },
@@ -3960,6 +4028,7 @@
       ],
       "featured": false,
       "editorial_note": "Cardano.org currently lists Farmroll in its Cardano Apps Directory.",
+      "founder_lead": "Ivica Zafirovski — COO; Tome — CTO; Anja — Co-Founder & Design / Marketing Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://farmroll.io"
     },
@@ -3973,7 +4042,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/uverify-io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -4001,6 +4070,7 @@
       ],
       "featured": false,
       "editorial_note": "Cardano.org lists UVerify as a Cardano notary app and reports tracked on-chain activity.",
+      "founder_lead": "Fabian Bormann — operator / service provider",
       "primary_link_type": "website",
       "primary_link_url": "https://uverify.io"
     },
@@ -4042,6 +4112,7 @@
       ],
       "featured": false,
       "editorial_note": "Cardano.org lists EchoForge as a Cardano identity/proof application.",
+      "founder_lead": "Charles Tao — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.echoforgeef.com/"
     },
@@ -4083,6 +4154,7 @@
       ],
       "featured": false,
       "editorial_note": "Cardano.org currently lists Continuity Token as a Cardano NFT/notary application.",
+      "founder_lead": "Marek — Core Team; Richard — Core Team; Maroš — Core Team; Vladimír — Core Team",
       "primary_link_type": "website",
       "primary_link_url": "https://continuity.to"
     },
@@ -4177,7 +4249,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/tapdano",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -4205,6 +4277,7 @@
       ],
       "featured": false,
       "editorial_note": "Cardano.org lists TapDano as a Cardano identity app and has tracked on-chain activity.",
+      "founder_lead": "Thiago Nunes — Founder / Business Director; Lucas Boemeke — Co-Founder / Technology Director; Ana Paula Petry — Design; Igor Wendt — Development",
       "primary_link_type": "website",
       "primary_link_url": "https://tapdano.com"
     },
@@ -4218,7 +4291,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/andamio_teams",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/andamio-teams",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -4246,6 +4319,7 @@
       ],
       "featured": false,
       "editorial_note": "Cardano.org lists Andamio as a Cardano identity/credentials application.",
+      "founder_lead": "Nelson Kshetrimayum — Co-Founder; James Dunseith — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.andamio.io"
     },
@@ -4313,7 +4387,8 @@
         "nft",
         "native-token",
         "creator-tool",
-        "no-code"
+        "no-code",
+        "developer-tool"
       ],
       "sources": [
         {
@@ -4354,7 +4429,8 @@
         "nft",
         "policy-id",
         "royalties",
-        "creator-tool"
+        "creator-tool",
+        "developer-tool"
       ],
       "sources": [
         {
@@ -4395,7 +4471,8 @@
         "nft",
         "browser",
         "self-custody",
-        "creator-tool"
+        "creator-tool",
+        "developer-tool"
       ],
       "sources": [
         {
@@ -4436,7 +4513,8 @@
         "nft",
         "native-token",
         "open-source",
-        "creator-tool"
+        "creator-tool",
+        "developer-tool"
       ],
       "sources": [
         {
@@ -4524,6 +4602,7 @@
       ],
       "featured": false,
       "editorial_note": "The official site states its digital collectibles are stored on Cardano and describes its Cardano-launched Naru collections and games roadmap.",
+      "founder_lead": "David — Co-Owner / Founder; Shannon — Co-Owner / Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://yummiuniverse.io/home/"
     },
@@ -4607,6 +4686,7 @@
       ],
       "featured": false,
       "editorial_note": "Current Wayup collection evidence confirms the Cardano collection and official policy identity; current project documentation continues to describe Cardano-native staking and NFT utility.",
+      "founder_lead": "Demosthenes — Co-Founder / Chief Director & Marketer; N3M3S1S — Co-Founder / Creative Director; Crypt Keeper — Co-Founder / Logistics",
       "primary_link_type": "website",
       "primary_link_url": "https://www.mallardorder.io"
     },
@@ -4737,6 +4817,7 @@
       "featured": false,
       "editorial_note": "Cardano.org lists Ale & Axes as a Cardano game, and the official Adventurer Finder ties its NFT collection directly to Tavern Squad and Ale & Axes. The consumer homepage does not foreground blockchain terminology.",
       "team_entity": "Tavern Squad / Tavern Studios",
+      "founder_lead": "Luca — Co-Founder & Designer; Tristan — Co-Founder & Developer; Patrik — Co-Founder & Game Designer; Henry — Artist",
       "primary_link_type": "website",
       "primary_link_url": "https://aleaxes.com/"
     },
@@ -4784,6 +4865,7 @@
       "featured": false,
       "editorial_note": "Cardano.org lists the quiz as a Cardano game; the live quiz page documents its Plutus V2 validator and Cardanoscan independently identifies the contract and transaction history.",
       "team_entity": "GNP1 / GrahamsNumberPlus1",
+      "founder_lead": "GrahamsNumberPlus1 / GNP1 — Creator / SPO",
       "related_projects": [
         "grahamsnumberplus1"
       ],
@@ -4834,6 +4916,7 @@
       ],
       "featured": false,
       "editorial_note": "Official docs date the project to March 2021 and the Genesis collection mint to 6 May 2021. Wayup still indexes the collection. Treat PXL Wars as part of the project's documented gaming ecosystem without implying current development milestones beyond available evidence.",
+      "founder_lead": "Adrian Fanatiu — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://pxlz.org/"
     },
@@ -4964,6 +5047,7 @@
       "featured": false,
       "editorial_note": "The current 2026 official site and documentation identify the NFTs as Cardano-network assets and describe the mining ecosystem; Wayup confirms the main collection policy and secondary-market presence. On 14 Sep 2026, a project team member confirmed in the official Discord that GGMC is still active and running. Mining rewards should be described as project mechanics, not guaranteed returns.",
       "team_entity": "GGMC",
+      "founder_lead": "Ryan — Founder; Aaron — Community Manager",
       "primary_link_type": "website",
       "primary_link_url": "https://www.ggmc.io/"
     },
@@ -5011,6 +5095,7 @@
       "featured": false,
       "editorial_note": "The current 2026 official site documents multiple Cardano NFT collections and publishes policy IDs for verification. Because the project spans many collections, INDEX:80 should not collapse the whole project into one policy ID.",
       "team_entity": "aeoniumsky",
+      "founder_lead": "aeoniumsky — anonymous creator / digital artist",
       "primary_link_type": "website",
       "primary_link_url": "https://www.aeoniumsky.io/"
     },
@@ -5024,7 +5109,7 @@
       "docs_url": null,
       "github_url": "https://github.com/mlabs-haskell",
       "social_url": "https://x.com/MLabs10",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/mlabsconsulting",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5048,11 +5133,11 @@
       "sources": [
         {
           "type": "source",
-          "url": "https://www.mlabs.city/"
+          "url": "https://projectcatalyst.io/proposers/lpmaho"
         },
         {
           "type": "source",
-          "url": "https://projectcatalyst.io/proposers/lpmaho"
+          "url": "https://www.mlabs.city/blockchain"
         },
         {
           "type": "source",
@@ -5062,6 +5147,7 @@
       "featured": false,
       "editorial_note": "Alongside its open-source tooling, MLabs works as the on-chain engineering team for Cardano projects, from contract design through audits and support after launch. Recent public work includes the on-chain contracts behind ProofTap, an NFC verification app.",
       "team_entity": "MLabs Ltd",
+      "founder_lead": "Ben Hart — CTO / current technical lead",
       "primary_link_type": "website",
       "primary_link_url": "https://www.mlabs.city/"
     },
@@ -5075,7 +5161,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/anastasialabs",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5123,7 +5209,7 @@
       "docs_url": "https://xerberus.gitbook.io/",
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/xerberus-protocol",
       "marketplace_url": "https://app.xerberus.io/",
       "policy_id": null,
       "discord_url": null,
@@ -5158,6 +5244,7 @@
       "featured": false,
       "editorial_note": "Xerberus is an active risk-intelligence platform. Its current product covers DeFi pools, assets, protocols and organisations beyond Cardano while retaining substantial Cardano/Catalyst roots.",
       "team_entity": "Xerberus",
+      "founder_lead": "Simon Peters — CEO & Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://xerberus.io/"
     },
@@ -5171,7 +5258,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/sidanlab",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5207,6 +5294,7 @@
       "featured": false,
       "editorial_note": "SIDAN Lab builds and maintains Cardano developer, governance and trading infrastructure, including SDK work and Hydra-based systems.",
       "team_entity": "SIDAN Lab",
+      "founder_lead": "Hinson Wong — Co-Founder & CEO",
       "related_projects": [
         "meshjs",
         "cgov"
@@ -5224,7 +5312,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/wada-org",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5274,7 +5362,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/blinklabs_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/blink-labs-io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5309,6 +5397,7 @@
       "featured": false,
       "editorial_note": "Blink Labs actively builds Cardano protocol and node software including gOuroboros, Adder and Dingo, and is an infrastructure partner for Demeter.",
       "team_entity": "Blink Labs",
+      "founder_lead": "Chris Gianelloni — CEO; Christina Gianelloni (musikc / InASingleWord) — COO & Community",
       "related_projects": [
         "demeter"
       ],
@@ -5325,7 +5414,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/LidoNation",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/lidonation",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5359,6 +5448,7 @@
       "featured": false,
       "editorial_note": "Lido Nation remains an active Cardano education and community platform and develops governance/Catalyst discovery tools.",
       "team_entity": "LIDO Nation Foundation",
+      "founder_lead": "Darlington — Co-Dreamer / pioneer; Stephanie — Co-Dreamer / pioneer",
       "primary_link_type": "website",
       "primary_link_url": "https://www.lidonation.com/en"
     },
@@ -5372,7 +5462,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/sustainableada",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5403,6 +5493,7 @@
       "featured": false,
       "editorial_note": "Sustainable ADA is an active Cardano-focused sustainability and impact initiative publishing education, case studies and impact resources.",
       "team_entity": "Sustainable ADA",
+      "founder_lead": "Cole Bartlett — Co-Founder; Razali Samsudin — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://sustainableada.com/"
     },
@@ -5468,7 +5559,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/KeyboardWIC",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/keyboard-warriors-internet-cafe",
       "marketplace_url": "https://kwiclauncher.io/",
       "policy_id": null,
       "discord_url": null,
@@ -5504,6 +5595,7 @@
       "featured": false,
       "editorial_note": "The official project site documents KWICVERSE, the KWIC Launcher, NFT staking and the $KWIC Cardano native token. The project describes its official launch as November 2022 and remains represented by an active Australian company.",
       "team_entity": "Keyboard Warriors Internet Cafe Pty Ltd",
+      "founder_lead": "Daniel / Dtonks — Founder; Jedd / Jeddson — Founder; Jesse / JESWRI — Founder / Artist",
       "primary_link_type": "website",
       "primary_link_url": "https://keyboardwarriorsinternetcafe.io/"
     },
@@ -5517,7 +5609,7 @@
       "docs_url": null,
       "github_url": "https://github.com/eucardano",
       "social_url": "https://x.com/EuCardano",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/europe-cardano-community",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.gg/nSnPMNwxrJ",
@@ -5553,6 +5645,7 @@
       "featured": true,
       "editorial_note": "The European Cardano Community is a regional Cardano network bringing together builders, educators and ecosystem participants across Europe. Its community channels organise biweekly EU Town Halls, workshops and collaborative activities, with public resources maintained across X, Discord, GitHub and YouTube.",
       "team_entity": "European Cardano Community",
+      "founder_lead": "Davide Lucchesi — Core Team / Co-Founder; Deryck Lance — Core Team; Marcus M. Ubani — Core Team; Mauro Andreoli — Core Team; Ricardo Burgos — Core Team",
       "primary_link_type": "x",
       "primary_link_url": "https://x.com/EuCardano"
     },
@@ -5566,7 +5659,7 @@
       "docs_url": "https://tweag.github.io/cardano-website/",
       "github_url": "https://github.com/tweag",
       "social_url": "https://x.com/tweagio",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/tweag-i-o",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5663,7 +5756,7 @@
       "docs_url": "https://cardanofoundation.org/en/academy",
       "github_url": "https://github.com/cardano-foundation",
       "social_url": "https://x.com/Cardano_CF",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/cardano-foundation",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5699,6 +5792,7 @@
       "featured": false,
       "editorial_note": "The Cardano Foundation is an independent Swiss not-for-profit that supports Cardano as public digital infrastructure through ecosystem stewardship, adoption, education, standards and engagement with organisations and institutions.",
       "team_entity": "Cardano Foundation",
+      "founder_lead": "Frederik Gregaard — CEO; Andreas Pletscher — COO",
       "primary_link_type": "website",
       "primary_link_url": "https://cardanofoundation.org/"
     },
@@ -5712,7 +5806,7 @@
       "docs_url": null,
       "github_url": "https://github.com/emurgo",
       "social_url": "https://x.com/EMURGO_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/emurgo-io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5810,7 +5904,7 @@
       "docs_url": "https://www.libertum.io/en/docs/user-manual/",
       "github_url": null,
       "social_url": "https://x.com/libertum_token",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/libertum1",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -5846,6 +5940,7 @@
       "featured": false,
       "editorial_note": "Libertum is a regulated, multichain tokenization platform for real-world assets. Its current documentation states that CIP-20 issuance is live on Cardano Mainnet, while CIP-113 programmable security tokens are on Cardano Preview pending audit clearance for mainnet; Base is also supported.",
       "team_entity": "Libertum",
+      "founder_lead": "Javvad Azam — Founder & CEO; Alan Gormley — Founder & CSO; Kevin Upton — CTO; Xavier Litt — CMO",
       "primary_link_type": "website",
       "primary_link_url": "https://www.libertum.io/"
     },
@@ -5894,6 +5989,7 @@
       "featured": false,
       "editorial_note": "Butane is an open synthetic-assets protocol built on Cardano. Its model uses collateralized debt positions backed by Cardano-native assets, with protocol documentation and open-source repositories available publicly.",
       "team_entity": "Butane Protocol",
+      "founder_lead": "Micah Kendall — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://butane.dev/"
     },
@@ -5907,7 +6003,7 @@
       "docs_url": "https://docs.ada-anvil.io/",
       "github_url": null,
       "social_url": "https://x.com/AnvilDevAgency",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/anvil-development-agency-inc",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6060,7 +6156,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/ikigai_tech",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/ikigai-technologies",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6077,7 +6173,8 @@
         "open-source",
         "catalyst",
         "developer-tool",
-        "genun-games"
+        "genun-games",
+        "infrastructure"
       ],
       "sources": [
         {
@@ -6110,7 +6207,7 @@
       "docs_url": null,
       "github_url": "https://github.com/dotareio",
       "social_url": "https://x.com/dotareio",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/dotare",
       "marketplace_url": "https://app.dotare.io/",
       "policy_id": null,
       "discord_url": null,
@@ -6161,7 +6258,7 @@
       "docs_url": "https://www.adastack.io/developers/api/v1",
       "github_url": "https://github.com/adastackio",
       "social_url": "https://x.com/adastackio",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/adastack-io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6244,6 +6341,7 @@
       "featured": false,
       "editorial_note": "AdaLite is a lightweight open-source Cardano web wallet developed by Vacuumlabs. It supports mnemonic and hardware-wallet access and remains listed among Cardano wallet options.",
       "team_entity": "Vacuumlabs",
+      "founder_lead": "Tomas Kulich — CTO / early technical lead; Michal Petro — Crypto Lead / early project team",
       "primary_link_type": "website",
       "primary_link_url": "https://adalite.io/"
     },
@@ -6257,7 +6355,7 @@
       "docs_url": "https://wp.chibidangoheroes.com/",
       "github_url": null,
       "social_url": "https://x.com/ChibidangoNFT",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/chibidango-heroes",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6305,7 +6403,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/empowa_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/empowa-io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6337,6 +6435,7 @@
       "featured": false,
       "editorial_note": "Empowa finances affordable, climate-smart housing in emerging markets. Its current model combines fiat housing finance with a blockchain-community layer using EMP token collateral, NFT-backed participation and an on-chain reserve.",
       "team_entity": "Empowa Technology Ltd.",
+      "founder_lead": "Glen Jordan — Co-Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://www.empowa.io/"
     },
@@ -6350,7 +6449,7 @@
       "docs_url": "https://docs.geniusyield.co/",
       "github_url": "https://github.com/geniusyield",
       "social_url": "https://x.com/GeniusyieldO",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/geniusyield",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6397,7 +6496,7 @@
       "docs_url": null,
       "github_url": "https://github.com/spectrum-finance",
       "social_url": "https://x.com/SpectrumLabs_",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/spectrumlabs",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6412,7 +6511,6 @@
         "cross-chain",
         "cardano",
         "ergo",
-        "archived",
         "spectrum"
       ],
       "sources": [
@@ -6477,6 +6575,7 @@
       "featured": false,
       "editorial_note": "Daedalus is Input Output's open-source full-node desktop wallet for ada. Unlike light wallets, it runs Cardano node and wallet components locally so users validate the blockchain through their own node.",
       "team_entity": "Input Output",
+      "founder_lead": "Kyle Solomon — Project Manager; Samuel Leathers — Backend & Release Engineer",
       "primary_link_type": "website",
       "primary_link_url": "https://daedaluswallet.io/"
     },
@@ -6525,6 +6624,7 @@
       "featured": false,
       "editorial_note": "Rosen Bridge is an open-source interoperability project using a Watcher/Guard architecture to move assets between Ergo, Cardano and other supported chains.",
       "team_entity": "Rosen Bridge",
+      "founder_lead": "Mohammad Hasan Samadani (mhs_sam) — Co-Founder / Lead Developer; Joseph Armeanio — Co-Founder / Project Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://rosen.tech/"
     },
@@ -6573,6 +6673,7 @@
       "featured": false,
       "editorial_note": "Typhon Wallet is a non-custodial Cardano wallet from Strica available on the web and as a browser extension, with staking, NFT, hardware-wallet, multi-account and CIP-30 dApp features.",
       "team_entity": "Strica",
+      "founder_lead": "Ashish Prajapati — Strica Co-Founder; Mehul Prajapati — Core Team; Pavan Vora — Core Team; Prashanth Soordelu — Core Team",
       "related_projects": [
         "strica",
         "cardanoscan"
@@ -6590,7 +6691,7 @@
       "docs_url": "https://nufi.gitbook.io/developer-docs/",
       "github_url": null,
       "social_url": "https://x.com/nufiwallet",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/nufiwallet",
       "marketplace_url": "https://chromewebstore.google.com/detail/nufi/gpnihlnnodeiiaakbikldcihojploeca",
       "policy_id": null,
       "discord_url": "https://discord.com/invite/jSyVPAXw3w",
@@ -6678,6 +6779,7 @@
       "featured": false,
       "editorial_note": "Oura is TxPipe's Rust-native Cardano data pipeline for streaming chain events through configurable filters into storage, queues, webhooks and other downstream systems. INDEX:80 links to the current Oura v2 documentation.",
       "team_entity": "TxPipe",
+      "founder_lead": "Santiago Carmuega — TxPipe Founder & CEO / project lead",
       "primary_link_type": "website",
       "primary_link_url": "https://oura.txpipe.io/"
     },
@@ -6691,7 +6793,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/palmeconomy",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/palmyra-ecosystem",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6725,6 +6827,7 @@
       "featured": false,
       "editorial_note": "Palmyra is a commodity marketplace and tokenization project connected to the PALM Economy, using Cardano-linked infrastructure to connect producers and buyers in underserved real-world commodity markets.",
       "team_entity": "PALM Economy / zenGate",
+      "founder_lead": "Daniel Friedman — Co-Founder & CEO; Sam Lambert — Co-Founder & COO; Nicholas Despopoulos — Co-Founder & CBO; Luca D’Angelo — Lead Developer; Theodoros Morisis — Head of Operations",
       "primary_link_type": "website",
       "primary_link_url": "https://palmyra.app/"
     },
@@ -6738,7 +6841,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/DirectEd2022",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/directed-dev",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6774,6 +6877,7 @@
       "featured": false,
       "editorial_note": "DirectEd has a substantial history in the Cardano ecosystem through Catalyst-funded scholarship, credential and education projects, including Atala PRISM work. Its current public site is focused mainly on engineering training and job placement, so INDEX:80 marks the Cardano relationship as historical/currently uncertain rather than implying an active Cardano product.",
       "team_entity": "DirectEd",
+      "founder_lead": "Simon Sällström — Founder & CEO; Kidus Elias — Curriculum Design Lead; Ananya Fekeremariam — Head of Engineering",
       "primary_link_type": "website",
       "primary_link_url": "https://directed.dev/"
     },
@@ -6817,6 +6921,7 @@
       "featured": false,
       "editorial_note": "SpaceBudz is an early Cardano NFT collection launched in 2021 and retained as an important heritage project. The official site remains available with a live collection explorer and canonical policy ID.",
       "team_entity": "SpaceBudz",
+      "founder_lead": "Alessandro Konrad (Ales) — Co-Creator (historical); Zieg — Co-Creator (historical); Tavern Studios — current stewardship",
       "primary_link_type": "website",
       "primary_link_url": "https://spacebudz.io/"
     },
@@ -6918,6 +7023,7 @@
       "featured": true,
       "editorial_note": "GNP1 is a Cardano stake pool and ecosystem tooling project active since October 2020. Its current public work includes self-hosted Cardano infrastructure, free chain and pool tools, Plutus smart-contract experiments, governance participation as a DRep, and a mental-health charity mission.",
       "team_entity": "GrahamsNumberPlus1 / GNP1",
+      "founder_lead": "GrahamsNumberPlus1 / GNP1 — SPO / creator",
       "related_projects": [
         "plutus-quiz-v1000"
       ],
@@ -6935,7 +7041,7 @@
       "docs_url": "https://docs.strica.io/",
       "github_url": "https://github.com/StricaHQ",
       "social_url": "https://x.com/StricaHQ",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/strica",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6971,6 +7077,7 @@
       "featured": false,
       "editorial_note": "Strica is the engineering team behind CardanoScan and Typhon Wallet and publishes open-source Cardano libraries used across both products.",
       "team_entity": "Strica",
+      "founder_lead": "Ashish Prajapati — Co-Founder; Mehul Prajapati — Core Team; Pavan Vora — Core Team; Prashanth Soordelu — Core Team",
       "related_projects": [
         "cardanoscan",
         "typhon-wallet"
@@ -7090,7 +7197,7 @@
       "docs_url": "https://larissa.health/en-free-blockchain-course",
       "github_url": null,
       "social_url": null,
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/larissa-health",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -7182,6 +7289,7 @@
       "featured": false,
       "editorial_note": "Adria Stake Pool is an independent single-pool Cardano operator active since 2021. Its current maintained public destination is DappsOnCardano, an active Cardano ecosystem analytics and discovery site whose footer identifies it as powered by ADRIA Pool. INDEX:80 records ADRIA as Community Stake Pool infrastructure; changing stake levels and delegation outcomes are time-sensitive and are not editorial endorsements.",
       "team_entity": "Adria Stake Pool",
+      "founder_lead": "Adria / Adria Stake Pool — SPO / DappsOnCardano founder",
       "primary_link_type": "website",
       "primary_link_url": "https://dappsoncardano.com/",
       "explorer_url": "https://cardanoscan.io/pool/pool1we9umarzn0l6jp8mcm98y28lxuuzcurzpjldnjwtgdhgw068mnr"
@@ -7272,6 +7380,7 @@
       "featured": false,
       "editorial_note": "Cardano PRIME is a proposed 12-month DeFi growth program rather than an operating dApp. AlphaGrowth's June 2026 public draft describes a ₳120 million treasury request, phased ecosystem audit and implementation work, incentives and capital deployment, with several governance and administrative roles still to be finalized before an on-chain vote.",
       "team_entity": "AlphaGrowth / Cardano PRIME",
+      "founder_lead": "Bryan Colligan — AlphaGrowth Founder & CEO / programme lead; Eric Waisanen — co-author; Shardul Pilley — co-author",
       "related_projects": [
         "alphagrowth"
       ],
@@ -7288,7 +7397,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/trivolvetech",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/trivolve-tech",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -7391,7 +7500,7 @@
       "docs_url": "https://sundial-protocol-docs.readthedocs.io/",
       "github_url": "https://github.com/sundial-protocol/sundial-monorepo",
       "social_url": "https://x.com/SundialProtocol",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/sundial-protocol",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -7495,7 +7604,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/alphagrowth1",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/alphagrowth",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -7513,7 +7622,8 @@
         "tokenomics",
         "multichain",
         "cardano",
-        "cardano-prime"
+        "cardano-prime",
+        "infrastructure"
       ],
       "sources": [
         {
@@ -7549,7 +7659,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/BBHMM_Stake",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/bbhmm-stake",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -7577,6 +7687,7 @@
       "featured": false,
       "editorial_note": "BBHMM is an independent Cardano stake-pool operator with a current public delegation surface. Its site also documents participation in projects including TosiDrop, NuNet and World Mobile; those contribution claims should be rechecked at future editorial reviews.",
       "team_entity": "BBHMM",
+      "founder_lead": "Chad [BBHMM] — public SPO persona / CIP contributor",
       "primary_link_type": "website",
       "primary_link_url": "https://bbhmm.net/"
     },
@@ -7622,6 +7733,7 @@
       "featured": false,
       "editorial_note": "OLi is a live AI tutoring product. Its Cardano integration is proposed in Fund15 and should not be described as deployed or funded unless the proposal status and delivered integration are later verified.",
       "team_entity": "Olympus Insights",
+      "founder_lead": "Nathan Barkell — Founder & Commercial Lead; Mark Elliott — Technology & Platform; Alex Burton — Operations & Product; Sev Mozhaev — Growth & Audience",
       "primary_link_type": "website",
       "primary_link_url": "https://oli-tutor.com/"
     },
@@ -7635,7 +7747,7 @@
       "docs_url": "https://docs.djed.artifi.finance/",
       "github_url": "https://github.com/artifi-labs/open-djed",
       "social_url": "https://x.com/artifi_labs",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/artifi-finance",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -7671,6 +7783,7 @@
       "editorial_note": "Open DJED is an interface and tooling layer for the existing DJED protocol; it is not a separate stablecoin. Fund14 records its current maintenance/development work as in progress.",
       "treasury_funding_value_ada": 100000,
       "team_entity": "Artifi Labs",
+      "founder_lead": "Kylix Afonso — CEO; Gonçalo Salgueirinho — CTO; Tim Welzen — CMO",
       "primary_link_type": "website",
       "primary_link_url": "https://djed.artifi.finance/"
     },
@@ -7684,7 +7797,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/Plastiks_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/plastiks-nozama",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -7716,6 +7829,7 @@
       "editorial_note": "Plastiks is moving plastic-recovery verification and credit infrastructure onto Cardano. Its Fund13 Cardano Partners proposal is currently in progress; INDEX:80 records confirmed funded value from that proposal only.",
       "treasury_funding_value_ada": 500000,
       "team_entity": "Plastiks / Nozama Tech Ltd.",
+      "founder_lead": "André Vanyi-Robin — Founder & CEO; Ana Aguilar Meca — COO; Daniel Garcia — CTO / Cardano Lead; Delfina Achinelly — Head of Methodology & Verification; Trym Lyngset — Product / Technology Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://plastiks.io/"
     },
@@ -7760,6 +7874,7 @@
       "featured": false,
       "editorial_note": "This record represents the EPOCH stake-pool project. The operator's No Stress dRep and education/community activity are related context rather than a separate INDEX:80 person record.",
       "team_entity": "EPOCH Pool",
+      "founder_lead": "No Stress / EPOCH — Stake Pool Operator & DRep / Cardano Over Coffee host",
       "primary_link_type": "website",
       "primary_link_url": "https://epochstakepool.com/"
     },
@@ -7803,6 +7918,7 @@
       "featured": false,
       "editorial_note": "PREEB's official site identifies the pool ticker as PREEB and records its Cardano mainnet launch on 31 May 2022. INDEX:80 does not rank stake pools by rewards or return.",
       "team_entity": "PREEB",
+      "founder_lead": "Aaron Priebe — Stake Pool Operator",
       "primary_link_type": "website",
       "primary_link_url": "https://preeb.cloud/"
     },
@@ -7847,6 +7963,7 @@
       "featured": false,
       "editorial_note": "The current official X profile states BIKES has been online since epoch 242 and references MusashiNet and Mithril. Those technical-contribution details remain under editorial review.",
       "team_entity": "BIKES",
+      "founder_lead": "natefilm — operator",
       "primary_link_type": "x",
       "primary_link_url": "https://x.com/cardanobikes"
     },
@@ -7890,6 +8007,7 @@
       "featured": false,
       "editorial_note": "Saturn Swap's current first-party material presents its V3 exchange and Cardano-native settlement model. Token and liquidity details should be treated as time-sensitive and checked before any spotlight copy.",
       "team_entity": "Saturn Swap",
+      "founder_lead": "Avatar Nick — Founder / Developer",
       "primary_link_type": "website",
       "primary_link_url": "https://saturnswap.io/"
     },
@@ -7903,7 +8021,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/DeltaDeFi_",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/deltadefi",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -7934,6 +8052,7 @@
       "featured": false,
       "editorial_note": "DeltaDeFi's current first-party site describes the exchange as live on mainnet and powered by Hydra L2. Performance and fee claims remain first-party product claims rather than INDEX:80 endorsements.",
       "team_entity": "DeltaDeFi",
+      "founder_lead": "Hinson Wong — Co-Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://deltadefi.io/"
     },
@@ -7977,6 +8096,7 @@
       "featured": false,
       "editorial_note": "SteelSwap's current product presents itself as a Cardano DEX aggregator using smart routing across available venues. INDEX:80 does not endorse quoted rates or execution outcomes.",
       "team_entity": "SteelSwap",
+      "founder_lead": "Dr Nick Schaub / Elder Millennial — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://steelswap.io/"
     },
@@ -8067,6 +8187,7 @@
       "featured": false,
       "editorial_note": "Surf's current V2 product exposes live lending and borrowing functionality. Rates, liquidity and protocol metrics change continuously and are not editorial endorsements.",
       "team_entity": "Surf",
+      "founder_lead": "Phillerino — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://surflending.org/"
     },
@@ -8113,6 +8234,7 @@
       "featured": false,
       "editorial_note": "No.Witness Labs works across multiple chains. INDEX:80 includes it for current Cardano-facing security and engineering work; individual audit outcomes should be checked against the relevant project reports.",
       "team_entity": "No.Witness Labs",
+      "founder_lead": "Jonathan Rodriguez — Co-Founder & CEO; Mladen Lamesevic — Co-Founder & COO",
       "primary_link_type": "website",
       "primary_link_url": "https://nowitnesslabs.com/"
     },
@@ -8126,7 +8248,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/AnzensOfficial",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/anzens-usda",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -8156,6 +8278,7 @@
       "featured": false,
       "editorial_note": "Anzens' current material describes USDA as designed for 1:1 US-dollar backing and initially for Cardano. Current availability, reserve attestations and token identifiers must be verified before INDEX:80 presents USDA as live.",
       "team_entity": "Anzens Inc.",
+      "founder_lead": "Vineeth Bhuvanagiri — CEO; Zack Pollack — Head of Growth & Partnerships",
       "primary_link_type": "website",
       "primary_link_url": "https://anzens.com/"
     },
@@ -8199,6 +8322,7 @@
       "featured": false,
       "editorial_note": "GameChanger's current site presents its V2 wallet and dApp tooling as production-ready. Specific supported integrations remain subject to product updates.",
       "team_entity": "GameChanger",
+      "founder_lead": "Adriano Fiorenza — Founder & Developer",
       "primary_link_type": "website",
       "primary_link_url": "https://gamechanger.finance/"
     },
@@ -8247,6 +8371,7 @@
       "featured": false,
       "editorial_note": "Current SyncAI material explicitly references an AI-powered DePIN network on Cardano. Its public-site routing is still being checked, so the X account remains the primary current identity link during REVIEW.",
       "team_entity": "SyncAI Network",
+      "founder_lead": "Mohammed Adnan Khan — Lead Developer & Founder; Jefferson Rohith Fernando — Marketing & BD Strategist",
       "primary_link_type": "x",
       "primary_link_url": "https://x.com/SyncAI_Network"
     },
@@ -8294,6 +8419,7 @@
       "featured": false,
       "editorial_note": "Midgard is currently a pre-alpha/testnet Cardano scaling project, not a mature production network. It is indexed separately from Anastasia Labs because it has its own protocol identity and public surface.",
       "team_entity": "Anastasia Labs",
+      "founder_lead": "Philip DiSarro — Anastasia Labs Founder & CEO / project team lead",
       "related_projects": [
         "anastasia-labs"
       ],
@@ -8310,7 +8436,7 @@
       "docs_url": "https://developers.apexfusion.org/",
       "github_url": null,
       "social_url": "https://x.com/ApexFusion",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/apexfusioncore",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -8346,6 +8472,7 @@
       "featured": false,
       "editorial_note": "Apex Fusion is its own blockchain ecosystem, not a Cardano L2 or Cardano-native dApp. INDEX:80 includes it because its current architecture explicitly uses Ouroboros, references Cardano's UTxO ecosystem and derives parts of its stack from Cardano technology.",
       "team_entity": "Apex Fusion",
+      "founder_lead": "Jerry Fragiskatos — Co-Founder; Ivan Bjelajac — CEO, Apex Fusion Foundation",
       "primary_link_type": "website",
       "primary_link_url": "https://apexfusion.org/"
     },
@@ -8359,7 +8486,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/fluxpointstudio",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/flux-point-studios-inc",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -8395,6 +8522,7 @@
       "featured": false,
       "editorial_note": "Flux Point Studios works across competitive gaming and AI tooling. INDEX:80 includes it for current Cardano-facing development work; individual products and token references remain separate claims to verify at product level.",
       "team_entity": "Flux Point Studios",
+      "founder_lead": "Nathaniel Minton — CEO & Co-Founder; Yohan Girardin — CTO & Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://fluxpointstudios.com/"
     },
@@ -8438,6 +8566,7 @@
       "featured": false,
       "editorial_note": "Powered by Cardano is indexed as ecosystem media rather than as a protocol or financial product. Its stake-pool and Midnight community roles are related operator context.",
       "team_entity": "Powered by Cardano",
+      "founder_lead": "Alfred Moesker — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://poweredbycardano.io/"
     },
@@ -8482,6 +8611,7 @@
       "featured": false,
       "editorial_note": "Poki is a portfolio-tracking application rather than a custody wallet. App-store availability and feature coverage can change and should be checked at future reviews.",
       "team_entity": "Poki Portfolio",
+      "founder_lead": "Sean Davies — Founder (historical; deceased); current team continues Poki V2",
       "primary_link_type": "website",
       "primary_link_url": "https://getpoki.com/"
     },
@@ -8495,7 +8625,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/clarity_dao",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/clarityprotocol",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -8530,6 +8660,7 @@
       "featured": false,
       "editorial_note": "Clarity provides governance infrastructure for Cardano communities and is listed in Cardano's current governance-tools directory. The account's dRep activity is related governance participation, not a separate project identity.",
       "team_entity": "Clarity Protocol",
+      "founder_lead": "Logan Panchot — Co-Founder; Justin Schreiner — Co-Founder; Matt Laux — Engineer; Tomasz Maciosowski — Plutus Lead",
       "primary_link_type": "website",
       "primary_link_url": "https://www.clarity.community/"
     },
@@ -8543,7 +8674,7 @@
       "docs_url": null,
       "github_url": "https://github.com/index80/site",
       "social_url": "https://x.com/index80web",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/index80",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -8579,7 +8710,7 @@
       "featured": false,
       "editorial_note": "INDEX:80 is an open-source, independently maintained directory and structured dataset for the active Cardano ecosystem. It connects evidence across project websites, X, LinkedIn, GitHub, Catalyst and on-chain sources. Inclusion is based on activity and evidence, not payment.",
       "team_entity": "Sharedculture",
-      "founder_lead": "Sharedculture",
+      "founder_lead": "Adam Winstanley / @Sharedculture — Founder & Editor",
       "primary_link_type": "website",
       "primary_link_url": "https://index80.com"
     },
@@ -8628,6 +8759,7 @@
       "editorial_note": "The Cardano oracle integration has public repository and mainnet/closeout evidence. INDEX:80 keeps the record at REVIEW while Catalyst status wording is reconciled.",
       "treasury_funding_value_ada": 94500,
       "team_entity": "DIA",
+      "founder_lead": "Samuel Brack — Co-Founder; Michael Weber — Co-Founder; Paul Claudius — Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.diadata.org/"
     },
@@ -8676,6 +8808,7 @@
       "editorial_note": "Paima Engine is a multichain product rather than a Cardano-only tool. INDEX:80 includes it because current first-party documentation supports Cardano integration.",
       "treasury_funding_value_ada": 720000,
       "team_entity": "Paima Studios",
+      "founder_lead": "Sebastien Guillemot — Director / Co-Founder; Robert Kornacki — Director / Co-Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.paimastudios.com/"
     },
@@ -8720,6 +8853,7 @@
       "editorial_note": "Blaze is indexed separately from Butane because it is a distinct Cardano developer SDK. Funding and maintenance status remain subject to the underlying Catalyst records.",
       "treasury_funding_value_ada": 260000,
       "team_entity": "Butane Protocol",
+      "founder_lead": "Micah Kendall — Butane Protocol Founder / Blaze team lead",
       "related_projects": [
         "butane"
       ],
@@ -8763,6 +8897,7 @@
       "featured": false,
       "editorial_note": "The library and releases are public; the exact Catalyst proposal reference and current maintainer identity remain part of the REVIEW pass.",
       "treasury_funding_value_ada": 200000,
+      "founder_lead": "Edoardo Salvioni / Zhaata — Creator / Maintainer",
       "primary_link_type": "github",
       "primary_link_url": "https://github.com/Salvionied/apollo"
     },
@@ -8776,7 +8911,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/Cardanians_io",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/cardanians-io",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -8809,6 +8944,7 @@
       ],
       "featured": false,
       "team_entity": "Cardanians",
+      "founder_lead": "Lukáš Bárta — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://cardanians.io/"
     },
@@ -8822,7 +8958,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/totofinance",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/totofinance",
       "marketplace_url": "https://app.totofinance.co/",
       "policy_id": null,
       "discord_url": null,
@@ -8855,6 +8991,7 @@
       "featured": false,
       "editorial_note": "Toto Finance is not presented as Cardano-only; INDEX:80 includes it for its current Cardano-facing tokenized-commodities work.",
       "team_entity": "Toto Finance",
+      "founder_lead": "Monty Metzger — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://totofinance.co/"
     },
@@ -8868,7 +9005,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/adaswapapp",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/adaswap",
       "marketplace_url": "https://dex.adaswap.com/",
       "policy_id": null,
       "discord_url": null,
@@ -8901,6 +9038,7 @@
       ],
       "featured": false,
       "team_entity": "AdaSwap",
+      "founder_lead": "Itai Levi — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.adaswap.com/"
     },
@@ -8914,7 +9052,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/realfi_co",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/real-fi",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -8948,6 +9086,7 @@
       "featured": false,
       "editorial_note": "INDEX:80 is retaining REVIEW while current launch status is reconciled; the record does not treat a previously announced launch date as proof of completed launch.",
       "team_entity": "RealFi",
+      "founder_lead": "Clay — Head of Product; Liam Furman — Data Lead; Rob Spitz — Marketing; Seny — Go-to-Market",
       "primary_link_type": "website",
       "primary_link_url": "https://realfi.co/"
     },
@@ -8961,7 +9100,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/CardanoFeed",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/cardanofeed",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -8993,6 +9132,7 @@
       ],
       "featured": false,
       "team_entity": "Cardano Feed",
+      "founder_lead": "Otávio Lima — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://cardanofeed.com/"
     },
@@ -9006,7 +9146,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/LatamCardano",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/latam-cardano",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -9039,6 +9179,7 @@
       ],
       "featured": false,
       "team_entity": "LATAM Cardano Community",
+      "founder_lead": "Lucas Macchiavelli — Co-Founder; Alex Pestchanker — Co-Founder; Jose Miguel de Gamboa — Core Team; Ezequiel Marclé Montenegro — Core Team; Otávio Lima — Core Team; Jaime Andrés Posada Castro — Core Team",
       "primary_link_type": "website",
       "primary_link_url": "https://linktr.ee/latamcardano"
     },
@@ -9082,6 +9223,7 @@
       "featured": false,
       "editorial_note": "Reserve, regulatory and asset-backing statements are issuer claims and should be read with the project's own legal and disclosure material.",
       "team_entity": "The Mint",
+      "founder_lead": "Dag Tore Aam — Co-Founder & CEO; Tord Eide — Co-Founder & Chairman",
       "primary_link_type": "website",
       "primary_link_url": "https://www.the-mint.com/"
     },
@@ -9178,7 +9320,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/SlashWeb3",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/slash-vision-labs",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -9211,6 +9353,7 @@
       "featured": false,
       "editorial_note": "Current Cardano relevance remains under editorial review. INDEX:80 is therefore keeping this record at REVIEW rather than presenting it as verified Cardano-native infrastructure.",
       "team_entity": "Slash Vision Labs",
+      "founder_lead": "Shinsuke Sato — Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://slash.vision/"
     },
@@ -9259,6 +9402,7 @@
       ],
       "featured": false,
       "team_entity": "Lantr",
+      "founder_lead": "Alexander Nemish — Founder & CTO; Oleksii Khodakivskyi — Co-Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://lantr.io/"
     },
@@ -9306,6 +9450,7 @@
       ],
       "featured": false,
       "team_entity": "Eryx",
+      "founder_lead": "Surya Gandikota — Founder & Developer",
       "primary_link_type": "website",
       "primary_link_url": "https://eryx.co/"
     },
@@ -9319,7 +9464,7 @@
       "docs_url": "https://docs.bodegacardano.org/",
       "github_url": null,
       "social_url": "https://x.com/BodegaCardano",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/bodega-market",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -9351,6 +9496,7 @@
       "featured": false,
       "editorial_note": "INDEX:80 lists the project descriptively and keeps it at REVIEW pending the private candidate check.",
       "team_entity": "Bodega Market",
+      "founder_lead": "Monroe — CEO; Jougan — Lead Developer; Shan Yu Zhang — Technical Advisor / Strike Founder",
       "primary_link_type": "website",
       "primary_link_url": "https://www.bodegamarket.xyz/"
     },
@@ -9380,7 +9526,8 @@
         "bridge",
         "usdc",
         "developer-tool",
-        "catalyst-pilot-2026"
+        "catalyst-pilot-2026",
+        "infrastructure"
       ],
       "sources": [
         {
@@ -9399,6 +9546,7 @@
       "featured": false,
       "editorial_note": "VIA Labs provides cross-chain messaging infrastructure. Catalyst selected its AnyToAny proposal to simplify routes between Cardano and other networks, including exchange-held USDC into Cardano tokens.",
       "team_entity": "VIA Labs",
+      "founder_lead": "Robert “Cletus” Pilat — CEO / Co-Founder; Andrea “Druuu” Verri — CTO; Jake Salthouse — CBO; Brad “Bert” Simon — Engineer",
       "primary_link_type": "website",
       "primary_link_url": "https://vialabs.io/"
     },
@@ -9498,6 +9646,7 @@
       "editorial_note": "Nucast's current product suite spans digital IP, media and identity tooling. Catalyst selected its nuhuman Pilot proposal to use verifiable identities for processing robots and shrimp batches in export traceability.",
       "treasury_funding_value_ada": 270000,
       "team_entity": "Nucast",
+      "founder_lead": "Sricharan Ganta — Founder & CEO; Sam Jeffrey — Tech Lead; Fayaz Mohamed — Lead Developer",
       "primary_link_type": "website",
       "primary_link_url": "https://www.nucast.io/"
     },
@@ -9547,6 +9696,7 @@
       "featured": false,
       "editorial_note": "PagFinance already operates crypto-to-fiat PIX and boleto payments in Brazil. Catalyst selected its Pilot proposal to add conversion between ADA or USDCx and Brazilian reais over PIX, with tools for businesses.",
       "team_entity": "PagFinance",
+      "founder_lead": "Andre Straube — Founder & CEO",
       "primary_link_type": "website",
       "primary_link_url": "https://pag.finance/en"
     },
@@ -9596,6 +9746,7 @@
       "featured": false,
       "editorial_note": "AdaLink connects Cardano projects with creators through performance-based campaigns, using on-chain activity to verify results and reward creators in ADA.",
       "team_entity": "AdaLink",
+      "founder_lead": "Natalia Rosa — Project Lead; Gisela Rosa / Arcella — Project Lead & Community Manager",
       "primary_link_type": "website",
       "primary_link_url": "https://www.adalink.io/"
     },
@@ -9626,7 +9777,8 @@
         "research",
         "smart-contracts",
         "dyor",
-        "catalyst"
+        "catalyst",
+        "infrastructure"
       ],
       "sources": [
         {
@@ -9645,6 +9797,7 @@
       "featured": false,
       "editorial_note": "SCAT DAO describes a DAO-funded model for smart-contract auditing and maintains related Cardano research and due-diligence tooling, including DYOR Tool.",
       "team_entity": "Smart Contract Audit Token DAO LLC",
+      "founder_lead": "Eric Helms — Founder; Juan C Rey — Development; Jed “Bronson” Horning — Head of Marketing",
       "primary_link_type": "website",
       "primary_link_url": "https://www.scatdao.com/"
     },
@@ -9745,8 +9898,97 @@
       "featured": false,
       "editorial_note": "USDM is a Cardano-native dollar-redeemable digital asset issued by Moneta Digital LLC for payments, settlement and DeFi use on Cardano.",
       "team_entity": "Moneta Digital LLC",
+      "founder_lead": "Matt Plomin — Founder / founding visionary (1980–2024); Jillian Plomin — CEO, Moneta Digital",
       "primary_link_type": "website",
       "primary_link_url": "https://moneta.global/"
+    },
+    {
+      "slug": "cardano-over-coffee",
+      "name": "Cardano Over Coffee",
+      "category": "media",
+      "public_family": "Culture & Creators",
+      "summary": "Cardano media and community platform hosting interviews, Spaces and conversations with builders, projects and contributors across the ecosystem.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/coc_space",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "media",
+        "podcast",
+        "spaces",
+        "interviews",
+        "community",
+        "education"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://x.com/coc_space"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Cardano Over Coffee is a community media platform focused on conversations across the Cardano ecosystem. Through X Spaces, interviews and related content, it highlights projects, builders, governance topics and community activity, helping surface voices and developments from across the network. INDEX:80 lists it as a media/community project rather than as an individual person.",
+      "team_entity": "Cardano Over Coffee",
+      "founder_lead": "James Meidinger / Blockjock — Co-host",
+      "related_projects": [
+        "epoch-pool"
+      ],
+      "primary_link_type": "x",
+      "primary_link_url": "https://x.com/coc_space"
+    },
+    {
+      "slug": "drep-council",
+      "name": "DRep Council",
+      "category": "governance",
+      "public_family": "Governance & Identity",
+      "summary": "Open Cardano governance coordination platform where DReps can join, debate, review proposals and participate in on-chain voting.",
+      "official_url": "https://drepcouncil.org/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/DRepCouncil",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "governance",
+        "drep",
+        "voting",
+        "proposal-review",
+        "community",
+        "on-chain-governance"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://drepcouncil.org/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/DRepCouncil"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "DRep Council is an open Cardano governance coordination platform for DReps, with public participation around proposal discussion, review and on-chain voting.",
+      "team_entity": "DRep Council",
+      "primary_link_type": "website",
+      "primary_link_url": "https://drepcouncil.org/"
     }
   ]
 }

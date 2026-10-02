@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "description": "Functions only for the submission endpoint",
+  "include": [
+    "/api/submit"
+  ],
+  "exclude": []
+}
