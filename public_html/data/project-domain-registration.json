@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-25T13:25:35.865Z",
+  "generated_at": "2026-10-02T17:31:52.467Z",
   "source": "IANA RDAP bootstrap + authoritative registry RDAP registration event",
   "note": "Domain registration is evidence of web-domain age, not necessarily the project founding date.",
-  "count": 208,
+  "count": 218,
   "records": {
     "wojaks": {
       "status": "no_current_official_domain",
@@ -305,7 +305,7 @@
       "domain": "docs.gomaestro.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.gomaestro.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-25T13:25:34.568Z"
+      "checked_at": "2026-10-02T17:31:50.945Z"
     },
     "txpipe": {
       "status": "no_rdap_service",
@@ -380,14 +380,14 @@
       "domain": "docs.cardano.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.cardano.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-25T13:25:34.766Z"
+      "checked_at": "2026-10-02T17:31:51.166Z"
     },
     "plutus": {
       "status": "fetch_error",
       "domain": "docs.cardano.org",
       "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/docs.cardano.org",
       "error": "HTTP 400",
-      "checked_at": "2026-09-25T13:25:34.991Z"
+      "checked_at": "2026-10-02T17:31:51.390Z"
     },
     "marlowe": {
       "status": "no_rdap_service",
@@ -458,7 +458,7 @@
       "domain": "vault.adatokenvault.com",
       "rdap_url": "https://rdap.verisign.com/com/v1/domain/vault.adatokenvault.com",
       "error": "HTTP 404",
-      "checked_at": "2026-09-25T13:25:35.163Z"
+      "checked_at": "2026-10-02T17:31:51.645Z"
     },
     "farmbot": {
       "status": "ok",
@@ -701,7 +701,7 @@
       "domain": "server-tools.grahamsnumberplus1.com",
       "rdap_url": "https://rdap.verisign.com/com/v1/domain/server-tools.grahamsnumberplus1.com",
       "error": "HTTP 404",
-      "checked_at": "2026-09-25T13:25:35.299Z"
+      "checked_at": "2026-10-02T17:31:51.816Z"
     },
     "deadpxlz": {
       "status": "ok",
@@ -1068,7 +1068,7 @@
       "domain": "djed.artifi.finance",
       "rdap_url": "https://rdap.identitydigital.services/rdap/domain/djed.artifi.finance",
       "error": "HTTP 400",
-      "checked_at": "2026-09-25T13:25:35.570Z"
+      "checked_at": "2026-10-02T17:31:52.096Z"
     },
     "plastiks": {
       "status": "no_rdap_service",
@@ -1231,7 +1231,7 @@
       "domain": "blaze.butane.dev",
       "rdap_url": "https://pubapi.registry.google/rdap/domain/blaze.butane.dev",
       "error": "HTTP 400",
-      "checked_at": "2026-09-25T13:25:35.744Z"
+      "checked_at": "2026-10-02T17:31:52.346Z"
     },
     "apollo-cardano": {
       "status": "no_current_official_domain",
@@ -1252,14 +1252,6 @@
       "registration_timestamp": "2020-08-18T00:11:05Z",
       "rdap_url": "https://rdap.verisign.com/com/v1/domain/adaswap.com",
       "checked_at": "2026-09-23T13:51:26.571Z"
-    },
-    "bodega-market": {
-      "status": "ok",
-      "domain": "bodegamarket.xyz",
-      "registration_date": "2024-09-17",
-      "registration_timestamp": "2024-09-17T21:03:26.0Z",
-      "rdap_url": "https://rdap.centralnic.com/xyz/domain/bodegamarket.xyz",
-      "checked_at": "2026-09-23T13:51:27.318Z"
     },
     "realfi": {
       "status": "no_rdap_service",
@@ -1312,6 +1304,74 @@
     "eryx": {
       "status": "no_rdap_service",
       "domain": "eryx.co"
+    },
+    "bodega-market": {
+      "status": "ok",
+      "domain": "bodegamarket.xyz",
+      "registration_date": "2024-09-17",
+      "registration_timestamp": "2024-09-17T21:03:26.0Z",
+      "rdap_url": "https://rdap.centralnic.com/xyz/domain/bodegamarket.xyz",
+      "checked_at": "2026-09-23T13:51:27.318Z"
+    },
+    "via-labs": {
+      "status": "no_rdap_service",
+      "domain": "vialabs.io"
+    },
+    "dano-finance": {
+      "status": "ok",
+      "domain": "dano.finance",
+      "registration_date": "2026-03-17",
+      "registration_timestamp": "2026-03-17T01:50:52.835Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/dano.finance",
+      "checked_at": "2026-10-02T16:02:08.297Z"
+    },
+    "nucast": {
+      "status": "no_rdap_service",
+      "domain": "nucast.io"
+    },
+    "pagfinance": {
+      "status": "ok",
+      "domain": "pag.finance",
+      "registration_date": "2025-06-01",
+      "registration_timestamp": "2025-06-01T21:10:08.876Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/pag.finance",
+      "checked_at": "2026-10-02T16:02:08.512Z"
+    },
+    "adalink": {
+      "status": "no_rdap_service",
+      "domain": "adalink.io"
+    },
+    "scatdao": {
+      "status": "ok",
+      "domain": "scatdao.com",
+      "registration_date": "2021-08-09",
+      "registration_timestamp": "2021-08-09T21:24:19Z",
+      "rdap_url": "https://rdap.verisign.com/com/v1/domain/scatdao.com",
+      "checked_at": "2026-10-02T16:02:08.708Z"
+    },
+    "vipercoin": {
+      "status": "no_rdap_service",
+      "domain": "vipercoin.io"
+    },
+    "usdm": {
+      "status": "ok",
+      "domain": "moneta.global",
+      "registration_date": "2024-04-26",
+      "registration_timestamp": "2024-04-26T20:47:03.772Z",
+      "rdap_url": "https://rdap.identitydigital.services/rdap/domain/moneta.global",
+      "checked_at": "2026-10-02T16:02:08.924Z"
+    },
+    "cardano-over-coffee": {
+      "status": "no_current_official_domain",
+      "domain": null
+    },
+    "drep-council": {
+      "status": "ok",
+      "domain": "drepcouncil.org",
+      "registration_date": "2026-08-18",
+      "registration_timestamp": "2026-08-18T09:43:57.442Z",
+      "rdap_url": "https://rdap.publicinterestregistry.org/rdap/domain/drepcouncil.org",
+      "checked_at": "2026-10-02T16:02:09.153Z"
     }
   }
 }
