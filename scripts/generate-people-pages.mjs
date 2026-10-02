@@ -130,10 +130,8 @@ function governanceCards(p) {
   if (hasVerifiedSpo(p)) {
     const ids = (p.pool_ids || []).map((id) => `<code>${esc(id)}</code>`).join(' ');
     cards.push(factPanel('STAKE POOL', `<dl>
-        ${p.pool_ticker ? `<dt>Ticker</dt><dd>${esc(p.pool_ticker)}</dd>` : ''}
-        <dt>Status</dt><dd>${esc(p.spo_status)}</dd>
-        ${ids ? `<dt>${(p.pool_ids || []).length > 1 ? 'Pool IDs' : 'Pool ID'}</dt><dd>${ids}</dd>` : ''}
-      </dl>`, ' people-fact-gov'));
+${p.pool_ticker ? `        <dt>Ticker</dt><dd>${esc(p.pool_ticker)}</dd>\n` : ''}        <dt>Status</dt><dd>${esc(p.spo_status)}</dd>
+${ids ? `        <dt>${(p.pool_ids || []).length > 1 ? 'Pool IDs' : 'Pool ID'}</dt><dd>${ids}</dd>\n` : ''}      </dl>`, ' people-fact-gov'));
   }
   return cards.join('\n      ');
 }
@@ -275,8 +273,7 @@ ${renderNavLinks('/people/', '      ')}
     </section>
 
     <section class="panel people-summary" aria-label="Summary">
-      ${p.bio ? `<p class="people-bio">${esc(p.bio)}</p>` : ''}
-      <p class="people-meta">${meta.map(esc).join(' · ')}</p>
+${p.bio ? `      <p class="people-bio">${esc(p.bio)}</p>\n` : ''}      <p class="people-meta">${meta.map(esc).join(' · ')}</p>
     </section>
 ${facts ? `
     <section class="people-facts" aria-label="Roles, projects and governance">
