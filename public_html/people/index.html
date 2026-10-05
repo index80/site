@@ -1215,7 +1215,10 @@
       <p>Profiles are compiled from public sources and are being opened for community and subject review. Some profiles have not yet been confirmed by the person listed. <a href="/about/methodology/#people-corrections">Review your profile or suggest a correction →</a></p>
     </section>
 
-    <section class="panel hero-panel section-hero compact-hero people-hero" aria-labelledby="people-hero-title">
+    <section class="panel os-window people-hero-window" data-window="people-hero" aria-labelledby="people-hero-title">
+      <div class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="people-hero-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title">INDEX:80 · /PEOPLE</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide the introduction</span></button></div>
+      <div class="os-window-body" id="people-hero-body">
+    <div class="hero-panel section-hero compact-hero people-hero">
       <div class="hero-copy">
         <div class="eyebrow">INDEX:80 PEOPLE</div>
         <h1 id="people-hero-title">WHO BUILDS CARDANO?<small>/PEOPLE</small></h1>
@@ -1226,19 +1229,19 @@
         <p class="people-hero-privacy">To object to being listed or to exercise your data rights, see the <a href="/privacy/">privacy policy</a>.</p>
         <div class="actions">
           <a class="button" href="#people-directory">Browse people ↓</a>
-          <a class="button" href="/submit/">Suggest a correction</a>
+          <a class="button" href="/about/methodology/#people-corrections">Suggest a correction</a>
         </div>
       </div>
       <div class="hero-art people-hero-art">
         <img src="/assets/people/people-hero.jpg" alt="Illustration of the INDEX:80 astronaut and a black cat sitting on stone steps in a lantern-lit plaza at sunset, watching a crowd of people talking, building and making music together beside a glowing Cardano-blue globe." width="2048" height="682" fetchpriority="high" decoding="async">
       </div>
+    </div>
+      </div>
     </section>
 
-    <section class="panel directory" id="people-directory" data-people-directory data-source="/data/people.json" data-icons="/assets/icons/icons.svg" aria-labelledby="people-directory-title">
-      <div class="panel-title">
-        <h2 id="people-directory-title" style="font-size:inherit;margin:0;">PEOPLE DIRECTORY</h2>
-        <span id="people-directory-count" class="directory-count">155 RECORDS</span>
-      </div>
+    <section class="panel os-window directory" id="people-directory" data-window="people-directory" data-people-directory data-source="/data/people.json" data-icons="/assets/icons/icons.svg" aria-labelledby="people-directory-title">
+      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="people-directory-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="people-directory-title">PEOPLE DIRECTORY</span> <span id="people-directory-count" class="directory-count">155 RECORDS</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide the directory</span></button></h2>
+      <div class="os-window-body" id="people-directory-body">
       <div class="directory-toolbar">
         <div id="people-category-bar" class="category-bar" role="tablist" aria-label="Filter people by category"></div>
       </div>
@@ -1250,7 +1253,7 @@
         <li class="dir-row">
           <span class="dir-index">01</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/adam-dean/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/adam-dean/">Adam Dean</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/adam-dean/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/adam-dean/">Adam Dean</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Builder, Developer, Governance · Cardano CIPs, cardano-wallet</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/adamKDean" target="_blank" rel="noopener noreferrer" aria-label="Open Adam Dean public profile in a new tab">↗</a>
@@ -1258,7 +1261,7 @@
         <li class="dir-row">
           <span class="dir-index">02</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/adam-rusch/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/adam-rusch/">Adam Rusch</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/adam-rusch/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/adam-rusch/">Adam Rusch</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Governance, Intersect, Board Member, Elected 2026 · Intersect Board</span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/AdamRusch" target="_blank" rel="noopener noreferrer" aria-label="Open Adam Rusch public profile in a new tab">↗</a>
@@ -1266,39 +1269,39 @@
         <li class="dir-row">
           <span class="dir-index">03</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/adam-winstanley-sharedculture/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/adam-winstanley-sharedculture/">Adam Winstanley / Sharedculture</a></span>
-          <span class="dir-desc">Founder, Editor, Research, Data, Open Source · INDEX:80</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/adam-winstanley-sharedculture/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/adam-winstanley-sharedculture/">Adam Winstanley / Sharedculture</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Editor, Research, Data, Open Source · <a class="dir-project-link" href="/projects/index80/">INDEX:80</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/sharedculture" target="_blank" rel="noopener noreferrer" aria-label="Open Adam Winstanley / Sharedculture public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">04</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-nft"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/adrian-fanatiu/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/adrian-fanatiu/">Adrian Fanatiu</a></span>
-          <span class="dir-desc">Founder, Creator, NFT, Gaming · DEADPXLZ</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/adrian-fanatiu/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/adrian-fanatiu/">Adrian Fanatiu</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Creator, NFT, Gaming · <a class="dir-project-link" href="/projects/deadpxlz/">DEADPXLZ</a></span>
           <span class="dir-cat">ARTS &amp; CULTURE</span>
           <a class="dir-link" href="https://www.linkedin.com/in/adrian-fanatiu" target="_blank" rel="noopener noreferrer" aria-label="Open Adrian Fanatiu public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">05</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-nft"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/aeoniumsky/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/aeoniumsky/">aeoniumsky</a></span>
-          <span class="dir-desc">Artist, Creator, NFT · aeoniumsky</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/aeoniumsky/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/aeoniumsky/">aeoniumsky</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Artist, Creator, NFT · <a class="dir-project-link" href="/projects/aeoniumsky/">aeoniumsky</a></span>
           <span class="dir-cat">ARTS &amp; CULTURE</span>
           <a class="dir-link" href="https://x.com/aeoniumsky" target="_blank" rel="noopener noreferrer" aria-label="Open aeoniumsky public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">06</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/alex-pestchanker/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/alex-pestchanker/">Alex Pestchanker</a></span>
-          <span class="dir-desc">Co-founder, Community, Governance, Intersect · LATAM Cardano Community, Token Allies, Intersect</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/alex-pestchanker/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/alex-pestchanker/">Alex Pestchanker</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, Community, Governance, Intersect · <a class="dir-project-link" href="/projects/latam-cardano-community/">LATAM Cardano Community</a>, Token Allies, <a class="dir-project-link" href="/projects/intersect/">Intersect</a></span>
           <span class="dir-cat">COMMUNITY</span>
           <a class="dir-link" href="https://x.com/alexchain79" target="_blank" rel="noopener noreferrer" aria-label="Open Alex Pestchanker public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">07</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/alexander-nadem-angry-crypto-show/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/alexander-nadem-angry-crypto-show/">Alexander Nadem / Angry Crypto Show</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/alexander-nadem-angry-crypto-show/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/alexander-nadem-angry-crypto-show/">Alexander Nadem / Angry Crypto Show</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, Ambassador, Creator, Media · Angry Crypto Show</span>
           <span class="dir-cat">CREATORS</span>
           <a class="dir-link" href="https://x.com/angrycryptoshow" target="_blank" rel="noopener noreferrer" aria-label="Open Alexander Nadem / Angry Crypto Show public profile in a new tab">↗</a>
@@ -1306,16 +1309,16 @@
         <li class="dir-row">
           <span class="dir-index">08</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/alfred-moesker/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/alfred-moesker/">Alfred Moesker</a></span>
-          <span class="dir-desc">Founder, CEO, Creator, Media · Powered by Cardano</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/alfred-moesker/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/alfred-moesker/">Alfred Moesker</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, Creator, Media · <a class="dir-project-link" href="/projects/powered-by-cardano/">Powered by Cardano</a></span>
           <span class="dir-cat">CREATORS</span>
           <a class="dir-link" href="https://www.linkedin.com/in/alfred-moesker-71159320" target="_blank" rel="noopener noreferrer" aria-label="Open Alfred Moesker public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">09</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/andrew-westberg/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/andrew-westberg/">Andrew Westberg</a></span>
-          <span class="dir-desc">Developer, Infrastructure, Creator · W3i, USDM, CNCLI, DripDropz</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/andrew-westberg/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/andrew-westberg/">Andrew Westberg</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Developer, Infrastructure, Creator · W3i, <a class="dir-project-link" href="/projects/usdm/">USDM</a>, CNCLI, <a class="dir-project-link" href="/projects/dripdropz/">DripDropz</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/amw7" target="_blank" rel="noopener noreferrer" aria-label="Open Andrew Westberg public profile in a new tab">↗</a>
         </li>
@@ -1323,7 +1326,7 @@
           <span class="dir-index">10</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/ant-anthony-bloom/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ant-anthony-bloom/">Ant / Anthony_Bloom_</a></span>
-          <span class="dir-desc">SPO, Community, Builder · Bloom Pool, DripDropz, Se7en Labs</span>
+          <span class="dir-desc">SPO, Community, Builder · Bloom Pool, <a class="dir-project-link" href="/projects/dripdropz/">DripDropz</a>, Se7en Labs</span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/Anthony_Bloom_" target="_blank" rel="noopener noreferrer" aria-label="Open Ant / Anthony_Bloom_ public profile in a new tab">↗</a>
         </li>
@@ -1346,15 +1349,15 @@
         <li class="dir-row">
           <span class="dir-index">13</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/apex/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/apex/">Apex</a></span>
-          <span class="dir-desc">Founder, CEO, Infrastructure, Catalyst, DeFi · Titans, Atlas</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/apex/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/apex/">Apex</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, Infrastructure, Catalyst, DeFi · <a class="dir-project-link" href="/projects/titans/">Titans</a>, <a class="dir-project-link" href="/projects/atlas/">Atlas</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/Apex_333" target="_blank" rel="noopener noreferrer" aria-label="Open Apex public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">14</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/army-of-spies/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/army-of-spies/">Army of Spies</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/army-of-spies/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/army-of-spies/">Army of Spies</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/ArmyofSpies" target="_blank" rel="noopener noreferrer" aria-label="Open Army of Spies public profile in a new tab">↗</a>
@@ -1363,38 +1366,38 @@
           <span class="dir-index">15</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/ashish-prajapati/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ashish-prajapati/">Ashish Prajapati</a></span>
-          <span class="dir-desc">Co-founder, Developer, Infrastructure · Strica, CardanoScan, Typhon Wallet</span>
+          <span class="dir-desc">Co-founder, Developer, Infrastructure · <a class="dir-project-link" href="/projects/strica/">Strica</a>, <a class="dir-project-link" href="/projects/cardanoscan/">CardanoScan</a>, <a class="dir-project-link" href="/projects/typhon-wallet/">Typhon Wallet</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/ashisherc" target="_blank" rel="noopener noreferrer" aria-label="Open Ashish Prajapati public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">16</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ben-illian/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ben-illian/">Ben Illian</a></span>
-          <span class="dir-desc">Co-founder · Book.io, Stuff.io</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ben-illian/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ben-illian/">Ben Illian</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder · <a class="dir-project-link" href="/projects/book-io/">Book.io</a>, <a class="dir-project-link" href="/projects/stuff-io/">Stuff.io</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/OneBillian" target="_blank" rel="noopener noreferrer" aria-label="Open Ben Illian public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">17</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/brock/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/brock/">$brock</a><span class="dir-badge" title="Verified active DRep">DREP</span><span class="dir-badge" title="Verified active stake pool operator">SPO</span></span>
-          <span class="dir-desc">DRep, SPO, Mithril, Infrastructure · BROCK Pool, BROCK Bot, OUROS.club, Mithril</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/brock/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/brock/">$brock</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">DRep, SPO, Mithril, Infrastructure · BROCK Pool, BROCK Bot, OUROS.club, <a class="dir-project-link" href="/projects/mithril/">Mithril</a></span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/BrockCardano" target="_blank" rel="noopener noreferrer" aria-label="Open $brock public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">18</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/bryan-colligan/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/bryan-colligan/">Bryan Colligan</a></span>
-          <span class="dir-desc">Founder, CEO · AlphaGrowth, Cardano PRIME</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/bryan-colligan/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/bryan-colligan/">Bryan Colligan</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO · <a class="dir-project-link" href="/projects/alphagrowth/">AlphaGrowth</a>, <a class="dir-project-link" href="/projects/cardano-prime/">Cardano PRIME</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/bryancolligan" target="_blank" rel="noopener noreferrer" aria-label="Open Bryan Colligan public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">19</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/cardano-with-paul/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/cardano-with-paul/">Cardano with Paul</a><span class="dir-badge" title="Verified active stake pool operator">SPO</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/cardano-with-paul/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/cardano-with-paul/">Cardano with Paul</a><span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Educator, Creator, Media, SPO · Cardano With Paul, Block//45</span>
           <span class="dir-cat">CREATORS</span>
           <a class="dir-link" href="https://x.com/cwpaulm" target="_blank" rel="noopener noreferrer" aria-label="Open Cardano with Paul public profile in a new tab">↗</a>
@@ -1402,7 +1405,7 @@
         <li class="dir-row">
           <span class="dir-index">20</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/cardano-yoda-jaromir-tesar/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/cardano-yoda-jaromir-tesar/">Cardano YODA / Jaromir Tesar</a><span class="dir-badge" title="Verified active DRep">DREP</span><span class="dir-badge" title="Verified active stake pool operator">SPO</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/cardano-yoda-jaromir-tesar/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/cardano-yoda-jaromir-tesar/">Cardano YODA / Jaromir Tesar</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, SPO, Community · MANDA / Cardano Yoda Pool</span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/JaromirTesar" target="_blank" rel="noopener noreferrer" aria-label="Open Cardano YODA / Jaromir Tesar public profile in a new tab">↗</a>
@@ -1410,7 +1413,7 @@
         <li class="dir-row">
           <span class="dir-index">21</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/cerkoryn/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/cerkoryn/">Cerkoryn</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/cerkoryn/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/cerkoryn/">Cerkoryn</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span></span>
           <span class="dir-desc">DRep, Governance · Cardano governance</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/Cerkoryn" target="_blank" rel="noopener noreferrer" aria-label="Open Cerkoryn public profile in a new tab">↗</a>
@@ -1418,31 +1421,31 @@
         <li class="dir-row">
           <span class="dir-index">22</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/charles-hoskinson/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/charles-hoskinson/">Charles Hoskinson</a></span>
-          <span class="dir-desc">Founder, Co-founder · Input Output, Cardano</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/charles-hoskinson/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/charles-hoskinson/">Charles Hoskinson</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Co-founder · <a class="dir-project-link" href="/projects/input-output/">Input Output</a>, Cardano</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/IOHK_Charles" target="_blank" rel="noopener noreferrer" aria-label="Open Charles Hoskinson public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">23</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/chris-gianelloni-wolf31o2/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/chris-gianelloni-wolf31o2/">Chris Gianelloni / wolf31o2</a></span>
-          <span class="dir-desc">CEO, Developer, Infrastructure, SPO · Blink Labs, Dingo, Demeter</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/chris-gianelloni-wolf31o2/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/chris-gianelloni-wolf31o2/">Chris Gianelloni / wolf31o2</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">CEO, Developer, Infrastructure, SPO · <a class="dir-project-link" href="/projects/blink-labs/">Blink Labs</a>, Dingo, <a class="dir-project-link" href="/projects/demeter/">Demeter</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/wolf31o2" target="_blank" rel="noopener noreferrer" aria-label="Open Chris Gianelloni / wolf31o2 public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">24</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><span class="dir-thumb dir-thumb-fallback" aria-hidden="true">CM</span><a class="dir-name" href="/people/christina-gianelloni-musikc/">Christina Gianelloni / musikc</a></span>
-          <span class="dir-desc">COO, Community, Developer Infrastructure · Blink Labs, Dingo</span>
+          <span class="dir-person"><span class="dir-thumb dir-thumb-fallback" aria-hidden="true">CM</span><a class="dir-name" href="/people/christina-gianelloni-musikc/">Christina Gianelloni / musikc</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">COO, Community, Developer Infrastructure · <a class="dir-project-link" href="/projects/blink-labs/">Blink Labs</a>, Dingo</span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/InASingleWord" target="_blank" rel="noopener noreferrer" aria-label="Open Christina Gianelloni / musikc public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">25</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-education"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/christina-ovezik/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/christina-ovezik/">Christina Ovezik</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/christina-ovezik/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/christina-ovezik/">Christina Ovezik</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Researcher, Decentralisation, Blockchain · University of Edinburgh Blockchain Technology Laboratory, Edinburgh Decentralisation Index</span>
           <span class="dir-cat">EDUCATION</span>
           <a class="dir-link" href="https://uk.linkedin.com/in/christinaovezik" target="_blank" rel="noopener noreferrer" aria-label="Open Christina Ovezik public profile in a new tab">↗</a>
@@ -1450,8 +1453,8 @@
         <li class="dir-row">
           <span class="dir-index">26</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/christopher-erckert/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/christopher-erckert/">Christopher Erckert</a></span>
-          <span class="dir-desc">Co-founder, CEO · Dotare</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/christopher-erckert/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/christopher-erckert/">Christopher Erckert</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, CEO · <a class="dir-project-link" href="/projects/dotare/">Dotare</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://www.linkedin.com/in/cgerckert" target="_blank" rel="noopener noreferrer" aria-label="Open Christopher Erckert public profile in a new tab">↗</a>
         </li>
@@ -1459,7 +1462,7 @@
           <span class="dir-index">27</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/cody-butz/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/cody-butz/">Cody Butz</a></span>
-          <span class="dir-desc">CTO, Developer, DeFi · Indigo Protocol, 3rd Eye Labs</span>
+          <span class="dir-desc">CTO, Developer, DeFi · <a class="dir-project-link" href="/projects/indigo/">Indigo Protocol</a>, 3rd Eye Labs</span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/codyjbutz" target="_blank" rel="noopener noreferrer" aria-label="Open Cody Butz public profile in a new tab">↗</a>
         </li>
@@ -1474,8 +1477,8 @@
         <li class="dir-row">
           <span class="dir-index">29</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-nft"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/damian/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/damian/">Damian</a></span>
-          <span class="dir-desc">Developer, Artist · CardanoTrees</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/damian/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/damian/">Damian</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Developer, Artist · <a class="dir-project-link" href="/projects/cardanotrees/">CardanoTrees</a></span>
           <span class="dir-cat">ARTS &amp; CULTURE</span>
           <a class="dir-link" href="https://x.com/D_art_tech" target="_blank" rel="noopener noreferrer" aria-label="Open Damian public profile in a new tab">↗</a>
         </li>
@@ -1483,14 +1486,14 @@
           <span class="dir-index">30</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/damon-zwarich/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/damon-zwarich/">Damon Zwarich</a></span>
-          <span class="dir-desc">Co-founder, CMO, Oracle · Charli3</span>
+          <span class="dir-desc">Co-founder, CMO, Oracle · <a class="dir-project-link" href="/projects/charli3/">Charli3</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/CryptoNomadZ" target="_blank" rel="noopener noreferrer" aria-label="Open Damon Zwarich public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">31</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dan-gambardello/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dan-gambardello/">Dan Gambardello</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dan-gambardello/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dan-gambardello/">Dan Gambardello</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Creator, Media · Crypto Capital Venture</span>
           <span class="dir-cat">CREATORS</span>
           <a class="dir-link" href="https://x.com/dangambardello" target="_blank" rel="noopener noreferrer" aria-label="Open Dan Gambardello public profile in a new tab">↗</a>
@@ -1498,24 +1501,24 @@
         <li class="dir-row">
           <span class="dir-index">32</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/daniel-dtonks/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/daniel-dtonks/">Daniel / Dtonks</a></span>
-          <span class="dir-desc">Founder, Creator, Gaming · Keyboard Warriors Internet Cafe</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/daniel-dtonks/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/daniel-dtonks/">Daniel / Dtonks</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Creator, Gaming · <a class="dir-project-link" href="/projects/kwic/">Keyboard Warriors Internet Cafe</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/DTonks5" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel / Dtonks public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">33</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/daniel-friedman/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/daniel-friedman/">Daniel Friedman</a></span>
-          <span class="dir-desc">Founder, Builder · zenGate, Palmyra</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/daniel-friedman/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/daniel-friedman/">Daniel Friedman</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Builder · zenGate, <a class="dir-project-link" href="/projects/palmyra/">Palmyra</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/DanielTetsuyama" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel Friedman public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">34</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/danny-ribar/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/danny-ribar/">Danny Ribar</a></span>
-          <span class="dir-desc">Community, Catalyst · Project Catalyst</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/danny-ribar/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/danny-ribar/">Danny Ribar</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Community, Catalyst · <a class="dir-project-link" href="/projects/project-catalyst/">Project Catalyst</a></span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/dannyribar" target="_blank" rel="noopener noreferrer" aria-label="Open Danny Ribar public profile in a new tab">↗</a>
         </li>
@@ -1530,7 +1533,7 @@
         <li class="dir-row">
           <span class="dir-index">36</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dave-itsdave-ada/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dave-itsdave-ada/">Dave (ItsDave_ADA)</a><span class="dir-badge" title="Verified active DRep">DREP</span><span class="dir-badge" title="Verified active stake pool operator">SPO</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dave-itsdave-ada/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dave-itsdave-ada/">Dave (ItsDave_ADA)</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, SPO, Creator · DAVE Stake Pool, DaveGov / Cardano visualisation tools</span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/ItsDave_ADA" target="_blank" rel="noopener noreferrer" aria-label="Open Dave (ItsDave_ADA) public profile in a new tab">↗</a>
@@ -1538,8 +1541,8 @@
         <li class="dir-row">
           <span class="dir-index">37</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/davide-lucchesi/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/davide-lucchesi/">Davide Lucchesi</a></span>
-          <span class="dir-desc">Founder, Community, Developer · European Cardano Community</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/davide-lucchesi/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/davide-lucchesi/">Davide Lucchesi</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Community, Developer · <a class="dir-project-link" href="/projects/european-cardano-community/">European Cardano Community</a></span>
           <span class="dir-cat">COMMUNITY</span>
           <a class="dir-link" href="https://x.com/studiomalaka" target="_blank" rel="noopener noreferrer" aria-label="Open Davide Lucchesi public profile in a new tab">↗</a>
         </li>
@@ -1547,14 +1550,14 @@
           <span class="dir-index">38</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/derek-vespr/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/derek-vespr/">Derek / VESPR</a></span>
-          <span class="dir-desc">Co-founder, Product, Creator, Wallet · VESPR</span>
+          <span class="dir-desc">Co-founder, Product, Creator, Wallet · <a class="dir-project-link" href="/projects/vespr/">VESPR</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/rokindo_" target="_blank" rel="noopener noreferrer" aria-label="Open Derek / VESPR public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">39</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dori/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dori/">Dori</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dori/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dori/">Dori</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, Engineer, DeFi</span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/dori_coin" target="_blank" rel="noopener noreferrer" aria-label="Open Dori public profile in a new tab">↗</a>
@@ -1562,31 +1565,31 @@
         <li class="dir-row">
           <span class="dir-index">40</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dr-ben-goertzel/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dr-ben-goertzel/">Dr Ben Goertzel</a></span>
-          <span class="dir-desc">Co-founder, AI, Researcher · NuNet, SingularityNET</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dr-ben-goertzel/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dr-ben-goertzel/">Dr Ben Goertzel</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, AI, Researcher · <a class="dir-project-link" href="/projects/nunet/">NuNet</a>, SingularityNET</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/bengoertzel" target="_blank" rel="noopener noreferrer" aria-label="Open Dr Ben Goertzel public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">41</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dr-benjamin-beckmann/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dr-benjamin-beckmann/">Dr Benjamin Beckmann</a></span>
-          <span class="dir-desc">Technology, Researcher, Midnight, Zero knowledge · Midnight, Midnight Foundation</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dr-benjamin-beckmann/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dr-benjamin-beckmann/">Dr Benjamin Beckmann</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Technology, Researcher, Midnight, Zero knowledge · <a class="dir-project-link" href="/projects/midnight/">Midnight</a>, Midnight Foundation</span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/BenB_CogBlx" target="_blank" rel="noopener noreferrer" aria-label="Open Dr Benjamin Beckmann public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">42</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dr-navjit-dhaliwal/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dr-navjit-dhaliwal/">Dr Navjit Dhaliwal</a></span>
-          <span class="dir-desc">Founder, CEO, Infrastructure · Iagon</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dr-navjit-dhaliwal/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dr-navjit-dhaliwal/">Dr Navjit Dhaliwal</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, Infrastructure · <a class="dir-project-link" href="/projects/iagon/">Iagon</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/NaVi_GaT0R" target="_blank" rel="noopener noreferrer" aria-label="Open Dr Navjit Dhaliwal public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">43</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-education"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dr-lars-brunjes/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dr-lars-brunjes/">Dr. Lars Brünjes</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/dr-lars-brunjes/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/dr-lars-brunjes/">Dr. Lars Brünjes</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Education, Author, Developer Education, Haskell · Input Output Group, Mastering Cardano</span>
           <span class="dir-cat">EDUCATION</span>
           <a class="dir-link" href="https://de.linkedin.com/in/dr-lars-br%C3%BCnjes-1640993b" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Lars Brünjes public profile in a new tab">↗</a>
@@ -1594,8 +1597,8 @@
         <li class="dir-row">
           <span class="dir-index">44</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/edan-yago/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/edan-yago/">Edan Yago</a></span>
-          <span class="dir-desc">Founder, Infrastructure · BitcoinOS</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/edan-yago/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/edan-yago/">Edan Yago</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Infrastructure · <a class="dir-project-link" href="/projects/bitcoin-os/">BitcoinOS</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/EdanYago" target="_blank" rel="noopener noreferrer" aria-label="Open Edan Yago public profile in a new tab">↗</a>
         </li>
@@ -1610,32 +1613,32 @@
         <li class="dir-row">
           <span class="dir-index">46</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/fahmi-syed/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/fahmi-syed/">Fahmi Syed</a></span>
-          <span class="dir-desc">President, Midnight, Leadership · Midnight, Midnight Foundation</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/fahmi-syed/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/fahmi-syed/">Fahmi Syed</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">President, Midnight, Leadership · <a class="dir-project-link" href="/projects/midnight/">Midnight</a>, Midnight Foundation</span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/F_ZK_Now" target="_blank" rel="noopener noreferrer" aria-label="Open Fahmi Syed public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">47</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/florian-volery/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/florian-volery/">Florian Volery</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
-          <span class="dir-desc">DRep, Co-founder, DeFi · Liqwid, Cardano governance</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/florian-volery/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/florian-volery/">Florian Volery</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">DRep, Co-founder, DeFi · <a class="dir-project-link" href="/projects/liqwid/">Liqwid</a>, Cardano governance</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/sachs_johnny" target="_blank" rel="noopener noreferrer" aria-label="Open Florian Volery public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">48</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/frederik-gregaard/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/frederik-gregaard/">Frederik Gregaard</a></span>
-          <span class="dir-desc">CEO, Cardano Foundation · Cardano Foundation</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/frederik-gregaard/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/frederik-gregaard/">Frederik Gregaard</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">CEO, Cardano Foundation · <a class="dir-project-link" href="/projects/cardano-foundation/">Cardano Foundation</a></span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/F_Gregaard" target="_blank" rel="noopener noreferrer" aria-label="Open Frederik Gregaard public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">49</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/fredrik-haga/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/fredrik-haga/">Fredrik Haga</a></span>
-          <span class="dir-desc">Co-founder, CEO, Analytics · Dune</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/fredrik-haga/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/fredrik-haga/">Fredrik Haga</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, CEO, Analytics · <a class="dir-project-link" href="/projects/dune/">Dune</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/hagaetc" target="_blank" rel="noopener noreferrer" aria-label="Open Fredrik Haga public profile in a new tab">↗</a>
         </li>
@@ -1643,38 +1646,38 @@
           <span class="dir-index">50</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/gisela-rosa-arcella/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/gisela-rosa-arcella/">Gisela Rosa / Arcella</a></span>
-          <span class="dir-desc">Founder, Co-founder, Ambassador, Midnight · AdaLink</span>
+          <span class="dir-desc">Founder, Co-founder, Ambassador, Midnight · <a class="dir-project-link" href="/projects/adalink/">AdaLink</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/GR_JSAT" target="_blank" rel="noopener noreferrer" aria-label="Open Gisela Rosa / Arcella public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">51</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/goofycrisp/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/goofycrisp/">Goofycrisp</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
-          <span class="dir-desc">DRep, Founder, Community · Snek</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/goofycrisp/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/goofycrisp/">Goofycrisp</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">DRep, Founder, Community · <a class="dir-project-link" href="/projects/snek/">Snek</a></span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/goofy_crisp" target="_blank" rel="noopener noreferrer" aria-label="Open Goofycrisp public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">52</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/hillary-adler/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/hillary-adler/">Hillary Adler</a></span>
-          <span class="dir-desc">Co-founder, Infrastructure · BitcoinOS</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/hillary-adler/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/hillary-adler/">Hillary Adler</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, Infrastructure · <a class="dir-project-link" href="/projects/bitcoin-os/">BitcoinOS</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/HillaryAdler" target="_blank" rel="noopener noreferrer" aria-label="Open Hillary Adler public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">53</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/hinson-wong/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/hinson-wong/">Hinson Wong</a></span>
-          <span class="dir-desc">Founder, CEO, Developer, Engineer, DeFi · SIDAN Lab, DeltaDeFi</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/hinson-wong/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/hinson-wong/">Hinson Wong</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, Developer, Engineer, DeFi · <a class="dir-project-link" href="/projects/sidan-lab/">SIDAN Lab</a>, <a class="dir-project-link" href="/projects/deltadefi/">DeltaDeFi</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/hinsoncode" target="_blank" rel="noopener noreferrer" aria-label="Open Hinson Wong public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">54</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ian-njuguna/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ian-njuguna/">Ian Njuguna</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ian-njuguna/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ian-njuguna/">Ian Njuguna</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Governance, Developer, Community · Cardano governance, Intersect Cardano DevEx Innovation Working Group</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/0xxxIan0" target="_blank" rel="noopener noreferrer" aria-label="Open Ian Njuguna public profile in a new tab">↗</a>
@@ -1682,7 +1685,7 @@
         <li class="dir-row">
           <span class="dir-index">55</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/inputendorsers/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/inputendorsers/">InputEndorsers</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/inputendorsers/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/inputendorsers/">InputEndorsers</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, Governance · Cardano governance</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/InputEndorsers" target="_blank" rel="noopener noreferrer" aria-label="Open InputEndorsers public profile in a new tab">↗</a>
@@ -1691,15 +1694,15 @@
           <span class="dir-index">56</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/ivan-bjelajac/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ivan-bjelajac/">Ivan Bjelajac</a></span>
-          <span class="dir-desc">CEO, Infrastructure · Apex Fusion</span>
+          <span class="dir-desc">CEO, Infrastructure · <a class="dir-project-link" href="/projects/apex-fusion/">Apex Fusion</a></span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/instantfinality" target="_blank" rel="noopener noreferrer" aria-label="Open Ivan Bjelajac public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">57</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jack-briggs/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jack-briggs/">Jack Briggs</a></span>
-          <span class="dir-desc">Governance, Leadership, Intersect · Intersect</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jack-briggs/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jack-briggs/">Jack Briggs</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Governance, Leadership, Intersect · <a class="dir-project-link" href="/projects/intersect/">Intersect</a></span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/JBriggsLondon" target="_blank" rel="noopener noreferrer" aria-label="Open Jack Briggs public profile in a new tab">↗</a>
         </li>
@@ -1715,22 +1718,22 @@
           <span class="dir-index">59</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-education"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/james-dunseith/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/james-dunseith/">James Dunseith</a></span>
-          <span class="dir-desc">Co-founder, Educator, Community · Gimbalabs, Andamio</span>
+          <span class="dir-desc">Co-founder, Educator, Community · <a class="dir-project-link" href="/projects/gimbalabs/">Gimbalabs</a>, <a class="dir-project-link" href="/projects/andamio/">Andamio</a></span>
           <span class="dir-cat">EDUCATION</span>
           <a class="dir-link" href="https://x.com/jamesdunseith" target="_blank" rel="noopener noreferrer" aria-label="Open James Dunseith public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">60</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/james-meidinger-blockjock/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/james-meidinger-blockjock/">James Meidinger / Blockjock</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
-          <span class="dir-desc">DRep, Governance, Media, Intersect · W3i / USDM, Intersect Cardano Product Committee, Cardano Over Coffee</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/james-meidinger-blockjock/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/james-meidinger-blockjock/">James Meidinger / Blockjock</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span></span>
+          <span class="dir-desc">DRep, Governance, Media, Intersect · W3i / USDM, Intersect Cardano Product Committee, <a class="dir-project-link" href="/projects/cardano-over-coffee/">Cardano Over Coffee</a></span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/blockjock2017" target="_blank" rel="noopener noreferrer" aria-label="Open James Meidinger / Blockjock public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">61</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-education"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jason-appleton-crypto-crow/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jason-appleton-crypto-crow/">Jason Appleton (Crypto Crow)</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jason-appleton-crypto-crow/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jason-appleton-crypto-crow/">Jason Appleton (Crypto Crow)</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, Educator, Creator, Media · Crypto Crow</span>
           <span class="dir-cat">EDUCATION</span>
           <a class="dir-link" href="https://x.com/jasonappleton" target="_blank" rel="noopener noreferrer" aria-label="Open Jason Appleton (Crypto Crow) public profile in a new tab">↗</a>
@@ -1738,32 +1741,32 @@
         <li class="dir-row">
           <span class="dir-index">62</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jedd-jeddson/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jedd-jeddson/">Jedd / Jeddson</a></span>
-          <span class="dir-desc">Founder, Community, Gaming · Keyboard Warriors Internet Cafe</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jedd-jeddson/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jedd-jeddson/">Jedd / Jeddson</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Community, Gaming · <a class="dir-project-link" href="/projects/kwic/">Keyboard Warriors Internet Cafe</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/JeddsonKWIC" target="_blank" rel="noopener noreferrer" aria-label="Open Jedd / Jeddson public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">63</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jerry-fragiskatos/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jerry-fragiskatos/">Jerry Fragiskatos</a></span>
-          <span class="dir-desc">Co-founder, Infrastructure · Apex Fusion</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jerry-fragiskatos/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jerry-fragiskatos/">Jerry Fragiskatos</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, Infrastructure · <a class="dir-project-link" href="/projects/apex-fusion/">Apex Fusion</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/Aces1974" target="_blank" rel="noopener noreferrer" aria-label="Open Jerry Fragiskatos public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">64</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-nft"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jika-edstrom-jika-clay/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jika-edstrom-jika-clay/">Jika Edström / Jika Clay</a></span>
-          <span class="dir-desc">Illustrator, Concept Artist, Creator, Clay · Clay Nation, NULUNA</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jika-edstrom-jika-clay/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jika-edstrom-jika-clay/">Jika Edström / Jika Clay</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Illustrator, Concept Artist, Creator, Clay · <a class="dir-project-link" href="/projects/clay-nation/">Clay Nation</a>, NULUNA</span>
           <span class="dir-cat">ARTS &amp; CULTURE</span>
           <a class="dir-link" href="https://uk.linkedin.com/in/jika-edstr%C3%B6m-ba664b25b" target="_blank" rel="noopener noreferrer" aria-label="Open Jika Edström / Jika Clay public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">65</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jillian-plomin/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jillian-plomin/">Jillian Plomin</a></span>
-          <span class="dir-desc">CEO, Stablecoin, DeFi · USDM, Moneta Digital</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jillian-plomin/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jillian-plomin/">Jillian Plomin</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">CEO, Stablecoin, DeFi · <a class="dir-project-link" href="/projects/usdm/">USDM</a>, Moneta Digital</span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/W3i_CEO" target="_blank" rel="noopener noreferrer" aria-label="Open Jillian Plomin public profile in a new tab">↗</a>
         </li>
@@ -1779,30 +1782,30 @@
           <span class="dir-index">67</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/jon-kravetz/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jon-kravetz/">Jon Kravetz</a></span>
-          <span class="dir-desc">Founder, CEO, Builder, DeFi · CSWAP, CswapDigital, btc_karma, ebecca_rwa</span>
+          <span class="dir-desc">Founder, CEO, Builder, DeFi · <a class="dir-project-link" href="/projects/cswap/">CSWAP</a>, CswapDigital, btc_karma, ebecca_rwa</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/CSWAP_Destroy" target="_blank" rel="noopener noreferrer" aria-label="Open Jon Kravetz public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">68</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jose-miguel-de-gamboa/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jose-miguel-de-gamboa/">Jose Miguel de Gamboa</a></span>
-          <span class="dir-desc">Community, Educator, Governance · LATAM Cardano Community</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jose-miguel-de-gamboa/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jose-miguel-de-gamboa/">Jose Miguel de Gamboa</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Community, Educator, Governance · <a class="dir-project-link" href="/projects/latam-cardano-community/">LATAM Cardano Community</a></span>
           <span class="dir-cat">COMMUNITY</span>
           <a class="dir-link" href="https://x.com/bitcows" target="_blank" rel="noopener noreferrer" aria-label="Open Jose Miguel de Gamboa public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">69</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/joshua-stone/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/joshua-stone/">Joshua Stone</a></span>
-          <span class="dir-desc">Co-founder, CEO · Book.io, Stuff.io</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/joshua-stone/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/joshua-stone/">Joshua Stone</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, CEO · <a class="dir-project-link" href="/projects/book-io/">Book.io</a>, <a class="dir-project-link" href="/projects/stuff-io/">Stuff.io</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/joshualeestone" target="_blank" rel="noopener noreferrer" aria-label="Open Joshua Stone public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">70</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jure-karamarko/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jure-karamarko/">Jure Karamarko</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/jure-karamarko/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/jure-karamarko/">Jure Karamarko</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Founder, Media · SongMarketCap</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/JureKaramarko" target="_blank" rel="noopener noreferrer" aria-label="Open Jure Karamarko public profile in a new tab">↗</a>
@@ -1810,7 +1813,7 @@
         <li class="dir-row">
           <span class="dir-index">71</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/kavinda-kariyapperuma/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/kavinda-kariyapperuma/">Kavinda Kariyapperuma</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/kavinda-kariyapperuma/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/kavinda-kariyapperuma/">Kavinda Kariyapperuma</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Governance, Intersect, Board Member, Elected 2026 · Intersect Board</span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/OfficialKavinda" target="_blank" rel="noopener noreferrer" aria-label="Open Kavinda Kariyapperuma public profile in a new tab">↗</a>
@@ -1818,8 +1821,8 @@
         <li class="dir-row">
           <span class="dir-index">72</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ken-kodama/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ken-kodama/">Ken Kodama</a></span>
-          <span class="dir-desc">Founder, Chairman, Ecosystem Leadership · EMURGO</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ken-kodama/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ken-kodama/">Ken Kodama</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Chairman, Ecosystem Leadership · <a class="dir-project-link" href="/projects/emurgo/">EMURGO</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/Emurgo_Ken" target="_blank" rel="noopener noreferrer" aria-label="Open Ken Kodama public profile in a new tab">↗</a>
         </li>
@@ -1842,23 +1845,23 @@
         <li class="dir-row">
           <span class="dir-index">75</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ktorz/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ktorz/">KtorZ</a></span>
-          <span class="dir-desc">Developer, Aiken, Cardano Tooling · Aiken, Ogmios, Kupo, Cardano Solutions</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ktorz/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ktorz/">KtorZ</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Developer, Aiken, Cardano Tooling · <a class="dir-project-link" href="/projects/aiken/">Aiken</a>, <a class="dir-project-link" href="/projects/ogmios/">Ogmios</a>, <a class="dir-project-link" href="/projects/kupo/">Kupo</a>, Cardano Solutions</span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/_KtorZ_" target="_blank" rel="noopener noreferrer" aria-label="Open KtorZ public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">76</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/kyle-solomon/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/kyle-solomon/">Kyle Solomon</a></span>
-          <span class="dir-desc">Founder, CEO, Builder, Intersect · riverArk, DripDropz, Intersect Product, Daedalus</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/kyle-solomon/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/kyle-solomon/">Kyle Solomon</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, Builder, Intersect · riverArk, <a class="dir-project-link" href="/projects/dripdropz/">DripDropz</a>, Intersect Product, <a class="dir-project-link" href="/projects/daedalus/">Daedalus</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/adosiawolf" target="_blank" rel="noopener noreferrer" aria-label="Open Kyle Solomon public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">77</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/kylix-afonso/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/kylix-afonso/">Kylix Afonso</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/kylix-afonso/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/kylix-afonso/">Kylix Afonso</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">CEO, Developer, Stablecoin · Artifi Labs, Open DJED</span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/KylixAfonso" target="_blank" rel="noopener noreferrer" aria-label="Open Kylix Afonso public profile in a new tab">↗</a>
@@ -1866,15 +1869,15 @@
         <li class="dir-row">
           <span class="dir-index">78</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/lapetite/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lapetite/">LaPetite</a><span class="dir-badge" title="Verified active stake pool operator">SPO</span></span>
-          <span class="dir-desc">SPO, Community, Creator, Media · GranADA Pool</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/lapetite/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lapetite/">LaPetite</a><span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">SPO, Community, Creator, Media · <a class="dir-project-link" href="/projects/granada-pool/">GranADA Pool</a></span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/LaPetiteADA" target="_blank" rel="noopener noreferrer" aria-label="Open LaPetite public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">79</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/lily-brodi/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lily-brodi/">Lily Brodi</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/lily-brodi/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lily-brodi/">Lily Brodi</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Community, Creator, Media · Block//45, Rare Network</span>
           <span class="dir-cat">CREATORS</span>
           <a class="dir-link" href="https://x.com/lilybrodi" target="_blank" rel="noopener noreferrer" aria-label="Open Lily Brodi public profile in a new tab">↗</a>
@@ -1891,15 +1894,15 @@
           <span class="dir-index">81</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/logan-panchot/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/logan-panchot/">Logan Panchot</a></span>
-          <span class="dir-desc">Co-founder, Governance, Developer · Clarity Protocol, Clear Contracts</span>
+          <span class="dir-desc">Co-founder, Governance, Developer · <a class="dir-project-link" href="/projects/clarity-protocol/">Clarity Protocol</a>, Clear Contracts</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/Lo_Ponch" target="_blank" rel="noopener noreferrer" aria-label="Open Logan Panchot public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">82</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/long-nguyen/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/long-nguyen/">Long Nguyen</a></span>
-          <span class="dir-desc">Founder, Co-founder, DeFi · Minswap</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/long-nguyen/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/long-nguyen/">Long Nguyen</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Co-founder, DeFi · <a class="dir-project-link" href="/projects/minswap/">Minswap</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/longminswap" target="_blank" rel="noopener noreferrer" aria-label="Open Long Nguyen public profile in a new tab">↗</a>
         </li>
@@ -1907,22 +1910,22 @@
           <span class="dir-index">83</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/lozza/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lozza/">Lozza</a></span>
-          <span class="dir-desc">Community, Ambassador, Midnight · Claymates, Midnight</span>
+          <span class="dir-desc">Community, Ambassador, Midnight · Claymates, <a class="dir-project-link" href="/projects/midnight/">Midnight</a></span>
           <span class="dir-cat">COMMUNITY</span>
           <a class="dir-link" href="https://x.com/lozzaclay" target="_blank" rel="noopener noreferrer" aria-label="Open Lozza public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">84</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/luca-dangelo/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/luca-dangelo/">Luca D’Angelo</a></span>
-          <span class="dir-desc">Developer, Engineer, RWA · zenGate, Palmyra</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/luca-dangelo/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/luca-dangelo/">Luca D’Angelo</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Developer, Engineer, RWA · zenGate, <a class="dir-project-link" href="/projects/palmyra/">Palmyra</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/ldgaetano" target="_blank" rel="noopener noreferrer" aria-label="Open Luca D’Angelo public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">85</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/lucas-macchiavelli/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lucas-macchiavelli/">Lucas Macchiavelli</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/lucas-macchiavelli/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lucas-macchiavelli/">Lucas Macchiavelli</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, Governance, Ambassador, Founder, Community, Midnight · Token Allies, Cardano &amp; Midnight Ambassador activity</span>
           <span class="dir-cat">COMMUNITY</span>
           <a class="dir-link" href="https://x.com/LucasMacchia2" target="_blank" rel="noopener noreferrer" aria-label="Open Lucas Macchiavelli public profile in a new tab">↗</a>
@@ -1938,7 +1941,7 @@
         <li class="dir-row">
           <span class="dir-index">87</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/lukas-barta/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lukas-barta/">Lukáš Bárta</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/lukas-barta/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/lukas-barta/">Lukáš Bárta</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Founder, CEO, Community, SPO · Cardanians, ADApools.org</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://cz.linkedin.com/in/luk%C3%A1%C5%A1-b%C3%A1rta-8a2132a8" target="_blank" rel="noopener noreferrer" aria-label="Open Lukáš Bárta public profile in a new tab">↗</a>
@@ -1946,23 +1949,23 @@
         <li class="dir-row">
           <span class="dir-index">88</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/maksymilian-brodowicz-zygomeb/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/maksymilian-brodowicz-zygomeb/">Maksymilian Brodowicz / Zygomeb</a></span>
-          <span class="dir-desc">Developer, Engineer, DeFi, Infrastructure · Optim Finance</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/maksymilian-brodowicz-zygomeb/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/maksymilian-brodowicz-zygomeb/">Maksymilian Brodowicz / Zygomeb</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Developer, Engineer, DeFi, Infrastructure · <a class="dir-project-link" href="/projects/optim-finance/">Optim Finance</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/zygomeb" target="_blank" rel="noopener noreferrer" aria-label="Open Maksymilian Brodowicz / Zygomeb public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">89</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/marek-mahut/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/marek-mahut/">Marek Mahut</a></span>
-          <span class="dir-desc">Founder, CEO · Five Binaries</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/marek-mahut/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/marek-mahut/">Marek Mahut</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO · <a class="dir-project-link" href="/projects/five-binaries/">Five Binaries</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/stakenuts" target="_blank" rel="noopener noreferrer" aria-label="Open Marek Mahut public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">90</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/martin-lang/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/martin-lang/">Martin Lang</a><span class="dir-badge" title="Verified active DRep">DREP</span><span class="dir-badge" title="Verified active stake pool operator">SPO</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/martin-lang/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/martin-lang/">Martin Lang</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, SPO, Developer, Infrastructure · ATADA / ATAD2, SPO Scripts, cardano-signer</span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/ATADA_Stakepool" target="_blank" rel="noopener noreferrer" aria-label="Open Martin Lang public profile in a new tab">↗</a>
@@ -1970,32 +1973,32 @@
         <li class="dir-row">
           <span class="dir-index">91</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/marvin-bertin/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/marvin-bertin/">Marvin Bertin</a></span>
-          <span class="dir-desc">Co-founder, CEO, Infrastructure · Maestro</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/marvin-bertin/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/marvin-bertin/">Marvin Bertin</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, CEO, Infrastructure · <a class="dir-project-link" href="/projects/maestro/">Maestro</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/MarvinDefi" target="_blank" rel="noopener noreferrer" aria-label="Open Marvin Bertin public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">92</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mats-olsen/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mats-olsen/">Mats Olsen</a></span>
-          <span class="dir-desc">Co-founder, CTO, Developer, Analytics · Dune</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mats-olsen/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mats-olsen/">Mats Olsen</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, CTO, Developer, Analytics · <a class="dir-project-link" href="/projects/dune/">Dune</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/mewwts" target="_blank" rel="noopener noreferrer" aria-label="Open Mats Olsen public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">93</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/matteo-coppola/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/matteo-coppola/">Matteo Coppola</a></span>
-          <span class="dir-desc">Co-founder, CEO, DeFi · FluidTokens</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/matteo-coppola/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/matteo-coppola/">Matteo Coppola</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, CEO, DeFi · <a class="dir-project-link" href="/projects/fluidtokens/">FluidTokens</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/0xMetamatt" target="_blank" rel="noopener noreferrer" aria-label="Open Matteo Coppola public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">94</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mauro-andreoli/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mauro-andreoli/">Mauro Andreoli</a></span>
-          <span class="dir-desc">Ambassador, Community, Governance · European Cardano Community</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mauro-andreoli/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mauro-andreoli/">Mauro Andreoli</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Ambassador, Community, Governance · <a class="dir-project-link" href="/projects/european-cardano-community/">European Cardano Community</a></span>
           <span class="dir-cat">COMMUNITY</span>
           <a class="dir-link" href="https://x.com/MauroAndreoliA" target="_blank" rel="noopener noreferrer" aria-label="Open Mauro Andreoli public profile in a new tab">↗</a>
         </li>
@@ -2010,32 +2013,32 @@
         <li class="dir-row">
           <span class="dir-index">96</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mehul-prajapati/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mehul-prajapati/">Mehul Prajapati</a></span>
-          <span class="dir-desc">Developer, Infrastructure, Wallet, Explorer · Strica, CardanoScan, Typhon Wallet</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mehul-prajapati/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mehul-prajapati/">Mehul Prajapati</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Developer, Infrastructure, Wallet, Explorer · <a class="dir-project-link" href="/projects/strica/">Strica</a>, <a class="dir-project-link" href="/projects/cardanoscan/">CardanoScan</a>, <a class="dir-project-link" href="/projects/typhon-wallet/">Typhon Wallet</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/mehul_cs" target="_blank" rel="noopener noreferrer" aria-label="Open Mehul Prajapati public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">97</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/melon-dexhunter/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/melon-dexhunter/">melon / DexHunter</a></span>
-          <span class="dir-desc">Founder, CEO, DeFi · DexHunter</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/melon-dexhunter/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/melon-dexhunter/">melon / DexHunter</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, DeFi · <a class="dir-project-link" href="/projects/dexhunter/">DexHunter</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/melonaire" target="_blank" rel="noopener noreferrer" aria-label="Open melon / DexHunter public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">98</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/micah-kendall/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/micah-kendall/">Micah Kendall</a></span>
-          <span class="dir-desc">Founder, DeFi, Developer · Butane Protocol, Blaze</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/micah-kendall/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/micah-kendall/">Micah Kendall</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, DeFi, Developer · Butane Protocol, <a class="dir-project-link" href="/projects/blaze-cardano/">Blaze</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/micahalexkenda1" target="_blank" rel="noopener noreferrer" aria-label="Open Micah Kendall public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">99</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/michael-yagi/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/michael-yagi/">Michael Yagi</a></span>
-          <span class="dir-desc">CEO · Ikigai Technologies</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/michael-yagi/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/michael-yagi/">Michael Yagi</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">CEO · <a class="dir-project-link" href="/projects/ikigai-technologies/">Ikigai Technologies</a></span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/realgUbGuuB" target="_blank" rel="noopener noreferrer" aria-label="Open Michael Yagi public profile in a new tab">↗</a>
         </li>
@@ -2058,7 +2061,7 @@
         <li class="dir-row">
           <span class="dir-index">102</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mike-rogero/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mike-rogero/">Mike Rogero</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mike-rogero/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mike-rogero/">Mike Rogero</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span></span>
           <span class="dir-desc">DRep, Governance · Cardano governance</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/mikerogero" target="_blank" rel="noopener noreferrer" aria-label="Open Mike Rogero public profile in a new tab">↗</a>
@@ -2067,14 +2070,14 @@
           <span class="dir-index">103</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/modemaster-dk/avatar.png" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/modemaster-dk/">Modemaster DK</a></span>
-          <span class="dir-desc">Co-founder, Creator, Community · Squeak</span>
+          <span class="dir-desc">Co-founder, Creator, Community · <a class="dir-project-link" href="/projects/squeak/">Squeak</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/modemasteren" target="_blank" rel="noopener noreferrer" aria-label="Open Modemaster DK public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">104</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-education"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mojtaba-tefagh/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mojtaba-tefagh/">Mojtaba Tefagh</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mojtaba-tefagh/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mojtaba-tefagh/">Mojtaba Tefagh</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Researcher, Blockchain, Decentralisation, Programme Management · University of Edinburgh Blockchain Technology Laboratory, Edinburgh Decentralisation Index</span>
           <span class="dir-cat">EDUCATION</span>
           <a class="dir-link" href="https://uk.linkedin.com/in/mtefagh" target="_blank" rel="noopener noreferrer" aria-label="Open Mojtaba Tefagh public profile in a new tab">↗</a>
@@ -2082,8 +2085,8 @@
         <li class="dir-row">
           <span class="dir-index">105</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/monty-metzger/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/monty-metzger/">Monty Metzger</a></span>
-          <span class="dir-desc">Founder, RWA, DeFi · Toto Finance</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/monty-metzger/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/monty-metzger/">Monty Metzger</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, RWA, DeFi · <a class="dir-project-link" href="/projects/toto-finance/">Toto Finance</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/montymetzger" target="_blank" rel="noopener noreferrer" aria-label="Open Monty Metzger public profile in a new tab">↗</a>
         </li>
@@ -2098,8 +2101,8 @@
         <li class="dir-row">
           <span class="dir-index">107</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mutant-mandrill/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mutant-mandrill/">Mutant Mandrill (10k)</a></span>
-          <span class="dir-desc">Founder, Creator, NFT · The Wojaks</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/mutant-mandrill/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/mutant-mandrill/">Mutant Mandrill (10k)</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Creator, NFT · <a class="dir-project-link" href="/projects/wojaks/">The Wojaks</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/Coti_Hodler" target="_blank" rel="noopener noreferrer" aria-label="Open Mutant Mandrill (10k) public profile in a new tab">↗</a>
         </li>
@@ -2114,8 +2117,8 @@
         <li class="dir-row">
           <span class="dir-index">109</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/nelson-kshetrimayum/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/nelson-kshetrimayum/">Nelson Kshetrimayum</a></span>
-          <span class="dir-desc">Co-founder, Educator, Developer · Andamio</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/nelson-kshetrimayum/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/nelson-kshetrimayum/">Nelson Kshetrimayum</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, Educator, Developer · <a class="dir-project-link" href="/projects/andamio/">Andamio</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/nelson_ksh" target="_blank" rel="noopener noreferrer" aria-label="Open Nelson Kshetrimayum public profile in a new tab">↗</a>
         </li>
@@ -2130,7 +2133,7 @@
         <li class="dir-row">
           <span class="dir-index">111</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-nft"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/oddshapeshadow/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/oddshapeshadow/">OddShapeShadow</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/oddshapeshadow/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/oddshapeshadow/">OddShapeShadow</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Musician, Producer, Web3 Music, Creator</span>
           <span class="dir-cat">ARTS &amp; CULTURE</span>
           <a class="dir-link" href="https://x.com/MGBedford" target="_blank" rel="noopener noreferrer" aria-label="Open OddShapeShadow public profile in a new tab">↗</a>
@@ -2146,8 +2149,8 @@
         <li class="dir-row">
           <span class="dir-index">113</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/otavio-lima/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/otavio-lima/">Otávio Lima</a></span>
-          <span class="dir-desc">Founder, CEO, Media, Community · Cardano Feed, LATAM Cardano Community</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/otavio-lima/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/otavio-lima/">Otávio Lima</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, Media, Community · Cardano Feed, <a class="dir-project-link" href="/projects/latam-cardano-community/">LATAM Cardano Community</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/otaviolima" target="_blank" rel="noopener noreferrer" aria-label="Open Otávio Lima public profile in a new tab">↗</a>
         </li>
@@ -2163,15 +2166,15 @@
           <span class="dir-index">115</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/papagoose/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/papagoose/">PapaGoose</a></span>
-          <span class="dir-desc">Co-founder, Infrastructure, Identity · ADA Handle, Kora Labs</span>
+          <span class="dir-desc">Co-founder, Infrastructure, Identity · <a class="dir-project-link" href="/projects/ada-handle/">ADA Handle</a>, Kora Labs</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/PapaGooseCrypto" target="_blank" rel="noopener noreferrer" aria-label="Open PapaGoose public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">116</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/patrick-tobler/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/patrick-tobler/">Patrick Tobler</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
-          <span class="dir-desc">DRep, Founder, CEO, Developer, Infrastructure, AI · NMKR, Masumi Network, Sokosumi</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/patrick-tobler/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/patrick-tobler/">Patrick Tobler</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">DRep, Founder, CEO, Developer, Infrastructure, AI · <a class="dir-project-link" href="/projects/nmkr/">NMKR</a>, Masumi Network, <a class="dir-project-link" href="/projects/sokosumi/">Sokosumi</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/Padierfind" target="_blank" rel="noopener noreferrer" aria-label="Open Patrick Tobler public profile in a new tab">↗</a>
         </li>
@@ -2186,7 +2189,7 @@
         <li class="dir-row">
           <span class="dir-index">118</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/peter-horsfall/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/peter-horsfall/">Peter Horsfall</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/peter-horsfall/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/peter-horsfall/">Peter Horsfall</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span></span>
           <span class="dir-desc">DRep, Governance · Cardano governance</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/blockchain_pete" target="_blank" rel="noopener noreferrer" aria-label="Open Peter Horsfall public profile in a new tab">↗</a>
@@ -2195,14 +2198,14 @@
           <span class="dir-index">119</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><span class="dir-thumb dir-thumb-fallback" aria-hidden="true">PG</span><a class="dir-name" href="/people/peter-van-garderen/">Peter Van Garderen</a></span>
-          <span class="dir-desc">Founder, CEO, Oracle · Orcfax</span>
+          <span class="dir-desc">Founder, CEO, Oracle · <a class="dir-project-link" href="/projects/orcfax/">Orcfax</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/pjvangarderen" target="_blank" rel="noopener noreferrer" aria-label="Open Peter Van Garderen public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">120</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/peyton-winget-big-pey/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/peyton-winget-big-pey/">Peyton Winget / big pey</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/peyton-winget-big-pey/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/peyton-winget-big-pey/">Peyton Winget / big pey</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Builder, Creator · Atrium Lab</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/bigpey" target="_blank" rel="noopener noreferrer" aria-label="Open Peyton Winget / big pey public profile in a new tab">↗</a>
@@ -2210,16 +2213,16 @@
         <li class="dir-row">
           <span class="dir-index">121</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/phil-uplc/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/phil-uplc/">Phil (uplc)</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
-          <span class="dir-desc">DRep, Founder, CEO, Developer, Engineer, Researcher, Security · Anastasia Labs, Intersect governance, Lucid Evolution, Midgard, Plutus / Midgard Labs</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/phil-uplc/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/phil-uplc/">Phil (uplc)</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">DRep, Founder, CEO, Developer, Engineer, Researcher, Security · <a class="dir-project-link" href="/projects/anastasia-labs/">Anastasia Labs</a>, Intersect governance, <a class="dir-project-link" href="/projects/lucid-evolution/">Lucid Evolution</a>, <a class="dir-project-link" href="/projects/midgard/">Midgard</a>, Plutus / Midgard Labs</span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/phil_uplc" target="_blank" rel="noopener noreferrer" aria-label="Open Phil (uplc) public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">122</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/phillip-pon/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/phillip-pon/">Phillip Pon</a></span>
-          <span class="dir-desc">CEO · EMURGO</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/phillip-pon/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/phillip-pon/">Phillip Pon</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">CEO · <a class="dir-project-link" href="/projects/emurgo/">EMURGO</a></span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/phillip_pon" target="_blank" rel="noopener noreferrer" aria-label="Open Phillip Pon public profile in a new tab">↗</a>
         </li>
@@ -2234,7 +2237,7 @@
         <li class="dir-row">
           <span class="dir-index">124</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/pritesh-gosai-kaizen-crypto/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/pritesh-gosai-kaizen-crypto/">Pritesh Gosai / KAizen Crypto</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/pritesh-gosai-kaizen-crypto/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/pritesh-gosai-kaizen-crypto/">Pritesh Gosai / KAizen Crypto</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Founder, Educator, Infrastructure · Kaizen Crypto, Cardano Calendar, Lovelace Saga</span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/KaizenCrypto" target="_blank" rel="noopener noreferrer" aria-label="Open Pritesh Gosai / KAizen Crypto public profile in a new tab">↗</a>
@@ -2242,7 +2245,7 @@
         <li class="dir-row">
           <span class="dir-index">125</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-education"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/prof-aggelos-kiayias/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/prof-aggelos-kiayias/">Prof. Aggelos Kiayias</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/prof-aggelos-kiayias/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/prof-aggelos-kiayias/">Prof. Aggelos Kiayias</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Researcher, Cryptography, Blockchain, Cardano Research · Input Output Group, University of Edinburgh Blockchain Technology Laboratory, Edinburgh Decentralisation Index</span>
           <span class="dir-cat">EDUCATION</span>
           <a class="dir-link" href="https://x.com/sol3gga" target="_blank" rel="noopener noreferrer" aria-label="Open Prof. Aggelos Kiayias public profile in a new tab">↗</a>
@@ -2250,8 +2253,8 @@
         <li class="dir-row">
           <span class="dir-index">126</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/quantumplation-pi-lanningham/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/quantumplation-pi-lanningham/">Quantumplation / Pi Lanningham</a></span>
-          <span class="dir-desc">CTO, Developer, Engineer, SPO, DeFi · Sundae Labs, SundaeSwap</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/quantumplation-pi-lanningham/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/quantumplation-pi-lanningham/">Quantumplation / Pi Lanningham</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">CTO, Developer, Engineer, SPO, DeFi · Sundae Labs, <a class="dir-project-link" href="/projects/sundaeswap/">SundaeSwap</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/Quantumplation" target="_blank" rel="noopener noreferrer" aria-label="Open Quantumplation / Pi Lanningham public profile in a new tab">↗</a>
         </li>
@@ -2259,7 +2262,7 @@
           <span class="dir-index">127</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/rahul-konudula/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/rahul-konudula/">Rahul Konudula</a></span>
-          <span class="dir-desc">CEO · Trivolve Tech</span>
+          <span class="dir-desc">CEO · <a class="dir-project-link" href="/projects/trivolve-tech/">Trivolve Tech</a></span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/Rahulkonudula" target="_blank" rel="noopener noreferrer" aria-label="Open Rahul Konudula public profile in a new tab">↗</a>
         </li>
@@ -2274,7 +2277,7 @@
         <li class="dir-row">
           <span class="dir-index">129</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/reshma-mohan/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/reshma-mohan/">Reshma Mohan</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/reshma-mohan/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/reshma-mohan/">Reshma Mohan</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, Governance, Open Source, Engineer · Intersect Open Source Committee, Reafino, Cardano governance</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/reshmhn" target="_blank" rel="noopener noreferrer" aria-label="Open Reshma Mohan public profile in a new tab">↗</a>
@@ -2282,16 +2285,16 @@
         <li class="dir-row">
           <span class="dir-index">130</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/rhys-bartels-waller/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/rhys-bartels-waller/">Rhys Bartels-Waller</a></span>
-          <span class="dir-desc">Engineer, Developer, Wallet, Infrastructure · Lace</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/rhys-bartels-waller/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/rhys-bartels-waller/">Rhys Bartels-Waller</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Engineer, Developer, Wallet, Infrastructure · <a class="dir-project-link" href="/projects/lace/">Lace</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/rhyslbw" target="_blank" rel="noopener noreferrer" aria-label="Open Rhys Bartels-Waller public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">131</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ricardo-burgos/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ricardo-burgos/">Ricardo Burgos</a></span>
-          <span class="dir-desc">Community, Governance · European Cardano Community</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/ricardo-burgos/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/ricardo-burgos/">Ricardo Burgos</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Community, Governance · <a class="dir-project-link" href="/projects/european-cardano-community/">European Cardano Community</a></span>
           <span class="dir-cat">COMMUNITY</span>
           <a class="dir-link" href="https://x.com/Bug8bue" target="_blank" rel="noopener noreferrer" aria-label="Open Ricardo Burgos public profile in a new tab">↗</a>
         </li>
@@ -2306,15 +2309,15 @@
         <li class="dir-row">
           <span class="dir-index">133</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/robert-pilat-cletus/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/robert-pilat-cletus/">Robert Pilat / Cletus</a></span>
-          <span class="dir-desc">Co-founder, CEO, Infrastructure, Interoperability · VIA Labs</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/robert-pilat-cletus/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/robert-pilat-cletus/">Robert Pilat / Cletus</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, CEO, Infrastructure, Interoperability · <a class="dir-project-link" href="/projects/via-labs/">VIA Labs</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/Cletus_VIA" target="_blank" rel="noopener noreferrer" aria-label="Open Robert Pilat / Cletus public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">134</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-education"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/robertino-martinez/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/robertino-martinez/">Robertino Martinez</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/robertino-martinez/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/robertino-martinez/">Robertino Martinez</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">Developer Education, Developer Experience, Cardano, Tooling · Input Output Group, Cardano Developer Experience</span>
           <span class="dir-cat">EDUCATION</span>
           <a class="dir-link" href="https://pt.linkedin.com/in/robertino-martinez" target="_blank" rel="noopener noreferrer" aria-label="Open Robertino Martinez public profile in a new tab">↗</a>
@@ -2322,8 +2325,8 @@
         <li class="dir-row">
           <span class="dir-index">135</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/sam-lambert/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/sam-lambert/">Sam Lambert</a></span>
-          <span class="dir-desc">Co-founder, COO, RWA · zenGate, Palmyra</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/sam-lambert/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/sam-lambert/">Sam Lambert</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, COO, RWA · zenGate, <a class="dir-project-link" href="/projects/palmyra/">Palmyra</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/Samb0__" target="_blank" rel="noopener noreferrer" aria-label="Open Sam Lambert public profile in a new tab">↗</a>
         </li>
@@ -2331,38 +2334,38 @@
           <span class="dir-index">136</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/samuel-brack/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/samuel-brack/">Samuel Brack</a></span>
-          <span class="dir-desc">Co-founder, Oracle, Infrastructure · DIA</span>
+          <span class="dir-desc">Co-founder, Oracle, Infrastructure · <a class="dir-project-link" href="/projects/dia/">DIA</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/beeblebrax" target="_blank" rel="noopener noreferrer" aria-label="Open Samuel Brack public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">137</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/santiago-carmuega/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/santiago-carmuega/">Santiago Carmuega</a></span>
-          <span class="dir-desc">Founder, CEO, Developer, Infrastructure · TxPipe, Dolos, Demeter, Asteria, Oura</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/santiago-carmuega/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/santiago-carmuega/">Santiago Carmuega</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, Developer, Infrastructure · <a class="dir-project-link" href="/projects/txpipe/">TxPipe</a>, <a class="dir-project-link" href="/projects/dolos/">Dolos</a>, <a class="dir-project-link" href="/projects/demeter/">Demeter</a>, <a class="dir-project-link" href="/projects/asteria/">Asteria</a>, <a class="dir-project-link" href="/projects/oura/">Oura</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/santicarmuega" target="_blank" rel="noopener noreferrer" aria-label="Open Santiago Carmuega public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">138</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/sebastian-nagel/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/sebastian-nagel/">Sebastian Nagel</a></span>
-          <span class="dir-desc">Engineer, Developer, Infrastructure · Hydra</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/sebastian-nagel/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/sebastian-nagel/">Sebastian Nagel</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Engineer, Developer, Infrastructure · <a class="dir-project-link" href="/projects/hydra/">Hydra</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/ch1bo_" target="_blank" rel="noopener noreferrer" aria-label="Open Sebastian Nagel public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">139</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/sebastien-guillemot/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/sebastien-guillemot/">Sebastien Guillemot</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
-          <span class="dir-desc">DRep, Builder, Developer, Midnight · Midnight Foundation, dcSpark, Paima, Paima Studios / Paima Engine</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/sebastien-guillemot/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/sebastien-guillemot/">Sebastien Guillemot</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">DRep, Builder, Developer, Midnight · Midnight Foundation, dcSpark, Paima, <a class="dir-project-link" href="/projects/paima-studios/">Paima Studios / Paima Engine</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/SebastienGllmt" target="_blank" rel="noopener noreferrer" aria-label="Open Sebastien Guillemot public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">140</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/shawn-mcmurdo-squid/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/shawn-mcmurdo-squid/">Shawn McMurdo - SQUID</a><span class="dir-badge" title="Verified active DRep">DREP</span></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/shawn-mcmurdo-squid/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/shawn-mcmurdo-squid/">Shawn McMurdo - SQUID</a><span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span></span>
           <span class="dir-desc">DRep, Governance, Community · Cardano governance</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/shawn_mcmurdo" target="_blank" rel="noopener noreferrer" aria-label="Open Shawn McMurdo - SQUID public profile in a new tab">↗</a>
@@ -2370,8 +2373,8 @@
         <li class="dir-row">
           <span class="dir-index">141</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/shawn-silva-a3c-ada-pool/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/shawn-silva-a3c-ada-pool/">Shawn Silva / A3C ADA Pool</a><span class="dir-badge" title="Verified active stake pool operator">SPO</span></span>
-          <span class="dir-desc">SPO, Mithril, Infrastructure · A3C ADA Pool, Mithril</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/shawn-silva-a3c-ada-pool/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/shawn-silva-a3c-ada-pool/">Shawn Silva / A3C ADA Pool</a><span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">SPO, Mithril, Infrastructure · A3C ADA Pool, <a class="dir-project-link" href="/projects/mithril/">Mithril</a></span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/A3Cpool_Shawn" target="_blank" rel="noopener noreferrer" aria-label="Open Shawn Silva / A3C ADA Pool public profile in a new tab">↗</a>
         </li>
@@ -2394,8 +2397,8 @@
         <li class="dir-row">
           <span class="dir-index">144</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/simon-sallstrom/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/simon-sallstrom/">Simon Sällström</a></span>
-          <span class="dir-desc">Founder, CEO, Education, Utility · DirectEd</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/simon-sallstrom/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/simon-sallstrom/">Simon Sällström</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO, Education, Utility · <a class="dir-project-link" href="/projects/directed/">DirectEd</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/SimonSallstrom" target="_blank" rel="noopener noreferrer" aria-label="Open Simon Sällström public profile in a new tab">↗</a>
         </li>
@@ -2411,15 +2414,15 @@
           <span class="dir-index">146</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/theodoros-morisis-chef/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/theodoros-morisis-chef/">Theodoros Morisis / CHEF</a></span>
-          <span class="dir-desc">SPO, Community · zenGate, Palmyra</span>
+          <span class="dir-desc">SPO, Community · zenGate, <a class="dir-project-link" href="/projects/palmyra/">Palmyra</a></span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/CardanoChefPool" target="_blank" rel="noopener noreferrer" aria-label="Open Theodoros Morisis / CHEF public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">147</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/thiago-nunes/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/thiago-nunes/">Thiago Nunes</a></span>
-          <span class="dir-desc">Founder, Ambassador, SPO, Identity · TapDano</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/thiago-nunes/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/thiago-nunes/">Thiago Nunes</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, Ambassador, SPO, Identity · <a class="dir-project-link" href="/projects/tapdano/">TapDano</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/tsnnst" target="_blank" rel="noopener noreferrer" aria-label="Open Thiago Nunes public profile in a new tab">↗</a>
         </li>
@@ -2427,31 +2430,31 @@
           <span class="dir-index">148</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
           <span class="dir-person"><img class="dir-thumb" src="/assets/people/tim-harrison/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/tim-harrison/">Tim Harrison</a></span>
-          <span class="dir-desc">Ecosystem Leadership, Community, Communications · Input Output, Cardano ecosystem</span>
+          <span class="dir-desc">Ecosystem Leadership, Community, Communications · <a class="dir-project-link" href="/projects/input-output/">Input Output</a>, Cardano ecosystem</span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/timbharrison" target="_blank" rel="noopener noreferrer" aria-label="Open Tim Harrison public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">149</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-governance"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/tommy-kammerer-adatainment/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/tommy-kammerer-adatainment/">Tommy Kammerer / ADAtainment</a></span>
-          <span class="dir-desc">DRep, Founder, Developer, Educator, Governance · DRepTalk, ADAtainment</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/tommy-kammerer-adatainment/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/tommy-kammerer-adatainment/">Tommy Kammerer / ADAtainment</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">DRep, Founder, Developer, Educator, Governance · <a class="dir-project-link" href="/projects/dreptalk/">DRepTalk</a>, ADAtainment</span>
           <span class="dir-cat">DREPS</span>
           <a class="dir-link" href="https://x.com/ADAtainment" target="_blank" rel="noopener noreferrer" aria-label="Open Tommy Kammerer / ADAtainment public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">150</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/unforgettable-name/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/unforgettable-name/">Unforgettable Name</a></span>
-          <span class="dir-desc">Founder · Hops on Cardano</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/unforgettable-name/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/unforgettable-name/">Unforgettable Name</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder · <a class="dir-project-link" href="/projects/hops-on-cardano/">Hops on Cardano</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/unforgettablenm" target="_blank" rel="noopener noreferrer" aria-label="Open Unforgettable Name public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">151</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-developer"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/varderes-barsegyan/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/varderes-barsegyan/">Varderes Barsegyan</a></span>
-          <span class="dir-desc">Co-founder, CTO, Developer, Infrastructure · Maestro</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/varderes-barsegyan/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/varderes-barsegyan/">Varderes Barsegyan</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Co-founder, CTO, Developer, Infrastructure · <a class="dir-project-link" href="/projects/maestro/">Maestro</a></span>
           <span class="dir-cat">DEVELOPERS</span>
           <a class="dir-link" href="https://x.com/varderes_crypto" target="_blank" rel="noopener noreferrer" aria-label="Open Varderes Barsegyan public profile in a new tab">↗</a>
         </li>
@@ -2466,15 +2469,15 @@
         <li class="dir-row">
           <span class="dir-index">153</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-analytics"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/vineeth-bhuvanagiri/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/vineeth-bhuvanagiri/">Vineeth Bhuvanagiri</a></span>
-          <span class="dir-desc">CEO, Stablecoin, DeFi · Anzens / USDA</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/vineeth-bhuvanagiri/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/vineeth-bhuvanagiri/">Vineeth Bhuvanagiri</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">CEO, Stablecoin, DeFi · <a class="dir-project-link" href="/projects/anzens-usda/">Anzens / USDA</a></span>
           <span class="dir-cat">LEADERSHIP</span>
           <a class="dir-link" href="https://x.com/VBhuvanagiri" target="_blank" rel="noopener noreferrer" aria-label="Open Vineeth Bhuvanagiri public profile in a new tab">↗</a>
         </li>
         <li class="dir-row">
           <span class="dir-index">154</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/yuta/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/yuta/">YUTA</a></span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/yuta/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/yuta/">YUTA</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
           <span class="dir-desc">DRep, SPO, Midnight</span>
           <span class="dir-cat">SPOS</span>
           <a class="dir-link" href="https://x.com/yutazzz" target="_blank" rel="noopener noreferrer" aria-label="Open YUTA public profile in a new tab">↗</a>
@@ -2482,13 +2485,14 @@
         <li class="dir-row">
           <span class="dir-index">155</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-infrastructure"></use></svg>
-          <span class="dir-person"><img class="dir-thumb" src="/assets/people/zack-soesbee-cash/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/zack-soesbee-cash/">Zack Soesbee (Cash)</a></span>
-          <span class="dir-desc">Founder, CEO · Anvil Dev Agency</span>
+          <span class="dir-person"><img class="dir-thumb" src="/assets/people/zack-soesbee-cash/avatar.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><a class="dir-name" href="/people/zack-soesbee-cash/">Zack Soesbee (Cash)</a><span class="dir-badge dir-badge-checked" title="INDEX:80 checked against public sources on 2026-09-28">CHECKED</span></span>
+          <span class="dir-desc">Founder, CEO · <a class="dir-project-link" href="/projects/anvil-dev-agency/">Anvil Dev Agency</a></span>
           <span class="dir-cat">FOUNDERS</span>
           <a class="dir-link" href="https://x.com/CashAnvil" target="_blank" rel="noopener noreferrer" aria-label="Open Zack Soesbee (Cash) public profile in a new tab">↗</a>
         </li>
         <!-- INDEX80_PEOPLE_DIRECTORY_END -->
       </ol>
+      </div>
     </section>
 
   </main>

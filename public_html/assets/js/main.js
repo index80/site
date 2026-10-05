@@ -2,7 +2,7 @@
    Existing site behaviour lives in main-core.js; page-specific enhancements
    are loaded separately so the static site stays small and framework-free. */
 (() => {
-  const VERSION = '20261002-1826';
+  const VERSION = '20261005-1303';
   const load = (src) => new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = `${src}?v=${VERSION}`;
@@ -223,12 +223,18 @@
       if (document.body && document.body.dataset.mode === 'project') {
         loads.push(load('/assets/js/treasury.js'));
       }
+      if (document.querySelector('[data-window]')) {
+        loads.push(load('/assets/js/ui-windows.js'));
+      }
       if (document.querySelector('[data-directory]')) {
         loads.push(load('/assets/js/treasury-directory.js'));
         loads.push(load('/assets/js/treasury-summary.js'));
       }
-      if (document.body?.dataset.mode === 'data' && document.body?.dataset.page !== 'registry' && document.body?.dataset.page !== 'registry-snapshot') {
-        loads.push(load('/assets/js/cardano-data-live.js'));
+      if (document.querySelector('#cardano-data-status') && document.body?.dataset.page !== 'registry' && document.body?.dataset.page !== 'registry-snapshot') {
+        loads.push(
+          load('/assets/js/cardano-snapshot-policy.js')
+            .then(() => load('/assets/js/cardano-data-live.js'))
+        );
       }
       return Promise.all(loads);
     })

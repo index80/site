@@ -1636,28 +1636,53 @@
 
 
   <main id="main" class="page-grid">
-    <section class="hero panel hero-panel compact-hero home-hero" style="grid-column:1/-1;">
+    <section class="panel os-window home-hero-window" data-window="home-hero" aria-label="Introduction">
+      <div class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="home-hero-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title">INDEX:80 · /CARDANO</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide the introduction</span></button></div>
+      <div class="os-window-body" id="home-hero-body">
+    <div class="hero hero-panel compact-hero home-hero">
       <div class="hero-copy">
-        <div class="eyebrow">WELCOME TO</div>
+        <div class="eyebrow">INDEPENDENT CARDANO INDEX</div>
         <h1>INDEX:<span>80</span><small>/CARDANO</small></h1>
-        <p class="strap">DISCOVER. VERIFY. TRACK. LEARN.</p>
-        <p>An independent index of the Cardano ecosystem. INDEX:80 maps projects, the people building them, public data, education and governance, and is built to be useful to people, search engines, developers and AI systems alike. This page is the projects directory; browse and filter below.</p>
+        <p class="strap">PROJECTS. PEOPLE. EVIDENCE.</p>
+        <p class="home-proposition">The independent record of what is being built on Cardano, who is building it, and the evidence behind it.</p>
+        <p>Every record is published by human editorial decision from public sources it links to. Inclusion is never paid for. Search above, or browse projects and people.</p>
         <div class="actions">
           <a class="button" href="#directory">Browse projects ↓</a>
-          <a class="button" href="/about/">How the index works</a>
+          <a class="button" href="/people/">Browse people</a>
         </div>
       </div>
       <div class="hero-art">
         <img src="assets/images/index80-hero-home.webp" alt="Pixel-art illustration of an astronaut and a black cat sitting on a vine-covered stone wall, looking out over a coastal bay toward a futuristic city and a moon, representing the Cardano ecosystem INDEX:80 maps." width="1760" height="831" loading="eager">
         <div class="terminal">OPEN<br>LINKS<br>REAL<br>DATA</div>
       </div>
+    </div>
+      </div>
     </section>
 
-    <section class="panel directory" id="directory" data-directory data-source="data/projects.json" data-icons="assets/icons/icons.svg" aria-labelledby="directory-title">
-      <div class="panel-title">
-        <h2 id="directory-title">DIRECTORY</h2>
-        <span id="directory-count" class="directory-count">216 RECORDS</span>
+    <section class="panel os-window current-state" data-window="home-current" aria-labelledby="home-window-title">
+      <h2 class="os-titlebar-heading" id="home-window-title"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="home-window-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title">INDEX:80 · WHAT'S CURRENT</span><span class="os-titlebar-meta" aria-hidden="true">PUBLISHED STATE</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide this window</span></button></h2>
+      <div class="os-window-body" id="home-window-body">
+      <!-- INDEX80_CURRENT_STATE_START -->
+        <div class="current-state-grid">
+          <a class="current-state-item" href="#directory"><span>PROJECTS</span><strong>216</strong><small>LISTED · DATA <time datetime="2026-10-02">2 OCT 2026</time></small></a>
+          <a class="current-state-item" href="/people/"><span>PEOPLE</span><strong>155</strong><small>PUBLIC PROFILES · DATA <time datetime="2026-09-28">28 SEPT 2026</time></small></a>
+          <a class="current-state-item" href="/governance/"><span>GOVERNANCE</span><strong>9</strong><small>LISTED · DATA <time datetime="2026-10-02">2 OCT 2026</time></small></a>
+          <a class="current-state-item" href="/registry/"><span>REGISTRY</span><strong>INDEX80-0004</strong><small>MAINNET PROOF · <time datetime="2026-09-30">30 SEPT 2026</time></small></a>
+        </div>
+      <!-- INDEX80_CURRENT_STATE_END -->
+        <nav class="os-shortcuts" aria-label="Shortcuts">
+          <a class="os-shortcut" href="/explore/"><svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#icon-os-explore"></use></svg><span>EXPLORE</span><small>Learn · Governance · Data</small></a>
+          <a class="os-shortcut" href="/about/methodology/"><svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#icon-os-method"></use></svg><span>METHODOLOGY</span><small>How records are checked</small></a>
+          <a class="os-shortcut" href="/registry/"><svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#icon-os-registry"></use></svg><span>REGISTRY</span><small>On-chain snapshots</small></a>
+          <a class="os-shortcut" href="/submit/"><svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#icon-os-submit"></use></svg><span>SUBMIT</span><small>Add or correct a record</small></a>
+        </nav>
+        <p class="os-statusline"><strong>CHECKED, NOT ENDORSED</strong> Listings are INDEX:80 editorial decisions from linked public evidence, not endorsements, and not confirmed by the teams or people listed. DATA = dataset publish date. <a href="/about/methodology/#evidence">How it works →</a></p>
       </div>
+    </section>
+
+    <section class="panel os-window directory" id="directory" data-window="home-directory" data-directory data-source="data/projects.json" data-icons="assets/icons/icons.svg" aria-labelledby="directory-title">
+      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="directory-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="directory-title">DIRECTORY</span> <span id="directory-count" class="directory-count">216 RECORDS</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide the directory</span></button></h2>
+      <div class="os-window-body" id="directory-body">
       <div class="directory-toolbar">
         <div id="category-bar" class="category-bar" role="tablist" aria-label="Filter by category"></div>
       </div>
@@ -3396,6 +3421,7 @@
         </li>
         <!-- INDEX80_DIRECTORY_END -->
       </ol>
+      </div>
     </section>
 
     <section class="feature-grid">

@@ -34,7 +34,7 @@ ok(METHOD.includes('href="/about/charter/"'), 'methodology links to the Charter'
 ok(METHOD.includes('href="/submit/"') && METHOD.includes('href="/privacy/"') && METHOD.includes('mailto:hello@index80.com'), 'methodology links to Submit, privacy and email');
 ok(/"@type": "WebPage"[\s\S]*"url": "https:\/\/index80.com\/about\/methodology\/"/.test(METHOD), 'methodology WebPage JSON-LD');
 ok(METHOD.includes('aria-current="page">◇ About'), 'methodology sits under About in the nav');
-for (const phrase of ['not</strong> a background check, a reputation score, an endorsement or a ranking', 'there is no deanonymisation', 'Verification is not endorsement', 'Community Stake Pool Standard', 'Publication does not mean the person has endorsed or approved their profile', "Profile images are sourced from the person's own public profile or other clearly attributable public source", 'Individuals may ask us to update, replace or remove an image at any time']) {
+for (const phrase of ['not</strong> a background check, a reputation score, an endorsement or a ranking', 'there is no deanonymisation', 'Checked is not endorsement', 'Community Stake Pool Standard', 'Publication does not mean the person has endorsed or approved their profile', "Profile images are sourced from the person's own public profile or other clearly attributable public source", 'Individuals may ask us to update, replace or remove an image at any time']) {
   ok(METHOD.includes(phrase), `methodology keeps: ${phrase}`);
 }
 
@@ -88,7 +88,7 @@ for (const slug of readdirSync(projectsDir)) {
   const html = readFileSync(f, 'utf8');
   if (!html.includes('class="back-to-directory"')) continue;
   projects += 1;
-  ok(html.includes('<p class="record-editorial-line"><a href="/about/methodology/#projects">How we verify records</a> · <a href="/submit/">Suggest a correction</a></p>'), `Project editorial footer: ${slug}`);
+  ok(html.includes('<p class="record-editorial-line"><a href="/about/methodology/#projects">How records are checked</a> · <a href="/submit/">Suggest a correction</a></p>'), `Project editorial footer: ${slug}`);
 }
 ok(projects > 0, 'found generated Project pages');
 

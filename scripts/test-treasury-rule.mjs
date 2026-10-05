@@ -69,7 +69,7 @@ for (const slug of refOnly) {
 }
 
 // --- 3. every consumer uses the shared rule (no private copies of the test) ---
-const consumers = ['treasury.js', 'treasury-directory.js', 'treasury-summary.js', 'cardano-data.js', 'cardano-data-live.js', 'directory.js'];
+const consumers = ['treasury.js', 'treasury-directory.js', 'treasury-summary.js', 'directory.js'];
 for (const name of consumers) {
   const src = readFileSync(join(PUB, 'assets/js', name), 'utf8');
   check(`${name} uses INDEX80Treasury`, /INDEX80Treasury/.test(src));

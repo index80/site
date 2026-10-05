@@ -3,6 +3,18 @@ title = "INDEX:80 public source"
 [extend]
 useDefault = true
 
-[allowlist]
+[[allowlists]]
 description = "Public Cardano stake-credential key hashes in registry receipts are not secrets"
 paths = ['''public_html/registry/receipts/.*\.json''']
+
+# Single known false positive: the project tag "catalyst-pilot-2026" (after the tag "api") inside the
+# immutable, on-chain-anchored Registry snapshot INDEX80-0004 is read as a generic API key. The snapshot
+# cannot be edited without breaking its anchored hash. Scoped to that rule AND that exact file AND that
+# exact value; all other rules, files and values remain fully scanned.
+[[allowlists]]
+description = "Registry INDEX80-0004 snapshot: public project tag mistaken for a generic API key"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)public_html/registry/snapshots/index80-0004\.json$''']
+regexTarget = "secret"
+regexes = ['''^catalyst-pilot-2026$''']

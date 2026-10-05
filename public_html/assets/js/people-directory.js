@@ -12,6 +12,7 @@
   const countEl = document.querySelector('#people-directory-count');
   const searchInput = document.querySelector('#people-search');
   const source = root.getAttribute('data-source') || '/data/people.json';
+  const projectsSource = '/data/projects.json';
 
   const CATEGORY_ORDER = [
     'DReps & Governance',
@@ -49,19 +50,44 @@
       ? `<img class="dir-thumb${candidate ? ' dir-thumb-review' : ''}" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`
       : `<span class="dir-thumb dir-thumb-fallback" aria-hidden="true">${esc(initials(p.name))}</span>`;
   };
-  const badges = (p) => (hasVerifiedDrep(p) ? '<span class="dir-badge" title="Verified active DRep">DREP</span>' : '')
-    + (hasVerifiedSpo(p) ? '<span class="dir-badge" title="Verified active stake pool operator">SPO</span>' : '');
+  const badges = (p) => {
+    const checkedTitle = p.last_verified
+      ? `INDEX:80 checked against public sources on ${p.last_verified}`
+      : 'INDEX:80 checked against public sources';
+    return (hasVerifiedDrep(p) ? '<span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span>' : '')
+      + (hasVerifiedSpo(p) ? '<span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span>' : '')
+      + (p.verification_status === 'VERIFIED'
+        ? `<span class="dir-badge dir-badge-checked" title="${esc(checkedTitle)}">CHECKED</span>`
+        : '');
+  };
 
   let people = [];
+  let projectMap = new Map();
   let activeCategory = 'all';
   let query = '';
   let sortKey = null;
   let sortDir = 'asc';
 
+  const normalize = (s) => String(s ?? '').trim().toLowerCase();
+
+  // Preserve build-time People → Project links if the optional projects
+  // dataset cannot be fetched during client enhancement. Hydration should
+  // never make the static-first directory less useful than the HTML fallback.
+  list.querySelectorAll('.dir-project-link').forEach((link) => {
+    const label = normalize(link.textContent);
+    const match = (link.getAttribute('href') || '').match(/^\/projects\/([a-z0-9-]+)\/?$/);
+    if (label && match) projectMap.set(label, match[1]);
+  });
+
   const summary = (p) => {
-    const role = (p.role_tags || []).join(', ');
-    const linked = (p.linked_projects || []).length ? ` · ${p.linked_projects.join(', ')}` : '';
-    return `${role}${linked}`;
+    const role = esc((p.role_tags || []).join(', '));
+    const linked = (p.linked_projects || []).map((label) => {
+      const slug = projectMap.get(normalize(label));
+      return slug
+        ? `<a class="dir-project-link" href="/projects/${esc(slug)}/">${esc(label)}</a>`
+        : esc(label);
+    }).join(', ');
+    return linked ? `${role} · ${linked}` : role;
   };
 
   function render() {
@@ -96,7 +122,7 @@
         <span class="dir-index">${num}</span>
         <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-${esc(p.icon || 'infrastructure')}"></use></svg>
         <span class="dir-person">${thumb(p)}${name}${badges(p)}</span>
-        <span class="dir-desc">${esc(summary(p))}</span>
+        <span class="dir-desc">${summary(p)}</span>
         <span class="dir-cat">${esc(p.filter_label || p.primary_category.toUpperCase())}</span>
         ${outbound}
       </li>`;
@@ -181,9 +207,18 @@
     ? fetch(reviewSource).then((r) => (r.ok ? r.json() : null)).then((m) => { reviewImages = (m && m.mode === 'dev-review' && m.images) || {}; }).catch(() => {})
     : Promise.resolve();
 
-  Promise.all([fetch(source), reviewReady])
-    .then(([r]) => {
+  Promise.all([
+    fetch(source),
+    reviewReady,
+    fetch(projectsSource)
+      .then((r) => (r.ok ? r.json() : { projects: [] }))
+      .catch(() => ({ projects: [] })),
+  ])
+    .then(async ([r, , projectData]) => {
       if (!r.ok) throw new Error(`${source} responded ${r.status}`);
+      (projectData.projects || [])
+        .filter((p) => p && p.status !== 'archived' && p.name && p.slug)
+        .forEach((p) => projectMap.set(normalize(p.name), p.slug));
       return r.json();
     })
     .then((data) => {

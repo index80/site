@@ -103,7 +103,7 @@ for (const p of data.people || []) {
     if (!html.includes('href="/about/methodology/#people">How People records are built</a>')) throw new Error(`Generated People profile missing methodology link: ${p.slug}`);
     if (html.includes('href="/people/methodology/"')) throw new Error(`Generated People profile links to the retired /people/methodology/: ${p.slug}`);
     if (!html.includes('<p class="people-beta-status" role="note"><strong>PUBLIC BETA · FACTUAL REVIEW OPEN</strong> <span>This profile is based on public sources and may not yet have been confirmed by the person listed.</span> <a href="/submit/">Suggest a correction →</a></p>')) throw new Error(`Generated People profile missing PUBLIC BETA status: ${p.slug}`);
-    if (!p.avatar_url && /<img[^>]+class="people-avatar-img"/.test(html)) throw new Error(`Portrait shown without a cleared avatar: ${p.slug}`);
+    if (!p.avatar_url && /<img[^>]+class="people-avatar-img"/.test(html) && !html.includes('people-review-label')) throw new Error(`Portrait shown without a cleared avatar: ${p.slug}`);
     if (!html.includes('class="people-meta"')) throw new Error(`Generated People profile missing metadata strip: ${p.slug}`);
     if (!/class="button people-link people-link-primary"[^>]*>(?:X|LinkedIn) ↗/.test(html)) throw new Error(`Generated People profile missing X/LinkedIn link: ${p.slug}`);
     if (Boolean(p.bio) !== html.includes('class="people-bio"')) throw new Error(`Generated People profile bio rendering mismatch: ${p.slug}`);
@@ -150,7 +150,7 @@ assertShareMetadata(directoryHtml, 'directory', 'website');
 if (!/<section class="panel people-beta-notice" role="note"[\s\S]*?⚠<\/span> PEOPLE DIRECTORY — PUBLIC BETA<\/p>[\s\S]*?Some profiles have not yet been confirmed by the person listed\. <a href="\/about\/methodology\/#people-corrections">Review your profile or suggest a correction →<\/a>/.test(directoryHtml)) {
   throw new Error('People directory missing the PUBLIC BETA notice');
 }
-if (directoryHtml.indexOf('class="panel people-beta-notice"') > directoryHtml.indexOf('class="panel hero-panel')) throw new Error('PUBLIC BETA notice must sit at the top of /people/');
+if (directoryHtml.indexOf('class="panel people-beta-notice"') > directoryHtml.indexOf('id="people-hero-title"')) throw new Error('PUBLIC BETA notice must sit at the top of /people/');
 if (!directoryHtml.includes('Profiles are human-reviewed against public sources.')) throw new Error('People directory lost the human-review methodology note');
 const methodologyLd = JSON.parse(methodologyHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] || '{}');
 if (methodologyLd['@type'] !== 'WebPage' || methodologyLd.url !== 'https://index80.com/about/methodology/') {

@@ -419,6 +419,57 @@
       .catch(() => { /* Directory fallback remains usable. */ });
   }
 
+  // People profile correction CTAs should go to People-specific guidance rather
+  // than dropping a subject into the project-submission form.
+  if (document.body?.dataset.mode === 'people') {
+    document.querySelectorAll('.people-beta-status a[href="/submit/"]').forEach((link) => {
+      link.setAttribute('href', '/about/methodology/#people-corrections');
+    });
+  }
+
+  // Primary navigation: Data, Learn and Governance are one Explore area.
+  // The older explicit links remain in static HTML as a useful no-JS fallback;
+  // when JavaScript is available, replace them with one ordinary Explore link.
+  const primaryNav = document.querySelector('.main-nav');
+  if (primaryNav) {
+    const existingExplore = primaryNav.querySelector('a[href="/explore/"]');
+    const dataLink = primaryNav.querySelector('a[href="/data/"]');
+    const learnLink = primaryNav.querySelector('a[href="/learn/"]');
+    const governanceLink = primaryNav.querySelector('a[href="/governance/"]');
+    const exploreIsCurrent = window.location.pathname === '/explore/'
+      || [dataLink, learnLink, governanceLink].some((link) => link?.hasAttribute('aria-current'));
+
+    let exploreLink = existingExplore;
+    if (!exploreLink && dataLink && learnLink && governanceLink) {
+      exploreLink = document.createElement('a');
+      exploreLink.href = '/explore/';
+      exploreLink.textContent = '▤ Explore';
+      const aboutLink = primaryNav.querySelector('a[href="/about/"]');
+      primaryNav.insertBefore(exploreLink, aboutLink || null);
+    }
+    if (exploreLink && exploreIsCurrent) exploreLink.setAttribute('aria-current', 'page');
+    [dataLink, learnLink, governanceLink].forEach((link) => link?.remove());
+  }
+
+  // The wordmark suffix identifies the current top-level area. Project pages
+  // retain /CARDANO; deep Learn/Governance/Data pages belong to /EXPLORE.
+  const networkLabel = document.querySelector('.network-label');
+  if (networkLabel) {
+    const path = window.location.pathname;
+    let label = '/CARDANO';
+    if (path === '/people/' || path.startsWith('/people/')) label = '/PEOPLE';
+    else if (
+      path === '/explore/' || path.startsWith('/explore/')
+      || path === '/learn/' || path.startsWith('/learn/')
+      || path === '/governance/' || path.startsWith('/governance/')
+      || path === '/data/' || path.startsWith('/data/')
+    ) label = '/EXPLORE';
+    else if (path === '/about/' || path.startsWith('/about/')) label = '/ABOUT';
+    else if (path === '/registry/' || path.startsWith('/registry/')) label = '/REGISTRY';
+    else if (path === '/submit/' || path.startsWith('/submit/')) label = '/SUBMIT';
+    networkLabel.textContent = label;
+  }
+
   // Generic "copy this value" control — any element with data-copy-value
   // copies that exact string on click (e.g. a project page's full Policy
   // ID, kept in the DOM even though the visible text is truncated).
