@@ -1,5 +1,11 @@
 /* INDEX:80 /registry/ — public registry history and Cardano proof surface. */
 
+/* The Registry workspace uses sibling shared AROS/Workbench frames from site.css.
+   These inner grids only preserve the existing Registry panel layouts. */
+.registry-section-window { overflow:hidden; }
+.registry-section-body { min-width:0; }
+.registry-os-content { display:grid; gap:.8rem; min-width:0; padding:.8rem; }
+
 .registry-hero {
   grid-column:1 / -1;
   display:grid;
@@ -74,13 +80,14 @@
   gap:.35rem;
   padding:1rem;
 }
-.registry-process-flow article { min-width:0; padding:.9rem; border:1px solid #36526e; background:#0c2338; }
-.registry-process-flow article > span { display:block; margin-bottom:.55rem; color:#8fd6ec; font:700 .68rem/1 var(--font-pixel); }
+.registry-process-intro { margin:0; padding:1rem 1rem 0; color:var(--muted); line-height:1.5; }
+.registry-process-flow article { min-width:0; padding:.9rem; border:1px solid var(--line); background:var(--panel-bg-2); }
+.registry-process-flow article > span { display:block; margin-bottom:.55rem; color:var(--accent); font:700 .68rem/1 var(--font-pixel); }
 .registry-process-flow h3 { margin:0 0 .45rem; font:700 .72rem/1.3 var(--font-pixel); }
-.registry-process-flow p { margin:0; color:#c8d8e7; font-size:.86rem; line-height:1.45; }
-.registry-process-flow i { align-self:center; color:#7ba3c4; font-style:normal; font:700 1rem/1 var(--font-pixel); }
-.registry-cadence { display:flex; flex-wrap:wrap; gap:.5rem 1rem; align-items:center; padding:.75rem 1rem; border-top:1px solid #36526e; background:#071829; color:#bdd1e4; }
-.registry-cadence strong { color:#8fd6ec; font:700 .62rem/1.35 var(--font-pixel); }
+.registry-process-flow p { margin:0; color:var(--muted); font-size:.86rem; line-height:1.45; }
+.registry-process-flow i { align-self:center; color:var(--muted); font-style:normal; font:700 1rem/1 var(--font-pixel); }
+.registry-cadence { display:flex; flex-wrap:wrap; gap:.5rem 1rem; align-items:center; padding:.75rem 1rem; border-top:1px solid var(--line); background:var(--panel-bg-2); color:var(--muted); }
+.registry-cadence strong { color:var(--accent); font:700 .62rem/1.35 var(--font-pixel); }
 .registry-cadence span { font-size:.82rem; }
 
 .registry-release { grid-column:1 / -1; overflow:hidden; }
@@ -132,9 +139,83 @@
 .registry-actions .button:hover,
 .registry-actions-primary .button:hover { box-shadow:2px 2px 0 rgba(0,203,232,.28); }
 .registry-technical { border-top:1px solid #27435d; background:#0c2338; }
-.registry-technical summary { cursor:pointer; padding:.75rem 1rem; font:700 .62rem/1.3 var(--font-pixel); }
+.registry-technical > summary {
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  min-height:3rem;
+  padding:.7rem 1rem;
+  cursor:pointer;
+  list-style:none;
+  color:#8fd6ec;
+  font:700 .62rem/1.3 var(--font-pixel);
+  letter-spacing:.06em;
+}
+.registry-technical > summary::-webkit-details-marker { display:none; }
+.registry-technical > summary::marker { content:""; }
+.registry-technical > summary::after {
+  content:"+ OPEN";
+  flex:none;
+  display:inline-flex;
+  align-items:center;
+  min-height:2.75rem;
+  margin-left:auto;
+  padding:.5rem .7rem;
+  border:1px solid #36526e;
+  background:#071829;
+  white-space:nowrap;
+}
+.registry-technical[open] > summary::after { content:"− MINIMISE"; }
+.registry-technical > summary:hover::after { border-color:#8fd6ec; color:#eaf6ff; }
+.registry-technical > summary:focus-visible { outline:3px solid var(--amber); outline-offset:2px; }
 .registry-technical .registry-actions { padding:0 1rem 1rem; }
 .registry-technical a { font-size:.82rem; color:#8fd6ec; }
+
+/* Sprint 3B — Registry disclosure windows.
+   These deliberately reuse the same shared .panel + .panel-title +
+   .disclosure-caret chrome as Project and People evidence windows.
+   Registry-specific CSS only handles layout; it does not invent a second
+   title-bar visual system. */
+.registry-change-history {
+  grid-column:1 / -1;
+  overflow:hidden;
+}
+.registry-change-history-titlebar > span {
+  margin-left:auto;
+  color:var(--muted);
+  font:700 .62rem/1.2 var(--font-pixel);
+  letter-spacing:.06em;
+}
+.registry-change-history-intro { padding:.9rem 1rem 0; }
+.registry-change-history-intro p { margin:.2rem 0 .7rem; max-width:78ch; color:var(--muted); line-height:1.5; }
+.registry-change-windows { display:grid; gap:.8rem; padding:1rem; }
+.registry-change-window { overflow:hidden; }
+.registry-change-window > summary { cursor:pointer; list-style:none; }
+.registry-change-window > summary::-webkit-details-marker { display:none; }
+.registry-window-title { flex-wrap:wrap; }
+.registry-window-title > span {
+  margin-left:auto;
+  min-width:0;
+  color:var(--muted);
+  font:700 .62rem/1.4 var(--font-pixel);
+  letter-spacing:.02em;
+  text-align:right;
+  overflow-wrap:anywhere;
+}
+.registry-window-body {
+  min-width:0;
+  padding:1rem;
+  background:var(--panel-bg);
+  color:var(--text);
+}
+.registry-window-body code,
+.registry-window-body a { overflow-wrap:anywhere; }
+.registry-process-body { padding:0; background:var(--panel-bg); color:var(--text); }
+.registry-process-body .registry-process-flow { padding:1rem; }
+.registry-change-note { margin:0 0 1rem; color:var(--muted); font-size:.86rem; line-height:1.5; }
+.registry-change-body .change-counts { margin-top:0; }
+.registry-change-actions { margin-top:1rem; }
+.registry-change-history-links { padding:0 1rem 1rem; }
 
 .registry-verify { grid-column:1 / -1; }
 .registry-verify-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.7rem; margin-top:.8rem; }
@@ -213,6 +294,9 @@
   .registry-history-row { grid-template-columns:1fr auto; }
   .registry-history-row > code { grid-column:1 / -1; }
   .registry-machine-links { grid-template-columns:1fr; }
+  .registry-change-history-titlebar { align-items:flex-start; flex-wrap:wrap; }
+  .registry-change-history-titlebar > span { flex-basis:100%; margin-left:2.75rem; }
+  .registry-change-windows { padding:.8rem; }
 }
 
 @media (max-width:660px) {
@@ -223,6 +307,8 @@
 }
 
 @media (max-width:520px) {
+  .registry-window-title > span { flex-basis:100%; margin-left:2.75rem; text-align:left; }
+  .registry-window-body { padding:.8rem; }
   .registry-release-head { flex-direction:column; }
   .registry-facts { grid-template-columns:1fr; }
   .registry-facts > div { border-right:0; }
