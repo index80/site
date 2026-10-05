@@ -17,7 +17,7 @@ const read = (...p) => readFileSync(join(PUBLIC, ...p), 'utf8');
 const json = (...p) => JSON.parse(read(...p));
 const failures = [];
 const ok = (cond, label) => { if (!cond) failures.push(label); };
-const text = (html) => html.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+const text = (html) => html.replace(/<script\b[\s\S]*?<\/script\b[^>]*>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
 
 const HOME = read('index.html');
 const projectsData = json('data', 'projects.json');

@@ -67,7 +67,7 @@ assert.equal(failed.network.block_height, undefined, 'all-failed refresh must no
 assert.deepEqual(failed.minswap?.assets || [], [], 'all-failed refresh must not carry previous token rows');
 
 const partial = await runScenario('price-only', async (url) => {
-  if (String(url).includes('api.coingecko.com')) {
+  if (new URL(String(url)).hostname === 'api.coingecko.com') {
     return {
       ok: true,
       status: 200,
