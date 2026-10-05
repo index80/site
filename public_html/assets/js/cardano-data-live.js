@@ -2,13 +2,17 @@
    Live path: one public JSON endpoint at data.index80.com, cached at the edge.
    Static fallback: /data/cardano-snapshot.json. No account, wallet or private data. */
 (() => {
-  if (document.body?.dataset.mode !== 'data') return;
+  if (!['data', 'explore'].includes(document.body?.dataset.mode || '')) return;
 
   const LIVE_DATA_URL = 'https://data.index80.com/cardano.json';
   const STATIC_FALLBACK_URL = '/data/cardano-snapshot.json';
   const LIVE_TIMEOUT_MS = 7000;
   const LIVE_MAX_AGE_MS = 30 * 60 * 1000;
-  const DELAYED_MAX_AGE_MS = 2 * 60 * 60 * 1000;
+  const SnapshotPolicy = window.INDEX80SnapshotPolicy;
+  if (!SnapshotPolicy) {
+    console.warn('[INDEX:80] Snapshot policy unavailable; keeping static Data page.');
+    return;
+  }
 
   const $ = (sel) => document.querySelector(sel);
   const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({
@@ -116,6 +120,46 @@
     <div class="data-metric"><span>${esc(label)}</span><strong class="${cls}">${esc(value)}</strong><small>${esc(note)}</small></div>`;
   const sourceStatus = (source) => String(source?.status || 'unknown').toUpperCase();
 
+  function fieldState(snapshot, key, value, fallbackSource) {
+    const hasProvenance = snapshot.provenance && typeof snapshot.provenance === 'object';
+    const record = hasProvenance ? snapshot.provenance[key] : null;
+    const source = String(record?.source || fallbackSource || '').toUpperCase();
+
+    if (value === null || value === undefined) {
+      return { value: null, available: false, stale: false, note: [source, 'SOURCE UNAVAILABLE'].filter(Boolean).join(' · ') };
+    }
+
+    if (!hasProvenance) {
+      return { value, available: true, stale: false, note: source };
+    }
+
+    const verdict = SnapshotPolicy.validateObservation(record);
+    if (!verdict.ok) {
+      return { value: null, available: false, stale: false, note: [source, 'SOURCE UNAVAILABLE'].filter(Boolean).join(' · ') };
+    }
+
+    return {
+      value,
+      available: true,
+      stale: verdict.stale === true,
+      note: [source, verdict.stale ? 'STALE' : null].filter(Boolean).join(' · '),
+    };
+  }
+
+  function minswapState(snapshot) {
+    const observed = snapshot.minswap?.observed_at || snapshot.minswap?.as_of || snapshot.generated_at;
+    const hasProvenance = snapshot.provenance && typeof snapshot.provenance === 'object';
+    const verdict = hasProvenance
+      ? SnapshotPolicy.validateObservation(snapshot.provenance['minswap.assets'])
+      : SnapshotPolicy.validateTimestamp(observed);
+
+    return {
+      available: verdict.ok,
+      stale: verdict.ok && verdict.stale === true,
+      observed,
+    };
+  }
+
   async function fetchJson(url, timeoutMs = 8000) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), timeoutMs);
@@ -131,47 +175,52 @@
   async function loadPublicSnapshot() {
     try {
       const snapshot = await fetchJson(LIVE_DATA_URL, LIVE_TIMEOUT_MS);
-      if (!snapshot || !snapshot.generated_at || !snapshot.market || !snapshot.network) throw new Error('invalid live snapshot');
-      return { snapshot, delivery: 'live' };
+      const verdict = SnapshotPolicy.validateSnapshot(snapshot);
+      if (!verdict.ok) throw new Error('live snapshot outside display policy');
+      return { snapshot, delivery: 'live', ageMs: verdict.ageMs };
     } catch (liveError) {
       const snapshot = await fetchJson(STATIC_FALLBACK_URL, 5000);
-      return { snapshot, delivery: 'fallback', liveError: liveError.message };
+      const verdict = SnapshotPolicy.validateSnapshot(snapshot);
+      if (!verdict.ok) throw new Error('no current live or fallback snapshot');
+      return { snapshot, delivery: 'fallback', ageMs: verdict.ageMs, liveError: liveError.message };
     }
   }
 
-  Promise.all([
-    loadPublicSnapshot(),
-    fetchJson('/data/projects.json', 5000).catch(() => ({ projects: [] })),
-    fetchJson('/data/treasury-funding.json', 5000).catch(() => ({ records: {} })),
-  ]).then(([snapshotResult, projectData, treasuryData]) => {
-    const { snapshot, delivery } = snapshotResult;
+  loadPublicSnapshot().then((snapshotResult) => {
+    const { snapshot, delivery, ageMs: snapshotAge } = snapshotResult;
     const market = snapshot.market || {};
     const network = snapshot.network || {};
-    const assets = snapshot.minswap?.assets || [];
-    const projects = projectData.projects || [];
-    const bridge = treasuryData.records || {};
 
-    // Shared confirmed-funding rule (treasury-rule.js) — same as the badge,
-    // the filter and the Treasury views.
-    const funded = projects.filter((project) => window.INDEX80Treasury.isConfirmedFunded(project, bridge[project.slug] || {}));
-    const fundingRows = funded.map((project) => {
-      const linked = bridge[project.slug] || {};
-      return { name: project.name, value: n(project.treasury_funding_value_usd ?? linked.treasury_funding_value_usd) };
-    });
-    const knownFunding = fundingRows.reduce((sum, row) => sum + (row.value || 0), 0);
-    const largest = fundingRows.filter((row) => row.value !== null).sort((a, b) => b.value - a.value)[0] || null;
+    const fields = {
+      adaPrice: fieldState(snapshot, 'market.ada_price_usd', market.ada_price_usd, 'CoinGecko'),
+      adaChange: fieldState(snapshot, 'market.ada_change_24h_pct', market.ada_change_24h_pct, 'CoinGecko'),
+      defiTvl: fieldState(snapshot, 'market.defi_tvl_usd', market.defi_tvl_usd, 'DefiLlama'),
+      dexVolume: fieldState(snapshot, 'market.dex_volume_24h_usd', market.dex_volume_24h_usd, 'DefiLlama'),
+      stablecoins: fieldState(snapshot, 'market.stablecoin_mcap_usd', market.stablecoin_mcap_usd, 'DefiLlama'),
+      adaMarketCap: fieldState(snapshot, 'market.ada_market_cap_usd', market.ada_market_cap_usd, 'CoinGecko'),
+      epoch: fieldState(snapshot, 'network.epoch', network.epoch, 'Koios'),
+      blockHeight: fieldState(snapshot, 'network.block_height', network.block_height, 'Koios'),
+      activeStake: fieldState(snapshot, 'network.active_stake_ada', network.active_stake_ada, 'Koios'),
+      epochTx: fieldState(snapshot, 'network.epoch_tx_count', network.epoch_tx_count, 'Koios'),
+      latestBlock: fieldState(snapshot, 'network.latest_block_time', network.latest_block_time, 'Koios'),
+    };
+    const mins = minswapState(snapshot);
+    const rawAssets = Array.isArray(snapshot.minswap?.assets) ? snapshot.minswap.assets : [];
+    const assets = mins.available ? rawAssets : [];
 
     const status = $('#cardano-data-status');
     if (status) {
-      const snapshotAge = ageMs(snapshot.generated_at);
+      const fieldStates = Object.values(fields);
+      const partial = fieldStates.some((field) => !field.available || field.stale)
+        || (rawAssets.length > 0 && (!mins.available || mins.stale));
       let label = 'LIVE PUBLIC DATA';
       let dotClass = '';
       if (delivery === 'fallback') {
         label = 'FALLBACK SNAPSHOT';
         dotClass = 'stale';
-      } else if (snapshotAge === null || snapshotAge > DELAYED_MAX_AGE_MS) {
-        label = 'STALE PUBLIC DATA';
-        dotClass = 'stale';
+      } else if (partial) {
+        label = 'PARTIAL PUBLIC DATA';
+        dotClass = 'delayed';
       } else if (snapshotAge > LIVE_MAX_AGE_MS) {
         label = 'DELAYED PUBLIC DATA';
         dotClass = 'delayed';
@@ -181,49 +230,37 @@
 
     const marketEl = $('#cardano-market-metrics');
     if (marketEl) {
-      const change = n(market.ada_change_24h_pct);
-      // The ADA price label names the source that actually supplied it (CoinGecko
-      // primary, Kraken fallback) from the snapshot's own provenance — never a
-      // hard-coded source. The static fallback snapshot has no provenance and
-      // is CoinGecko-seeded.
-      const priceProv = snapshot.provenance?.['market.ada_price_usd'];
-      const priceSource = String(priceProv?.source || 'CoinGecko').toUpperCase();
-      const priceNote = `${priceSource} · USD${priceProv?.stale ? ' · STALE' : ''}`;
+      const change = n(fields.adaChange.value);
       marketEl.innerHTML = [
-        metric('ADA PRICE', fmtUsd(market.ada_price_usd), priceNote),
-        metric('ADA 24H', fmtPct(change), 'COINGECKO', change === null ? '' : (change >= 0 ? 'up' : 'down')),
-        metric('DEFI TVL', fmtUsd(market.defi_tvl_usd, true), 'DEFILLAMA'),
-        metric('DEX VOLUME 24H', fmtUsd(market.dex_volume_24h_usd, true), 'DEFILLAMA'),
-        metric('STABLECOINS', fmtUsd(market.stablecoin_mcap_usd, true), 'DEFILLAMA'),
-        metric('ADA MARKET CAP', fmtUsd(market.ada_market_cap_usd, true), 'COINGECKO'),
+        metric('ADA PRICE', fmtUsd(fields.adaPrice.value), fields.adaPrice.available ? `${fields.adaPrice.note} · USD` : fields.adaPrice.note),
+        metric('ADA 24H', fmtPct(fields.adaChange.value), fields.adaChange.note, change === null ? '' : (change >= 0 ? 'up' : 'down')),
+        metric('DEFI TVL', fmtUsd(fields.defiTvl.value, true), fields.defiTvl.note),
+        metric('DEX VOLUME 24H', fmtUsd(fields.dexVolume.value, true), fields.dexVolume.note),
+        metric('STABLECOINS', fmtUsd(fields.stablecoins.value, true), fields.stablecoins.note),
+        metric('ADA MARKET CAP', fmtUsd(fields.adaMarketCap.value, true), fields.adaMarketCap.note),
       ].join('');
     }
 
     const networkEl = $('#cardano-network-metrics');
     if (networkEl) {
       networkEl.innerHTML = [
-        metric('EPOCH', fmtInt(network.epoch), 'KOIOS'),
-        metric('BLOCK HEIGHT', fmtInt(network.block_height), 'KOIOS CHAIN TIP'),
-        metric('ACTIVE STAKE', fmtAda(network.active_stake_ada, true), 'KOIOS · CURRENT EPOCH'),
-        metric('EPOCH TX', fmtInt(network.epoch_tx_count), 'KOIOS · CURRENT EPOCH'),
-        metric('LATEST BLOCK', fmtClock(network.latest_block_time), 'KOIOS'),
-        metric('TIP AGE', fmtAge(network.latest_block_time), 'CHAIN FRESHNESS'),
+        metric('EPOCH', fmtInt(fields.epoch.value), fields.epoch.note),
+        metric('BLOCK HEIGHT', fmtInt(fields.blockHeight.value), fields.blockHeight.note),
+        metric('ACTIVE STAKE', fmtAda(fields.activeStake.value, true), fields.activeStake.note),
+        metric('EPOCH TX', fmtInt(fields.epochTx.value), fields.epochTx.note),
+        metric('LATEST BLOCK', fmtClock(fields.latestBlock.value), fields.latestBlock.note),
+        metric('TIP AGE', fields.latestBlock.available ? fmtAge(fields.latestBlock.value) : '—', fields.latestBlock.available ? `CHAIN FRESHNESS · ${fields.latestBlock.note}` : 'CHAIN FRESHNESS · UNAVAILABLE'),
       ].join('');
     }
 
-    const ecosystemEl = $('#cardano-ecosystem-metrics');
-    if (ecosystemEl) {
-      ecosystemEl.innerHTML = [
-        metric('INDEXED PROJECTS', fmtInt(projects.length), 'INDEX:80 REGISTRY EXPORT'),
-        metric('TREASURY FUNDED', fmtInt(funded.length), 'CONFIRMED LINKED RECORDS'),
-        metric('KNOWN LINKED AWARDS', `≈${fmtUsd(knownFunding, true)}`, 'CATALYST HISTORICAL USD'),
-        metric('LARGEST LINKED RECORD', largest ? largest.name : '—', largest ? `≈${fmtUsd(largest.value, true)}` : 'NO USD VALUE'),
-      ].join('');
-    }
+    // INDEX:80-native ecosystem metrics are generated statically at build time.
+    // Live data must not overwrite that trusted release-derived surface.
 
     const table = $('#cardano-market-table-body');
     if (table) {
-      if (!assets.length) {
+      if (!mins.available) {
+        table.innerHTML = '<tr><td colspan="6">Current Minswap market rows are unavailable.</td></tr>';
+      } else if (!assets.length) {
         table.innerHTML = '<tr><td colspan="6">No market rows available in the current public data response.</td></tr>';
       } else {
         table.innerHTML = assets.map((asset) => {
@@ -243,19 +280,27 @@
 
     const marketCaption = $('#cardano-market-caption');
     if (marketCaption) {
-      const observed = snapshot.minswap?.observed_at || snapshot.minswap?.as_of;
-      marketCaption.textContent = `Verified Cardano-native assets from Minswap public metrics${observed ? ` · observed ${fmtDate(observed)}` : ''}. No personal holdings or trading signals.`;
+      if (!mins.available) {
+        marketCaption.textContent = 'Minswap market rows unavailable because the latest observation is outside the display window.';
+      } else {
+        marketCaption.textContent = `Verified Cardano-native assets from Minswap public metrics${mins.observed ? ` · observed ${fmtDate(mins.observed)}` : ''}${mins.stale ? ' · STALE' : ''}. No personal holdings or trading signals.`;
+      }
     }
 
     const sourcesEl = $('#cardano-data-sources');
     if (sourcesEl) {
-      sourcesEl.innerHTML = (snapshot.sources || []).map((source) => {
+      const registrySource = '<li><strong>INDEX:80 Registry</strong><span>Static ecosystem facts from the current governed release.<br><small>AVAILABLE WITHOUT LIVE SERVICES</small></span><a href="/registry/">SOURCE →</a></li>';
+      const externalSources = (snapshot.sources || []).map((source) => {
         const observed = source.observed_at || source.last_success_at;
         return `<li><strong>${esc(source.name)}</strong><span>${esc(source.purpose || '')}<br><small>${esc(sourceStatus(source))}${source.coverage ? ` · ${esc(source.coverage)}` : ''}${observed ? ` · ${esc(fmtAge(observed))}` : ''}</small></span>${safeUrl(source.url) ? `<a href="${esc(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">SOURCE ↗</a>` : ''}</li>`;
       }).join('');
+      sourcesEl.innerHTML = registrySource + externalSources;
     }
   }).catch((error) => {
+    console.warn('[INDEX:80] Optional live Cardano data unavailable; keeping static release snapshot.', error);
     const status = $('#cardano-data-status');
-    if (status) status.innerHTML = `<strong>PUBLIC DATA UNAVAILABLE</strong><span>${esc(error.message)}</span>`;
+    if (status) {
+      status.innerHTML = '<span><i class="data-live-dot stale"></i><strong>LIVE DATA UNAVAILABLE</strong></span><span>STATIC INDEX:80 SNAPSHOT SHOWN</span>';
+    }
   });
 })();

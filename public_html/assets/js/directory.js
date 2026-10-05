@@ -34,9 +34,11 @@
 
   // Controlled category vocabulary, in display order.
   const CATEGORY_ORDER = [
-    'wallet', 'dex', 'defi', 'lending', 'derivatives', 'governance',
-    'analytics', 'explorer', 'nft', 'infrastructure', 'stake-pools', 'developer-tool',
-    'education', 'ai', 'game', 'utility', 'token-project',
+    'wallet', 'dex', 'defi', 'lending', 'derivatives', 'stablecoin',
+    'governance', 'analytics', 'explorer', 'nft', 'game', 'media',
+    'community', 'community-token', 'identity', 'tokenized-asset',
+    'infrastructure', 'depin', 'oracle', 'stake-pools', 'developer-tool',
+    'education', 'ai', 'utility',
   ];
 
   const CATEGORY_ICON = {
@@ -55,6 +57,14 @@
     education: 'education',
     ai: 'ai',
     game: 'nft',
+    media: 'analytics',
+    community: 'governance',
+    'community-token': 'nft',
+    identity: 'governance',
+    'tokenized-asset': 'infrastructure',
+    stablecoin: 'dex',
+    depin: 'infrastructure',
+    oracle: 'analytics',
     utility: 'infrastructure',
     'token-project': 'nft',
   };
@@ -75,6 +85,17 @@
   // Only allow http(s) links out — blocks a `javascript:`/`data:` etc. URL
   // from executing on click even if it slipped past registry validation.
   const safeUrl = (u) => (typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null);
+  const SLUG_RE = /^[a-z0-9-]+$/;
+  const validProject = (p) => Boolean(
+    p &&
+    typeof p.slug === 'string' &&
+    SLUG_RE.test(p.slug) &&
+    p.name &&
+    p.summary &&
+    p.category &&
+    p.status
+  );
+  const isListable = (p) => validProject(p) && p.status !== 'archived';
 
   // Typed-link model: prefer an official website, but fall back to any
   // other outbound link a record does carry. Returns null if a record
@@ -177,7 +198,11 @@
     const counts = {};
     for (const p of projects) counts[p.category] = (counts[p.category] || 0) + 1;
 
-    const cats = CATEGORY_ORDER.filter((c) => counts[c]);
+    const preferred = CATEGORY_ORDER.filter((c) => counts[c]);
+    const unseen = Object.keys(counts)
+      .filter((c) => !CATEGORY_ORDER.includes(c))
+      .sort((a, b) => catLabel(a).localeCompare(catLabel(b)));
+    const cats = preferred.concat(unseen);
     const buttons = [{ id: 'all', label: 'ALL', count: projects.length }].concat(
       cats.map((c) => ({ id: c, label: catLabel(c), count: counts[c] }))
     );
@@ -244,7 +269,7 @@
       // a human editorial decision to retire from active discovery — never
       // surface them in the homepage directory/search. Mirrors isListable()
       // in scripts/generate-home-directory.mjs and generate-site-schema.mjs.
-      const projectRows = (data.projects || []).filter((p) => p.status !== 'archived');
+      const projectRows = (data.projects || []).filter(isListable);
       const nameBySlug = new Map(projectRows.map((p) => [p.slug, p.name]));
       const effectiveRelations = {};
 

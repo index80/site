@@ -61,7 +61,11 @@
       : rows;
 
     const peopleShown = renderPeople(q);
-    count.textContent = `${shown.length + peopleShown} / ${rows.length + peopleRows.length} RECORDS`;
+    const projectCount = q ? `${shown.length}/${rows.length} PROJECTS` : `${rows.length} PROJECTS`;
+    const peopleCount = peopleRows.length
+      ? (q ? `${peopleShown}/${peopleRows.length} PEOPLE` : `${peopleRows.length} PEOPLE`)
+      : '';
+    count.textContent = [projectCount, peopleCount].filter(Boolean).join(' · ');
     if (!shown.length) {
       body.innerHTML = '<tr><td colspan="5" class="registry-snapshot-empty">No matching projects.</td></tr>';
       return;
@@ -185,10 +189,8 @@
       render();
       search.addEventListener('input', () => render(search.value));
     } catch (error) {
-      title.textContent = 'SNAPSHOT UNAVAILABLE';
-      intro.textContent = error instanceof Error ? error.message : String(error);
-      count.textContent = '0 RECORDS';
-      body.innerHTML = '<tr><td colspan="5" class="registry-snapshot-empty">Unable to load this registry snapshot.</td></tr>';
+      console.warn('[INDEX:80] Registry snapshot enhancement unavailable; keeping static latest snapshot.', error);
+      intro.textContent = 'The requested snapshot could not be loaded. Showing the latest static registry snapshot.';
     }
   }
 

@@ -9,7 +9,9 @@
  * governance facts in compact cards; one short record line linking to the
  * shared methodology page instead of repeating it on every profile.
  *
- * Each profile shows its production-approved avatar, else the monogram.
+ * On the protected DEV preview only, candidate PFPs staged by
+ * stage-people-pfp-review.mjs are shown with a visible review label; otherwise
+ * (and always on dev/main) the production-approved avatar or the monogram is used.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -21,6 +23,7 @@ import {
   safeExternalUrl,
   validatePublicPerson,
 } from './lib/people-public.mjs';
+import { loadReviewMap } from './lib/people-pfp-review.mjs';
 import { hasVerifiedDrep, hasVerifiedSpo, inferredRole, initials, profileStrap } from './lib/people-display.mjs';
 import { renderNavLinks } from './lib/site-nav.mjs';
 import { personMetaDescription, personTitle } from './lib/people-seo.mjs';
@@ -51,12 +54,34 @@ export function formatDate(iso) {
   return m ? `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}` : null;
 }
 
+// Public provenance wording. verification_status records INDEX:80's own
+// research only: it never implies the person confirmed their facts, and it
+// says nothing about image permission (tracked separately, never public).
+// "Facts confirmed by subject — [date]" may only appear once a public,
+// governed subject-confirmation date exists; no such field is published yet.
 const EVIDENCE_LINE = {
-  VERIFIED: 'Verified against public sources',
-  PARTIAL: 'Partially verified against public sources',
-  UNVERIFIED: 'Not yet verified',
+  VERIFIED: 'Independently checked by INDEX:80',
+  PARTIAL: 'Partly checked by INDEX:80, some checks open',
+  UNVERIFIED: 'Not yet checked by INDEX:80',
   CONFLICT: 'Sources currently conflict',
 };
+
+const EVIDENCE_SHORT_LABEL = {
+  VERIFIED: 'Checked',
+  PARTIAL: 'Partly checked',
+  UNVERIFIED: 'Not yet checked',
+  CONFLICT: 'Sources conflict',
+};
+
+/** "Independently checked by INDEX:80 — 28 Sep 2026"; no date is ever invented. */
+export function evidenceLine(p) {
+  const label = EVIDENCE_LINE[p.verification_status] || 'Evidence status recorded';
+  const checked = formatDate(p.last_verified);
+  if (!checked) return label;
+  return p.verification_status === 'VERIFIED' || p.verification_status === 'PARTIAL'
+    ? `${label} — ${checked}`
+    : `${label} · Last checked ${checked}`;
+}
 
 /** @deprecated migration fallback — see profileStrap(); kept for callers/tests. */
 export const principalRole = inferredRole;
@@ -86,7 +111,7 @@ function relationChip(label, projectMap) {
     : `<span class="tag-chip">${esc(label)}</span>`;
 }
 
-export function renderAvatar(p) {
+export function renderAvatar(p, review) {
   const avatar = safeAvatarPath(p.avatar_url);
   if (avatar) {
     const alt = p.avatar_alt || `${p.name} profile image`;
@@ -99,6 +124,13 @@ export function renderAvatar(p) {
     return `<figure class="people-avatar">
           <img class="people-avatar-img" src="${esc(avatar)}" alt="${esc(alt)}" loading="eager" referrerpolicy="no-referrer">
           ${credit}
+        </figure>`;
+  }
+  const candidate = review?.images?.[p.slug];
+  if (candidate) {
+    return `<figure class="people-avatar people-avatar-review" data-pfp-review="candidate">
+          <img class="people-avatar-img" src="${esc(candidate.path)}" alt="${esc(p.name)} public profile image (candidate for review)" loading="eager" referrerpolicy="no-referrer">
+          <figcaption class="people-review-label">${esc(review.label)}</figcaption>
         </figure>`;
   }
   return `<div class="people-avatar people-avatar-fallback" role="img" aria-label="Profile image not yet published for ${esc(p.name)}"><span>${esc(initials(p.name))}</span></div>`;
@@ -189,12 +221,13 @@ function learnLinks(p) {
   return links.length ? ` ${links.join(' · ')} ·` : '';
 }
 
-export function render(p, projectMap) {
+export function render(p, projectMap, review = null) {
   const pageTitle = personTitle(p);
   const pageUrl = `https://index80.com/people/${p.slug}/`;
   const description = metaDescription(p);
   const checked = formatDate(p.last_verified);
-  const meta = [p.primary_category, p.verification_status, checked ? `Checked ${checked}` : null].filter(Boolean);
+  const statusLabel = EVIDENCE_SHORT_LABEL[p.verification_status] || null;
+  const meta = [p.primary_category, statusLabel && checked ? `${statusLabel} ${checked}` : statusLabel].filter(Boolean);
   const tags = (p.role_tags || []).map((r) => `<span class="tag-chip">${esc(r)}</span>`).join('');
   const projects = (p.linked_projects || []).map((r) => relationChip(r, projectMap)).join('');
   const facts = [
@@ -204,10 +237,7 @@ export function render(p, projectMap) {
     governanceCards(p),
     chipCard('ROLE TAGS', tags),
   ].filter(Boolean).join('\n      ');
-  const recordLine = [
-    EVIDENCE_LINE[p.verification_status] || 'Evidence status recorded',
-    checked ? `Last checked ${checked}` : null,
-  ].filter(Boolean).map(esc).join(' · ');
+  const recordLine = esc(evidenceLine(p));
 
   return `<!doctype html>
 <html lang="en">
@@ -262,7 +292,7 @@ ${renderNavLinks('/people/', '      ')}
 
     <section class="panel people-profile-hero people-record-header" aria-labelledby="person-name">
       <div class="people-profile-media">
-        ${renderAvatar(p)}
+        ${renderAvatar(p, review)}
       </div>
       <div class="people-profile-copy">
         <p class="people-record-cat">${esc(p.primary_category)}</p>
@@ -304,9 +334,11 @@ function main() {
   const peopleData = JSON.parse(readFileSync(PEOPLE_FILE, 'utf8'));
   const projectsData = JSON.parse(readFileSync(PROJECTS_FILE, 'utf8'));
   const projectMap = new Map((projectsData.projects || []).map((p)=>[normalize(p.name),p.slug]));
+  const review = loadReviewMap(PUBLIC);
 
   let generated = 0;
   let custom = 0;
+  let candidates = 0;
   const people = peopleData.people || [];
   const activeSlugs = new Set();
   for (const p of people) {
@@ -323,12 +355,13 @@ function main() {
     }
 
     mkdirSync(dir, {recursive:true});
-    writeFileSync(out, render(p, projectMap), 'utf8');
+    writeFileSync(out, render(p, projectMap, review), 'utf8');
     generated += 1;
+    if (!p.avatar_url && review?.images?.[p.slug]) candidates += 1;
   }
 
   const pruned = pruneStaleGeneratedProfiles(PEOPLE_DIR, activeSlugs);
-  console.log(`[generate-people-pages] wrote ${generated} generated profile(s); preserved ${custom} custom profile(s); pruned ${pruned} stale generated profile(s)`);
+  console.log(`[generate-people-pages] wrote ${generated} generated profile(s); preserved ${custom} custom profile(s); pruned ${pruned} stale generated profile(s)${review ? `; DEV review: ${candidates} candidate PFP(s)` : ''}`);
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();

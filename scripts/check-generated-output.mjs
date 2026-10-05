@@ -27,13 +27,17 @@ const SKIP_DIRS = new Set(['.git', 'node_modules']);
 const GENERATED_FILES = new Set([
   'public_html/index.html', // generate-home-directory, generate-site-schema
   'public_html/learn/index.html', // generate-site-schema
-  'public_html/governance/index.html', // generate-site-schema
+  'public_html/governance/index.html', // generate-governance-directory, generate-site-schema
+  'public_html/data/index.html', // generate-data-page
+  'public_html/explore/index.html', // generate-explore-page
   'public_html/registry/index.json', // generate-registry-history
   'public_html/registry/index.html', // generate-registry-history
+  'public_html/registry/view/index.html', // generate-registry-view
   'public_html/sitemap.xml', // generate-sitemap
   'public_html/data/search-index.json', // generate-search-index
   'public_html/site-version.json', // generate-site-version (build stamp)
   'public_html/assets/js/main.js', // generate-site-version (build stamp)
+  'public_html/_routes.json', // generate-pages-routes (gitignored; absent in a fresh checkout)
 ]);
 const GENERATED_PREFIXES = ['public_html/projects/']; // generate-project-pages and the apply-* scripts
 

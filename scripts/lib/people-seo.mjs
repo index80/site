@@ -1,17 +1,17 @@
 /**
  * Search/social metadata for People profiles, derived only from approved
  * public People data (people.json). Never claims more than the recorded
- * evidence status: "Verified" always means verified against public sources,
- * not confirmed by the person themselves.
+ * evidence status: "Checked" always means INDEX:80 checked public sources,
+ * not that the person themselves confirmed anything.
  */
 import { profileStrap } from './people-display.mjs';
 
 const MAX = 160;
 
 export const EVIDENCE_SHORT = {
-  VERIFIED: 'Verified against public sources.',
-  PARTIAL: 'Partially verified against public sources.',
-  UNVERIFIED: 'Not yet verified.',
+  VERIFIED: 'Checked against public sources.',
+  PARTIAL: 'Partly checked against public sources.',
+  UNVERIFIED: 'Not yet checked.',
   CONFLICT: 'Sources currently conflict.',
 };
 

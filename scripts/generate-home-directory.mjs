@@ -20,11 +20,15 @@ const Treasury = createRequire(import.meta.url)('../public_html/assets/js/treasu
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC_HTML = join(ROOT, 'public_html');
 const DATA_FILE = join(PUBLIC_HTML, 'data', 'projects.json');
+const PEOPLE_FILE = join(PUBLIC_HTML, 'data', 'people.json');
+const REGISTRY_INDEX_FILE = join(PUBLIC_HTML, 'registry', 'index.json');
 const RELATIONS_FILE = join(PUBLIC_HTML, 'data', 'project-relations.json');
 const HOME_FILE = join(PUBLIC_HTML, 'index.html');
 
 const START_MARKER = '<!-- INDEX80_DIRECTORY_START -->';
 const END_MARKER = '<!-- INDEX80_DIRECTORY_END -->';
+const CURRENT_START = '<!-- INDEX80_CURRENT_STATE_START -->';
+const CURRENT_END = '<!-- INDEX80_CURRENT_STATE_END -->';
 const SLUG_RE = /^[a-z0-9-]+$/;
 
 const CATEGORY_ICON = {
@@ -168,9 +172,55 @@ function updateStaticCount(html, count) {
   return html.replace(pattern, `$1${count} RECORDS$2`);
 }
 
+function replaceCurrentState(html, body) {
+  const start = html.indexOf(CURRENT_START);
+  const end = html.indexOf(CURRENT_END);
+  if (start < 0 || end < 0 || end <= start) {
+    throw new Error('Homepage current-state markers are missing or out of order.');
+  }
+  const contentStart = start + CURRENT_START.length;
+  return html.slice(0, contentStart) + '\n' + body + '\n      ' + html.slice(end);
+}
+
+// Each WHAT'S CURRENT date is read from the governed dataset it describes —
+// never the build clock — so a rebuild cannot make old data look fresh. A
+// missing or malformed date renders as an explicit "UNDATED", not a guess.
+export function isoDay(value) {
+  const m = /^(\d{4}-\d{2}-\d{2})/.exec(String(value || ''));
+  return m && !Number.isNaN(Date.parse(m[1] + 'T00:00:00Z')) ? m[1] : null;
+}
+
+function datedLabel(prefix, iso) {
+  if (!iso) return `${prefix} UNDATED`;
+  const display = new Intl.DateTimeFormat('en-GB', { day:'numeric', month:'short', year:'numeric', timeZone:'UTC' })
+    .format(new Date(iso + 'T00:00:00Z')).toUpperCase();
+  return `${prefix} <time datetime="${iso}">${esc(display)}</time>`;
+}
+
+export function currentStateBody(projects, people, registryIndex, dates = {}) {
+  const governanceCount = projects.filter((p) => p.category === 'governance').length;
+  const latestId = registryIndex.latest_release_id || 'LATEST RELEASE';
+  const latest = (registryIndex.releases || []).find((release) => release.release_id === latestId);
+  const projectsDate = isoDay(dates.projects);
+  const peopleDate = isoDay(dates.people);
+  const proofDate = isoDay(latest?.proof?.confirmation_observed?.date);
+
+  // Window chrome, shortcuts and the trust line are static in index.html;
+  // only the data-tied tiles are generated.
+  return `        <div class="current-state-grid">
+          <a class="current-state-item" href="#directory"><span>PROJECTS</span><strong>${projects.length}</strong><small>LISTED · ${datedLabel('DATA', projectsDate)}</small></a>
+          <a class="current-state-item" href="/people/"><span>PEOPLE</span><strong>${people.length}</strong><small>PUBLIC PROFILES · ${datedLabel('DATA', peopleDate)}</small></a>
+          <a class="current-state-item" href="/governance/"><span>GOVERNANCE</span><strong>${governanceCount}</strong><small>LISTED · ${datedLabel('DATA', projectsDate)}</small></a>
+          <a class="current-state-item" href="/registry/"><span>REGISTRY</span><strong>${esc(latestId)}</strong><small>${proofDate ? datedLabel('MAINNET PROOF ·', proofDate) : 'MAINNET PROOF · SEE REGISTRY'}</small></a>
+        </div>`;
+}
+
 function main() {
   const data = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
+  const peopleData = JSON.parse(readFileSync(PEOPLE_FILE, 'utf8'));
+  const registryIndex = JSON.parse(readFileSync(REGISTRY_INDEX_FILE, 'utf8'));
   const projects = (data.projects || []).filter(isListable);
+  const people = Array.isArray(peopleData.people) ? peopleData.people : [];
   const fallbackRelations = loadFallbackRelations();
   const relations = effectiveRelations(projects, fallbackRelations);
   const ordered = orderByRelations(projects, relations);
@@ -183,9 +233,13 @@ function main() {
   let html = readFileSync(HOME_FILE, 'utf8');
   html = replaceGeneratedDirectory(html, rows);
   html = updateStaticCount(html, ordered.length);
+  html = replaceCurrentState(html, currentStateBody(ordered, people, registryIndex, {
+    projects: data.generated_at,
+    people: peopleData.generated,
+  }));
   writeFileSync(HOME_FILE, html, 'utf8');
 
   console.log(`[generate-home-directory] wrote ${ordered.length} static project row(s) to public_html/index.html`);
 }
 
-main();
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();

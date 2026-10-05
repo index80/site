@@ -130,7 +130,10 @@ export function buildSearchIndex() {
     const meta = pageMeta(rel);
     const {description, html} = meta;
     const title = titleOverride || meta.title;
-    const headings = [...html.matchAll(/<h[12][^>]*>([\s\S]*?)<\/h[12]>/g)].map((m) => decode(m[1]));
+    // OS-window title bars wrap headings in a button with screen-reader-only
+    // helper text and a live record count; neither is a search term.
+    const headings = [...html.matchAll(/<h[12][^>]*>([\s\S]*?)<\/h[12]>/g)]
+      .map((m) => decode(m[1].replace(/<span class="(?:visually-hidden|directory-count)"[^>]*>[^<]*<\/span>|<span id="[^"]*" class="directory-count">[^<]*<\/span>/g, ' ')));
     items.push(item(type, title, kind, url, terms(title, kind, description, headings)));
   }
 

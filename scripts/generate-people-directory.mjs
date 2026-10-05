@@ -12,9 +12,11 @@ import { fileURLToPath } from 'node:url';
 import { safeAvatarPath, validatePublicPerson } from './lib/people-public.mjs';
 import { directoryMeta } from './lib/people-seo.mjs';
 import { hasVerifiedDrep, hasVerifiedSpo, initials } from './lib/people-display.mjs';
+import { loadReviewMap, REVIEW_MAP_FILE } from './lib/people-pfp-review.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILE = join(ROOT, 'public_html', 'data', 'people.json');
+const PROJECTS_FILE = join(ROOT, 'public_html', 'data', 'projects.json');
 const PAGE_FILE = join(ROOT, 'public_html', 'people', 'index.html');
 const START = '<!-- INDEX80_PEOPLE_DIRECTORY_START -->';
 const END = '<!-- INDEX80_PEOPLE_DIRECTORY_END -->';
@@ -28,33 +30,48 @@ function validPerson(p) {
   return Boolean(p.name && p.primary_category && Array.isArray(p.role_tags));
 }
 
-function summary(p) {
-  const role = p.role_tags.join(', ');
+const normalize = (s) => String(s ?? '').trim().toLowerCase();
+
+function summary(p, projectMap) {
+  const role = esc(p.role_tags.join(', '));
   const linked = Array.isArray(p.linked_projects) && p.linked_projects.length
-    ? ` · ${p.linked_projects.join(', ')}`
+    ? p.linked_projects.map((label) => {
+        const slug = projectMap.get(normalize(label));
+        return slug
+          ? `<a class="dir-project-link" href="/projects/${esc(slug)}/">${esc(label)}</a>`
+          : esc(label);
+      }).join(', ')
     : '';
-  return `${role}${linked}`;
+  return linked ? `${role} · ${linked}` : role;
 }
 
 function external(p) {
   return p.x_url || p.linkedin_url || null;
 }
 
-// Small avatar: approved avatar, else a monogram.
+const review = loadReviewMap(join(ROOT, 'public_html'));
+
+// Small avatar: approved avatar, else the DEV-only review candidate, else a monogram.
 function thumb(p) {
-  const src = safeAvatarPath(p.avatar_url);
-  if (src) return `<img class="dir-thumb" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`;
+  const approved = safeAvatarPath(p.avatar_url);
+  const candidate = !approved && review?.images?.[p.slug]?.path;
+  const src = approved || candidate;
+  if (src) return `<img class="dir-thumb${candidate ? ' dir-thumb-review' : ''}" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`;
   return `<span class="dir-thumb dir-thumb-fallback" aria-hidden="true">${esc(initials(p.name))}</span>`;
 }
 
 function badges(p) {
+  const checkedTitle = p.last_verified
+    ? `INDEX:80 checked against public sources on ${p.last_verified}`
+    : 'INDEX:80 checked against public sources';
   return [
-    hasVerifiedDrep(p) ? '<span class="dir-badge" title="Verified active DRep">DREP</span>' : '',
-    hasVerifiedSpo(p) ? '<span class="dir-badge" title="Verified active stake pool operator">SPO</span>' : '',
+    hasVerifiedDrep(p) ? '<span class="dir-badge" title="Active DRep — checked against on-chain or official sources">DREP</span>' : '',
+    hasVerifiedSpo(p) ? '<span class="dir-badge" title="Active stake pool operator — checked against on-chain or official sources">SPO</span>' : '',
+    p.verification_status === 'VERIFIED' ? `<span class="dir-badge dir-badge-checked" title="${esc(checkedTitle)}">CHECKED</span>` : '',
   ].join('');
 }
 
-function renderRow(p, index) {
+function renderRow(p, index, projectMap) {
   const num = String(index + 1).padStart(2, '0');
   const name = p.profile_url
     ? `<a class="dir-name" href="${esc(p.profile_url)}">${esc(p.name)}</a>`
@@ -67,7 +84,7 @@ function renderRow(p, index) {
           <span class="dir-index">${num}</span>
           <svg class="icon dir-icon" aria-hidden="true"><use href="/assets/icons/icons.svg#icon-${esc(p.icon || 'infrastructure')}"></use></svg>
           <span class="dir-person">${thumb(p)}${name}${badges(p)}</span>
-          <span class="dir-desc">${esc(summary(p))}</span>
+          <span class="dir-desc">${summary(p, projectMap)}</span>
           <span class="dir-cat">${esc(p.filter_label || p.primary_category.toUpperCase())}</span>
           ${outbound}
         </li>`;
@@ -147,8 +164,12 @@ function schemaBlock(people, generated) {
 }
 
 const data = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
+const projectsData = JSON.parse(readFileSync(PROJECTS_FILE, 'utf8'));
+const projectMap = new Map((projectsData.projects || [])
+  .filter((p) => p && p.status !== 'archived' && p.name && p.slug)
+  .map((p) => [normalize(p.name), p.slug]));
 const people = (data.people || []).filter(validPerson);
-const rows = people.map(renderRow).join('\n');
+const rows = people.map((p, index) => renderRow(p, index, projectMap)).join('\n');
 
 let html = readFileSync(PAGE_FILE, 'utf8');
 const start = html.indexOf(START);
@@ -162,7 +183,9 @@ if (html.indexOf(START, start + START.length) !== -1 || html.indexOf(END, end + 
 html = html.slice(0, start + START.length) + '\n' + rows + '\n        ' + html.slice(end);
 html = replaceBlock(html, META_START, META_END, metaBlock(people));
 html = replaceBlock(html, SCHEMA_START, SCHEMA_END, schemaBlock(people, data.generated));
+// The DEV review map is referenced only when review mode staged it for this build.
 html = html.replace(/ data-pfp-review="[^"]*"/, '');
+if (review) html = html.replace('data-people-directory ', `data-people-directory data-pfp-review="/${REVIEW_MAP_FILE}" `);
 html = html.replace(
   /(<span id="people-directory-count" class="directory-count">)[^<]*(<\/span>)/,
   `$1${people.length} RECORDS$2`
