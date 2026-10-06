@@ -33,6 +33,8 @@ const GENERATED_FILES = new Set([
   'public_html/registry/index.json', // generate-registry-history
   'public_html/registry/index.html', // generate-registry-history
   'public_html/registry/view/index.html', // generate-registry-view
+  'public_html/changes/index.html', // generate-change-history
+  'public_html/data/change-ledger.json', // generate-change-history
   'public_html/sitemap.xml', // generate-sitemap
   'public_html/data/search-index.json', // generate-search-index
   'public_html/site-version.json', // generate-site-version (build stamp)
@@ -44,6 +46,11 @@ const GENERATED_PREFIXES = ['public_html/projects/']; // generate-project-pages 
 const MAIN_JS = 'public_html/assets/js/main.js';
 const VERSION_JSON = 'public_html/site-version.json';
 const STAMP_FILES = new Set([MAIN_JS, VERSION_JSON]);
+const REQUIRED_DETERMINISTIC_OUTPUTS = [
+  'public_html/registry/index.html',
+  'public_html/changes/index.html',
+  'public_html/data/change-ledger.json',
+];
 const VERSION_MARKER = /const VERSION = '([^']*)';/g;
 
 const isGenerated = (path) => GENERATED_FILES.has(path) || GENERATED_PREFIXES.some((prefix) => path.startsWith(prefix));
@@ -119,6 +126,10 @@ for (const path of firstBuildChanges.filter((p) => !isGenerated(p))) {
 }
 
 // 2. Determinism: build 2 must reproduce build 1 exactly, except for the masked build stamp.
+for (const path of REQUIRED_DETERMINISTIC_OUTPUTS) {
+  if (!afterOne.has(path) || !afterTwo.has(path)) failures.push(`required deterministic output missing: ${path}`);
+  else if (afterOne.get(path) !== afterTwo.get(path)) failures.push(`required output differs between identical builds: ${path}`);
+}
 for (const path of changedPaths(afterOne, afterTwo)) {
   if (!STAMP_FILES.has(path)) failures.push(`non-deterministic output, differs between consecutive builds: ${path}`);
 }
@@ -134,4 +145,4 @@ if (failures.length > 0) {
 }
 
 const stampNote = stampOne.version === stampTwo.version ? `build stamp ${stampOne.version}` : `build stamp ${stampOne.version} -> ${stampTwo.version}`;
-console.log(`[generated-output] PASS - two consecutive builds are identical (${stampNote} masked); build 1 changed ${firstBuildChanges.length} file(s) relative to the pre-build tree, all inside the generated-output surface.`);
+console.log(`[generated-output] PASS - two consecutive builds are identical, including Registry HTML, Changes HTML and the public change ledger (${stampNote} masked); build 1 changed ${firstBuildChanges.length} file(s) relative to the pre-build tree, all inside the generated-output surface.`);

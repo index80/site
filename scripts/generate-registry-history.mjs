@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderNavLinks } from './lib/site-nav.mjs';
+import { buildDryRun } from './sprint3a-change-detection.mjs';
+import { renderRegistryChangeHistory } from './generate-change-history.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const REGISTRY_DIR = path.join(ROOT, 'public_html/registry');
@@ -241,6 +243,10 @@ ${renderNavLinks('/registry/', '      ')}
   </header>
 
   <main id="main" class="page-grid single-column">
+    <section class="panel os-window registry-section-window" data-window="registry-history" data-room="registry" aria-labelledby="registry-history-window-title">
+      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-history-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-history-window-title">INDEX:80 · /REGISTRY</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide Registry history</span></button></h2>
+      <div class="os-window-body registry-section-body" id="registry-history-body">
+        <div class="registry-os-content">
     <section class="panel registry-hero">
       <div class="hero-copy">
         <div class="eyebrow on-dark">PUBLIC REGISTRY + CARDANO PROOF</div>
@@ -258,25 +264,40 @@ ${renderNavLinks('/registry/', '      ')}
       </div>
     </section>
 
-    <section class="panel dark registry-process" aria-labelledby="registry-process-title">
-      <div class="registry-section-head">
-        <span>HOW IT WORKS</span>
-        <h2 id="registry-process-title">THE PUBLISHING PROCESS</h2>
-        <p>Simple by design: one public file, one fingerprint, one manually approved Cardano transaction.</p>
-      </div>
-      <div class="registry-process-flow">
-        <article><span>01</span><h3>LIVE REGISTRY</h3><p>The current approved INDEX:80 public registry is the source.</p></article>
-        <i aria-hidden="true">→</i>
-        <article><span>02</span><h3>FREEZE SNAPSHOT</h3><p>A permanent JSON copy is created for that release.</p></article>
-        <i aria-hidden="true">→</i>
-        <article><span>03</span><h3>HASH + APPROVE</h3><p>SHA-256 is calculated and the transaction is approved locally in Lace.</p></article>
-        <i aria-hidden="true">→</i>
-        <article><span>04</span><h3>CARDANO PROOF</h3><p>The fingerprint is recorded on Cardano and linked back here.</p></article>
-      </div>
-      <div class="registry-cadence"><strong>PLANNED CADENCE: WEEKLY</strong><span>Snapshot preparation can be automated. Cardano signing always requires manual wallet approval.</span></div>
-    </section>
-
     ${latest ? renderRelease(latest, true) : '<section class="panel dark shell-panel"><h2>NO RELEASES YET</h2></section>'}
+        </div><!-- /.registry-os-content -->
+      </div><!-- /#registry-history-body -->
+    </section><!-- /[data-window="registry-history"] -->
+
+    <section class="panel os-window registry-section-window" data-window="registry-changes" data-room="registry" aria-labelledby="registry-changes-window-title">
+      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-changes-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-changes-window-title">INDEX:80 · /RECENT CHANGES</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide Recent Changes</span></button></h2>
+      <div class="os-window-body registry-section-body" id="registry-changes-body">
+        <div class="registry-os-content">
+    ${renderRegistryChangeHistory(history, buildDryRun(ROOT))}
+        </div><!-- /.registry-os-content -->
+      </div><!-- /#registry-changes-body -->
+    </section><!-- /[data-window="registry-changes"] -->
+
+    <section class="panel os-window registry-section-window" data-window="registry-verify" data-room="registry" aria-labelledby="registry-verify-window-title">
+      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-verify-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-verify-window-title">INDEX:80 · /VERIFY</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide verification guidance</span></button></h2>
+      <div class="os-window-body registry-section-body" id="registry-verify-body">
+        <div class="registry-os-content">
+    <details class="panel registry-process profile-source" id="registry-process">
+      <summary class="panel-title"><h2 id="registry-process-title">THE PUBLISHING PROCESS</h2><span>/ HOW IT WORKS <b class="disclosure-caret">▸</b></span></summary>
+      <div class="registry-window-body registry-process-body">
+        <p class="registry-process-intro">Simple by design: one public file, one fingerprint, one manually approved Cardano transaction.</p>
+        <div class="registry-process-flow">
+          <article><span>01</span><h3>LIVE REGISTRY</h3><p>The current approved INDEX:80 public registry is the source.</p></article>
+          <i aria-hidden="true">→</i>
+          <article><span>02</span><h3>FREEZE SNAPSHOT</h3><p>A permanent JSON copy is created for that release.</p></article>
+          <i aria-hidden="true">→</i>
+          <article><span>03</span><h3>HASH + APPROVE</h3><p>SHA-256 is calculated and the transaction is approved locally in Lace.</p></article>
+          <i aria-hidden="true">→</i>
+          <article><span>04</span><h3>CARDANO PROOF</h3><p>The fingerprint is recorded on Cardano and linked back here.</p></article>
+        </div>
+        <div class="registry-cadence"><strong>PLANNED CADENCE: WEEKLY</strong><span>Snapshot preparation can be automated. Cardano signing always requires manual wallet approval.</span></div>
+      </div>
+    </details>
 
     <section class="panel dark shell-panel registry-verify">
       <div class="registry-section-head compact">
@@ -290,7 +311,14 @@ ${renderNavLinks('/registry/', '      ')}
       </div>
       <p class="registry-note">The whole INDEX:80 database is not written on-chain. Cardano carries the compact proof; the readable registry stays on the open web.</p>
     </section>
+        </div><!-- /.registry-os-content -->
+      </div><!-- /#registry-verify-body -->
+    </section><!-- /[data-window="registry-verify"] -->
 
+    <section class="panel os-window registry-section-window" data-window="registry-wallet-window" data-room="registry" aria-labelledby="registry-wallet-window-title">
+      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-wallet-window-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-wallet-window-title">INDEX:80 · /REGISTRY WALLET</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide the Registry wallet</span></button></h2>
+      <div class="os-window-body registry-section-body" id="registry-wallet-window-body">
+        <div class="registry-os-content">
     <section class="panel dark shell-panel registry-wallet" id="registry-wallet" aria-labelledby="registry-wallet-title">
       <div class="registry-section-head compact">
         <span>PUBLIC TRANSPARENCY</span>
@@ -307,7 +335,14 @@ ${renderNavLinks('/registry/', '      ')}
         </div>
       </div>
     </section>
+        </div><!-- /.registry-os-content -->
+      </div><!-- /#registry-wallet-window-body -->
+    </section><!-- /[data-window="registry-wallet-window"] -->
 
+    <section class="panel os-window registry-section-window" data-window="registry-data" data-room="registry" aria-labelledby="registry-data-window-title">
+      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-data-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-data-window-title">INDEX:80 · /RELEASES + OPEN DATA</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide releases and open data</span></button></h2>
+      <div class="os-window-body registry-section-body" id="registry-data-body">
+        <div class="registry-os-content">
     <section class="panel dark shell-panel">
       <div class="registry-section-head compact">
         <span>ARCHIVE</span>
@@ -328,8 +363,12 @@ ${renderNavLinks('/registry/', '      ')}
         <a href="/registry/index.json"><strong>Release history</strong><code>/registry/index.json</code></a>
         ${latest ? `<a href="${html(latest.snapshot.path)}"><strong>Latest snapshot</strong><code>${html(latest.snapshot.path)}</code></a>` : ''}
         ${latest ? `<a href="${html(latest.release_manifest_url)}"><strong>Latest manifest</strong><code>${html(latest.release_manifest_url)}</code></a>` : ''}
+        <a href="/data/change-ledger.json"><strong>Change ledger</strong><code>/data/change-ledger.json</code></a>
       </div>
     </section>
+        </div><!-- /.registry-os-content -->
+      </div><!-- /#registry-data-body -->
+    </section><!-- /[data-window="registry-data"] -->
   </main>
 
   <footer class="site-footer">

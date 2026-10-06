@@ -4,27 +4,25 @@
   <script src="/assets/js/analytics.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="INDEX:80 Registry — weekly public Cardano ecosystem snapshots with downloadable JSON, SHA-256 fingerprints and independently verifiable Cardano proofs.">
-  <title>Registry — INDEX:80 / CARDANO</title>
-  <link rel="canonical" href="https://index80.com/registry/">
-  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
-  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <meta name="description" content="Generated INDEX:80 change history showing what was added, removed from the public index, or factually updated between immutable Registry releases.">
+  <title>Recent Changes — INDEX:80 / CARDANO</title>
+  <link rel="canonical" href="https://index80.com/changes/">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
-  <script src="../assets/js/theme.js"></script>
-  <link rel="stylesheet" href="../assets/css/site.css">
-  <link rel="stylesheet" href="../assets/css/registry-page.css">
+  <script src="/assets/js/theme.js"></script>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/changes-page.css">
 </head>
-<body data-mode="data" data-page="registry">
+<body data-mode="data">
   <a class="skip-link" href="#main">Skip to content</a>
-
   <div class="system-bar">
     <span class="system-slogan">A MORE OPEN INTERNET, A BRIGHTER TOMORROW.</span>
     <span class="system-status"><span class="status-dot"></span> INDEX:80 ONLINE</span>
   </div>
-
   <header class="site-header">
     <div class="brand-row">
       <a class="wordmark" href="/" aria-label="INDEX:80 home"><span>INDEX:</span><b>80</b></a>
@@ -37,103 +35,61 @@
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
       <a href="/about/">◇ About</a>
-      <a href="/registry/" aria-current="page">▣ Registry</a>
+      <a href="/registry/">▣ Registry</a>
       <a href="/submit/">✎ Submit</a>
     </nav>
   </header>
 
-  <main id="main" class="page-grid single-column">
-    <section class="panel os-window registry-section-window" data-window="registry-history" data-room="registry" aria-labelledby="registry-history-window-title">
-      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-history-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-history-window-title">INDEX:80 · /REGISTRY</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide Registry history</span></button></h2>
-      <div class="os-window-body registry-section-body" id="registry-history-body">
-        <div class="registry-os-content">
-    <section class="panel registry-hero">
+  <!-- INDEX80_GLOBAL_SEARCH_START -->
+  <div class="global-search" data-global-search>
+    <form class="search-box global-search-box" role="search" action="/search/" method="get" aria-label="Search INDEX:80">
+      <label class="global-search-label" for="global-search-input"><span aria-hidden="true">&gt;</span><span class="global-search-label-text"> SEARCH INDEX:80</span></label>
+      <input id="global-search-input" name="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Projects, people, organisations, tags, governance…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="global-search-results" aria-describedby="global-search-hint">
+    </form>
+    <div id="global-search-results" class="gs-results" role="listbox" aria-label="Search suggestions" hidden></div>
+    <p id="global-search-hint" class="visually-hidden">Type at least two characters for suggestions. Use the arrow keys to choose one, or press Enter to see all results.</p>
+    <p class="gs-status visually-hidden" aria-live="polite"></p>
+  </div>
+  <script src="/assets/js/site-search.js" defer></script>
+<!-- INDEX80_GLOBAL_SEARCH_END -->
+
+  <main id="main" class="page-grid single-column changes-page">
+    <section class="panel hero-panel section-hero compact-hero dark-hero">
       <div class="hero-copy">
-        <div class="eyebrow on-dark">PUBLIC REGISTRY + CARDANO PROOF</div>
-        <h1><span class="registry-hero-title">REGISTRY</span><small>/HISTORY</small></h1>
-        <p class="strap">A PUBLIC RECORD OF WHAT INDEX:80 PUBLISHED.</p>
-        <p>INDEX:80 freezes a copy of its public Projects and People registries on a regular schedule. Each snapshot stays available as ordinary JSON, while its SHA-256 fingerprint is published to Cardano so the record can be checked independently.</p>
-        <div class="registry-hero-art"><img src="/assets/images/index80-registry-astronaut-cat.webp" alt="Pixel-art illustration of an astronaut sitting at a desk working on a glowing computer terminal, with a black cat perched beside a coffee mug, representing INDEX:80's public Cardano registry proof." width="600" height="450" loading="lazy"></div>
-      </div>
-      <div class="registry-hero-status">
-        <span class="registry-kicker">LATEST CHAIN PROOF</span>
-        <span class="registry-status is-confirmed">VERIFIED ON CARDANO MAINNET</span>
-        <strong>INDEX80-0004</strong>
-        <p>INDEX80-0004 has a confirmed Mainnet proof on Cardano.</p>
-        <a class="registry-text-link" href="https://cardanoscan.io/transaction/4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d" target="_blank" rel="noopener noreferrer">Open Cardano transaction ↗</a>
+        <div class="eyebrow on-dark">REGISTRY CHANGE HISTORY</div>
+        <h1>RECENT CHANGES<small>/INDEX:80</small></h1>
+        <p class="strap">WHAT CHANGED IN INDEX:80'S PUBLIC RECORD.</p>
+        <p>This page is generated from consecutive immutable Registry releases. It records when a change was first reflected in INDEX:80; that observation date is not automatically the date the underlying real-world event happened.</p>
+        <div class="changes-hero-stats">
+          <span><strong>3</strong> RELEASE TRANSITIONS</span>
+          <span><strong>109</strong> ATOMIC PUBLIC EVENTS</span>
+          <span><strong>INDEX80-0004</strong> LATEST RELEASE</span>
+        </div>
       </div>
     </section>
 
-    
-    <article class="panel dark registry-release registry-release-latest">
-      <div class="registry-release-head">
-        <div>
-          <span class="registry-kicker">PUBLIC MAINNET PROOF</span>
-          <h2>INDEX80-0004</h2>
-          <p>Current top release in the public history.</p>
-        </div>
-        <span class="registry-status is-confirmed">VERIFIED ON CARDANO MAINNET</span>
+    <section class="panel shell-panel changes-explainer">
+      <h2>HOW TO READ THIS</h2>
+      <p><strong>Added to INDEX:80</strong> means a record first appears in the public Registry. It does not mean the project or person launched on that date. <strong>Removed from public index</strong> is deliberately neutral and does not mean an entity ceased operating.</p>
+      <p>The public view is intentionally conservative: additions/removals and low-ambiguity factual fields such as names, official links, policy IDs, established dates and Treasury/Catalyst references. Summary rewrites, tag enrichment, source-list maintenance and relationship housekeeping remain audit-only.</p>
+      <div class="actions">
+        <a class="button primary" href="/data/change-ledger.json">Machine-readable ledger →</a>
+        <a class="button" href="/registry/">Registry history →</a>
       </div>
+    </section>
 
-      <div class="registry-release-summary">
-        <div class="registry-release-number"><span>SNAPSHOT</span><strong>0004</strong></div>
-        <div class="registry-release-copy">
-          <p><strong>216 public project records and 155 public people records</strong> frozen into one immutable JSON snapshot.</p>
-          <p>Cardano stores the SHA-256 proof; the full registry stays readable here on the open web.</p>
-        </div>
+    <section class="panel change-release" id="index80-0004">
+    <div class="change-release-head">
+      <div>
+        <div class="eyebrow">REGISTRY RELEASE</div>
+        <h2>INDEX80-0003 → INDEX80-0004</h2>
+        <p>Observed in INDEX:80: <strong>30 SEPT 2026</strong></p>
       </div>
-
-      <div class="registry-facts">
-        <div><span>PROOF DATE</span><strong>30 September 2026</strong></div>
-        <div><span>PROJECTS</span><strong>216</strong></div>
-        <div><span>PEOPLE</span><strong>155</strong></div>
-        <div><span>NETWORK</span><strong>MAINNET</strong></div>
-        <div><span>BLOCK</span><strong>14008243</strong></div>
-        <div><span>FEE</span><strong>0.172893 ADA</strong></div>
+      <div class="actions">
+        <a class="button" href="/registry/releases/index80-0004.json">Release JSON →</a>
+        <a class="button" href="https://cardanoscan.io/transaction/4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d" target="_blank" rel="noopener noreferrer">Cardano proof ↗</a>
       </div>
-
-      <div class="registry-proof-lines">
-        <div><span>SNAPSHOT SHA-256</span><code>d4d316bf8961ce7fe3253c9d613bc1adf02c8071c1094c11fa82e31fdcc9bb2b</code></div>
-        <div><span>CARDANO TRANSACTION</span><code>4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d</code></div>
-      </div>
-
-      <div class="registry-actions registry-actions-primary">
-        <a class="button primary" href="/registry/view/">VIEW SNAPSHOT TABLE</a>
-        <a class="button" href="https://cardanoscan.io/transaction/4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d" target="_blank" rel="noopener noreferrer">VIEW ON CARDANO ↗</a>
-      </div>
-      <details class="registry-technical">
-        <summary>Technical files</summary>
-        <div class="registry-actions">
-          <a href="/registry/releases/index80-0004.json">Release manifest</a>
-          <a href="/registry/receipts/index80-0004.json">Verification receipt</a>
-          <a href="/registry/index.json">Release history JSON</a>
-        </div>
-      </details>
-    </article>
-        </div><!-- /.registry-os-content -->
-      </div><!-- /#registry-history-body -->
-    </section><!-- /[data-window="registry-history"] -->
-
-    <section class="panel os-window registry-section-window" data-window="registry-changes" data-room="registry" aria-labelledby="registry-changes-window-title">
-      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-changes-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-changes-window-title">INDEX:80 · /RECENT CHANGES</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide Recent Changes</span></button></h2>
-      <div class="os-window-body registry-section-body" id="registry-changes-body">
-        <div class="registry-os-content">
-    <section class="panel shell-panel registry-change-history" id="recent-changes" aria-labelledby="registry-change-history-title">
-      <div class="panel-title registry-change-history-titlebar">
-        <h2 id="registry-change-history-title">RECENT CHANGES</h2>
-        <span>/ PUBLIC RECORD DIFF</span>
-      </div>
-      <div class="registry-change-history-intro">
-        <p>What changed in INDEX:80's public record between consecutive immutable Registry releases. Only the conservative public fields are shown: additions to INDEX:80, neutral removals from the public index, and low-ambiguity factual record updates.</p>
-        <p class="registry-change-note"><strong>Observation dates:</strong> each date is when a change was first reflected in an INDEX:80 Registry release. It is not automatically the date the underlying real-world event happened. <strong>Added to INDEX:80</strong> does not mean launched; <strong>removed from public index</strong> does not mean an entity ceased operating.</p>
-      </div>
-      <div class="registry-change-windows">
-      <details class="panel registry-change-window" open id="index80-0004-changes">
-        <summary class="panel-title registry-window-title">
-          <h2>INDEX80-0003 → INDEX80-0004</h2>
-          <span>OBSERVED 30 SEPT 2026 · 25 added to INDEX:80 · 0 removed · 8 updated <b class="disclosure-caret">▸</b></span>
-        </summary>
-        <div class="registry-window-body registry-change-body">
+    </div>
     <div class="change-counts" aria-label="Change counts">
       <span><strong>25</strong> PROJECTS ADDED TO INDEX:80</span>
       <span><strong>0</strong> PROJECTS REMOVED FROM PUBLIC INDEX</span>
@@ -255,19 +211,19 @@
     </div>
     <div class="change-baseline"><strong>PEOPLE BASELINE:</strong> 155 People first appear in INDEX80-0004 and are intentionally not reported as additions.</div>
     
-          <div class="registry-actions registry-change-actions">
-        <a class="button" href="/registry/releases/index80-0004.json">Release JSON →</a>
-        <a class="button" href="https://cardanoscan.io/transaction/4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d" target="_blank" rel="noopener noreferrer">Cardano proof ↗</a>
-            <a class="button" href="/changes/#index80-0004">Full view →</a>
-          </div>
-        </div>
-      </details>
-      <details class="panel registry-change-window" id="index80-0003-changes">
-        <summary class="panel-title registry-window-title">
-          <h2>INDEX80-0002 → INDEX80-0003</h2>
-          <span>OBSERVED 23 SEPT 2026 · 36 added to INDEX:80 · 0 removed · 8 updated <b class="disclosure-caret">▸</b></span>
-        </summary>
-        <div class="registry-window-body registry-change-body">
+  </section>
+<section class="panel change-release" id="index80-0003">
+    <div class="change-release-head">
+      <div>
+        <div class="eyebrow">REGISTRY RELEASE</div>
+        <h2>INDEX80-0002 → INDEX80-0003</h2>
+        <p>Observed in INDEX:80: <strong>23 SEPT 2026</strong></p>
+      </div>
+      <div class="actions">
+        <a class="button" href="/registry/releases/index80-0003.json">Release JSON →</a>
+        <a class="button" href="https://cardanoscan.io/transaction/4e49332fafb2a94d8660da75b16cc0cbd2ef8e79320896148e15bdce7fa72067" target="_blank" rel="noopener noreferrer">Cardano proof ↗</a>
+      </div>
+    </div>
     <div class="change-counts" aria-label="Change counts">
       <span><strong>36</strong> PROJECTS ADDED TO INDEX:80</span>
       <span><strong>0</strong> PROJECTS REMOVED FROM PUBLIC INDEX</span>
@@ -369,19 +325,19 @@
     </div>
     
     
-          <div class="registry-actions registry-change-actions">
-        <a class="button" href="/registry/releases/index80-0003.json">Release JSON →</a>
-        <a class="button" href="https://cardanoscan.io/transaction/4e49332fafb2a94d8660da75b16cc0cbd2ef8e79320896148e15bdce7fa72067" target="_blank" rel="noopener noreferrer">Cardano proof ↗</a>
-            <a class="button" href="/changes/#index80-0003">Full view →</a>
-          </div>
-        </div>
-      </details>
-      <details class="panel registry-change-window" id="index80-0002-changes">
-        <summary class="panel-title registry-window-title">
-          <h2>INDEX80-0001 → INDEX80-0002</h2>
-          <span>OBSERVED 16 SEPT 2026 · 17 added to INDEX:80 · 0 removed · 5 updated <b class="disclosure-caret">▸</b></span>
-        </summary>
-        <div class="registry-window-body registry-change-body">
+  </section>
+<section class="panel change-release" id="index80-0002">
+    <div class="change-release-head">
+      <div>
+        <div class="eyebrow">REGISTRY RELEASE</div>
+        <h2>INDEX80-0001 → INDEX80-0002</h2>
+        <p>Observed in INDEX:80: <strong>16 SEPT 2026</strong></p>
+      </div>
+      <div class="actions">
+        <a class="button" href="/registry/releases/index80-0002.json">Release JSON →</a>
+        <a class="button" href="https://cardanoscan.io/transaction/9e6a2f3c6e51e6dc9f9bae8498dd8bb68ca3693e1cd1edaa68f4d03ca83dabb1" target="_blank" rel="noopener noreferrer">Cardano proof ↗</a>
+      </div>
+    </div>
     <div class="change-counts" aria-label="Change counts">
       <span><strong>17</strong> PROJECTS ADDED TO INDEX:80</span>
       <span><strong>0</strong> PROJECTS REMOVED FROM PUBLIC INDEX</span>
@@ -452,153 +408,7 @@
     </div>
     
     
-          <div class="registry-actions registry-change-actions">
-        <a class="button" href="/registry/releases/index80-0002.json">Release JSON →</a>
-        <a class="button" href="https://cardanoscan.io/transaction/9e6a2f3c6e51e6dc9f9bae8498dd8bb68ca3693e1cd1edaa68f4d03ca83dabb1" target="_blank" rel="noopener noreferrer">Cardano proof ↗</a>
-            <a class="button" href="/changes/#index80-0002">Full view →</a>
-          </div>
-        </div>
-      </details>
-      </div>
-      <div class="registry-actions registry-change-history-links">
-        <a class="button" href="/changes/">Open full changes view →</a>
-        <a class="button" href="/data/change-ledger.json">Change ledger JSON →</a>
-      </div>
-    </section>
-        </div><!-- /.registry-os-content -->
-      </div><!-- /#registry-changes-body -->
-    </section><!-- /[data-window="registry-changes"] -->
-
-    <section class="panel os-window registry-section-window" data-window="registry-verify" data-room="registry" aria-labelledby="registry-verify-window-title">
-      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-verify-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-verify-window-title">INDEX:80 · /VERIFY</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide verification guidance</span></button></h2>
-      <div class="os-window-body registry-section-body" id="registry-verify-body">
-        <div class="registry-os-content">
-    <details class="panel registry-process profile-source" id="registry-process">
-      <summary class="panel-title"><h2 id="registry-process-title">THE PUBLISHING PROCESS</h2><span>/ HOW IT WORKS <b class="disclosure-caret">▸</b></span></summary>
-      <div class="registry-window-body registry-process-body">
-        <p class="registry-process-intro">Simple by design: one public file, one fingerprint, one manually approved Cardano transaction.</p>
-        <div class="registry-process-flow">
-          <article><span>01</span><h3>LIVE REGISTRY</h3><p>The current approved INDEX:80 public registry is the source.</p></article>
-          <i aria-hidden="true">→</i>
-          <article><span>02</span><h3>FREEZE SNAPSHOT</h3><p>A permanent JSON copy is created for that release.</p></article>
-          <i aria-hidden="true">→</i>
-          <article><span>03</span><h3>HASH + APPROVE</h3><p>SHA-256 is calculated and the transaction is approved locally in Lace.</p></article>
-          <i aria-hidden="true">→</i>
-          <article><span>04</span><h3>CARDANO PROOF</h3><p>The fingerprint is recorded on Cardano and linked back here.</p></article>
-        </div>
-        <div class="registry-cadence"><strong>PLANNED CADENCE: WEEKLY</strong><span>Snapshot preparation can be automated. Cardano signing always requires manual wallet approval.</span></div>
-      </div>
-    </details>
-
-    <section class="panel dark shell-panel registry-verify">
-      <div class="registry-section-head compact">
-        <span>INDEPENDENT CHECK</span>
-        <h2>VERIFY A SNAPSHOT YOURSELF</h2>
-      </div>
-      <div class="registry-verify-grid">
-        <div><span>1</span><p>Download the snapshot JSON.</p></div>
-        <div><span>2</span><p>Calculate SHA-256 over the exact file.</p></div>
-        <div><span>3</span><p>Compare it with the hash in the Cardano transaction.</p></div>
-      </div>
-      <p class="registry-note">The whole INDEX:80 database is not written on-chain. Cardano carries the compact proof; the readable registry stays on the open web.</p>
-    </section>
-        </div><!-- /.registry-os-content -->
-      </div><!-- /#registry-verify-body -->
-    </section><!-- /[data-window="registry-verify"] -->
-
-    <section class="panel os-window registry-section-window" data-window="registry-wallet-window" data-room="registry" aria-labelledby="registry-wallet-window-title">
-      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-wallet-window-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-wallet-window-title">INDEX:80 · /REGISTRY WALLET</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide the Registry wallet</span></button></h2>
-      <div class="os-window-body registry-section-body" id="registry-wallet-window-body">
-        <div class="registry-os-content">
-    <section class="panel dark shell-panel registry-wallet" id="registry-wallet" aria-labelledby="registry-wallet-title">
-      <div class="registry-section-head compact">
-        <span>PUBLIC TRANSPARENCY</span>
-        <h2 id="registry-wallet-title">REGISTRY WALLET</h2>
-      </div>
-      <div class="registry-wallet-body">
-        <figure class="registry-wallet-qr"><img src="../assets/images/qr-registry-wallet-cardano.png" alt="QR code for the INDEX:80 Cardano Registry wallet address" width="180" height="180" loading="lazy"></figure>
-        <div class="registry-wallet-copy">
-          <p><strong>Cardano mainnet.</strong> This is the dedicated INDEX:80 Registry wallet, published for transparency.</p>
-          <p class="registry-wallet-warning"><strong>Separate from the donations wallet.</strong> It is not a donation address. To support INDEX:80, use the addresses on the <a href="../about/#donate">About page</a>.</p>
-          <code class="registry-wallet-address" id="registry-wallet-address">addr1qxljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhqjnqcrz</code>
-          <div class="registry-actions"><button type="button" class="button" data-copy-target="registry-wallet-address">COPY ADDRESS</button></div>
-          <p class="registry-note">Publishing this address does not by itself show which wallet signed any past Registry transaction. Verify each release from its own Cardano transaction, as described above.</p>
-        </div>
-      </div>
-    </section>
-        </div><!-- /.registry-os-content -->
-      </div><!-- /#registry-wallet-window-body -->
-    </section><!-- /[data-window="registry-wallet-window"] -->
-
-    <section class="panel os-window registry-section-window" data-window="registry-data" data-room="registry" aria-labelledby="registry-data-window-title">
-      <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-data-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-data-window-title">INDEX:80 · /RELEASES + OPEN DATA</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide releases and open data</span></button></h2>
-      <div class="os-window-body registry-section-body" id="registry-data-body">
-        <div class="registry-os-content">
-    <section class="panel dark shell-panel">
-      <div class="registry-section-head compact">
-        <span>ARCHIVE</span>
-        <h2>RELEASE HISTORY</h2>
-      </div>
-      <ul class="registry-history">
-        
-        <li class="registry-history-row">
-          <div>
-            <strong>INDEX80-0004</strong>
-            <span>30 September 2026 · 216 projects and 155 people · MAINNET</span>
-          </div>
-          <code title="d4d316bf8961ce7fe3253c9d613bc1adf02c8071c1094c11fa82e31fdcc9bb2b">d4d316bf8961…1fdcc9bb2b</code>
-          <span class="registry-mini-status is-confirmed">VERIFIED</span>
-          <a href="https://cardanoscan.io/transaction/4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d" target="_blank" rel="noopener noreferrer">Cardano ↗</a>
-        </li>
-
-        <li class="registry-history-row">
-          <div>
-            <strong>INDEX80-0003</strong>
-            <span>23 September 2026 · 191 projects · MAINNET</span>
-          </div>
-          <code title="51146bc27168293fc0262f606f05bea1bc72562407ad7df2cb62e417731965a8">51146bc27168…17731965a8</code>
-          <span class="registry-mini-status is-confirmed">VERIFIED</span>
-          <a href="https://cardanoscan.io/transaction/4e49332fafb2a94d8660da75b16cc0cbd2ef8e79320896148e15bdce7fa72067" target="_blank" rel="noopener noreferrer">Cardano ↗</a>
-        </li>
-
-        <li class="registry-history-row">
-          <div>
-            <strong>INDEX80-0002</strong>
-            <span>16 September 2026 · 155 projects · MAINNET</span>
-          </div>
-          <code title="c6fe33631f95ebf8d36e50caa9aa18051891e670ce9e89607ac03e28e4def3bc">c6fe33631f95…28e4def3bc</code>
-          <span class="registry-mini-status is-confirmed">VERIFIED</span>
-          <a href="https://cardanoscan.io/transaction/9e6a2f3c6e51e6dc9f9bae8498dd8bb68ca3693e1cd1edaa68f4d03ca83dabb1" target="_blank" rel="noopener noreferrer">Cardano ↗</a>
-        </li>
-
-        <li class="registry-history-row">
-          <div>
-            <strong>INDEX80-0001</strong>
-            <span>16 September 2026 · 138 projects · PREPROD</span>
-          </div>
-          <code title="14546a96f15632eeedba12464adc17531597a5f40181e0b72cf7a060933375d2">14546a96f156…60933375d2</code>
-          <span class="registry-mini-status is-confirmed">VERIFIED</span>
-          <a href="https://preprod.cardanoscan.io/transaction/bd2f95598b963430435e893c9896f481cc8c0299edb2ee9356f6918c37219563" target="_blank" rel="noopener noreferrer">Cardano ↗</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="panel dark shell-panel registry-machine">
-      <div class="registry-section-head compact">
-        <span>OPEN DATA</span>
-        <h2>MACHINE-READABLE FILES</h2>
-      </div>
-      <p>These are ordinary public JSON files. They can be opened in a browser, downloaded, analysed by code or read by AI systems.</p>
-      <div class="registry-machine-links">
-        <a href="/registry/index.json"><strong>Release history</strong><code>/registry/index.json</code></a>
-        <a href="/registry/snapshots/index80-0004.json"><strong>Latest snapshot</strong><code>/registry/snapshots/index80-0004.json</code></a>
-        <a href="/registry/releases/index80-0004.json"><strong>Latest manifest</strong><code>/registry/releases/index80-0004.json</code></a>
-        <a href="/data/change-ledger.json"><strong>Change ledger</strong><code>/data/change-ledger.json</code></a>
-      </div>
-    </section>
-        </div><!-- /.registry-os-content -->
-      </div><!-- /#registry-data-body -->
-    </section><!-- /[data-window="registry-data"] -->
+  </section>
   </main>
 
   <footer class="site-footer">
@@ -609,7 +419,7 @@
       <a href="/learn/">▤ Learn</a>
       <a href="/governance/">⌂ Governance</a>
       <a href="/about/">◇ About</a>
-      <a href="/registry/" aria-current="page">▣ Registry</a>
+      <a href="/registry/">▣ Registry</a>
       <a href="/submit/">✎ Submit</a>
     </nav>
     <div class="footer-meta">
@@ -618,8 +428,6 @@
       <button type="button" class="footer-consent-toggle" data-consent-toggle>Cookie preferences</button>
     </div>
   </footer>
-
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/wallet-copy.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

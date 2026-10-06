@@ -104,4 +104,83 @@ assert(page.includes('/registry/index.json'), 'Human page is missing machine-rea
 // The page links the snapshot of the newest release, whether confirmed or freshly prepared.
 assert(page.includes(`/registry/snapshots/${newest.release_id.toLowerCase()}.json`), `Human page is missing ${newest.release_id} snapshot link`);
 
+// Registry is five sibling AROS windows. Content panels and native <details>
+// disclosures remain inside their assigned window body without gaining their
+// own data-window state.
+const windowSpecs = [
+  ['registry-history', 'registry-history-body', 'registry-history-window-title', 'INDEX:80 · /REGISTRY'],
+  ['registry-changes', 'registry-changes-body', 'registry-changes-window-title', 'INDEX:80 · /RECENT CHANGES'],
+  ['registry-verify', 'registry-verify-body', 'registry-verify-window-title', 'INDEX:80 · /VERIFY'],
+  ['registry-wallet-window', 'registry-wallet-window-body', 'registry-wallet-window-title', 'INDEX:80 · /REGISTRY WALLET'],
+  ['registry-data', 'registry-data-body', 'registry-data-window-title', 'INDEX:80 · /RELEASES + OPEN DATA'],
+];
+const dataWindows = [...page.matchAll(/<section class="panel os-window registry-section-window" data-window="([^"]+)" data-room="([^"]+)"/g)];
+assert(dataWindows.length === 5, `Registry must have exactly five AROS top-level windows (found ${dataWindows.length})`);
+assert(JSON.stringify(dataWindows.map((match) => match[1])) === JSON.stringify(windowSpecs.map(([id]) => id)), 'Registry AROS windows are missing or out of order');
+assert(dataWindows.every((match) => match[2] === 'registry'), 'Every Registry AROS window must use data-room="registry"');
+assert(!page.includes('data-window="registry-main"'), 'The former registry-main wrapper must be removed');
+
+function windowBody(windowId, bodyId, titleId, title) {
+  const startTag = `<div class="os-window-body registry-section-body" id="${bodyId}">`;
+  const start = page.indexOf(startTag);
+  const end = page.indexOf(`</div><!-- /#${bodyId} -->`, start);
+  assert(start >= 0 && end > start, `${windowId} AROS body boundaries are missing or invalid`);
+  assert(page.includes(`class="os-titlebar" aria-expanded="true" aria-controls="${bodyId}"`), `${windowId} titlebar must control an open-by-default body`);
+  assert(page.includes(`class="os-title" id="${titleId}">${title}</span>`), `${windowId} titlebar text is wrong`);
+  const body = page.slice(start, end);
+  assert(!body.includes('data-window='), `${windowId} must not contain a nested data-window frame`);
+  return body;
+}
+
+const bodies = new Map(windowSpecs.map(([windowId, bodyId, titleId, title]) => [windowId, windowBody(windowId, bodyId, titleId, title)]));
+const expectedContent = new Map([
+  ['registry-history', ['class="panel registry-hero"', 'LATEST CHAIN PROOF', 'registry-release-latest']],
+  ['registry-changes', ['id="recent-changes"', 'registry-change-window']],
+  ['registry-verify', ['id="registry-process"', 'class="panel dark shell-panel registry-verify"']],
+  ['registry-wallet-window', ['id="registry-wallet"', 'id="registry-wallet-address"']],
+  ['registry-data', ['RELEASE HISTORY', 'MACHINE-READABLE FILES', '/registry/index.json', '/data/change-ledger.json']],
+]);
+for (const [windowId, markers] of expectedContent) {
+  for (const marker of markers) assert(bodies.get(windowId).includes(marker), `${windowId} is missing ${marker}`);
+}
+assert(!bodies.get('registry-history').includes('id="recent-changes"'), 'Recent Changes must not remain in the Registry history window');
+assert(page.indexOf('<footer class="site-footer">') > page.indexOf('</div><!-- /#registry-data-body -->'), 'Registry footer must remain outside the AROS windows');
+
+// ui-windows.js handles deep links generically by finding the closest parent.
+const anchorParents = new Map([
+  ['recent-changes', 'registry-changes'],
+  ['registry-process', 'registry-verify'],
+  ['registry-wallet', 'registry-wallet-window'],
+]);
+for (const [anchor, windowId] of anchorParents) {
+  assert(bodies.get(windowId).includes(`id="${anchor}"`), `#${anchor} must remain inside ${windowId}`);
+}
+const uiWindows = fs.readFileSync(path.join(ROOT, 'public_html/assets/js/ui-windows.js'), 'utf8');
+assert(uiWindows.includes("target.closest('[data-window]')"), 'Generic window script must reopen the closest parent frame for deep links');
+assert(uiWindows.includes('openForHash(window.location.hash)'), 'Generic window script must handle the initial URL hash');
+assert(page.includes('<script src="../assets/js/main.js" defer></script>'), 'Registry must load the shared script loader that activates ui-windows.js');
+
+// Sprint 3B Registry-window UX: Recent Changes live inside /registry/ as native
+// <details>/<summary> disclosures reusing the Project-page minimising language.
+// Newest release window is open by default, older windows are collapsed, and each
+// collapsed summary carries the release pair, observation date and counts.
+const changeWindows = [...page.matchAll(/<details class="panel registry-change-window"( open)? id="([^"]+)"/g)];
+assert(changeWindows.length >= 1, 'Registry page is missing embedded Recent Changes windows');
+assert(changeWindows[0][1] === ' open', 'Newest Recent Changes window must be open by default');
+assert(changeWindows.slice(1).every((match) => match[1] !== ' open'), 'Older Recent Changes windows must be collapsed by default');
+assert(changeWindows.every((match) => bodies.get('registry-changes').includes(match[0])), 'Every Recent Changes disclosure must stay inside the Recent Changes AROS window');
+assert(page.includes('id="registry-change-history-title"'), 'Registry page is missing the Recent Changes section heading');
+assert(page.includes('aria-label="Change counts"'), 'Collapsed change windows must expose added/removed/updated counts');
+assert(page.includes('<details class="panel registry-process profile-source" id="registry-process">'), 'Publishing-process panel must reuse the Project/People disclosure window');
+assert(!page.includes('<details class="panel registry-process profile-source" id="registry-process" open'), 'Publishing-process default must remain collapsed');
+assert(page.includes('id="registry-process-title"'), 'Publishing-process title anchor must remain intact');
+assert(page.includes('class="panel-title registry-window-title"'), 'Recent Changes windows must reuse shared panel-title chrome');
+assert(page.includes('class="disclosure-caret">▸</b>'), 'Recent Changes windows must reuse shared disclosure caret');
+assert(!page.includes('registry-window-toggle'), 'Registry must not render a custom toggle chip'); // shared Project/People window chrome
+assert(page.includes('registry-release-latest'), 'Latest release proof card must stay always visible');
+assert(page.includes('LATEST CHAIN PROOF'), 'Latest chain-proof status must stay always visible');
+assert(page.includes('<section class="panel dark shell-panel registry-wallet" id="registry-wallet"'), 'Registry wallet must remain directly visible for the existing #registry-wallet deep link');
+assert(!page.includes('registry-compact registry-wallet'), 'Registry wallet must not be hidden in a collapsed disclosure');
+assert(page.includes('/data/change-ledger.json'), 'Registry machine-readable files must include the public change ledger');
+
 console.log(`Registry provenance tests passed: ${bySequence.length} releases chain in sequence; latest confirmed ${latestConfirmed.release_id}; newest ${newest.release_id} (${newest.status}); pinned INDEX80-0001/0002 proofs agree with immutable snapshots.`);

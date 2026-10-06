@@ -8,6 +8,18 @@ All notable changes to the INDEX:80 public source are recorded here. The format 
 - `SUPPORT.md` (where to get help, and what support does and does not cover).
 - `CHANGELOG.md` (this file).
 
+## 2026-10-06 — Sprint 3: Change System
+
+### Added
+- Deterministic Registry change history: consecutive immutable Registry releases are compared using conservative public-candidate rules (additions to INDEX:80, neutral removals from the public index, and low-ambiguity factual field updates).
+- `/changes/`: a generated page showing what changed in INDEX:80's public record between Registry releases, with release JSON and Cardano proof links.
+- `/data/change-ledger.json`: the same history as a machine-readable ledger with stable event IDs.
+
+### Changed
+- `/registry/` now includes a Recent Changes section rendered from the same comparison as `/changes/`.
+- The AROS/Workbench-inspired window treatment is aligned across Registry, Explore and About.
+- Change evidence is generated from immutable Registry releases at build time; there is no manually maintained activity feed.
+
 ## 2026-09-21 — Public source launch
 
 ### Added

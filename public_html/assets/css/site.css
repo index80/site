@@ -1337,9 +1337,44 @@ html[data-theme="arcade"][data-color-mode="dark"] .search-box input { border-col
    Static HTML is always complete and open; JS only applies a saved
    collapsed preference. */
 .os-window {
+  --window-accent:var(--accent);
   grid-column:1/-1;
   box-shadow:inset 1px 1px 0 color-mix(in srgb, #fff 55%, transparent), var(--shadow);
 }
+/* Room signal: the AROS frame stays identical; only the pinstripe accent
+   changes. New Rooms can opt in by setting --window-accent without creating
+   a new window component. */
+.os-window[data-room="explore"] {
+  --window-accent:color-mix(in srgb, var(--accent) 58%, #00b7a8 42%);
+}
+.os-window[data-room="registry"] {
+  --window-accent:color-mix(in srgb, var(--accent) 72%, #5b65d9 28%);
+}
+/* Stripe signal: only the horizontal pinstripe lines of the title bar take
+   --window-stripe-accent; the Room tint, title label, gadgets, borders and
+   body are untouched. Sibling AROS windows cycle through five theme accents
+   (cyan, magenta, amber, violet, green) by position, so any future Room or
+   window picks up the rotation with no per-page CSS or inline styles.
+   Browsers without :nth-child(… of S) keep the Room accent on the stripes. */
+.os-window {
+  --window-stripe-1:var(--cyan);
+  --window-stripe-2:var(--magenta);
+  --window-stripe-3:var(--amber);
+  --window-stripe-4:var(--purple);
+  --window-stripe-5:var(--green);
+  --window-stripe-accent:var(--window-accent);
+  --window-stripe-strength:48%;
+}
+.os-window:nth-child(5n+1 of .os-window) { --window-stripe-accent:var(--window-stripe-1); }
+.os-window:nth-child(5n+2 of .os-window) { --window-stripe-accent:var(--window-stripe-2); }
+.os-window:nth-child(5n+3 of .os-window) { --window-stripe-accent:var(--window-stripe-3); }
+.os-window:nth-child(5n+4 of .os-window) { --window-stripe-accent:var(--window-stripe-4); }
+.os-window:nth-child(5n+5 of .os-window) { --window-stripe-accent:var(--window-stripe-5); }
+/* Default (WEB 1.0) strength is restrained; ARCADE runs the same five
+   identities hotter. */
+html[data-color-mode="dark"] .os-window { --window-stripe-strength:36%; }
+html[data-theme="arcade"] .os-window { --window-stripe-strength:60%; }
+html[data-theme="arcade"][data-color-mode="dark"] .os-window { --window-stripe-strength:56%; }
 .os-titlebar-heading { margin:0; font:inherit; }
 .os-titlebar {
   display:flex;
@@ -1355,10 +1390,11 @@ html[data-theme="arcade"][data-color-mode="dark"] .search-box input { border-col
   letter-spacing:.06em;
   text-align:left;
   cursor:pointer;
-  /* Workbench-style pinstripe title bar in the INDEX:80 accent. */
+  /* Workbench-style pinstripe title bar: stripe lines in the rotating
+     stripe accent, base tint in the Room accent. */
   background:
-    repeating-linear-gradient(180deg, color-mix(in srgb, var(--accent) 34%, transparent) 0 2px, transparent 2px 4px),
-    linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, #eef1f5 90%) 0%, #e3e7ec 100%);
+    repeating-linear-gradient(180deg, color-mix(in srgb, var(--window-stripe-accent) var(--window-stripe-strength), transparent) 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, color-mix(in srgb, var(--window-accent) 10%, #eef1f5 90%) 0%, #e3e7ec 100%);
 }
 .os-titlebar:hover .os-title,
 .os-titlebar:focus-visible .os-title { text-decoration:underline; text-underline-offset:3px; }
@@ -1453,7 +1489,7 @@ html[data-theme="arcade"][data-color-mode="dark"] .search-box input { border-col
 html[data-color-mode="dark"] .os-titlebar {
   color:var(--ink);
   background:
-    repeating-linear-gradient(180deg, color-mix(in srgb, var(--accent) 30%, transparent) 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, color-mix(in srgb, var(--window-stripe-accent) var(--window-stripe-strength), transparent) 0 2px, transparent 2px 4px),
     linear-gradient(180deg, #1a2740 0%, #121b2e 100%);
 }
 html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(in srgb, #fff 12%, transparent), var(--shadow); }
@@ -1494,10 +1530,27 @@ html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(i
 /* Explore consolidates Learn, Governance and Data into one long-form page.
    Each imported section keeps its original accent while sharing one top-level
    /EXPLORE identity and primary-nav destination. */
-.explore-page { padding:0 0 .8rem; }
-.explore-subpage { scroll-margin-top:1rem; }
-.explore-subpage > .page-grid { padding-top:.8rem; padding-bottom:0; }
-.explore-subpage + .explore-subpage > .page-grid { padding-top:1.2rem; }
+/* About is five sibling AROS windows (data-room="about"); this inner grid
+   only preserves the existing About panel spacing inside each window body. */
+.about-section-window { overflow:hidden; }
+.about-os-content { display:grid; gap:.8rem; min-width:0; padding:.8rem; }
+.about-os-content > * { min-width:0; }
+/* Anchor jumps (#independent-open-source, #editorial-system, #donate) keep a little headroom, as on Explore. */
+.about-os-content > [id] { scroll-margin-top:3rem; }
+@media (max-width:640px) { .about-os-content { gap:.6rem; padding:.5rem; } }
+
+/* Explore is three sibling AROS windows (explore-learn / -governance /
+   -data, all data-room="explore"); the imported panels stay as the small
+   windows inside each. The page owns the outer gutter and the gap between
+   windows, each inner .page-grid the in-window gutter. */
+.explore-page { display:grid; gap:.8rem; max-width:1600px; margin:0 auto; padding:.8rem .8rem 1.6rem; }
+.explore-page > * { min-width:0; }
+@media (max-width:640px) {
+  .explore-page { gap:.6rem; padding:.5rem .5rem 1.2rem; }
+  .explore-window .page-grid { padding-left:.5rem; padding-right:.5rem; }
+}
+/* Hash jumps (#learn, #governance, #data) land with the window title bar still visible. */
+.explore-subpage { scroll-margin-top:3rem; }
 .explore-learn { --accent:var(--amber); }
 .explore-governance { --accent:var(--purple); }
 .explore-governance .shell-panel { border-top:4px solid var(--purple); }
