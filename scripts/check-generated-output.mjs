@@ -33,7 +33,6 @@ const GENERATED_FILES = new Set([
   'public_html/registry/index.json', // generate-registry-history
   'public_html/registry/index.html', // generate-registry-history
   'public_html/registry/view/index.html', // generate-registry-view
-  'public_html/changes/index.html', // generate-change-history
   'public_html/data/change-ledger.json', // generate-change-history
   'public_html/sitemap.xml', // generate-sitemap
   'public_html/data/search-index.json', // generate-search-index
@@ -48,7 +47,6 @@ const VERSION_JSON = 'public_html/site-version.json';
 const STAMP_FILES = new Set([MAIN_JS, VERSION_JSON]);
 const REQUIRED_DETERMINISTIC_OUTPUTS = [
   'public_html/registry/index.html',
-  'public_html/changes/index.html',
   'public_html/data/change-ledger.json',
 ];
 const VERSION_MARKER = /const VERSION = '([^']*)';/g;
@@ -145,4 +143,4 @@ if (failures.length > 0) {
 }
 
 const stampNote = stampOne.version === stampTwo.version ? `build stamp ${stampOne.version}` : `build stamp ${stampOne.version} -> ${stampTwo.version}`;
-console.log(`[generated-output] PASS - two consecutive builds are identical, including Registry HTML, Changes HTML and the public change ledger (${stampNote} masked); build 1 changed ${firstBuildChanges.length} file(s) relative to the pre-build tree, all inside the generated-output surface.`);
+console.log(`[generated-output] PASS - two consecutive builds are identical, including Registry HTML (with Recent Changes) and the public change ledger (${stampNote} masked); build 1 changed ${firstBuildChanges.length} file(s) relative to the pre-build tree, all inside the generated-output surface.`);

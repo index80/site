@@ -7,6 +7,7 @@
  * with canonical URLs, introduce no rating/review/endorsement schema, and
  * leave the pre-existing project-page and Charles Hoskinson schema intact.
  */
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

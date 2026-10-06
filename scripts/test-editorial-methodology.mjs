@@ -3,6 +3,7 @@
 // Guards the canonical methodology URL, its anchors, the contextual links on
 // People and Project pages, the retired /people/methodology/ redirect and
 // against methodology being duplicated back onto About.
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';

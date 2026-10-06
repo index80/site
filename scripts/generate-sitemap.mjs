@@ -33,6 +33,16 @@ const SLUG_RE = /^[a-z0-9-]+$/;
 // via public_html/_redirects; it must never appear here again.
 // /people/methodology/ is likewise retired: it 301-redirects to the canonical
 // /about/methodology/#people and must not be listed.
+//
+// Deliberate exclusions (Sprint 4B.1 owner decisions; enforced by
+// SITEMAP_EXCLUDED below and by scripts/test-seo-regression.mjs):
+// - /changes/ is retired and 301-redirects to /registry/#recent-changes.
+// - /explore/ is a consolidated frame composed from /learn/, /governance/ and
+//   /data/, which are listed in their own right; it stays out for now.
+// - /news/ is an unconnected placeholder; it stays live but unlisted until it
+//   carries real content.
+// - /registry/view/ is a noindex human view of an immutable snapshot.
+// No <lastmod> is emitted: build time is not an editorial update date.
 const CORE_PAGES = [
   '/',
   '/about/',
@@ -44,9 +54,10 @@ const CORE_PAGES = [
   '/registry/',
   '/governance/',
   '/submit/',
-  '/news/',
   '/privacy/',
 ];
+
+const SITEMAP_EXCLUDED = ['/changes/', '/explore/', '/news/', '/registry/view/', '/review/', '/search/'];
 
 function esc(value) {
   return String(value).replace(/[&<>"']/g, (c) => ({
@@ -69,6 +80,8 @@ function main() {
     .map((p) => `/people/${p.slug}/`);
 
   const urls = [...CORE_PAGES, ...peoplePaths, ...projectPaths];
+  const excluded = urls.filter((path) => SITEMAP_EXCLUDED.includes(path));
+  if (excluded.length) throw new Error(`[generate-sitemap] deliberately excluded page(s) listed: ${excluded.join(', ')}`);
 
   const body = urls
     .map((path) => `  <url><loc>${esc(SITE_URL + path)}</loc></url>`)

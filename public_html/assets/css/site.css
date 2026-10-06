@@ -27,6 +27,14 @@
 
   /* Per-page accent — overridden per template via body[data-mode] below */
   --accent: var(--blue);
+  /* Readable semantic text tones, derived from the active theme's own
+     palette (the same accent-toward-ink mix as --family-accent-icon). They
+     resolve per theme + colour mode: darker on light surfaces, lighter on
+     dark surfaces, so labels and status text keep contrast in every mode. */
+  --cyan-text: color-mix(in srgb, var(--cyan) 55%, var(--ink) 45%);
+  --green-text: color-mix(in srgb, var(--green) 55%, var(--ink) 45%);
+  --amber-text: color-mix(in srgb, var(--amber) 55%, var(--ink) 45%);
+  --coral-text: color-mix(in srgb, var(--coral) 55%, var(--ink) 45%);
 
   /* Theme-system semantic tokens. Defaults equal WEB 1.0 / LIGHT, so the
      current appearance is the no-attribute baseline (and the no-JS
@@ -414,12 +422,10 @@ html[data-theme="arcade"] .status-dot::before { content:"\1F47E"; content:"\1F47
    varies per data-mode — green/amber/purple/etc.) replaces the flat
    #eceff3 fill, with a slightly deeper cream at the foot for the same
    "lit surface" read as .panel above. 9% is deliberately restrained —
-   a wash, not a coloured bar. Unaffected on dark panels (see
-   .dark .panel-title override just below, unchanged). */
+   a wash, not a coloured bar. .dark panels share it: their surface
+   follows the global colour mode (see .dark below). */
 .panel-title { display:flex; align-items:center; gap:.7rem; padding:.48rem .7rem; border-bottom:2px solid var(--ink); background:linear-gradient(180deg, color-mix(in srgb, var(--accent) 9%, #eef1f5 91%) 0%, #e3e7ec 100%); }
 .panel-title::before { content:""; flex:0 0 auto; width:2.05rem; height:.45rem; background:var(--accent); box-shadow: .8rem 0 0 var(--line), 1.6rem 0 0 var(--line); }
-.dark .panel-title { background:#0c2338; border-color:#36526e; }
-.dark .panel-title::before { box-shadow: .8rem 0 0 #2e4e69, 1.6rem 0 0 #2e4e69; }
 .panel-title h2 { flex:1 1 auto; min-width:0; margin:0; font:700 .9rem/1 var(--font-pixel); letter-spacing:.04em; }
 .hero-panel { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr); min-height:410px; overflow:hidden; background:linear-gradient(180deg,#92dbff 0,#59bff0 52%,#4c9fc3 53%,#2d789f 100%); }
 .hero-copy { padding:clamp(1.4rem,4vw,3.2rem); position:relative; z-index:2; max-width:760px; }
@@ -488,16 +494,38 @@ html[data-theme="arcade"] .status-dot::before { content:"\1F47E"; content:"\1F47
   .button[data-dest]::after { transition: none; }
 }
 .pixel-scene { position:relative; min-height:100%; overflow:hidden; }
-.dark { background:var(--navy); color:#eaf6ff; border-color:#36526e; box-shadow:var(--shadow-dark); }
-.dark .panel-title { border-color:#36526e; }
+/* Technical / instrument panels (Registry, Data). The selected global colour
+   mode controls the surface: light panels in LIGHT mode, the theme's dark
+   panels in DARK mode. Page identity comes from accents, title stripes,
+   borders and badges, not a forced navy surface. Section heroes whose
+   approved artwork is itself dark (.dark-hero) stay dark. */
+.dark { background:linear-gradient(180deg, var(--panel-bg) 0%, var(--panel-bg-2) 100%); color:var(--text); border-color:var(--border); box-shadow:var(--shadow); }
+/* Semantic accent words ("ink") — site-wide INDEX:80 brand vocabulary.
+   scripts/lib/semantic-ink.mjs holds the authoritative word → family
+   dictionary and wraps prose at build time; these classes only colour it.
+   Six families: gold, green, blue, magenta, purple, cyan. Every tone is the
+   theme's own accent mixed toward the surrounding text colour, so it darkens
+   on light surfaces and lightens on dark ones in all four theme/mode states
+   while staying recognisably the same family. Weight and size are inherited:
+   colour is decoration, never the only signal. Surfaces whose colour does not
+   follow the page mode set --ink-mix to their own text colour: dark-artwork
+   heroes stay dark, and the sky-blue heroes stay light in DARK mode. */
+.ink { --ink-to: var(--ink-mix, var(--ink)); }
+.ink-gold { color:color-mix(in srgb, var(--amber) 45%, var(--ink-to) 55%); }
+.ink-green { color:color-mix(in srgb, var(--green) 50%, var(--ink-to) 50%); }
+.ink-blue { color:color-mix(in srgb, color-mix(in srgb, var(--blue) 60%, var(--purple) 40%), var(--ink-to) var(--ink-blue-pull, 25%)); }
+.ink-magenta { color:color-mix(in srgb, var(--magenta) 65%, var(--ink-to) 35%); }
+.ink-purple { color:color-mix(in srgb, var(--purple) 70%, var(--ink-to) 30%); }
+.ink-cyan { color:color-mix(in srgb, var(--cyan), var(--ink-to) var(--ink-cyan-pull, 50%)); }
+.dark-hero { --ink-mix:#eaf6ff; }
+.hero-panel:not(.dark-hero), .section-hero:not(.dark-hero), .directory-hero { --ink-mix:#101318; --ink-blue-pull:45%; --ink-cyan-pull:60%; }
 .healthy { color:var(--green); font:700 .75rem/1 var(--font-pixel); }
 .metric-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
 .metric-grid > div { min-width:0; min-height:68px; padding:.55rem .8rem; border-right:1px solid #2e4e69; border-bottom:1px solid #2e4e69; }
 .metric-grid span, .metric-grid small { display:block; font:600 .66rem/1.3 var(--font-pixel); color:#9cb7cd; }
 .metric-grid strong { display:block; margin:.25rem 0; font:700 1.2rem/1 var(--font-pixel); overflow-wrap:anywhere; }
-/* /META panel: keep the dark navy panel-title framing (".dark .panel-title"
-   above still applies, unchanged), but the metadata cells themselves get a
-   light cream body — a full solid-navy panel read as too visually dominant.
+/* /META panel: the metadata cells get a light cream body — a full
+   solid-navy panel read as too visually dominant.
    Thin navy dividers are kept between cells so the structured look remains.
    Scoped to .profile-instrument only — the homepage's own dark stat panel
    (.network-panel) keeps its original all-navy treatment. */
@@ -506,7 +534,6 @@ html[data-theme="arcade"] .status-dot::before { content:"\1F47E"; content:"\1F47
 .profile-instrument .metric-grid span, .profile-instrument .metric-grid small { color:var(--muted); }
 .profile-instrument .metric-grid strong { color:var(--ink); }
 .source-line, .prototype-note { margin:.65rem .8rem; font:600 .64rem/1.4 var(--font-pixel); color:var(--muted); }
-.dark .source-line { color:#7ebcd5; }
 .project-list { list-style:none; margin:0; padding:0; }
 
 /* Directory panel: category bar + search + compact filterable rows, driven
@@ -698,7 +725,7 @@ body[data-page="about"] .method-flow div { background:color-mix(in srgb, var(--a
 
 /* Generic framed image used on data/learn pages */
 .img-frame { display:block; width:100%; height:auto; border:2px solid var(--navy); box-shadow:4px 4px 0 rgba(4,20,38,.35); }
-.dark .img-frame { border-color:#36526e; box-shadow:4px 4px 0 rgba(0,0,0,.4); }
+.dark .img-frame { border-color:var(--line); box-shadow:var(--shadow); }
 
 /* Status / feed badges — square LED marker, neutral by default, only ever
    green when backed by data */
@@ -708,8 +735,9 @@ body[data-page="about"] .method-flow div { background:color-mix(in srgb, var(--a
 .badge-review { color:var(--amber); }
 .badge-live { color:var(--green); }
 .badge-archived { color:#8a8f98; }
-.dark .badge-pending { color:#9cb7cd; }
-.dark .badge-archived { color:#9aa0aa; }
+.dark .badge-pending { color:var(--muted); }
+.dark .badge-archived { color:var(--muted); }
+.dark .badge-live { color:var(--green-text); }
 
 /* Simple hero/lede used at the top of shell pages (data/learn/governance/news/projects) */
 .section-hero { min-height:auto; background:linear-gradient(180deg,#92dbff 0,#59bff0 100%); }
@@ -752,7 +780,7 @@ body[data-page="about"] .shell-panel h2::before {
 }
 .link-row-list { list-style:none; margin:1rem 0 0; padding:0; border-top:1px solid var(--line); }
 .link-row { display:grid; grid-template-columns:1.4rem minmax(0,1.4fr) minmax(0,1fr) auto; align-items:center; gap:.6rem; padding:.6rem .2rem; border-bottom:1px solid #d8dfe6; font-family:var(--font-body); font-size:.85rem; }
-.dark .link-row { border-bottom-color:#2e4e69; }
+.dark .link-row { border-bottom-color:var(--line); }
 .link-row a.dir-name { font-weight:700; }
 .empty-note { padding:1rem 0; color:var(--muted); font:600 .8rem/1.4 var(--font-pixel); }
 

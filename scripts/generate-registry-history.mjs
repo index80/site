@@ -10,8 +10,12 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const REGISTRY_DIR = path.join(ROOT, 'public_html/registry');
 const RELEASES_DIR = path.join(REGISTRY_DIR, 'releases');
 const RECEIPTS_DIR = path.join(REGISTRY_DIR, 'receipts');
-const HISTORY_JSON = path.join(REGISTRY_DIR, 'index.json');
-const HISTORY_HTML = path.join(REGISTRY_DIR, 'index.html');
+// Output defaults to the published Registry. INDEX80_REGISTRY_HISTORY_OUT_DIR
+// redirects ONLY the two written files (tests render into a temp directory so
+// they never overwrite the post-processed published page); inputs are unchanged.
+const OUT_DIR = process.env.INDEX80_REGISTRY_HISTORY_OUT_DIR ? path.resolve(process.env.INDEX80_REGISTRY_HISTORY_OUT_DIR) : REGISTRY_DIR;
+const HISTORY_JSON = path.join(OUT_DIR, 'index.json');
+const HISTORY_HTML = path.join(OUT_DIR, 'index.html');
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -198,11 +202,86 @@ function renderHistoryRow(entry) {
         </li>`;
 }
 
+// VERIFY A SNAPSHOT YOURSELF — generated from the latest confirmed Registry
+// release (falling back to the latest release while its proof is pending), so
+// every future release updates the download link, filename, hash and proof
+// link automatically. No release-specific values are written by hand.
+function snapshotFilename(snapshotPath) {
+  const match = /^\/registry\/snapshots\/([a-z0-9-]+\.json)$/.exec(snapshotPath || '');
+  if (!match) throw new Error(`Invalid Registry snapshot path: ${snapshotPath}`);
+  return match[1];
+}
+
+function renderVerify(entry) {
+  const note = `<p class="registry-note">The whole INDEX:80 database is not written on-chain. Cardano carries the compact proof; the readable registry stays on the open web.</p>`;
+  if (!entry?.snapshot?.path || !/^[0-9a-f]{64}$/.test(entry.snapshot.hash || '')) {
+    return `<section class="panel dark shell-panel registry-verify" id="registry-verify">
+      <div class="registry-section-head compact">
+        <span>INDEPENDENT CHECK</span>
+        <h2>VERIFY A SNAPSHOT YOURSELF</h2>
+      </div>
+      <p class="registry-note">No published snapshot is available to verify yet.</p>
+      ${note}
+    </section>`;
+  }
+  const releaseId = html(entry.release_id);
+  const file = snapshotFilename(entry.snapshot.path);
+  const hash = entry.snapshot.hash;
+  const proof = entry.proof || {};
+  const proofUrl = /^https:\/\/(preprod\.)?cardanoscan\.io\/transaction\/[0-9a-f]{64}$/.test(proof.explorer_url || '') ? proof.explorer_url : null;
+  const label = Number.isInteger(proof.metadata_label) ? proof.metadata_label : null;
+  const standard = typeof proof.proof_standard === 'string' && /^[A-Za-z0-9 .-]+$/.test(proof.proof_standard) ? proof.proof_standard : null;
+  const proofScheme = [label !== null ? `metadata label <code>${label}</code>` : null, standard ? `the ${html(standard)} SHA2-256 proof` : null].filter(Boolean).join(' — ');
+  const network = entry.network === 'mainnet' ? 'Cardano Mainnet' : 'Cardano Preprod (test network)';
+
+  return `<section class="panel dark shell-panel registry-verify" id="registry-verify">
+      <div class="registry-section-head compact">
+        <span>INDEPENDENT CHECK</span>
+        <h2>VERIFY A SNAPSHOT YOURSELF</h2>
+        <p>Verifying release <strong>${releaseId}</strong>. Four steps, using only your own computer and a public Cardano explorer.</p>
+      </div>
+      <ol class="registry-verify-grid registry-verify-steps">
+        <li><span>1</span><div>
+          <h3>DOWNLOAD THE SNAPSHOT</h3>
+          <p>Save the exact ${releaseId} snapshot file. Do not open and re-save it: any change to the bytes changes the hash.</p>
+          <div class="registry-actions">
+            <a class="button primary" href="${html(entry.snapshot.path)}" download="${html(file)}">DOWNLOAD ${releaseId} SNAPSHOT JSON</a>
+            <a class="button" href="/registry/view/">VIEW SNAPSHOT TABLE</a>
+          </div>
+        </div></li>
+        <li><span>2</span><div>
+          <h3>CALCULATE SHA-256</h3>
+          <p>Run one of these commands in the folder containing the downloaded JSON file.</p>
+          <p class="registry-verify-label">macOS / Linux</p>
+          <pre class="registry-verify-code"><code>shasum -a 256 ${html(file)}</code></pre>
+          <p class="registry-verify-label">Windows PowerShell</p>
+          <pre class="registry-verify-code"><code>Get-FileHash .\\${html(file)} -Algorithm SHA256</code></pre>
+        </div></li>
+        <li><span>3</span><div>
+          <h3>COMPARE WITH THE INDEX:80 RELEASE HASH</h3>
+          <p>The hash returned by your computer should exactly match this value.</p>
+          <code class="registry-wallet-address registry-verify-hash" id="registry-verify-hash">${html(hash)}</code>
+          <div class="registry-actions"><button type="button" class="button" data-copy-target="registry-verify-hash">COPY HASH</button></div>
+          <p class="registry-verify-label">PowerShell prints the hash in capitals; the letters are the same.</p>
+        </div></li>
+        <li><span>4</span><div>
+          <h3>CHECK THE CARDANO PROOF</h3>
+          ${proofUrl
+            ? `<p>The ${network} transaction stores the snapshot fingerprint. Open it and inspect ${proofScheme || 'the transaction metadata'}: the hash recorded there should be the same value.</p>
+          <div class="registry-actions"><a class="button primary" href="${html(proofUrl)}" target="_blank" rel="noopener noreferrer">OPEN CARDANO TRANSACTION ↗</a></div>`
+            : `<p>The Cardano proof for ${releaseId} has not been confirmed yet. Once it is, the transaction link appears here.</p>`}
+        </div></li>
+      </ol>
+      <p class="registry-verify-done">If the hash calculated from your downloaded file matches the INDEX:80 release hash and the hash recorded in the Cardano proof, you have independently verified that this is the snapshot INDEX:80 anchored on-chain.</p>
+      ${note}
+    </section>`;
+}
+
 function renderPage(history) {
   const latest = history.releases[0];
   const latestConfirmed = history.releases.find((entry) => entry.status === 'CONFIRMED');
-  const confirmedText = latestConfirmed
-    ? `${latestConfirmed.release_id} has a confirmed ${latestConfirmed.network === 'mainnet' ? 'Mainnet' : 'Preprod test'} proof on Cardano.`
+  const confirmedHtml = latestConfirmed
+    ? `${html(latestConfirmed.release_id)} has a confirmed ${latestConfirmed.network === 'mainnet' ? 'Mainnet' : 'Preprod test'} proof on Cardano.`
     : 'No confirmed Cardano registry proof has been published yet.';
 
   return `<!doctype html>
@@ -259,7 +338,7 @@ ${renderNavLinks('/registry/', '      ')}
         <span class="registry-kicker">LATEST CHAIN PROOF</span>
         <span class="registry-status ${latestConfirmed ? 'is-confirmed' : 'is-pending'}">${latestConfirmed ? html(statusText(latestConfirmed)) : 'NO CONFIRMED ANCHOR'}</span>
         <strong>${html(latestConfirmed?.release_id ?? '—')}</strong>
-        <p>${html(confirmedText)}</p>
+        <p>${confirmedHtml}</p>
         ${latestConfirmed?.proof?.explorer_url ? `<a class="registry-text-link" href="${html(latestConfirmed.proof.explorer_url)}" target="_blank" rel="noopener noreferrer">Open Cardano transaction ↗</a>` : ''}
       </div>
     </section>
@@ -282,8 +361,8 @@ ${renderNavLinks('/registry/', '      ')}
       <h2 class="os-titlebar-heading"><button type="button" class="os-titlebar" aria-expanded="true" aria-controls="registry-verify-body"><span class="os-gadget os-gadget-close" aria-hidden="true"></span><span class="os-title" id="registry-verify-window-title">INDEX:80 · /VERIFY</span><span class="os-gadget os-gadget-toggle" aria-hidden="true"></span><span class="visually-hidden"> — show or hide verification guidance</span></button></h2>
       <div class="os-window-body registry-section-body" id="registry-verify-body">
         <div class="registry-os-content">
-    <details class="panel registry-process profile-source" id="registry-process">
-      <summary class="panel-title"><h2 id="registry-process-title">THE PUBLISHING PROCESS</h2><span>/ HOW IT WORKS <b class="disclosure-caret">▸</b></span></summary>
+    <section class="panel registry-process" id="registry-process" aria-labelledby="registry-process-title">
+      <div class="panel-title"><h2 id="registry-process-title">THE PUBLISHING PROCESS</h2><span>/ HOW IT WORKS</span></div>
       <div class="registry-window-body registry-process-body">
         <p class="registry-process-intro">Simple by design: one public file, one fingerprint, one manually approved Cardano transaction.</p>
         <div class="registry-process-flow">
@@ -297,20 +376,9 @@ ${renderNavLinks('/registry/', '      ')}
         </div>
         <div class="registry-cadence"><strong>PLANNED CADENCE: WEEKLY</strong><span>Snapshot preparation can be automated. Cardano signing always requires manual wallet approval.</span></div>
       </div>
-    </details>
-
-    <section class="panel dark shell-panel registry-verify">
-      <div class="registry-section-head compact">
-        <span>INDEPENDENT CHECK</span>
-        <h2>VERIFY A SNAPSHOT YOURSELF</h2>
-      </div>
-      <div class="registry-verify-grid">
-        <div><span>1</span><p>Download the snapshot JSON.</p></div>
-        <div><span>2</span><p>Calculate SHA-256 over the exact file.</p></div>
-        <div><span>3</span><p>Compare it with the hash in the Cardano transaction.</p></div>
-      </div>
-      <p class="registry-note">The whole INDEX:80 database is not written on-chain. Cardano carries the compact proof; the readable registry stays on the open web.</p>
     </section>
+
+    ${renderVerify(latestConfirmed || latest)}
         </div><!-- /.registry-os-content -->
       </div><!-- /#registry-verify-body -->
     </section><!-- /[data-window="registry-verify"] -->
@@ -391,7 +459,7 @@ ${renderNavLinks('/registry/', '      ')}
 
 function main() {
   const history = buildHistory();
-  fs.mkdirSync(REGISTRY_DIR, { recursive: true });
+  fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(HISTORY_JSON, `${JSON.stringify(history, null, 2)}\n`, 'utf8');
   fs.writeFileSync(HISTORY_HTML, renderPage(history), 'utf8');
   console.log(`Registry history generated: ${history.release_count} release(s), ${history.confirmed_count} confirmed.`);

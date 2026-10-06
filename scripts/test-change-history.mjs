@@ -1,12 +1,13 @@
 #!/usr/bin/env node
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDryRun, PROJECT_PUBLIC_CANDIDATE_FIELDS } from './sprint3a-change-detection.mjs';
-import { buildPublicChangeLedger, renderChangesPage, renderRegistryChangeHistory } from './generate-change-history.mjs';
-import { applyGlobalSearch } from './apply-global-search.mjs';
+import { buildPublicChangeLedger, generatePublicChangeHistory, renderRegistryChangeHistory } from './generate-change-history.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public_html');
@@ -109,26 +110,29 @@ for (const group of first.release_groups) {
 const committedLedgerText = readFileSync(join(PUBLIC, 'data', 'change-ledger.json'), 'utf8');
 assert.equal(committedLedgerText, JSON.stringify(first, null, 2) + '\n', 'Committed public ledger must match generated output byte-for-byte');
 
-const html = renderChangesPage(first, comparison, history);
-const htmlWithGlobalSearch = applyGlobalSearch(html);
-const committedHtml = readFileSync(join(PUBLIC, 'changes', 'index.html'), 'utf8');
-assert(
-  committedHtml === html || committedHtml === htmlWithGlobalSearch,
-  'Generated /changes/ page must match the deterministic base output, with only the standard global-search injection permitted',
-);
-assert(html.includes('ADDED TO INDEX:80'), 'Public addition semantics missing');
-assert(html.includes('REMOVED FROM PUBLIC INDEX'), 'Neutral removal semantics missing');
-assert(html.includes('observation date is not automatically the date'), 'Date semantics warning missing');
-assert(html.includes('/data/change-ledger.json'), 'Machine-readable ledger link missing');
-assert(!html.includes('OPERATIONS CEASED'), 'Public history must not invent cessation semantics');
-assert(!html.includes('<strong>SUMMARY</strong>') && !html.includes('<strong>Summary</strong>'), 'Audit-only summary field must not render as a public change field');
-for (const label of ['EDITORIAL NOTE', 'TAGS', 'SOURCES', 'PUBLIC FAMILY', 'TEAM ENTITY', 'FOUNDER LEAD', 'RELATED PROJECTS']) {
-  assert(!html.includes(`<strong>${label}</strong>`), `Audit-only ${label} field rendered in public Recent Changes`);
+// Sprint 4B.1: the standalone /changes/ page is retired. The Registry page's
+// Recent Changes section is the one human-readable history and the ledger JSON
+// the machine-readable one; /changes/ only survives as a 301 to the Registry.
+assert(!existsSync(join(PUBLIC, 'changes', 'index.html')), 'Retired /changes/ page must not exist in public_html');
+assert(!existsSync(join(PUBLIC, 'assets', 'css', 'changes-page.css')), 'Retired /changes/ stylesheet must not exist');
+{
+  const scratch = mkdtempSync(join(tmpdir(), 'index80-changes-'));
+  try {
+    for (const rel of ['registry', 'data']) cpSync(join(PUBLIC, rel), join(scratch, 'public_html', rel), { recursive: true });
+    const { ledger } = generatePublicChangeHistory(scratch);
+    assert.equal(JSON.stringify(ledger, null, 2) + '\n', committedLedgerText, 'Generator run must reproduce the committed ledger');
+    assert(!existsSync(join(scratch, 'public_html', 'changes')), 'Generator must not write a standalone /changes/ page');
+  } finally {
+    rmSync(scratch, { recursive: true, force: true });
+  }
 }
-assert(!html.includes('aria-current="page"'), 'Changes must not be promoted into primary navigation before owner review');
+const redirects = readFileSync(join(PUBLIC, '_redirects'), 'utf8').split('\n').map((line) => line.trim().split(/\s+/));
+for (const from of ['/changes/', '/changes']) {
+  assert(redirects.some(([src, dest, code]) => src === from && dest === '/registry/#recent-changes' && code === '301'), `${from} must 301-redirect to /registry/#recent-changes`);
+}
 
 // Registry integration: Recent Changes lives inside /registry/, rendered from
-// the same comparison as /changes/ (no second source of truth).
+// the same Sprint 3A comparison as the ledger (no second source of truth).
 const registryHtml = readFileSync(join(PUBLIC, 'registry', 'index.html'), 'utf8');
 const registryFragment = renderRegistryChangeHistory(history, comparison);
 assert(registryHtml.includes(registryFragment), 'Committed /registry/ must embed the deterministic Recent Changes fragment byte-for-byte');
@@ -148,7 +152,18 @@ for (const pair of comparison.pairs) {
 }
 assert(registryFragment.includes('ADDED TO INDEX:80') && registryFragment.includes('REMOVED FROM PUBLIC INDEX'), 'Registry addition/removal semantics missing');
 assert(registryFragment.includes('not automatically the date the underlying real-world event happened'), 'Registry observation-date disclaimer missing');
-assert(registryFragment.includes('href="/changes/"') && registryFragment.includes('href="/data/change-ledger.json"'), 'Registry must link the full /changes/ view and ledger JSON');
+assert(registryFragment.includes('href="/data/change-ledger.json"'), 'Registry must link the change ledger JSON');
+assert(!registryHtml.includes('/changes/') && !registryHtml.includes('href="/changes'), 'Registry must not link the retired /changes/ page');
+assert(!registryFragment.includes('Full view') && !registryFragment.includes('Open full changes view'), 'Registry must not render the retired /changes/ buttons');
+assert(registryFragment.includes('Observation dates:'), 'Registry observation-date heading missing');
+assert(!registryFragment.includes('<strong>SUMMARY</strong>') && !registryFragment.includes('<strong>Summary</strong>'), 'Audit-only summary field must not render as a public change field');
+for (const label of ['EDITORIAL NOTE', 'TAGS', 'SOURCES', 'PUBLIC FAMILY', 'TEAM ENTITY', 'FOUNDER LEAD', 'RELATED PROJECTS']) {
+  assert(!registryFragment.includes(`<strong>${label}</strong>`), `Audit-only ${label} field rendered in public Recent Changes`);
+}
+// Every public atomic event in the ledger is visible in the Registry rendering.
+for (const event of first.events) {
+  assert(registryFragment.includes(`<code>${event.entity_id}</code>`), `Ledger event ${event.event_id} (${event.entity_id}) missing from Registry Recent Changes`);
+}
 assert(registryFragment.includes('class="panel-title registry-window-title"'), 'Registry change windows must reuse the shared panel-title chrome');
 assert(registryFragment.includes('class="disclosure-caret">▸</b>'), 'Registry change windows must reuse the shared disclosure caret');
 assert(!registryFragment.includes('registry-window-toggle'), 'Registry must not use a separate custom window toggle system');
@@ -194,10 +209,8 @@ const hostileHistory = {
   }],
 };
 const hostileComparison = { pairs: [hostilePair] };
-const hostileLedger = { release_groups: [], event_count: 0, latest_release_id: hostilePair.to };
 for (const hostileHtml of [
   renderRegistryChangeHistory(hostileHistory, hostileComparison),
-  renderChangesPage(hostileLedger, hostileComparison, hostileHistory),
 ]) {
   assert(!/href="(?:javascript|data):/i.test(hostileHtml), 'Unsafe Registry URL became a clickable link');
   assert(!hostileHtml.includes('<script>alert(1)</script>') && !hostileHtml.includes('<img src=x'), 'Registry-derived markup was not escaped');
@@ -206,4 +219,4 @@ for (const hostileHtml of [
   assert(hostileHtml.includes('Release JSON unavailable'), 'Unsafe release manifest URL must be rendered as unavailable');
 }
 
-console.log(`Sprint 3B change-history tests passed: ${first.event_count} atomic public events, stable IDs, conservative fields and static /changes/ output verified.`);
+console.log(`Sprint 3B change-history tests passed: ${first.event_count} atomic public events, stable IDs, conservative fields, Registry Recent Changes and the retired /changes/ redirect verified.`);
