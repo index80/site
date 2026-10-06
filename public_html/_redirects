@@ -3,3 +3,7 @@
 # People methodology moved to About → Methodology (canonical editorial methodology).
 /people/methodology/ /about/methodology/#people 301
 /people/methodology /about/methodology/#people 301
+# Sprint 4B.1: the standalone /changes/ page is retired. Registry Recent Changes
+# is the canonical human-readable change history (ledger: /data/change-ledger.json).
+/changes/ /registry/#recent-changes 301
+/changes /registry/#recent-changes 301

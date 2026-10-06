@@ -2,6 +2,7 @@
 // Site-wide search prototype: index privacy/shape, real client matching
 // (assets/js/site-search.js run in a VM), cross-type results, URLs, the
 // strip on every public page, the /search/ page and local category filters.
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';

@@ -106,6 +106,15 @@ html = replaceBetween(html, HEADER_START, HEADER_END, header, 'registry view hea
 html = replaceBetween(html, TOOLBAR_START, TOOLBAR_END, toolbar, 'registry view toolbar');
 html = replaceBetween(html, ROWS_START, ROWS_END, projects.map(renderRow).join('\n'), 'registry view rows');
 html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(releaseId)} Snapshot — INDEX:80 / CARDANO</title>`);
+// Sprint 4B.1 indexing policy: this human view of an immutable snapshot
+// duplicates project content, so it is kept out of search results (links stay
+// followable) and out of the sitemap, global search and llms.txt. Exactly one
+// robots directive, placed after the description, whatever the template holds.
+const ROBOTS_META = '<meta name="robots" content="noindex, follow">';
+html = html.replace(/\n\s*<meta name="robots"[^>]*>/g, '');
+const descriptionMeta = html.match(/\n(\s*)<meta name="description"[^>]*>/);
+if (!descriptionMeta) throw new Error('registry view: description meta missing');
+html = html.replace(descriptionMeta[0], `${descriptionMeta[0]}\n${descriptionMeta[1]}${ROBOTS_META}`);
 writeFileSync(VIEW_FILE, html, 'utf8');
 
 console.log(`[generate-registry-view] wrote ${projectCount} project row(s) for ${releaseId}; ${peopleCount} people declared.`);

@@ -5,11 +5,13 @@
 // window toggle persists only a versioned local UI preference; WHAT'S CURRENT counts and dates come from the governed datasets (never
 // the build clock); no fake change feed; and public provenance wording never
 // claims team/subject confirmation that no published field supports.
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
 import { currentStateBody } from './generate-home-directory.mjs';
+import { stripInk } from './lib/semantic-ink.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public_html');
@@ -224,8 +226,9 @@ EXPLORE_WINDOWS.forEach((w, i) => {
   // Siblings, not nested: one OS frame per segment, closed before the next one starts.
   ok((seg.match(/class="panel os-window/g) || []).length === 1 && seg.endsWith('</div>\n    </section>'), `${w.id}: is a self-contained sibling window (no nested AROS frames)`);
   for (const anchor of w.anchors) ok(seg.includes(`id="${anchor}"`), `${w.id}: contains #${anchor}`);
-  // Nothing deleted: the imported subpage <main> is present verbatim in its own window.
-  const inner = read(w.section, 'index.html').match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1].trim() || '';
+  // Nothing deleted: the imported subpage <main> is present verbatim in its own window
+  // (minus the /data/-only semantic accent-word spans, which the pilot keeps off Explore).
+  const inner = stripInk(read(w.section, 'index.html').match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1].trim() || '');
   ok(inner && seg.includes(inner), `${w.id}: contains the full /${w.section}/ content`);
   const innerPanels = (inner.match(/class="panel[\s"]/g) || []).length;
   ok(innerPanels > 0 && (seg.match(/class="panel[\s"]/g) || []).length === innerPanels + 1, `${w.id}: keeps every existing small panel and adds none`);

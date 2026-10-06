@@ -84,28 +84,28 @@
 
   const style = document.createElement('style');
   style.textContent = `
-    .data-status-strip { display:flex; flex-wrap:wrap; gap:.45rem 1rem; align-items:center; padding:.55rem .8rem; border:1px solid #36526e; background:#071829; color:#9cb7cd; font:600 .66rem/1.35 var(--font-pixel); }
-    .data-status-strip strong { color:var(--cyan); }
+    .data-status-strip { display:flex; flex-wrap:wrap; gap:.45rem 1rem; align-items:center; padding:.55rem .8rem; border:1px solid var(--line); background:var(--page-bg-2); color:var(--muted); font:600 .66rem/1.35 var(--font-pixel); }
+    .data-status-strip strong { color:var(--cyan-text); }
     .data-live-dot { width:.55rem; height:.55rem; display:inline-block; background:var(--green); box-shadow:0 0 .45rem rgba(16,185,129,.7); margin-right:.35rem; }
     .data-live-dot.delayed { background:var(--amber); box-shadow:none; }
-    .data-live-dot.stale { background:#ff8677; box-shadow:none; }
+    .data-live-dot.stale { background:var(--coral); box-shadow:none; }
     .data-grid { grid-column:1/-1; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; }
     .data-card { min-width:0; }
     .data-metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
-    .data-metric { min-height:78px; padding:.7rem .8rem; border-right:1px solid #2e4e69; border-bottom:1px solid #2e4e69; }
-    .data-metric span,.data-metric small { display:block; font:600 .64rem/1.3 var(--font-pixel); color:#9cb7cd; }
-    .data-metric strong { display:block; margin:.3rem 0; font:700 clamp(1rem,2.4vw,1.35rem)/1.05 var(--font-pixel); color:#fff; overflow-wrap:anywhere; }
-    .data-metric strong.up { color:#68e3a5; } .data-metric strong.down { color:#ff8677; }
+    .data-metric { min-height:78px; padding:.7rem .8rem; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .data-metric span,.data-metric small { display:block; font:600 .64rem/1.3 var(--font-pixel); color:var(--muted); }
+    .data-metric strong { display:block; margin:.3rem 0; font:700 clamp(1rem,2.4vw,1.35rem)/1.05 var(--font-pixel); color:var(--text); overflow-wrap:anywhere; }
+    .data-metric strong.up { color:var(--green-text); } .data-metric strong.down { color:var(--coral-text); }
     .market-table-wrap { overflow-x:auto; }
     .market-table { width:100%; border-collapse:collapse; font-size:.8rem; font-family:var(--font-body); }
-    .market-table th { text-align:left; color:#9cb7cd; font:700 .61rem/1.2 var(--font-pixel); letter-spacing:.03em; white-space:nowrap; }
-    .market-table th,.market-table td { padding:.5rem .55rem; border-bottom:1px solid #2e4e69; }
+    .market-table th { text-align:left; color:var(--muted); font:700 .61rem/1.2 var(--font-pixel); letter-spacing:.03em; white-space:nowrap; }
+    .market-table th,.market-table td { padding:.5rem .55rem; border-bottom:1px solid var(--line); }
     .market-table td.num,.market-table th.num { text-align:right; font-variant-numeric:tabular-nums; }
-    .market-table td.asset { font-weight:700; color:#fff; white-space:nowrap; }
-    .market-table .ticker { color:var(--cyan); font:700 .67rem/1 var(--font-pixel); }
-    .market-table .positive { color:#68e3a5; } .market-table .negative { color:#ff8677; }
+    .market-table td.asset { font-weight:700; color:var(--text); white-space:nowrap; }
+    .market-table .ticker { color:var(--cyan-text); font:700 .67rem/1 var(--font-pixel); }
+    .market-table .positive { color:var(--green-text); } .market-table .negative { color:var(--coral-text); }
     .data-source-list { list-style:none; margin:0; padding:0; }
-    .data-source-list li { display:grid; grid-template-columns:minmax(9rem,.7fr) minmax(0,1.4fr) auto; gap:.7rem; padding:.6rem .2rem; border-bottom:1px solid #d8dfe6; align-items:start; }
+    .data-source-list li { display:grid; grid-template-columns:minmax(9rem,.7fr) minmax(0,1.4fr) auto; gap:.7rem; padding:.6rem .2rem; border-bottom:1px solid var(--line); align-items:start; }
     .data-source-list strong { font:700 .68rem/1.25 var(--font-pixel); }
     .data-source-list span { font-size:.82rem; line-height:1.4; }
     .data-source-list a { white-space:nowrap; font:700 .65rem/1.2 var(--font-pixel); }

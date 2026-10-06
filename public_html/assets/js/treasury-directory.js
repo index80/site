@@ -13,6 +13,13 @@
 
   const source = root.getAttribute('data-source') || 'data/projects.json';
   let treasuryOnly = new URLSearchParams(window.location.search).get('funding') === 'treasury';
+  // A /?funding=treasury deep link must land on the Treasury view exactly as
+  // clicking the ₳ chip would: directory window open, category reset to ALL
+  // (Treasury wins over a ?category= in the same URL). ?category= on its own is
+  // untouched — directory.js owns it.
+  const treasuryFromUrl = treasuryOnly;
+  let pendingCategoryReset = treasuryFromUrl;
+  let resettingCategory = false;
   let fundedSlugs = new Set();
   let fundingBySlug = new Map();
   let fundingAdaBySlug = new Map();
@@ -92,6 +99,34 @@
     if (treasuryOnly) url.searchParams.set('funding', 'treasury');
     else url.searchParams.delete('funding');
     history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+  };
+
+  const revealDirectoryWindow = () => {
+    const ui = window.INDEX80_UI;
+    if (ui && ui.ready && typeof ui.open === 'function') ui.open(root);
+    else window.addEventListener('index80-ui-ready', () => window.INDEX80_UI?.open?.(root), { once: true });
+  };
+
+  // Once directory.js has built its category bar, align it with the Treasury
+  // deep link: select ALL (the same step the ₳ chip click performs) and drop a
+  // conflicting ?category= from the address bar.
+  const reconcileDeepLinkCategory = () => {
+    if (!pendingCategoryReset || !treasuryOnly) return;
+    const active = bar.querySelector('.cat-chip[data-cat].active');
+    if (!active) return; // category bar not built yet
+    pendingCategoryReset = false;
+    if (active.getAttribute('data-cat') !== 'all') {
+      const allButton = bar.querySelector('[data-cat="all"]');
+      if (allButton) {
+        resettingCategory = true;
+        try { allButton.click(); } finally { resettingCategory = false; }
+      }
+    }
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('category')) {
+      url.searchParams.delete('category');
+      history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+    }
   };
 
   const ensureButton = () => {
@@ -211,6 +246,7 @@
     if (applying) return;
     applying = true;
     try {
+      reconcileDeepLinkCategory();
       ensureButton();
       ensureFundingColumn();
 
@@ -241,13 +277,15 @@
 
   bar.addEventListener('click', (event) => {
     const categoryButton = event.target.closest('.cat-chip[data-cat]');
-    if (categoryButton && treasuryOnly) {
+    if (categoryButton && treasuryOnly && !resettingCategory) {
       treasuryOnly = false;
       fundingSortActive = false;
       updateUrl();
       requestAnimationFrame(apply);
     }
   }, true);
+
+  if (treasuryFromUrl) revealDirectoryWindow();
 
   Promise.all([
     fetch(source).then((r) => r.ok ? r.json() : Promise.reject(new Error(`directory data ${r.status}`))),
@@ -257,7 +295,12 @@
       const bridgeRecords = treasuryData?.records || {};
       const projectRows = data.projects || [];
 
+      // Funding qualification comes only from treasury-rule.js. Archived
+      // records are never listed in the directory (directory.js isListable),
+      // so they are left out here too and the chip count always equals the
+      // rows the Treasury view can show.
       fundedSlugs = new Set(projectRows
+        .filter((p) => p.status !== 'archived')
         .filter((p) => isConfirmedFunded(p, bridgeRecords[p.slug] || {}))
         .map((p) => p.slug));
 

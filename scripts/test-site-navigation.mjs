@@ -2,6 +2,7 @@
 // Every page's header and footer navigation must match the canonical order in
 // scripts/lib/site-nav.mjs exactly — static, custom (e.g. Charles Hoskinson)
 // and generated (projects, People, registry history) pages alike.
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';

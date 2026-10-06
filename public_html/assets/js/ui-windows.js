@@ -108,7 +108,21 @@
     });
   }
 
-  window.INDEX80_UI = { reset: resetAll };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
-  else init();
+  // Open a window on behalf of an explicit deep link (e.g. /?funding=treasury
+  // targeting the homepage directory) — same rule as an in-page link or hash.
+  function openFrame(frame) {
+    const target = frame && frame.closest && frame.closest('[data-window]');
+    if (target && target.classList.contains('is-collapsed')) choose(target, true);
+  }
+
+  window.INDEX80_UI = { reset: resetAll, open: openFrame, ready: false };
+  function start() {
+    init();
+    window.INDEX80_UI.ready = true;
+    if (typeof window.dispatchEvent === 'function' && typeof Event === 'function') {
+      window.dispatchEvent(new Event('index80-ui-ready'));
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
+  else start();
 })();

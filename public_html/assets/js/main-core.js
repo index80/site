@@ -140,13 +140,6 @@
         linear-gradient(var(--line),var(--line)) 1.56rem 50% / .42rem .42rem no-repeat !important;
       box-shadow: none !important;
     }
-    .dark .panel-title::before {
-      background:
-        linear-gradient(var(--accent),var(--accent)) 0 50% / .42rem .42rem no-repeat,
-        linear-gradient(#2e4e69,#2e4e69) .78rem 50% / .42rem .42rem no-repeat,
-        linear-gradient(#2e4e69,#2e4e69) 1.56rem 50% / .42rem .42rem no-repeat !important;
-      box-shadow: none !important;
-    }
 
     /* Theme System Option A — ARCADE panel-title accent reach. Higher
        specificity than the rules above, so these win for arcade only;

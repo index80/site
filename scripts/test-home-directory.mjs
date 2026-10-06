@@ -6,6 +6,7 @@
  * homepage contains one and only one internal profile link for every valid
  * projects.json record, with no stale or unexpected project slugs.
  */
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

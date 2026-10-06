@@ -14,6 +14,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stripInk } from './lib/semantic-ink.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public_html');
@@ -23,7 +24,8 @@ export const SEARCH_ITEM_KEYS = ['type', 'title', 'subtitle', 'url', 'search_ter
 export const SEARCH_TYPES = ['project', 'person', 'learn', 'governance', 'data', 'registry', 'page'];
 
 const readJson = (rel) => JSON.parse(readFileSync(join(PUBLIC, rel), 'utf8'));
-const readHtml = (rel) => readFileSync(join(PUBLIC, rel), 'utf8');
+// Pages carry build-time semantic accent spans; read their plain prose.
+const readHtml = (rel) => stripInk(readFileSync(join(PUBLIC, rel), 'utf8'));
 // `&amp;` is decoded last so each entity is decoded exactly once
 // (`&amp;lt;` → `&lt;`, not `<`); the catch-all skips `&amp;` for the same reason.
 export const decode = (s) => String(s ?? '')

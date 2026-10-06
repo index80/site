@@ -12,6 +12,7 @@
  * Node core only. Usage: node scripts/test-project-image-variants.mjs
  * (run after scripts/generate-project-pages.mjs)
  */
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';

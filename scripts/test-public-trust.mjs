@@ -5,6 +5,7 @@
  * Proves that specialist public surfaces have a useful static baseline and
  * that visible counts/schema agree with the governed release data.
  */
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

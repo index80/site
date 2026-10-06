@@ -4,6 +4,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import os from 'node:os';
+import { stripInk } from './lib/semantic-ink.mjs';
+import { START as GLOBAL_SEARCH_START, END as GLOBAL_SEARCH_END } from './apply-global-search.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -33,12 +36,32 @@ function snapshotHash(releaseId) {
   return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 }
 
-execFileSync(process.execPath, ['scripts/generate-registry-history.mjs'], { cwd: ROOT, stdio: 'inherit' });
+// The published Registry page is the post-build output (generator + global
+// search strip + semantic ink). This test must never overwrite it: the fresh
+// render goes to a temporary directory, and the published files are hashed
+// before and after to prove they are untouched.
+const publishedPagePath = path.join(ROOT, 'public_html/registry/index.html');
+const publishedHistoryPath = path.join(ROOT, 'public_html/registry/index.json');
+const sha256 = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const publishedHashesBefore = [sha256(publishedPagePath), sha256(publishedHistoryPath)];
 
-const historyPath = path.join(ROOT, 'public_html/registry/index.json');
-const pagePath = path.join(ROOT, 'public_html/registry/index.html');
-const history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
-const page = fs.readFileSync(pagePath, 'utf8');
+const renderDir = fs.mkdtempSync(path.join(os.tmpdir(), 'index80-registry-history-'));
+let history;
+let renderedPage;
+try {
+  execFileSync(process.execPath, ['scripts/generate-registry-history.mjs'], {
+    cwd: ROOT,
+    stdio: 'inherit',
+    env: { ...process.env, INDEX80_REGISTRY_HISTORY_OUT_DIR: renderDir },
+  });
+  history = JSON.parse(fs.readFileSync(path.join(renderDir, 'index.json'), 'utf8'));
+  renderedPage = fs.readFileSync(path.join(renderDir, 'index.html'), 'utf8');
+  assert(fs.readFileSync(path.join(renderDir, 'index.json'), 'utf8') === fs.readFileSync(publishedHistoryPath, 'utf8'), 'Published registry/index.json must equal a fresh generation (rebuild)');
+} finally {
+  fs.rmSync(renderDir, { recursive: true, force: true });
+}
+// Text assertions run on the fresh render (no post-processing spans).
+const page = renderedPage;
 const preprod = history.releases.find((entry) => entry.release_id === PREPROD.release_id);
 const mainnet = history.releases.find((entry) => entry.release_id === MAINNET.release_id);
 
@@ -171,9 +194,40 @@ assert(changeWindows.slice(1).every((match) => match[1] !== ' open'), 'Older Rec
 assert(changeWindows.every((match) => bodies.get('registry-changes').includes(match[0])), 'Every Recent Changes disclosure must stay inside the Recent Changes AROS window');
 assert(page.includes('id="registry-change-history-title"'), 'Registry page is missing the Recent Changes section heading');
 assert(page.includes('aria-label="Change counts"'), 'Collapsed change windows must expose added/removed/updated counts');
-assert(page.includes('<details class="panel registry-process profile-source" id="registry-process">'), 'Publishing-process panel must reuse the Project/People disclosure window');
-assert(!page.includes('<details class="panel registry-process profile-source" id="registry-process" open'), 'Publishing-process default must remain collapsed');
+// Sprint 4B.1 owner UX: the Publishing Process is a permanently visible panel
+// inside /VERIFY, not a second nested disclosure.
+assert(page.includes('<section class="panel registry-process" id="registry-process" aria-labelledby="registry-process-title">'), 'Publishing-process must be a plain, always-visible panel');
+assert(!/<details[^>]*registry-process/.test(page), 'Publishing-process must not be a nested <details> disclosure');
+const processPanel = page.slice(page.indexOf('id="registry-process"'), page.indexOf('</section>', page.indexOf('id="registry-process"')));
+assert(!processPanel.includes('disclosure-caret') && !processPanel.includes('<summary'), 'Publishing-process must not carry a disclosure caret or summary');
+for (const step of ['LIVE REGISTRY', 'FREEZE SNAPSHOT', 'HASH + APPROVE', 'CARDANO PROOF', 'PLANNED CADENCE: WEEKLY']) assert(processPanel.includes(step), `Publishing-process lost ${step}`);
 assert(page.includes('id="registry-process-title"'), 'Publishing-process title anchor must remain intact');
+
+// VERIFY A SNAPSHOT YOURSELF is generated from the latest confirmed release.
+{
+  const target = history.releases.find((entry) => entry.status === 'CONFIRMED') || history.releases[0];
+  const verifyStart = page.indexOf('<section class="panel dark shell-panel registry-verify" id="registry-verify">');
+  assert(verifyStart > 0, 'Verify section missing');
+  const verify = page.slice(verifyStart, page.indexOf('</section>', verifyStart));
+  const file = target.snapshot.path.split('/').pop();
+  assert(/^index80-\d{4,}\.json$/.test(file), `Unexpected snapshot filename ${file}`);
+  assert(verify.includes(`<strong>${target.release_id}</strong>`), 'Verify section must name the release being verified');
+  assert(verify.includes(`href="${target.snapshot.path}" download="${file}">DOWNLOAD ${target.release_id} SNAPSHOT JSON</a>`), 'Verify section must link the latest snapshot JSON download');
+  assert(verify.includes('href="/registry/view/">VIEW SNAPSHOT TABLE</a>'), 'Verify section must link the snapshot table');
+  assert(verify.includes(`<code>shasum -a 256 ${file}</code>`), 'macOS/Linux hash command must use the derived filename');
+  assert(verify.includes(`<code>Get-FileHash .\\${file} -Algorithm SHA256</code>`), 'PowerShell hash command must use the derived filename');
+  assert(/^[0-9a-f]{64}$/.test(target.snapshot.hash) && verify.includes(`id="registry-verify-hash">${target.snapshot.hash}</code>`), 'Verify section must show the full latest SHA-256');
+  assert(verify.includes('data-copy-target="registry-verify-hash">COPY HASH</button>'), 'Verify section must offer COPY HASH via wallet-copy.js');
+  assert(page.includes('<script src="../assets/js/wallet-copy.js" defer></script>'), 'Registry must load the shared copy script');
+  assert(verify.includes(`href="${target.proof.explorer_url}" target="_blank" rel="noopener noreferrer">OPEN CARDANO TRANSACTION ↗</a>`), 'Verify section must link the Cardano explorer transaction');
+  if (Number.isInteger(target.proof.metadata_label)) assert(verify.includes(`metadata label <code>${target.proof.metadata_label}</code>`), 'Verify section must render the governed metadata label');
+  if (target.proof.proof_standard) assert(verify.includes(`${target.proof.proof_standard} SHA2-256 proof`), 'Verify section must render the governed proof standard');
+  assert(verify.includes('you have independently verified that this is the snapshot INDEX:80 anchored on-chain'), 'Verify completion statement missing');
+  assert(verify.includes('The whole INDEX:80 database is not written on-chain'), 'On-chain scope note missing');
+  // Committed snapshot bytes really hash to the displayed value.
+  const bytes = fs.readFileSync(path.join(ROOT, 'public_html', target.snapshot.path.replace(/^\//, '')));
+  assert(crypto.createHash('sha256').update(bytes).digest('hex') === target.snapshot.hash, 'Displayed hash must match the committed snapshot bytes');
+}
 assert(page.includes('class="panel-title registry-window-title"'), 'Recent Changes windows must reuse shared panel-title chrome');
 assert(page.includes('class="disclosure-caret">▸</b>'), 'Recent Changes windows must reuse shared disclosure caret');
 assert(!page.includes('registry-window-toggle'), 'Registry must not render a custom toggle chip'); // shared Project/People window chrome
@@ -183,4 +237,20 @@ assert(page.includes('<section class="panel dark shell-panel registry-wallet" id
 assert(!page.includes('registry-compact registry-wallet'), 'Registry wallet must not be hidden in a collapsed disclosure');
 assert(page.includes('/data/change-ledger.json'), 'Registry machine-readable files must include the public change ledger');
 
-console.log(`Registry provenance tests passed: ${bySequence.length} releases chain in sequence; latest confirmed ${latestConfirmed.release_id}; newest ${newest.release_id} (${newest.status}); pinned INDEX80-0001/0002 proofs agree with immutable snapshots.`);
+// The published page is exactly the fresh render plus the standard
+// post-build passes, and still carries them (global search strip, semantic
+// ink, VERIFY UX, current Recent Changes).
+{
+  const published = fs.readFileSync(publishedPagePath, 'utf8');
+  const searchBlock = new RegExp(`\\n*[ \\t]*${GLOBAL_SEARCH_START}[\\s\\S]*?${GLOBAL_SEARCH_END}`);
+  assert((published.match(new RegExp(GLOBAL_SEARCH_START, 'g')) || []).length === 1 && published.includes('id="global-search-input"'), 'Published Registry page must carry the global search strip');
+  assert((published.match(/<span class="ink ink-[a-z]+">/g) || []).length >= 10, 'Published Registry page must carry semantic ink spans');
+  const publishedText = stripInk(published);
+  assert(publishedText.includes('VERIFY A SNAPSHOT YOURSELF') && publishedText.includes('data-copy-target="registry-verify-hash"'), 'Published Registry page must carry the VERIFY UX');
+  assert(publishedText.includes('id="recent-changes"') && publishedText.includes(history.latest_release_id.toLowerCase() + '-changes'), 'Published Registry page must carry the current Recent Changes');
+  assert(publishedText.replace(searchBlock, '') === renderedPage, 'Published Registry page must equal the fresh render plus only the global-search and semantic-ink passes (rebuild)');
+}
+const publishedHashesAfter = [sha256(publishedPagePath), sha256(publishedHistoryPath)];
+assert(JSON.stringify(publishedHashesAfter) === JSON.stringify(publishedHashesBefore), 'test-registry-history must not modify public_html/registry/index.html or index.json');
+
+console.log(`Registry provenance tests passed (published page untouched, sha256 ${publishedHashesAfter[0].slice(0, 12)}…): ${bySequence.length} releases chain in sequence; latest confirmed ${latestConfirmed.release_id}; newest ${newest.release_id} (${newest.status}); pinned INDEX80-0001/0002 proofs agree with immutable snapshots.`);

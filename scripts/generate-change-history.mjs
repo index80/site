@@ -12,7 +12,6 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDryRun } from './sprint3a-change-detection.mjs';
 import { esc, safeUrl } from './lib/html-safety.mjs';
-import { renderNavLinks } from './lib/site-nav.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public_html');
@@ -293,9 +292,11 @@ function changeCountSummary(project, people = null) {
   return parts.join(' · ');
 }
 
-// Shared body for one Registry release transition. Both /changes/ and the
-// Registry page's Recent Changes windows render through this, so the public
-// wording and exact before/after values cannot drift between the two views.
+// Shared body for one Registry release transition, rendered in the Registry
+// page's Recent Changes windows. /registry/#recent-changes is the one
+// human-readable change history (the standalone /changes/ page was retired in
+// Sprint 4B.1 and 301-redirects there via public_html/_redirects);
+// /data/change-ledger.json is the machine-readable equivalent.
 function renderReleaseChangeBody(pair) {
   const project = pair.project_public_candidates;
   const people = publicPeopleView(pair.people);
@@ -347,7 +348,6 @@ function renderRegistryChangeWindow(pair, release, open = false) {
     ${renderReleaseChangeBody(pair)}
           <div class="registry-actions registry-change-actions">
         ${renderProofActions(release)}
-            <a class="button" href="/changes/#${esc(pair.to.toLowerCase())}">Full view →</a>
           </div>
         </div>
       </details>`;
@@ -377,126 +377,21 @@ export function renderRegistryChangeHistory(history, comparison) {
       }).join('\n      ')}
       </div>
       <div class="registry-actions registry-change-history-links">
-        <a class="button" href="/changes/">Open full changes view →</a>
         <a class="button" href="/data/change-ledger.json">Change ledger JSON →</a>
       </div>
     </section>`;
 }
 
-function renderReleaseSection(pair, release) {
-  return `<section class="panel change-release" id="${esc(pair.to.toLowerCase())}">
-    <div class="change-release-head">
-      <div>
-        <div class="eyebrow">REGISTRY RELEASE</div>
-        <h2>${esc(pair.from)} → ${esc(pair.to)}</h2>
-        <p>Observed in INDEX:80: <strong>${esc(formatObservedDate(release.proof?.confirmation_observed?.date))}</strong></p>
-      </div>
-      <div class="actions">
-        ${renderProofActions(release)}
-      </div>
-    </div>
-    ${renderReleaseChangeBody(pair)}
-  </section>`;
-}
-
-export function renderChangesPage(ledger, comparison, history) {
-  const releaseMap = new Map(history.releases.map((release) => [release.release_id, release]));
-  const sections = [...comparison.pairs].reverse().map((pair) => {
-    const release = releaseMap.get(pair.to);
-    if (!release) throw new Error(`Missing release for ${pair.to}`);
-    return renderReleaseSection(pair, release);
-  }).join('\n');
-
-  return `<!doctype html>
-<html lang="en">
-<head>
-  <script src="/assets/js/analytics.js"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Generated INDEX:80 change history showing what was added, removed from the public index, or factually updated between immutable Registry releases.">
-  <title>Recent Changes — INDEX:80 / CARDANO</title>
-  <link rel="canonical" href="https://index80.com/changes/">
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
-  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
-  <script src="/assets/js/theme.js"></script>
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <link rel="stylesheet" href="/assets/css/changes-page.css">
-</head>
-<body data-mode="data">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="system-bar">
-    <span class="system-slogan">A MORE OPEN INTERNET, A BRIGHTER TOMORROW.</span>
-    <span class="system-status"><span class="status-dot"></span> INDEX:80 ONLINE</span>
-  </div>
-  <header class="site-header">
-    <div class="brand-row">
-      <a class="wordmark" href="/" aria-label="INDEX:80 home"><span>INDEX:</span><b>80</b></a>
-      <span class="network-label">/CARDANO</span>
-    </div>
-    <nav class="main-nav" aria-label="Primary">
-${renderNavLinks(null, '      ')}
-    </nav>
-  </header>
-
-  <main id="main" class="page-grid single-column changes-page">
-    <section class="panel hero-panel section-hero compact-hero dark-hero">
-      <div class="hero-copy">
-        <div class="eyebrow on-dark">REGISTRY CHANGE HISTORY</div>
-        <h1>RECENT CHANGES<small>/INDEX:80</small></h1>
-        <p class="strap">WHAT CHANGED IN INDEX:80'S PUBLIC RECORD.</p>
-        <p>This page is generated from consecutive immutable Registry releases. It records when a change was first reflected in INDEX:80; that observation date is not automatically the date the underlying real-world event happened.</p>
-        <div class="changes-hero-stats">
-          <span><strong>${ledger.release_groups.length}</strong> RELEASE TRANSITIONS</span>
-          <span><strong>${ledger.event_count}</strong> ATOMIC PUBLIC EVENTS</span>
-          <span><strong>${esc(ledger.latest_release_id)}</strong> LATEST RELEASE</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel shell-panel changes-explainer">
-      <h2>HOW TO READ THIS</h2>
-      <p><strong>Added to INDEX:80</strong> means a record first appears in the public Registry. It does not mean the project or person launched on that date. <strong>Removed from public index</strong> is deliberately neutral and does not mean an entity ceased operating.</p>
-      <p>The public view is intentionally conservative: additions/removals and low-ambiguity factual fields such as names, official links, policy IDs, established dates and Treasury/Catalyst references. Summary rewrites, tag enrichment, source-list maintenance and relationship housekeeping remain audit-only.</p>
-      <div class="actions">
-        <a class="button primary" href="/data/change-ledger.json">Machine-readable ledger →</a>
-        <a class="button" href="/registry/">Registry history →</a>
-      </div>
-    </section>
-
-    ${sections}
-  </main>
-
-  <footer class="site-footer">
-    <nav class="footer-nav" aria-label="Secondary">
-${renderNavLinks(null, '      ')}
-    </nav>
-    <div class="footer-meta">
-      <span class="footer-brand">INDEX:<b>80</b> /CARDANO</span>
-      <span>OPEN LINKS · OPEN DATA · SOURCED INFORMATION</span>
-      <button type="button" class="footer-consent-toggle" data-consent-toggle>Cookie preferences</button>
-    </div>
-  </footer>
-  <script src="/assets/js/main.js" defer></script>
-</body>
-</html>
-`;
-}
-
 export function generatePublicChangeHistory(root = ROOT) {
-  const history = JSON.parse(readFileSync(join(root, 'public_html', 'registry', 'index.json'), 'utf8'));
-  const comparison = buildDryRun(root);
   const ledger = buildPublicChangeLedger(root);
-  const html = renderChangesPage(ledger, comparison, history);
 
-  mkdirSync(join(root, 'public_html', 'changes'), { recursive: true });
+  // Only the machine-readable ledger is written here. The human-readable
+  // history is the Registry page's Recent Changes section
+  // (renderRegistryChangeHistory, called by generate-registry-history.mjs);
+  // no standalone /changes/ page is generated.
   mkdirSync(join(root, 'public_html', 'data'), { recursive: true });
   writeFileSync(join(root, 'public_html', 'data', 'change-ledger.json'), JSON.stringify(ledger, null, 2) + '\n', 'utf8');
-  writeFileSync(join(root, 'public_html', 'changes', 'index.html'), html, 'utf8');
-  return { ledger, html };
+  return { ledger };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

@@ -10,6 +10,7 @@
  *
  * Node core only. Usage: node scripts/test-theme-system.mjs
  */
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -164,6 +165,23 @@ const analytics = readFileSync(join(PUBLIC_HTML, 'assets/js/analytics.js'), 'utf
 const consentKey = (analytics.match(/CONSENT_KEY = '([^']+)'/) || [])[1];
 check('analytics consent key untouched', consentKey === 'index80_analytics_consent');
 check('theme keys do not collide with analytics key', !['index80-theme', 'index80-color-mode'].includes(consentKey));
+
+/* --- 8. colour mode controls UI surfaces (Sprint 4B.1 owner rule) ---
+   LIGHT mode = light panels, DARK mode = the theme's dark panels. Registry
+   (hero included) and Data panels must not force a navy surface. */
+const css = (rel) => readFileSync(join(PUBLIC_HTML, rel), 'utf8');
+const siteCssText = css('assets/css/site.css');
+const darkRule = (siteCssText.match(/^\.dark \{[^}]*\}/m) || [''])[0];
+check('.dark panel surface follows the colour mode via theme variables', /var\(--panel-bg\)/.test(darkRule) && /color:var\(--text\)/.test(darkRule) && !/--navy|#[0-9a-f]{3,6}/i.test(darkRule));
+check('no fixed navy .dark .panel-title override', !/\.dark \.panel-title\s*\{/.test(siteCssText));
+check('readable semantic text tokens derive from the theme palette', ['cyan', 'green', 'amber', 'coral'].every((c) => siteCssText.includes(`--${c}-text: color-mix(in srgb, var(--${c}) 55%, var(--ink) 45%)`)));
+const FIXED_DARK = /#(0c2338|071829|0a2035|36526e|27435d|2e4e69|eaf6ff|dff6ff|9cb7cd|9fb4c8|91acc4|8fd6ec|68e3a5|ff8677)\b/i;
+const registryCss = css('assets/css/registry-page.css');
+check('Registry CSS (every window, including the hero) has no fixed dark surface/text colours', !FIXED_DARK.test(registryCss) && !/#(061a2d|03111f|c8d8e7|b8cbe0)\b/i.test(registryCss));
+check('Data CSS has no fixed dark surface/text colours', !FIXED_DARK.test(css('assets/css/data-page.css')));
+const liveJs = readFileSync(join(PUBLIC_HTML, 'assets/js/cardano-data-live.js'), 'utf8');
+check('live Data styles have no fixed dark surface/text colours', !FIXED_DARK.test(liveJs));
+check('shared runtime styles have no fixed dark panel-title stripe', !/\.dark \.panel-title::before/.test(readFileSync(join(PUBLIC_HTML, 'assets/js/main-core.js'), 'utf8')));
 
 if (failures.length) {
   console.error(`\n[test-theme-system] ${failures.length} failure(s).`);

@@ -11,6 +11,7 @@
 - Site search index: https://index80.com/data/search-index.json
 - Registry provenance history: https://index80.com/registry/
 - Registry provenance JSON: https://index80.com/registry/index.json
+- Registry change ledger (JSON): https://index80.com/data/change-ledger.json
 - Live Cardano data: https://data.index80.com/cardano.json
 - Data dashboard: https://index80.com/data/
 - Method / About: https://index80.com/about/
@@ -61,6 +62,20 @@ Each release also has a manifest under `/registry/releases/` and, after independ
 
 The full registry snapshot is not stored on Cardano. Cardano transaction metadata stores a compact CIP-190 / label-309 proof containing the SHA-256 digest of the exact snapshot bytes. Recompute SHA-256 over the downloaded snapshot to verify it against the recorded proof.
 
+## Change history
+
+What changed in INDEX:80's public record between consecutive immutable Registry releases:
+
+- Human-readable: the Recent Changes section of https://index80.com/registry/
+- Machine-readable: https://index80.com/data/change-ledger.json (one atomic event per addition, removal or factual field update, with release JSON, snapshot and Cardano proof links)
+
+How to read a change event:
+
+- `observed_on` is the Registry proof-confirmation observation date: when the change was first reflected in an INDEX:80 Registry release. It is not necessarily the real-world date of the underlying event.
+- `added_to_index` means added to INDEX:80, not that a project or person launched or was created.
+- `removed_from_public_index` is neutral and does not imply that an entity stopped operating.
+- Only the approved conservative public fields are exposed (additions, removals and low-ambiguity factual fields); broader editorial maintenance remains audit-only and is not a change event.
+
 ## How to interpret INDEX:80
 
 - INDEX:80 is an independent project created and maintained by Adam Winstanley. Inclusion in the index is not an endorsement of any listed project.
@@ -85,9 +100,10 @@ INDEX:80 is intentionally static-first and open-web oriented. Prefer:
 
 1. `projects.json` for the current project index and `people.json` for the People directory;
 2. `registry/index.json` plus immutable snapshot/release/receipt files for point-in-time registry provenance;
-3. individual static project pages for human-readable context and per-project metadata;
-4. `cardano.json` for live network/market snapshots;
-5. `sitemap.xml` for discovery;
-6. About / Charter / Governance pages for methodology and interpretation.
+3. `change-ledger.json` for what changed between Registry releases (read `observed_on` as an observation date, not an event date);
+4. individual static project pages for human-readable context and per-project metadata;
+5. `cardano.json` for live network/market snapshots;
+6. `sitemap.xml` for discovery;
+7. About / Charter / Governance pages for methodology and interpretation.
 
 When citing INDEX:80, link to the relevant project page or public data URL and retain source/provenance context where available.

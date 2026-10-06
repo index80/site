@@ -5,6 +5,7 @@
  * Project pages, People directory + homepage structured data, llms.txt
  * accuracy, and internal-link integrity. Read-only; deterministic; no network.
  */
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -39,6 +40,13 @@ for (const u of locs) {
   if (attr(h, /<link rel="canonical" href="([^"]*)"/) !== u) fail(`canonical does not match sitemap URL: ${u}`);
 }
 if (/\/people\/methodology\/|\/search\/|\/review\//.test(sitemap)) fail('sitemap lists a retired/noindex utility page');
+// Sprint 4B.1 deliberate exclusions (see scripts/generate-sitemap.mjs):
+// /changes/ is retired (301 → /registry/#recent-changes); /explore/ is a frame
+// composed of /learn/, /governance/ and /data/; /news/ is an unconnected
+// placeholder; /registry/view/ is noindex. None may be reintroduced silently.
+for (const u of ['/changes/', '/explore/', '/news/', '/registry/view/']) if (locSet.has(SITE + u)) fail(`sitemap lists deliberately excluded ${u}`);
+if (/<lastmod>/.test(sitemap)) fail('sitemap must not carry <lastmod> (build time is not an editorial update date)');
+for (const u of ['/governance/', '/data/', '/about/', '/submit/', '/privacy/']) if (!locSet.has(SITE + u)) fail(`sitemap missing ${u}`);
 
 // ---- per-page metadata (People + Projects) ----
 function checkPages(kind, slugs, { maxDesc = 160 } = {}) {
@@ -110,6 +118,37 @@ for (const slug of generatedPeople) {
     if (t[m.index + m[0].length] === '<') continue; // URL template such as /snapshots/<release>.json
     if (!(existsSync(join(PUB, p)) && statSync(join(PUB, p)).isFile()) && !existsSync(join(PUB, p, 'index.html'))) fail(`llms.txt references a missing resource: ${p}`);
   }
+}
+
+// ---- Sprint 4B.1: change history, Registry view, Explore discovery policy ----
+{
+  const t = read('llms.txt');
+  for (const need of ['https://index80.com/registry/', 'https://index80.com/data/change-ledger.json', 'observed_on', 'not necessarily the real-world date', 'added to INDEX:80, not', 'does not imply that an entity stopped operating', 'conservative public fields']) {
+    if (!t.includes(need)) fail(`llms.txt missing change-history guidance "${need}"`);
+  }
+  for (const banned of ['/changes/', '/explore/', '/registry/view/', '/news/']) if (t.includes(`index80.com${banned}`)) fail(`llms.txt must not list ${banned}`);
+
+  const search = JSON.parse(read('data/search-index.json'));
+  for (const banned of ['/changes/', '/explore/', '/registry/view/']) {
+    if (search.items.some((item) => item.url === banned || item.url.startsWith(`${banned}#`) || item.url.startsWith(`${banned}?`))) fail(`global search must not index ${banned}`);
+  }
+
+  const view = read('registry/view/index.html');
+  if ((view.match(/<meta name="robots"[^>]*>/g) || []).length !== 1 || !view.includes('<meta name="robots" content="noindex, follow">')) fail('/registry/view/ must carry exactly one <meta name="robots" content="noindex, follow">');
+
+  if (existsSync(join(PUB, 'changes', 'index.html'))) fail('retired /changes/ page must not be generated');
+  const redirects = readFileSync(join(PUB, '_redirects'), 'utf8').split('\n').map((l) => l.trim().split(/\s+/));
+  for (const from of ['/changes/', '/changes']) {
+    if (!redirects.some(([src, dest, code]) => src === from && dest === '/registry/#recent-changes' && code === '301')) fail(`${from} must 301 to /registry/#recent-changes`);
+  }
+  if (/href="\/changes[\/"#]/.test(read('registry/index.html'))) fail('Registry must not link the retired /changes/ page');
+
+  // /explore/ is unchanged by policy: indexable, self-canonical, still served.
+  const explore = read('explore/index.html');
+  if (/name="robots" content="[^"]*noindex/i.test(explore)) fail('/explore/ must not be noindex');
+  if (attr(explore, /<link rel="canonical" href="([^"]*)"/) !== `${SITE}/explore/`) fail('/explore/ canonical must stay https://index80.com/explore/');
+  // /news/ stays live (only unlisted).
+  if (!existsSync(join(PUB, 'news', 'index.html'))) fail('/news/ must remain served');
 }
 
 // ---- internal links ----

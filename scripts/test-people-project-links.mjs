@@ -6,6 +6,7 @@
  *   - Founder / Lead names link only on an exact public-name match;
  *   - an unmatched Founder / Lead value renders exactly as before.
  */
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

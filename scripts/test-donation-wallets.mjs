@@ -7,6 +7,7 @@
  *  3. The copy buttons copy exactly the displayed address (Clipboard API and select-copy fallback).
  *  4. Forbidden material (DUST, shielded address, key material) is not published.
  */
+import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // eslint-disable-line no-unused-vars
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
