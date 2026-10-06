@@ -207,7 +207,8 @@ const EXPLORE_WINDOWS = [
 const exploreFrames = [...EXPLORE.matchAll(/data-window="([^"]+)"/g)].map((m) => m[1]);
 ok(JSON.stringify(exploreFrames) === JSON.stringify(EXPLORE_WINDOWS.map((w) => w.id)), `Explore has exactly three OS windows in order explore-learn, explore-governance, explore-data (got ${exploreFrames.join(', ')})`);
 ok(!EXPLORE.includes('explore-main'), 'The single explore-main wrapper is gone');
-const exploreMain = EXPLORE.match(/<main id="main" class="explore-page">([\s\S]*)<\/main>/)?.[1] || '';
+const exploreMain = EXPLORE.match(/<main id="main" class="page-grid single-column explore-page">([\s\S]*)<\/main>/)?.[1] || '';
+ok(exploreMain, 'Explore <main> uses the shared .page-grid single-column frame (same horizontal frame as People)');
 const windowStart = (id) => exploreMain.indexOf(`<section class="panel os-window explore-window" data-window="${id}" data-room="explore">`);
 ok(exploreMain.trimStart().startsWith('<section class="panel os-window explore-window" data-window="explore-learn"'), 'Explore <main> starts with the Learn window');
 let exploreHeroWindow = '';
@@ -273,6 +274,17 @@ const SITE_CSS = read('assets', 'css', 'site.css');
 ok(SITE_CSS.includes('--window-accent:var(--accent)'), 'AROS windows expose a generic --window-accent hook');
 ok(SITE_CSS.includes('.os-window[data-room="explore"]') && SITE_CSS.includes('.os-window[data-room="registry"]'), 'Explore and Registry define Room-specific titlebar accents');
 ok(/\.os-titlebar \{[^}]*\n    linear-gradient\(180deg, color-mix\(in srgb, var\(--window-accent\)/.test(SITE_CSS), 'AROS title-bar base tint still uses the Room accent variable');
+// 7a. Explore frame + window identity: .page-grid owns width/centring/gutter,
+// and each outer Explore window carries its section accent on the shared chrome.
+const explorePageRules = [...SITE_CSS.matchAll(/\.explore-page \{([^}]*)\}/g)].map((m) => m[1]).join(';');
+ok(explorePageRules && !/max-width|margin|padding:|padding-(left|right)/.test(explorePageRules), '.explore-page owns no width, centring or horizontal gutter (left to .page-grid)');
+for (const [id, colour] of [['explore-learn', 'amber'], ['explore-governance', 'purple'], ['explore-data', 'cyan']]) {
+  ok(SITE_CSS.includes(`.explore-window[data-window="${id}"] { --window-accent:var(--${colour}); }`), `${id} window chrome uses the ${colour} accent`);
+}
+ok(/\.os-gadget-close::after \{[^}]*background:var\(--window-accent\)/.test(SITE_CSS) && /\.os-gadget-toggle::after \{[^}]*var\(--window-accent\)/.test(SITE_CSS), 'AROS gadgets take --window-accent');
+ok(/\.os-titlebar:focus-visible \{ outline:3px solid var\(--window-accent\)/.test(SITE_CSS), 'AROS title-bar focus ring takes --window-accent');
+ok(!/html\[data-theme="arcade"\][^{]*explore/.test(SITE_CSS), 'no Arcade-only Explore palette');
+ok(SITE_CSS.includes('.os-window.explore-window[data-window] { --window-stripe-accent:var(--window-accent); }'), 'Explore title-bar pinstripes follow each window\'s section accent');
 // 7b. Rotating stripe accent: shared component only, pinstripe lines only.
 ok(/\.os-window \{[^}]*--window-stripe-accent:var\(--window-accent\)/.test(SITE_CSS), 'AROS windows expose --window-stripe-accent, defaulting to the Room accent');
 const stripeVars = ['cyan', 'magenta', 'amber', 'purple', 'green'].map((c, i) => `--window-stripe-${i + 1}:var(--${c})`);
