@@ -1398,7 +1398,7 @@ html[data-theme="arcade"][data-color-mode="dark"] .os-window { --window-stripe-s
 }
 .os-titlebar:hover .os-title,
 .os-titlebar:focus-visible .os-title { text-decoration:underline; text-underline-offset:3px; }
-.os-titlebar:focus-visible { outline:3px solid var(--accent); outline-offset:-3px; }
+.os-titlebar:focus-visible { outline:3px solid var(--window-accent); outline-offset:-3px; }
 .os-title,
 .os-titlebar-meta {
   padding:.1rem .4rem;
@@ -1422,7 +1422,7 @@ html[data-theme="arcade"][data-color-mode="dark"] .os-window { --window-stripe-s
   content:"";
   position:absolute;
   inset:.28rem;
-  background:var(--accent);
+  background:var(--window-accent);
 }
 /* Toggle gadget: an open window shows a filled "lowered" pane; a collapsed
    one shows only a thin title strip — the state is visible, not just announced. */
@@ -1431,7 +1431,7 @@ html[data-theme="arcade"][data-color-mode="dark"] .os-window { --window-stripe-s
   position:absolute;
   left:.16rem; right:.16rem; top:.16rem; bottom:.16rem;
   border-top:3px solid var(--ink);
-  background:color-mix(in srgb, var(--accent) 45%, transparent);
+  background:color-mix(in srgb, var(--window-accent) 45%, transparent);
 }
 /* The toggle gadget always sits at the right edge, with or without meta. */
 .os-titlebar .os-gadget-toggle { margin-left:auto; }
@@ -1541,14 +1541,25 @@ html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(i
 
 /* Explore is three sibling AROS windows (explore-learn / -governance /
    -data, all data-room="explore"); the imported panels stay as the small
-   windows inside each. The page owns the outer gutter and the gap between
-   windows, each inner .page-grid the in-window gutter. */
-.explore-page { display:grid; gap:.8rem; max-width:1600px; margin:0 auto; padding:.8rem .8rem 1.6rem; }
-.explore-page > * { min-width:0; }
+   windows inside each. <main> is the shared .page-grid frame, which owns
+   width, centring and the horizontal page gutter (aligned with People);
+   .explore-page only adds Explore's bottom spacing and phone gap. Each
+   inner .page-grid is the in-window gutter. */
+.explore-page { padding-bottom:1.6rem; }
 @media (max-width:640px) {
-  .explore-page { gap:.6rem; padding:.5rem .5rem 1.2rem; }
+  .explore-page { gap:.6rem; padding-bottom:1.2rem; }
   .explore-window .page-grid { padding-left:.5rem; padding-right:.5rem; }
 }
+/* Each outer window carries its section's identity on the shared window
+   chrome (title-bar tint, gadgets, focus ring). The inner .explore-learn /
+   -governance / -data accents are descendants and cannot reach it. */
+.explore-window[data-window="explore-learn"] { --window-accent:var(--amber); }
+.explore-window[data-window="explore-governance"] { --window-accent:var(--purple); }
+.explore-window[data-window="explore-data"] { --window-accent:var(--cyan); }
+/* Explore's section identity also drives the title-bar pinstripes, overriding
+   the positional 5-colour rotation (which stays the default elsewhere); stripe
+   strength still follows the theme, so ARCADE runs these hotter. */
+.os-window.explore-window[data-window] { --window-stripe-accent:var(--window-accent); }
 /* Hash jumps (#learn, #governance, #data) land with the window title bar still visible. */
 .explore-subpage { scroll-margin-top:3rem; }
 .explore-learn { --accent:var(--amber); }
