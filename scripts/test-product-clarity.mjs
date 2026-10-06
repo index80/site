@@ -28,6 +28,14 @@ const people = peopleData.people || [];
 
 ok(!/have not yet passed independent verification/i.test(String(projectsData.warning || '')), 'public projects warning does not contradict the publication test');
 ok(/human editorial review for publication/i.test(String(projectsData.warning || '')) && /workflow\/maturity metadata/i.test(String(projectsData.warning || '')), 'public projects warning explains status as workflow/maturity metadata');
+// Config.gs is the private Editorial Registry generator config: it exists in the
+// private repo (where this assertion always runs) and is intentionally absent
+// from the public export, where only this one assertion is skipped.
+const REGISTRY_CONFIG_PATH = join(ROOT, 'apps-script', 'editorial-registry', 'Config.gs');
+if (existsSync(REGISTRY_CONFIG_PATH)) {
+  const REGISTRY_CONFIG = readFileSync(REGISTRY_CONFIG_PATH, 'utf8');
+  ok(/PUBLIC_DATASET_WARNING:[\s\S]*human editorial review for publication[\s\S]*workflow\/maturity metadata/i.test(REGISTRY_CONFIG), 'Registry generator public warning matches the publication semantics');
+}
 const PRIVACY = read('privacy', 'index.html');
 ok(/display preferences[^.]*theme[^.]*collapsed windows/i.test(text(PRIVACY)), 'privacy policy documents local theme and collapsed-window preferences');
 
@@ -83,7 +91,47 @@ for (const part of ['id="people-category-bar"', 'id="people-list"', '<!-- INDEX8
   ok(peopleWindows['people-directory']?.body.includes(part), `People directory window body contains ${part}`);
 }
 // Scope: only the two directory pages, no record pages yet.
-for (const page of ['explore', 'about', 'registry', 'submit']) ok(!read(page, 'index.html').includes('data-window="'), `no OS windows on /${page}/ in this experiment`);
+for (const page of ['submit']) ok(!read(page, 'index.html').includes('data-window="'), `no OS windows on /${page}/ in this experiment`);
+// About: five sibling AROS windows in the About Room; every existing panel
+// stays inside the right window, unchanged and not itself an OS frame.
+const ABOUT = read('about', 'index.html');
+const ABOUT_WINDOWS = [
+  { id: 'about-overview', title: 'ABOUT', panels: ['<section class="panel hero-panel section-hero compact-hero">', '<section class="panel shell-panel" id="independent-open-source">'] },
+  { id: 'about-method', title: 'METHOD', panels: ['<section class="panel methodology">', '<section class="panel shell-panel editorial-system" id="editorial-system"'] },
+  { id: 'about-support', title: 'SUPPORT', panels: ['<section class="panel support-panel">', '<section class="panel shell-panel donation-options" id="donate"'] },
+  { id: 'about-builder', title: 'WHO BUILDS THIS', panels: ['<section class="panel founder-panel">'] },
+  { id: 'about-future', title: 'LOOKING AHEAD', panels: ['<section class="panel shell-panel" aria-labelledby="looking-ahead-title">'] },
+];
+const aboutIds = [...ABOUT.matchAll(/<section [^>]*data-window="([^"]+)"/g)].map((m) => m[1]);
+ok(JSON.stringify(aboutIds) === JSON.stringify(ABOUT_WINDOWS.map((w) => w.id)), `About has exactly five sibling OS windows in order (got ${aboutIds.join(', ')})`);
+ok((ABOUT.match(/data-room="about"/g) || []).length === 5, 'Every About AROS frame declares the About Room');
+const aboutMain = ABOUT.match(/<main id="main" class="page-grid single-column">([\s\S]*)<\/main>/)?.[1] || '';
+ok(aboutMain.trimStart().startsWith('<section class="panel os-window about-section-window" data-window="about-overview"'), 'About <main> starts with the About window (no outer wrapper)');
+ABOUT_WINDOWS.forEach((w, i) => {
+  const start = aboutMain.indexOf(`data-window="${w.id}"`);
+  const endMarker = `</section><!-- /[data-window="${w.id}"] -->`;
+  const end = aboutMain.indexOf(endMarker);
+  ok(start >= 0 && end > start, `${w.id}: window opens and closes`);
+  if (start < 0 || end < 0) return;
+  const seg = aboutMain.slice(aboutMain.lastIndexOf('<section', start), end + endMarker.length);
+  checkWindow('about', { id: w.id, html: seg });
+  ok(seg.includes(`<span class="os-title" id="${w.id}-window-title">INDEX:80 · /${w.title}</span>`), `${w.id}: title bar reads INDEX:80 · /${w.title}`);
+  ok((seg.match(/class="panel os-window/g) || []).length === 1, `${w.id}: sibling window, no nested AROS frame`);
+  for (const panel of w.panels) ok(seg.includes(panel), `${w.id}: contains existing panel ${panel.slice(0, 60)}`);
+  ok((seg.match(/<section class="panel(?! os-window)/g) || []).length === w.panels.length, `${w.id}: keeps exactly its existing panels`);
+  if (i < ABOUT_WINDOWS.length - 1) ok(aboutMain.indexOf(`data-window="${ABOUT_WINDOWS[i + 1].id}"`) > end, `${w.id}: closes before the next window opens`);
+});
+// Stripe colours come only from the shared positional rotation: the five
+// windows are direct siblings in <main>, with no per-window colour styling.
+ok((aboutMain.match(/\n    <section class="panel os-window about-section-window"/g) || []).length === 5, 'About windows are direct <main> siblings, so the shared 5-colour stripe rotation applies');
+ok(!ABOUT.includes('--window-stripe') && !/class="[^"]*os-window[^"]*"[^>]*\sstyle=/.test(ABOUT), 'About assigns no per-window stripe colours');
+for (const anchor of ['independent-open-source', 'editorial-system', 'donate', 'wallet-cardano', 'wallet-bitcoin', 'wallet-midnight']) {
+  ok((ABOUT.match(new RegExp(`id="${anchor}"`, 'g')) || []).length === 1, `About #${anchor} preserved once`);
+}
+const registryPage = read('registry', 'index.html');
+const registryWindowIds = [...registryPage.matchAll(/data-window="([^"]+)" data-room="registry"/g)].map((match) => match[1]);
+ok(JSON.stringify(registryWindowIds) === JSON.stringify(['registry-history', 'registry-changes', 'registry-verify', 'registry-wallet-window', 'registry-data']), 'Registry has exactly five sibling OS windows in the expected order');
+ok(registryWindowIds.length === 5 && (registryPage.match(/data-room="registry"/g) || []).length === 5, 'Every Registry AROS frame declares the Registry Room accent');
 for (const dir of ['projects', 'people']) {
   for (const slug of readdirSync(join(PUBLIC, dir))) {
     const f = join(PUBLIC, dir, slug, 'index.html');
@@ -148,6 +196,43 @@ ok(exploreImg === 'index80-hero-explore.webp', `Explore hero uses the approved d
 ok(exploreImg && exploreImg !== aboutImg && exploreImg !== 'index80-hero-learn.webp', `Explore hero art is dedicated, not the About/Learn duplicate (got ${exploreImg})`);
 ok(exploreImg && existsSync(join(PUBLIC, 'assets', 'images', exploreImg)), 'Explore hero image file exists');
 
+// 5b. Explore: three sibling AROS windows (Learn, Governance, Data), all in
+// the Explore Room. Each holds its imported section unchanged; the existing
+// .panel cards stay as the small windows inside (never new OS frames).
+const EXPLORE_WINDOWS = [
+  { id: 'explore-learn', section: 'learn', title: 'LEARN', anchors: ['learn', 'topics'] },
+  { id: 'explore-governance', section: 'governance', title: 'GOVERNANCE', anchors: ['governance', 'directory'] },
+  { id: 'explore-data', section: 'data', title: 'DATA', anchors: ['data'] },
+];
+const exploreFrames = [...EXPLORE.matchAll(/data-window="([^"]+)"/g)].map((m) => m[1]);
+ok(JSON.stringify(exploreFrames) === JSON.stringify(EXPLORE_WINDOWS.map((w) => w.id)), `Explore has exactly three OS windows in order explore-learn, explore-governance, explore-data (got ${exploreFrames.join(', ')})`);
+ok(!EXPLORE.includes('explore-main'), 'The single explore-main wrapper is gone');
+const exploreMain = EXPLORE.match(/<main id="main" class="explore-page">([\s\S]*)<\/main>/)?.[1] || '';
+const windowStart = (id) => exploreMain.indexOf(`<section class="panel os-window explore-window" data-window="${id}" data-room="explore">`);
+ok(exploreMain.trimStart().startsWith('<section class="panel os-window explore-window" data-window="explore-learn"'), 'Explore <main> starts with the Learn window');
+let exploreHeroWindow = '';
+EXPLORE_WINDOWS.forEach((w, i) => {
+  const start = windowStart(w.id);
+  ok(start >= 0, `${w.id}: declares data-room="explore"`);
+  if (start < 0) return;
+  const next = EXPLORE_WINDOWS[i + 1] ? windowStart(EXPLORE_WINDOWS[i + 1].id) : exploreMain.length;
+  const seg = exploreMain.slice(start, next).trimEnd();
+  checkWindow('explore', { id: w.id, html: seg });
+  ok(seg.includes(`aria-controls="${w.id}-body"`) && seg.includes(`<div class="os-window-body" id="${w.id}-body">`), `${w.id}: title bar controls #${w.id}-body`);
+  ok(seg.includes(`<span class="os-title">INDEX:80 · /${w.title}</span>`), `${w.id}: title bar reads INDEX:80 · /${w.title}`);
+  // Siblings, not nested: one OS frame per segment, closed before the next one starts.
+  ok((seg.match(/class="panel os-window/g) || []).length === 1 && seg.endsWith('</div>\n    </section>'), `${w.id}: is a self-contained sibling window (no nested AROS frames)`);
+  for (const anchor of w.anchors) ok(seg.includes(`id="${anchor}"`), `${w.id}: contains #${anchor}`);
+  // Nothing deleted: the imported subpage <main> is present verbatim in its own window.
+  const inner = read(w.section, 'index.html').match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1].trim() || '';
+  ok(inner && seg.includes(inner), `${w.id}: contains the full /${w.section}/ content`);
+  const innerPanels = (inner.match(/class="panel[\s"]/g) || []).length;
+  ok(innerPanels > 0 && (seg.match(/class="panel[\s"]/g) || []).length === innerPanels + 1, `${w.id}: keeps every existing small panel and adds none`);
+  ok(/<section class="panel hero-panel section-hero/.test(seg), `${w.id}: keeps its section hero`);
+  if (seg.includes(exploreHero)) exploreHeroWindow = w.id;
+});
+ok(exploreHeroWindow === 'explore-learn', `Explore hero/artwork lives in the Learn window (got ${exploreHeroWindow || 'none'})`);
+
 // 6. Public provenance wording never overstates confirmation.
 // No public People/Project field records team/subject confirmation yet, so no
 // generated profile may claim it; People status reads CHECKED, not Verified.
@@ -184,6 +269,24 @@ ok(/image is tracked separately from factual confirmation/.test(METHOD), 'method
 // 8. ui-windows.js behaviour against a minimal DOM stub: open by default,
 // applies a saved preference, persists a versioned object, restores, and
 // survives corrupt or blocked storage.
+const SITE_CSS = read('assets', 'css', 'site.css');
+ok(SITE_CSS.includes('--window-accent:var(--accent)'), 'AROS windows expose a generic --window-accent hook');
+ok(SITE_CSS.includes('.os-window[data-room="explore"]') && SITE_CSS.includes('.os-window[data-room="registry"]'), 'Explore and Registry define Room-specific titlebar accents');
+ok(/\.os-titlebar \{[^}]*\n    linear-gradient\(180deg, color-mix\(in srgb, var\(--window-accent\)/.test(SITE_CSS), 'AROS title-bar base tint still uses the Room accent variable');
+// 7b. Rotating stripe accent: shared component only, pinstripe lines only.
+ok(/\.os-window \{[^}]*--window-stripe-accent:var\(--window-accent\)/.test(SITE_CSS), 'AROS windows expose --window-stripe-accent, defaulting to the Room accent');
+const stripeVars = ['cyan', 'magenta', 'amber', 'purple', 'green'].map((c, i) => `--window-stripe-${i + 1}:var(--${c})`);
+ok(stripeVars.every((v) => SITE_CSS.includes(v)), 'Five theme-derived stripe accents: cyan, magenta, amber, violet, green');
+for (let i = 1; i <= 5; i += 1) {
+  ok(SITE_CSS.includes(`.os-window:nth-child(5n+${i} of .os-window) { --window-stripe-accent:var(--window-stripe-${i}); }`), `sibling AROS window ${i} (mod 5) takes stripe accent ${i}`);
+}
+const stripeLayers = [...SITE_CSS.matchAll(/repeating-linear-gradient\(180deg, color-mix\(in srgb, var\(--([a-z-]+)\) var\(--window-stripe-strength\), transparent\) 0 2px, transparent 2px 4px\)/g)].map((m) => m[1]);
+ok(stripeLayers.length === 2 && stripeLayers.every((v) => v === 'window-stripe-accent'), `light and dark pinstripe layers use --window-stripe-accent (got ${stripeLayers.join(', ') || 'none'})`);
+ok(!/\.os-gadget[^{]*\{[^}]*--window-stripe|\.os-title(?![a-z-])[^{]*\{[^}]*--window-stripe|\.os-window-body[^{]*\{[^}]*--window-stripe/.test(SITE_CSS), 'stripe accent never reaches gadgets, title label or window body');
+ok(/\.os-window \{[^}]*--window-stripe-strength:/.test(SITE_CSS) && /html\[data-theme="arcade"\] \.os-window \{ --window-stripe-strength:/.test(SITE_CSS), 'WEB 1.0 default and ARCADE tune stripe strength, not colour identity');
+for (const [page, html] of [['explore', read('explore', 'index.html')], ['registry', read('registry', 'index.html')]]) {
+  ok(!/class="[^"]*os-window[^"]*"[^>]*\sstyle=/.test(html) && !/os-titlebar"[^>]*\sstyle=/.test(html) && !html.includes('--window-stripe'), `${page}: no per-window inline stripe styling`);
+}
 const UI_JS = read('assets', 'js', 'ui-windows.js');
 function runWindows({ stored, storageThrows = false, ids = ['home-hero', 'home-current', 'home-directory'], hash = '', targets = {} } = {}) {
   const store = new Map(stored === undefined ? [] : [['index80_ui_v1', stored]]);
@@ -293,6 +396,37 @@ for (const [label, stored] of [['corrupt JSON', '{nope'], ['wrong version', JSON
   ok(c.w['home-directory'].body.hidden, 'windows: unrelated hashes leave collapsed windows alone');
   c.navigate('#directory');
   ok(!c.w['home-directory'].body.hidden, 'windows: hashchange to #directory opens it');
+}
+{
+  // About deep links: parents are read from the real page, then the generic
+  // ui-windows.js reopens only the collapsed window that holds the anchor.
+  const ids = ['about-overview', 'about-method', 'about-support', 'about-builder', 'about-future'];
+  const parentOf = (anchor) => {
+    const at = ABOUT.indexOf(`id="${anchor}"`);
+    return ids.filter((id) => ABOUT.indexOf(`data-window="${id}" data-room="about"`) < at).at(-1);
+  };
+  const expected = { 'independent-open-source': 'about-overview', 'editorial-system': 'about-method', donate: 'about-support' };
+  for (const [anchor, parent] of Object.entries(expected)) {
+    ok(parentOf(anchor) === parent, `About #${anchor} lives in ${parent} (got ${parentOf(anchor)})`);
+    const stored = JSON.stringify({ v: 1, windows: Object.fromEntries(ids.map((id) => [id, { collapsed: true }])) });
+    const viaHash = runWindows({ ids, stored, hash: `#${anchor}`, targets: { [anchor]: parentOf(anchor) } });
+    ok(ids.every((id) => viaHash.w[id].body.hidden === (id !== parent)), `About: arriving with #${anchor} opens only ${parent}`);
+    const viaLink = runWindows({ ids, stored, targets: { [anchor]: parentOf(anchor) } });
+    viaLink.clickLink(`#${anchor}`);
+    ok(!viaLink.w[parent].body.hidden, `About: an in-page link to #${anchor} reopens ${parent}`);
+  }
+}
+{
+  // Registry deep links reuse the same generic parent-window behaviour.
+  const ids = ['registry-history', 'registry-changes', 'registry-verify', 'registry-wallet-window', 'registry-data'];
+  const targets = { 'recent-changes': 'registry-changes', 'registry-process': 'registry-verify', 'registry-wallet': 'registry-wallet-window' };
+  for (const [anchor, parent] of Object.entries(targets)) {
+    const stored = JSON.stringify({ v: 1, windows: Object.fromEntries(ids.map((id) => [id, { collapsed: true }])) });
+    const t = runWindows({ stored, ids, hash: `#${anchor}`, targets });
+    ok(!t.w[parent].body.hidden && t.w[parent].attrs['aria-expanded'] === 'true', `windows: /registry/#${anchor} reopens ${parent}`);
+    ok(ids.filter((id) => id !== parent).every((id) => t.w[id].body.hidden), `windows: /registry/#${anchor} leaves unrelated Registry windows collapsed`);
+    ok(!JSON.parse(t.store.get('index80_ui_v1') || '{"windows":{}}').windows[parent], `windows: #${anchor} clears the collapsed preference for ${parent}`);
+  }
 }
 
 if (failures.length) {
