@@ -1,5 +1,15 @@
 title = "INDEX:80 public source"
 
+# The immutable INDEX80-0005 snapshot retains the same public CExplorer tag as 0004.
+# Exclude only this rule, exact snapshot path and exact public tag value.
+[[allowlists]]
+description = "Registry INDEX80-0005 snapshot: public project tag mistaken for a generic API key"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)public_html/registry/snapshots/index80-0005\.json$''']
+regexTarget = "secret"
+regexes = ['''^catalyst-pilot-2026$''']
+
 [extend]
 useDefault = true
 

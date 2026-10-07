@@ -1,0 +1,31 @@
+{
+  "schema": "INDEX80 Registry Anchor Receipt v1",
+  "release_id": "INDEX80-0005",
+  "network": "mainnet",
+  "publisher_address": "addr1qxljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhqjnqcrz",
+  "publisher_stake_credential": "fdcd66d6ac0f965f2c886a0a4b6068cbb84b30fbb0fe67cdaa2f802e",
+  "snapshot_hash": "9aff0fa659748fde0a4e746e594172765c91e766eea1cdca5cd9b1f98393a93d",
+  "metadata_label": 309,
+  "proof_standard": "CIP-190",
+  "transaction_id": "86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+  "fee_lovelace": "172893",
+  "submitted_at": "2026-10-07T22:36:30.415Z",
+  "status": "CONFIRMED",
+  "proof_cbor_hex": "a2617601656974656d7381a166686173686573a168736861322d32353658209aff0fa659748fde0a4e746e594172765c91e766eea1cdca5cd9b1f98393a93d",
+  "local_signed_size_bytes": 394,
+  "onchain_size_bytes": 393,
+  "block": 14039221,
+  "block_hash": "f8a7ac4b331431f785bc6ae06836680028e1a5a99dfb3571b03796d3d4b140b3",
+  "epoch": 660,
+  "slot": 89503,
+  "absolute_slot": 199846303,
+  "confirmation_observed": {
+    "date": "2026-10-07",
+    "observed_at": "2026-10-07T22:40:58.618Z",
+    "assurance": "Koios Mainnet: 12 block confirmations at observation",
+    "source": "Koios Mainnet independent verification",
+    "confirmations": 12,
+    "tip_block_height": 14039233,
+    "tip_block_hash": "afae21797c2369192217679c4fa0e37d65bbf52b4307593f43c12d03441d3ffa"
+  }
+}
