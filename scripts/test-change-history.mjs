@@ -19,7 +19,12 @@ assert.deepEqual(first, second, 'Public change ledger must be deterministic');
 assert.equal(first.schema, 'INDEX80 Public Change Ledger v1');
 assert.equal(first.project_baseline, 'INDEX80-0001');
 assert.equal(first.people_baseline, 'INDEX80-0004');
-assert.equal(first.release_groups.length, 3);
+const orderedReleases = [...history.releases].sort((a, b) => a.sequence - b.sequence);
+assert.deepEqual(
+  first.release_groups.map((group) => [group.from_release, group.to_release]),
+  orderedReleases.slice(1).map((release, i) => [orderedReleases[i].release_id, release.release_id]),
+  'Public ledger must contain each consecutive Registry release transition',
+);
 assert(first.event_count > 0, 'Public ledger must contain real events');
 
 const ids = first.events.map((event) => event.event_id);
@@ -33,7 +38,15 @@ for (const event of first.events) {
   assert(['added_to_index', 'removed_from_public_index', 'field_updated'].includes(event.operation), 'Unexpected operation');
   assert(event.to_release && event.from_release, 'Release pair missing');
   assert(event.release_manifest_url?.startsWith('https://index80.com/registry/releases/'), 'Canonical release manifest URL missing');
-  assert(/^https:\/\/cardanoscan\.io\/transaction\/|^https:\/\/preprod\.cardanoscan\.io\/transaction\//.test(event.cardano_proof_url || ''), 'Cardano proof link missing');
+  const release = history.releases.find((item) => item.release_id === event.to_release);
+  assert(release, `Missing Registry release for ${event.to_release}`);
+  assert.equal(event.cardano_proof_url, release.proof?.explorer_url || null, 'Cardano proof link must match Registry proof metadata');
+  if (release.status === 'CONFIRMED') {
+    assert(/^https:\/\/cardanoscan\.io\/transaction\/|^https:\/\/preprod\.cardanoscan\.io\/transaction\//.test(event.cardano_proof_url || ''), 'Confirmed release Cardano proof link missing');
+  } else {
+    assert.equal(release.status, 'ANCHOR_PENDING', 'Unexpected release status');
+    assert.equal(event.cardano_proof_url, null, 'Pending release must not claim a Cardano proof');
+  }
   assert(event.entity_url?.startsWith('https://index80.com/'), 'Canonical entity URL missing');
   assert(event.evidence.every((item) => /^https:\/\//.test(item.url)), 'Evidence URLs must be absolute HTTP(S)');
 }

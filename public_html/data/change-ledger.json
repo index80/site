@@ -10,7 +10,7 @@
   "registry_history_url": "https://index80.com/registry/index.json",
   "project_baseline": "INDEX80-0001",
   "people_baseline": "INDEX80-0004",
-  "latest_release_id": "INDEX80-0004",
+  "latest_release_id": "INDEX80-0005",
   "release_groups": [
     {
       "from_release": "INDEX80-0001",
@@ -59,9 +59,25 @@
         "people_records_updated": 0,
         "atomic_events": 40
       }
+    },
+    {
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "counts": {
+        "projects_added_to_index": 2,
+        "projects_removed_from_public_index": 0,
+        "project_records_updated": 93,
+        "people_added_to_index": 0,
+        "people_removed_from_public_index": 0,
+        "people_records_updated": 0,
+        "atomic_events": 95
+      }
     }
   ],
-  "event_count": 109,
+  "event_count": 204,
   "events": [
     {
       "event_id": "chg_b7f9d20ff5b1cd6f22da",
@@ -4142,6 +4158,3430 @@
       "current": {
         "name": "Vipercoin"
       }
+    },
+    {
+      "event_id": "chg_b7fadfcda5b5c12c91c4",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "adastack-io",
+      "entity_name": "Adastack.io",
+      "entity_url": "https://index80.com/projects/adastack-io/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/adastack-io"
+    },
+    {
+      "event_id": "chg_501069adf6d60764fb49",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "adaswap",
+      "entity_name": "AdaSwap",
+      "entity_url": "https://index80.com/projects/adaswap/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/adaswap"
+    },
+    {
+      "event_id": "chg_6435c5672aebe7d25eed",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "alphagrowth",
+      "entity_name": "AlphaGrowth",
+      "entity_url": "https://index80.com/projects/alphagrowth/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/alphagrowth"
+    },
+    {
+      "event_id": "chg_807cc8c20b5f16583c37",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "anastasia-labs",
+      "entity_name": "Anastasia Labs",
+      "entity_url": "https://index80.com/projects/anastasia-labs/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/anastasialabs"
+    },
+    {
+      "event_id": "chg_fef92aec43cc8a014676",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "andamio",
+      "entity_name": "Andamio",
+      "entity_url": "https://index80.com/projects/andamio/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/andamio-teams"
+    },
+    {
+      "event_id": "chg_22ca3d02db413d39e577",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "anvil-dev-agency",
+      "entity_name": "Anvil Dev Agency",
+      "entity_url": "https://index80.com/projects/anvil-dev-agency/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/anvil-development-agency-inc"
+    },
+    {
+      "event_id": "chg_ab25d4141b361183b881",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "anzens-usda",
+      "entity_name": "Anzens / USDA",
+      "entity_url": "https://index80.com/projects/anzens-usda/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/anzens-usda"
+    },
+    {
+      "event_id": "chg_fa949e86ab303825c8f4",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "apex-fusion",
+      "entity_name": "Apex Fusion",
+      "entity_url": "https://index80.com/projects/apex-fusion/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/apexfusioncore"
+    },
+    {
+      "event_id": "chg_8c81ec2cdf3e09813a91",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "bbhmm",
+      "entity_name": "BBHMM",
+      "entity_url": "https://index80.com/projects/bbhmm/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/bbhmm-stake"
+    },
+    {
+      "event_id": "chg_974fb8d87b6f00e39ebe",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "bitcoin-os",
+      "entity_name": "BitcoinOS",
+      "entity_url": "https://index80.com/projects/bitcoin-os/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/bitcoinos"
+    },
+    {
+      "event_id": "chg_5936690d7dcda14c7c46",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "blink-labs",
+      "entity_name": "Blink Labs",
+      "entity_url": "https://index80.com/projects/blink-labs/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/blink-labs-io"
+    },
+    {
+      "event_id": "chg_dc48d2a61679094ac232",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "blockfrost",
+      "entity_name": "Blockfrost",
+      "entity_url": "https://index80.com/projects/blockfrost/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/blockfrost"
+    },
+    {
+      "event_id": "chg_a30297491e5907f48d05",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "bodega-market",
+      "entity_name": "Bodega Market",
+      "entity_url": "https://index80.com/projects/bodega-market/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/bodega-market"
+    },
+    {
+      "event_id": "chg_c3096b396859d96edc4e",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "book-io",
+      "entity_name": "Book.io",
+      "entity_url": "https://index80.com/projects/book-io/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/book-io"
+    },
+    {
+      "event_id": "chg_c9cea17c357b9836c9bb",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "cardanians",
+      "entity_name": "Cardanians (CRDN)",
+      "entity_url": "https://index80.com/projects/cardanians/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/cardanians-io"
+    },
+    {
+      "event_id": "chg_cfd7c0b8e03ae77f162c",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "cardano-feed",
+      "entity_name": "Cardano Feed ($ADA)",
+      "entity_url": "https://index80.com/projects/cardano-feed/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/cardanofeed"
+    },
+    {
+      "event_id": "chg_20bfa2c00a03c61ecfc4",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "cardano-foundation",
+      "entity_name": "Cardano Foundation",
+      "entity_url": "https://index80.com/projects/cardano-foundation/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/cardano-foundation"
+    },
+    {
+      "event_id": "chg_a726004371d58223f0f7",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "cardano-over-coffee",
+      "entity_name": "Cardano Over Coffee",
+      "entity_url": "https://index80.com/projects/cardano-over-coffee/",
+      "operation": "added_to_index",
+      "field": null,
+      "previous_present": false,
+      "current_present": true,
+      "previous": null,
+      "current": {
+        "name": "Cardano Over Coffee"
+      }
+    },
+    {
+      "event_id": "chg_ae24e0422b0169cb457a",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "cexplorer",
+      "entity_name": "CExplorer",
+      "entity_url": "https://index80.com/projects/cexplorer/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/cexplorer-io"
+    },
+    {
+      "event_id": "chg_9d4dd816c0200ded35cf",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "charli3",
+      "entity_name": "Charli3",
+      "entity_url": "https://index80.com/projects/charli3/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/charli3-oracle"
+    },
+    {
+      "event_id": "chg_984eb9e20eea65ec3530",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "chibidango-heroes",
+      "entity_name": "Chibidango Heroes",
+      "entity_url": "https://index80.com/projects/chibidango-heroes/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/chibidango-heroes"
+    },
+    {
+      "event_id": "chg_21fead59bf631d43c76b",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "clarity-protocol",
+      "entity_name": "Clarity Protocol",
+      "entity_url": "https://index80.com/projects/clarity-protocol/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/clarityprotocol"
+    },
+    {
+      "event_id": "chg_bb3f90bd491d28f73cc8",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "clay-nation",
+      "entity_name": "Clay Nation",
+      "entity_url": "https://index80.com/projects/clay-nation/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/claynation"
+    },
+    {
+      "event_id": "chg_0872edd8e6685d6cec41",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "cswap",
+      "entity_name": "CSWAP",
+      "entity_url": "https://index80.com/projects/cswap/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/cswap-systems-cardano"
+    },
+    {
+      "event_id": "chg_a722782245abc518fff3",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "defillama",
+      "entity_name": "DefiLlama",
+      "entity_url": "https://index80.com/projects/defillama/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/defillama"
+    },
+    {
+      "event_id": "chg_8ca93bc7cb37ac4644dd",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "deltadefi",
+      "entity_name": "DeltaDeFi",
+      "entity_url": "https://index80.com/projects/deltadefi/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/deltadefi"
+    },
+    {
+      "event_id": "chg_21cdf1647efbe6d3f139",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "dexhunter",
+      "entity_name": "DexHunter",
+      "entity_url": "https://index80.com/projects/dexhunter/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/dexhunter"
+    },
+    {
+      "event_id": "chg_86908e225bbb873d81f9",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "directed",
+      "entity_name": "DirectEd",
+      "entity_url": "https://index80.com/projects/directed/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/directed-dev"
+    },
+    {
+      "event_id": "chg_af9950764a319404e3b8",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "dotare",
+      "entity_name": "Dotare",
+      "entity_url": "https://index80.com/projects/dotare/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/dotare"
+    },
+    {
+      "event_id": "chg_f9847f66edacefa245b5",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "drep-council",
+      "entity_name": "DRep Council",
+      "entity_url": "https://index80.com/projects/drep-council/",
+      "operation": "added_to_index",
+      "field": null,
+      "previous_present": false,
+      "current_present": true,
+      "previous": null,
+      "current": {
+        "name": "DRep Council"
+      }
+    },
+    {
+      "event_id": "chg_4fd8445539b52a0850d3",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "dripdropz",
+      "entity_name": "DripDropz",
+      "entity_url": "https://index80.com/projects/dripdropz/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/dripdropz"
+    },
+    {
+      "event_id": "chg_dbd77abd57f76f510ad0",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "dune",
+      "entity_name": "Dune",
+      "entity_url": "https://index80.com/projects/dune/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/dune-analytics"
+    },
+    {
+      "event_id": "chg_0a50f8c67c4aecfaf11a",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "empowa",
+      "entity_name": "Empowa",
+      "entity_url": "https://index80.com/projects/empowa/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/empowa-io"
+    },
+    {
+      "event_id": "chg_e6c35264e729e4beb402",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "emurgo",
+      "entity_name": "EMURGO",
+      "entity_url": "https://index80.com/projects/emurgo/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/emurgo-io"
+    },
+    {
+      "event_id": "chg_33e0fc58042ffd9fb063",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "european-cardano-community",
+      "entity_name": "European Cardano Community",
+      "entity_url": "https://index80.com/projects/european-cardano-community/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/europe-cardano-community"
+    },
+    {
+      "event_id": "chg_6e39dae4b09b3ee55918",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "fluidtokens",
+      "entity_name": "FluidTokens",
+      "entity_url": "https://index80.com/projects/fluidtokens/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/fluidtokens"
+    },
+    {
+      "event_id": "chg_a70a91d33cc1036b0fd4",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "flux-point-studios",
+      "entity_name": "Flux Point Studios",
+      "entity_url": "https://index80.com/projects/flux-point-studios/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/flux-point-studios-inc"
+    },
+    {
+      "event_id": "chg_d8dee004e41ae52affe5",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "genius-yield",
+      "entity_name": "Genius Yield",
+      "entity_url": "https://index80.com/projects/genius-yield/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/geniusyield"
+    },
+    {
+      "event_id": "chg_9737035061f68cc6fa63",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "gerowallet",
+      "entity_name": "GeroWallet",
+      "entity_url": "https://index80.com/projects/gerowallet/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/gerowallet"
+    },
+    {
+      "event_id": "chg_d8a88ab76f454b60456c",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "gimbalabs",
+      "entity_name": "Gimbalabs",
+      "entity_url": "https://index80.com/projects/gimbalabs/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/gimbalabs"
+    },
+    {
+      "event_id": "chg_c8e2e304e81eabd984e9",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "iagon",
+      "entity_name": "Iagon",
+      "entity_url": "https://index80.com/projects/iagon/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/iagon"
+    },
+    {
+      "event_id": "chg_6f86941587e1b4553935",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "ikigai-technologies",
+      "entity_name": "Ikigai Technologies",
+      "entity_url": "https://index80.com/projects/ikigai-technologies/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/ikigai-technologies"
+    },
+    {
+      "event_id": "chg_a0e3348790d20c994f17",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "index80",
+      "entity_name": "INDEX:80",
+      "entity_url": "https://index80.com/projects/index80/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/index80"
+    },
+    {
+      "event_id": "chg_380e35bed0e700c2ef8b",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "indigo",
+      "entity_name": "Indigo Protocol",
+      "entity_url": "https://index80.com/projects/indigo/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/indigolabsinc"
+    },
+    {
+      "event_id": "chg_423244f0209584da84de",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "infinity-rising",
+      "entity_name": "Infinity Rising",
+      "entity_url": "https://index80.com/projects/infinity-rising/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/infinity-rising-game"
+    },
+    {
+      "event_id": "chg_9da6e137c6ecf04a0747",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "input-output",
+      "entity_name": "Input Output",
+      "entity_url": "https://index80.com/projects/input-output/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/input-output-group"
+    },
+    {
+      "event_id": "chg_b7c15426927cdeac373c",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "intersect",
+      "entity_name": "Intersect",
+      "entity_url": "https://index80.com/projects/intersect/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/intersectmbo"
+    },
+    {
+      "event_id": "chg_4906924906d098890200",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "kwic",
+      "entity_name": "Keyboard Warriors Internet Cafe",
+      "entity_url": "https://index80.com/projects/kwic/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/keyboard-warriors-internet-cafe"
+    },
+    {
+      "event_id": "chg_77896bf01291ebb4803e",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "lace",
+      "entity_name": "Lace",
+      "entity_url": "https://index80.com/projects/lace/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/lace_io"
+    },
+    {
+      "event_id": "chg_36b1b08811e89cb82427",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "larissa-health",
+      "entity_name": "Larissa.Health",
+      "entity_url": "https://index80.com/projects/larissa-health/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/larissa-health"
+    },
+    {
+      "event_id": "chg_303dabec9904f81698c6",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "latam-cardano-community",
+      "entity_name": "LATAM Cardano Community",
+      "entity_url": "https://index80.com/projects/latam-cardano-community/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/latam-cardano"
+    },
+    {
+      "event_id": "chg_bee44c47e1823c81f6ba",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "libertum",
+      "entity_name": "Libertum",
+      "entity_url": "https://index80.com/projects/libertum/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/libertum1"
+    },
+    {
+      "event_id": "chg_dc8a85d2fb20ef3546ad",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "lido-nation",
+      "entity_name": "Lido Nation",
+      "entity_url": "https://index80.com/projects/lido-nation/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/lidonation"
+    },
+    {
+      "event_id": "chg_b44ba8cf32bcad643567",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "liqwid",
+      "entity_name": "Liqwid",
+      "entity_url": "https://index80.com/projects/liqwid/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/liqwid-labs"
+    },
+    {
+      "event_id": "chg_d0dcd5bdfd40e01f9688",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "maestro",
+      "entity_name": "Maestro",
+      "entity_url": "https://index80.com/projects/maestro/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/gomaestro"
+    },
+    {
+      "event_id": "chg_4efafbbc3aae17dd1dae",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "marlowe",
+      "entity_name": "Marlowe",
+      "entity_url": "https://index80.com/projects/marlowe/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/marlowe-lang"
+    },
+    {
+      "event_id": "chg_56822a6677b3986b98fe",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "masumi",
+      "entity_name": "Masumi",
+      "entity_url": "https://index80.com/projects/masumi/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/masumi-network"
+    },
+    {
+      "event_id": "chg_5b185e4d2752fb591cd1",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "meshjs",
+      "entity_name": "MeshJS",
+      "entity_url": "https://index80.com/projects/meshjs/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/meshjs"
+    },
+    {
+      "event_id": "chg_850089c9f64150520259",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "metera",
+      "entity_name": "Metera Protocol",
+      "entity_url": "https://index80.com/projects/metera/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/metera-protocol"
+    },
+    {
+      "event_id": "chg_6e58c4e3b63d33af1417",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "midnight",
+      "entity_name": "Midnight",
+      "entity_url": "https://index80.com/projects/midnight/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/midnight-ntwrk"
+    },
+    {
+      "event_id": "chg_22954d155ccdf224fed6",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "minswap",
+      "entity_name": "Minswap",
+      "entity_url": "https://index80.com/projects/minswap/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/minswap"
+    },
+    {
+      "event_id": "chg_ce2f85e4ef083c6b2ebf",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "mlabs",
+      "entity_name": "MLabs",
+      "entity_url": "https://index80.com/projects/mlabs/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/mlabsconsulting"
+    },
+    {
+      "event_id": "chg_e63bfffb2030d721b179",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "nmkr",
+      "entity_name": "NMKR",
+      "entity_url": "https://index80.com/projects/nmkr/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/utxoag"
+    },
+    {
+      "event_id": "chg_5aa6aaeee4bfa549a7d7",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "nufi",
+      "entity_name": "NUFI",
+      "entity_url": "https://index80.com/projects/nufi/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/nufiwallet"
+    },
+    {
+      "event_id": "chg_28bad3fc0214309f3663",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "nunet",
+      "entity_name": "NuNet",
+      "entity_url": "https://index80.com/projects/nunet/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/nunet-global"
+    },
+    {
+      "event_id": "chg_c8cac496fe5055bab637",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "open-djed",
+      "entity_name": "Open DJED / Artifi Labs",
+      "entity_url": "https://index80.com/projects/open-djed/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/artifi-finance"
+    },
+    {
+      "event_id": "chg_37c444c7e432d8ad887b",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "optim-finance",
+      "entity_name": "Optim Finance",
+      "entity_url": "https://index80.com/projects/optim-finance/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/optimfinance"
+    },
+    {
+      "event_id": "chg_8c7f277a2a771dfbe2f8",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "orcfax",
+      "entity_name": "Orcfax",
+      "entity_url": "https://index80.com/projects/orcfax/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/orcfax-l-l-c"
+    },
+    {
+      "event_id": "chg_de36ea32f97d371b752e",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "palmyra",
+      "entity_name": "Palmyra",
+      "entity_url": "https://index80.com/projects/palmyra/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/palmyra-ecosystem"
+    },
+    {
+      "event_id": "chg_02904918a5ce33c581f7",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "plastiks",
+      "entity_name": "Plastiks",
+      "entity_url": "https://index80.com/projects/plastiks/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/plastiks-nozama"
+    },
+    {
+      "event_id": "chg_a615bdbafe86e4708514",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "project-catalyst",
+      "entity_name": "Project Catalyst",
+      "entity_url": "https://index80.com/projects/project-catalyst/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/catalystvoting"
+    },
+    {
+      "event_id": "chg_743cba8f5ee4ec86aa20",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "realfi",
+      "entity_name": "RealFi",
+      "entity_url": "https://index80.com/projects/realfi/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/real-fi"
+    },
+    {
+      "event_id": "chg_7cacae36309d7c90daba",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "sidan-lab",
+      "entity_name": "SIDAN Lab",
+      "entity_url": "https://index80.com/projects/sidan-lab/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/sidanlab"
+    },
+    {
+      "event_id": "chg_4f3200f00a977b1f1c62",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "slash-vision-labs",
+      "entity_name": "Slash Vision Labs",
+      "entity_url": "https://index80.com/projects/slash-vision-labs/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/slash-vision-labs"
+    },
+    {
+      "event_id": "chg_0f32107b601a4903adeb",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "snek",
+      "entity_name": "SNEK",
+      "entity_url": "https://index80.com/projects/snek/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/snek-foundation"
+    },
+    {
+      "event_id": "chg_fc52edbd4d3dad91b16b",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "spectrum-finance",
+      "entity_name": "Spectrum Finance",
+      "entity_url": "https://index80.com/projects/spectrum-finance/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/spectrumlabs"
+    },
+    {
+      "event_id": "chg_aa8d4e6f85be5e3d7adf",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "strica",
+      "entity_name": "Strica",
+      "entity_url": "https://index80.com/projects/strica/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/strica"
+    },
+    {
+      "event_id": "chg_055ffb1e56c297451d25",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "strike-finance",
+      "entity_name": "Strike Finance",
+      "entity_url": "https://index80.com/projects/strike-finance/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/strike-finance-cardano"
+    },
+    {
+      "event_id": "chg_d32aaec9d08ca1757a26",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "stuff-io",
+      "entity_name": "Stuff.io",
+      "entity_url": "https://index80.com/projects/stuff-io/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/stuff-io"
+    },
+    {
+      "event_id": "chg_2efb3768d9eb920604ef",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "sundaeswap",
+      "entity_name": "SundaeSwap",
+      "entity_url": "https://index80.com/projects/sundaeswap/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/sundaeswap-labs"
+    },
+    {
+      "event_id": "chg_33ef00da75c2cf0e7f91",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "sundial-protocol",
+      "entity_name": "Sundial Protocol",
+      "entity_url": "https://index80.com/projects/sundial-protocol/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/sundial-protocol"
+    },
+    {
+      "event_id": "chg_1b738d0830ca92d0e239",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "sustainable-ada",
+      "entity_name": "Sustainable ADA",
+      "entity_url": "https://index80.com/projects/sustainable-ada/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/sustainableada"
+    },
+    {
+      "event_id": "chg_cfed1d833cf9dc663588",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "tapdano",
+      "entity_name": "TapDano",
+      "entity_url": "https://index80.com/projects/tapdano/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/tapdano"
+    },
+    {
+      "event_id": "chg_0fba5dbc872d7a408a53",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "toto-finance",
+      "entity_name": "Toto Finance",
+      "entity_url": "https://index80.com/projects/toto-finance/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/totofinance"
+    },
+    {
+      "event_id": "chg_6b51d2b5663fac1aacb5",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "trivolve-tech",
+      "entity_name": "Trivolve Tech",
+      "entity_url": "https://index80.com/projects/trivolve-tech/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/trivolve-tech"
+    },
+    {
+      "event_id": "chg_f6e45d8bfe59e94e9891",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "tweag",
+      "entity_name": "Tweag",
+      "entity_url": "https://index80.com/projects/tweag/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/tweag-i-o"
+    },
+    {
+      "event_id": "chg_e26e57e85b966ab6cd50",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "txpipe",
+      "entity_name": "TxPipe",
+      "entity_url": "https://index80.com/projects/txpipe/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/txpipe"
+    },
+    {
+      "event_id": "chg_83ca311df7c9bb4512df",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "uverify",
+      "entity_name": "UVerify",
+      "entity_url": "https://index80.com/projects/uverify/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/uverify-io"
+    },
+    {
+      "event_id": "chg_fdaa47765c8c50cd7996",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "vespr",
+      "entity_name": "VESPR",
+      "entity_url": "https://index80.com/projects/vespr/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/vesprwallet"
+    },
+    {
+      "event_id": "chg_8773775030c889f413d9",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "vyfinance",
+      "entity_name": "VyFinance",
+      "entity_url": "https://index80.com/projects/vyfinance/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/vyfinance"
+    },
+    {
+      "event_id": "chg_ea89dd8ea28833965568",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "wada",
+      "entity_name": "Wada",
+      "entity_url": "https://index80.com/projects/wada/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/wada-org"
+    },
+    {
+      "event_id": "chg_a8a6dfe1bb120cbec9b1",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "wingriders",
+      "entity_name": "WingRiders",
+      "entity_url": "https://index80.com/projects/wingriders/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/wingriders"
+    },
+    {
+      "event_id": "chg_f2b72dfabdb2a5a1697e",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "world-mobile",
+      "entity_name": "World Mobile",
+      "entity_url": "https://index80.com/projects/world-mobile/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/worldmobilegroup"
+    },
+    {
+      "event_id": "chg_d30967ce73265525b988",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "xerberus",
+      "entity_name": "Xerberus",
+      "entity_url": "https://index80.com/projects/xerberus/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/xerberus-protocol"
+    },
+    {
+      "event_id": "chg_017ec649ee62f83e7eaf",
+      "from_release": "INDEX80-0004",
+      "to_release": "INDEX80-0005",
+      "observed_on": "2026-10-07",
+      "release_manifest_url": "https://index80.com/registry/releases/index80-0005.json",
+      "cardano_proof_url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac",
+      "evidence": [
+        {
+          "type": "registry_snapshot_before",
+          "url": "https://index80.com/registry/snapshots/index80-0004.json"
+        },
+        {
+          "type": "registry_snapshot_after",
+          "url": "https://index80.com/registry/snapshots/index80-0005.json"
+        },
+        {
+          "type": "registry_release",
+          "url": "https://index80.com/registry/releases/index80-0005.json"
+        },
+        {
+          "type": "cardano_proof",
+          "url": "https://cardanoscan.io/transaction/86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+        }
+      ],
+      "entity_type": "project",
+      "entity_id": "zkfold",
+      "entity_name": "zkFold",
+      "entity_url": "https://index80.com/projects/zkfold/",
+      "operation": "field_updated",
+      "field": "linkedin_url",
+      "previous_present": true,
+      "current_present": true,
+      "previous": null,
+      "current": "https://www.linkedin.com/company/zkfold"
     }
   ]
 }
