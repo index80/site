@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-02T17:23:06.832Z",
+  "generated_at": "2026-10-07T16:07:22.589Z",
   "status": "discovery",
   "warning": "All records in this public export have passed human editorial review for publication. The status field is workflow/maturity metadata, not a verification, endorsement or activity rating; use each record's linked sources and public page for current evidence.",
-  "count": 218,
+  "count": 220,
   "skipped_invalid_count": 0,
   "projects": [
     {
@@ -492,7 +492,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/adahandle",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/kora-labs",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.gg/DYbCjsU2XB",
@@ -1615,7 +1615,7 @@
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/cardanoscanio",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/strica",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -6638,7 +6638,7 @@
       "docs_url": "https://docs.typhonwallet.io/",
       "github_url": "https://github.com/StricaHQ",
       "social_url": "https://x.com/typhonwallet",
-      "linkedin_url": null,
+      "linkedin_url": "https://www.linkedin.com/company/strica",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": "https://discord.com/invite/WQFPHNXcz8",
@@ -9989,6 +9989,66 @@
       "team_entity": "DRep Council",
       "primary_link_type": "website",
       "primary_link_url": "https://drepcouncil.org/"
+    },
+    {
+      "slug": "singular",
+      "name": "Singular",
+      "category": "identity",
+      "public_family": "Governance & Identity",
+      "summary": "Lambda Sistemi project: permissionless Cardano registry for unique identities and independent application state, written primarily in Haskell. README records 65 proved declarations plus simulation/conformance work and a public preprod deployment, but explicitly says the design remains unaccepted and no independent audit acceptance is claimed.",
+      "official_url": "https://lambdasistemi.github.io/singular/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://lambdasistemi.github.io/singular/"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://lambdasistemi.github.io/singular/"
+    },
+    {
+      "slug": "pekkah-origins",
+      "name": "Pekkah Origins",
+      "category": "ai",
+      "public_family": "Real-World & Utility",
+      "summary": "Marketplace lets AI agents buy GPU/CPU compute jobs using x402 on Cardano preprod with test tUSDM; README records real preprod transactions and a Masumi escrow lock. Important caveat: hackathon prototype, preprod/test tokens only; worker admission is allowlisted and several trust/settlement limits are openly documented.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/LAIN-21/pekkah-origins",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://github.com/LAIN-21/pekkah-origins"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/LAIN-21/pekkah-origins"
     }
   ]
 }
