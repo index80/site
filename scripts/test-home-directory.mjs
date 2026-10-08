@@ -10,6 +10,7 @@ import { INK_TOLERANT_HTML } from './test-helpers/ink-tolerant-html.mjs'; // esl
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildHistory } from './generate-registry-history.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC_HTML = join(ROOT, 'public_html');
@@ -76,5 +77,14 @@ const countMatch = html.match(/<span id="directory-count" class="directory-count
 if (!countMatch || countMatch[1].trim() !== `${expected.length} RECORDS`) {
   fail('static directory count does not match projects.json.');
 }
+
+// The homepage must use governed release/receipt input on the first build,
+// even when the previously generated history still names an older release.
+const history = buildHistory();
+const latest = history.releases.find((r) => r.release_id === history.latest_release_id);
+const current = html.split('<!-- INDEX80_CURRENT_STATE_START -->')[1]?.split('<!-- INDEX80_CURRENT_STATE_END -->')[0] || '';
+if (!current.includes(`<strong>${history.latest_release_id}</strong>`)) fail('homepage Registry proof lags governed releases/receipts.');
+const proofDate = latest?.proof?.confirmation_observed?.date;
+if (proofDate && !current.includes(`datetime="${proofDate}"`)) fail('homepage proof date differs from the governed receipt.');
 
 console.log(`[test-home-directory] PASS: ${expected.length} valid records, ${rowCount} static rows, ${slugs.length} unique project links.`);

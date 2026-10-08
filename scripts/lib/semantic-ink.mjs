@@ -72,7 +72,7 @@ export const EXCLUDED_CLASSES = new Set([
   'treasury-metric', 'profile-source', 'source-list', 'source-line',
   'people-record-name', 'people-subtitle', 'people-crumb', 'people-record-cat', 'people-meta', 'people-role-list',
   'people-links', 'people-fact-body', 'people-list', 'people-card', 'people-beta-status', 'people-beta-notice',
-  'current-state-grid', 'data-status-strip', 'data-metrics', 'data-metric', 'market-table', 'market-table-wrap', 'data-source-list',
+  'current-state-grid', 'signals-title', 'data-status-strip', 'data-metrics', 'data-metric', 'market-table', 'market-table-wrap', 'data-source-list',
   'registry-facts', 'registry-proof-lines', 'registry-history', 'registry-machine-links', 'registry-wallet-address',
   'registry-verify-hash', 'registry-verify-code', 'registry-status', 'registry-mini-status', 'registry-kicker',
   'registry-release-number', 'registry-snapshot-meta', 'registry-snapshot-toolbar', 'registry-snapshot-table-wrap',
