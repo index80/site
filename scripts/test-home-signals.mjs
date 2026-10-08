@@ -119,9 +119,10 @@ ok(mixed.current.length === 1 && mixed.current[0].id === 'good', 'one bad record
 ok(signalProblems(base).length === 0, 'the base fixture is valid');
 
 // 4. Rendering: escaped, safe links, real related records only.
-const hostile = sig({ headline: '<img src=x onerror=alert(1)>', summary: '"quoted" & <b>bold</b>', source_label: '<script>' });
+const hostile = sig({ headline: '<img src=x onerror=alert(1)>', summary: '"quoted" & <b>bold</b>', source_label: '<script><SCRIPT><ScRiPt>' });
 const html = renderSignals([hostile], {});
-ok(!/<img|<b>|<script/.test(html) && html.includes('&lt;img src=x onerror=alert(1)&gt;'), 'signal text is HTML-escaped');
+ok(['<img', '<b>', '<script'].every((tag) => !html.toLowerCase().includes(tag)) && html.includes('&lt;img src=x onerror=alert(1)&gt;'), 'signal text is HTML-escaped');
+ok(html.includes('&quot;quoted&quot; &amp; &lt;b&gt;bold&lt;/b&gt;') && html.includes('&lt;script&gt;&lt;SCRIPT&gt;&lt;ScRiPt&gt;'), 'summary and source label are escaped, including upper and mixed-case tags');
 ok(renderSignals([], {}) === '', 'no current signals renders nothing (strip omitted)');
 const linked = renderSignals([sig({ related_project_slugs: ['real', 'ghost'], related_person_slugs: ['person'] })], {
   projects: new Map([['real', 'Real Project']]), people: new Map([['person', 'A Person']]),
