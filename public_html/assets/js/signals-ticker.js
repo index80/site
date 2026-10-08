@@ -7,13 +7,12 @@
  * accent-word colour spans, is moved into a <button> as-is.
  *
  * Layouts (data-signals-mode on the strip):
- *   marquee: wide screens with motion allowed. Headlines scroll slowly and
- *            continuously; the detail below shows the selected signal.
- *   step:    narrow screens with motion allowed. One complete headline at a
- *            time, advancing in sequence; the detail follows it.
+ *   marquee: the unwrapped headlines overflow the available ticker width.
+ *            The same continuous loop runs at every viewport width.
  *   static:  prefers-reduced-motion, keyboard focus inside the ticker, or
  *            headlines too short to scroll. All headlines wrap in place.
- * Movement pauses on hover, keyboard focus, touch, a hidden tab, or PAUSE.
+ * PAUSE/PLAY is the manual movement control. Hover and touch never pause.
+ * Keyboard navigation exposes all headlines; reduced motion stays static.
  * Clicking or focusing a headline selects it. Manual selection is announced
  * politely; automatic advancing is not.
  *
@@ -22,7 +21,6 @@
  */
 (() => {
   const DAY_MS = 86400000;
-  const STEP_MS = 7000;
   const SPEED_PX_S = 32;
 
   function expired(el, now) {
@@ -68,7 +66,6 @@
     clone.removeAttribute('aria-labelledby');
     clone.removeAttribute('data-signals-ticker-list');
     clone.setAttribute('aria-hidden', 'true');
-    clone.setAttribute('inert', '');
     clone.classList.add('signals-ticker-clone');
     clone.querySelectorAll('button').forEach((b) => { b.tabIndex = -1; b.removeAttribute('aria-controls'); });
     clone.querySelectorAll('[data-signal-ref]').forEach((li) => li.addEventListener('click', () => {
@@ -80,7 +77,7 @@
     const pause = document.createElement('button');
     pause.type = 'button';
     pause.className = 'signals-key';
-    pause.addEventListener('click', () => { userPaused = !userPaused; update(); });
+    pause.addEventListener('click', () => { userPaused = !userPaused; syncMotion(); });
     ticker.after(pause);
 
     const status = document.createElement('span');
@@ -90,13 +87,14 @@
     root.classList.add('is-enhanced');
 
     const reduce = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
-    const narrow = window.matchMedia ? window.matchMedia('(max-width: 720px)') : null;
     let selected = 0;
-    let hovered = false;
     let keyboard = false;
     let userPaused = false;
-    let timer = null;
     let mode = 'static';
+    let animation = null;
+    let animationWidth = 0;
+    let measureFrame = null;
+    let pointerFocus = false;
 
     function select(i, announce) {
       selected = (i + items.length) % items.length;
@@ -108,65 +106,91 @@
       });
       clone.querySelectorAll('.signal-tick').forEach((li, j) => li.classList.toggle('is-active', j === selected));
       if (announce) status.textContent = `Showing signal ${selected + 1} of ${items.length}: ${items[selected].button.textContent}`;
-      if (mode === 'step') {
-        const li = items[selected].li;
-        li.classList.remove('is-entering');
-        void li.offsetWidth; // restart the step entrance
-        li.classList.add('is-entering');
-        schedule();
-      }
     }
 
     function paused() {
-      return userPaused || hovered || keyboard || document.hidden;
+      return userPaused || keyboard || document.hidden || mode !== 'marquee';
     }
 
-    function schedule() {
-      clearTimeout(timer);
-      timer = null;
-      if (mode === 'step' && !paused()) timer = setTimeout(() => select(selected + 1, false), STEP_MS);
-    }
-
-    function layout() {
-      if ((reduce && reduce.matches) || keyboard || items.length < 2) return 'static';
-      if (narrow && narrow.matches) return 'step';
-      // Marquee only when the headlines are wider than the strip.
-      root.dataset.signalsMode = 'marquee';
-      return list.scrollWidth > ticker.clientWidth ? 'marquee' : 'static';
-    }
-
-    function update() {
-      mode = layout();
-      root.dataset.signalsMode = mode;
-      if (mode === 'marquee') track.style.setProperty('--signals-duration', `${Math.max(20, Math.round(list.scrollWidth / SPEED_PX_S))}s`);
-      const moving = mode === 'marquee' || mode === 'step';
-      pause.hidden = !moving;
+    function syncMotion() {
+      pause.hidden = mode !== 'marquee';
       pause.textContent = userPaused ? 'PLAY' : 'PAUSE';
       pause.setAttribute('aria-label', userPaused ? 'Resume signal headlines' : 'Pause signal headlines');
       pause.setAttribute('aria-pressed', String(userPaused));
       root.classList.toggle('is-paused', paused());
-      schedule();
+      if (animation) {
+        if (paused()) { if (animation.playState !== 'paused') animation.pause(); }
+        else if (animation.playState !== 'running') animation.play();
+      }
     }
 
-    root.addEventListener('mouseenter', () => { hovered = true; update(); });
-    root.addEventListener('mouseleave', () => { hovered = false; update(); });
+    function measure() {
+      measureFrame = null;
+      // Measure the original list at its actual unwrapped width, even when
+      // the previous layout wrapped. The copy never contributes to the test.
+      // This synchronous measuring state is restored before the next paint.
+      root.dataset.signalsMode = 'measure';
+      const width = list.getBoundingClientRect().width;
+      const overflow = width > ticker.clientWidth && ticker.clientWidth > 0;
+      mode = !(reduce && reduce.matches) && !keyboard && overflow && typeof track.animate === 'function' ? 'marquee' : 'static';
+      root.dataset.signalsMode = mode;
+      if (mode === 'marquee' && (!animation || Math.abs(width - animationWidth) > .01)) {
+        // Preserve travelled pixels when fonts change the loop's width.
+        // A viewport-only resize or theme recolour keeps the same animation.
+        const distance = animation && animationWidth ? ((animation.currentTime || 0) / 1000 * SPEED_PX_S) % animationWidth : 0;
+        if (animation) animation.cancel();
+        animation = track.animate([
+          { transform: 'translateX(0)' },
+          { transform: `translateX(-${width}px)` },
+        ], { duration: width / SPEED_PX_S * 1000, iterations: Infinity });
+        animationWidth = width;
+        animation.currentTime = (distance % width) / SPEED_PX_S * 1000;
+      }
+      syncMotion();
+    }
+
+    function queueMeasure() {
+      if (measureFrame === null) measureFrame = requestAnimationFrame(measure);
+    }
+
+    // Pointer-origin focus must not be mistaken for keyboard navigation,
+    // including compatibility focus after a touch. These never pause motion.
+    root.addEventListener('pointerdown', () => { pointerFocus = true; }, { passive: true });
+    root.addEventListener('touchstart', () => { pointerFocus = true; }, { passive: true });
+    root.addEventListener('keydown', (event) => {
+      pointerFocus = false;
+      if (list.contains(event.target) && !keyboard) { keyboard = true; measure(); }
+    });
     root.addEventListener('focusin', (event) => {
       // Keyboard focus lays every headline out in place so none is off-screen;
       // a mouse click only selects (no layout jump under the pointer).
       let visible = true;
       try { visible = event.target.matches(':focus-visible'); } catch { /* old browsers: treat as keyboard */ }
-      if (visible && !keyboard) { keyboard = true; update(); }
+      if (visible && !pointerFocus && !keyboard && !clone.contains(event.target) && event.target !== pause) { keyboard = true; measure(); }
     });
     root.addEventListener('focusout', (event) => {
-      if (keyboard && !root.contains(event.relatedTarget)) { keyboard = false; update(); }
+      if (!root.contains(event.relatedTarget)) { pointerFocus = false; if (keyboard) { keyboard = false; measure(); } }
     });
-    root.addEventListener('touchstart', () => { if (!userPaused) { userPaused = true; update(); } }, { passive: true });
-    document.addEventListener('visibilitychange', update);
-    for (const mq of [reduce, narrow]) if (mq && mq.addEventListener) mq.addEventListener('change', update);
-    let resizeTimer = null;
-    window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(update, 200); });
+    document.addEventListener('keydown', () => { pointerFocus = false; }, true);
+    document.addEventListener('visibilitychange', syncMotion);
+    if (reduce && reduce.addEventListener) reduce.addEventListener('change', queueMeasure);
+    window.addEventListener('resize', queueMeasure);
+    window.addEventListener('orientationchange', queueMeasure);
+    if (window.ResizeObserver) {
+      const observer = new ResizeObserver(queueMeasure);
+      observer.observe(ticker);
+      observer.observe(list);
+    }
+    if (window.MutationObserver) new MutationObserver(queueMeasure).observe(document.documentElement, {
+      attributes: true, attributeFilter: ['data-theme', 'data-color-mode'],
+    });
+    if (document.fonts) {
+      document.fonts.ready.then(queueMeasure);
+      document.fonts.addEventListener('loadingdone', queueMeasure);
+      document.fonts.addEventListener('loadingerror', queueMeasure);
+    }
 
-    update();
+    measure();
     select(0, false);
   }
 

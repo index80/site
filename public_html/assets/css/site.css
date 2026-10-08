@@ -1602,12 +1602,13 @@ html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(i
    summaries keep the site's semantic-ink word colours, so the strip
    sits on the normal panel surface (ink contrast is tuned for it) and
    defines no palette of its own. assets/js/signals-ticker.js sets
-   data-signals-mode = marquee | step | static; without JS everything
+   data-signals-mode = marquee | static; without JS everything
    is listed statically.
    ============================================================ */
 .signals { border-top:1px solid var(--line); }
 .signals-bar {
-  display:flex;
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) 4rem;
   align-items:center;
   gap:.6rem;
   min-width:0;
@@ -1615,7 +1616,7 @@ html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(i
   border-bottom:1px dashed var(--line);
 }
 .signals-title {
-  flex:0 0 auto;
+  grid-column:1 / -1;
   margin:0;
   color:var(--muted);
   font:700 .62rem/1.2 var(--font-pixel);
@@ -1623,7 +1624,7 @@ html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(i
   white-space:nowrap;
 }
 .signals-title::after { content:" ▸"; content:" ▸" / ""; }
-.signals-ticker { flex:1 1 auto; min-width:0; overflow:hidden; }
+.signals-ticker { min-width:0; overflow:hidden; }
 .signals-track { min-width:0; }
 .signals-ticker-list {
   display:flex;
@@ -1638,7 +1639,7 @@ html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(i
   text-transform:uppercase;
 }
 .signal-tick { min-width:0; overflow-wrap:anywhere; }
-.signal-tick::after { content:"///"; content:"///" / ""; padding:0 1.1em; color:var(--muted); font-weight:400; }
+.signal-tick::after { content:"///"; content:"///" / ""; padding:0 1.1em; color:var(--key-active-bg); font-weight:900; font-size:1.25em; letter-spacing:.08em; -webkit-text-stroke:.5px currentColor; }
 .signal-tick:last-child::after { content:none; }
 .signals-ticker-clone { display:none; }
 .signal-tick-btn {
@@ -1673,15 +1674,16 @@ html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(i
 }
 .signals-key:hover { filter:brightness(1.15); }
 .signals-key:focus-visible { outline:2px solid var(--link); outline-offset:2px; }
-.signals-key[hidden] { display:none; }
-/* Marquee: one long nowrap line plus an inert copy for a seamless loop. */
-.signals[data-signals-mode="marquee"] .signals-track { display:flex; width:max-content; }
-.signals[data-signals-mode="marquee"] .signals-ticker-list { flex-wrap:nowrap; white-space:nowrap; }
-.signals[data-signals-mode="marquee"] .signal-tick:last-child::after { content:"///"; content:"///" / ""; }
+.signals-key[hidden] { display:block; visibility:hidden; }
+/* One measured, unwrapped line and a pointer-selectable copy. The copy is
+   hidden from assistive technology and excluded from keyboard navigation. */
+.signals:is([data-signals-mode="marquee"], [data-signals-mode="measure"]) .signals-track { display:flex; width:max-content; }
+.signals:is([data-signals-mode="marquee"], [data-signals-mode="measure"]) .signals-ticker-list { flex:0 0 auto; flex-wrap:nowrap; width:max-content; white-space:nowrap; }
+.signals:is([data-signals-mode="marquee"], [data-signals-mode="measure"]) .signal-tick { flex:0 0 auto; }
+.signals:is([data-signals-mode="marquee"], [data-signals-mode="measure"]) .signal-tick:last-child::after { content:"///"; content:"///" / ""; }
 .signals[data-signals-mode="marquee"] .signals-ticker-clone { display:flex; }
-/* Step: one complete headline at a time. */
-.signals[data-signals-mode="step"] .signal-tick:not(.is-active) { display:none; }
-.signals[data-signals-mode="step"] .signal-tick::after { content:none; }
+.signals[data-signals-mode="static"] .signals-track { transform:none !important; }
+.signals[data-signals-mode="static"] .signal-tick-btn { max-width:100%; overflow-wrap:anywhere; }
 .signals-details { padding:.55rem 1rem .75rem; }
 .signal + .signal { margin-top:.6rem; padding-top:.6rem; border-top:1px dashed var(--line); }
 .signals.is-enhanced .signal + .signal { margin-top:0; padding-top:0; border-top:0; }
@@ -1701,16 +1703,11 @@ html[data-color-mode="dark"] .os-window { box-shadow:inset 1px 1px 0 color-mix(i
   text-transform:uppercase;
 }
 .signal-links a { display:inline-block; padding:.2rem 0; color:var(--link); }
-/* Movement only when the visitor allows it. */
-@media (prefers-reduced-motion: no-preference) {
-  .signals[data-signals-mode="marquee"] .signals-track { animation:signals-marquee var(--signals-duration, 60s) linear infinite; }
-  .signals.is-paused .signals-track { animation-play-state:paused; }
-  .signals[data-signals-mode="step"] .signal-tick.is-entering { animation:signal-step .6s ease-out both; }
-}
-@keyframes signals-marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
-@keyframes signal-step { from { opacity:0; transform:translateY(.35rem); } to { opacity:1; transform:none; } }
-@media (max-width:720px) {
-  .signals-bar { flex-wrap:wrap; align-items:flex-start; }
-  .signals-title { flex-basis:100%; }
-  .signals-ticker { flex:1 1 0; }
+/* The runtime starts the measured Web Animation only with motion allowed.
+   CSS also protects against a preference change before its next measurement. */
+@media (prefers-reduced-motion: reduce) {
+  .signals .signals-track { transform:none !important; }
+  .signals .signals-ticker-list { flex-wrap:wrap !important; width:auto !important; white-space:normal !important; }
+  .signals .signals-ticker-clone { display:none !important; }
+  .signals .signal-tick { flex:0 1 auto !important; }
 }
