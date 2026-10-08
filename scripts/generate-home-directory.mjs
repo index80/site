@@ -13,6 +13,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 import { esc, safeUrl } from './lib/html-safety.mjs';
+import { buildHistory } from './generate-registry-history.mjs';
 
 // Shared "confirmed Treasury-funded" rule — see assets/js/treasury-rule.js.
 const Treasury = createRequire(import.meta.url)('../public_html/assets/js/treasury-rule.js');
@@ -21,7 +22,6 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC_HTML = join(ROOT, 'public_html');
 const DATA_FILE = join(PUBLIC_HTML, 'data', 'projects.json');
 const PEOPLE_FILE = join(PUBLIC_HTML, 'data', 'people.json');
-const REGISTRY_INDEX_FILE = join(PUBLIC_HTML, 'registry', 'index.json');
 const RELATIONS_FILE = join(PUBLIC_HTML, 'data', 'project-relations.json');
 const HOME_FILE = join(PUBLIC_HTML, 'index.html');
 
@@ -218,7 +218,9 @@ export function currentStateBody(projects, people, registryIndex, dates = {}) {
 function main() {
   const data = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
   const peopleData = JSON.parse(readFileSync(PEOPLE_FILE, 'utf8'));
-  const registryIndex = JSON.parse(readFileSync(REGISTRY_INDEX_FILE, 'utf8'));
+  // Read governed releases/receipts directly: index.json is refreshed later
+  // in the build, so using it here would lag one build behind a new proof.
+  const registryIndex = buildHistory();
   const projects = (data.projects || []).filter(isListable);
   const people = Array.isArray(peopleData.people) ? peopleData.people : [];
   const fallbackRelations = loadFallbackRelations();

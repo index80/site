@@ -78,7 +78,7 @@ function buildEntry(filename) {
   };
 }
 
-function buildHistory() {
+export function buildHistory() {
   const releases = listReleaseFiles().map(buildEntry);
   return {
     confirmed_count: releases.filter((entry) => entry.status === 'CONFIRMED').length,
@@ -465,4 +465,4 @@ function main() {
   console.log(`Registry history generated: ${history.release_count} release(s), ${history.confirmed_count} confirmed.`);
 }
 
-main();
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
