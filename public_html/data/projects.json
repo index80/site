@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-02T17:23:06.832Z",
+  "generated_at": "2026-10-08T22:48:00.329Z",
   "status": "discovery",
   "warning": "All records in this public export have passed human editorial review for publication. The status field is workflow/maturity metadata, not a verification, endorsement or activity rating; use each record's linked sources and public page for current evidence.",
-  "count": 218,
+  "count": 246,
   "skipped_invalid_count": 0,
   "projects": [
     {
@@ -9989,6 +9989,942 @@
       "team_entity": "DRep Council",
       "primary_link_type": "website",
       "primary_link_url": "https://drepcouncil.org/"
+    },
+    {
+      "slug": "45b-cardano-enablement",
+      "name": "45B - Cardano Enablement",
+      "category": "education",
+      "public_family": "Infrastructure & Tools",
+      "summary": "45B provides Cardano-focused developer onboarding, education and integration resources, including community workshops and design-centre initiatives described in its public material.",
+      "official_url": "https://45b.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://45b.io/"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://45b.io/"
+    },
+    {
+      "slug": "able-stake-pool",
+      "name": "ABLE Stake Pool",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "ABLE is a Cardano community stake pool associated publicly with operator Mike Hornan. Current pool activity, identifier and community contributions are being checked.",
+      "official_url": "https://able-pool.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://able-pool.io/"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://able-pool.io/"
+    },
+    {
+      "slug": "adapolis",
+      "name": "Adapolis",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Adapolis is a Cardano stake-pool and governance initiative whose public profile describes operating since the incentivised testnet. Current pool and DRep identifiers remain under review.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/Adapolis_ADP",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://x.com/Adapolis_ADP"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "x",
+      "primary_link_url": "https://x.com/Adapolis_ADP"
+    },
+    {
+      "slug": "amaru",
+      "name": "Amaru",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Open-source Cardano node client written in Rust, built by several ecosystem organisations under the PRAGMA association and funded through the Cardano treasury. It is still in development towards a fully interoperable block-producing node.",
+      "official_url": "https://amaru.global/",
+      "docs_url": null,
+      "github_url": "https://github.com/pragma-org/amaru",
+      "social_url": "https://x.com/amaru_cardano",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": "https://discord.gg/Zbbumu9NMz",
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "open-source",
+        "infrastructure",
+        "node",
+        "rust"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://amaru.global/"
+        },
+        {
+          "type": "source",
+          "url": "https://github.com/pragma-org/amaru"
+        },
+        {
+          "type": "source",
+          "url": "https://pragma.io/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "In development: not presented as a production block producer.",
+      "team_entity": "Amaru team (PRAGMA)",
+      "related_projects": [
+        "pragma",
+        "txpipe",
+        "cardano-foundation",
+        "blink-labs"
+      ],
+      "primary_link_type": "website",
+      "primary_link_url": "https://amaru.global/"
+    },
+    {
+      "slug": "atada-atad2",
+      "name": "ATADA / ATAD2 Cardano StakePool Austria",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "ATADA and ATAD2 are Cardano stake-pool tickers associated with an Austria-based operator and Martin Lang's public governance activity. Current pool operation and listing structure require review.",
+      "official_url": "https://stakepool.at",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://stakepool.at"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://stakepool.at"
+    },
+    {
+      "slug": "bankfi",
+      "name": "BankFi",
+      "category": "defi",
+      "public_family": "DeFi & Markets",
+      "summary": "BankFi presents a Cardano-focused token and DeFi ecosystem describing rewards, governance and real-world-asset ambitions. Live services and on-chain contract claims remain under verification.",
+      "official_url": "https://bankerlabs.io",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://bankerlabs.io"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://bankerlabs.io"
+    },
+    {
+      "slug": "blockforce",
+      "name": "Blockforce",
+      "category": "utility",
+      "public_family": "Real-World & Utility",
+      "summary": "Supply-chain traceability platform for digital product passports and ESG compliance. Records stay on a permissioned ledger while their cryptographic proofs are anchored on Cardano; live with Brazilian fashion groups including Azzas 2154, with more than 500,000 records anchored by August 2026.",
+      "official_url": "https://blockforce.ai/en",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "traceability",
+        "enterprise",
+        "rwa"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://cardanofoundation.org/blog/blockforce-partnership"
+        },
+        {
+          "type": "source",
+          "url": "https://cardano.org/news/2026-08-31-blockforce-traceability/"
+        },
+        {
+          "type": "source",
+          "url": "https://blockforce.ai/en"
+        }
+      ],
+      "featured": false,
+      "team_entity": "Blockforce (São Paulo, Brazil)",
+      "related_projects": [
+        "cardano-foundation"
+      ],
+      "primary_link_type": "website",
+      "primary_link_url": "https://blockforce.ai/en"
+    },
+    {
+      "slug": "blockpqr",
+      "name": "BlockPQR",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "BlockPQR is a protocol-engineering company where former IO Labs engineers continue work on Cardano's ledger, blockchain indexer, formal methods and high-availability engineering. Input Output remains responsible for the relevant milestones.",
+      "official_url": "https://blockpqr.io",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://blockpqr.io"
+        }
+      ],
+      "featured": false,
+      "team_entity": "BlockPQR",
+      "primary_link_type": "website",
+      "primary_link_url": "https://blockpqr.io"
+    },
+    {
+      "slug": "brock-pool",
+      "name": "BROCK Pool",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "BROCK Pool is a Cardano stake-pool and community tooling initiative associated with the public BROCK identity. Its pool activity, governance credentials and linked tools are being verified.",
+      "official_url": "https://brock.tools",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://brock.tools"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://brock.tools"
+    },
+    {
+      "slug": "cardano-smart-ai",
+      "name": "Cardano Smart AI",
+      "category": "ai",
+      "public_family": "Real-World & Utility",
+      "summary": "Cardano Smart AI presents Cardano-focused market-intelligence services, AI tools and a proposed agent marketplace. Current product features and token or NFT utility have not yet been independently verified.",
+      "official_url": "https://cardanosmart.ai",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://cardanosmart.ai"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://cardanosmart.ai"
+    },
+    {
+      "slug": "cardano-updates",
+      "name": "Cardano Updates",
+      "category": "analytics",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano Updates tracks Cardano development activity. The current service and whether it should be listed separately from the Koios ecosystem are under editorial review.",
+      "official_url": "https://cardanoupdates.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://cardanoupdates.com/"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://cardanoupdates.com/"
+    },
+    {
+      "slug": "charles-hoskilien-hskn",
+      "name": "Charles Hoskilien / $HSKN",
+      "category": "community-token",
+      "public_family": "Culture & Creators",
+      "summary": "Charles Hoskilien ($HSKN) is a Cardano meme-token project whose public communications describe infrastructure-linked treasury rewards. Its EarthNode/AirNode income claims, World Mobile relationship and token identity remain under review.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/hoskilien",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://x.com/hoskilien"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "x",
+      "primary_link_url": "https://x.com/hoskilien"
+    },
+    {
+      "slug": "chil-stake-pool",
+      "name": "CHIL Stake Pool",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "CHIL is a Chile-based Cardano stake-pool operation whose public profile references Mithril and governance participation. The current pool ID, activity and DRep association are under verification.",
+      "official_url": "https://chilestakepo.cl",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://chilestakepo.cl"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://chilestakepo.cl"
+    },
+    {
+      "slug": "coingecko",
+      "name": "CoinGecko",
+      "category": "analytics",
+      "public_family": "Infrastructure & Tools",
+      "summary": "CoinGecko is a cross-chain cryptocurrency market-data platform with Cardano-specific token, liquidity and decentralised-exchange information. It is not a Cardano-native service.",
+      "official_url": "https://www.coingecko.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://www.coingecko.com/"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.coingecko.com/"
+    },
+    {
+      "slug": "hydrodrip",
+      "name": "HydroDrip",
+      "category": "utility",
+      "public_family": "Real-World & Utility",
+      "summary": "HydroDrip presents itself as a Cardano-native incubator supporting NFT, DeFi and marketing projects. Its current services and the projects it supports are being independently checked.",
+      "official_url": "https://hydrodrip.io",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://hydrodrip.io"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://hydrodrip.io"
+    },
+    {
+      "slug": "ican-group",
+      "name": "ICAN Group",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "ICAN Group is a London-based engineering firm that took ownership of Cardano platform engineering, quality assurance, cryptography, and performance-and-tracing functions from IO Labs in August 2026, according to Input Output.",
+      "official_url": "https://www.icangroup.co.uk",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://www.icangroup.co.uk"
+        }
+      ],
+      "featured": false,
+      "team_entity": "ICAN Group",
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.icangroup.co.uk"
+    },
+    {
+      "slug": "karma-pool-stakeada",
+      "name": "KARMA Pool / StakeADA",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "KARMA Pool / StakeADA is a long-running Cardano stake-pool initiative. Its current pool activity and operating focus need reconfirmation following public indications that attention has shifted toward other networks.",
+      "official_url": "https://stakeada.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://stakeada.com/"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://stakeada.com/"
+    },
+    {
+      "slug": "kompact",
+      "name": "Kompact",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Kompact is a Cardano-native application-development team that describes helping builders move from ideas to launched decentralised applications. Company social links and associated people are reviewed separately.",
+      "official_url": "https://kompact.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://kompact.io/"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://kompact.io/"
+    },
+    {
+      "slug": "mayz-protocol",
+      "name": "MAYZ Protocol",
+      "category": "yield",
+      "public_family": "DeFi & Markets",
+      "summary": "MAYZ Protocol describes a Cardano platform for tokenised index funds and baskets of native assets. Its current mainnet status, operating products and security evidence are under review.",
+      "official_url": "https://www.mayz.io",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/MAYZProtocol",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://www.mayz.io"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/MAYZProtocol"
+        }
+      ],
+      "featured": false,
+      "team_entity": "MAYZ Protocol",
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.mayz.io"
+    },
+    {
+      "slug": "midgard-labs",
+      "name": "Midgard Labs",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Midgard Labs is a Cardano engineering company associated with Plutus smart-contract work and related open-source tools. It is distinct from the separately listed Midgard Layer-2 protocol.",
+      "official_url": "https://midgardlabs.io",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://midgardlabs.io"
+        }
+      ],
+      "featured": false,
+      "team_entity": "Midgard Labs",
+      "related_projects": [
+        "midgard",
+        "plutus",
+        "anastasia-labs"
+      ],
+      "primary_link_type": "website",
+      "primary_link_url": "https://midgardlabs.io"
+    },
+    {
+      "slug": "midnight-city",
+      "name": "Midnight City",
+      "category": "ai",
+      "public_family": "Real-World & Utility",
+      "summary": "Midnight City describes an autonomous AI-agent city simulation built around the Midnight Network. Product maturity and its eligibility under INDEX:80's Cardano-technology policy are under review.",
+      "official_url": "https://midnight.city",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://midnight.city"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "website",
+      "primary_link_url": "https://midnight.city"
+    },
+    {
+      "slug": "odatano",
+      "name": "ODATANO",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "ODATANO presents an open-source OData V4 bridge for enterprise applications and Cardano/Midnight blockchain workflows. The current implementation and deployment maturity are under review.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/ODATANO_V4",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://x.com/ODATANO_V4"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "x",
+      "primary_link_url": "https://x.com/ODATANO_V4"
+    },
+    {
+      "slug": "pbg",
+      "name": "PBG",
+      "category": "yield",
+      "public_family": "DeFi & Markets",
+      "summary": "PBG describes a Cardano-focused asset-management platform built around decentralised vault portfolios. Public audit and repository material exists, but current application availability and live deployment remain under verification.",
+      "official_url": "https://www.pbg.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/PBGtoken",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://www.pbg.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/PBGtoken"
+        }
+      ],
+      "featured": false,
+      "team_entity": "PBG",
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.pbg.io/"
+    },
+    {
+      "slug": "play-ping",
+      "name": "PLAY PING!",
+      "category": "game",
+      "public_family": "Culture & Creators",
+      "summary": "PLAY PING! presents a skill-based game with solo and head-to-head play, described by its team as available in beta. Its Cardano integration and sustained activity are being verified.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/PINGTHEGAME",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://x.com/PINGTHEGAME"
+        }
+      ],
+      "featured": false,
+      "primary_link_type": "x",
+      "primary_link_url": "https://x.com/PINGTHEGAME"
+    },
+    {
+      "slug": "pogun",
+      "name": "Pogun",
+      "category": "lending",
+      "public_family": "DeFi & Markets",
+      "summary": "Pogun describes a Bitcoin-linked credit and liquidity initiative for Cardano, including a proposed bilateral credit market and bridge. Cardano mainnet operation is not yet established.",
+      "official_url": "https://pogun.io",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/pogun_io",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://pogun.io"
+        },
+        {
+          "type": "source",
+          "url": "https://x.com/pogun_io"
+        }
+      ],
+      "featured": false,
+      "team_entity": "Pogun",
+      "primary_link_type": "website",
+      "primary_link_url": "https://pogun.io"
+    },
+    {
+      "slug": "pragma",
+      "name": "PRAGMA",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Member-led, not-for-profit association that stewards open-source Cardano infrastructure, including the Aiken smart-contract language, the Amaru node client and the cardano-init project tool. Its members include Blink Labs, Cardano Foundation, dcSpark, Sundae Labs and TxPipe.",
+      "official_url": "https://pragma.io/",
+      "docs_url": null,
+      "github_url": "https://github.com/pragma-org",
+      "social_url": "https://x.com/pragma_org",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": "https://discord.gg/Zbbumu9NMz",
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "open-source",
+        "infrastructure",
+        "developer-tool"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://pragma.io/"
+        },
+        {
+          "type": "source",
+          "url": "https://github.com/pragma-org"
+        },
+        {
+          "type": "source",
+          "url": "https://amaru.global/"
+        }
+      ],
+      "featured": false,
+      "team_entity": "PRAGMA (member association)",
+      "related_projects": [
+        "aiken",
+        "amaru",
+        "txpipe",
+        "cardano-foundation",
+        "blink-labs"
+      ],
+      "primary_link_type": "website",
+      "primary_link_url": "https://pragma.io/"
+    },
+    {
+      "slug": "se7en-labs",
+      "name": "Se7en Labs",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Se7en Labs is an engineering company formed by the team behind DripDropz that took over Daedalus wallet development and roadmap ownership from Input Output in June 2026, alongside related Cardano wallet-library work.",
+      "official_url": "https://se7enlabs.com",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://se7enlabs.com"
+        }
+      ],
+      "featured": false,
+      "team_entity": "Se7en Labs",
+      "related_projects": [
+        "daedalus"
+      ],
+      "primary_link_type": "website",
+      "primary_link_url": "https://se7enlabs.com"
+    },
+    {
+      "slug": "usdcx",
+      "name": "USDCx",
+      "category": "stablecoin",
+      "public_family": "DeFi & Markets",
+      "summary": "Dollar stablecoin on Cardano, fully backed by USDC held in Circle xReserve and interoperable with USDC through Circle Gateway and CCTP. Live since February 2026 and supported at launch by Liqwid, Minswap and SundaeSwap.",
+      "official_url": "https://www.circle.com/blog/usdcx-on-cardano-now-available-via-circle-xreserve",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": "1f3aec8bfe7ea4fe14c5f121e2a92e301afe414147860d557cac7e34",
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "interoperability",
+        "cross-chain",
+        "stablecoin",
+        "defi"
+      ],
+      "sources": [
+        {
+          "type": "source",
+          "url": "https://www.circle.com/blog/usdcx-on-cardano-now-available-via-circle-xreserve"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "This record covers the USDCx asset on Cardano, not Circle USDC or USDCx deployments on other networks.",
+      "team_entity": "Circle xReserve (backing)",
+      "related_projects": [
+        "liqwid",
+        "minswap",
+        "sundaeswap"
+      ],
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.circle.com/blog/usdcx-on-cardano-now-available-via-circle-xreserve"
     }
   ]
 }
