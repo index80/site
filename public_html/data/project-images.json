@@ -4885,6 +4885,36 @@
         "error": null,
         "note": "Automatically discovered and approved via the image QA review pass (decided_at 2026-09-27T13:01:46.803Z, candidate kind \"og_image\")."
       }
+    },
+    "45b-cardano-enablement": {
+      "hero": {
+        "path": "/assets/project-images/45b-cardano-enablement/hero-6b4ccf0c287b.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://45b.io/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1221,
+        "bytes": 157252,
+        "fetched_at": "2026-10-09T21:35:47.626Z",
+        "status": "ok",
+        "error": null,
+        "note": "Home page website"
+      }
+    },
+    "able-stake-pool": {
+      "hero": {
+        "path": "/assets/project-images/able-stake-pool/hero-3f6cf46fe9c9.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://able-pool.io/",
+        "content_type": "image/webp",
+        "width": 724,
+        "height": 390,
+        "bytes": 34652,
+        "fetched_at": "2026-10-09T21:37:30.346Z",
+        "status": "ok",
+        "error": null,
+        "note": "main logo homepage website"
+      }
     }
   }
 }
