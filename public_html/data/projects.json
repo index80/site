@@ -9999,8 +9999,8 @@
       "official_url": "https://45b.io/",
       "docs_url": null,
       "github_url": null,
-      "social_url": null,
-      "linkedin_url": null,
+      "social_url": "https://x.com/45B_Cardano",
+      "linkedin_url": "https://www.linkedin.com/company/45b-cardano-enablement/",
       "marketplace_url": null,
       "policy_id": null,
       "discord_url": null,
@@ -10029,7 +10029,7 @@
       "official_url": "https://able-pool.io/",
       "docs_url": null,
       "github_url": null,
-      "social_url": null,
+      "social_url": "https://x.com/Hornan7",
       "linkedin_url": null,
       "marketplace_url": null,
       "policy_id": null,
@@ -10925,6 +10925,66 @@
       ],
       "primary_link_type": "website",
       "primary_link_url": "https://www.circle.com/blog/usdcx-on-cardano-now-available-via-circle-xreserve"
+    },
+    {
+      "slug": "jesus-2",
+      "name": "Jesus 2",
+      "category": "media",
+      "public_family": "Culture & Creators",
+      "summary": "Two space pirate brothers named Sunday and Monday must find a way to deliver Humanity to its final resting place! Jesus 2 raised film-production funds by minting and selling thousands of NFTs on the Cardano blockchain.",
+      "official_url": "https://www.jesus-2.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/Jesus2Rises",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": "https://discord.gg/Jesus2Rises",
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "INDEX80 AI Research Intake row",
+          "url": "https://docs.google.com/spreadsheets/d/1G5oC2coANzPhOPTi2HXpJjl7aszDyK46EQ-c1Q2LX18/edit#gid=469578144&range=A23:Z23"
+        },
+        {
+          "type": "Polar secondary evidence",
+          "url": "https://www.jesus-2.com/"
+        },
+        {
+          "type": "Polar cited evidence (research only)",
+          "url": "https://x.com/Jesus2Rises"
+        },
+        {
+          "type": "Polar cited evidence (research only)",
+          "url": "https://discord.gg/Jesus2Rises"
+        },
+        {
+          "type": "Polar primary evidence",
+          "url": "https://www.cartoonbrew.com/cartoon-brew-pick/jesus-2-jesse-moynihan-264157.html"
+        },
+        {
+          "type": "Polar cited evidence (research only)",
+          "url": "https://www.nmkr.io/clients/jesus-2"
+        },
+        {
+          "type": "Polar cited evidence (research only)",
+          "url": "https://x.com/aronfromm"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": null,
+      "primary_link_url": null,
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
     }
   ]
 }
