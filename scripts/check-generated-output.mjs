@@ -40,7 +40,7 @@ const GENERATED_FILES = new Set([
   'public_html/assets/js/main.js', // generate-site-version (build stamp)
   'public_html/_routes.json', // generate-pages-routes (gitignored; absent in a fresh checkout)
 ]);
-const GENERATED_PREFIXES = ['public_html/projects/']; // generate-project-pages and the apply-* scripts
+const GENERATED_PREFIXES = ['public_html/projects/', 'public_html/people/']; // generated project and People profile pages
 
 const MAIN_JS = 'public_html/assets/js/main.js';
 const VERSION_JSON = 'public_html/site-version.json';
