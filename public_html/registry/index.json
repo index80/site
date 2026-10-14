@@ -1,8 +1,52 @@
 {
-  "confirmed_count": 5,
-  "latest_release_id": "INDEX80-0005",
-  "release_count": 5,
+  "confirmed_count": 6,
+  "latest_release_id": "INDEX80-0006",
+  "release_count": 6,
   "releases": [
+    {
+      "network": "mainnet",
+      "previous": {
+        "release_id": "INDEX80-0005",
+        "transaction_id": "86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac"
+      },
+      "proof": {
+        "block": 14066892,
+        "confirmation_observed": {
+          "date": "2026-10-14",
+          "observed_at": "2026-10-14T11:22:55.976Z",
+          "assurance": "Koios Mainnet: 13 block confirmations at observation",
+          "source": "Koios Mainnet independent verification",
+          "confirmations": 13,
+          "tip_block_height": 14066905,
+          "tip_block_hash": "734d2db02f512e0d7230601e96aff6622bf3ed8d45add77e87036bcd20b4b3a0"
+        },
+        "epoch": 661,
+        "explorer_url": "https://cardanoscan.io/transaction/d8ba8111d32728318c630203a7252131c94e7c904529a7a0c8400d3bf9ccbf59",
+        "fee_lovelace": "172893",
+        "local_signed_size_bytes": 394,
+        "metadata_hash": null,
+        "metadata_label": 309,
+        "onchain_size_bytes": 393,
+        "proof_standard": "CIP-190",
+        "publisher_address": "addr1qxljlkqp3u79xc22zvhg6sfhxu6pg0y6ncwcdu2r6yesgyhae4nddtq0je0jezr2pf9kq6xthp9np7aslenum230sqhqjnqcrz",
+        "transaction_id": "d8ba8111d32728318c630203a7252131c94e7c904529a7a0c8400d3bf9ccbf59",
+        "timestamp_display": null
+      },
+      "release_id": "INDEX80-0006",
+      "release_manifest_url": "/registry/releases/index80-0006.json",
+      "sequence": 6,
+      "snapshot": {
+        "bytes": 495385,
+        "hash": "403575df0fd286c10525c5d8408d5f0dec70deb6c6b2c4bd0ff34658525f05f6",
+        "hash_algorithm": "sha256",
+        "path": "/registry/snapshots/index80-0006.json",
+        "people_count": 172,
+        "project_count": 254,
+        "schema": "INDEX80 Registry Snapshot v2",
+        "url": "https://index80.com/registry/snapshots/index80-0006.json"
+      },
+      "status": "CONFIRMED"
+    },
     {
       "network": "mainnet",
       "previous": {

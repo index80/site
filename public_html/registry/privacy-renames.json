@@ -1,0 +1,13 @@
+{
+  "schema": "INDEX80 Privacy Renames v1",
+  "purpose": "People profiles renamed at the subject's request. The former slug is recorded only as a salted SHA-256 so the public change history can report a privacy rename without repeating the former name or address.",
+  "hash": "sha256(\"index80-privacy-rename:\" + former_slug)",
+  "renames": [
+    {
+      "to_release": "INDEX80-0006",
+      "former_slug_sha256": "9a975ca4f36ccf2e98e3e9a06cc5db275ab27d79756efe7817e024f7be98b029",
+      "current_slug": "adatainment",
+      "recorded": "2026-10-14"
+    }
+  ]
+}

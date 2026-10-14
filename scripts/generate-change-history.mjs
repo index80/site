@@ -7,7 +7,7 @@
  * private/dev and is never used as a public activity feed.
  */
 import { createHash } from 'node:crypto';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDryRun } from './sprint3a-change-detection.mjs';
@@ -21,11 +21,38 @@ export const PEOPLE_PUBLIC_CANDIDATE_FIELDS = new Set([
   'drep_id', 'drep_status', 'spo_status', 'pool_ticker', 'pool_ids',
 ]);
 
-function publicPeopleView(comparison) {
+// Profiles renamed at the subject's request (public_html/registry/privacy-renames.json). The former
+// slug is known only by a salted hash, so the removal of the former record and the addition of the
+// renamed one are reported as a single privacy rename that never repeats the former name or address.
+// Fails closed if a recorded rename does not match its release transition exactly.
+const RENAME_SALT = 'index80-privacy-rename:';
+const renameCache = new Map();
+function privacyRenames(root) {
+  if (!renameCache.has(root)) {
+    const file = join(root, 'public_html', 'registry', 'privacy-renames.json');
+    renameCache.set(root, existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')).renames || [] : []);
+  }
+  return renameCache.get(root);
+}
+
+function publicPeopleView(pair, root = ROOT) {
+  const comparison = pair?.people;
   if (!comparison) return null;
+  let added = comparison.added;
+  let removed = comparison.removed;
+  const renamed = [];
+  for (const rename of privacyRenames(root).filter((r) => r.to_release === pair.to)) {
+    const former = removed.filter((item) => createHash('sha256').update(RENAME_SALT + item.id).digest('hex') === rename.former_slug_sha256);
+    const current = added.find((item) => item.id === rename.current_slug);
+    if (former.length !== 1 || !current) throw new Error(`Privacy rename to ${rename.current_slug} does not match ${pair.from} → ${pair.to}`);
+    removed = removed.filter((item) => item !== former[0]);
+    added = added.filter((item) => item !== current);
+    renamed.push({ id: current.id, name: current.name });
+  }
   return {
-    added: comparison.added,
-    removed: comparison.removed,
+    added,
+    removed,
+    renamed,
     updated: comparison.updated
       .map((item) => ({
         ...item,
@@ -108,6 +135,24 @@ function atomicEvents(from, to, entityType, view) {
     });
   }
 
+  for (const item of view.renamed || []) {
+    const operation = 'privacy_renamed';
+    events.push({
+      event_id: eventId({ fromRelease: from.release_id, toRelease: to.release_id, entityType, entityId: item.id, operation, field: null }),
+      ...base,
+      entity_type: entityType,
+      entity_id: item.id,
+      entity_name: item.name,
+      entity_url: absoluteSiteUrl(entityPath(entityType, item.id)),
+      operation,
+      field: null,
+      previous_present: true,
+      current_present: true,
+      previous: null, // former name and address withheld at the subject's request
+      current: { name: item.name },
+    });
+  }
+
   for (const item of view.updated) {
     for (const change of item.changes) {
       const operation = 'field_updated';
@@ -150,7 +195,7 @@ export function buildPublicChangeLedger(root = ROOT) {
     if (!from || !to) throw new Error(`Missing Registry release metadata for ${pair.from} → ${pair.to}`);
 
     const project = pair.project_public_candidates;
-    const people = publicPeopleView(pair.people);
+    const people = publicPeopleView(pair, root);
     const groupEvents = [
       ...atomicEvents(from, to, 'project', project),
       ...atomicEvents(from, to, 'person', people),
@@ -162,6 +207,7 @@ export function buildPublicChangeLedger(root = ROOT) {
       project_records_updated: project.updated.length,
       people_added_to_index: people?.added.length || 0,
       people_removed_from_public_index: people?.removed.length || 0,
+      people_privacy_renames: people?.renamed.length || 0,
       people_records_updated: people?.updated.length || 0,
       atomic_events: groupEvents.length,
     };
@@ -190,6 +236,7 @@ export function buildPublicChangeLedger(root = ROOT) {
       date_rule: 'observed_on is the Registry proof-confirmation observation date, not necessarily the real-world effective date of the underlying fact.',
       addition_rule: 'added_to_index means added to INDEX:80, not project/person launch or creation.',
       removal_rule: 'removed_from_public_index is neutral and does not imply that an entity ceased operating.',
+      privacy_rename_rule: 'privacy_renamed means a People profile was renamed at the subject\'s request; the former name and address are intentionally withheld.',
       public_candidate_rule: 'Only the approved conservative candidate fields are public; broader editorial maintenance remains audit-only.',
     },
     registry_history_url: absoluteSiteUrl('/registry/index.json'),
@@ -286,7 +333,7 @@ function changeCountSummary(project, people = null) {
     `${project.updated.length} updated`,
   ];
   if (people) {
-    const peopleCount = people.added.length + people.removed.length + people.updated.length;
+    const peopleCount = people.added.length + people.removed.length + people.renamed.length + people.updated.length;
     if (peopleCount) parts.push(`${peopleCount} People changes`);
   }
   return parts.join(' · ');
@@ -299,8 +346,8 @@ function changeCountSummary(project, people = null) {
 // /data/change-ledger.json is the machine-readable equivalent.
 function renderReleaseChangeBody(pair) {
   const project = pair.project_public_candidates;
-  const people = publicPeopleView(pair.people);
-  const peopleHasContent = people && (people.added.length || people.removed.length || people.updated.length);
+  const people = publicPeopleView(pair);
+  const peopleHasContent = people && (people.added.length || people.removed.length || people.renamed.length || people.updated.length);
   return `<div class="change-counts" aria-label="Change counts">
       <span><strong>${project.added.length}</strong> PROJECTS ADDED TO INDEX:80</span>
       <span><strong>${project.removed.length}</strong> PROJECTS REMOVED FROM PUBLIC INDEX</span>
@@ -321,7 +368,7 @@ function renderReleaseChangeBody(pair) {
       ${renderUpdates('project', project.updated)}
     </div>
     ${pair.people_baseline_suppressed ? `<div class="change-baseline"><strong>PEOPLE BASELINE:</strong> ${pair.people_baseline_suppressed} People first appear in ${esc(pair.to)} and are intentionally not reported as additions.</div>` : ''}
-    ${peopleHasContent ? `<div class="change-block"><h3>PEOPLE CHANGES</h3><div class="change-columns"><div><h4>ADDED TO INDEX:80</h4>${renderEntityList('person', people.added)}</div><div><h4>REMOVED FROM PUBLIC INDEX</h4>${renderEntityList('person', people.removed)}</div></div>${renderUpdates('person', people.updated)}</div>` : ''}`;
+    ${peopleHasContent ? `<div class="change-block"><h3>PEOPLE CHANGES</h3><div class="change-columns"><div><h4>ADDED TO INDEX:80</h4>${renderEntityList('person', people.added)}</div><div><h4>REMOVED FROM PUBLIC INDEX</h4>${renderEntityList('person', people.removed)}</div></div>${people.renamed.length ? `<h4>RENAMED AT THE SUBJECT'S REQUEST</h4><ul class="change-entity-list">${people.renamed.map((item) => `<li>${renderEntityLink('person', item)} <code>${esc(item.id)}</code> · former name and address withheld</li>`).join('')}</ul>` : ''}${renderUpdates('person', people.updated)}</div>` : ''}`;
 }
 
 function renderProofActions(release) {
@@ -338,7 +385,7 @@ function renderProofActions(release) {
 // the Project-page EVIDENCE panel. No JS state.
 function renderRegistryChangeWindow(pair, release, open = false) {
   const project = pair.project_public_candidates;
-  const people = publicPeopleView(pair.people);
+  const people = publicPeopleView(pair);
   return `<details class="panel registry-change-window"${open ? ' open' : ''} id="${esc(pair.to.toLowerCase())}-changes">
         <summary class="panel-title registry-window-title">
           <h2>${esc(pair.from)} → ${esc(pair.to)}</h2>
