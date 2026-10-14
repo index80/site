@@ -6227,8 +6227,8 @@
       "avatar_source_url": "https://x.com/timbharrison"
     },
     {
-      "slug": "tommy-kammerer-adatainment",
-      "name": "Tommy Kammerer / ADAtainment",
+      "slug": "adatainment",
+      "name": "ADAtainment",
       "profile_subtitle": null,
       "primary_category": "DReps & Governance",
       "category_slug": "dreps-governance",
@@ -6241,7 +6241,7 @@
         "Educator",
         "Governance"
       ],
-      "bio": "Tommy Kammerer / ADAtainment is the founder of DRepTalk and a Cardano educator associated with DRepTalk and ADAtainment.",
+      "bio": "ADAtainment is the founder of DRepTalk and a Cardano educator associated with DRepTalk and ADAtainment.",
       "current_roles": [
         "Founder, DRepTalk / Cardano educator — DRepTalk",
         "ADAtainment"
@@ -6264,10 +6264,10 @@
       "instagram_url": null,
       "youtube_url": null,
       "last_verified": "2026-09-28",
-      "profile_url": "/people/tommy-kammerer-adatainment/",
+      "profile_url": "/people/adatainment/",
       "profile_type": "generated",
-      "avatar_url": "/assets/people/tommy-kammerer-adatainment/avatar.jpg",
-      "avatar_alt": "Tommy Kammerer / ADAtainment profile image",
+      "avatar_url": "/assets/people/adatainment/avatar.jpg",
+      "avatar_alt": "ADAtainment profile image",
       "avatar_credit": "Public X profile image",
       "avatar_source_url": "https://x.com/ADAtainment"
     },
