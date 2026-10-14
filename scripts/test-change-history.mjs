@@ -35,7 +35,7 @@ for (const event of first.events) {
   const expectedId = `chg_${createHash('sha256').update(eventToken).digest('hex').slice(0, 20)}`;
   assert.equal(event.event_id, expectedId, `Event ID is not deterministic for ${eventToken}`);
   assert(['project', 'person'].includes(event.entity_type), 'Unexpected entity type');
-  assert(['added_to_index', 'removed_from_public_index', 'field_updated'].includes(event.operation), 'Unexpected operation');
+  assert(['added_to_index', 'removed_from_public_index', 'field_updated', 'privacy_renamed'].includes(event.operation), 'Unexpected operation');
   assert(event.to_release && event.from_release, 'Release pair missing');
   assert(event.release_manifest_url?.startsWith('https://index80.com/registry/releases/'), 'Canonical release manifest URL missing');
   const release = history.releases.find((item) => item.release_id === event.to_release);
@@ -63,7 +63,23 @@ const forbiddenPublicFields = new Set([
   'publish', 'review_status', 'workflow_state', 'internal_notes',
 ]);
 assert(!first.events.some((event) => event.field && forbiddenPublicFields.has(event.field)), 'Audit-only field leaked into public ledger');
-assert(!first.events.some((event) => event.entity_type === 'person'), 'People baseline must not create public change events');
+// The People baseline (the release where People first appear) reports no People events; later
+// releases report genuine People additions, removals, privacy renames and public-field updates.
+const seq = new Map(history.releases.map((release) => [release.release_id, release.sequence]));
+const peopleBaselineSeq = seq.get(first.people_baseline);
+assert(Number.isInteger(peopleBaselineSeq), 'People baseline release missing');
+assert(!first.events.some((event) => event.entity_type === 'person' && seq.get(event.to_release) <= peopleBaselineSeq), 'People baseline must not create public change events');
+// A privacy rename withholds the former identity: no previous value and no removal of a former record.
+const privacyRenames = JSON.parse(readFileSync(join(PUBLIC, 'registry', 'privacy-renames.json'), 'utf8')).renames;
+for (const rename of privacyRenames.filter((r) => seq.has(r.to_release))) {
+  const renameEvents = first.events.filter((event) => event.operation === 'privacy_renamed' && event.to_release === rename.to_release && event.entity_id === rename.current_slug);
+  assert.equal(renameEvents.length, 1, `Privacy rename to ${rename.current_slug} must be reported once`);
+  assert.equal(renameEvents[0].entity_type, 'person', 'Privacy renames apply to People');
+  assert.equal(renameEvents[0].previous, null, 'Privacy rename must withhold the former name');
+  const hashed = (id) => createHash('sha256').update(`index80-privacy-rename:${id}`).digest('hex');
+  assert(!first.events.some((event) => event.to_release === rename.to_release && event.entity_type === 'person' && hashed(event.entity_id) === rename.former_slug_sha256), 'Former record of a privacy rename must not appear in the ledger');
+  assert(!first.events.some((event) => event.to_release === rename.to_release && event.operation === 'added_to_index' && event.entity_id === rename.current_slug), 'A privacy rename is not an addition');
+}
 
 const eventKeys = [
   'cardano_proof_url', 'current', 'current_present', 'entity_id', 'entity_name',
