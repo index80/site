@@ -10985,6 +10985,238 @@
       "related_projects": [],
       "treasury_funding_value_ada": null,
       "explorer_url": null
+    },
+    {
+      "slug": "ada4good-stake-pool",
+      "name": "ADA4Good Stake Pool",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano stake pool (ticker A4G) that donates to Save the Children every quarter. In July 2026 the pool reported cumulative donations of ₳68,817 (about $38,060).",
+      "official_url": "https://ada4good.com",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/Ada4goodP",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "stake-pools",
+        "charity",
+        "donations"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://ada4good.com"
+        },
+        {
+          "type": "Official X",
+          "url": "https://x.com/Ada4goodP"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://ada4good.com",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "frankenwallet",
+      "name": "Frankenwallet",
+      "category": "education",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Open-source security guide from COSD for building Cardano transactions on an air-gapped, bootable Linux USB, covering offline key backup and secured browser-wallet use. The Cardano Developer Portal documents the workflow.",
+      "official_url": "https://frankenwallet.com",
+      "docs_url": null,
+      "github_url": "https://github.com/rphair/frankenwallet",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "security",
+        "education",
+        "air-gapped",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://frankenwallet.com"
+        },
+        {
+          "type": "Source repository",
+          "url": "https://github.com/rphair/frankenwallet"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": "COSD",
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://frankenwallet.com",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "harmonic-labs",
+      "name": "Harmonic Labs",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano research and development firm building developer tooling: Pebble, a TypeScript smart-contract language that compiles to Plutus Core (UPLC); the plu-ts toolkit; and Gerolamo, a Cardano node written in TypeScript.",
+      "official_url": "https://www.harmoniclabs.tech",
+      "docs_url": "https://pluts.harmoniclabs.tech",
+      "github_url": "https://github.com/HarmonicLabs/pebble",
+      "social_url": "https://x.com/hlabs_tech",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "developer-tools",
+        "smart-contracts",
+        "typescript",
+        "plutus",
+        "node"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://www.harmoniclabs.tech"
+        },
+        {
+          "type": "Official documentation",
+          "url": "https://pluts.harmoniclabs.tech"
+        },
+        {
+          "type": "Pebble repository",
+          "url": "https://github.com/HarmonicLabs/pebble"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": "Michele Nuzzi — Founder",
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.harmoniclabs.tech",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "hirakumi",
+      "name": "Hirakumi",
+      "category": "ai",
+      "public_family": "Real-World & Utility",
+      "summary": "TOKEN2049 Origins 2026 hackathon project: a gateway that lets AI-agent APIs charge per call through x402 payments in USDM on Cardano, with Masumi and Sokosumi listing, credits, escrow and independent response-quality checks. Demonstrated on Cardano preprod with test funds only.",
+      "official_url": "https://hirakumi.vercel.app",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "ai",
+        "agents",
+        "payments",
+        "x402",
+        "hackathon"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://hirakumi.vercel.app/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://hirakumi.vercel.app",
+      "related_projects": [
+        "masumi",
+        "sokosumi"
+      ],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "phoenix-explorer",
+      "name": "Phoenix Explorer",
+      "category": "explorer",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Open-source Cardano blockchain explorer that runs on top of different data providers, showing blocks, transactions, stake pools and DReps.",
+      "official_url": "https://phoenix-explorer.org",
+      "docs_url": null,
+      "github_url": "https://github.com/Kammerlo/phoenix-explorer",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "explorer",
+        "open-source",
+        "stake-pools",
+        "governance"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://phoenix-explorer.org"
+        },
+        {
+          "type": "Source repository",
+          "url": "https://github.com/Kammerlo/phoenix-explorer"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://phoenix-explorer.org",
+      "related_projects": [
+        "cardanoscan",
+        "cexplorer"
+      ],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
     }
   ]
 }

@@ -4915,6 +4915,66 @@
         "error": null,
         "note": "main logo homepage website"
       }
+    },
+    "ada4good-stake-pool": {
+      "hero": {
+        "path": "/assets/project-images/ada4good-stake-pool/hero-b3d41b5212e4.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://ada4good.com",
+        "content_type": "image/webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 60448,
+        "fetched_at": "2026-10-11T13:27:32.102Z",
+        "status": "ok",
+        "error": null,
+        "note": "Screenshot of the official website, captured 2026-10-11 for owner review"
+      }
+    },
+    "frankenwallet": {
+      "hero": {
+        "path": "/assets/project-images/frankenwallet/hero-fea3c98b74f7.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://frankenwallet.com",
+        "content_type": "image/webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 75906,
+        "fetched_at": "2026-10-11T13:27:31.881Z",
+        "status": "ok",
+        "error": null,
+        "note": "Screenshot of the official website, captured 2026-10-11 for owner review"
+      }
+    },
+    "hirakumi": {
+      "hero": {
+        "path": "/assets/project-images/hirakumi/hero-06494f39050a.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://hirakumi.vercel.app/",
+        "content_type": "image/webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 54266,
+        "fetched_at": "2026-10-11T13:27:31.990Z",
+        "status": "ok",
+        "error": null,
+        "note": "Screenshot of the official website, captured 2026-10-11 for owner review"
+      }
+    },
+    "phoenix-explorer": {
+      "hero": {
+        "path": "/assets/project-images/phoenix-explorer/hero-fa0c9e75d2b3.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://phoenix-explorer.org",
+        "content_type": "image/webp",
+        "width": 1440,
+        "height": 900,
+        "bytes": 40312,
+        "fetched_at": "2026-10-11T13:27:31.772Z",
+        "status": "ok",
+        "error": null,
+        "note": "Screenshot of the official website, captured 2026-10-11 for owner review"
+      }
     }
   }
 }
