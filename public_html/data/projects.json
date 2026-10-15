@@ -11277,6 +11277,55 @@
       ],
       "treasury_funding_value_ada": null,
       "explorer_url": null
+    },
+    {
+      "slug": "yaci-devkit",
+      "name": "Yaci DevKit",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Open-source Bloxbean toolkit that runs a local Cardano devnet with an indexer, explorer and APIs, so developers can build and test Cardano applications without a public network.",
+      "official_url": "https://devkit.yaci.xyz/",
+      "docs_url": "https://devkit.yaci.xyz/",
+      "github_url": "https://github.com/bloxbean/yaci-devkit",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "developer-tool",
+        "devnet",
+        "testing",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "Official documentation",
+          "url": "https://devkit.yaci.xyz/"
+        },
+        {
+          "type": "Source repository",
+          "url": "https://github.com/bloxbean/yaci-devkit"
+        },
+        {
+          "type": "Cardano Developer Portal listing",
+          "url": "https://developers.cardano.org/tools/yaci-devkit/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": "Bloxbean",
+      "founder_lead": null,
+      "primary_link_type": "docs",
+      "primary_link_url": "https://devkit.yaci.xyz/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
     }
   ]
 }
