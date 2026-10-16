@@ -11326,6 +11326,682 @@
       "related_projects": [],
       "treasury_funding_value_ada": null,
       "explorer_url": null
+    },
+    {
+      "slug": "cardano-api",
+      "name": "cardano-api",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Haskell library for Cardano transaction construction, keys, addresses and node queries, used by core Cardano command-line tooling.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/IntersectMBO/cardano-api",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/IntersectMBO/cardano-api"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-api/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/IntersectMBO/cardano-api",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-connect-with-wallet",
+      "name": "Cardano Connect with Wallet",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "React hooks, components and a framework-independent core for connecting Cardano wallets to applications through CIP-30 and CIP-45.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/cardano-foundation/cardano-connect-with-wallet",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/cardano-foundation/cardano-connect-with-wallet"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-connect-with-wallet/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/cardano-foundation/cardano-connect-with-wallet",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-on-bigquery",
+      "name": "Cardano on BigQuery",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Project making Cardano on-chain data accessible for analytical queries through Google BigQuery.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/Blockchain-Data-Analytics/Cardano_on_BigQuery",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/Blockchain-Data-Analytics/Cardano_on_BigQuery"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-on-bigquery/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/Blockchain-Data-Analytics/Cardano_on_BigQuery",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-peer-connect",
+      "name": "Cardano Peer Connect",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "WebRTC connector library for peer-to-peer links between Cardano dApps and wallets under CIP-45.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/fabianbormann/cardano-peer-connect",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/fabianbormann/cardano-peer-connect"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-peer-connect/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/fabianbormann/cardano-peer-connect",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-rpc",
+      "name": "cardano-rpc",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano UTxO-RPC server component for exposing node and chain data through a gRPC interface.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/IntersectMBO/cardano-api/tree/master/cardano-rpc",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/IntersectMBO/cardano-api/tree/master/cardano-rpc"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-rpc/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/IntersectMBO/cardano-api/tree/master/cardano-rpc",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-sieve",
+      "name": "cardano-sieve",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano chain indexer that records matching UTxOs in SQLite and serves the indexed data through an HTTP API.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/IntersectMBO/cardano-sieve",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/IntersectMBO/cardano-sieve"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-sieve/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/IntersectMBO/cardano-sieve",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-testnet",
+      "name": "cardano-testnet",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Command-line tool and Haskell library for running configurable local multi-node Cardano clusters for integration testing and development.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/IntersectMBO/cardano-node/tree/master/cardano-testnet",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/IntersectMBO/cardano-node/tree/master/cardano-testnet"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-testnet/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/IntersectMBO/cardano-node/tree/master/cardano-testnet",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardanopress",
+      "name": "Cardanopress",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "WordPress plugin integration for Cardano wallets, including wallet connection, token-gated access and related website interactions.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/CardanoPress/cardanopress",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/CardanoPress/cardanopress"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardanopress/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/CardanoPress/cardanopress",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "datum-explorer",
+      "name": "Datum Explorer",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano CBOR datum decoder that displays data as readable fields using CDDL schemas.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/WingRiders/datum-explorer",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/WingRiders/datum-explorer"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/datum-explorer/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/WingRiders/datum-explorer",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "evolution-sdk",
+      "name": "Evolution SDK",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "TypeScript toolkit based on Effect for building Cardano applications, including transaction construction and related developer integrations.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/IntersectMBO/evolution-sdk",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/IntersectMBO/evolution-sdk"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/evolution-sdk/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/IntersectMBO/evolution-sdk",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "gastronomy",
+      "name": "Gastronomy",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "UPLC smart-contract debugger for Cardano that supports stepping forward and backward through execution.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/SundaeSwap-finance/gastronomy",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/SundaeSwap-finance/gastronomy"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/gastronomy/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/SundaeSwap-finance/gastronomy",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "gnark-cardano",
+      "name": "gnark-cardano",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Groth16 proof tooling connecting gnark circuits with Aiken verifiers for Cardano. It is a component hosted within the Peace Protocol repository.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/logical-mechanism/Peace-Protocol/tree/main/public/gnark-cardano",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/logical-mechanism/Peace-Protocol/tree/main/public/gnark-cardano"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/gnark-cardano/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/logical-mechanism/Peace-Protocol/tree/main/public/gnark-cardano",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "pg-cardano",
+      "name": "pg_cardano",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "PostgreSQL extension providing Cardano cryptography, address encoding, CBOR and blockchain data-processing helpers.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/cardano-community/pg_cardano",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/cardano-community/pg_cardano"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/pg-cardano/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/cardano-community/pg_cardano",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "pyth-pro-cardano",
+      "name": "Pyth Pro (Cardano integration)",
+      "category": "oracle",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano integration of the Pyth Pro pull-based price-feed service, with published consumer documentation and Cardano-specific on-chain contract code.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/pyth-network/pyth-crosschain/tree/main/lazer/contracts/cardano",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/pyth-network/pyth-crosschain/tree/main/lazer/contracts/cardano"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/pyth-pro/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/pyth-network/pyth-crosschain/tree/main/lazer/contracts/cardano",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "sorbet",
+      "name": "Sorbet",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Mock browser wallet for testing Cardano dApp CIP-30 wallet integrations as an end user.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/SundaeSwap-finance/Sorbet",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/SundaeSwap-finance/Sorbet"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/sorbet/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/SundaeSwap-finance/Sorbet",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "tx3",
+      "name": "Tx3",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Declarative transaction language and tooling for describing reusable UTxO transactions and generating typed application clients.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/tx3-lang/tx3",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/tx3-lang/tx3"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/tx3/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/tx3-lang/tx3",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "unified-cardano-student-club",
+      "name": "Unified Cardano Student Club (UCSC)",
+      "category": "community",
+      "public_family": "Culture & Creators",
+      "summary": "Nigerian student community focused on learning and building with Cardano, with a public club account and student hackathon activity.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/UnifiedCardano",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official project profile",
+          "url": "https://x.com/UnifiedCardano"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "x",
+      "primary_link_url": "https://x.com/UnifiedCardano",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
     }
   ]
 }
