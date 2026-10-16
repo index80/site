@@ -36,7 +36,8 @@
       "pool_ids": [],
       "linked_projects": [
         "Cardano CIPs",
-        "cardano-wallet"
+        "cardano-wallet",
+        "DripDropz"
       ],
       "x_url": "https://x.com/adamKDean",
       "linkedin_url": "https://www.linkedin.com/in/adamkdean",
@@ -78,7 +79,7 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Intersect Board"
+        "Intersect"
       ],
       "x_url": "https://x.com/AdamRusch",
       "linkedin_url": null,
@@ -518,10 +519,10 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Historical: EMURGO / Yoroi",
         "Current: Paraa Crypto",
         "INRCStable",
-        "perpx.ai"
+        "perpx.ai",
+        "EMURGO"
       ],
       "x_url": "https://x.com/AnujChaudhary25",
       "linkedin_url": null,
@@ -2945,7 +2946,7 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "SongMarketCap"
+        "SongMarketCap / $SONG"
       ],
       "x_url": "https://x.com/JureKaramarko",
       "linkedin_url": "https://www.linkedin.com/in/jure-karamarko-a5995a136",
@@ -2987,7 +2988,7 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Intersect Board"
+        "Intersect"
       ],
       "x_url": "https://x.com/OfficialKavinda",
       "linkedin_url": null,
@@ -3239,8 +3240,7 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Artifi Labs",
-        "Open DJED"
+        "Open DJED / Artifi Labs"
       ],
       "x_url": "https://x.com/KylixAfonso",
       "linkedin_url": null,
@@ -3659,8 +3659,8 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Cardanians",
-        "ADApools.org"
+        "ADApools.org",
+        "Cardanians (CRDN)"
       ],
       "x_url": null,
       "linkedin_url": "https://cz.linkedin.com/in/luk%C3%A1%C5%A1-b%C3%A1rta-8a2132a8",
@@ -3734,7 +3734,9 @@
       "current_roles": [
         "Founder / CEO — Five Binaries"
       ],
-      "historic_roles": [],
+      "historic_roles": [
+        "Blockfrost founder / CEO — documented January 2024 (historical evidence, current tenure not reverified)"
+      ],
       "verification_status": "VERIFIED",
       "drep_status": null,
       "drep_id": null,
@@ -3742,7 +3744,8 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Five Binaries"
+        "Five Binaries",
+        "Blockfrost"
       ],
       "x_url": "https://x.com/stakenuts",
       "linkedin_url": null,
@@ -3787,9 +3790,9 @@
       "pool_ticker": "ATADA / ATAD2",
       "pool_ids": [],
       "linked_projects": [
-        "ATADA / ATAD2",
         "SPO Scripts",
-        "cardano-signer"
+        "cardano-signer",
+        "ATADA / ATAD2 Cardano StakePool Austria"
       ],
       "x_url": "https://x.com/ATADA_Stakepool",
       "linkedin_url": null,
@@ -4122,8 +4125,8 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Butane Protocol",
-        "Blaze"
+        "Blaze",
+        "Butane"
       ],
       "x_url": "https://x.com/micahalexkenda1",
       "linkedin_url": null,
@@ -4200,7 +4203,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "World Mobile"
+      ],
       "x_url": "https://x.com/MrTelecoms",
       "linkedin_url": "https://www.linkedin.com/in/micky-mr-telecom-watkins-a17b5b4b",
       "website_url": null,
@@ -4734,8 +4739,8 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Cardano Feed",
-        "LATAM Cardano Community"
+        "LATAM Cardano Community",
+        "Cardano Feed ($ADA)"
       ],
       "x_url": "https://x.com/otaviolima",
       "linkedin_url": null,
@@ -4865,8 +4870,8 @@
       "pool_ids": [],
       "linked_projects": [
         "NMKR",
-        "Masumi Network",
-        "Sokosumi"
+        "Sokosumi",
+        "Masumi"
       ],
       "x_url": "https://x.com/Padierfind",
       "linkedin_url": "https://www.linkedin.com/in/patrick-tobler-6593b912b",
@@ -5156,7 +5161,7 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Input Output Group"
+        "Input Output"
       ],
       "x_url": null,
       "linkedin_url": "https://ca.linkedin.com/in/polina-vinogradova-62105713b",
@@ -5242,9 +5247,9 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Input Output Group",
         "University of Edinburgh Blockchain Technology Laboratory",
-        "Edinburgh Decentralisation Index"
+        "Edinburgh Decentralisation Index",
+        "Input Output"
       ],
       "x_url": "https://x.com/sol3gga",
       "linkedin_url": "https://www.linkedin.com/in/aggelos-kiayias-40a92712/",
@@ -5537,7 +5542,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Digital Fortress (DIGI)"
+      ],
       "x_url": "https://x.com/RickMcCracken",
       "linkedin_url": null,
       "website_url": null,
@@ -5620,8 +5627,8 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Input Output Group",
-        "Cardano Developer Experience"
+        "Cardano Developer Experience",
+        "Input Output"
       ],
       "x_url": null,
       "linkedin_url": "https://pt.linkedin.com/in/robertino-martinez",
@@ -5842,7 +5849,8 @@
         "Midnight Foundation",
         "dcSpark",
         "Paima",
-        "Paima Studios / Paima Engine"
+        "Paima Studios / Paima Engine",
+        "Midnight"
       ],
       "x_url": "https://x.com/SebastienGllmt",
       "linkedin_url": "https://www.linkedin.com/in/sebastiengllmt",
@@ -5964,7 +5972,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Sundial Protocol"
+      ],
       "x_url": "https://x.com/_MrHunt_",
       "linkedin_url": "https://www.linkedin.com/in/sheldonhunt",
       "website_url": null,
@@ -6529,14 +6539,18 @@
       ],
       "bio": "Current (2026): none found. Historical: 2021: Martin says a Good Charlotte collaboration with Clay Nation was his first experience setting up a wallet and minting on Cardano. (https://www.nmkr.io/blog/the-nmkr-review-occultarchives-cnft-cardanonft-project); 2022: Occult Archives was a Cardano NFT project using NMKR Studio; Martin described the collection's hand-drawn art and original soundtrack. (https://www.nmkr.io/blog/the-nmkr-review-occultarchives-cnft-cardanonft-project).",
       "current_roles": [],
-      "historic_roles": [],
+      "historic_roles": [
+        "Good Charlotte collaboration with Clay Nation — late 2021 (historical)"
+      ],
       "verification_status": "NOT VERIFIED",
       "drep_status": null,
       "drep_id": null,
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Clay Nation"
+      ],
       "x_url": "https://x.com/TheBillyMartin",
       "linkedin_url": null,
       "website_url": "https://www.thebillymartin.com/",
@@ -6572,7 +6586,10 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Intersect",
+        "GovTool"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/bo%C5%A1ko-majdanac-95680628/",
       "website_url": null,
@@ -6644,7 +6661,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "TxPipe"
+      ],
       "x_url": "https://x.com/diegomac35",
       "linkedin_url": null,
       "website_url": null,
@@ -6680,7 +6699,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "TxPipe"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/emmanuel-gunther-2a59b926",
       "website_url": null,
@@ -6717,7 +6738,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "MeshJS"
+      ],
       "x_url": "https://x.com/ErickRomeroEdda",
       "linkedin_url": "https://www.linkedin.com/in/erickromeroedda/",
       "website_url": null,
@@ -6826,7 +6849,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Aiken"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/kasey-w-08ab33126/",
       "website_url": null,
@@ -6862,7 +6887,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "DripDropz"
+      ],
       "x_url": "https://x.com/LatheesanK",
       "linkedin_url": null,
       "website_url": null,
@@ -6898,7 +6925,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Eternl"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/marcus-puchalla-61118614",
       "website_url": null,
@@ -6937,7 +6966,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "SteelSwap DEX Aggregator"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/markvzon",
       "website_url": null,
@@ -6973,7 +7004,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Cardano Foundation"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/nicolas-j-a9ab394a/",
       "website_url": null,
@@ -7009,7 +7042,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Anastasia Labs"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/linkin-nikhil-shetty",
       "website_url": null,
@@ -7045,7 +7080,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Aiken"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/riley-kilgore-1645b813a",
       "website_url": null,
@@ -7081,7 +7118,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Lido Nation"
+      ],
       "x_url": "https://x.com/Lido_Phuffy",
       "linkedin_url": "https://www.linkedin.com/in/phuffyking",
       "website_url": "https://www.lidonation.com/en/posts/decentralization-the-d-words-the-reboot/",
@@ -7117,7 +7156,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "Cardano Foundation"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/swoodcpa/",
       "website_url": null,
@@ -7191,7 +7232,9 @@
       "spo_status": null,
       "pool_ticker": null,
       "pool_ids": [],
-      "linked_projects": [],
+      "linked_projects": [
+        "TxPipe"
+      ],
       "x_url": null,
       "linkedin_url": "https://www.linkedin.com/in/ale-gadea-a4b65780/",
       "website_url": null,
@@ -7805,7 +7848,7 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Mesh SDK"
+        "MeshJS"
       ],
       "x_url": "https://x.com/temasar_1",
       "linkedin_url": null,
@@ -7960,8 +8003,8 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "ADA4Good",
-        "AllianceXspo"
+        "AllianceXspo",
+        "ADA4Good Stake Pool"
       ],
       "x_url": "https://x.com/Ada4goodP",
       "linkedin_url": null,
