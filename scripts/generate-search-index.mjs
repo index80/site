@@ -13,7 +13,7 @@
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { stripInk } from './lib/semantic-ink.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -40,10 +40,16 @@ export function normalise(value) {
   return String(value ?? '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase()
     .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 }
-const terms = (...parts) => {
+export const terms = (...parts) => {
   const seen = new Set();
   for (const p of parts.flat(Infinity)) {
-    const n = normalise(p);
+    // Remove URLs before punctuation is normalised, otherwise their host/path
+    // becomes searchable prose. Protocol markers are noise (including "HTTP
+    // API"); keep the surrounding words and the original public source intact.
+    const text = String(p ?? '')
+      .replace(/\b(?:https?:\/\/|www\.)[^\s<>"']+/giu, ' ')
+      .replace(/\b(?:https?|www)\b/giu, ' ');
+    const n = normalise(text);
     if (n) seen.add(n);
   }
   return [...seen].join(' | ');
@@ -164,7 +170,7 @@ export function buildSearchIndex() {
   return {schema:SEARCH_INDEX_SCHEMA, count:items.length, items};
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const index = buildSearchIndex();
   const text = `${JSON.stringify(index)}\n`;
   writeFileSync(SEARCH_INDEX_FILE, text);

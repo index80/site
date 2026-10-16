@@ -7,7 +7,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
-import { SEARCH_ITEM_KEYS, SEARCH_TYPES, decode, normalise as buildNormalise } from './generate-search-index.mjs';
+import { SEARCH_ITEM_KEYS, SEARCH_TYPES, decode, terms, normalise as buildNormalise } from './generate-search-index.mjs';
 import { START, END, EXCLUDED_PREFIXES } from './apply-global-search.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -15,6 +15,11 @@ const PUBLIC = join(ROOT, 'public_html');
 const read = (...p) => readFileSync(join(PUBLIC, ...p), 'utf8');
 const failures = [];
 const ok = (cond, label) => { if (!cond) failures.push(label); };
+
+// Keep prose useful without indexing URL hosts/paths or protocol markers.
+ok(terms('Cardano indexer with an HTTP API.') === 'cardano indexer with an api', 'HTTP API prose keeps its searchable words');
+ok(terms('Read https://example.com/private-path?q=secret then build', ['WWW.example.org/noise', null, 'SQLite', 'SQLite']) === 'read then build | sqlite', 'URLs removed before normalisation, arrays and deduplication preserved');
+ok(terms('HTTPS API', 'HTTP://example.com/path', 'www.example.org/path') === 'api', 'case-insensitive URL and protocol filtering');
 
 // ---------------------------------------------------------------- the index
 const indexText = read('data', 'search-index.json');
