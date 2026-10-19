@@ -19,6 +19,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { isoDate, renderSignals, selectSignals } from './lib/signals.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -30,6 +31,13 @@ const HOME_FILE = join(PUBLIC_HTML, 'index.html');
 
 export const SIGNALS_START = '<!-- INDEX80_SIGNALS_START -->';
 export const SIGNALS_END = '<!-- INDEX80_SIGNALS_END -->';
+
+/** One content-derived version couples the homepage's ticker CSS and JS. */
+export function versionSignalsAssets(html, css, script) {
+  const version = createHash('sha256').update(css).update('\0').update(script).digest('hex').slice(0, 16);
+  return html.replace(/assets\/css\/site\.css(?:\?v=[a-zA-Z0-9-]+)?(?=")/g, `assets/css/site.css?v=${version}`)
+    .replace(/assets\/js\/signals-ticker\.js(?:\?v=[a-zA-Z0-9-]+)?(?=")/g, `assets/js/signals-ticker.js?v=${version}`);
+}
 
 export function replaceSignals(html, body) {
   const start = html.indexOf(SIGNALS_START);
@@ -74,7 +82,11 @@ function main() {
     (dir, slug) => existsSync(join(PUBLIC_HTML, dir, slug, 'index.html')),
   );
   const archiveUrl = typeof dataset?.archive_url === 'string' && /^\/[a-z0-9/-]*$/.test(dataset.archive_url) ? dataset.archive_url : null;
-  const html = replaceSignals(readFileSync(HOME_FILE, 'utf8'), renderSignals(current, { ...lookup, archiveUrl }));
+  const html = versionSignalsAssets(
+    replaceSignals(readFileSync(HOME_FILE, 'utf8'), renderSignals(current, { ...lookup, archiveUrl })),
+    readFileSync(join(PUBLIC_HTML, 'assets', 'css', 'site.css')),
+    readFileSync(join(PUBLIC_HTML, 'assets', 'js', 'signals-ticker.js')),
+  );
   writeFileSync(HOME_FILE, html, 'utf8');
   console.log(`[generate-home-signals] ${current.length} current signal(s) on the homepage; ${rejected.length} record(s) skipped`);
 }

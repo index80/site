@@ -1,18 +1,8 @@
 #!/usr/bin/env node
-/**
- * Behaviour test for public_html/assets/js/signals-ticker.js (part of the
- * build; also npm run test:signals).
- *
- * Runs the real browser script in a vm against a minimal DOM shim built from
- * the generated, semantic-inked strip markup, with fake timers and fake media
- * queries, so it is deterministic and needs no dependencies. It proves:
- * wide screens run a continuous marquee with an inert copy; narrow screens
- * show one headline at a time and advance in sequence; reduced motion is
- * static with nothing advancing and no PAUSE; hover, keyboard focus, touch,
- * a hidden tab and PAUSE all stop movement; clicking or focusing a headline
- * selects its detail; expired signals are removed; ink spans survive intact;
- * and the script never rewrites prose.
- */
+/** Dependency-free runtime regression: measured overflow at every width,
+ * single headlines, stable animation through resize/font/theme changes,
+ * explicit PAUSE/PLAY, pointer/touch continuity, reduced motion, keyboard,
+ * selected details, accessible copies, expiry and semantic ink. */
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -29,6 +19,8 @@ const ok = (cond, msg) => { if (!cond) { failures++; console.error(`FAIL: ${msg}
 class Text { constructor(text) { this.text = text; this.parentNode = null; } get textContent() { return this.text; } }
 class El {
   constructor(tag) { this.tagName = tag.toUpperCase(); this.attrs = new Map(); this.childNodes = []; this.parentNode = null; this.listeners = {}; this.hidden = false; this.offsetWidth = 0; this.scrollWidth = 0; this.clientWidth = 0; this.focusVisible = false; this.style = { props: {}, setProperty(k, v) { this.props[k] = v; } }; }
+  getBoundingClientRect() { return { width: this.scrollWidth }; }
+  animate(keyframes, options) { return this.onAnimate(keyframes, options); }
   get children() { return this.childNodes.filter((n) => n instanceof El); }
   get firstChild() { return this.childNodes[0] || null; }
   get id() { return this.getAttribute('id') || ''; }
@@ -119,158 +111,178 @@ const FIXTURE = [
   { ...base, id: 'three', headline: 'Gamma pays in ADA', expires_at: null },
 ];
 
-function setup({ wide = true, reduce = false, fixture = FIXTURE, listWidth = 2400, tickerWidth = 900 } = {}) {
-  const html = inkHtml(`<main>${renderSignals(fixture, {})}</main>`);
-  const body = parse(html);
+function setup({ reduce = false, fixture = FIXTURE, listWidth = 2400, tickerWidth = 900 } = {}) {
+  const body = parse(inkHtml(`<main>${renderSignals(fixture, {})}</main>`));
   const root = body.querySelector('[data-signals]');
-  root.querySelector('[data-signals-ticker-list]').scrollWidth = listWidth;
-  root.querySelector('[data-signals-ticker]').clientWidth = tickerWidth;
-  const timers = [];
-  let clock = 0;
+  const original = root.querySelector('[data-signals-ticker-list]');
+  const ticker = root.querySelector('[data-signals-ticker]');
+  original.scrollWidth = listWidth;
+  ticker.clientWidth = tickerWidth;
+  const timers = [], animations = [], observers = [], mutations = [];
+  let clock = 0, nextId = 0;
   const media = {};
   const mq = (q, matches) => (media[q] = { matches, listeners: [], addEventListener(t, f) { this.listeners.push(f); }, set(v) { this.matches = v; this.listeners.forEach((f) => f({ matches: v })); } });
   mq('(prefers-reduced-motion: reduce)', reduce);
-  mq('(max-width: 720px)', !wide);
-  const docListeners = {};
+  const docListeners = {}, winListeners = {}, fontListeners = {};
   const document = {
-    readyState: 'complete', hidden: false, body,
-    createElement: (t) => new El(t),
+    readyState: 'complete', hidden: false, body, documentElement: body,
+    fonts: { ready: { then(f) { fontListeners.ready = f; } }, addEventListener(t, f) { fontListeners[t] = f; } },
+    createElement(t) {
+      const el = new El(t);
+      el.onAnimate = (keyframes, options) => {
+        const animation = { keyframes, options, currentTime: 0, playState: 'running',
+          pause() { this.playState = 'paused'; }, play() { this.playState = 'running'; }, cancel() { this.playState = 'idle'; } };
+        animations.push(animation); return animation;
+      };
+      return el;
+    },
     getElementById: (id) => [body, ...body.querySelectorAll('[id]')].find((e) => e.id === id) || null,
-    querySelectorAll: (s) => body.querySelectorAll(s),
+    querySelectorAll: (sel) => body.querySelectorAll(sel),
     addEventListener: (t, f) => { (docListeners[t] ||= []).push(f); },
   };
+  class ResizeObserver { constructor(f) { observers.push(f); } observe() {} }
+  class MutationObserver { constructor(f) { mutations.push(f); } observe() {} }
   const context = {
-    document,
+    document, ResizeObserver, MutationObserver,
     Date: class extends Date { static now() { return NOW; } },
-    setTimeout: (f, ms) => { const t = { f, at: clock + ms, id: timers.length + 1 }; timers.push(t); return t.id; },
-    clearTimeout: (id) => { const i = timers.findIndex((t) => t.id === id); if (i >= 0) timers.splice(i, 1); },
+    requestAnimationFrame: (f) => { const t = { f, at: clock + 16, id: ++nextId }; timers.push(t); return t.id; },
   };
-  context.window = { matchMedia: (q) => media[q] || { matches: false }, addEventListener() {} };
+  context.window = { ResizeObserver, MutationObserver, matchMedia: (q) => media[q] || { matches: false }, addEventListener(t, f) { (winListeners[t] ||= []).push(f); } };
   vm.runInNewContext(SCRIPT, context);
+  const advance = (to) => { for (const a of animations) if (a.playState === 'running') a.currentTime += to - clock; clock = to; };
   const tick = (ms) => {
     const end = clock + ms;
     for (;;) {
       timers.sort((a, b) => a.at - b.at);
       const next = timers[0];
       if (!next || next.at > end) break;
-      timers.shift();
-      clock = next.at;
-      next.f();
+      timers.shift(); advance(next.at); next.f();
     }
-    clock = end;
+    advance(end);
   };
   const list = root.querySelector('[data-signals-ticker-list]');
   const buttons = () => list.querySelectorAll('button');
   const shown = () => root.querySelectorAll('[data-signal-id]').filter((d) => !d.hidden).map((d) => d.getAttribute('data-signal-id'));
-  const pause = root.querySelector('.signals-key');
   const status = root.children.find((c) => c.getAttribute('aria-live') === 'polite');
-  const visibility = (hidden) => { document.hidden = hidden; (docListeners.visibilitychange || []).forEach((f) => f()); };
-  return { root, list, buttons, shown, pause, status, tick, media, visibility, mode: () => root.getAttribute('data-signals-mode') };
+  return { root, list, buttons, shown, status, tick, media, animations,
+    pause: root.querySelector('.signals-key'), mode: () => root.getAttribute('data-signals-mode'),
+    animation: () => animations[animations.length - 1],
+    visibility(hidden) { document.hidden = hidden; (docListeners.visibilitychange || []).forEach((f) => f()); },
+    resize(width, event = 'resize') { ticker.clientWidth = width; (winListeners[event] || []).forEach((f) => f()); tick(16); },
+    containerResize(width) { ticker.clientWidth = width; observers.forEach((f) => f()); tick(16); },
+    font(width, event = 'loadingdone') { list.scrollWidth = width; fontListeners[event](); tick(16); },
+    theme(width = list.scrollWidth) { list.scrollWidth = width; mutations.forEach((f) => f()); tick(16); },
+    key() { (docListeners.keydown || []).forEach((f) => f()); },
+  };
 }
 
-// 1. Wide screen: continuous marquee with an inert, unfocusable copy.
+// Identical measured overflow rule on desktop, narrow windows and mobile.
+for (const width of [1200, 719, 390, 240]) {
+  const t = setup({ tickerWidth: width });
+  ok(t.mode() === 'marquee', `${width}px available: overflowing headlines use the continuous loop`);
+  const animation = t.animation();
+  ok(animation.options.duration === 75000 && animation.options.iterations === Infinity, 'constant 32px/s continuous loop');
+  ok(animation.keyframes[1].transform === 'translateX(-2400px)', 'loop advances exactly one original track including its trailing separator');
+  t.tick(7000);
+  ok(animation.currentTime === 7000 && JSON.stringify(t.shown()) === '["one"]', 'continuous movement preserves selected detail without a mobile step timer');
+}
+
+// Markup, expiry, selected details and accessible duplicate.
 {
   const t = setup();
-  ok(t.mode() === 'marquee', `wide + motion runs the marquee (got ${t.mode()})`);
-  ok(t.root.querySelector('.signals-track')?.style.props['--signals-duration'] === '75s', 'marquee speed is slow (2400px at 32px/s = 75s)');
   const clone = t.root.querySelector('.signals-ticker-clone');
-  ok(clone && clone.getAttribute('aria-hidden') === 'true' && clone.hasAttribute('inert') && clone.querySelectorAll('button').every((b) => b.tabIndex === -1), 'marquee copy is aria-hidden, inert and unfocusable');
-  ok(!t.root.querySelector('[data-signal-id="gone"]') && !t.list.querySelectorAll('[data-signal-ref]').some((li) => li.getAttribute('data-signal-ref') === 'gone'), 'expired signal removed from ticker and detail');
-  ok(t.buttons().length === 3 && t.buttons().every((b) => b.getAttribute('aria-controls')?.startsWith('signal-')), 'each live headline is a button controlling its detail');
-  ok(JSON.stringify(t.buttons().map((b) => b.textContent)) === JSON.stringify(['Alpha live on Cardano mainnet', 'Beta governance vote is open', 'Gamma pays in ADA']), 'headline text is unchanged by the script');
-  ok(t.buttons()[0].querySelectorAll('.ink').length >= 2 && t.buttons()[2].querySelector('.ink-gold')?.textContent === 'ADA', 'semantic-ink spans survive inside the headline buttons');
-  ok(JSON.stringify(t.shown()) === '["one"]' && t.buttons()[0].getAttribute('aria-current') === 'true', 'first signal selected by default; one detail shown');
-  ok(t.pause && !t.pause.hidden && t.pause.textContent === 'PAUSE' && t.pause.getAttribute('aria-pressed') === 'false', 'minimal PAUSE control shown while moving');
-  t.tick(30000);
-  ok(JSON.stringify(t.shown()) === '["one"]', 'on wide screens the detail stays on the selected signal while headlines scroll');
-  t.root.dispatch('mouseenter');
-  ok(t.root.classList.contains('is-paused'), 'hover pauses the marquee');
-  t.root.dispatch('mouseleave');
-  ok(!t.root.classList.contains('is-paused'), 'leaving resumes the marquee');
+  ok(clone.getAttribute('aria-hidden') === 'true' && clone.querySelectorAll('button').every((b) => b.tabIndex === -1 && !b.hasAttribute('aria-controls')), 'copy is hidden from assistive technology and keyboard navigation');
+  ok(!clone.hasAttribute('inert'), 'visible looping copy remains pointer-selectable');
+  ok(!t.root.querySelector('[data-signal-id="gone"]') && !t.list.querySelectorAll('[data-signal-ref]').some((li) => li.getAttribute('data-signal-ref') === 'gone'), 'expired headline and detail removed');
+  ok(t.buttons().length === 3 && t.buttons().every((b) => b.getAttribute('aria-controls')?.startsWith('signal-')), 'each original headline controls its detail');
+  ok(JSON.stringify(t.buttons().map((b) => b.textContent)) === JSON.stringify(['Alpha live on Cardano mainnet', 'Beta governance vote is open', 'Gamma pays in ADA']), 'headline text unchanged');
+  ok(t.buttons()[0].querySelectorAll('.ink').length >= 2 && t.buttons()[2].querySelector('.ink-gold')?.textContent === 'ADA', 'semantic ink spans preserved');
   t.buttons()[2].dispatch('click');
-  ok(JSON.stringify(t.shown()) === '["three"]' && t.buttons()[2].getAttribute('aria-current') === 'true' && t.buttons()[0].getAttribute('aria-current') === 'false', 'clicking a headline selects its detail');
-  ok(/Showing signal 3 of 3: Gamma pays in ADA/.test(t.status?.textContent || ''), 'manual selection is announced politely');
+  ok(JSON.stringify(t.shown()) === '["three"]' && t.buttons()[2].getAttribute('aria-current') === 'true', 'selection changes the detail and current indicator');
+  ok(t.status.textContent.includes('Showing signal 3 of 3: Gamma pays in ADA'), 'manual selection announced politely');
   clone.querySelectorAll('[data-signal-ref]')[1].dispatch('click');
-  ok(JSON.stringify(t.shown()) === '["two"]', 'clicking a headline in the scrolling copy selects the same signal');
+  ok(JSON.stringify(t.shown()) === '["two"]', 'selecting the loop copy selects the original detail');
   t.buttons()[0].dispatch('focus');
-  ok(JSON.stringify(t.shown()) === '["one"]', 'focusing a headline selects it');
-  t.buttons()[0].dispatch('focusin');
-  ok(t.mode() === 'marquee', 'mouse focus (not focus-visible) does not re-lay out under the pointer');
-  t.buttons()[1].focusVisible = true;
-  t.buttons()[1].dispatch('focusin');
-  ok(t.mode() === 'static' && t.root.classList.contains('is-paused'), 'keyboard focus stops movement and lays every headline out in place');
-  t.buttons()[1].dispatch('focusout', { relatedTarget: t.buttons()[2] });
-  ok(t.mode() === 'static', 'moving focus between headlines stays static');
-  t.buttons()[2].dispatch('focusout', { relatedTarget: null });
-  ok(t.mode() === 'marquee' && !t.root.classList.contains('is-paused'), 'focus leaving the strip resumes the marquee');
-  t.pause.dispatch('click');
-  ok(t.root.classList.contains('is-paused') && t.pause.textContent === 'PLAY' && t.pause.getAttribute('aria-pressed') === 'true' && t.pause.getAttribute('aria-label') === 'Resume signal headlines', 'PAUSE stops movement and becomes PLAY');
-  t.pause.dispatch('click');
-  ok(!t.root.classList.contains('is-paused'), 'PLAY resumes');
-  t.visibility(true);
-  ok(t.root.classList.contains('is-paused'), 'a hidden tab pauses movement');
-  t.visibility(false);
-  t.root.dispatch('touchstart');
-  ok(t.root.classList.contains('is-paused') && t.pause.textContent === 'PLAY', 'touch pauses movement until resumed');
+  ok(JSON.stringify(t.shown()) === '["one"]', 'focusing an original headline selects its detail');
 }
 
-// 2. Narrow screen: one complete headline at a time, advancing with its detail.
+// Short sets fit, but a single long headline must also scroll.
+for (const width of [900, 300]) {
+  const fit = setup({ fixture: [FIXTURE[0]], listWidth: 180, tickerWidth: width });
+  ok(fit.mode() === 'static' && fit.pause.hidden && fit.animations.length === 0, 'fitting single headline does not animate');
+  const long = setup({ fixture: [FIXTURE[0]], listWidth: 1500, tickerWidth: width });
+  ok(long.mode() === 'marquee' && !long.pause.hidden, 'single overflowing headline scrolls at desktop and mobile widths');
+}
 {
-  const t = setup({ wide: false });
-  ok(t.mode() === 'step', `narrow + motion steps one headline at a time (got ${t.mode()})`);
-  const active = () => t.list.querySelectorAll('.signal-tick').filter((li) => li.classList.contains('is-active')).map((li) => li.getAttribute('data-signal-ref'));
-  ok(JSON.stringify(active()) === '["one"]' && JSON.stringify(t.shown()) === '["one"]', 'one active headline with its detail');
-  t.tick(6999);
-  ok(JSON.stringify(active()) === '["one"]', 'holds each headline for 7 seconds');
-  t.tick(1);
-  ok(JSON.stringify(active()) === '["two"]' && JSON.stringify(t.shown()) === '["two"]', 'advances to the next headline and detail');
-  ok(t.status.textContent === '', 'automatic advance is not announced');
-  t.tick(7000);
-  t.tick(7000);
-  ok(JSON.stringify(active()) === '["one"]', 'wraps back to the first headline');
-  t.root.dispatch('mouseenter');
-  t.tick(30000);
-  ok(JSON.stringify(active()) === '["one"]', 'hover holds the current headline');
-  t.root.dispatch('mouseleave');
-  t.pause.dispatch('click');
-  t.tick(30000);
-  ok(JSON.stringify(active()) === '["one"]' && !t.pause.hidden, 'PAUSE holds the current headline');
-  t.pause.dispatch('click');
-  t.buttons()[0].focusVisible = true;
-  t.buttons()[0].dispatch('focusin');
-  ok(t.mode() === 'static', 'keyboard focus on a phone lists every headline so none is unreachable');
-  t.tick(30000);
-  ok(JSON.stringify(t.shown()) === '["one"]', 'nothing advances while keyboard focus is inside');
+  const fit = setup({ listWidth: 500, tickerWidth: 900 });
+  ok(fit.mode() === 'static' && fit.pause.hidden, 'multiple fitting headlines remain static');
+  const gone = setup({ fixture: [FIXTURE[1]] });
+  ok(gone.root.hidden === true && gone.animations.length === 0, 'all-expired hides strip without animation');
 }
 
-// 3. Reduced motion: static, nothing advances, no PAUSE; selection still works; live switch.
+// Hover, touch and scroll never pause; PAUSE/PLAY intentionally does.
 {
-  const t = setup({ reduce: true, wide: false });
-  ok(t.mode() === 'static' && t.pause.hidden, 'reduced motion: static headlines and no PAUSE control');
-  t.tick(60000);
-  ok(JSON.stringify(t.shown()) === '["one"]', 'reduced motion: nothing advances on its own');
-  t.buttons()[1].dispatch('click');
-  ok(JSON.stringify(t.shown()) === '["two"]', 'reduced motion: every headline remains selectable');
-  t.media['(prefers-reduced-motion: reduce)'].set(false);
-  ok(t.mode() === 'step', 'switching motion back on resumes stepping');
-  t.media['(prefers-reduced-motion: reduce)'].set(true);
-  ok(t.mode() === 'static', 'switching reduced motion on stops it again');
-  t.media['(max-width: 720px)'].set(false);
-  t.media['(prefers-reduced-motion: reduce)'].set(false);
-  ok(t.mode() === 'marquee', 'widening the screen with motion on starts the marquee');
-}
-
-// 4. Short headline sets do not scroll; all-expired hides the strip.
-{
-  const t = setup({ listWidth: 500, tickerWidth: 900 });
-  ok(t.mode() === 'static' && t.pause.hidden, 'headlines that fit the strip stay static (nothing to scroll)');
-  for (const wide of [true, false]) {
-    const single = setup({ fixture: [FIXTURE[0]], wide, listWidth: 2400, tickerWidth: 900 });
-    ok(single.mode() === 'static' && single.pause.hidden, 'a single headline stays static on desktop and mobile, even when long');
+  const t = setup({ tickerWidth: 300 });
+  const a = t.animation();
+  for (const event of ['mouseenter', 'pointerenter', 'touchstart', 'touchmove', 'touchend', 'touchcancel', 'mouseleave']) {
+    t.root.dispatch(event, { pointerType: 'touch', touches: [] });
+    const before = a.currentTime; t.tick(1000);
+    ok(a.currentTime === before + 1000 && !t.root.classList.contains('is-paused') && t.pause.getAttribute('aria-pressed') === 'false', `${event} does not pause movement`);
   }
-  const g = setup({ fixture: [FIXTURE[1]] });
-  ok(g.root.hidden === true, 'strip hides itself when every signal has expired');
+  t.root.dispatch('pointerenter', { pointerType: 'mouse' }); t.tick(1000);
+  ok(a.playState === 'running', 'genuine desktop hover no longer pauses');
+  t.buttons()[1].dispatch('touchstart'); t.buttons()[1].focusVisible = true; t.buttons()[1].dispatch('focusin'); t.buttons()[1].dispatch('touchend', { touches: [] }); t.buttons()[1].dispatch('click');
+  ok(t.mode() === 'marquee' && a.playState === 'running' && JSON.stringify(t.shown()) === '["two"]', 'touch focus and selection preserve continuous movement');
+  t.pause.dispatch('click'); const held = a.currentTime; t.tick(30000);
+  ok(a.currentTime === held && t.pause.textContent === 'PLAY' && t.pause.getAttribute('aria-pressed') === 'true', 'PAUSE freezes current scroll position');
+  t.root.dispatch('touchstart'); t.root.dispatch('touchcancel', { touches: [] });
+  ok(a.playState === 'paused', 'touch does not clear intentional PAUSE');
+  t.resize(250); ok(t.animation() === a && a.currentTime === held, 'resizing preserves intentional pause and position');
+  t.pause.dispatch('click'); t.tick(1000);
+  ok(a.currentTime === held + 1000 && t.pause.textContent === 'PAUSE', 'PLAY continues from retained position');
+  t.visibility(true); const hidden = a.currentTime; t.tick(5000);
+  ok(a.currentTime === hidden, 'hidden document stops background animation');
+  t.visibility(false); t.tick(1000); ok(a.currentTime === hidden + 1000, 'visible document resumes without resetting');
+}
+
+// Live resize and measurement events keep the animation unless width changes.
+{
+  const t = setup({ listWidth: 600, tickerWidth: 900 });
+  t.resize(300); ok(t.mode() === 'marquee', 'resize from fit to overflow starts scrolling');
+  const a = t.animation(); t.tick(3000);
+  t.resize(450); t.resize(250, 'orientationchange'); t.containerResize(350); t.theme(); t.font(600, 'ready'); t.font(600, 'loadingerror');
+  ok(t.animation() === a && a.currentTime > 3000, 'viewport/orientation/container/theme/font events do not reset unchanged track');
+  const distance = (a.currentTime / 1000 * 32) % 600;
+  t.font(800);
+  ok(t.animation() !== a && a.playState === 'idle', 'changed font metrics update loop geometry');
+  ok(Math.abs(t.animation().currentTime * 32 / 1000 - (distance + .512)) < .001, 'font resize retains travelled pixel position');
+  const b = t.animation(); t.resize(1000); const held = b.currentTime; t.tick(5000);
+  ok(t.mode() === 'static' && t.pause.hidden && b.currentTime === held, 'widening until content fits stops movement');
+  t.resize(300); t.tick(1000);
+  ok(t.mode() === 'marquee' && t.animation() === b && b.currentTime > held, 'narrowing resumes retained animation');
+}
+
+// Reduced motion and keyboard list every original headline statically.
+{
+  const t = setup({ reduce: true, tickerWidth: 300 });
+  ok(t.mode() === 'static' && t.pause.hidden && t.animations.length === 0, 'reduced motion creates no animation');
+  t.buttons()[1].dispatch('click'); ok(JSON.stringify(t.shown()) === '["two"]', 'reduced motion selection works');
+  t.media['(prefers-reduced-motion: reduce)'].set(false); t.tick(16);
+  ok(t.mode() === 'marquee', 'live motion preference enables measured loop');
+  const a = t.animation(); t.tick(3000); t.media['(prefers-reduced-motion: reduce)'].set(true); t.tick(16);
+  const held = a.currentTime; t.tick(30000);
+  ok(t.mode() === 'static' && a.currentTime === held, 'live reduced motion stops movement');
+  t.media['(prefers-reduced-motion: reduce)'].set(false); t.tick(16);
+  t.root.dispatch('touchstart'); t.buttons()[1].focusVisible = true; t.buttons()[1].dispatch('focusin');
+  ok(t.mode() === 'marquee', 'pointer-origin focus leaves the ticker moving');
+  t.buttons()[1].dispatch('keydown');
+  ok(t.mode() === 'static' && a.playState === 'paused', 'keyboard on an already touch-focused headline stops and exposes all originals');
+  t.buttons()[1].dispatch('focusout', { relatedTarget: t.buttons()[2] }); ok(t.mode() === 'static', 'keyboard navigation within ticker stays static');
+  t.buttons()[2].dispatch('focusout', { relatedTarget: null });
+  ok(t.mode() === 'marquee' && a.playState === 'running', 'keyboard exit resumes retained loop');
+  t.root.dispatch('touchstart'); t.key(); t.buttons()[1].dispatch('focusin');
+  ok(t.mode() === 'static', 'Tab entry after touch also exposes the static originals');
 }
 
 if (failures) { console.error(`[test-signals-ticker] ${failures} failure(s)`); process.exit(1); }
-console.log('[test-signals-ticker] OK — marquee, one-at-a-time step, reduced motion, pause (hover/focus/touch/tab/PAUSE), selection, expiry and ink preservation verified');
+console.log('[test-signals-ticker] OK — adaptive measured loop, single headlines, resize/font/theme continuity, explicit PAUSE/PLAY, touch/hover continuity, reduced motion, keyboard, selection, expiry and ink preservation');

@@ -18,7 +18,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { MAX_CURRENT, SIGNAL_TYPES, renderSignals, selectSignals, signalProblems } from './lib/signals.mjs';
 import { stripInk } from './lib/semantic-ink.mjs';
-import { SIGNALS_END, SIGNALS_START, nowFromEnv, relatedLookup, replaceSignals } from './generate-home-signals.mjs';
+import { SIGNALS_END, SIGNALS_START, nowFromEnv, relatedLookup, replaceSignals, versionSignalsAssets } from './generate-home-signals.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public_html');
@@ -173,15 +173,23 @@ if (expected.length) {
   ok(!/\b(news|breaking|latest|trending)\b/i.test(strip.replace(/<[^>]+>/g, ' ')), 'strip carries no news-feed language');
   ok(!/<img\b/i.test(strip), 'strip has no thumbnails');
 }
-ok(/<script src="assets\/js\/signals-ticker\.js" defer><\/script>/.test(HOME) && existsSync(join(PUBLIC, 'assets', 'js', 'signals-ticker.js')), 'homepage loads the ticker enhancement');
 const css = read('assets', 'css', 'site.css');
-const motionBlocks = css.match(/@media \(prefers-reduced-motion: no-preference\) \{[\s\S]*?\n\}/g) || [];
-const outsideMotion = motionBlocks.reduce((rest, block) => rest.replace(block, ''), css);
-ok(motionBlocks.some((b) => b.includes('.signals-track') && b.includes('.signal-tick.is-entering')), 'marquee and step motion are declared under prefers-reduced-motion: no-preference');
-ok(!/\.signal[\w-]*[^{}]*\{[^}]*\banimation\s*:/.test(outsideMotion), 'no signals animation outside prefers-reduced-motion: no-preference');
-ok(/\.signals\[data-signals-mode="step"\] \.signal-tick:not\(\.is-active\) \{ display:none; \}/.test(css), 'step mode shows one complete headline at a time');
-ok(/\.signals-ticker-clone \{ display:none; \}/.test(css), 'the marquee copy is hidden unless the marquee is running');
-ok(!/signals[^{]*\{[^}]*(#[0-9a-f]{3,6}\b|rgb\()/i.test(css.slice(css.indexOf('Ecosystem Signals (WHAT'))), 'signals CSS uses theme tokens only (no own palette)');
+const runtime = read('assets', 'js', 'signals-ticker.js');
+const cssVersion = /href="assets\/css\/site\.css\?v=([a-f0-9]{16})"/.exec(HOME)?.[1];
+const jsVersion = /src="assets\/js\/signals-ticker\.js\?v=([a-f0-9]{16})" defer/.exec(HOME)?.[1];
+ok(cssVersion && cssVersion === jsVersion && existsSync(join(PUBLIC, 'assets', 'js', 'signals-ticker.js')), 'homepage loads CSS and ticker JS with the same content-derived cache version');
+ok(versionSignalsAssets(HOME, css, runtime) === HOME, 'shipped asset version matches actual CSS and JS bytes and is idempotent');
+const sample = '<link href="assets/css/site.css"><script src="assets/js/signals-ticker.js" defer></script>';
+const versioned = versionSignalsAssets(sample, 'css', 'js');
+ok(versionSignalsAssets(versioned, 'css', 'js') === versioned, 'repeat generation does not stack cache queries');
+ok(versionSignalsAssets(sample, 'new css', 'js') !== versioned && versionSignalsAssets(sample, 'css', 'new js') !== versioned, 'a change to either asset updates the coupled cache key');
+const signalCss = css.slice(css.indexOf('Ecosystem Signals (WHAT'));
+ok(!signalCss.includes('data-signals-mode="step"') && !runtime.includes('720px'), 'no viewport-width step behavior remains');
+ok(signalCss.includes('[data-signals-mode="measure"]') && signalCss.includes('width:max-content') && signalCss.includes('white-space:nowrap'), 'track measurement uses actual unwrapped content width');
+ok(signalCss.includes('.signals-ticker-clone { display:none; }'), 'the loop copy is hidden outside scrolling');
+ok(signalCss.includes('@media (prefers-reduced-motion: reduce)') && signalCss.includes('transform:none !important'), 'CSS also stops movement for reduced motion');
+ok(signalCss.includes('color:var(--key-active-bg); font-weight:900; font-size:1.25em') && signalCss.includes('-webkit-text-stroke:.5px currentColor'), 'separators use the existing yellow active-key theme token, enlarged and thickened');
+ok(!/signals[^{]*\{[^}]*(#[0-9a-f]{3,6}\b|rgb\()/i.test(signalCss), 'signals CSS uses theme tokens only (no own palette)');
 
 if (failures) { console.error(`[test-home-signals] ${failures} failure(s)`); process.exit(1); }
 console.log(`[test-home-signals] OK — ${dataset.signals.length} signal(s) valid, ${expected.length} current on the homepage; selection, expiry, fail-safe and escaping rules hold`);
