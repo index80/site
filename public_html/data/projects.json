@@ -12002,6 +12002,989 @@
       "related_projects": [],
       "treasury_funding_value_ada": null,
       "explorer_url": null
+    },
+    {
+      "slug": "adastat",
+      "name": "AdaStat",
+      "category": "explorer",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Independent Cardano blockchain explorer for blocks, transactions, stake pools, accounts, tokens, epochs, DReps and governance actions, with full pool and account history.",
+      "official_url": "https://adastat.net/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "explorer",
+        "stake-pools",
+        "tokens",
+        "governance"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://adastat.net/"
+        },
+        {
+          "type": "About AdaStat (team and independence)",
+          "url": "https://adastat.net/about"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": "AdaStat (STAT stake pool team)",
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://adastat.net/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "armada-alliance",
+      "name": "Armada Alliance",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Community of Cardano stake-pool operators and developers providing educational resources, node-operation documentation and ARM-compatible Cardano binaries.",
+      "official_url": null,
+      "docs_url": "https://armada-alliance.com/docs/",
+      "github_url": "https://github.com/armada-alliance/cardano-node-binaries",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official documentation",
+          "url": "https://armada-alliance.com/docs/"
+        },
+        {
+          "type": "Linked public repository",
+          "url": "https://github.com/armada-alliance/cardano-node-binaries"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "docs",
+      "primary_link_url": "https://armada-alliance.com/docs/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "balance-analytics",
+      "name": "BALANCE Analytics",
+      "category": "analytics",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano analytics service providing on-chain visualizations and analysis of decentralization, stake distribution and network data, alongside the BALNC stake pool.",
+      "official_url": "https://www.balanceanalytics.io/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://www.balanceanalytics.io/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.balanceanalytics.io/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-delivery",
+      "name": "cardano.delivery",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano webhook service that delivers blockchain events to application endpoints, with documentation for developers and agent integrations.",
+      "official_url": "https://cardano.delivery/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://cardano.delivery/"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-delivery/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://cardano.delivery/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-rosetta-java",
+      "name": "cardano-rosetta-java",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Java implementation of the Mesh, formerly Rosetta, API for Cardano, built on Yaci Store to support blockchain infrastructure integrations.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/cardano-foundation/cardano-rosetta-java",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/cardano-foundation/cardano-rosetta-java"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-rosetta-java/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/cardano-foundation/cardano-rosetta-java",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-wasm",
+      "name": "cardano-wasm",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "WebAssembly component of cardano-api exposing JavaScript and TypeScript tools for Cardano keys, addresses, transaction building and signing in browsers and Node.js.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/IntersectMBO/cardano-api/tree/master/cardano-wasm",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/IntersectMBO/cardano-api/tree/master/cardano-wasm"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardano-wasm/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/IntersectMBO/cardano-api/tree/master/cardano-wasm",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardanovsc",
+      "name": "CardanoVSC",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Visual Studio Code extension for Cardano development with Haskell and Plutus support, chain queries and script-address tooling.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/AIQUANT-Tech/CardanoVSC",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/AIQUANT-Tech/CardanoVSC"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cardanovsc/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/AIQUANT-Tech/CardanoVSC",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cip30-test-wallet",
+      "name": "cip30-test-wallet",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Headless CIP-30 test wallet for Playwright-based Cardano dApp tests, allowing wallet flows and transaction signing to be exercised without interactive popups.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/Lichtstaub/cip30-test-wallet",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/Lichtstaub/cip30-test-wallet"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/cip30-test-wallet/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/Lichtstaub/cip30-test-wallet",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "coingraph",
+      "name": "CoinGraph",
+      "category": "analytics",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Multi-chain crypto-intelligence application with AI-agent tools, Cardano data feeds and documented x402 payments on Cardano preprod, developed for TOKEN2049 Origins.",
+      "official_url": "https://token2049.coingraph.ai/",
+      "docs_url": "https://token2049.coingraph.ai/docs",
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "analytics",
+        "ai-agents",
+        "preprod",
+        "x402"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://token2049.coingraph.ai/"
+        },
+        {
+          "type": "Official pricing and preprod payment documentation",
+          "url": "https://token2049.coingraph.ai/docs/pricing"
+        },
+        {
+          "type": "Cardano Foundation community digest",
+          "url": "https://forum.cardano.org/t/digest-october-14-token2049-singapore-recap-programmable-tokens-live-on-mainnet-cardano-steals-the-spotlight-at-token2049-origins-hackathon-ambassador-stories-with-ian-mccullough-and-more/157370"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Cardano payment integration is a preprod hackathon implementation. Mainnet payment availability and security have not been independently verified. The advertised source repository currently returns 404.",
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://token2049.coingraph.ai/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "earn-coin-pool",
+      "name": "Earn Coin Pool (ECP)",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano stake-pool project with ticker ECP, a public pool identity and educational resources for delegators and pool operators.",
+      "official_url": "https://earncoinpool.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://earncoinpool.com/"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://x.com/earncoinpool"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://earncoinpool.com/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "edda-labs",
+      "name": "Edda Labs",
+      "category": "education",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Engineering studio and developer-education provider with completed Cardano Catalyst projects, multilingual learning resources and current Midnight privacy-technology work.",
+      "official_url": "https://www.eddalabs.io/start",
+      "docs_url": null,
+      "github_url": "https://github.com/eddalabs",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://www.eddalabs.io/start"
+        },
+        {
+          "type": "Linked public repository",
+          "url": "https://github.com/eddalabs"
+        },
+        {
+          "type": "Current studio and completed Catalyst work",
+          "url": "https://www.eddalabs.io/about"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.eddalabs.io/start",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "eutxo",
+      "name": "eUTxO",
+      "category": "explorer",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Visual Cardano blockchain explorer for browsing blocks, transactions and address activity.",
+      "official_url": "https://eutxo.org/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://eutxo.org/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://eutxo.org/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "fireblocks",
+      "name": "Fireblocks",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Enterprise digital-asset infrastructure with support for storing and transferring Cardano ADA. Expanded Cardano Native Token support is announced for March 2027 and is not described here as already delivered.",
+      "official_url": "https://www.fireblocks.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://www.fireblocks.com/"
+        },
+        {
+          "type": "Fireblocks Cardano ADA support",
+          "url": "https://www.fireblocks.com/blog/announcing-our-support-for-cardano-ada"
+        },
+        {
+          "type": "Cardano Native Token delivery announcement",
+          "url": "https://cardanofoundation.org/blog/fireblocks-cardano-native-tokens"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.fireblocks.com/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "hydra-sdk",
+      "name": "hydra-sdk",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "TypeScript toolkit for Cardano wallet applications using Hydra, including Head lifecycle management, transaction building and browser or Node.js bindings.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/Vtechcom/hydra-sdk",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/Vtechcom/hydra-sdk"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/hydra-sdk/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/Vtechcom/hydra-sdk",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "nexus-cardano-api",
+      "name": "Nexus (Cardano API)",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Hosted blockchain data and transaction API with Cardano endpoints and a TypeScript SDK, alongside support for other networks.",
+      "official_url": "https://nexus.gerowallet.io/",
+      "docs_url": null,
+      "github_url": "https://github.com/Gero-Labs/nexus-sdk",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://nexus.gerowallet.io/"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/nexus/"
+        },
+        {
+          "type": "Linked public repository",
+          "url": "https://github.com/Gero-Labs/nexus-sdk"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://nexus.gerowallet.io/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "opshin",
+      "name": "OpShin",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Python-based language and toolchain for compiling smart contracts to Untyped Plutus Core for Cardano.",
+      "official_url": "https://opshin.dev/",
+      "docs_url": null,
+      "github_url": "https://github.com/OpShin/opshin",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://opshin.dev/"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://opshin.dev"
+        },
+        {
+          "type": "Linked public repository",
+          "url": "https://github.com/OpShin/opshin"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://opshin.dev/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "plutus-halo2-verifier-gen",
+      "name": "plutus-halo2-verifier-gen",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Toolkit for generating Cardano on-chain proof verifiers from Halo2 circuits, with Plinth and Aiken integration paths.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/input-output-hk/plutus-halo2-verifier-gen",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/input-output-hk/plutus-halo2-verifier-gen"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/plutus-halo2-verifier-gen/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/input-output-hk/plutus-halo2-verifier-gen",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "pycardano",
+      "name": "PyCardano",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Python library for building Cardano applications, including transaction construction, serialization and protocol features.",
+      "official_url": null,
+      "docs_url": "https://pycardano.readthedocs.io/en/latest/",
+      "github_url": "https://github.com/Python-Cardano/pycardano/tree/main/examples",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official documentation",
+          "url": "https://pycardano.readthedocs.io/en/latest/"
+        },
+        {
+          "type": "Linked public repository",
+          "url": "https://github.com/Python-Cardano/pycardano/tree/main/examples"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "docs",
+      "primary_link_url": "https://pycardano.readthedocs.io/en/latest/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "scalus",
+      "name": "Scalus",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Scala 3 platform for writing and testing Cardano smart contracts, building transactions and developing dApps.",
+      "official_url": "https://scalus.org/",
+      "docs_url": null,
+      "github_url": "https://github.com/scalus3/scalus",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://scalus.org/"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://scalus.org"
+        },
+        {
+          "type": "Linked public repository",
+          "url": "https://github.com/scalus3/scalus"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://scalus.org/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "spo-japan-guild",
+      "name": "SPO Japan Guild",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Japanese-language Cardano stake-pool operator community publishing node-operation guides and providing technical support.",
+      "official_url": "https://spojapanguild.net/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://spojapanguild.net/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://spojapanguild.net/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "tempo",
+      "name": "Tempo",
+      "category": "governance",
+      "public_family": "Governance & Identity",
+      "summary": "Cardano governance app for DReps and ADA holders with DRep profiles, voting history and governance-action views.",
+      "official_url": "https://tempo.vote/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://tempo.vote/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://tempo.vote/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "the-dutch-stake-pool",
+      "name": "The Dutch Stake Pool (TDSP)",
+      "category": "stake-pools",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano stake-pool project with ticker TDSP, an official pool website and public governance and operator resources.",
+      "official_url": "https://www.thedutchstakepool.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://www.thedutchstakepool.com/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.thedutchstakepool.com/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "yaci-store",
+      "name": "Yaci Store",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Modular Java datastore and indexing toolkit for Cardano, built on Yaci with configurable components for applications and chain-data services.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/bloxbean/yaci-store",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "Official repository",
+          "url": "https://github.com/bloxbean/yaci-store"
+        },
+        {
+          "type": "Registry-linked project evidence",
+          "url": "https://developers.cardano.org/tools/yaci-store/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/bloxbean/yaci-store",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "zx402",
+      "name": "ZX402",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano preprod prototype for AI-agent payments through a shared tUSDM funding pool and zero-knowledge proofs, integrating x402 and Masumi payment workflows.",
+      "official_url": "https://zx402.org/",
+      "docs_url": "https://docs.zx402.org/",
+      "github_url": "https://github.com/Marcussy34/zx402",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "preprod",
+        "privacy",
+        "ai-agents",
+        "x402"
+      ],
+      "sources": [
+        {
+          "type": "Official website",
+          "url": "https://zx402.org/"
+        },
+        {
+          "type": "Official source and dated preprod evidence",
+          "url": "https://github.com/Marcussy34/zx402"
+        },
+        {
+          "type": "Cardano Foundation community digest",
+          "url": "https://forum.cardano.org/t/digest-october-14-token2049-singapore-recap-programmable-tokens-live-on-mainnet-cardano-steals-the-spotlight-at-token2049-origins-hackathon-ambassador-stories-with-ian-mccullough-and-more/157370"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Preprod test network only. Mainnet is not deployed. The project states that external review and further setup are required before accepting outside funds; privacy has documented limits.",
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://zx402.org/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
     }
   ]
 }
