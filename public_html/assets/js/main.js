@@ -2,7 +2,7 @@
    Existing site behaviour lives in main-core.js; page-specific enhancements
    are loaded separately so the static site stays small and framework-free. */
 (() => {
-  const VERSION = '20261017-1209';
+  const VERSION = '20261020-2203';
   const load = (src) => new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = `${src}?v=${VERSION}`;

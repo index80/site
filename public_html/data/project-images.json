@@ -4975,6 +4975,998 @@
         "error": null,
         "note": "Screenshot of the official website, captured 2026-10-11 for owner review"
       }
+    },
+    "adastat": {
+      "hero": {
+        "path": "/assets/project-images/adastat/hero-f4da508c7f89.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://adastat.net/img/logo.png",
+        "content_type": "image/webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 22950,
+        "fetched_at": "2026-10-16T15:29:03.418Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://adastat.net/.",
+        "original": {
+          "source_url": "https://adastat.net/img/logo.png",
+          "sha256": "848f8b25cb1baa05649df9f2df1368ac4e3bdd9ff5ef7e32c1b63c1203c01b3b",
+          "width": 400,
+          "height": 400,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:21:21.723Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/adastat/icon-3f1fbec9e2e0.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://adastat.net/apple-touch-icon.png",
+        "content_type": "image/webp",
+        "width": 180,
+        "height": 180,
+        "bytes": 2672,
+        "fetched_at": "2026-10-16T15:29:14.687Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://adastat.net/.",
+        "original": {
+          "source_url": "https://adastat.net/apple-touch-icon.png",
+          "sha256": "2e5e15983767bf8d10243e73c806abab971264f7ac82ca810893a5d8ed274a21",
+          "width": 180,
+          "height": 180,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-16T15:21:21.260Z"
+        }
+      }
+    },
+    "armada-alliance": {
+      "hero": {
+        "path": "/assets/project-images/armada-alliance/hero-bdc65fd1c1b8.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://armada-alliance.com/docs/img/armada-alliance-logo.png",
+        "content_type": "image/webp",
+        "width": 1103,
+        "height": 1117,
+        "bytes": 34298,
+        "fetched_at": "2026-10-16T15:29:10.608Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://armada-alliance.com/docs/.",
+        "original": {
+          "source_url": "https://armada-alliance.com/docs/img/armada-alliance-logo.png",
+          "sha256": "8b7bffd961f17f1b05e6b9a683a75cd7389f9f0aa98b59af2c68d7d5e546b797",
+          "width": 1103,
+          "height": 1117,
+          "content_type": "image/png",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.363Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/armada-alliance/icon-64c1ed737618.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://armada-alliance.com/docs/img/armada-alliance-logo.png",
+        "content_type": "image/webp",
+        "width": 512,
+        "height": 518,
+        "bytes": 14078,
+        "fetched_at": "2026-10-16T15:29:20.529Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://armada-alliance.com/docs/.",
+        "original": {
+          "source_url": "https://armada-alliance.com/docs/img/armada-alliance-logo.png",
+          "sha256": "8b7bffd961f17f1b05e6b9a683a75cd7389f9f0aa98b59af2c68d7d5e546b797",
+          "width": 1103,
+          "height": 1117,
+          "content_type": "image/png",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-16T12:29:05.592Z"
+        }
+      }
+    },
+    "balance-analytics": {
+      "hero": {
+        "path": "/assets/project-images/balance-analytics/hero-8b76f55edfb0.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.balanceanalytics.io/images/ba_main_image_v6.png",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1403,
+        "bytes": 36800,
+        "fetched_at": "2026-10-16T15:29:30.437Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.balanceanalytics.io/.",
+        "original": {
+          "source_url": "https://www.balanceanalytics.io/images/ba_main_image_v6.png",
+          "sha256": "c75c0600c811dde341bcfcd49aa35a4dd029a7786fbe78aa9526849d242299d6",
+          "width": 3336,
+          "height": 2926,
+          "content_type": "image/png",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.364Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/balance-analytics/icon-854997252fb0.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.balanceanalytics.io/images/ba_header_logo.png",
+        "content_type": "image/webp",
+        "width": 135,
+        "height": 135,
+        "bytes": 5652,
+        "fetched_at": "2026-10-16T15:29:37.983Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.balanceanalytics.io/. Genuine project logo referenced on the official website; icon role requires separate review.",
+        "original": {
+          "source_url": "https://www.balanceanalytics.io/images/ba_header_logo.png",
+          "sha256": "5b395a391350b4a843e81ad87ba4b35ec4bd46e1fc4254eed548a3fe8ff40df0",
+          "width": 135,
+          "height": 135,
+          "content_type": "image/png",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.367Z"
+        }
+      }
+    },
+    "cardano-delivery": {
+      "icon": {
+        "path": "/assets/project-images/cardano-delivery/icon-39653483eee1.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://cardano.delivery/assets/favicon.svg",
+        "content_type": "image/webp",
+        "width": 150,
+        "height": 150,
+        "bytes": 1580,
+        "fetched_at": "2026-10-16T15:30:12.435Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://cardano.delivery/.",
+        "original": {
+          "source_url": "https://cardano.delivery/assets/favicon.svg",
+          "sha256": "78a4706d3f429126848f35e3de90014364ef53ae3d8c9503f07e247aee2070b4",
+          "width": 64,
+          "height": 64,
+          "content_type": "image/svg+xml",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-16T12:28:39.780Z"
+        }
+      }
+    },
+    "cardano-rosetta-java": {
+      "icon": {
+        "path": "/assets/project-images/cardano-rosetta-java/icon-7be59658fc91.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://cardano-foundation.github.io/cardano-rosetta-java/img/favicon.ico",
+        "content_type": "image/webp",
+        "width": 48,
+        "height": 48,
+        "bytes": 1370,
+        "fetched_at": "2026-10-16T15:29:55.929Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://cardano-foundation.github.io/cardano-rosetta-java/. Official site uses generic Cardano mark. Confirm suitable representation; no dedicated product logo established.",
+        "original": {
+          "source_url": "https://cardano-foundation.github.io/cardano-rosetta-java/img/favicon.ico",
+          "sha256": "7b827c1ba6c7d5b84571c9bcd3f0d837500f99697f09835f91a1af9487f0492d",
+          "width": 48,
+          "height": 48,
+          "content_type": "image/vnd.microsoft.icon",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-16T12:28:48.650Z"
+        }
+      }
+    },
+    "cardano-wasm": {
+      "hero": {
+        "path": "/assets/project-images/cardano-wasm/hero-f53f5fea7940.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/IntersectMBO/cardano-api/master/cardano-wasm/imgs/step1.png",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 943,
+        "bytes": 92200,
+        "fetched_at": "2026-10-16T15:30:09.372Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://raw.githubusercontent.com/IntersectMBO/cardano-api/master/cardano-wasm/imgs/step1.png. First-party repository asset. Evidence: https://raw.githubusercontent.com/IntersectMBO/cardano-api/master/cardano-wasm/README.md",
+        "original": {
+          "source_url": "https://raw.githubusercontent.com/IntersectMBO/cardano-api/master/cardano-wasm/imgs/step1.png",
+          "sha256": "f64b914dcefdfb5fd58d00b58f58b442d7d02756fba1407c36ce03c5483ceda9",
+          "width": 1896,
+          "height": 1118,
+          "content_type": "image/png",
+          "kind": "manual_official_asset",
+          "fetched_at": "2026-10-16T15:24:26.356Z"
+        }
+      }
+    },
+    "cardanovsc": {
+      "hero": {
+        "path": "/assets/project-images/cardanovsc/hero-832842c2ddb7.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/AIQUANT-Tech/CardanoVSC/refs/heads/main/CardanoVSC/docs/cardanovsc_command01.png",
+        "content_type": "image/webp",
+        "width": 1485,
+        "height": 783,
+        "bytes": 108256,
+        "fetched_at": "2026-10-16T15:30:17.254Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://raw.githubusercontent.com/AIQUANT-Tech/CardanoVSC/refs/heads/main/CardanoVSC/docs/cardanovsc_command01.png. First-party repository asset. Evidence: https://raw.githubusercontent.com/AIQUANT-Tech/CardanoVSC/main/README.md",
+        "original": {
+          "source_url": "https://raw.githubusercontent.com/AIQUANT-Tech/CardanoVSC/refs/heads/main/CardanoVSC/docs/cardanovsc_command01.png",
+          "sha256": "fcf8e5169c9da6e832e5df9c0bc3290ed9b6fb5a1ee067792aa3e7a8e38e2542",
+          "width": 1485,
+          "height": 783,
+          "content_type": "image/png",
+          "kind": "manual_official_asset",
+          "fetched_at": "2026-10-16T15:24:26.359Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/cardanovsc/icon-50f6c9587cad.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/AIQUANT-Tech/CardanoVSC/main/CardanoVSC/media/icon1.png",
+        "content_type": "image/webp",
+        "width": 375,
+        "height": 347,
+        "bytes": 3950,
+        "fetched_at": "2026-10-16T15:30:20.032Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://raw.githubusercontent.com/AIQUANT-Tech/CardanoVSC/main/CardanoVSC/media/icon1.png. First-party repository asset. Evidence: https://raw.githubusercontent.com/AIQUANT-Tech/CardanoVSC/main/README.md",
+        "original": {
+          "source_url": "https://raw.githubusercontent.com/AIQUANT-Tech/CardanoVSC/main/CardanoVSC/media/icon1.png",
+          "sha256": "9999525534d3153b3f1da6a04b0526f63947fead3486586ce88718148e6fca7a",
+          "width": 375,
+          "height": 347,
+          "content_type": "image/png",
+          "kind": "manual_official_asset",
+          "fetched_at": "2026-10-16T15:24:26.366Z"
+        }
+      }
+    },
+    "cip30-test-wallet": {
+      "hero": {
+        "path": "/assets/project-images/cip30-test-wallet/hero-4bf2f9799be4.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/Lichtstaub/cip30-test-wallet/main/media/trace-viewer.png",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1120,
+        "bytes": 74752,
+        "fetched_at": "2026-10-16T15:30:23.751Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://raw.githubusercontent.com/Lichtstaub/cip30-test-wallet/main/media/trace-viewer.png. First-party repository asset. Evidence: https://raw.githubusercontent.com/Lichtstaub/cip30-test-wallet/main/README.md",
+        "original": {
+          "source_url": "https://raw.githubusercontent.com/Lichtstaub/cip30-test-wallet/main/media/trace-viewer.png",
+          "sha256": "01f998ab0e888486e39192ff3f8fc86351297317fdd3dc339dc440e118f0fc8d",
+          "width": 2000,
+          "height": 1400,
+          "content_type": "image/png",
+          "kind": "manual_official_asset",
+          "fetched_at": "2026-10-16T15:24:26.357Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/cip30-test-wallet/icon-f757d720158d.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/Lichtstaub/cip30-test-wallet/main/media/logo.svg",
+        "content_type": "image/webp",
+        "width": 150,
+        "height": 150,
+        "bytes": 2760,
+        "fetched_at": "2026-10-16T15:30:25.701Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://raw.githubusercontent.com/Lichtstaub/cip30-test-wallet/main/media/logo.svg. First-party repository asset. Evidence: https://raw.githubusercontent.com/Lichtstaub/cip30-test-wallet/main/README.md",
+        "original": {
+          "source_url": "https://raw.githubusercontent.com/Lichtstaub/cip30-test-wallet/main/media/logo.svg",
+          "sha256": "f6152eae6edc28feec4809eb3dee800f1d1d99182453bb95934388a2f6c3cabd",
+          "width": 64,
+          "height": 64,
+          "content_type": "image/svg+xml",
+          "kind": "manual_official_asset",
+          "fetched_at": "2026-10-16T15:24:26.365Z"
+        }
+      }
+    },
+    "coingraph": {
+      "hero": {
+        "path": "/assets/project-images/coingraph/hero-a893b713c910.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://token2049.coingraph.ai/_next/image?url=%2Fbrand%2Flogo.png&w=96&q=75",
+        "content_type": "image/webp",
+        "width": 96,
+        "height": 96,
+        "bytes": 1850,
+        "fetched_at": "2026-10-20T12:18:14.246Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://token2049.coingraph.ai/.",
+        "original": {
+          "source_url": "https://token2049.coingraph.ai/_next/image?url=%2Fbrand%2Flogo.png&w=96&q=75",
+          "sha256": "61c0debfb9d4fd999648f03749eb864c1fb70f2dafacf5bf00267a6ec9112f59",
+          "width": 96,
+          "height": 96,
+          "content_type": "image/png",
+          "kind": "body_img",
+          "fetched_at": "2026-10-17T00:25:41.616Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/coingraph/icon-c6902f2d084d.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://token2049.coingraph.ai/icon.png?icon.0_32gt8q25lzm.png",
+        "content_type": "image/webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 4784,
+        "fetched_at": "2026-10-20T12:18:32.771Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://token2049.coingraph.ai/.",
+        "original": {
+          "source_url": "https://token2049.coingraph.ai/icon.png?icon.0_32gt8q25lzm.png",
+          "sha256": "aa36e232edb57bfe40b28616eb0caf53e311db9d1e0a1bc3da444c543eda604e",
+          "width": 256,
+          "height": 256,
+          "content_type": "image/png",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-17T00:25:39.436Z"
+        }
+      }
+    },
+    "earn-coin-pool": {
+      "hero": {
+        "path": "/assets/project-images/earn-coin-pool/hero-f852ac16647a.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://earncoinpool.com/images/coin_v3.png",
+        "content_type": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 126496,
+        "fetched_at": "2026-10-16T15:30:33.281Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://earncoinpool.com/.",
+        "original": {
+          "source_url": "https://earncoinpool.com/images/coin_v3.png",
+          "sha256": "4bc2d43ab0b6aba766fc0c7106fed67119e3b0c86bfc32ec567bd1967db54c8a",
+          "width": 1000,
+          "height": 1000,
+          "content_type": "image/png",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.360Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/earn-coin-pool/icon-a24ac6f6c813.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://earncoinpool.com/favicon.ico",
+        "content_type": "image/webp",
+        "width": 16,
+        "height": 16,
+        "bytes": 370,
+        "fetched_at": "2026-10-16T15:30:40.777Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://earncoinpool.com/.",
+        "original": {
+          "source_url": "https://earncoinpool.com/favicon.ico",
+          "sha256": "a3192736838d666d67e8b67a07db0da100210b008c6bc0a81bba29fdf3d91cac",
+          "width": 16,
+          "height": 16,
+          "content_type": "image/x-icon",
+          "kind": "favicon_guess",
+          "fetched_at": "2026-10-16T12:28:59.832Z"
+        }
+      }
+    },
+    "edda-labs": {
+      "hero": {
+        "path": "/assets/project-images/edda-labs/hero-aae84588be5f.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.eddalabs.io/en/opengraph-image",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 12154,
+        "fetched_at": "2026-10-16T15:30:49.249Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.eddalabs.io/start.",
+        "original": {
+          "source_url": "https://www.eddalabs.io/en/opengraph-image",
+          "sha256": "24c8aef2360319c6638d66765ff29b6d08dbb51a5403ee82a5d12bef124066c4",
+          "width": 1200,
+          "height": 630,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:24:26.363Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/edda-labs/icon-ed9b43ee667e.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.eddalabs.io/favicon.ico?favicon.2csk8ofed8oc-.ico",
+        "content_type": "image/webp",
+        "width": 231,
+        "height": 231,
+        "bytes": 2196,
+        "fetched_at": "2026-10-16T15:30:51.051Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.eddalabs.io/start.",
+        "original": {
+          "source_url": "https://www.eddalabs.io/favicon.ico?favicon.2csk8ofed8oc-.ico",
+          "sha256": "096efbfe2b4aadab1900db214622948a36d657bae9d078259e4b0a882205404a",
+          "width": 231,
+          "height": 231,
+          "content_type": "image/vnd.microsoft.icon",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-16T12:29:07.570Z"
+        }
+      }
+    },
+    "eutxo": {
+      "hero": {
+        "path": "/assets/project-images/eutxo/hero-90079f31b9e2.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://eutxo.org/assets/eutxo-global.png",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 20444,
+        "fetched_at": "2026-10-16T15:30:53.261Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://eutxo.org/.",
+        "original": {
+          "source_url": "https://eutxo.org/assets/eutxo-global.png",
+          "sha256": "f16edf8e57c2be0b9e26ec738b7740fc279c646b9e2680bfcb77319a0716bd27",
+          "width": 1200,
+          "height": 630,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:24:26.355Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/eutxo/icon-ff83fea67163.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://eutxo.org/assets/fav/ios/180.png",
+        "content_type": "image/webp",
+        "width": 180,
+        "height": 180,
+        "bytes": 4120,
+        "fetched_at": "2026-10-16T15:30:57.499Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://eutxo.org/. Official site uses generic Cardano mark. Confirm suitable representation; no dedicated product logo established.",
+        "original": {
+          "source_url": "https://eutxo.org/assets/fav/ios/180.png",
+          "sha256": "50960cb37b15a5c19e905db3983cbe6577d1e6b94076e38e990ef71a72c8615b",
+          "width": 180,
+          "height": 180,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-16T12:28:33.509Z"
+        }
+      }
+    },
+    "fireblocks": {
+      "hero": {
+        "path": "/assets/project-images/fireblocks/hero-a2f11318686f.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.fireblocks.com/wp-content/uploads/2025/10/home-screenshot-scaled.webp",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 911,
+        "bytes": 50372,
+        "fetched_at": "2026-10-16T15:31:01.921Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.fireblocks.com/.",
+        "original": {
+          "source_url": "https://www.fireblocks.com/wp-content/uploads/2025/10/home-screenshot-scaled.webp",
+          "sha256": "93c5cf9b82692afe6efdd2c7d56b67bc2511cc89d4c279e0ea7439f302ee5570",
+          "width": 2560,
+          "height": 1457,
+          "content_type": "image/webp",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:24:26.356Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/fireblocks/icon-288187b9d6c3.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.fireblocks.com/wp-content/themes/fireblocks-block-theme/assets/favicon.png",
+        "content_type": "image/webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 1716,
+        "fetched_at": "2026-10-16T15:31:04.393Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.fireblocks.com/. Official-site favicon; confirm this matches current project branding.",
+        "original": {
+          "source_url": "https://www.fireblocks.com/wp-content/themes/fireblocks-block-theme/assets/favicon.png",
+          "sha256": "815cc7c165fe29cf595db0031089ffa8ec3ebe5c57d7a8b47c9e4897f3984e86",
+          "width": 200,
+          "height": 200,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-16T12:28:36.087Z"
+        }
+      }
+    },
+    "hydra-sdk": {
+      "hero": {
+        "path": "/assets/project-images/hydra-sdk/hero-4cac0124d7f8.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://hydrasdk.com/images/logo-1024x1024.png",
+        "content_type": "image/webp",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 202178,
+        "fetched_at": "2026-10-16T15:31:08.773Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://hydrasdk.com.",
+        "original": {
+          "source_url": "https://hydrasdk.com/images/logo-1024x1024.png",
+          "sha256": "34bce9c99e5f8acf8570838c5b53baee6b6a280ee33b1ef68e0d70db8098a95e",
+          "width": 1024,
+          "height": 1024,
+          "content_type": "image/png",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.358Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/hydra-sdk/icon-9967d71f2a9d.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://hydrasdk.com/favicon.ico",
+        "content_type": "image/webp",
+        "width": 48,
+        "height": 48,
+        "bytes": 2350,
+        "fetched_at": "2026-10-16T15:31:10.564Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://hydrasdk.com.",
+        "original": {
+          "source_url": "https://hydrasdk.com/favicon.ico",
+          "sha256": "60396090ea9ec9eb27a4f32e5ca3038de7385893be6a168624bdab053f93f16a",
+          "width": 48,
+          "height": 48,
+          "content_type": "image/vnd.microsoft.icon",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-16T12:28:42.592Z"
+        }
+      }
+    },
+    "nexus-cardano-api": {
+      "hero": {
+        "path": "/assets/project-images/nexus-cardano-api/hero-18ce869c62cf.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://nexus.gerowallet.io/images/og-nexus-card-v2.png",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 49060,
+        "fetched_at": "2026-10-16T15:31:14.024Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://nexus.gerowallet.io/.",
+        "original": {
+          "source_url": "https://nexus.gerowallet.io/images/og-nexus-card-v2.png",
+          "sha256": "2b032b18f19d097edfae0ee290b1129209448682866f98960c654e7c1fb85ca6",
+          "width": 1200,
+          "height": 630,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:24:26.357Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/nexus-cardano-api/icon-4e283c29c434.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://nexus.gerowallet.io/images/nexus.svg",
+        "content_type": "image/webp",
+        "width": 150,
+        "height": 150,
+        "bytes": 3308,
+        "fetched_at": "2026-10-16T15:31:22.982Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://nexus.gerowallet.io/. Genuine project logo referenced on the official website; icon role requires separate review.",
+        "original": {
+          "source_url": "https://nexus.gerowallet.io/images/nexus.svg",
+          "sha256": "64fcbdee9b0c17d74ff45bbeb2f2b18d479010f525fc140c7e443f2372c64a76",
+          "width": 400,
+          "height": 400,
+          "content_type": "image/svg+xml",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.365Z"
+        }
+      }
+    },
+    "opshin": {
+      "hero": {
+        "path": "/assets/project-images/opshin/hero-f0f75ec0c193.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://opshin.dev/open-graph.jpg",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1057,
+        "bytes": 64608,
+        "fetched_at": "2026-10-16T15:31:28.206Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://opshin.dev/.",
+        "original": {
+          "source_url": "https://opshin.dev/open-graph.jpg",
+          "sha256": "2b245d454c04a537438c66ceb84349e9c7b6c123fa21cee600dd23252a5f86b0",
+          "width": 1620,
+          "height": 1070,
+          "content_type": "image/jpeg",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:24:26.362Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/opshin/icon-872d3c9e4e45.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://opshin.dev/favicon.ico",
+        "content_type": "image/webp",
+        "width": 64,
+        "height": 64,
+        "bytes": 1852,
+        "fetched_at": "2026-10-16T15:31:31.212Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://opshin.dev/.",
+        "original": {
+          "source_url": "https://opshin.dev/favicon.ico",
+          "sha256": "ce205cad5b24f5e0881696e94bf4501ddb7c0e70d13abc1c08364267a3b20ee4",
+          "width": 64,
+          "height": 64,
+          "content_type": "image/vnd.microsoft.icon",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-16T12:29:04.020Z"
+        }
+      }
+    },
+    "plutus-halo2-verifier-gen": {
+      "hero": {
+        "path": "/assets/project-images/plutus-halo2-verifier-gen/hero-48579461e301.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://input-output-hk.github.io/plutus-halo2-verifier-gen/assets/halo2-verifier-icon-no-text.svg",
+        "content_type": "image/webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 6686,
+        "fetched_at": "2026-10-16T15:31:36.911Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://input-output-hk.github.io/plutus-halo2-verifier-gen/. SVG: review here; Sid hero upload needs a PNG/JPG/WebP derivative after selection. Retain this original source URL.",
+        "original": {
+          "source_url": "https://input-output-hk.github.io/plutus-halo2-verifier-gen/assets/halo2-verifier-icon-no-text.svg",
+          "sha256": "b64a66378b835a973226bc7b74d602c3f57691245fec2db8fbd7f3b8106e2628",
+          "width": 200,
+          "height": 200,
+          "content_type": "image/svg+xml",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.358Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/plutus-halo2-verifier-gen/icon-48579461e301.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://input-output-hk.github.io/plutus-halo2-verifier-gen/assets/halo2-verifier-icon-no-text.svg",
+        "content_type": "image/webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 6686,
+        "fetched_at": "2026-10-16T15:31:39.154Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://input-output-hk.github.io/plutus-halo2-verifier-gen/. Genuine project logo referenced on the official website; icon role requires separate review.",
+        "original": {
+          "source_url": "https://input-output-hk.github.io/plutus-halo2-verifier-gen/assets/halo2-verifier-icon-no-text.svg",
+          "sha256": "b64a66378b835a973226bc7b74d602c3f57691245fec2db8fbd7f3b8106e2628",
+          "width": 200,
+          "height": 200,
+          "content_type": "image/svg+xml",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.366Z"
+        }
+      }
+    },
+    "pycardano": {
+      "hero": {
+        "path": "/assets/project-images/pycardano/hero-56a57e86ca56.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/Python-Cardano/pycardano/main/.github/logo.png",
+        "content_type": "image/webp",
+        "width": 920,
+        "height": 920,
+        "bytes": 40342,
+        "fetched_at": "2026-10-16T15:31:41.292Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://pycardano.readthedocs.io/en/latest/. First-party repository asset. Evidence: https://raw.githubusercontent.com/Python-Cardano/pycardano/main/README.md",
+        "original": {
+          "source_url": "https://raw.githubusercontent.com/Python-Cardano/pycardano/main/.github/logo.png",
+          "sha256": "8201421e38493665362d96ace4407e75b126fc4d132d8e3e521469645063d7b2",
+          "width": 920,
+          "height": 920,
+          "content_type": "image/png",
+          "kind": "manual_official_asset",
+          "fetched_at": "2026-10-16T15:24:26.361Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/pycardano/icon-a00f94c5efd2.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://raw.githubusercontent.com/Python-Cardano/pycardano/main/.github/logo.png",
+        "content_type": "image/webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 25894,
+        "fetched_at": "2026-10-16T15:31:43.001Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://pycardano.readthedocs.io/en/latest/. First-party repository asset. Evidence: https://raw.githubusercontent.com/Python-Cardano/pycardano/main/README.md",
+        "original": {
+          "source_url": "https://raw.githubusercontent.com/Python-Cardano/pycardano/main/.github/logo.png",
+          "sha256": "8201421e38493665362d96ace4407e75b126fc4d132d8e3e521469645063d7b2",
+          "width": 920,
+          "height": 920,
+          "content_type": "image/png",
+          "kind": "manual_official_asset",
+          "fetched_at": "2026-10-16T15:24:26.366Z"
+        }
+      }
+    },
+    "scalus": {
+      "hero": {
+        "path": "/assets/project-images/scalus/hero-9cb2fca2ce5d.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://scalus.org/scalus-logo-vertical-dark.png",
+        "content_type": "image/webp",
+        "width": 1400,
+        "height": 1400,
+        "bytes": 97326,
+        "fetched_at": "2026-10-16T15:31:54.032Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://scalus.org/.",
+        "original": {
+          "source_url": "https://scalus.org/scalus-logo-vertical-dark.png",
+          "sha256": "f4f3d1ebb3bf74024969a3c355315ededdac1835c0cc390c02cf82db4dcb3bec",
+          "width": 1400,
+          "height": 1400,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:24:26.360Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/scalus/icon-8225d3cfd3fc.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://scalus.org/apple-icon.png?apple-icon.05bmb-1n3q5jk.png",
+        "content_type": "image/webp",
+        "width": 180,
+        "height": 180,
+        "bytes": 7462,
+        "fetched_at": "2026-10-16T15:31:55.973Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://scalus.org/.",
+        "original": {
+          "source_url": "https://scalus.org/apple-icon.png?apple-icon.05bmb-1n3q5jk.png",
+          "sha256": "be04abd3fef67b6430eb7dbcc6190f2e89d1249082e533061dc2b5747c2afd36",
+          "width": 180,
+          "height": 180,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-16T12:29:01.584Z"
+        }
+      }
+    },
+    "spo-japan-guild": {
+      "hero": {
+        "path": "/assets/project-images/spo-japan-guild/hero-b8c74d941f1a.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://spojapanguild.net/wp-content/uploads/2022/04/ogp-image-main.png",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 33432,
+        "fetched_at": "2026-10-16T15:32:01.543Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://spojapanguild.net/.",
+        "original": {
+          "source_url": "https://spojapanguild.net/wp-content/uploads/2022/04/ogp-image-main.png",
+          "sha256": "0a8986e9fb2044e38598fd9f8591e9888bd25aeef599e2c1b12460028e684ee2",
+          "width": 1200,
+          "height": 630,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:24:26.364Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/spo-japan-guild/icon-13524e051636.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://spojapanguild.net/wp-content/uploads/2021/07/11001_00003297_lg_dg_1-1-1.png",
+        "content_type": "image/webp",
+        "width": 337,
+        "height": 367,
+        "bytes": 6250,
+        "fetched_at": "2026-10-16T15:32:03.328Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://spojapanguild.net/.",
+        "original": {
+          "source_url": "https://spojapanguild.net/wp-content/uploads/2021/07/11001_00003297_lg_dg_1-1-1.png",
+          "sha256": "c7ed254ea90390b924c1e55d5172bad94a4e8da10f2435f8ddac1c0d5043dddb",
+          "width": 337,
+          "height": 367,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-16T12:29:19.849Z"
+        }
+      }
+    },
+    "tempo": {
+      "hero": {
+        "path": "/assets/project-images/tempo/hero-4a14be4280bd.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://tempo.vote/_next/image?url=%2Flogo.webp&w=384&q=75",
+        "content_type": "image/webp",
+        "width": 306,
+        "height": 72,
+        "bytes": 2948,
+        "fetched_at": "2026-10-16T15:32:05.503Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://tempo.vote/.",
+        "original": {
+          "source_url": "https://tempo.vote/_next/image?url=%2Flogo.webp&w=384&q=75",
+          "sha256": "a90a2288b091e0e09f8afebe484a96f93bfa607f8576584144822f65b37ce28d",
+          "width": 306,
+          "height": 72,
+          "content_type": "image/jpeg",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.364Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/tempo/icon-700641315e36.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://tempo.vote/favicon.ico",
+        "content_type": "image/webp",
+        "width": 32,
+        "height": 32,
+        "bytes": 792,
+        "fetched_at": "2026-10-16T15:32:07.095Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://tempo.vote/. Official-site favicon; confirm this matches current project branding.",
+        "original": {
+          "source_url": "https://tempo.vote/favicon.ico",
+          "sha256": "ce54319ddea274741683b312ef6bf705c698f43e69aa8c343bc33e7063066ca4",
+          "width": 32,
+          "height": 32,
+          "content_type": "image/x-icon",
+          "kind": "favicon_guess",
+          "fetched_at": "2026-10-16T12:29:14.959Z"
+        }
+      }
+    },
+    "the-dutch-stake-pool": {
+      "hero": {
+        "path": "/assets/project-images/the-dutch-stake-pool/hero-bfc9c9bfcbb9.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.thedutchstakepool.com/tdsp_logo.webp?v=20260727-smooth-lines",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 1649,
+        "bytes": 213448,
+        "fetched_at": "2026-10-16T15:32:09.344Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.thedutchstakepool.com/.",
+        "original": {
+          "source_url": "https://www.thedutchstakepool.com/tdsp_logo.webp?v=20260727-smooth-lines",
+          "sha256": "13d6c1dc3d1da95cfac0bde0f6059dca1bc311d1a5a7feaf03ade5862197c21d",
+          "width": 1640,
+          "height": 1690,
+          "content_type": "image/webp",
+          "kind": "og_image",
+          "fetched_at": "2026-10-16T15:24:26.356Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/the-dutch-stake-pool/icon-d951a5b55b7d.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.thedutchstakepool.com/favicon180x180.png?v=20260727-retina",
+        "content_type": "image/webp",
+        "width": 180,
+        "height": 180,
+        "bytes": 12874,
+        "fetched_at": "2026-10-16T15:32:10.786Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.thedutchstakepool.com/.",
+        "original": {
+          "source_url": "https://www.thedutchstakepool.com/favicon180x180.png?v=20260727-retina",
+          "sha256": "17f477321db70ac31b0df404450ce26fb3e781c07bb4e128d2def42ae3f86ce6",
+          "width": 180,
+          "height": 180,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-16T12:28:34.707Z"
+        }
+      }
+    },
+    "yaci-store": {
+      "hero": {
+        "path": "/assets/project-images/yaci-store/hero-b03ae7a80b60.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://store.yaci.xyz/_next/static/media/YaciStore.10.de5-ixl~fn.svg",
+        "content_type": "image/webp",
+        "width": 100,
+        "height": 150,
+        "bytes": 1624,
+        "fetched_at": "2026-10-16T15:32:15.498Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://store.yaci.xyz/. SVG: review here; Sid hero upload needs a PNG/JPG/WebP derivative after selection. Retain this original source URL.",
+        "original": {
+          "source_url": "https://store.yaci.xyz/_next/static/media/YaciStore.10.de5-ixl~fn.svg",
+          "sha256": "8a70c8930d065f5dc61f9895be8fbfd15b939ddec8149e1b2503aef6dbfa1f9c",
+          "width": 1024,
+          "height": 1536,
+          "content_type": "image/svg+xml",
+          "kind": "body_img",
+          "fetched_at": "2026-10-16T15:24:26.358Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/yaci-store/icon-b03ae7a80b60.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://store.yaci.xyz/images/YaciStore.svg",
+        "content_type": "image/webp",
+        "width": 100,
+        "height": 150,
+        "bytes": 1624,
+        "fetched_at": "2026-10-16T15:32:16.559Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://store.yaci.xyz/.",
+        "original": {
+          "source_url": "https://store.yaci.xyz/images/YaciStore.svg",
+          "sha256": "8a70c8930d065f5dc61f9895be8fbfd15b939ddec8149e1b2503aef6dbfa1f9c",
+          "width": 1024,
+          "height": 1536,
+          "content_type": "image/svg+xml",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-16T12:28:43.826Z"
+        }
+      }
     }
   }
 }
