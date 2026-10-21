@@ -19,6 +19,7 @@ const PINNED = {
   '0004': { hash: 'd4d316bf8961ce7fe3253c9d613bc1adf02c8071c1094c11fa82e31fdcc9bb2b', tx: '4226bc80f1a94e65a8b8a010a51530f60329af643f2375b9c15d4ebdd771b36d', network: 'mainnet' },
   '0005': { hash: '9aff0fa659748fde0a4e746e594172765c91e766eea1cdca5cd9b1f98393a93d', tx: '86bc6b154421045c22e63d6aa83eb3ef7e2371cf8be07161bad0b2aece9d8bac', network: 'mainnet' },
   '0006': { hash: '403575df0fd286c10525c5d8408d5f0dec70deb6c6b2c4bd0ff34658525f05f6', tx: 'd8ba8111d32728318c630203a7252131c94e7c904529a7a0c8400d3bf9ccbf59', network: 'mainnet' },
+  '0007': { hash: '67d378a206709d277fb7b8651253d6fc7f69c0063b8bed4b09853aaa8a6b6fa5', tx: '3ef13d1ec4ed36bfd7a16bd0f8d43ec8d5593bbeeea0854a5f9af88fec6c6653', network: 'mainnet' },
 };
 const readJson = (f) => JSON.parse(fs.readFileSync(f, 'utf8'));
 // The public source repository ships without the private originals (marker written by the export).
