@@ -5967,6 +5967,346 @@
           "fetched_at": "2026-10-16T12:28:43.826Z"
         }
       }
+    },
+    "balius": {
+      "hero": {
+        "path": "/assets/project-images/balius/hero-2538fa0e8dba.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://github.com/txpipe/balius",
+        "content_type": "image/webp",
+        "width": 196,
+        "height": 78,
+        "bytes": 2132,
+        "fetched_at": "2026-10-23T10:07:25.650Z",
+        "status": "ok",
+        "error": null,
+        "note": "Logo from github public"
+      }
+    },
+    "carda-station": {
+      "hero": {
+        "path": "/assets/project-images/carda-station/hero-20eb9b221e1d.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.cardastation.com/images/socialShare.png",
+        "content_type": "image/webp",
+        "width": 1208,
+        "height": 600,
+        "bytes": 75318,
+        "fetched_at": "2026-10-23T10:08:14.697Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.cardastation.com/.",
+        "original": {
+          "source_url": "https://www.cardastation.com/images/socialShare.png",
+          "sha256": "490a76f0261d804cdd147ea8efac8d43491a069da34fab14dcbf043efabbd85e",
+          "width": 1208,
+          "height": 600,
+          "content_type": "image/png",
+          "kind": "twitter_image",
+          "fetched_at": "2026-10-23T10:08:08.828Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/carda-station/icon-b3d67d24fe68.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.cardastation.com/favicon.png",
+        "content_type": "image/webp",
+        "width": 32,
+        "height": 32,
+        "bytes": 460,
+        "fetched_at": "2026-10-23T10:08:42.930Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.cardastation.com/.",
+        "original": {
+          "source_url": "https://www.cardastation.com/favicon.png",
+          "sha256": "b02712b7ed6b419995cb3f14f85f0428864180996233d64e191229e027243e42",
+          "width": 32,
+          "height": 32,
+          "content_type": "image/png",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-23T10:08:05.567Z"
+        }
+      }
+    },
+    "cardano-client-lib": {
+      "hero": {
+        "path": "/assets/project-images/cardano-client-lib/hero-39ad774f3661.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://cardano-client.dev/",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 732,
+        "bytes": 40508,
+        "fetched_at": "2026-10-23T10:12:00.298Z",
+        "status": "ok",
+        "error": null,
+        "note": "Main homepage screenshot"
+      },
+      "icon": {
+        "path": "/assets/project-images/cardano-client-lib/icon-074b63f8ace3.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://cardano-client.dev/img/favicon.svg",
+        "content_type": "image/webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 7866,
+        "fetched_at": "2026-10-23T10:12:22.564Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://cardano-client.dev/.",
+        "original": {
+          "source_url": "https://cardano-client.dev/img/favicon.svg",
+          "sha256": "6b3eedb63714aa976a2198d9c1da565e62b5fc07961bdc1d1a3ac91c7b649022",
+          "width": 659,
+          "height": 659,
+          "content_type": "image/svg+xml",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-23T10:09:52.607Z"
+        }
+      }
+    },
+    "cardano-js-sdk": {
+      "hero": {
+        "path": "/assets/project-images/cardano-js-sdk/hero-c044e0a87cdb.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://github.com/input-output-hk/cardano-js-sdk",
+        "content_type": "image/webp",
+        "width": 388,
+        "height": 98,
+        "bytes": 3638,
+        "fetched_at": "2026-10-23T10:14:30.258Z",
+        "status": "ok",
+        "error": null,
+        "note": "github logo screenshot"
+      }
+    },
+    "cardanoflow": {
+      "hero": {
+        "path": "/assets/project-images/cardanoflow/hero-3a199a4be8c4.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://cdn.prod.website-files.com/664af83214d5bed4b7e6c802/6652aa487d431aabc4405020_Group%20175.jpg",
+        "content_type": "image/webp",
+        "width": 1600,
+        "height": 731,
+        "bytes": 156098,
+        "fetched_at": "2026-10-23T10:15:15.546Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.bondy.earth/en.",
+        "original": {
+          "source_url": "https://cdn.prod.website-files.com/664af83214d5bed4b7e6c802/6652aa487d431aabc4405020_Group%20175.jpg",
+          "sha256": "b92387403e74c5a42f6cab67de13f48be8472e372a853cf8ffb0e80e04a5dc66",
+          "width": 2824,
+          "height": 1290,
+          "content_type": "image/jpeg",
+          "kind": "og_image",
+          "fetched_at": "2026-10-23T10:15:05.236Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/cardanoflow/icon-485136c8f1d3.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.bondy.earth/en",
+        "content_type": "image/webp",
+        "width": 330,
+        "height": 448,
+        "bytes": 23154,
+        "fetched_at": "2026-10-23T10:16:27.099Z",
+        "status": "ok",
+        "error": null,
+        "note": "main homepage logo"
+      }
+    },
+    "dcspark": {
+      "hero": {
+        "path": "/assets/project-images/dcspark/hero-c7333ee23b71.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.dcspark.io/images/dcspark_banner.png",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 30366,
+        "fetched_at": "2026-10-23T10:17:19.891Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://dcspark.io/.",
+        "original": {
+          "source_url": "https://www.dcspark.io/images/dcspark_banner.png",
+          "sha256": "d4339200f5e5285aa1673c72f410d3bc56cd39e1a9d197663610049f70e46634",
+          "width": 1200,
+          "height": 630,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-23T10:17:14.035Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/dcspark/icon-68b09786e368.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://dcspark.io/images/favicon/apple-touch-icon.png",
+        "content_type": "image/webp",
+        "width": 180,
+        "height": 180,
+        "bytes": 1716,
+        "fetched_at": "2026-10-23T10:17:41.891Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://dcspark.io/.",
+        "original": {
+          "source_url": "https://dcspark.io/images/favicon/apple-touch-icon.png",
+          "sha256": "9c99dd6728a00f0f3610312a5b4c017e58b20795bbb14682ad91ce34f19b81df",
+          "width": 180,
+          "height": 180,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-23T10:17:11.302Z"
+        }
+      }
+    },
+    "hydrozoa": {
+      "hero": {
+        "path": "/assets/project-images/hydrozoa/hero-dcda82c0f26e.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://github.com/cardano-hydrozoa/hydrozoa",
+        "content_type": "image/webp",
+        "width": 264,
+        "height": 84,
+        "bytes": 2560,
+        "fetched_at": "2026-10-23T10:19:48.891Z",
+        "status": "ok",
+        "error": null,
+        "note": "github logo screenshot"
+      }
+    },
+    "logical-mechanism": {
+      "hero": {
+        "path": "/assets/project-images/logical-mechanism/hero-30c818574eb1.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.logicalmechanism.io/img/og.png",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 19036,
+        "fetched_at": "2026-10-23T10:20:29.416Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.logicalmechanism.io/.",
+        "original": {
+          "source_url": "https://www.logicalmechanism.io/img/og.png",
+          "sha256": "fbd22b6e46a2ce69d73575057fea764e7f3806688715792a53f8dd0157dc2501",
+          "width": 1200,
+          "height": 630,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-23T10:20:26.355Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/logical-mechanism/icon-5ee7d078d6fb.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.logicalmechanism.io/fav/apple-touch-icon.png",
+        "content_type": "image/webp",
+        "width": 180,
+        "height": 180,
+        "bytes": 1530,
+        "fetched_at": "2026-10-23T10:20:43.317Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.logicalmechanism.io/.",
+        "original": {
+          "source_url": "https://www.logicalmechanism.io/fav/apple-touch-icon.png",
+          "sha256": "f4304a1100834329461319fc3e2b215d05d9642006eb8d1c9c2b9800011e02c2",
+          "width": 180,
+          "height": 180,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-23T10:20:25.909Z"
+        }
+      }
+    },
+    "open-food-chain": {
+      "hero": {
+        "path": "/assets/project-images/open-food-chain/hero-6e556d2e414c.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.openfoodchain.com/",
+        "content_type": "image/webp",
+        "width": 450,
+        "height": 144,
+        "bytes": 5068,
+        "fetched_at": "2026-10-23T10:02:23.291Z",
+        "status": "ok",
+        "error": null,
+        "note": "Home page logo"
+      },
+      "icon": {
+        "path": "/assets/project-images/open-food-chain/icon-aff1f7b8573b.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://framerusercontent.com/images/xnIzA4CGnEuXBZuzgV6adeBD8c.png",
+        "content_type": "image/webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 8118,
+        "fetched_at": "2026-10-23T10:02:39.976Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://www.openfoodchain.com/.",
+        "original": {
+          "source_url": "https://framerusercontent.com/images/xnIzA4CGnEuXBZuzgV6adeBD8c.png",
+          "sha256": "3a4ec951a1000d64dd6d0287d5cfb004bc83cb01f2bc1aa09a43db70741ba4cb",
+          "width": 2134,
+          "height": 2134,
+          "content_type": "image/png",
+          "kind": "favicon_link",
+          "fetched_at": "2026-10-23T09:59:52.048Z"
+        }
+      }
+    },
+    "solada": {
+      "hero": {
+        "path": "/assets/project-images/solada/hero-af516125945c.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.solada.fun/og.png",
+        "content_type": "image/webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 33410,
+        "fetched_at": "2026-10-23T10:03:24.695Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://solada.fun/.",
+        "original": {
+          "source_url": "https://www.solada.fun/og.png",
+          "sha256": "bd53beb758a05365afd6581191ea966cde50c13d4bbb2a40736134e85f60839c",
+          "width": 1200,
+          "height": 630,
+          "content_type": "image/png",
+          "kind": "og_image",
+          "fetched_at": "2026-10-23T10:03:19.005Z"
+        }
+      },
+      "icon": {
+        "path": "/assets/project-images/solada/icon-7f8e397592a4.webp",
+        "kind": "manual_official_asset",
+        "source_url": "https://www.solada.fun/apple-touch-icon.png",
+        "content_type": "image/webp",
+        "width": 180,
+        "height": 180,
+        "bytes": 6158,
+        "fetched_at": "2026-10-23T10:03:32.353Z",
+        "status": "ok",
+        "error": null,
+        "note": "Owner image selection from https://solada.fun/.",
+        "original": {
+          "source_url": "https://www.solada.fun/apple-touch-icon.png",
+          "sha256": "3ae0906dfe5e7f1047a8c955d09cca56ebbdc9ad543150760d0c47289860fdaa",
+          "width": 180,
+          "height": 180,
+          "content_type": "image/png",
+          "kind": "apple_touch_icon",
+          "fetched_at": "2026-10-23T10:03:19.005Z"
+        }
+      }
     }
   }
 }

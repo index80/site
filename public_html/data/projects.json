@@ -5357,7 +5357,7 @@
       "name": "Blink Labs",
       "category": "infrastructure",
       "public_family": "Infrastructure & Tools",
-      "summary": "UTxO blockchain engineering company building and maintaining Cardano node, protocol, indexing and infrastructure software, and operating managed Cardano infrastructure with TxPipe.",
+      "summary": "UTxO blockchain engineering company building and maintaining Cardano node, protocol, indexing and infrastructure software, and operating managed Cardano infrastructure with TxPipe. Its open-source work includes Dingo, a Go implementation of a Cardano node.",
       "official_url": "https://blinklabs.io/",
       "docs_url": null,
       "github_url": null,
@@ -5392,6 +5392,10 @@
         {
           "type": "source",
           "url": "https://blinklabs.io/projects-open-source/"
+        },
+        {
+          "type": "Dingo — official project link",
+          "url": "https://github.com/blinklabs-io/dingo"
         }
       ],
       "featured": false,
@@ -6978,13 +6982,13 @@
       "name": "GNP1 / GrahamsNumberPlus1",
       "category": "stake-pools",
       "public_family": "Infrastructure & Tools",
-      "summary": "Cardano stake pool and ecosystem tooling project operating since 2020, with zero-fee delegation rebates, self-hosted node/db-sync infrastructure, free explorer tools, Plutus smart-contract experiments, DRep participation and mental-health charity work.",
+      "summary": "Cardano stake pool and ecosystem tooling project operating since 2020, with zero-fee delegation rebates, self-hosted node/db-sync infrastructure, free explorer tools, Plutus smart-contract experiments, DRep participation and mental-health charity work. Its tools include PoolTerminal, a beta desktop monitoring dashboard for Cardano stake-pool operators.",
       "official_url": "https://grahamsnumberplus1.com/",
       "docs_url": null,
       "github_url": null,
       "social_url": "https://x.com/GrahamsNoPlus1",
       "linkedin_url": null,
-      "marketplace_url": null,
+      "marketplace_url": "https://server-tools.grahamsnumberplus1.com/PoolTerminal/",
       "policy_id": null,
       "discord_url": "https://discord.com/invite/xY5vCTkvF5",
       "status": "review",
@@ -7018,6 +7022,14 @@
         {
           "type": "source",
           "url": "https://x.com/GrahamsNoPlus1"
+        },
+        {
+          "type": "PoolTerminal — official project link",
+          "url": "https://server-tools.grahamsnumberplus1.com/PoolTerminal/"
+        },
+        {
+          "type": "PoolTerminal — official project link",
+          "url": "https://github.com/GNP1-dev/PoolTerminal"
         }
       ],
       "featured": true,
@@ -12982,6 +12994,506 @@
       "founder_lead": null,
       "primary_link_type": "website",
       "primary_link_url": "https://zx402.org/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "balius",
+      "name": "Balius",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "TxPipe SDK and runtime for building headless Cardano applications, separating application logic from frontends and providing reusable infrastructure for transaction building and chain interaction.",
+      "official_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/txpipe/balius",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "developer-tool",
+        "sdk",
+        "headless-dapp",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://github.com/txpipe/balius"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://github.com/txpipe/balius/blob/main/README.md"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Formerly named Hollow. Developer SDK and runtime rather than a standalone consumer application.",
+      "team_entity": "TxPipe",
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/txpipe/balius",
+      "related_projects": [
+        "txpipe"
+      ],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "carda-station",
+      "name": "Carda Station",
+      "category": "game",
+      "public_family": "Culture & Creators",
+      "summary": "Carda Station's FAQ says its assets and land NFTs are on Cardano and gives CAST's native-token policy ID: cdaaee586376139ee8c3cc4061623968810d177ca5c300afb890b48a43415354.",
+      "official_url": "https://www.cardastation.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": "https://x.com/Carda_station",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": "https://discord.gg/676AFuEgwE",
+      "status": "discovered",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [],
+      "sources": [
+        {
+          "type": "INDEX80 AI Research Intake row",
+          "url": "https://docs.google.com/spreadsheets/d/1G5oC2coANzPhOPTi2HXpJjl7aszDyK46EQ-c1Q2LX18/edit#gid=469578144&range=A22:Z22"
+        },
+        {
+          "type": "Polar secondary evidence",
+          "url": "https://www.cardastation.com/"
+        },
+        {
+          "type": "Polar cited evidence (research only)",
+          "url": "https://x.com/Carda_station"
+        },
+        {
+          "type": "Polar cited evidence (research only)",
+          "url": "https://discord.gg/676AFuEgwE"
+        },
+        {
+          "type": "Polar primary evidence",
+          "url": "https://x.com/Cardano/article/2090091734185148443"
+        },
+        {
+          "type": "Polar cited evidence (research only)",
+          "url": "https://docs.cardastation.com/home/faq"
+        },
+        {
+          "type": "Polar cited evidence (research only)",
+          "url": "https://www.cardanocube.com/projects/cardastation"
+        }
+      ],
+      "featured": false,
+      "editorial_note": null,
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": null,
+      "primary_link_url": null,
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-client-lib",
+      "name": "Cardano Client Library (Java)",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Java client library for Cardano applications, with transaction construction, native-token operations, Plutus integration and governance APIs. Its modular packages support several backend providers.",
+      "official_url": "https://cardano-client.dev/",
+      "docs_url": "https://cardano-client.dev/",
+      "github_url": "https://github.com/bloxbean/cardano-client-lib",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "developer-tool",
+        "sdk",
+        "java",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://github.com/bloxbean/cardano-client-lib"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "The project maintains separate stable and preview release lines; consult the documentation for the appropriate version.",
+      "team_entity": "BloxBean",
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://cardano-client.dev/",
+      "related_projects": [
+        "yaci-store",
+        "yaci-devkit"
+      ],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardano-js-sdk",
+      "name": "Cardano JavaScript SDK",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Suite of TypeScript packages for building Cardano applications in Node.js and browsers, covering transaction primitives, wallet integration, governance, cryptography and chain-data services.",
+      "official_url": null,
+      "docs_url": "https://input-output-hk.github.io/cardano-js-sdk",
+      "github_url": "https://github.com/input-output-hk/cardano-js-sdk",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "developer-tool",
+        "sdk",
+        "javascript",
+        "typescript",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://github.com/input-output-hk/cardano-js-sdk"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://github.com/input-output-hk/cardano-js-sdk/blob/master/README.md"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "A suite of developer packages for Node.js and browser applications.",
+      "team_entity": "Input Output / input-output-hk",
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/input-output-hk/cardano-js-sdk",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "cardanoflow",
+      "name": "CardanoFlow (Bôndy Plot Tracking)",
+      "category": "utility",
+      "public_family": "Real-World & Utility",
+      "summary": "Bôndy's plot-tracking system assigns land parcels digital identifiers and uses Cardano-based cryptographic records to support traceability of restoration, agricultural and environmental monitoring data.",
+      "official_url": "https://www.bondy.earth/en",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "environment",
+        "agriculture",
+        "traceability",
+        "restoration",
+        "data-integrity"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://www.bondy.earth/en"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://www.bondy.earth/en/blog/plot-tracking-empreinte-cryptographique-hectare"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Bôndy publicly describes this work as Plot Tracking. Its official article identifies Cardano as the technical foundation.",
+      "team_entity": "Bôndy",
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.bondy.earth/en",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "dcspark",
+      "name": "dcSpark",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "dcSpark is a blockchain engineering and product company building interoperability and developer tooling across crypto ecosystems. A PRAGMA member contributing to Cardano's open-source ecosystem, dcSpark has historical Cardano tooling work and is currently a core contributor to the Shinkai Network open-source AI Agent OS.",
+      "official_url": "https://dcspark.io/",
+      "docs_url": null,
+      "github_url": "https://github.com/dcSpark",
+      "social_url": "https://x.com/dcspark_io",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "developer-tool",
+        "infrastructure",
+        "interoperability",
+        "open-source",
+        "engineering",
+        "shinkai",
+        "pragma",
+        "multi-chain"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://dcspark.io/"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://pragma.io/"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://cardano.org/entities/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Independent multi-chain engineering company with an established Cardano history and current PRAGMA association. Current website names Shinkai Network as active project. Do not present Flint Wallet as a current active product.",
+      "team_entity": "dcSpark; Nicolas Arqueros — co-founder and CEO; Sebastien Guillemot — co-founder and CTO",
+      "founder_lead": "Nicolas Arqueros — co-founder & CEO; Sebastien Guillemot — co-founder & CTO",
+      "primary_link_type": "website",
+      "primary_link_url": "https://dcspark.io/",
+      "related_projects": [
+        "pragma"
+      ],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "hydrozoa",
+      "name": "Hydrozoa",
+      "category": "infrastructure",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Open-source Scala implementation of a multi-party state channel for Cardano, supporting deposits and withdrawals while a head remains open. Hydrozoa provides the operational substrate for the protocol described in the Gummiworm specification.",
+      "official_url": null,
+      "docs_url": "https://gummiworm.net/whitepaper/introduction",
+      "github_url": "https://github.com/cardano-hydrozoa/hydrozoa",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "infrastructure",
+        "layer-2",
+        "state-channel",
+        "scala",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://github.com/cardano-hydrozoa/hydrozoa"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://gummiworm.net/whitepaper/introduction/hydrozoa"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Cardano is the initial supported Layer 1. The repository documents testnet deployment; multi-L1 custody and inter-head transactions remain planned work.",
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "github",
+      "primary_link_url": "https://github.com/cardano-hydrozoa/hydrozoa",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "logical-mechanism",
+      "name": "Logical Mechanism",
+      "category": "developer-tool",
+      "public_family": "Infrastructure & Tools",
+      "summary": "Cardano smart-contract and cryptography development company building Aiken contracts, privacy software and application integrations. Its open-source work includes Seedelf Wallet, Peace Protocol, the Assist smart-contract library, Tx-Simulation and Collateral Provider.",
+      "official_url": "https://www.logicalmechanism.io/",
+      "docs_url": null,
+      "github_url": "https://github.com/logical-mechanism",
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "developer-tool",
+        "smart-contracts",
+        "aiken",
+        "cryptography",
+        "privacy",
+        "open-source"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://github.com/logical-mechanism"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://github.com/logical-mechanism/Seedelf-Wallet"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://giveme.my/"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Seedelf explores stealth-wallet design; Peace Protocol develops encryption-rights tooling and includes gnark-cardano proof-verification tooling. Assist provides reusable Aiken functions, Tx-Simulation supports transaction testing, and Collateral Provider offers shared transaction collateral.",
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.logicalmechanism.io/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "open-food-chain",
+      "name": "Open Food Chain",
+      "category": "utility",
+      "public_family": "Real-World & Utility",
+      "summary": "Food supply-chain traceability platform that turns certificates and validated product claims into scannable digital product passports, with proofs anchored on Cardano.",
+      "official_url": "https://www.openfoodchain.com/",
+      "docs_url": null,
+      "github_url": null,
+      "social_url": null,
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": null,
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "supply-chain",
+        "traceability",
+        "food",
+        "product-passport",
+        "enterprise"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://www.openfoodchain.com/"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://cardanofoundation.org/blog/open-food-chain-compliance-into-sales"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "Cardano proof anchoring is described in the Cardano Foundation's September 2026 case study. Platform adoption remains at an early stage.",
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://www.openfoodchain.com/",
+      "related_projects": [],
+      "treasury_funding_value_ada": null,
+      "explorer_url": null
+    },
+    {
+      "slug": "solada",
+      "name": "Solada",
+      "category": "defi",
+      "public_family": "DeFi & Markets",
+      "summary": "Token-launch and trading platform connecting Cardano and Solana. Solada describes launching through a Cardano wallet, creating corresponding tokens across both chains and managing transfers through custodial reserves.",
+      "official_url": "https://solada.fun/",
+      "docs_url": "https://www.solada.fun/terms",
+      "github_url": null,
+      "social_url": "https://x.com/soladafun",
+      "linkedin_url": null,
+      "marketplace_url": null,
+      "policy_id": null,
+      "discord_url": "https://discord.gg/HBxh4Dwfd4",
+      "status": "review",
+      "established": null,
+      "treasury_funding_ref": null,
+      "treasury_funding_value_usd": null,
+      "treasury_funded_proposals": null,
+      "tags": [
+        "cardano",
+        "solana",
+        "cross-chain",
+        "interoperability",
+        "launchpad",
+        "tokens"
+      ],
+      "sources": [
+        {
+          "type": "Official source",
+          "url": "https://solada.fun/"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://www.solada.fun/home"
+        },
+        {
+          "type": "Supporting source",
+          "url": "https://www.solada.fun/terms"
+        }
+      ],
+      "featured": false,
+      "editorial_note": "The platform operates custodial reserves on Cardano and Solana. Listing does not establish independent verification of those reserves.",
+      "team_entity": null,
+      "founder_lead": null,
+      "primary_link_type": "website",
+      "primary_link_url": "https://solada.fun/",
       "related_projects": [],
       "treasury_funding_value_ada": null,
       "explorer_url": null
