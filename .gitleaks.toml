@@ -28,3 +28,27 @@ condition = "AND"
 paths = ['''(^|/)public_html/registry/snapshots/index80-0004\.json$''']
 regexTarget = "secret"
 regexes = ['''^catalyst-pilot-2026$''']
+
+# Same public tag in the later immutable, on-chain-anchored snapshots INDEX80-0006 and INDEX80-0007
+# (verified 25 Oct 2026: identical to "catalyst-pilot-2026" above). Same scope: this rule, these exact
+# files, this exact value. A future anchored snapshot that repeats the tag needs its own reviewed entry.
+[[allowlists]]
+description = "Registry INDEX80-0006/0007 snapshots: public project tag mistaken for a generic API key"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)public_html/registry/snapshots/index80-000[67]\.json$''']
+regexTarget = "secret"
+regexes = ['''^catalyst-pilot-2026$''']
+
+# carda-station's editorial summary quotes its native token's on-chain asset ID ("native-token policy
+# ID: <56-hex policy><8-hex asset name>."). Verified 25 Oct 2026 on Cardano mainnet (Koios
+# policy_asset_info): the policy and that exact asset exist; the asset name is a 4-letter ticker. A public
+# chain identifier, not a credential. Scoped to this rule, the two files that carry the summary, and
+# this exact value (including the sentence's full stop that gitleaks captures).
+[[allowlists]]
+description = "carda-station: public Cardano native-asset ID in the editorial summary"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)public_html/projects/carda-station/index\.html$''', '''(^|/)public_html/data/projects\.json$''']
+regexTarget = "secret"
+regexes = ['''^cdaaee586376139ee8c3cc4061623968810d177ca5c300afb890b48a43415354\.$''']

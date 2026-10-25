@@ -13,6 +13,7 @@ import { safeAvatarPath, validatePublicPerson } from './lib/people-public.mjs';
 import { directoryMeta } from './lib/people-seo.mjs';
 import { hasVerifiedDrep, hasVerifiedSpo, initials } from './lib/people-display.mjs';
 import { loadReviewMap, REVIEW_MAP_FILE } from './lib/people-pfp-review.mjs';
+import { thumbFor } from './lib/people-thumbs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILE = join(ROOT, 'public_html', 'data', 'people.json');
@@ -52,11 +53,15 @@ function external(p) {
 const review = loadReviewMap(join(ROOT, 'public_html'));
 
 // Small avatar: approved avatar, else the DEV-only review candidate, else a monogram.
+// An approved avatar uses its 96 px thumbnail when one matches the avatar's current bytes
+// (scripts/lib/people-thumbs.mjs); data-avatar lets people-directory.js reuse it.
+// width/height reserve the 24 px box before CSS arrives (no layout shift).
 function thumb(p) {
   const approved = safeAvatarPath(p.avatar_url);
   const candidate = !approved && review?.images?.[p.slug]?.path;
   const src = approved || candidate;
-  if (src) return `<img class="dir-thumb${candidate ? ' dir-thumb-review' : ''}" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`;
+  const small = approved ? thumbFor(join(ROOT, 'public_html'), p.slug, approved) : null;
+  if (src) return `<img class="dir-thumb${candidate ? ' dir-thumb-review' : ''}" src="${esc(small || src)}"${small ? ` data-avatar="${esc(approved)}"` : ''} alt="" width="24" height="24" loading="lazy" decoding="async" referrerpolicy="no-referrer">`;
   return `<span class="dir-thumb dir-thumb-fallback" aria-hidden="true">${esc(initials(p.name))}</span>`;
 }
 

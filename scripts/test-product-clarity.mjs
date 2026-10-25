@@ -227,8 +227,10 @@ EXPLORE_WINDOWS.forEach((w, i) => {
   ok((seg.match(/class="panel os-window/g) || []).length === 1 && seg.endsWith('</div>\n    </section>'), `${w.id}: is a self-contained sibling window (no nested AROS frames)`);
   for (const anchor of w.anchors) ok(seg.includes(`id="${anchor}"`), `${w.id}: contains #${anchor}`);
   // Nothing deleted: the imported subpage <main> is present verbatim in its own window
-  // (minus the /data/-only semantic accent-word spans, which the pilot keeps off Explore).
-  const inner = stripInk(read(w.section, 'index.html').match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1].trim() || '');
+  // (minus the /data/-only semantic accent-word spans, which the pilot keeps off Explore,
+  // and except that heroes below Explore's first window load lazily rather than with high priority).
+  let inner = stripInk(read(w.section, 'index.html').match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1].trim() || '');
+  if (w.section !== 'learn') inner = inner.replace(/ loading="eager" fetchpriority="high">/g, ' loading="lazy">');
   ok(inner && seg.includes(inner), `${w.id}: contains the full /${w.section}/ content`);
   const innerPanels = (inner.match(/class="panel[\s"]/g) || []).length;
   ok(innerPanels > 0 && (seg.match(/class="panel[\s"]/g) || []).length === innerPanels + 1, `${w.id}: keeps every existing small panel and adds none`);

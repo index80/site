@@ -42,12 +42,17 @@
   const reviewSource = root.getAttribute('data-pfp-review');
   let reviewImages = {};
   const safeAvatar = (u) => (typeof u === 'string' && /^\/assets\/people(?:-review)?\/[a-z0-9][a-z0-9/_.-]*\.(?:avif|gif|jpe?g|png|webp)$/i.test(u) && !u.includes('..') ? u : null);
+  // Small thumbnails the static rows were built with (original avatar path -> thumbnail).
+  const thumbOf = new Map([...list.querySelectorAll('img.dir-thumb[data-avatar]')]
+    .map((img) => [img.getAttribute('data-avatar'), img.getAttribute('src')])
+    .filter(([full, small]) => safeAvatar(full) && /^\/assets\/people-thumbs\/[a-z0-9]+(?:-[a-z0-9]+)*-[0-9a-f]{12}\.webp$/.test(small || '')));
   const thumb = (p) => {
     const approved = safeAvatar(p.avatar_url);
     const candidate = !approved && safeAvatar(reviewImages[p.slug]?.path);
     const src = approved || candidate;
+    const small = approved && thumbOf.get(approved);
     return src
-      ? `<img class="dir-thumb${candidate ? ' dir-thumb-review' : ''}" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer">`
+      ? `<img class="dir-thumb${candidate ? ' dir-thumb-review' : ''}" src="${esc(small || src)}"${small ? ` data-avatar="${esc(approved)}"` : ''} alt="" width="24" height="24" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
       : `<span class="dir-thumb dir-thumb-fallback" aria-hidden="true">${esc(initials(p.name))}</span>`;
   };
   const badges = (p) => {
