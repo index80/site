@@ -13,6 +13,19 @@ Project logos, icons, favicons, screenshots, Open Graph and social-media images,
 
 Anyone reusing this repository must obtain any necessary permission from the relevant rights holder for these assets, or remove them.
 
+## Fonts
+
+`public_html/assets/fonts/silkscreen/` contains **Silkscreen** by Jason Kottke ("Copyright 2001 The
+Silkscreen Project Authors"), licensed under the **SIL Open Font License 1.1**. The licence text is
+kept beside the files (`OFL.txt`).
+- The four WOFF2 files are the unmodified Google Fonts v6 files (Regular and Bold, Latin and
+  Latin-Extended subsets) that the site previously loaded from `fonts.googleapis.com`.
+- They are self-hosted since 25 Oct 2026.
+- The OFL permits redistribution with the licence. The font may not be sold on its own.
+
+People-directory thumbnails (`public_html/assets/people-thumbs/`) are reduced copies of the
+approved profile images and carry the same provenance and credit as those originals.
+
 ## Other material that is not INDEX:80's own
 
 - Photographs, avatars or likenesses of individuals (for example, files in `public_html/assets/images/` that depict or are taken from a named person's public profile) belong to the person or rights holder concerned.

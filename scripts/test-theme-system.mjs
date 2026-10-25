@@ -128,12 +128,15 @@ check('every emoji rule is arcade-scoped and a pseudo-element', emojiRules.lengt
 check('emoji accents carry empty alt text (decorative)', emojiRules.every((l) => l.includes('/ ""')));
 check('theme.js labels/markup unchanged by emoji accents (no emoji in JS)', !/[\u{1F300}-\u{1FAFF}]/u.test(themeJs));
 
-/* --- 4. main-core.js cursor + nav tokens --- */
+/* --- 4. shared typography styles (moved from main-core.js to theme.js so they apply before
+   first paint): cursor + nav tokens --- */
 const mainCore = readFileSync(join(PUBLIC_HTML, 'assets/js/main-core.js'), 'utf8');
-check('main-core.js suppression of obsolete cursor removed', !mainCore.includes('.system-bar span:last-child::after'));
-check('main-core.js keeps wordmark cursor', mainCore.includes('.wordmark::after'));
-check('main-core.js nav states use theme tokens', mainCore.includes('var(--nav-hover-bg)') && mainCore.includes('var(--nav-active-bg)'));
-check('main-core.js arcade panel-title accents only', mainCore.includes('html[data-theme="arcade"] .panel-title::before') && !mainCore.includes('html[data-theme="web1"]'));
+const runtimeCss = (themeJs.match(/SITE_TYPOGRAPHY_CSS = `([\s\S]*?)`;/) || [])[1] || '';
+check('shared typography styles live in theme.js, not main-core.js', runtimeCss.length > 0 && !mainCore.includes('.wordmark::after'));
+check('suppression of obsolete cursor removed', !runtimeCss.includes('.system-bar span:last-child::after'));
+check('typography keeps wordmark cursor', runtimeCss.includes('.wordmark::after'));
+check('nav states use theme tokens', runtimeCss.includes('var(--nav-hover-bg)') && runtimeCss.includes('var(--nav-active-bg)'));
+check('arcade panel-title accents only', runtimeCss.includes('html[data-theme="arcade"] .panel-title::before') && !runtimeCss.includes('html[data-theme="web1"]'));
 
 /* --- 5. every site.css page loads theme.js first --- */
 const htmlFiles = collectHtml(PUBLIC_HTML);

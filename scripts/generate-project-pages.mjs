@@ -521,10 +521,7 @@ export function renderProjectPage(record, images, linkHistoryRecord) {
   <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
-  ${socialImage ? `<meta property="og:image" content="${esc(SITE_URL + socialImage.path)}">\n  <meta name="twitter:image" content="${esc(SITE_URL + socialImage.path)}">\n  ` : ''}<link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap">
-  <script src="/assets/js/theme.js"></script>
+  ${socialImage ? `<meta property="og:image" content="${esc(SITE_URL + socialImage.path)}">\n  <meta name="twitter:image" content="${esc(SITE_URL + socialImage.path)}">\n  ` : ''}<script src="/assets/js/theme.js"></script>
   <link rel="stylesheet" href="/assets/css/site.css">
   <script type="application/ld+json">${jsonLd(p, canonicalUrl, linkHistoryRecord)}</script>
 </head>

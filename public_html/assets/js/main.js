@@ -2,7 +2,7 @@
    Existing site behaviour lives in main-core.js; page-specific enhancements
    are loaded separately so the static site stays small and framework-free. */
 (() => {
-  const VERSION = '20261023-1332';
+  const VERSION = '20261025-1623';
   const load = (src) => new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = `${src}?v=${VERSION}`;
@@ -96,7 +96,7 @@
       const line = document.createElement('span');
       line.className = 'footer-licence';
       line.dataset.index80Licence = 'true';
-      line.append('© 2026 Adam Winstanley · Apache-2.0 code · CC BY 4.0 data/editorial · ');
+      line.append('© 2026 INDEX:80 · Apache-2.0 code · CC BY 4.0 data/editorial · ');
       const gh = document.createElement('a');
       gh.href = 'https://github.com/index80/site';
       gh.target = '_blank';
