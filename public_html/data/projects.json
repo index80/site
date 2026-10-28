@@ -1859,7 +1859,7 @@
       "name": "NMKR",
       "category": "nft",
       "public_family": "Culture & Creators",
-      "summary": "NFT minting and management infrastructure/API for Cardano and other chains.",
+      "summary": "NMKR, the tokenization brand of utxo AG, provides NFT and token creation, management and sales infrastructure for Cardano and other blockchains.",
       "official_url": "https://www.nmkr.io/",
       "docs_url": "https://docs.nmkr.io",
       "github_url": null,
@@ -1892,7 +1892,8 @@
       "team_entity": "utxo AG",
       "founder_lead": "Patrick Tobler — Founder & CEO",
       "primary_link_type": "website",
-      "primary_link_url": "https://www.nmkr.io/"
+      "primary_link_url": "https://www.nmkr.io/",
+      "editorial_note": "NMKR is the tokenization and digital-asset infrastructure brand of utxo AG. NMKR Studio provides a web interface and APIs for creating, managing and selling tokens and real-world assets across multiple blockchains, including Cardano. The linked LinkedIn page represents utxo AG, the company behind NMKR."
     },
     {
       "slug": "clay-nation",
@@ -3949,7 +3950,8 @@
       "featured": false,
       "editorial_note": "Cardano.org currently lists Claimpaign as a Cardano distribution app.",
       "primary_link_type": "website",
-      "primary_link_url": "https://claimpaign.com"
+      "primary_link_url": "https://claimpaign.com",
+      "team_entity": "ADAtainment — self-reported contributor (precise role unconfirmed)"
     },
     {
       "slug": "onboard-ninja",
@@ -4361,7 +4363,8 @@
       "featured": false,
       "editorial_note": "Interactive education site that teaches Cardano's extended UTxO model through visual playgrounds and transaction-building exercises. Cardano.org includes it in its ecosystem app directory.",
       "primary_link_type": "website",
-      "primary_link_url": "https://extendedutxo.com"
+      "primary_link_url": "https://extendedutxo.com",
+      "team_entity": "ADAtainment — self-reported contributor (precise role unconfirmed)"
     },
     {
       "slug": "token-nft-builder",
@@ -5360,7 +5363,7 @@
       "summary": "UTxO blockchain engineering company building and maintaining Cardano node, protocol, indexing and infrastructure software, and operating managed Cardano infrastructure with TxPipe. Its open-source work includes Dingo, a Go implementation of a Cardano node.",
       "official_url": "https://blinklabs.io/",
       "docs_url": null,
-      "github_url": null,
+      "github_url": "https://github.com/blinklabs-io",
       "social_url": "https://x.com/blinklabs_io",
       "linkedin_url": "https://www.linkedin.com/company/blink-labs-io",
       "marketplace_url": null,
@@ -5399,7 +5402,7 @@
         }
       ],
       "featured": false,
-      "editorial_note": "Blink Labs actively builds Cardano protocol and node software including gOuroboros, Adder and Dingo, and is an infrastructure partner for Demeter.",
+      "editorial_note": "Blink Labs actively builds Cardano protocol and node software including gOuroboros, Adder and Dingo, and is an infrastructure partner for Demeter. Dingo is linked within this parent profile; no separate Dingo page is proposed.",
       "team_entity": "Blink Labs",
       "founder_lead": "Chris Gianelloni — CEO; Christina Gianelloni (musikc / InASingleWord) — COO & Community",
       "related_projects": [
@@ -6792,11 +6795,11 @@
       "name": "Palmyra",
       "category": "tokenized-asset",
       "public_family": "Real-World & Utility",
-      "summary": "Cardano-linked commodity marketplace and RWA tokenization project connecting producers and buyers in underserved commodity markets through the PALM Economy.",
-      "official_url": "https://palmyra.app/",
+      "summary": "Cardano-linked supply-chain technology ecosystem providing traceability, compliance and market-access tools for commodity producers and buyers, with tokenization and real-world asset frameworks.",
+      "official_url": "https://www.palmyraecosystem.com/",
       "docs_url": null,
       "github_url": null,
-      "social_url": "https://x.com/palmeconomy",
+      "social_url": "https://x.com/PalmyraSocial",
       "linkedin_url": "https://www.linkedin.com/company/palmyra-ecosystem",
       "marketplace_url": null,
       "policy_id": null,
@@ -6807,12 +6810,13 @@
       "treasury_funding_value_usd": null,
       "treasury_funded_proposals": null,
       "tags": [
-        "rwa",
+        "supply-chain",
+        "traceability",
+        "compliance",
         "commodities",
+        "rwa",
         "tokenized-assets",
-        "cardano",
-        "marketplace",
-        "palm-economy"
+        "cardano"
       ],
       "sources": [
         {
@@ -6829,11 +6833,11 @@
         }
       ],
       "featured": false,
-      "editorial_note": "Palmyra is a commodity marketplace and tokenization project connected to the PALM Economy, using Cardano-linked infrastructure to connect producers and buyers in underserved real-world commodity markets.",
-      "team_entity": "PALM Economy / zenGate",
+      "editorial_note": "Palmyra is a zenGate product focused on supply-chain traceability, compliance and access to commodity markets. Its ecosystem also incorporates tokenization and real-world asset frameworks.",
+      "team_entity": "Palmyra / zenGate",
       "founder_lead": "Daniel Friedman — Co-Founder & CEO; Sam Lambert — Co-Founder & COO; Nicholas Despopoulos — Co-Founder & CBO; Luca D’Angelo — Lead Developer; Theodoros Morisis — Head of Operations",
       "primary_link_type": "website",
-      "primary_link_url": "https://palmyra.app/"
+      "primary_link_url": "https://www.palmyraecosystem.com/"
     },
     {
       "slug": "directed",
@@ -6985,7 +6989,7 @@
       "summary": "Cardano stake pool and ecosystem tooling project operating since 2020, with zero-fee delegation rebates, self-hosted node/db-sync infrastructure, free explorer tools, Plutus smart-contract experiments, DRep participation and mental-health charity work. Its tools include PoolTerminal, a beta desktop monitoring dashboard for Cardano stake-pool operators.",
       "official_url": "https://grahamsnumberplus1.com/",
       "docs_url": null,
-      "github_url": null,
+      "github_url": "https://github.com/GNP1-dev/PoolTerminal",
       "social_url": "https://x.com/GrahamsNoPlus1",
       "linkedin_url": null,
       "marketplace_url": "https://server-tools.grahamsnumberplus1.com/PoolTerminal/",
@@ -7033,7 +7037,7 @@
         }
       ],
       "featured": true,
-      "editorial_note": "GNP1 is a Cardano stake pool and ecosystem tooling project active since October 2020. Its current public work includes self-hosted Cardano infrastructure, free chain and pool tools, Plutus smart-contract experiments, governance participation as a DRep, and a mental-health charity mission.",
+      "editorial_note": "GNP1 is a Cardano stake pool and ecosystem tooling project active since October 2020. Its current public work includes self-hosted Cardano infrastructure, free chain and pool tools, Plutus smart-contract experiments, governance participation as a DRep, and a mental-health charity mission. PoolTerminal is its beta desktop SPO-monitoring tool, described by the developer as read-only by design.",
       "team_entity": "GrahamsNumberPlus1 / GNP1",
       "founder_lead": "GrahamsNumberPlus1 / GNP1 — SPO / creator",
       "related_projects": [
@@ -11053,7 +11057,7 @@
       "team_entity": null,
       "founder_lead": null,
       "primary_link_type": null,
-      "primary_link_url": null,
+      "primary_link_url": "https://www.jesus-2.com/",
       "related_projects": [],
       "treasury_funding_value_ada": null,
       "explorer_url": null
@@ -13339,7 +13343,7 @@
         }
       ],
       "featured": false,
-      "editorial_note": "Cardano is the initial supported Layer 1. The repository documents testnet deployment; multi-L1 custody and inter-head transactions remain planned work.",
+      "editorial_note": "Current README identifies Cardano as the only supported L1; multi-L1 custody is planned. Deployment guide covers Cardano testnets. Do not claim audited/mainnet production readiness. Gummiworm is the protocol/specification relationship, not assumed to be a duplicate brand.",
       "team_entity": null,
       "founder_lead": null,
       "primary_link_type": "github",
@@ -13438,7 +13442,7 @@
         }
       ],
       "featured": false,
-      "editorial_note": "Cardano proof anchoring is described in the Cardano Foundation's September 2026 case study. Platform adoption remains at an early stage.",
+      "editorial_note": "Cardano Foundation's 30 September 2026 article directly describes Cardano proof anchoring and early platform use. Avoid implying a global rollout across all named partners.",
       "team_entity": null,
       "founder_lead": null,
       "primary_link_type": "website",
