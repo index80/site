@@ -4684,11 +4684,12 @@
         "Community",
         "Catalyst",
         "Intersect",
-        "Midnight"
+        "Midnight",
+        "Content Creator"
       ],
-      "bio": "Olivier Mwatsimulamo: Cardano and Midnight community contributor with ambassador, governance and UI/UX development roles described in the current public profile.",
+      "bio": "Olivier Mwatsimulamo is a Cardano and Midnight community contributor, content creator and UI/UX developer. His roles include Cardano ambassador, Midnight Nightforce, Goma DRep & Hub Member, and Project Catalyst Milestone Reviewer.",
       "current_roles": [
-        "Cardano ambassador / Midnight Nightforce / community governance / UI/UX developer"
+        "Cardano ambassador / Midnight Nightforce / community governance / UI/UX developer / Content creator / Goma DRep & Hub Member / Project Catalyst Milestone Reviewer"
       ],
       "historic_roles": [],
       "verification_status": "PARTIAL",
@@ -5829,14 +5830,21 @@
       "icon": "developer",
       "role_tags": [
         "DRep",
-        "Builder",
+        "SPO",
+        "CTO",
+        "Co-founder",
         "Developer",
-        "Midnight"
+        "Standards",
+        "Education",
+        "Midnight",
+        "ZK"
       ],
-      "bio": "Sebastien Guillemot is CTO of the Midnight Foundation and a major technical builder across dcSpark, Paima and Midnight. Sebastien Guillemot's current focus includes zero-knowledge work spanning privacy, lattice cryptography, folding schemes and Starstream, alongside consumer applications and chain abstraction. Sebastien Guillemot is associated with Paima Studios and the Paima Engine, publishes at sebastiengllmt.com and is a registered Cardano DRep, verified as active on 28 September 2026.",
+      "bio": "Sebastien Guillemot is CTO of the Midnight Foundation and co-founder and CTO of dcSpark, a multi-chain blockchain engineering company and member of the PRAGMA open-source Cardano infrastructure association. He is associated with Paima Studios and the Paima Engine, and his work spans developer tooling, privacy and zero-knowledge technology, including lattice cryptography, folding schemes, Starstream, consumer applications and chain abstraction. He writes software, contributes to technical standards and creates educational material. Within Cardano he operates the SEBA stake pool and lists a DRep identifier on his personal site; the newer ID still needs reconciliation with an earlier editorial record.",
       "current_roles": [
         "CTO, Midnight Foundation",
-        "DRep"
+        "Co-founder and CTO, dcSpark",
+        "Operator, SEBA stake pool",
+        "Cardano DRep (self-declared ID, chain status awaiting reconciliation)"
       ],
       "historic_roles": [],
       "verification_status": "VERIFIED",
@@ -5846,16 +5854,17 @@
       "pool_ticker": null,
       "pool_ids": [],
       "linked_projects": [
-        "Midnight Foundation",
         "dcSpark",
-        "Paima",
-        "Paima Studios / Paima Engine",
-        "Midnight"
+        "Midnight Foundation",
+        "SEBA Pool",
+        "Paima Studios",
+        "Paima Engine",
+        "PRAGMA (dcSpark member)"
       ],
       "x_url": "https://x.com/SebastienGllmt",
       "linkedin_url": "https://www.linkedin.com/in/sebastiengllmt",
       "website_url": "https://sebastiengllmt.com/",
-      "github_url": null,
+      "github_url": "https://github.com/SebastienGllmt",
       "instagram_url": null,
       "youtube_url": null,
       "last_verified": "2026-09-28",
@@ -6265,6 +6274,8 @@
       "pool_ids": [],
       "linked_projects": [
         "DRepTalk",
+        "Claimpaign",
+        "Extended UTxO",
         "ADAtainment"
       ],
       "x_url": "https://x.com/ADAtainment",
